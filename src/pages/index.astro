@@ -9,23 +9,49 @@ import Footer from "./components/Footer.astro";
 import Announcement from "./components/Announcement.astro";
 import SmoothCarousel from "./components/SmoothCarousel.astro";
 
-import { Picture } from "astro:assets"; // ใช้ Image component จาก Astro เพื่อจัดการรูปภาพ
+import { Picture } from "astro:assets"; // ใช้ Picture component จาก Astro เพื่อจัดการรูปภาพ
 import image1 from "../assets/pig1.jpg";
 import image2 from "../assets/pig2.jpg";
 import image3 from "../assets/pig3.jpg";
 
-const homePageSchema = {
+const currentPath = Astro.url.pathname;
+
+const webPageSchema = {
   "@context": "https://schema.org",
   "@type": "WebPage",
   name: "PIGAUTO สล็อตหมูเว็บตรง PG กำไรดี API แท้ แตกง่าย ไม่มีขั้นต่ำ",
   description: "PIGAUTO สล็อตหมูเว็บตรง ผู้ให้บริการเกมสล็อต PG ระบบ API แท้ ต่างประเทศ แตกง่าย กำไรดี รับเงินเต็มเม็ดเต็มหน่วย ไม่มีขั้นต่ำ มีความปลอดภัย เหมาะกับทุกคน",
-  url: "https://pigautopg.com",
-  inLanguage: "th-TH",
+  url: currentPath,
 };
+
+const orgSchema = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  name: "PIGAUTO",
+  logo: "https://pigautopg.org/PIGAUTO-LOGO.png",
+  url: currentPath,
+};
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    {
+      "@type": "Question",
+      name: "PIGAUTO มีจุดเด่นอย่างไร?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "PIGAUTO เป็นบริการสล็อตออโต้ที่เร็วแรงที่สุด ให้บริการฝากถอนตรง มั่นคง และเฉียบคม",
+      },
+    },
+  ],
+};
+
+const allSchemas = [webPageSchema, orgSchema, faqSchema];
 ---
 
 <MainLayout>
-  <script type="application/ld+json" set:html={JSON.stringify(homePageSchema)} />
+  <script type="application/ld+json" set:html={JSON.stringify(allSchemas)} />
   <Announcement />
 
   <ContentBox>

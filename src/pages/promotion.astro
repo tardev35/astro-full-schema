@@ -9,8 +9,50 @@ import { Picture } from "astro:assets";
 import image1 from "../assets/pro1-2.webp";
 import image2 from "../assets/pro2-2.webp";
 import image3 from "../assets/pro4-1.webp";
+
+const currentPath = Astro.url.pathname;
+const webPageSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  name: "PIGAUTO สล็อตหมูเว็บตรง PG กำไรดี API แท้ แตกง่าย ไม่มีขั้นต่ำ",
+  description: "PIGAUTO สล็อตหมูเว็บตรง ผู้ให้บริการเกมสล็อต PG ระบบ API แท้ ต่างประเทศ แตกง่าย กำไรดี รับเงินเต็มเม็ดเต็มหน่วย ไม่มีขั้นต่ำ มีความปลอดภัย เหมาะกับทุกคน",
+  url: currentPath,
+};
+
+const faqPromotionSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    {
+      "@type": "Question",
+      name: "PIGAUTO มีจุดเด่นอย่างไร?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "PIGAUTO เป็นบริการสล็อตออโต้ที่เร็วแรงที่สุด ให้บริการฝากถอนตรง มั่นคง และเฉียบคม",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "การเดิมพันสล็อตที่ PIGAUTO มีขั้นต่ำหรือไม่?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "เว็บสล็อตออโต้ของ PIGAUTO ไม่มีขั้นต่ำในการเล่น ให้บริการอย่างเป็นมิตรและมีความปลอดภัยสูง",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "PIGAUTO รองรับการฝากถอนผ่านช่องทางใดบ้าง?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "เรารองรับระบบวอเลท (Pig Auto Wallet) เต็มระบบ ใช้งานง่าย สะดวกและรวดเร็วสำหรับผู้เล่นทุกคน",
+      },
+    },
+  ],
+};
+const allSchemas = [webPageSchema, faqPromotionSchema];
 ---
 
+<script type="application/ld+json" set:html={JSON.stringify(allSchemas)} />
 <MainLayout title="โปรโมชั่น PIGAUTO 2026" , description="รับโปรโมชั่นจุใจจาก PIGAUTO">
   <Announcement />
   <ContentBox>

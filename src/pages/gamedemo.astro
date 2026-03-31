@@ -33,8 +33,54 @@ const demoGames = [
   { id: 11, src: image11, alt: "เกมสล็อตที่ 11", link: "/signup" },
   { id: 12, src: image12, alt: "เกมสล็อตที่ 12", link: "/signup" },
 ];
+
+const currentPath = Astro.url.pathname;
+const siteUrl = "https://pigautopg.org";
+
+const gameList = [
+  { name: "AskmeSlot", image: siteUrl + image1.src },
+  { name: "Popular Game", image: siteUrl + image2.src },
+  { name: "SlotXO", image: siteUrl + image3.src },
+  { name: "Skywind Group", image: siteUrl + image4.src },
+  { name: "PG Soft", image: siteUrl + image5.src },
+  { name: "SBOBET", image: siteUrl + image6.src },
+  { name: "Sexy Slot", image: siteUrl + image7.src },
+  { name: "JILI", image: siteUrl + image8.src },
+  { name: "Ask Me Bet", image: siteUrl + image9.src },
+  { name: "New Game", image: siteUrl + image10.src },
+  { name: "JOKER", image: siteUrl + image11.src },
+  { name: "AFB Gaming", image: siteUrl + image12.src },
+];
+
+const multiGameSchema = {
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  name: "รวม 12 ค่ายสล็อตทดลองเล่นฟรี PIGAUTO",
+  description: "ศูนย์รวมเกมสล็อตทดลองเล่นฟรีจากค่ายระดับโลก PG, Joker, Jili, SlotXO ครบจบในหน้าเดียว ไม่ต้องโหลดแอป",
+  numberOfItems: gameList.length,
+  itemListElement: gameList.map((game, index) => ({
+    "@type": "ListItem",
+    position: index + 1,
+    item: {
+      "@type": ["VideoGame", "SoftwareApplication"],
+      name: `ทดลองเล่น ${game.name} ฟรี`,
+      image: game.image,
+      url: currentPath,
+      applicationCategory: "GameApplication",
+      operatingSystem: "Web Browser, iOS, Android",
+      genre: "Slot Game, Casino Game",
+      playMode: "SinglePlayer",
+      offers: {
+        "@type": "Offer",
+        price: "0",
+        priceCurrency: "THB",
+      },
+    },
+  })),
+};
 ---
 
+<script type="application/ld+json" set:html={JSON.stringify(multiGameSchema)} />
 <MainLayout title="ทดลองเล่นสล็อต" description="ไม่ต้องเติมเครดิต ลองเล่นสล็อตฟรีได้ทุกค่าย">
   <Announcement />
 

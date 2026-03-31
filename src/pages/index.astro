@@ -15,6 +15,8 @@ import image2 from "../assets/pig2.jpg";
 import image3 from "../assets/pig3.jpg";
 
 const currentPath = Astro.url.pathname;
+const homePage = Astro.url.origin;
+const logoUrl = homePage + "/PIGAUTO-LOGO.png";
 
 const webPageSchema = {
   "@context": "https://schema.org",
@@ -28,8 +30,8 @@ const orgSchema = {
   "@context": "https://schema.org",
   "@type": "Organization",
   name: "PIGAUTO",
-  logo: "https://pigautopg.org/PIGAUTO-LOGO.png",
-  url: currentPath,
+  logo: logoUrl,
+  url: homePage,
 };
 
 const faqSchema = {

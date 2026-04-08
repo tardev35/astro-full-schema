@@ -10,17 +10,17 @@ import imgLine from "../assets/contact-line.webp";
 
 const currentPath = Astro.url.pathname;
 const homePage = Astro.url.origin;
-const logoUrl = homePage + "/PIGAUTO-LOGO.png";
+const logoUrl = homePage + "/betflik4u-logo.webp";
 
 const contactPageSchema = {
   "@context": "https://schema.org",
   "@type": "ContactPage",
-  name: "ติดต่อเรา - PIGAUTO บริการสล็อตออโต้ 24 ชั่วโมง",
-  description: "ติดต่อสอบถามข้อมูล แจ้งปัญหาการใช้งาน หรือสมัครสมาชิกกับ PIGAUTO ผ่านช่องทางไลน์และระบบคอลเซ็นเตอร์ตลอด 24 ชั่วโมง",
+  name: "ติดต่อแอดมิน BETFLIK4U บริการดูแล แก้ปัญหาไว ตลอด 24 ชั่วโมง",
+  description: "ติดต่อแอดมิน BETFLIK4U ทีมงานติดต่อง่าย ติดต่อไว ไม่ดองแชท เราพร้อม บริการดูแล แก้ปัญหาไว ตลอด 24 ชั่วโมง ติดต่อได้หลายช่องทาง",
   url: currentPath,
   mainEntity: {
     "@type": "Organization",
-    name: "PIGAUTO",
+    name: "BETFLIK4U",
     logo: logoUrl,
     url: homePage,
     contactPoint: [
@@ -38,7 +38,9 @@ const contactPageSchema = {
 ---
 
 <script type="application/ld+json" set:html={JSON.stringify(contactPageSchema)} />
-<MainLayout title="ติดต่อทีมงาน  ดูแลตลอด 24 ชม. พร้อมช่วยทุกขั้นตอน" , description="ติดต่อทีมงาน  ดูแลตลอด 24 ชม. พร้อมช่วยทุกขั้นตอน">
+<MainLayout
+  title="ติดต่อแอดมิน BETFLIK4U บริการดูแล แก้ปัญหาไว ตลอด 24 ชั่วโมง"
+  ,description="ติดต่อแอดมิน BETFLIK4U ทีมงานติดต่อง่าย ติดต่อไว ไม่ดองแชท เราพร้อม บริการดูแล แก้ปัญหาไว ตลอด 24 ชั่วโมง ติดต่อได้หลายช่องทาง">
   <Announcement />
 
   <ContentBox>

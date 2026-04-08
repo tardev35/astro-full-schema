@@ -17,5 +17,5 @@ export default defineConfig({
     
     '/line': 'https://tinyurl.com/linesiam',
   },
-  site: 'https://pigautopg.com'
+  site: 'https://betflik4uauto.com'
 });

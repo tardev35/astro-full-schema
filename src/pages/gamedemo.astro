@@ -35,7 +35,7 @@ const demoGames = [
 ];
 
 const currentPath = Astro.url.pathname;
-const siteUrl = "https://pigautopg.org";
+const siteUrl = "https://betflik4uauto.com";
 
 const gameList = [
   { name: "AskmeSlot", image: siteUrl + image1.src },
@@ -55,7 +55,7 @@ const gameList = [
 const multiGameSchema = {
   "@context": "https://schema.org",
   "@type": "ItemList",
-  name: "รวม 12 ค่ายสล็อตทดลองเล่นฟรี PIGAUTO",
+  name: "รวม 12 ค่ายสล็อตทดลองเล่นฟรี BETFLIK4U",
   description: "ศูนย์รวมเกมสล็อตทดลองเล่นฟรีจากค่ายระดับโลก PG, Joker, Jili, SlotXO ครบจบในหน้าเดียว ไม่ต้องโหลดแอป",
   numberOfItems: gameList.length,
   itemListElement: gameList.map((game, index) => ({
@@ -81,10 +81,12 @@ const multiGameSchema = {
 ---
 
 <script type="application/ld+json" set:html={JSON.stringify(multiGameSchema)} />
-<MainLayout title="ทดลองเล่นสล็อต" description="ไม่ต้องเติมเครดิต ลองเล่นสล็อตฟรีได้ทุกค่าย">
+<MainLayout
+  title="ทดลองเล่น BETFLIK4U รีบสมัคร รับสิทธิ์ ลองเล่นฟรี ทุกค่ายเกม"
+  description="ทดลองเล่น BETFLIK4U รีบสมัคร ลงทะเบียนฟรี ง่ายๆ แล้วมาลองเล่นฟรี กับเกมคาสิโนออนไลน์ ทุกค่าย อัปเดตเกม ระบบทดลองเล่นล่าสุด โคตรเสถียร">
   <Announcement />
 
-  <ContentBox title="ทดลองเล่นสล็อตอัตราจ่ายโหด ไม่ต้องเติมเครดิต">
+  <ContentBox title="ทดลองเล่น BETFLIK4U รีบสมัคร รับสิทธิ์ ลองเล่นฟรี ทุกค่ายเกม">
     <p class="mb-8 text-gray-200">ศูนย์รวมเกมสล็อตทดลองเล่นฟรี อัปเดตเกมใหม่ล่าสุดก่อนใคร ไม่ต้องฝาก ไม่ต้องแชร์ เข้าเล่นได้ทันที!</p>
 
     <div class="mb-5 grid grid-cols-2 gap-5 sm:grid-cols-2 md:grid-cols-4">

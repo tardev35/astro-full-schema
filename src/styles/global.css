@@ -1,0 +1,40 @@
+@import "tailwindcss";
+
+/* global.css */
+
+/* kanit-regular - latin_thai */
+@font-face {
+  font-family: 'Kanit';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  /* ปรับตรงนี้: ใช้ / นำหน้า เพื่อชี้ไปที่ public/fonts/ โดยตรง */
+  src: url('/fonts/kanit-v17-latin_thai-regular.woff2') format('woff2'); 
+}
+
+/* kanit-500 - latin_thai */
+@font-face {
+  font-family: 'Kanit';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url('/fonts/kanit-v17-latin_thai-500.woff2') format('woff2');
+}
+
+/* kanit-600 - latin_thai */
+@font-face {
+  font-family: 'Kanit';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url('/fonts/kanit-v17-latin_thai-600.woff2') format('woff2');
+}
+
+/* kanit-700 - latin_thai */
+@font-face {
+  font-family: 'Kanit';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url('/fonts/kanit-v17-latin_thai-700.woff2') format('woff2');
+}

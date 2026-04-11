@@ -1,0 +1,106 @@
+---
+import { Image } from "astro:assets";
+import mainBanner from "../assets/banner.jpg";
+import Bg from "../assets/bg.jpg";
+
+import "../styles/global.css";
+import Navbar from ".././pages/components/Navbar.astro";
+import NavbarStyle1 from "../pages/components/NavbarStyle1.astro";
+import NavbarStyle2 from "../pages/components/NavbarStyle2.astro";
+import NavbarStyle3 from "../pages/components/NavbarStyle3.astro";
+import NavbarStyle4 from "../pages/components/NavbarStyle4.astro";
+import NavbarStyle5 from "../pages/components/NavbarStyle5.astro";
+import NavbarStyle6 from "../pages/components/NavbarStyle6.astro";
+import NavbarStyle7 from "../pages/components/NavbarStyle7.astro";
+import NavbarStyle8 from "../pages/components/NavbarStyle8.astro";
+import NavbarStyle9 from "../pages/components/NavbarStyle9.astro";
+
+const {
+  title = "MAHAGAME66 คาสิโนเว็บตรง API แท้ อัปเดตทางเข้า 2026 ระบบออโต้",
+  description = "MAHAGAME66 คาสิโนเว็บตรง API แท้ ครบวงจร อัปเดตทางเข้าล่าสุด 2026  ลิงก์เดียวจบปลอดภัยจากเว็บปลอม ฝากถอนออโต้ โอนไวทันใจ สมัครง่าย ปลอดภัยทุกขั้นตอน",
+  robots = "index, follow",
+  ImageOg = "/pro2.jpg",
+} = Astro.props;
+
+const currentPath = Astro.url.pathname;
+const canonicalURL = new URL(currentPath, Astro.site);
+const ogImageURL = new URL(ImageOg, Astro.site);
+---
+
+<html lang="th">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="google-site-verification" content="WYOHYziXHtnTTMjZIIl9WBmSu6rs9chtVhzWL-_Bf3U" />
+    <meta name="robots" content={robots} />
+    <meta name="googlebot" content={robots} />
+    <title>{title}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content={description} />
+    <link rel="preload" href="/fonts/kanit-v17-latin_thai-regular.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="/fonts/kanit-v17-latin_thai-700.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="/fonts/kanit-v17-latin_thai-600.woff2" as="font" type="font/woff2" crossorigin="anonymous" />
+    <link rel="canonical" href={canonicalURL} />
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={canonicalURL} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={ogImageURL} />
+    <meta property="og:site_name" content={title} />
+    <meta property="og:locale" content="th_TH" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content={canonicalURL} />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={ogImageURL} />
+
+    <style is:global>
+      body {
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        margin: 0;
+        background-color: #3d0101;
+        font-weight: 400;
+        font-family: "Kanit", sans-serif !important;
+        color: white;
+      }
+    </style>
+  </head>
+
+  <body class="relative min-h-screen w-full">
+    <Image
+      src={Bg}
+      alt="Website Background"
+      loading="eager"
+      widths={[412, 768, 1024, 1900]}
+      sizes="100vw"
+      format="avif"
+      class="fixed inset-0 -z-50 h-full w-full object-cover"
+      quality="low"
+      decoding="sync"
+    />
+    <NavbarStyle2 />
+    <div class="mb-2.5 flex w-full flex-1 items-center justify-center">
+      <Image
+        src={mainBanner}
+        alt="mahagame66 banner"
+        loading="eager"
+        fetchpriority="high"
+        widths={[412, 768, 1900]}
+        sizes="(max-width: 768px) 412px, 100vw"
+        class="mx-auto h-auto w-full max-w-full object-contain shadow-xl"
+        decoding="sync"
+        format="avif"
+        quality={60}
+      />
+    </div>
+    <slot />
+  </body>
+</html>

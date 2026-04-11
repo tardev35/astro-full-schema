@@ -1,0 +1,36 @@
+---
+const { titleleft, titleright, titlecenter } = Astro.props;
+---
+
+<section
+  class="mx-auto mb-3 w-full max-w-7xl rounded-[15px] border-2 border-[#d4af37] bg-[#850000]/90 p-8 px-4 text-center shadow-2xl"
+  style="box-shadow: 0 0 14px rgba(212, 175, 55, 0.65), inset 0 0 12px rgba(212, 175, 55, 0.35)">
+  <div class="grid grid-cols-1 gap-5 md:grid-cols-4">
+    <article class="flex flex-col gap-4">
+      {titleleft && <h2 class="mb-4 text-3xl font-bold">{titleleft}</h2>}
+      <div class="text-white">
+        <slot name="left" />
+      </div>
+    </article>
+
+    <article class="flex flex-col gap-4">
+      {titlecenter && <h2 class="mb-4 text-3xl font-bold">{titlecenter}</h2>}
+      <div class="text-white">
+        <slot name="center" />
+      </div>
+    </article>
+
+    <article class="flex flex-col gap-4">
+      {titleright && <h2 class="mb-4 text-3xl font-bold">{titleright}</h2>}
+      <div class="text-white">
+        <slot name="right" />
+      </div>
+    </article>
+    <article class="flex flex-col gap-4">
+      {titleright && <h2 class="mb-4 text-3xl font-bold">{titleright}</h2>}
+      <div class="text-white">
+        <slot name="right2" />
+      </div>
+    </article>
+  </div>
+</section>

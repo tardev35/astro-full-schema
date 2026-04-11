@@ -1,0 +1,280 @@
+---
+import MainLayout from "../layouts/MainLayout.astro";
+import ContentBox from "./components/ContentBox.astro";
+import ContentBoxTwo from "./components/ContentBoxTwo.astro";
+import ContentBoxSevenThree from "./components/ContentBoxSevenThree.astro";
+import ContentBoxThreeColums from "./components/ContentBox3Three.astro";
+import Navfoot from "./components/Navfoot.astro";
+import Footer from "./components/Footer.astro";
+import Footer2 from "./components/FooterStyle3.astro";
+import Announcement from "./components/Announcement.astro";
+import SmoothCarousel from "./components/SmoothCarousel.astro";
+
+import { Picture } from "astro:assets";
+import image1 from "../assets/pro1.jpg";
+import image2 from "../assets/pro2.jpg";
+import image3 from "../assets/pro3.jpg";
+import image4 from "../assets/pro4.jpg";
+
+const currentPath = Astro.url.pathname;
+const homePage = Astro.url.origin;
+const logoUrl = homePage + "/logo.webp";
+
+const webPageSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  name: "MAHAGAME66 คาสิโนเว็บตรง API แท้ อัปเดตทางเข้า 2026 ระบบออโต้",
+  description: "MAHAGAME66 คาสิโนเว็บตรง API แท้ ครบวงจร อัปเดตทางเข้าล่าสุด 2026  ลิงก์เดียวจบปลอดภัยจากเว็บปลอม ฝากถอนออโต้ โอนไวทันใจ สมัครง่าย ปลอดภัยทุกขั้นตอน",
+  url: currentPath,
+};
+
+const orgSchema = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  name: "mahagame66",
+  logo: logoUrl,
+  url: homePage,
+};
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    {
+      "@type": "Question",
+      name: "MAHAGAME66 คือเว็บอะไร",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "MAHAGAME66 คือคาสิโนเว็บตรงที่ให้บริการครบในแพลตฟอร์มเดียว รองรับสล็อต คาสิโนสด กีฬา และเกมไพ่ยอดนิยม โดยเชื่อมต่อระบบกับผู้ให้บริการโดยตรงเพื่อให้ใช้งานได้เสถียรและสะดวกมากขึ้น",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "ทางเข้า MAHAGAME66 ล่าสุดสำคัญอย่างไร",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "ทางเข้าล่าสุดช่วยให้ผู้เล่นเข้าใช้งานได้จริงและลดความเสี่ยงจากเว็บปลอมหรือเว็บเลียนแบบ เพราะลิงก์จะถูกอัปเดตอย่างต่อเนื่องเพื่อรองรับการเข้าใช้งานผ่านทุกเครือข่าย ทั้งมือถือและคอมพิวเตอร์",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "ระบบ API แท้ของ MAHAGAME66 มีข้อดีอะไร",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "ระบบ API แท้ช่วยให้เกมเชื่อมต่อกับผู้ให้บริการโดยตรง ทำให้ข้อมูลเป็นแบบเรียลไทม์ เล่นลื่น ตอบสนองเร็ว ลดปัญหาดีเลย์ โหลดซ้ำ หรือหลุดออกจากเกมระหว่างเล่น",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "MAHAGAME66 มีเกมอะไรให้เล่นบ้าง",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "ภายใน MAHAGAME66 มีทั้งสล็อตแตกง่ายจากหลายค่าย คาสิโนสด เช่น บาคาร่า รูเล็ต และเสือมังกร รวมถึงเกมไพ่และเกมเดิมพันอื่น ๆ โดยรองรับการเล่นผ่านมือถือและสามารถสลับเกมได้ในบัญชีเดียว",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "สมัคร MAHAGAME66 และฝากถอนใช้งานยากไหม",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "การสมัครใช้งาน MAHAGAME66 ทำได้ง่ายผ่านหน้าเว็บ และเมื่อเข้าสู่ระบบแล้วสามารถใช้ระบบฝากถอนออโต้ได้ตลอด 24 ชั่วโมง ผู้เล่นทำรายการได้ด้วยตัวเอง ไม่ต้องรอแอดมิน และระบบยังรองรับการใช้งานที่ปลอดภัยในทุกขั้นตอน",
+      },
+    },
+  ],
+};
+
+const allSchemas = [webPageSchema, orgSchema, faqSchema];
+---
+
+<MainLayout>
+  <script type="application/ld+json" set:html={JSON.stringify(allSchemas)} />
+  <Announcement />
+
+  <ContentBox>
+    <p class="text-gray-200">
+      <h1 class="mb-2 text-2xl text-white xl:text-4xl">MAHAGAME66 คาสิโนเว็บตรง API แท้ อัปเดตทางเข้า 2026 ระบบออโต้</h1>
+      <strong>MAHAGAME66</strong> ชื่อนี้ที่การันตี คาสิโนเว็บตรง API แท้ ลิขสิทธิ์ตรง ที่เสถียรที่สุดในปี 2026 ปเดตทางเข้าล่าสุด ใช้งานง่ายผ่านมือถือ ระบบฝากถอนออโต้ โอนไวทันใจ รองรับทั้งสล็อต คาสิโนสด
+      กีฬาและเกมไพ่ยอดนิยมในเว็บเดียว แตกง่ายโบนัสโหด เกิดขึ้นได้ <strong>MAHAGAME66</strong> เราไม่ใช่แค่ผู้ให้บริการหน้าใหม่ แต่เราคือ "ของจริง" ไม่ต้องทนกับระบบที่ล่าช้าหรือการเข้าใช้งานที่ยากลำบาก แค่เปลี่ยนมาเล่นกับเว็บเรา
+    </p>
+
+    <div class="mt-3.5 flex flex-wrap justify-center gap-4">
+      <a
+        href="/signup"
+        aria-label="สมัครสมาชิก"
+        class="to-red to-red to-red flex items-center justify-center rounded-lg border border-gray-400 bg-gradient-to-b from-red-900 to-red-700 px-8 py-3 font-bold text-white transition-transform hover:scale-105">
+        สมัครสมาชิก
+      </a>
+
+      <a
+        href="/signup"
+        aria-label="เข้าเล่นเกม"
+        class="flex items-center justify-center rounded-lg border border-yellow-600 bg-gradient-to-b from-yellow-200 to-yellow-500 px-8 py-3 font-extrabold text-black shadow-[0_0_15px_rgba(255,215,0,0.4)] transition-transform hover:scale-105">
+        เข้าเล่นเกม
+      </a>
+
+      <a
+        href="/line"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="ติดต่อเราผ่าน Line"
+        class="flex items-center justify-center rounded-lg border border-green-300 bg-gradient-to-b from-green-400 to-green-700 px-8 py-3 font-bold text-white transition-transform hover:scale-105">
+        ติดต่อเรา
+      </a>
+    </div>
+  </ContentBox>
+
+  <SmoothCarousel />
+
+  <ContentBox>
+    <h2 class="mb-4 text-2xl font-bold">อัปเดตทางเข้า MAHAGAME66 ล่าสุด ลิงก์เดียวจบ ใช้งานได้จริง ปลอดภัยจากเว็บปลอม</h2>
+    <p>
+      อัฟเดททางเข้า MAHAGAME66 เพราะ สิ่งสำคัญไม่ใช่แค่ “เข้าได้” แต่ต้องเป็นลิงก์ล่าสุดที่ใช้งานได้จริงและปลอดภัย เพราะปัจจุบันมีเว็บเลียนแบบจำนวนมาก
+      การใช้ทางเข้าที่อัปเดตอยู่เสมอจะช่วยให้คุณเข้าถึงเว็บตรงตัวจริง ไม่ต้องเสี่ยงโดนหลอก โดยระบบของ MAHAGAME66 จะมีการอัปเดตลิงก์ใหม่อย่างต่อเนื่อง เพื่อให้ผู้เล่นสามารถเข้าใช้งานได้ทุกเครือข่าย
+      ไม่ว่าจะใช้งานผ่านมือถือหรือคอมพิวเตอร์ หากต้องการเข้าเล่นทันที แนะนำให้ใช้ลิงก์ทางเข้าล่าสุดจากหน้าเว็บนี้เพื่อความปลอดภัยและความต่อเนื่องในการใช้งาน
+    </p>
+  </ContentBox>
+
+  <ContentBoxTwo>
+    <div slot="left">
+      <h2 class="mb-7 text-2xl font-semibold text-amber-500">MAHAGAME66 คือเว็บให้บริการกับผู้เล่น คาสิโนเว็บตรง</h2>
+      <p>
+        MAHAGAME66 คือเว็บคาสิโนเว็บตรงที่ให้บริการครบทุกด้านในแพลตฟอร์มเดียว ไม่ว่าจะเป็นสล็อต คาสิโนสด หรือเกมเดิมพันยอดนิยม จุดเด่นคือไม่ผ่านเอเย่นต์ ทำให้ระบบมีความเสถียร
+        ผู้เล่นสามารถเข้าถึงเกมได้โดยตรงจากผู้ให้บริการที่ถูกต้อง <strong>MAHAGAME66</strong> เว็บใหญ่ คาสิโนออนไลน์ รองรับทั้งสายเล่นสนุกหรือสายเล่นแบบจริงจัง ต้องการการบริการแบบมืออาชีพ แบบมาตรฐานเว็บตรงมีใบเซอร์
+      </p>
+    </div>
+
+    <div slot="right">
+      <h2 class="mb-7 text-2xl font-semibold text-amber-500">ระบบ API แท้ ข้อได้เปรียบที่ทำให้ MAHAGAME66 เสถียร และตอบสนองเร็ว</h2>
+      <p>
+        หัวใจสำคัญของ <strong>MAHAGAME66</strong> คือระบบ API แท้ ที่เชื่อมต่อกับผู้ให้บริการเกมโดยตรง ทำให้ข้อมูลเกมเป็นแบบเรียลไทม์ ไม่มีดีเลย์หรือโหลดซ้ำเหมือนบางเว็บที่ใช้ระบบที่้สร้างขึ้นเองแบบไร้คุณภาพ
+        และการรับผิดชอบ การเชื่อม API แท้ ผลลัพธ์คือการเล่นที่ลื่นไหล ไม่เด้งออกจากเกมบ่อย เข้าโบนัสต่อเนื่อง และไม่หลุด กลางทาง ซึ่งเป็นปัจจัยสำคัญที่ช่วยให้การเล่นมีประสิทธิภาพมากขึ้น
+      </p>
+    </div>
+  </ContentBoxTwo>
+
+  <ContentBoxTwo>
+    <div slot="left">
+      <h2 class="mb-7 text-2xl font-semibold text-amber-500">เว็บเดียว รวมทั้งสล็อต คาสิโนสด และเกมยอดนิยม 2026</h2>
+      <p>
+        คาสิโนออนไลน์แบบครบวงจร ไม่ใช่คำพูดที่เกินจริง MAHAGAME66 เว็บเดียว รวมค่ายเกมหลากหลาย เกมยอดนิยม2026 ไว้ในที่เดียว เล่นสามารถสลับเกมไปมาได้อย่างอิสระ เล่นต่อเนื่องได้ โโยใช้บบัญชีสมาชิกเดิม
+      </p>
+    </div>
+    <div slot="right">
+      <h3 class="mb-7 text-2xl font-semibold text-amber-500">เกมที่มีให้บริการ</h3>
+      <ul class="list-disc space-y-3 pl-5 text-left">
+        <li>สล็อตแตกง่ายจากหลายค่าย</li>
+        <li>คาสิโนสด (บาคาร่า / รูเล็ต / เสือมังกร)</li>
+        <li>เกมไพ่ และเกมเดิมพันอื่น ๆ</li>
+        <li>ระบบรองรับมือถือ เล่นได้ทุกที่</li>
+      </ul>
+    </div>
+  </ContentBoxTwo>
+
+  <ContentBoxSevenThree>
+    <div slot="left">
+      <div class="rounded-xl p-5">
+        <Picture
+          src={image1}
+          alt="ทางเข้า BETFLIK4U"
+          loading="lazy"
+          fetchpriority="low"
+          widths={[200, 400, 600]}
+          sizes="(max-width: 768px) 100vw, 33vw"
+          class="mx-auto h-auto w-full max-w-[400px] object-contain shadow-xl"
+          decoding="async"
+          formats={["avif", "webp"]}
+          fallbackFormat="webp"
+          quality={80}
+          fallbackFormat="webp"
+        />
+      </div>
+    </div>
+    <div slot="right">
+      <h2 class="mb-7 text-2xl font-semibold">ระบบฝากถอนออโต้ โอนไว จัดการธุรกรรมเอง ไม่ต้องรอแอดมิน</h2>
+      <p class="mb-5">
+        ระบบฝากถอนของ <strong>MAHAGAME66</strong> ใช้รูปแบบอัตโนมัติเต็มรูปแบบ ผู้เล่นสามารถทำรายการได้ด้วยตัวเองตลอด 24 ชั่วโมง ไม่ต้องรอเจ้าหน้าที่หรือแจ้งสลิปให้ยุ่งยาก การทำธุรกรรมใช้เวลาเพียงไม่กี่วินาที
+        เงินเข้า-ออกไว และรองรับวิธีธีฝากถอนหลายรูปแบบ
+      </p>
+      <h2 class="mb-7 text-2xl font-semibold text-amber-500">สมัคร MAHAGAME66 ใช้งานง่าย เล่นได้ทันที เว็บมีใบเซอร์ ปลอดภัยทุกขั้นตอน</h2>
+      <p>
+        ผู้เล่นเริ่มต้นได้ง่ายตั้งแต่ขั้นตอนสมัคร ไม่ต้องยุ่งยากหรือใช้เวลานาน เพียงสมัครสมาชิกผ่านหน้าเว็บ จากนั้นเข้าสู่ระบบและเติมเงินผ่านระบบออโต้ ก็สามารถเข้าเล่นได้ทันที ในด้านความปลอดภัย
+        MAHAGAME66 ผ่านการรับรองจากสมาคมเว็บคาสิดน มีใบเซอร์ที่ได้มาตรฐาน ทำให้ทุกการใช้งานอยู่ภายใต้ระบบที่ตรวจสอบได้ ทั้งการปกป้องข้อมูลส่วนตัวและธุรกรรมทางการเงิน
+      </p>
+    </div>
+  </ContentBoxSevenThree>
+
+  <ContentBoxThreeColums>
+    <div slot="left">
+      <div class="p-5">
+        <Picture
+          src={image1}
+          alt="mahagame66 คาสิโนเว็บตรง"
+          loading="lazy"
+          fetchpriority="low"
+          widths={[200, 400, 600]}
+          sizes="(max-width: 768px) 100vw, 33vw"
+          class="mx-auto h-auto w-full max-w-[700px] object-contain shadow-xl"
+          decoding="async"
+          formats={["avif", "webp"]}
+          fallbackFormat="webp"
+          quality={60}
+        />
+      </div>
+    </div>
+
+    <div slot="center">
+      <div class="p-5">
+        <Picture
+          src={image2}
+          alt="mahagame66 2026"
+          loading="lazy"
+          fetchpriority="low"
+          widths={[200, 400, 600]}
+          sizes="(max-width: 768px) 100vw, 33vw"
+          class="mx-auto h-auto w-full max-w-[700px] object-contain shadow-xl"
+          decoding="async"
+          formats={["avif", "webp"]}
+          fallbackFormat="webp"
+          quality={60}
+        />
+      </div>
+    </div>
+
+    <div slot="right">
+      <div class="p-5">
+        <Picture
+          src={image3}
+          alt="mahagame66 เกมAPIแท้"
+          loading="lazy"
+          fetchpriority="low"
+          widths={[200, 400, 600]}
+          sizes="(max-width: 768px) 100vw, 33vw"
+          class="mx-auto h-auto w-full max-w-[700px] object-contain shadow-xl"
+          decoding="async"
+          formats={["avif", "webp"]}
+          fallbackFormat="webp"
+          quality={60}
+        />
+      </div>
+    </div>
+    <div slot="right2">
+      <div class="p-5">
+        <Picture
+          src={image4}
+          alt="mahagame66 แตกง่าย"
+          loading="lazy"
+          fetchpriority="low"
+          widths={[200, 400, 600]}
+          sizes="(max-width: 768px) 100vw, 33vw"
+          class="mx-auto h-auto w-full max-w-[700px] object-contain shadow-xl"
+          decoding="async"
+          formats={["avif", "webp"]}
+          fallbackFormat="webp"
+          quality={60}
+        />
+      </div>
+    </div>
+  </ContentBoxThreeColums>
+  <Footer2 />
+  <Navfoot />
+</MainLayout>

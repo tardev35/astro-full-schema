@@ -1,0 +1,214 @@
+---
+import { Picture } from "astro:assets";
+const images = import.meta.glob<{ default: ImageMetadata }>("../../assets/logo.{png,webp,jpg}", { eager: true });
+
+const imagePaths = Object.keys(images);
+const mainLogo = imagePaths.length > 0 ? images[imagePaths[0]].default : null;
+
+const currentPath = Astro.url.pathname;
+
+const isActive = (path: string) => {
+  if (path === "/") return currentPath === "/";
+  return currentPath.startsWith(path);
+};
+---
+
+<nav class="sticky top-0 z-50 w-full font-sans shadow-2xl">
+  <div class="relative z-20 flex h-[75px] w-full items-center justify-between border-b-[3px] border-[#1c0124] bg-gradient-to-r from-[#580000] via-[#5a0000] to-[#490004] px-3 xl:px-6">
+    <div class="z-10 flex h-full items-center gap-3 xl:gap-4">
+      <button id="hamburger-btn" class="flex flex-col items-center justify-center space-y-1.5 p-2 xl:hidden" aria-label="Toggle menu">
+        <span class="hamburger-line h-0.5 w-6 bg-white transition-all duration-300"></span>
+        <span class="hamburger-line h-0.5 w-6 bg-white transition-all duration-300"></span>
+        <span class="hamburger-line h-0.5 w-6 bg-white transition-all duration-300"></span>
+      </button>
+
+      <a href="/" class="flex items-center transition-transform hover:scale-105">
+        <Picture src={mainLogo!} alt="logo" loading="eager" fetchpriority="high" class="h-[45px] w-auto drop-shadow-xl xl:h-[80px]" formats={["avif", "webp"]} fallbackFormat="webp" />
+      </a>
+
+      <a href="#" class="hidden items-center gap-2 text-white transition-colors hover:text-yellow-400 xl:flex">
+        <span>🤍</span>
+        <span class="text-sm font-medium">รายการโปรด & เล่นล่าสุด</span>
+      </a>
+
+      <button class="hidden overflow-hidden rounded-sm border border-white/30 transition-colors hover:border-white xl:block">
+        <div class="flex h-[18px] w-[28px] flex-col bg-blue-800">
+          <div class="h-[3px] bg-red-600"></div><div class="h-[3px] bg-white"></div><div class="h-[6px] bg-[#670000]"></div><div class="h-[3px] bg-white"></div><div class="h-[3px] bg-red-600"></div>
+        </div>
+      </button>
+    </div>
+
+    <div class="absolute top-0 left-1/2 z-20 hidden h-full -translate-x-1/2 items-start justify-center gap-2 xl:flex">
+      <a
+        href="/"
+        class={`group flex flex-col items-center justify-center w-[100px] h-[85px] rounded-b-2xl transition-all duration-300 shadow-lg ${isActive("/") ? "bg-[#670000] border-b-2 border-yellow-500 scale-105" : "bg-[#670000] hover:bg-[#670000] hover:pt-2 border-b-2 border-transparent"}`}>
+        <span class="mb-1 text-3xl drop-shadow-md transition-transform group-hover:scale-110">🏠</span>
+        <span class={`text-sm font-bold ${isActive("/") ? "text-white" : "text-gray-300 group-hover:text-white"}`}>หน้าแรก</span>
+      </a>
+
+      <a
+        href="/promotion"
+        class={`group flex flex-col items-center justify-center w-[100px] h-[85px] rounded-b-2xl transition-all duration-300 shadow-lg ${isActive("/promotion") ? "bg-[#670000] border-b-2 border-yellow-500 scale-105" : "bg-[#670000] hover:bg-[#670000] hover:pt-2 border-b-2 border-transparent"}`}>
+        <span class="mb-1 text-3xl drop-shadow-md transition-transform group-hover:scale-110">🎁</span>
+        <span class={`text-sm font-bold ${isActive("/promotion") ? "text-white" : "text-gray-300 group-hover:text-white"}`}>โปรโมชั่น</span>
+      </a>
+
+      <a
+        href="/gamedemo"
+        class={`group flex flex-col items-center justify-center w-[100px] h-[85px] rounded-b-2xl transition-all duration-300 shadow-lg ${isActive("/gamedemo") ? "bg-[#670000] border-b-2 border-yellow-500 scale-105" : "bg-[#670000] hover:bg-[#670000] hover:pt-2 border-b-2 border-transparent"}`}>
+        <span class="mb-1 text-3xl drop-shadow-md transition-transform group-hover:scale-110">🎰</span>
+        <span class={`text-sm font-bold ${isActive("/gamedemo") ? "text-white" : "text-gray-300 group-hover:text-white"}`}>ทดลองเล่น</span>
+      </a>
+
+      <a
+        href="/gamelogin"
+        class={`group flex flex-col items-center justify-center w-[100px] h-[85px] rounded-b-2xl transition-all duration-300 shadow-lg ${isActive("/gamelogin") ? "bg-[#670000] border-b-2 border-yellow-500 scale-105" : "bg-[#670000] hover:bg-[#670000] hover:pt-2 border-b-2 border-transparent"}`}>
+        <span class="mb-1 text-3xl drop-shadow-md transition-transform group-hover:scale-110">🌐</span>
+        <span class={`text-sm font-bold ${isActive("/gamelogin") ? "text-white" : "text-gray-300 group-hover:text-white"}`}>ทางเข้า</span>
+      </a>
+
+      <a
+        href="/contact"
+        class={`group flex flex-col items-center justify-center w-[100px] h-[85px] rounded-b-2xl transition-all duration-300 shadow-lg ${isActive("/contact") ? "bg-[#670000] border-b-2 border-yellow-500 scale-105" : "bg-[#670000] hover:bg-[#670000] hover:pt-2 border-b-2 border-transparent"}`}>
+        <span class="mb-1 text-3xl drop-shadow-md transition-transform group-hover:scale-110">📞</span>
+        <span class={`text-sm font-bold ${isActive("/contact") ? "text-white" : "text-gray-300 group-hover:text-white"}`}>ติดต่อเรา</span>
+      </a>
+    </div>
+
+    <div class="z-10 flex h-full items-center gap-1.5 md:gap-3">
+      <a
+        href="/signup"
+        class="flex h-[36px] items-center justify-center rounded border border-[#A00000] bg-gradient-to-b from-[#8C0000] to-[#5C0000] px-3 text-xs font-bold text-white shadow-[0_2px_5px_rgba(0,0,0,0.5)] transition-all hover:brightness-125 md:h-[40px] md:px-5 md:text-sm">
+        สมัครสมาชิก
+      </a>
+      <a
+        href="/signin"
+        class="flex h-[36px] items-center justify-center rounded border border-[#FF3333]/50 bg-gradient-to-b from-[#D40000] to-[#A00000] px-3 text-xs font-bold text-white shadow-[0_2px_5px_rgba(0,0,0,0.5)] transition-all hover:brightness-125 md:h-[40px] md:px-5 md:text-sm">
+        เข้าสู่ระบบ
+      </a>
+    </div>
+  </div>
+
+  <div
+    id="mobile-menu"
+    class="mobile-menu relative z-10 max-h-0 overflow-hidden border-t border-red-900/50 bg-[#670000]/98 shadow-[0_10px_20px_rgba(0,0,0,0.5)] backdrop-blur-md transition-all duration-500 ease-[cubic-bezier(0.4,0,0.2,1)] xl:hidden">
+    <div class="space-y-1.5 px-4 py-4">
+      <a
+        href="/"
+        class={`menu-item group flex items-center px-4 py-3 text-sm font-medium transition-all duration-300 rounded-lg ${isActive("/") ? "bg-[#5C0000]/40 text-yellow-400 border border-red-500/30" : "text-gray-300 hover:text-white hover:bg-[#670000]"}`}>
+        <span class="mr-3 text-xl">🏠</span>หน้าแรก
+      </a>
+      <a
+        href="/promotion"
+        class={`menu-item group flex items-center px-4 py-3 text-sm font-medium transition-all duration-300 rounded-lg ${isActive("/promotion") ? "bg-[#5C0000]/40 text-yellow-400 border border-red-500/30" : "text-gray-300 hover:text-white hover:bg-[#670000]"}`}>
+        <span class="mr-3 text-xl">🎁</span>โปรโมชั่น
+      </a>
+      <a
+        href="/gamedemo"
+        class={`menu-item group flex items-center px-4 py-3 text-sm font-medium transition-all duration-300 rounded-lg ${isActive("/gamedemo") ? "bg-[#5C0000]/40 text-yellow-400 border border-red-500/30" : "text-gray-300 hover:text-white hover:bg-[#670000]"}`}>
+        <span class="mr-3 text-xl">🎰</span>ทดลองเล่น
+      </a>
+      <a
+        href="/gamelogin"
+        class={`menu-item group flex items-center px-4 py-3 text-sm font-medium transition-all duration-300 rounded-lg ${isActive("/gamelogin") ? "bg-[#5C0000]/40 text-yellow-400 border border-red-500/30" : "text-gray-300 hover:text-white hover:bg-[#670000]"}`}>
+        <span class="mr-3 text-xl">🌐</span>ทางเข้า
+      </a>
+      <a
+        href="/contact"
+        class={`menu-item group flex items-center px-4 py-3 text-sm font-medium transition-all duration-300 rounded-lg ${isActive("/contact") ? "bg-[#5C0000]/40 text-yellow-400 border border-red-500/30" : "text-gray-300 hover:text-white hover:bg-[#670000]"}`}>
+        <span class="mr-3 text-xl">📞</span>ติดต่อเรา
+      </a>
+
+      <div class="mt-2 flex items-center justify-between border-t border-red-900/50 px-4 pt-4">
+        <span class="text-sm text-gray-400">ภาษา (Language)</span>
+        <button class="overflow-hidden rounded-sm border border-white/30">
+          <div class="flex h-[18px] w-[28px] flex-col bg-blue-800">
+            <div class="h-[3px] bg-red-600"></div><div class="h-[3px] bg-white"></div><div class="h-[6px] bg-[#670000]"></div><div class="h-[3px] bg-white"></div><div class="h-[3px] bg-red-600"></div>
+          </div>
+        </button>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<div class="hidden h-[10px] w-full bg-transparent xl:block"></div>
+
+<style>
+  /* Hamburger animation */
+  #hamburger-btn.active .hamburger-line:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+  #hamburger-btn.active .hamburger-line:nth-child(2) {
+    opacity: 0;
+  }
+  #hamburger-btn.active .hamburger-line:nth-child(3) {
+    transform: rotate(-45deg) translate(6px, -5px);
+  }
+
+  /* Mobile menu dropdown state */
+  .mobile-menu.open {
+    max-height: 400px;
+    opacity: 1;
+  }
+  .mobile-menu {
+    opacity: 0;
+  }
+
+  /* Menu items cascade animation */
+  .menu-item {
+    opacity: 0;
+    transform: translateX(-15px);
+    transition: all 0.3s ease;
+  }
+  .mobile-menu.open .menu-item {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  .mobile-menu.open .menu-item:nth-child(1) {
+    transition-delay: 0.1s;
+  }
+  .mobile-menu.open .menu-item:nth-child(2) {
+    transition-delay: 0.15s;
+  }
+  .mobile-menu.open .menu-item:nth-child(3) {
+    transition-delay: 0.2s;
+  }
+  .mobile-menu.open .menu-item:nth-child(4) {
+    transition-delay: 0.25s;
+  }
+  .mobile-menu.open .menu-item:nth-child(5) {
+    transition-delay: 0.3s;
+  }
+  a {
+    font-family: "Kanit", sans-serif !important;
+  }
+</style>
+
+<script>
+  const hamburgerBtn = document.getElementById("hamburger-btn");
+  const mobileMenu = document.getElementById("mobile-menu");
+  const menuItems = document.querySelectorAll(".menu-item");
+
+  hamburgerBtn?.addEventListener("click", () => {
+    hamburgerBtn.classList.toggle("active");
+    mobileMenu?.classList.toggle("open");
+  });
+
+  // ปิดเมนูเวลากดเลือกลิงก์
+  menuItems.forEach((item) => {
+    item.addEventListener("click", () => {
+      hamburgerBtn?.classList.remove("active");
+      mobileMenu?.classList.remove("open");
+    });
+  });
+
+  // ปิดเมนูเวลากดพื้นที่ว่างข้างนอก
+  document.addEventListener("click", (e) => {
+    const target = e.target as HTMLElement;
+    if (!target.closest("nav")) {
+      hamburgerBtn?.classList.remove("active");
+      mobileMenu?.classList.remove("open");
+    }
+  });
+</script>

@@ -1,0 +1,257 @@
+---
+import { Picture } from "astro:assets";
+
+const images = import.meta.glob<{ default: ImageMetadata }>("../../assets/logo.{png,webp,jpg}", { eager: true });
+
+const imagePaths = Object.keys(images);
+const mainLogo = imagePaths.length > 0 ? images[imagePaths[0]].default : null;
+
+const currentPath = Astro.url.pathname;
+
+const isActive = (path: string) => {
+  if (path === "/") return currentPath === "/";
+
+  return currentPath.startsWith(path);
+};
+---
+
+<nav class="sticky top-0 z-50 border-b border-[#640000]/20 bg-[#230843] px-4 py-2 shadow-2xl">
+  <div class="mx-auto flex max-w-6xl items-center justify-between">
+    <div class="flex items-center">
+      <a href="/" aria-label="logo">
+        <Picture
+          src={mainLogo!}
+          alt="mahagame66 logo"
+          loading="eager"
+          fetchpriority="high"
+          class="mx-auto h-[40px] w-auto object-contain drop-shadow-xl lg:h-[70px]"
+          widths={[95, 100, 150]}
+          sizes="(max-width: 150px) 120px, 300px"
+          decoding="async"
+          formats={["avif", "webp"]}
+          fallbackFormat="webp"
+        />
+      </a>
+    </div>
+
+    <!-- Desktop Menu -->
+    <div class="no-scrollbar hidden items-center gap-2 overflow-x-auto px-2 whitespace-nowrap md:flex">
+      <a
+        href="/"
+        class={`nav-btn group relative px-5 py-2.5 text-sm lg:text-base font-bold rounded-xl transition-all duration-300 flex items-center gap-2 overflow-hidden ${
+          isActive("/")
+            ? "bg-gradient-to-r from-yellow-400 to-yellow-500 text-gray-900 shadow-lg shadow-yellow-400/50"
+            : "bg-white/10 backdrop-blur-sm text-white hover:bg-white/20 border border-white/20"
+        }`}>
+        <span class="text-lg">🏠</span>
+        <span>หน้าแรก</span>
+      </a>
+
+      <a
+        href="/promotion"
+        class={`nav-btn group relative px-5 py-2.5 text-sm lg:text-base font-bold rounded-xl transition-all duration-300 flex items-center gap-2 overflow-hidden ${
+          isActive("/promotion")
+            ? "bg-gradient-to-r from-yellow-400 to-yellow-500 text-gray-900 shadow-lg shadow-yellow-400/50"
+            : "bg-white/10 backdrop-blur-sm text-white hover:bg-white/20 border border-white/20"
+        }`}>
+        <span class="text-lg">⭐</span>
+        <span>โปรโมชั่น</span>
+      </a>
+
+      <a
+        href="/gamedemo"
+        class={`nav-btn group relative px-5 py-2.5 text-sm lg:text-base font-bold rounded-xl transition-all duration-300 flex items-center gap-2 overflow-hidden ${
+          isActive("/gamedemo")
+            ? "bg-gradient-to-r from-yellow-400 to-yellow-500 text-gray-900 shadow-lg shadow-yellow-400/50"
+            : "bg-white/10 backdrop-blur-sm text-white hover:bg-white/20 border border-white/20"
+        }`}>
+        <span class="text-lg">🎮</span>
+        <span>ทดลองเล่น</span>
+      </a>
+
+      <a
+        href="/gamelogin"
+        class={`nav-btn group relative px-5 py-2.5 text-sm lg:text-base font-bold rounded-xl transition-all duration-300 flex items-center gap-2 overflow-hidden ${
+          isActive("/gamelogin")
+            ? "bg-gradient-to-r from-yellow-400 to-yellow-500 text-gray-900 shadow-lg shadow-yellow-400/50"
+            : "bg-white/10 backdrop-blur-sm text-white hover:bg-white/20 border border-white/20"
+        }`}>
+        <span class="text-lg">🌐</span>
+        <span>ทางเข้า</span>
+      </a>
+
+      <a
+        href="/contact"
+        class={`nav-btn group relative px-5 py-2.5 text-sm lg:text-base font-bold rounded-xl transition-all duration-300 flex items-center gap-2 overflow-hidden ${
+          isActive("/contact")
+            ? "bg-gradient-to-r from-yellow-400 to-yellow-500 text-gray-900 shadow-lg shadow-yellow-400/50"
+            : "bg-white/10 backdrop-blur-sm text-white hover:bg-white/20 border border-white/20"
+        }`}>
+        <span class="text-lg">👤</span>
+        <span>ติดต่อ</span>
+      </a>
+    </div>
+
+    <!-- Mobile Hamburger Button -->
+    <button id="hamburger-btn" class="flex flex-col items-center justify-center space-y-1.5 p-2 md:hidden" aria-label="Toggle menu">
+      <span class="hamburger-line h-0.5 w-6 bg-white transition-all duration-300"></span>
+      <span class="hamburger-line h-0.5 w-6 bg-white transition-all duration-300"></span>
+      <span class="hamburger-line h-0.5 w-6 bg-white transition-all duration-300"></span>
+    </button>
+
+    <div class="hidden items-center space-x-2 lg:flex">
+      <a href="/signup" class="rounded-lg border border-red-400 bg-gradient-to-r from-red-600 to-red-700 px-5 py-2 text-base font-bold text-white shadow-md hover:brightness-110">👤 สมัครสมาชิก</a>
+      <a href="/signin" class="rounded-lg border border-gray-700 bg-gradient-to-b from-gray-600 to-black px-5 py-2 text-base font-bold text-white hover:bg-gray-900">🔒 เข้าสู่ระบบ</a>
+    </div>
+  </div>
+
+  <div
+    id="mobile-menu"
+    class="mobile-menu max-h-0 overflow-hidden border-b border-white/5 bg-[#0f1115]/95 shadow-2xl backdrop-blur-md transition-all duration-500 ease-[cubic-bezier(0.4,0,0.2,1)] md:hidden">
+    <div class="space-y-1.5 px-4 py-6">
+      <a
+        href="/"
+        class={`group flex items-center px-4 py-3.5 text-sm font-medium transition-all duration-300 rounded-xl ${isActive("/") ? "bg-red-500/10 text-red-400 border border-red-500/20" : "text-gray-400 hover:text-white hover:bg-white/5"}`}>
+        <span class={`mr-3 text-lg transition-transform duration-300 group-hover:scale-110 ${isActive("/") ? "drop-shadow-[0_0_8px_rgba(248,113,113,0.5)]" : ""}`}>🏠</span>
+        หน้าแรก
+      </a>
+
+      <a
+        href="/promotion"
+        class={`group flex items-center px-4 py-3.5 text-sm font-medium transition-all duration-300 rounded-xl ${isActive("/promotion") ? "bg-red-500/10 text-red-400 border border-red-500/20" : "text-gray-400 hover:text-white hover:bg-white/5"}`}>
+        <span class={`mr-3 text-lg transition-transform duration-300 group-hover:scale-110 ${isActive("/promotion") ? "drop-shadow-[0_0_8px_rgba(248,113,113,0.5)]" : ""}`}>⭐</span>
+        โปรโมชั่น
+      </a>
+
+      <a
+        href="/gamedemo"
+        class={`group flex items-center px-4 py-3.5 text-sm font-medium transition-all duration-300 rounded-xl ${isActive("/gamedemo") ? "bg-red-500/10 text-red-400 border border-red-500/20" : "text-gray-400 hover:text-white hover:bg-white/5"}`}>
+        <span class={`mr-3 text-lg transition-transform duration-300 group-hover:scale-110 ${isActive("/gamedemo") ? "drop-shadow-[0_0_8px_rgba(248,113,113,0.5)]" : ""}`}>🎰</span>
+        ทดลองเล่น
+      </a>
+
+      <a
+        href="/gamelogin"
+        class={`group flex items-center px-4 py-3.5 text-sm font-medium transition-all duration-300 rounded-xl ${isActive("/gamelogin") ? "bg-red-500/10 text-red-400 border border-red-500/20" : "text-gray-400 hover:text-white hover:bg-white/5"}`}>
+        <span class={`mr-3 text-lg transition-transform duration-300 group-hover:scale-110 ${isActive("/gamelogin") ? "drop-shadow-[0_0_8px_rgba(248,113,113,0.5)]" : ""}`}>🌐</span>
+        ทางเข้า
+      </a>
+
+      <a
+        href="/contact"
+        class={`group flex items-center px-4 py-3.5 text-sm font-medium transition-all duration-300 rounded-xl ${isActive("/contact") ? "bg-red-500/10 text-red-400 border border-red-500/20" : "text-gray-400 hover:text-white hover:bg-white/5"}`}>
+        <span class={`mr-3 text-lg transition-transform duration-300 group-hover:scale-110 ${isActive("/contact") ? "drop-shadow-[0_0_8px_rgba(248,113,113,0.5)]" : ""}`}>👤</span>
+        ติดต่อ
+      </a>
+
+      <div class="mt-4 flex flex-col space-y-3 border-t border-white/10 pt-6">
+        <a
+          href="/signup"
+          class="relative flex w-full items-center justify-center rounded-xl bg-gradient-to-r from-red-600 to-red-500 px-4 py-3.5 text-sm font-bold text-white shadow-[0_4px_20px_-4px_rgba(220,38,38,0.5)] transition-all duration-300 hover:-translate-y-0.5 hover:from-red-500 hover:to-red-400 hover:shadow-[0_6px_25px_-4px_rgba(220,38,38,0.6)]">
+          <span class="mr-2">🔥</span> สมัครสมาชิก
+        </a>
+        <a
+          href="/signin"
+          class="flex w-full items-center justify-center rounded-xl border border-white/10 bg-white/5 px-4 py-3.5 text-sm font-bold text-gray-300 backdrop-blur-sm transition-all duration-300 hover:-translate-y-0.5 hover:bg-white/10 hover:text-white">
+          <span class="mr-2">🔒</span> เข้าสู่ระบบ
+        </a>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<style>
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  /* Hamburger animation */
+  #hamburger-btn.active .hamburger-line:nth-child(1) {
+    transform: rotate(45deg) translate(8px, 8px);
+  }
+
+  #hamburger-btn.active .hamburger-line:nth-child(2) {
+    opacity: 0;
+  }
+
+  #hamburger-btn.active .hamburger-line:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -7px);
+  }
+
+  /* Mobile menu animation */
+  .mobile-menu.open {
+    max-height: 500px;
+    opacity: 1;
+  }
+
+  .mobile-menu {
+    opacity: 0;
+  }
+
+  /* Menu items fade-in animation */
+  .menu-item {
+    animation: slideInLeft 0.3s ease-out forwards;
+  }
+
+  .menu-item:nth-child(1) {
+    animation-delay: 0.05s;
+  }
+  .menu-item:nth-child(2) {
+    animation-delay: 0.1s;
+  }
+  .menu-item:nth-child(3) {
+    animation-delay: 0.15s;
+  }
+  .menu-item:nth-child(4) {
+    animation-delay: 0.2s;
+  }
+  .menu-item:nth-child(5) {
+    animation-delay: 0.25s;
+  }
+  .menu-item:nth-child(6) {
+    animation-delay: 0.3s;
+  }
+
+  @keyframes slideInLeft {
+    from {
+      opacity: 0;
+      transform: translateX(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+</style>
+
+<script>
+  const hamburgerBtn = document.getElementById("hamburger-btn");
+  const mobileMenu = document.getElementById("mobile-menu");
+  const menuItems = document.querySelectorAll(".menu-item");
+
+  hamburgerBtn?.addEventListener("click", () => {
+    hamburgerBtn.classList.toggle("active");
+    mobileMenu?.classList.toggle("open");
+  });
+
+  // Close menu when clicking on menu items
+  menuItems.forEach((item) => {
+    item.addEventListener("click", () => {
+      hamburgerBtn?.classList.remove("active");
+      mobileMenu?.classList.remove("open");
+    });
+  });
+
+  // Close menu when clicking outside
+  document.addEventListener("click", (e) => {
+    if (!e.target.closest("nav")) {
+      hamburgerBtn?.classList.remove("active");
+      mobileMenu?.classList.remove("open");
+    }
+  });
+</script>

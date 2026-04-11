@@ -1,0 +1,206 @@
+---
+import { Picture } from "astro:assets";
+const images = import.meta.glob<{ default: ImageMetadata }>("../../assets/logo.{png,webp,jpg}", { eager: true });
+
+const imagePaths = Object.keys(images);
+const mainLogo = imagePaths.length > 0 ? images[imagePaths[0]].default : null;
+
+const currentPath = Astro.url.pathname;
+
+const isActive = (path: string) => {
+  if (path === "/") return currentPath === "/";
+  return currentPath.startsWith(path);
+};
+---
+
+<header class="pointer-events-none fixed top-2 left-0 z-50 w-full px-3 md:top-4 md:px-6">
+  <div class="pointer-events-auto relative mx-auto max-w-7xl">
+    <nav
+      class="relative flex items-center justify-between rounded-2xl border border-white/10 bg-[#0a0a0a]/70 px-4 py-2.5 shadow-[0_8px_32px_rgba(0,0,0,0.5)] backdrop-blur-xl transition-all duration-300 hover:border-white/20 hover:bg-[#0a0a0a]/80 md:rounded-full md:py-3">
+      <div class="z-20 flex items-center">
+        <a href="/" class="flex items-center drop-shadow-[0_0_8px_rgba(255,255,255,0.2)] transition-transform hover:scale-105">
+          <Picture src={mainLogo!} alt="VIP Logo" loading="eager" fetchpriority="high" class="h-[35px] w-auto md:h-[40px]" formats={["avif", "webp"]} fallbackFormat="webp" />
+        </a>
+      </div>
+
+      <div class="absolute top-1/2 left-1/2 z-10 hidden -translate-x-1/2 -translate-y-1/2 items-center justify-center gap-1 lg:flex xl:gap-2">
+        <a
+          href="/"
+          class={`px-4 py-2 rounded-full text-sm font-bold transition-all duration-300 ${isActive("/") ? "bg-gradient-to-r from-yellow-400 to-yellow-600 text-black shadow-[0_0_15px_rgba(234,179,8,0.4)]" : "text-gray-300 hover:text-white hover:bg-white/10"}`}>
+          หน้าแรก
+        </a>
+        <a
+          href="/promotion"
+          class={`px-4 py-2 rounded-full text-sm font-bold transition-all duration-300 ${isActive("/promotion") ? "bg-gradient-to-r from-yellow-400 to-yellow-600 text-black shadow-[0_0_15px_rgba(234,179,8,0.4)]" : "text-gray-300 hover:text-white hover:bg-white/10"}`}>
+          โปรโมชั่น
+        </a>
+        <a
+          href="/gamedemo"
+          class={`px-4 py-2 rounded-full text-sm font-bold transition-all duration-300 ${isActive("/gamedemo") ? "bg-gradient-to-r from-yellow-400 to-yellow-600 text-black shadow-[0_0_15px_rgba(234,179,8,0.4)]" : "text-gray-300 hover:text-white hover:bg-white/10"}`}>
+          ทดลองเล่น
+        </a>
+        <a
+          href="/gamelogin"
+          class={`px-4 py-2 rounded-full text-sm font-bold transition-all duration-300 ${isActive("/gamelogin") ? "bg-gradient-to-r from-yellow-400 to-yellow-600 text-black shadow-[0_0_15px_rgba(234,179,8,0.4)]" : "text-gray-300 hover:text-white hover:bg-white/10"}`}>
+          ทางเข้า
+        </a>
+        <a
+          href="/contact"
+          class={`px-4 py-2 rounded-full text-sm font-bold transition-all duration-300 ${isActive("/contact") ? "bg-gradient-to-r from-yellow-400 to-yellow-600 text-black shadow-[0_0_15px_rgba(234,179,8,0.4)]" : "text-gray-300 hover:text-white hover:bg-white/10"}`}>
+          ติดต่อเรา
+        </a>
+      </div>
+
+      <div class="z-20 flex items-center gap-3">
+        <div class="hidden items-center gap-2 md:flex">
+          <a href="/signin" class="rounded-full border border-white/20 px-5 py-2 text-sm font-bold text-white transition-colors hover:bg-white/10">เข้าสู่ระบบ</a>
+          <a
+            href="/signup"
+            class="rounded-full bg-gradient-to-r from-red-600 to-red-500 px-5 py-2 text-sm font-bold text-white shadow-[0_0_15px_rgba(220,38,38,0.4)] transition-all hover:brightness-110">
+            สมัครสมาชิก
+          </a>
+        </div>
+
+        <button
+          id="hamburger-btn"
+          class="flex h-[40px] w-[40px] flex-col items-center justify-center space-y-[4px] rounded-full border border-white/10 bg-white/5 p-2 transition-colors hover:bg-white/10 lg:hidden"
+          aria-label="Toggle menu">
+          <span class="hamburger-line h-[2px] w-5 rounded-full bg-white transition-all duration-300"></span>
+          <span class="hamburger-line h-[2px] w-5 rounded-full bg-white transition-all duration-300"></span>
+          <span class="hamburger-line h-[2px] w-5 rounded-full bg-white transition-all duration-300"></span>
+        </button>
+      </div>
+    </nav>
+
+    <div
+      id="mobile-menu"
+      class="mobile-menu absolute top-[110%] left-0 max-h-0 w-full origin-top overflow-hidden rounded-2xl border border-white/10 bg-[#0a0a0a]/90 shadow-[0_15px_40px_rgba(0,0,0,0.6)] backdrop-blur-xl transition-all duration-500 ease-[cubic-bezier(0.4,0,0.2,1)]">
+      <div class="flex flex-col space-y-2 p-4">
+        <a
+          href="/"
+          class={`menu-item px-4 py-3 rounded-xl text-sm font-bold transition-all ${isActive("/") ? "bg-gradient-to-r from-yellow-400 to-yellow-600 text-black" : "text-gray-300 hover:text-white hover:bg-white/10"}`}>
+          🏠 หน้าแรก
+        </a>
+        <a
+          href="/promotion"
+          class={`menu-item px-4 py-3 rounded-xl text-sm font-bold transition-all ${isActive("/promotion") ? "bg-gradient-to-r from-yellow-400 to-yellow-600 text-black" : "text-gray-300 hover:text-white hover:bg-white/10"}`}>
+          🎁 โปรโมชั่น
+        </a>
+        <a
+          href="/gamedemo"
+          class={`menu-item px-4 py-3 rounded-xl text-sm font-bold transition-all ${isActive("/gamedemo") ? "bg-gradient-to-r from-yellow-400 to-yellow-600 text-black" : "text-gray-300 hover:text-white hover:bg-white/10"}`}>
+          🎰 ทดลองเล่น
+        </a>
+        <a
+          href="/gamelogin"
+          class={`menu-item px-4 py-3 rounded-xl text-sm font-bold transition-all ${isActive("/gamelogin") ? "bg-gradient-to-r from-yellow-400 to-yellow-600 text-black" : "text-gray-300 hover:text-white hover:bg-white/10"}`}>
+          🌐 ทางเข้า
+        </a>
+        <a
+          href="/contact"
+          class={`menu-item px-4 py-3 rounded-xl text-sm font-bold transition-all ${isActive("/contact") ? "bg-gradient-to-r from-yellow-400 to-yellow-600 text-black" : "text-gray-300 hover:text-white hover:bg-white/10"}`}>
+          📞 ติดต่อเรา
+        </a>
+
+        <div class="mt-2 grid grid-cols-2 gap-2 border-t border-white/10 pt-4">
+          <a href="/signin" class="menu-item flex justify-center rounded-xl border border-white/20 bg-white/5 py-3 text-sm font-bold text-white transition-colors hover:bg-white/10">เข้าสู่ระบบ</a>
+          <a
+            href="/signup"
+            class="menu-item flex justify-center rounded-xl bg-gradient-to-r from-red-600 to-red-500 py-3 text-sm font-bold text-white shadow-lg shadow-red-500/30 transition-all hover:brightness-110">
+            สมัครสมาชิก
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<div class="h-[90px] w-full md:h-[100px]"></div>
+
+<style>
+  /* อนิเมชั่นปุ่ม Hamburger กลายเป็นกากบาท (X) */
+  #hamburger-btn.active .hamburger-line:nth-child(1) {
+    transform: translateY(6px) rotate(45deg);
+  }
+  #hamburger-btn.active .hamburger-line:nth-child(2) {
+    opacity: 0;
+  }
+  #hamburger-btn.active .hamburger-line:nth-child(3) {
+    transform: translateY(-6px) rotate(-45deg);
+  }
+
+  /* อนิเมชั่นเปิด Mobile Menu (เด้งลงมาจากขอบ) */
+  .mobile-menu.open {
+    max-height: 500px;
+    opacity: 1;
+    transform: scaleY(1);
+  }
+  .mobile-menu {
+    opacity: 0;
+    transform: scaleY(0.95);
+  }
+
+  /* อนิเมชั่นสไลด์ข้อความใน Mobile Menu */
+  .menu-item {
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: all 0.3s ease;
+  }
+  .mobile-menu.open .menu-item {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* หน่วงเวลาให้เมนูเด้งไล่ระดับทีละอัน */
+  .mobile-menu.open .menu-item:nth-child(1) {
+    transition-delay: 0.1s;
+  }
+  .mobile-menu.open .menu-item:nth-child(2) {
+    transition-delay: 0.15s;
+  }
+  .mobile-menu.open .menu-item:nth-child(3) {
+    transition-delay: 0.2s;
+  }
+  .mobile-menu.open .menu-item:nth-child(4) {
+    transition-delay: 0.25s;
+  }
+  .mobile-menu.open .menu-item:nth-child(5) {
+    transition-delay: 0.3s;
+  }
+  .mobile-menu.open .menu-item:nth-child(6) {
+    transition-delay: 0.35s;
+  }
+  .mobile-menu.open .menu-item:nth-child(7) {
+    transition-delay: 0.4s;
+  }
+</style>
+
+<script>
+  const hamburgerBtn = document.getElementById("hamburger-btn");
+  const mobileMenu = document.getElementById("mobile-menu");
+  const menuItems = document.querySelectorAll(".menu-item");
+
+  // ฟังก์ชันสลับเปิด/ปิด
+  hamburgerBtn?.addEventListener("click", () => {
+    hamburgerBtn.classList.toggle("active");
+    mobileMenu?.classList.toggle("open");
+  });
+
+  // ปิดเมนูเวลากดเลือกลิงก์
+  menuItems.forEach((item) => {
+    item.addEventListener("click", () => {
+      hamburgerBtn?.classList.remove("active");
+      mobileMenu?.classList.remove("open");
+    });
+  });
+
+  // ปิดเมนูเวลากดพื้นที่ว่างข้างนอก
+  document.addEventListener("click", (e) => {
+    const target = e.target as HTMLElement;
+    // ถ้าคลิกข้างนอก header ให้ปิดเมนู
+    if (!target.closest("header")) {
+      hamburgerBtn?.classList.remove("active");
+      mobileMenu?.classList.remove("open");
+    }
+  });
+</script>

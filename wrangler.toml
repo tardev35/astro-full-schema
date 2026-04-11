@@ -1,0 +1,5 @@
+name = "astro-landing"
+compatibility_date = "2024-03-12"
+
+[assets]
+directory = "dist"

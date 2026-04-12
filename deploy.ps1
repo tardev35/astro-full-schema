@@ -23,8 +23,22 @@ if ($LASTEXITCODE -ne 0) {
     exit
 }
 
-Write-Host "[2/4] Uploading to VPS ($Domain)..." -ForegroundColor Yellow
-scp -r dist\* "${VPS_USER}@${VPS_IP}:/var/www/${Domain}/dist/"
+# 🌟 2. ท่าไม้ตาย Windows Turbo: รวบไฟล์เป็นก้อนเดียวแล้วโยนขึ้น VPS (เร็วปรี๊ด!)
+Write-Host "[2/4] Compressing & Uploading to VPS ($Domain)..." -ForegroundColor Yellow
+
+# 2.1 รวบไฟล์ในโฟลเดอร์ dist เป็นก้อนเดียวชื่อ deploy.tar.gz
+tar -czf deploy.tar.gz -C dist .
+
+# 2.2 โยนขึ้น VPS ก้อนเดียวจบ (ประหยัดเวลาส่งทีละไฟล์)
+scp deploy.tar.gz "${VPS_USER}@${VPS_IP}:/var/www/${Domain}/"
+
+# 2.3 สั่งให้เซิร์ฟเวอร์ ลบไฟล์เก่าทิ้ง -> แตกไฟล์ใหม่ใส่ -> ลบไฟล์ขยะทิ้ง
+ssh "${VPS_USER}@${VPS_IP}" "mkdir -p /var/www/${Domain}/dist && rm -rf /var/www/${Domain}/dist/* && tar -xzf /var/www/${Domain}/deploy.tar.gz -C /var/www/${Domain}/dist/ && rm /var/www/${Domain}/deploy.tar.gz"
+
+# ลบไฟล์ zip ก้อนก้อนนี้ในเครื่องคอมเราทิ้ง จะได้ไม่รก
+Remove-Item -Path "deploy.tar.gz" -Force -ErrorAction SilentlyContinue
+
+Write-Host "  -> Upload Complete!" -ForegroundColor Green
 
 # --- สเต็ปปลดล็อกไฟล์อัตโนมัติ ---
 Write-Host "[3/4] Fixing File Permissions..." -ForegroundColor Cyan
@@ -54,6 +68,5 @@ try {
         Write-Host "Warning: Uploaded, but Cache purge failed." -ForegroundColor Yellow
     }
 } catch {
-    # ลบอีโมจิออกแล้ว รันผ่านแน่นอน 100%
     Write-Host "Error: Cache purge failed - $_" -ForegroundColor Red
 }

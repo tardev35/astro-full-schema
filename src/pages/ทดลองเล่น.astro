@@ -35,7 +35,7 @@ const demoGames = [
 ];
 
 const currentPath = Astro.url.pathname;
-const siteUrl = "https://mahagame66auto.com";
+const siteUrl = "https://kingdom66vip.com";
 
 const gameList = [
   { name: "AskmeSlot", image: siteUrl + image1.src },
@@ -55,8 +55,9 @@ const gameList = [
 const multiGameSchema = {
   "@context": "https://schema.org",
   "@type": "ItemList",
-  name: "รวม 12 ค่ายสล็อตทดลองเล่นฟรี BETFLIK4U",
-  description: "ศูนย์รวมเกมสล็อตทดลองเล่นฟรีจากค่ายระดับโลก PG, Joker, Jili, SlotXO ครบจบในหน้าเดียว ไม่ต้องโหลดแอป",
+  name: "ทดลองเล่น KINGDOM66 ฟรี สล็อตและคาสิโนสด ไม่ต้องฝากเงินก่อน",
+  description:
+    "เปิดระบบ ทดลองเล่น KINGDOM66 ฟรีทุกค่ายเกม! สัมผัสประสบการณ์สล็อตแตกง่ายและคาสิโนเสมือนจริง พร้อมแจกเครดิตเดโม่ไม่อั้น ให้คุณฝึกซ้อมระบบและค้นหาเกมทำเงินที่ใช่ โดยไม่ต้องควักทุนฝากเงินก่อน",
   numberOfItems: gameList.length,
   itemListElement: gameList.map((game, index) => ({
     "@type": "ListItem",
@@ -82,13 +83,11 @@ const multiGameSchema = {
 
 <script type="application/ld+json" set:html={JSON.stringify(multiGameSchema)} />
 <MainLayout
-  title="ทดลองเล่น MAHAGAME66 เล่นฟรี เกดมคาสิโนไม่ต้องสมัคร เล่นได้ทันที"
-  description="ทดลองเล่น MAHAGAME66 ฟรี เกมคาสิโนไม่ต้องสมัคร มาลองเล่นดูก่อน ฝึกเล่นก่อนลงเงินจริง ทดลองได้ทุกเกมเหมือนจริง">
+  title="ทดลองเล่น KINGDOM66 ฟรี สล็อตและคาสิโนสด ไม่ต้องฝากเงินก่อน"
+  description="เปิดระบบ ทดลองเล่น KINGDOM66 ฟรีทุกค่ายเกม! สัมผัสประสบการณ์สล็อตแตกง่ายและคาสิโนเสมือนจริง พร้อมแจกเครดิตเดโม่ไม่อั้น ให้คุณฝึกซ้อมระบบและค้นหาเกมทำเงินที่ใช่ โดยไม่ต้องควักทุนฝากเงินก่อน">
   <Announcement />
 
-  <ContentBox title="ทดลองเล่น BETFLIK4U รีบสมัคร รับสิทธิ์ ลองเล่นฟรี ทุกค่ายเกม">
-    <p class="mb-8 text-gray-200">ศูนย์รวมเกมสล็อตทดลองเล่นฟรี อัปเดตเกมใหม่ล่าสุดก่อนใคร ไม่ต้องฝาก ไม่ต้องแชร์ เข้าเล่นได้ทันที!</p>
-
+  <ContentBox title="ทดลองเล่น KINGDOM66 ฟรี สล็อตและคาสิโนสด ไม่ต้องฝากเงินก่อน">
     <div class="mb-5 grid grid-cols-2 gap-5 sm:grid-cols-2 md:grid-cols-4">
       {
         demoGames.map((game) => (

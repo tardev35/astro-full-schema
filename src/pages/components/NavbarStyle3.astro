@@ -35,17 +35,17 @@ const isActive = (path: string) => {
           โปรโมชั่น
         </a>
         <a
-          href="/gamedemo"
-          class={`px-4 py-2 rounded-full text-sm font-bold transition-all duration-300 ${isActive("/gamedemo") ? "bg-gradient-to-r from-yellow-400 to-yellow-600 text-black shadow-[0_0_15px_rgba(234,179,8,0.4)]" : "text-gray-300 hover:text-white hover:bg-white/10"}`}>
+          href="/ทดลองเล่น"
+          class={`px-4 py-2 rounded-full text-sm font-bold transition-all duration-300 ${isActive("/ทดลองเล่น") ? "bg-gradient-to-r from-yellow-400 to-yellow-600 text-black shadow-[0_0_15px_rgba(234,179,8,0.4)]" : "text-gray-300 hover:text-white hover:bg-white/10"}`}>
           ทดลองเล่น
         </a>
         <a
-          href="/gamelogin"
-          class={`px-4 py-2 rounded-full text-sm font-bold transition-all duration-300 ${isActive("/gamelogin") ? "bg-gradient-to-r from-yellow-400 to-yellow-600 text-black shadow-[0_0_15px_rgba(234,179,8,0.4)]" : "text-gray-300 hover:text-white hover:bg-white/10"}`}>
+          href="/ทางเข้า"
+          class={`px-4 py-2 rounded-full text-sm font-bold transition-all duration-300 ${isActive("/ทางเข้า") ? "bg-gradient-to-r from-yellow-400 to-yellow-600 text-black shadow-[0_0_15px_rgba(234,179,8,0.4)]" : "text-gray-300 hover:text-white hover:bg-white/10"}`}>
           ทางเข้า
         </a>
         <a
-          href="/contact"
+          href="/contact-us"
           class={`px-4 py-2 rounded-full text-sm font-bold transition-all duration-300 ${isActive("/contact") ? "bg-gradient-to-r from-yellow-400 to-yellow-600 text-black shadow-[0_0_15px_rgba(234,179,8,0.4)]" : "text-gray-300 hover:text-white hover:bg-white/10"}`}>
           ติดต่อเรา
         </a>
@@ -53,9 +53,9 @@ const isActive = (path: string) => {
 
       <div class="z-20 flex items-center gap-3">
         <div class="hidden items-center gap-2 md:flex">
-          <a href="/signin" class="rounded-full border border-white/20 px-5 py-2 text-sm font-bold text-white transition-colors hover:bg-white/10">เข้าสู่ระบบ</a>
+          <a href="/login" class="rounded-full border border-white/20 px-5 py-2 text-sm font-bold text-white transition-colors hover:bg-white/10">เข้าสู่ระบบ</a>
           <a
-            href="/signup"
+            href="/register"
             class="rounded-full bg-gradient-to-r from-red-600 to-red-500 px-5 py-2 text-sm font-bold text-white shadow-[0_0_15px_rgba(220,38,38,0.4)] transition-all hover:brightness-110">
             สมัครสมาชิก
           </a>
@@ -87,25 +87,25 @@ const isActive = (path: string) => {
           🎁 โปรโมชั่น
         </a>
         <a
-          href="/gamedemo"
-          class={`menu-item px-4 py-3 rounded-xl text-sm font-bold transition-all ${isActive("/gamedemo") ? "bg-gradient-to-r from-yellow-400 to-yellow-600 text-black" : "text-gray-300 hover:text-white hover:bg-white/10"}`}>
+          href="/ทดลองเล่น"
+          class={`menu-item px-4 py-3 rounded-xl text-sm font-bold transition-all ${isActive("/ทดลองเล่น") ? "bg-gradient-to-r from-yellow-400 to-yellow-600 text-black" : "text-gray-300 hover:text-white hover:bg-white/10"}`}>
           🎰 ทดลองเล่น
         </a>
         <a
-          href="/gamelogin"
-          class={`menu-item px-4 py-3 rounded-xl text-sm font-bold transition-all ${isActive("/gamelogin") ? "bg-gradient-to-r from-yellow-400 to-yellow-600 text-black" : "text-gray-300 hover:text-white hover:bg-white/10"}`}>
+          href="/ทางเข้า"
+          class={`menu-item px-4 py-3 rounded-xl text-sm font-bold transition-all ${isActive("/ทางเข้า") ? "bg-gradient-to-r from-yellow-400 to-yellow-600 text-black" : "text-gray-300 hover:text-white hover:bg-white/10"}`}>
           🌐 ทางเข้า
         </a>
         <a
-          href="/contact"
-          class={`menu-item px-4 py-3 rounded-xl text-sm font-bold transition-all ${isActive("/contact") ? "bg-gradient-to-r from-yellow-400 to-yellow-600 text-black" : "text-gray-300 hover:text-white hover:bg-white/10"}`}>
+          href="/contact-us"
+          class={`menu-item px-4 py-3 rounded-xl text-sm font-bold transition-all ${isActive("/contact-us") ? "bg-gradient-to-r from-yellow-400 to-yellow-600 text-black" : "text-gray-300 hover:text-white hover:bg-white/10"}`}>
           📞 ติดต่อเรา
         </a>
 
         <div class="mt-2 grid grid-cols-2 gap-2 border-t border-white/10 pt-4">
-          <a href="/signin" class="menu-item flex justify-center rounded-xl border border-white/20 bg-white/5 py-3 text-sm font-bold text-white transition-colors hover:bg-white/10">เข้าสู่ระบบ</a>
+          <a href="/login" class="menu-item flex justify-center rounded-xl border border-white/20 bg-white/5 py-3 text-sm font-bold text-white transition-colors hover:bg-white/10">เข้าสู่ระบบ</a>
           <a
-            href="/signup"
+            href="/register"
             class="menu-item flex justify-center rounded-xl bg-gradient-to-r from-red-600 to-red-500 py-3 text-sm font-bold text-white shadow-lg shadow-red-500/30 transition-all hover:brightness-110">
             สมัครสมาชิก
           </a>

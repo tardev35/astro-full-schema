@@ -15,12 +15,13 @@ const logoUrl = homePage + "/logo.webp";
 const contactPageSchema = {
   "@context": "https://schema.org",
   "@type": "ContactPage",
-  name: "ติดต่อ MAHAGAME66 เลือกช่องทางติดต่อ แอดมินดูแล 24 ชั่วโมง",
-  description: "ติดต่อ MAHAGAME66 เลือกได้เอง ผ่านช่องทางต่าง ๆ แอดมินดูแลตลอด 24 ชั่วโมง พร้อมช่วยเหลือทุกปัญหา สมัคร ฝากถอน หรือการใช้งาน ติดต่อได้ทันที",
+  name: "ติดต่อ KINGDOM66 ศูนย์บริการลูกค้า VIP แอดมินดูแล 24 ชั่วโมง",
+  description:
+    "ช่องทางการ ติดต่อ KINGDOM66 อย่างเป็นทางการ พบกับทีมงานแอดมินมืออาชีพที่พร้อมสแตนด์บายดูแลคุณดุจลูกค้า VIP ตลอด 24 ชม. ไม่ว่าจะสอบถามข้อมูล แจ้งปัญหา หรือขอคำแนะนำ ตอบแชทไว บริการด้วยความใส่ใจ",
   url: currentPath,
   mainEntity: {
     "@type": "Organization",
-    name: "MAHAGAME66",
+    name: "KINGDOM66",
     logo: logoUrl,
     url: homePage,
     contactPoint: [
@@ -39,12 +40,12 @@ const contactPageSchema = {
 
 <script type="application/ld+json" set:html={JSON.stringify(contactPageSchema)} />
 <MainLayout
-  title="ติดต่อ MAHAGAME66 เลือกช่องทางติดต่อ แอดมินดูแล 24 ชั่วโมง"
-  ,description="ติดต่อ MAHAGAME66 เลือกได้เอง ผ่านช่องทางต่าง ๆ แอดมินดูแลตลอด 24 ชั่วโมง พร้อมช่วยเหลือทุกปัญหา สมัคร ฝากถอน หรือการใช้งาน ติดต่อได้ทันที">
+  title="ติดต่อ KINGDOM66 ศูนย์บริการลูกค้า VIP แอดมินดูแล 24 ชั่วโมง"
+  ,description="ช่องทางการ ติดต่อ KINGDOM66 อย่างเป็นทางการ พบกับทีมงานแอดมินมืออาชีพที่พร้อมสแตนด์บายดูแลคุณดุจลูกค้า VIP ตลอด 24 ชม. ไม่ว่าจะสอบถามข้อมูล แจ้งปัญหา หรือขอคำแนะนำ ตอบแชทไว บริการด้วยความใส่ใจ">
   <Announcement />
 
   <ContentBox>
-    <h1 class="mb-8 text-3xl text-amber-400">ติดต่อทีมงาน ดูแลตลอด 24 ชม. พร้อมช่วยทุกขั้นตอน</h1>
+    <h1 class="mb-8 text-3xl text-amber-400">ติดต่อ KINGDOM66 ศูนย์บริการลูกค้า VIP แอดมินดูแล 24 ชั่วโมง</h1>
     <Picture
       src={imgLine}
       alt="Pigauto"
@@ -61,14 +62,14 @@ const contactPageSchema = {
     <p class="my-5 mb-8 text-gray-200">ติดต่อทีมงาน ดูแลตลอด 24 ชม. พร้อมช่วยทุกขั้นตอน ติดต่อทีมงาน ดูแลตลอด 24 ชม. พร้อมช่วยทุกขั้นตอน</p>
     <div class="flex flex-wrap justify-center gap-4">
       <a
-        href="/signup"
+        href="/register"
         aria-label="สมัครสมาชิก"
         class="flex items-center justify-center rounded-lg border border-gray-400 bg-gradient-to-b from-gray-600 to-black px-8 py-3 font-bold text-white transition-transform hover:scale-105">
         สมัครสมาชิก
       </a>
 
       <a
-        href="/signup"
+        href="/login"
         aria-label="เข้าเล่นเกม"
         class="flex items-center justify-center rounded-lg border border-yellow-600 bg-gradient-to-b from-yellow-200 to-yellow-500 px-8 py-3 font-extrabold text-black shadow-[0_0_15px_rgba(255,215,0,0.4)] transition-transform hover:scale-105">
         เข้าเล่นเกม

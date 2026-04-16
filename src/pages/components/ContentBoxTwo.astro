@@ -3,7 +3,7 @@ const { titleleft, titleright } = Astro.props;
 ---
 
 <section
-  class="mx-auto mb-3 w-full max-w-7xl rounded-[15px] border-2 border-[#570004] bg-[#050000]/90 p-8 text-center shadow-2xl"
+  class="bg-red-gold-oklab mx-auto mb-3 w-full max-w-7xl rounded-[15px] border-2 border-[#dba100] p-8 text-center shadow-2xl"
   style="box-shadow: 0 0 14px rgba(51, 0, 48, 0.65), inset 0 0 12px rgba(58, 0, 45, 0.35)">
   <div class="grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-2">
     <article class="flex flex-col gap-4">
@@ -21,3 +21,8 @@ const { titleleft, titleright } = Astro.props;
     </article>
   </div>
 </section>
+<style>
+  .bg-red-gold-oklab {
+    background-image: linear-gradient(in oklab to right, #000000, #755c00cf, #000000);
+  }
+</style>

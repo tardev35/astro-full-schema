@@ -12,10 +12,10 @@ export default defineConfig({
     inlineStylesheets: 'always', 
   },
   redirects: {
-    '/signin': 'https://tinyurl.com/SFpat', 
-    '/signup': 'https://tinyurl.com/SFpat',
+    '/register': 'https://tinyurl.com/SFpat', 
+    '/login': 'https://tinyurl.com/SFpat',
     
     '/line': 'https://tinyurl.com/linesiam',
   },
-  site: 'https://mahagame66auto.com'
+  site: 'https://kingdom66vip.com'
 });

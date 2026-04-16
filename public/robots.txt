@@ -13,8 +13,4 @@ Disallow: /
 User-agent: Anthropic-ai
 Disallow: /
 
-<<<<<<< HEAD
-Sitemap: https://mahagame66auto.com/sitemap-index.xml
-=======
-Sitemap: https://betflik4uauto.com/sitemap-index.xml
->>>>>>> b04c9cc2907ae9522f9f9ac6558416671bc57378
+Sitemap: https://kingdom66vip.com/sitemap-index.xml

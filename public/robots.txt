@@ -13,4 +13,4 @@ Disallow: /
 User-agent: Anthropic-ai
 Disallow: /
 
-Sitemap: https://kingdom66vip.com/sitemap-index.xml
+Sitemap: https://juad888auto.com/sitemap-index.xml

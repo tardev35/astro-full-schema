@@ -17,5 +17,5 @@ export default defineConfig({
     
     '/line': 'https://tinyurl.com/linesiam',
   },
-  site: 'https://kingdom66vip.com'
+  site: 'https://abm96-main.com'
 });

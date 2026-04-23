@@ -20,22 +20,22 @@ import image11 from "../assets/gamedemo17.webp";
 import image12 from "../assets/gamedemo18.webp";
 
 const demoGames = [
-  { id: 1, src: image1, alt: "เกมสล็อตที่ 1", link: "/signup" },
-  { id: 2, src: image2, alt: "เกมสล็อตที่ 2", link: "/signup" },
-  { id: 3, src: image3, alt: "เกมสล็อตที่ 3", link: "/signup" },
-  { id: 4, src: image4, alt: "เกมสล็อตที่ 4", link: "/signup" },
-  { id: 5, src: image5, alt: "เกมสล็อตที่ 5", link: "/signup" },
-  { id: 6, src: image6, alt: "เกมสล็อตที่ 6", link: "/signup" },
-  { id: 7, src: image7, alt: "เกมสล็อตที่ 7", link: "/signup" },
-  { id: 8, src: image8, alt: "เกมสล็อตที่ 8", link: "/signup" },
-  { id: 9, src: image9, alt: "เกมสล็อตที่ 9", link: "/signup" },
-  { id: 10, src: image10, alt: "เกมสล็อตที่ 10", link: "/signup" },
-  { id: 11, src: image11, alt: "เกมสล็อตที่ 11", link: "/signup" },
-  { id: 12, src: image12, alt: "เกมสล็อตที่ 12", link: "/signup" },
+  { id: 1, src: image1, alt: "AskmeSlot", link: "/register" },
+  { id: 2, src: image2, alt: "Popular Game", link: "/register" },
+  { id: 3, src: image3, alt: "SlotXO", link: "/register" },
+  { id: 4, src: image4, alt: "Skywind Group", link: "/register" },
+  { id: 5, src: image5, alt: "PG Soft", link: "/register" },
+  { id: 6, src: image6, alt: "SBOBET", link: "/register" },
+  { id: 7, src: image7, alt: "Sexy Slot", link: "/register" },
+  { id: 8, src: image8, alt: "JILI", link: "/register" },
+  { id: 9, src: image9, alt: "Ask Me Bet", link: "/register" },
+  { id: 10, src: image10, alt: "New Game", link: "/register" },
+  { id: 11, src: image11, alt: "JOKER", link: "/register" },
+  { id: 12, src: image12, alt: "AFB Gaming", link: "/register" },
 ];
 
 const currentPath = Astro.url.pathname;
-const siteUrl = "https://juad888auto.com";
+const siteUrl = "https://abm96-main.com";
 
 const gameList = [
   { name: "AskmeSlot", image: siteUrl + image1.src },
@@ -51,36 +51,9 @@ const gameList = [
   { name: "JOKER", image: siteUrl + image11.src },
   { name: "AFB Gaming", image: siteUrl + image12.src },
 ];
-
-const multiGameSchema = {
-  "@context": "https://schema.org",
-  "@type": "ItemList",
-  name: "ทดลองเล่น ABM96 ฟรีทุกค่าย สัมผัสระบบสเกลใหญ่ก่อนลงสนามจริง",
-  description: "ทดลองเล่น ABM96 ระบบเอนเตอร์ไพรส์ได้ฟรีทุกเกม! ลองปั่นสล็อตค่ายดังหรือเช็กกราฟิกคาสิโนสดแบบไม่ต้องฝากก่อน มั่นใจในคุณภาพระบบที่เสถียรที่สุด",
-  numberOfItems: gameList.length,
-  itemListElement: gameList.map((game, index) => ({
-    "@type": "ListItem",
-    position: index + 1,
-    item: {
-      "@type": ["VideoGame", "SoftwareApplication"],
-      name: `ทดลองเล่น ${game.name} ฟรี`,
-      image: game.image,
-      url: currentPath,
-      applicationCategory: "GameApplication",
-      operatingSystem: "Web Browser, iOS, Android",
-      genre: "Slot Game, Casino Game",
-      playMode: "SinglePlayer",
-      offers: {
-        "@type": "Offer",
-        price: "0",
-        priceCurrency: "THB",
-      },
-    },
-  })),
-};
 ---
 
-<script type="application/ld+json" set:html={JSON.stringify(multiGameSchema)} />
+<script type="application/ld+json" set:html={JSON.stringify(gameList)} />
 <MainLayout
   title="ทดลองเล่น ABM96 ฟรีทุกค่าย สัมผัสระบบสเกลใหญ่ก่อนลงสนามจริง"
   description="ทดลองเล่น ABM96 ระบบเอนเตอร์ไพรส์ได้ฟรีทุกเกม! ลองปั่นสล็อตค่ายดังหรือเช็กกราฟิกคาสิโนสดแบบไม่ต้องฝากก่อน มั่นใจในคุณภาพระบบที่เสถียรที่สุด">

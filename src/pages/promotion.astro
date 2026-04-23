@@ -10,20 +10,8 @@ import image1 from "../assets/pro1.jpg";
 import image2 from "../assets/pro2.jpg";
 import image3 from "../assets/pro3.jpg";
 import image4 from "../assets/pro4.jpg";
-
-const currentPath = Astro.url.pathname;
-const webPageSchema = {
-  "@context": "https://schema.org",
-  "@type": "WebPage",
-  name: "โปรโมชั่น ABM96 โบนัสจัดเต็ม ถอนง่าย เงื่อนไขแฟร์ที่สุดสำหรับคนไทย",
-  description: "โปรโมชั่น ABM96 ล่าสุด ที่คืนกำไรให้ผู้เล่นไทยโดยเฉพาะ ไม่ว่าจะเป็นโบนัสต้อนรับหรือคืนยอดเสีย ทุกยอดคำนวณด้วยระบบออโต้แม่นยำ เงื่อนไขเคลียร์ชัด",
-  url: currentPath,
-};
-
-const allSchemas = [webPageSchema];
 ---
 
-<script type="application/ld+json" set:html={JSON.stringify(allSchemas)} />
 <MainLayout
   title="โปรโมชั่น ABM96 โบนัสจัดเต็ม ถอนง่าย เงื่อนไขแฟร์ที่สุดสำหรับคนไทย"
   ,

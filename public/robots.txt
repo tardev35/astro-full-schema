@@ -13,4 +13,4 @@ Disallow: /
 User-agent: Anthropic-ai
 Disallow: /
 
-Sitemap: https://abm96-main.com/sitemap-index.xml
+Sitemap: https://kiki49main.com/sitemap-index.xml

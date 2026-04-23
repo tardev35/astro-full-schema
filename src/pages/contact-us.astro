@@ -2,7 +2,6 @@
 import MainLayout from "../layouts/MainLayout.astro";
 import ContentBox from "./components/ContentBox.astro";
 import Navfoot from "./components/Navfoot.astro";
-import Footer from "./components/FooterStyle2.astro";
 import Announcement from "./components/Announcement.astro";
 
 import { Picture } from "astro:assets";
@@ -15,12 +14,12 @@ const logoUrl = homePage + "/logo.webp";
 const contactPageSchema = {
   "@context": "https://schema.org",
   "@type": "ContactPage",
-  name: "ติดต่อ ABM96 แอดมินไทยดูแล 24 ชม. ซัพพอร์ตไว แก้ปัญหาตรงจุด",
-  description: "ติดต่อ ABM96 ช่องทางอย่างเป็นทางการ ทีมงานมืออาชีพพร้อมดูแลคุณตลอด 24 ชั่วโมง ไม่ว่าจะสอบถามวิธีเล่นหรือแจ้งปัญหาการใช้งาน บริการด้วยใจสไตล์คนไทย",
+  name: "ติดต่อ KIKI49 แชทคุยกับแอดมินตัวจริง ดูแลไว แก้ปัญหาได้ 24 ชั่วโมง",
+  description: "ช่องทาง ติดต่อ KIKI49 อย่างเป็นทางการ ทักแชทถามข้อมูล แจ้งปัญหา ขอคำแนะนำได้ตลอด 24 ชั่วโมง เรามีทีมแอดมินคนไทยตัวจริงคอยสแตนด์บาย ไม่ใช้บอท",
   url: currentPath,
   mainEntity: {
     "@type": "Organization",
-    name: "ABM96",
+    name: "KIKI49",
     logo: logoUrl,
     url: homePage,
     contactPoint: [
@@ -39,12 +38,12 @@ const contactPageSchema = {
 
 <script type="application/ld+json" set:html={JSON.stringify(contactPageSchema)} />
 <MainLayout
-  title="ติดต่อ ABM96 แอดมินไทยดูแล 24 ชม. ซัพพอร์ตไว แก้ปัญหาตรงจุด"
-  ,description="ติดต่อ ABM96 ช่องทางอย่างเป็นทางการ ทีมงานมืออาชีพพร้อมดูแลคุณตลอด 24 ชั่วโมง ไม่ว่าจะสอบถามวิธีเล่นหรือแจ้งปัญหาการใช้งาน บริการด้วยใจสไตล์คนไทย">
+  title="ติดต่อ KIKI49 แชทคุยกับแอดมินตัวจริง ดูแลไว แก้ปัญหาได้ 24 ชั่วโมง"
+  ,description="ช่องทาง ติดต่อ KIKI49 อย่างเป็นทางการ ทักแชทถามข้อมูล แจ้งปัญหา ขอคำแนะนำได้ตลอด 24 ชั่วโมง เรามีทีมแอดมินคนไทยตัวจริงคอยสแตนด์บาย ไม่ใช้บอท">
   <Announcement />
 
   <ContentBox>
-    <h1 class="mb-8 text-3xl text-amber-400">ติดต่อ ABM96 แอดมินไทยดูแล 24 ชม. ซัพพอร์ตไว แก้ปัญหาตรงจุด</h1>
+    <h1 class="mb-8 text-3xl text-amber-400">ติดต่อ KIKI49 แชทคุยกับแอดมินตัวจริง ดูแลไว แก้ปัญหาได้ 24 ชั่วโมง</h1>
     <Picture
       src={imgLine}
       alt="Pigauto"
@@ -84,6 +83,5 @@ const contactPageSchema = {
       </a>
     </div>
   </ContentBox>
-  <Footer />
   <Navfoot />
 </MainLayout>

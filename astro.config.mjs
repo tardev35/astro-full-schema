@@ -17,5 +17,5 @@ export default defineConfig({
     
     '/line': 'https://tinyurl.com/linesiam',
   },
-  site: 'https://abm96-main.com'
+  site: 'https://kiki49main.com'
 });

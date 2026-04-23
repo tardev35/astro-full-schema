@@ -2,7 +2,6 @@
 import MainLayout from "../layouts/MainLayout.astro";
 import ContentBox from "./components/ContentBox.astro";
 import Navfoot from "./components/Navfoot.astro";
-import Footer from "./components/FooterStyle2.astro";
 import Announcement from "./components/Announcement.astro";
 
 import { Picture } from "astro:assets";
@@ -35,7 +34,7 @@ const demoGames = [
 ];
 
 const currentPath = Astro.url.pathname;
-const siteUrl = "https://abm96-main.com";
+const siteUrl = "https://kiki49main.com";
 
 const gameList = [
   { name: "AskmeSlot", image: siteUrl + image1.src },
@@ -55,11 +54,11 @@ const gameList = [
 
 <script type="application/ld+json" set:html={JSON.stringify(gameList)} />
 <MainLayout
-  title="ทดลองเล่น ABM96 ฟรีทุกค่าย สัมผัสระบบสเกลใหญ่ก่อนลงสนามจริง"
-  description="ทดลองเล่น ABM96 ระบบเอนเตอร์ไพรส์ได้ฟรีทุกเกม! ลองปั่นสล็อตค่ายดังหรือเช็กกราฟิกคาสิโนสดแบบไม่ต้องฝากก่อน มั่นใจในคุณภาพระบบที่เสถียรที่สุด">
+  title="ทดลองเล่น KIKI49 เดโม่สล็อตฟรี ซื้อฟรีสปินได้ ซ้อมมือก่อน ไม่ต้องฝาก"
+  description="สายซ้อมมือจัดไป! ระบบทดลองเล่น KIKI49 เปิดเดโม่ฟรี ครบทุกค่าย ลองเทสต์จังหวะเกม หาช่วงโบนัส หรือกดซื้อฟรีสปินดูก่อนลงสนามจริง ซ้อมให้ชินก่อนลงสนาม">
   <Announcement />
 
-  <ContentBox title="ทดลองเล่น ABM96 ฟรีทุกค่าย สัมผัสระบบสเกลใหญ่ก่อนลงสนามจริง">
+  <ContentBox title="ทดลองเล่น KIKI49 เดโม่สล็อตฟรี ซื้อฟรีสปินได้ ซ้อมมือก่อน ไม่ต้องฝาก">
     <div class="mb-5 grid grid-cols-2 gap-5 sm:grid-cols-2 md:grid-cols-4">
       {
         demoGames.map((game) => (
@@ -91,6 +90,5 @@ const gameList = [
     </div>
   </ContentBox>
 
-  <Footer />
   <Navfoot />
 </MainLayout>

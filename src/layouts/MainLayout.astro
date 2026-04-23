@@ -2,22 +2,13 @@
 import { Image } from "astro:assets";
 import mainBanner from "../assets/banner.jpg";
 import Bg from "../assets/bg.jpg";
-
 import "../styles/global.css";
-import Navbar from ".././pages/components/Navbar.astro";
-import NavbarStyle1 from "../pages/components/NavbarStyle1.astro";
-import NavbarStyle2 from "../pages/components/NavbarStyle2.astro";
-import NavbarStyle3 from "../pages/components/NavbarStyle3.astro";
-import NavbarStyle4 from "../pages/components/NavbarStyle4.astro";
-import NavbarStyle5 from "../pages/components/NavbarStyle5.astro";
 import NavbarStyle6 from "../pages/components/NavbarStyle6.astro";
-import NavbarStyle7 from "../pages/components/NavbarStyle7.astro";
-import NavbarStyle8 from "../pages/components/NavbarStyle8.astro";
-import NavbarStyle9 from "../pages/components/NavbarStyle9.astro";
+import Footer from "../pages/components/FooterStyle3.astro";
 
 const {
-  title = "ABM96 เว็บพนันออนไลน์ไทย ครบวงจร คนเล่นเยอะ ฝากถอนสะดวก",
-  description = "ABM96 เว็บพนันออนไลน์ไทย ครบวงจร การันตีคนเล่นเยอะที่สุด! ระบบสเกลใหญ่เสถียรไหลลื่น ปลอดภัย ล็อกอินยูสเดียวเล่นได้ทุกค่าย  ถอนหลักแสนก็โอนไว",
+  title = "KIKI49 เว็บตรงสล็อต 2026 โปรแรง แตกง่าย เล่นสนุก จ่ายจริง",
+  description = "KIKI49 เว็บตรงสล็อต API แท้ 2026 ทางเข้า ปลอดภัย ไม่เจอลิงก์หลอก มีช่วงเวลา แตกง่าย บ่อยมาก โปรแรง คุ้มค่า เล่นสนุกบนทุกแพลตฟอร์ม จ่ายจริง ระบบอัตโนมัติ",
   robots = "index, follow",
   ImageOg = "/pro3.jpg",
 } = Astro.props;
@@ -30,7 +21,7 @@ const ogImageURL = new URL(ImageOg, Astro.site);
 <html lang="th">
   <head>
     <meta charset="utf-8" />
-    <meta name="google-site-verification" content="7BgbMhLuWcrex0YV561rqEk6lBZtijipL2mzCja9zIA" />
+    <meta name="google-site-verification" content="gDWLJLKNEImpg_ka-JZ5UEXxxkVU7bDRMxjUmD6kYUo" />
     <meta name="robots" content={robots} />
     <meta name="googlebot" content={robots} />
     <title>{title}</title>
@@ -74,7 +65,7 @@ const ogImageURL = new URL(ImageOg, Astro.site);
     </style>
   </head>
 
-  <body class="relative min-h-screen w-full">
+  <body class="relative flex min-h-screen w-full flex-col">
     <Image
       src={Bg}
       alt="Website Background"
@@ -86,11 +77,13 @@ const ogImageURL = new URL(ImageOg, Astro.site);
       quality="low"
       decoding="sync"
     />
-    <NavbarStyle5 />
-    <div class="mb-2.5 flex w-full flex-1 items-center justify-center">
+
+    <NavbarStyle6 />
+
+    <div class="mb-2.5 flex w-full items-center justify-center">
       <Image
         src={mainBanner}
-        alt="juad888 banner"
+        alt="kiki49 banner"
         loading="eager"
         fetchpriority="high"
         widths={[412, 768, 1900]}
@@ -101,6 +94,11 @@ const ogImageURL = new URL(ImageOg, Astro.site);
         quality={60}
       />
     </div>
-    <slot />
+
+    <main class="w-full flex-1">
+      <slot />
+    </main>
+
+    <Footer />
   </body>
 </html>

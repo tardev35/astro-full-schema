@@ -13,4 +13,4 @@ Disallow: /
 User-agent: Anthropic-ai
 Disallow: /
 
-Sitemap: https://kiki49main.com/sitemap-index.xml
+Sitemap: https://panama88vip.com/sitemap-index.xml

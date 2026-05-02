@@ -3,19 +3,25 @@ import { defineConfig } from 'astro/config';
 
 import tailwindcss from '@tailwindcss/vite';
 
+import sitemap from '@astrojs/sitemap';
+
 // https://astro.build/config
 export default defineConfig({
   vite: {
     plugins: [tailwindcss()]
   },
+
   build: {
     inlineStylesheets: 'always', 
   },
+
   redirects: {
-    '/register': 'https://tinyurl.com/SFpat', 
-    '/login': 'https://tinyurl.com/SFpat',
+    '/register': 'https://tinyurl.com/tarpigpg', 
+    '/login': 'https://tinyurl.com/tarpigpg',
     
-    '/line': 'https://tinyurl.com/linesiam',
+    '/line': 'https://tinyurl.com/linepigpg',
   },
-  site: 'https://kiki49main.com'
+
+  site: 'https://panama88vip.com',
+  integrations: [sitemap()]
 });

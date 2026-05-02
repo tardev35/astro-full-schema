@@ -3,12 +3,12 @@ import { Image } from "astro:assets";
 import mainBanner from "../assets/banner.jpg";
 import Bg from "../assets/bg.jpg";
 import "../styles/global.css";
-import NavbarStyle6 from "../pages/components/NavbarStyle6.astro";
+import NavbarStyle6 from "../pages/components/Navbar.astro";
 import Footer from "../pages/components/FooterStyle3.astro";
 
 const {
-  title = "KIKI49 เว็บตรงสล็อต 2026 โปรแรง แตกง่าย เล่นสนุก จ่ายจริง",
-  description = "KIKI49 เว็บตรงสล็อต API แท้ 2026 ทางเข้า ปลอดภัย ไม่เจอลิงก์หลอก มีช่วงเวลา แตกง่าย บ่อยมาก โปรแรง คุ้มค่า เล่นสนุกบนทุกแพลตฟอร์ม จ่ายจริง ระบบอัตโนมัติ",
+  title = "PANAMA888 เว็บตรงคาสิโน เกมอัปเดตตลอด ฝากถอนไวทุกช่วงเวลา",
+  description = "PANAMA888 เว็บตรงคาสิโน ไม่มีลิ้งเสีย เกมอัปเดตตลอด สมัครยูสเดียว เข้าเล่นได้ทุกอย่าง ระบบธุรกรรมอัจฉริยะ ฝากถอนไวทุกช่วงเวลา โอนจ่ายได้อิสระ 24 ชม.",
   robots = "index, follow",
   ImageOg = "/pro3.jpg",
 } = Astro.props;
@@ -16,12 +16,13 @@ const {
 const currentPath = Astro.url.pathname;
 const canonicalURL = new URL(currentPath, Astro.site);
 const ogImageURL = new URL(ImageOg, Astro.site);
+const ogSiteName = "PANAMA888";
 ---
 
 <html lang="th">
   <head>
     <meta charset="utf-8" />
-    <meta name="google-site-verification" content="gDWLJLKNEImpg_ka-JZ5UEXxxkVU7bDRMxjUmD6kYUo" />
+    <meta name="google-site-verification" content="W3KKr4aFxXhrR6pzCkud8cyCW2jSdqwqpsGjSgPon1Q" />
     <meta name="robots" content={robots} />
     <meta name="googlebot" content={robots} />
     <title>{title}</title>
@@ -41,7 +42,7 @@ const ogImageURL = new URL(ImageOg, Astro.site);
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta property="og:image" content={ogImageURL} />
-    <meta property="og:site_name" content={title} />
+    <meta property="og:site_name" content={ogSiteName} />
     <meta property="og:locale" content="th_TH" />
 
     <meta name="twitter:card" content="summary_large_image" />

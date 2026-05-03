@@ -22,6 +22,6 @@ export default defineConfig({
     '/line': 'https://tinyurl.com/linepigpg',
   },
 
-  site: 'https://panama88vip.com',
+  site: 'https://xn--45-7ritb3eucc.com',
   integrations: [sitemap()]
 });

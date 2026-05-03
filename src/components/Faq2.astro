@@ -1,0 +1,49 @@
+---
+
+---
+
+<div class="mx-auto max-w-[950px] space-y-6 p-6">
+  <div class="group relative bg-[#111115] p-[1px] [clip-path:polygon(0_0,calc(100%-20px)_0,100%_20px,100%_100%,20px_100%,0_calc(100%-20px))]">
+    <div class="absolute inset-0 bg-gradient-to-r from-red-600 to-transparent opacity-30 group-hover:opacity-100 transition-opacity"></div>
+    
+    <div class="relative bg-[#0d0d10] p-4 [clip-path:polygon(0_0,calc(100%-19px)_0,100%_19px,100%_100%,19px_100%,0_calc(100%-19px))]">
+      <button class="sport-faq-btn flex w-full items-center gap-4 text-left">
+        <div class="flex h-10 w-10 shrink-0 items-center justify-center bg-red-600 italic font-black text-white [clip-path:polygon(20%_0,100%_0,80%_100%,0_100%)]">
+          ?
+        </div>
+        <span class="flex-1 font-bold text-white uppercase tracking-tight">ทำไมต้องเลือกเล่นกับ PANAMA888?</span>
+        <div class="arrow transition-transform duration-300">▼</div>
+      </button>
+      
+      <div class="sport-content max-h-0 overflow-hidden transition-all duration-300">
+        <p class="mt-4 border-l-2 border-red-600 pl-4 text-gray-400 italic">
+          เพราะเราคือเว็บตรงไม่ผ่านเอเย่นต์ 100% ที่ได้รับลิขสิทธิ์แท้จากต่างประเทศ มั่นคง ปลอดภัย และมีฐานการเงินที่แข็งแกร่งที่สุดในไทย
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+    const btns = document.querySelectorAll('.sport-faq-btn');
+    btns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            const content = btn.nextElementSibling as HTMLElement;
+            const arrow = btn.querySelector('.arrow');
+            if (content.style.maxHeight === '0px' || !content.style.maxHeight) {
+                content.style.maxHeight = content.scrollHeight + "px";
+                arrow?.classList.add('rotate-180');
+            } else {
+                content.style.maxHeight = '0px';
+                arrow?.classList.remove('rotate-180');
+            }
+        });
+    });
+</script>
+
+
+
+<style>
+  .rotate-45 { transform: rotate(45deg); border-color: #ef4444 !important; color: #ef4444 !important; }
+  .faq-item.active { border-color: rgba(234, 179, 8, 0.6); box-shadow: 0 0 20px rgba(0,0,0,0.5); }
+</style>

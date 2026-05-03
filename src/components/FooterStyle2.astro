@@ -1,13 +1,13 @@
 ---
 import { Picture } from "astro:assets";
 
-const images = import.meta.glob<{ default: ImageMetadata }>("../../assets/logo.{png,webp,jpg}", { eager: true });
+const images = import.meta.glob<{ default: ImageMetadata }>("../assets/logo.{png,webp,jpg}", { eager: true });
 
 const imagePaths = Object.keys(images);
 const mainLogo = imagePaths.length > 0 ? images[imagePaths[0]].default : null;
 ---
 
-<footer class="relative w-full overflow-hidden border-t-[3px] border-yellow-500 bg-[#f02b66] pt-16 pb-8 font-sans text-white">
+<footer class="relative w-full overflow-hidden border-t-[3px] border-yellow-500 bg-[#020617] pt-16 pb-8 font-sans text-white">
   <div class="pointer-events-none absolute top-0 right-0 h-96 w-96 rounded-full bg-yellow-600/5 blur-[100px]"></div>
   <div class="pointer-events-none absolute bottom-0 left-0 h-96 w-96 rounded-full bg-yellow-600/5 blur-[100px]"></div>
 
@@ -18,7 +18,7 @@ const mainLogo = imagePaths.length > 0 ? images[imagePaths[0]].default : null;
           <Picture src={mainLogo!} alt="MAHAGAME66 Logo" class="h-[50px] w-auto drop-shadow-[0_0_15px_rgba(234,179,8,0.3)]" formats={["avif", "webp"]} fallbackFormat="webp" />
         </a>
         <p class="text-sm leading-relaxed text-white">
-          <strong class="font-bold text-yellow-500">ABM96 เว็บพนันออนไลน์ไทย</strong> ครบวงจร การันตีคนเล่นเยอะที่สุด! ระบบสเกลใหญ่เสถียรไหลลื่น ปลอดภัย ล็อกอินยูสเดียวเล่นได้ทุกค่าย ถอนหลักแสนก็โอนไว
+          LONDON45 ทางเข้าหลักสล็อตเว็บตรง แท้ มาตรฐาน API แท้ ล็อกอินปลอดภัย เล่นผ่านมือถือรวมคลังเกมสล็อต แตกหนัก ลอนดอน45 จ่ายจริง ตรงเวลา โปรโคตรเด็ด
         </p>
         <div class="mt-2 flex items-center gap-3">
           <div class="flex items-center gap-1.5 rounded border border-green-500/30 bg-green-500/10 px-3 py-1.5 text-xs font-bold text-green-400">
@@ -102,7 +102,7 @@ const mainLogo = imagePaths.length > 0 ? images[imagePaths[0]].default : null;
         <a
           href="/line"
           class="flex w-full items-center justify-center gap-2 rounded-lg bg-[#00B900] py-3 font-bold text-white shadow-[0_0_15px_rgba(0,185,0,0.3)] transition-colors hover:bg-[#009900]">
-          <span class="text-xl font-black">LINE</span> AMB96
+          <span class="text-xl font-black">LINE</span> LONDON45
         </a>
 
         <div class="mt-2">
@@ -129,7 +129,7 @@ const mainLogo = imagePaths.length > 0 ? images[imagePaths[0]].default : null;
     </div>
 
     <div class="flex flex-col items-center justify-between gap-4 text-xs text-gray-600 md:flex-row">
-      <p>&copy; {new Date().getFullYear()} <span class="text-white">AMB96-MAIN.COM</span>. All rights reserved. เว็บพนันออนไลน์ถูกกฎหมาย</p>
+      <p>&copy; {new Date().getFullYear()} <span class="text-white">LONDON45</span>. All rights reserved. เว็บพนันออนไลน์ถูกกฎหมาย</p>
       <div class="flex gap-4">
         <a href="/" class="transition-colors hover:text-yellow-500">เงื่อนไขการให้บริการ</a>
         <a href="/" class="transition-colors hover:text-yellow-500">นโยบายความเป็นส่วนตัว</a>

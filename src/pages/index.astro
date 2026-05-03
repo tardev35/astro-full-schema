@@ -1,18 +1,20 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
-import ContentBox from "./components/ContentBox.astro";
-import ContentBoxTwo from "./components/ContentBoxTwo.astro";
-import ContentBoxSevenThree from "./components/ContentBoxSevenThree.astro";
-import ContentBoxThreeColums from "./components/ContentBox3Three.astro";
-import Navfoot from "./components/Navfoot.astro";
-import Announcement from "./components/Announcement.astro";
-import SmoothCarousel from "./components/SmoothCarousel.astro";
+import ContentBox from "../components/ContentBox.astro";
+import ContentBoxTwo from "../components/ContentBoxTwo.astro";
+import ContentBoxSevenThree from "../components/ContentBoxSevenThree.astro";
+import ContentBoxThreeColums from "../components/ContentBox3Three.astro";
+import Navfoot from "../components/Navfoot.astro";
+import Announcement from "../components/Announcement6.astro";
+import SmoothCarousel from "../components/SmoothCarousel.astro";
+import ProviderGrid from "../components/ProviderGrid.astro";
+import Faq from "../components/Faq.astro";
 
 import { Picture } from "astro:assets";
 import image1 from "../assets/pro1.jpg";
 import image2 from "../assets/pro2.jpg";
 import image3 from "../assets/pro3.jpg";
-import banner1 from "../assets/banner.jpg";
+import banner1 from "../assets/banner1.webp";
 
 const currentPath = Astro.url.pathname;
 const homePage = Astro.url.origin;
@@ -21,23 +23,23 @@ const logoUrl = homePage + "/logo.webp";
 const webPageSchema = {
   "@context": "https://schema.org",
   "@type": "WebPage",
-  name: "PANAMA888 เว็บตรงคาสิโน เกมอัปเดตตลอด ฝากถอนไวทุกช่วงเวลา",
-  description: "PANAMA888 เว็บตรงคาสิโน ไม่มีลิ้งเสีย เกมอัปเดตตลอด สมัครยูสเดียว เข้าเล่นได้ทุกอย่าง ระบบธุรกรรมอัจฉริยะ ฝากถอนไวทุกช่วงเวลา โอนจ่ายได้อิสระ 24 ชม.",
+  name: "LONDON45 ทางเข้าหลักสล็อตเว็บตรง ลอนดอน45 แตกหนัก จ่ายจริง",
+  description: "LONDON45 ทางเข้าหลักสล็อตเว็บตรง แท้ มาตรฐาน API แท้ ล็อกอินปลอดภัย เล่นผ่านมือถือรวมคลังเกมสล็อต แตกหนัก ลอนดอน45 จ่ายจริง ตรงเวลา โปรโคตรเด็ด",
   url: currentPath,
 };
 
 const webSiteSchema = {
   "@context": "https://schema.org",
   "@type": "WebSite",
-  name: "PANAMA888",
-  alternateName: ["panama888", "panama88vip", "พานามา888", "PANAMA888"],
-  url: "https://panama88vip.com/",
+  name: "LONDON45",
+  alternateName: ["london45", "london45vip", "ลอนดอน45", "LONDON45"],
+  url: "https://xn--45-7ritb3eucc.com/",
 };
 
 const orgSchema = {
   "@context": "https://schema.org",
   "@type": "Organization",
-  name: "panama888",
+  name: "london45",
   logo: logoUrl,
   url: homePage,
 };
@@ -48,15 +50,15 @@ const faqSchema = {
   mainEntity: [
     {
       "@type": "Question",
-      name: "ทางเข้า PANAMA888 ปลอดภัยและเข้าใช้งานได้ต่อเนื่องหรือไม่",
+      name: "ทางเข้า LONDON45 ปลอดภัยและเข้าใช้งานได้ต่อเนื่องหรือไม่",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "ปลอดภัย 100% ครับ ลิ้งทางเข้า PANAMA888 ทำงานบนเซิร์ฟเวอร์ความปลอดภัยสูง (High-Security Server) ปกป้องข้อมูลด้วยระบบเข้ารหัสขั้นสูง ล็อกอินเข้าสู่เกมได้รวดเร็ว ไร้โฆษณากวนใจ และการันตีเว็บจริง ไม่มีลิ้งเสียให้เสียอรรถรสแน่นอน",
+        text: "ปลอดภัย 100% ครับ ลิ้งทางเข้า LONDON45 ทำงานบนเซิร์ฟเวอร์ความปลอดภัยสูง (High-Security Server) ปกป้องข้อมูลด้วยระบบเข้ารหัสขั้นสูง ล็อกอินเข้าสู่เกมได้รวดเร็ว ไร้โฆษณากวนใจ และการันตีเว็บจริง ไม่มีลิ้งเสียให้เสียอรรถรสแน่นอน",
       },
     },
     {
       "@type": "Question",
-      name: "ทำไม PANAMA888 ถึงเป็น เว็บตรงคาสิโน ที่ได้รับความไว้วางใจระดับโลก",
+      name: "ทำไม LONDON45 ถึงเป็น เว็บตรงคาสิโน ที่ได้รับความไว้วางใจระดับโลก",
       acceptedAnswer: {
         "@type": "Answer",
         text: "เพราะเราเป็นเว็บตรงคาสิโนระดับโลกที่เชื่อมต่อระบบ API จากค่ายเกมแม่โดยตรง ไม่ผ่านคนกลาง การันตีความยุติธรรมในการสุ่มรางวัล (RNG Certified) ไร้การปรับแต่งระบบหลังบ้าน ทำให้คุณเพลิดเพลินและลุ้นรางวัลใหญ่ได้อย่างสบายใจ",
@@ -64,7 +66,7 @@ const faqSchema = {
     },
     {
       "@type": "Question",
-      name: "สมัคร PANAMA888 ยูสเดียว เข้าเล่นเกมอะไรได้บ้าง",
+      name: "สมัคร LONDON45 ยูสเดียว เข้าเล่นเกมอะไรได้บ้าง",
       acceptedAnswer: {
         "@type": "Answer",
         text: "สมัครเพียงครั้งเดียว คุณจะได้รับสิทธิ์เข้าเล่นได้ทุกเกมและทุกค่ายคาสิโนออนไลน์ระดับโลก ยอดเครดิตจะรันตามไปอัตโนมัติเมื่อสลับค่ายเกม ไม่ต้องคอยกดโยกเงินให้วุ่นวาย และที่สำคัญบัญชีสมาชิกไม่มีวันหมดอายุ",
@@ -72,7 +74,7 @@ const faqSchema = {
     },
     {
       "@type": "Question",
-      name: "โปรโมชั่น PANAMA888 มีเงื่อนไขทำเทิร์นโอเวอร์ที่เอาเปรียบหรือไม่",
+      name: "โปรโมชั่น LONDON45 มีเงื่อนไขทำเทิร์นโอเวอร์ที่เอาเปรียบหรือไม่",
       acceptedAnswer: {
         "@type": "Answer",
         text: "เราปฏิเสธการตั้งตัวเลขโบนัสสูงๆ ที่แฝงกติกาทำเทิร์นโอเวอร์แบบเอาเปรียบครับ เราเน้นมอบสิทธิพิเศษที่ใช้งานได้จริง เช่น โบนัสต้อนรับเงื่อนไขต่ำ และ ระบบคืนยอดเสียอัตโนมัติ (Auto Cashback) ที่ประมวลผลด้วย AI สามารถกดรับเองผ่านแดชบอร์ดได้ทันที",
@@ -80,7 +82,7 @@ const faqSchema = {
     },
     {
       "@type": "Question",
-      name: "ระบบธุรกรรมอัจฉริยะของ PANAMA888 ฝากถอนไว 24 ชม. จริงไหม",
+      name: "ระบบธุรกรรมอัจฉริยะของ LONDON45 ฝากถอนไว 24 ชม. จริงไหม",
       acceptedAnswer: {
         "@type": "Answer",
         text: "จริงครับ ระบบของเราขับเคลื่อนด้วย AI อัตโนมัติ 100% รองรับการฝากถอนไวทุกช่วงเวลา โอนจ่ายได้อิสระ 24 ชม. ไม่ว่าจะทำรายการยอดใหญ่หรือดึกแค่ไหน เงินรางวัลจะเข้าบัญชีภายในไม่กี่วินาที ไร้รอยต่อ ไม่ต้องรอคิว และไม่ต้องส่งสลิปให้แอดมินตรวจสอบ",
@@ -98,10 +100,8 @@ const allSchemas = [webPageSchema, orgSchema, faqSchema, webSiteSchema];
 
   <ContentBox>
     <p>
-      <h1 class="mb-2 text-2xl text-white xl:text-4xl">PANAMA888 เว็บตรงคาสิโน เกมอัปเดตตลอด ฝากถอนไวทุกช่วงเวลา</h1>
-      <strong class="text-amber-400">PANAMA888</strong> คือ <strong class="text-amber-400">เว็บตรงคาสิโน</strong> ด้วยการเชื่อมต่อระบบ API ลิขสิทธิ์แท้จากผู้พัฒนาซอฟต์แวร์ระดับสากล ทำให้ที่นี่มี เกมอัปเดตตลอด
-      เวลา ไม่ว่าค่ายยักษ์ใหญ่ หรือห้องคาสิโนสดที่มาพร้อมฟีเจอร์ใหม่ล่าสุด แพลตฟอร์มของเราถูกขับเคลื่อนด้วยเทคโนโลยี AI อัจฉริยะ ทำให้คุณสามารถ ฝากถอนไวทุกช่วงเวลา มอบอิสระในการจัดการทุกยอดรางวัลได้แบบเรียลไทม์
-      24 ชั่วโมง <strong class="text-amber-400">PANAMA888</strong> เว็บคาสิโนออนไลน์ ที่มีแต่ความสนุก เราพร้อมตอบสนองทุกความต้องการของคุณให้เป็นไปอย่างราบรื่นตั้งแต่วินาทีแรกที่สมัครเข้ามาเล่น!
+      <h1 class="mb-2 text-2xl text-white xl:text-4xl">LONDON45 ทางเข้าหลักสล็อตเว็บตรง ลอนดอน45 แตกหนัก จ่ายจริง</h1>
+      LONDON45 ที่นี่คือ <strong class="text-amber-500">ทางเข้าหลักสล็อตเว็บตรง</strong>  ของแท้ 100% ไม่ผ่านเอเย่นต์ API แท้ไม่มีการแอบปรับเรทหลังบ้าน  บอกเลยว่าชื่อ ลอนดอน45 แตกหนัก เข้าโบนัสได้ตามมาตรฐานของค่ายเกมจริงๆ ไม่ได้ตั้งมาเล่นๆ ขำๆ จ่ายจริง ทุกยอด ไม่ว่าจะทำยอดได้หลักร้อยหรือหลักแสน ถอนเงินเด้งเข้าบัญชีทันที ไม่มีกั๊ก ไม่มีประวัติการบิด 
     </p>
 
     <div class="mt-3.5 flex flex-wrap justify-center gap-4">
@@ -129,85 +129,32 @@ const allSchemas = [webPageSchema, orgSchema, faqSchema, webSiteSchema];
       </a>
     </div>
   </ContentBox>
-  <ContentBoxThreeColums>
+  <ProviderGrid />
+  <ContentBoxTwo>
     <div slot="left">
-      <div class="p-1">
-        <Picture
-          src={image1}
-          alt="panama888 คาสิโนเว็บตรง"
-          loading="lazy"
-          fetchpriority="low"
-          widths={[200, 400, 600]}
-          sizes="(max-width: 768px) 100vw, 33vw"
-          class="mx-auto h-auto w-full max-w-[700px] object-contain shadow-xl"
-          decoding="async"
-          formats={["avif", "webp"]}
-          fallbackFormat="webp"
-          quality={60}
-        />
+      <h2 class="mb-4 text-2xl font-bold">ทางเข้าหลัก LONDON45 ล็อกอินปลอดภัย อัปเดตทุกวัน ป้องกันลิงก์เสีย</h2>
+      <p>
+        หาเว็บสล็อตชัวร์ๆ แนะนำให้ใช้งานผ่าน <strong class="text-amber-500">ทางเข้าหลัก LONDON45</strong> ปัญหาที่คนเล่นเว็บสล็อตมักจะเจออยู่บ่อยๆ คือเข้าหน้าเว็บไม่ได้ ลิงก์พัง หรือเด้งไปเว็บอื่น การเข้าใช้งานผ่าน ทางเข้า LONDON 45 จะช่วยแก้ปัญหานี้ได้โดยตรง เพราะทีมงานจะคอยเช็คและ อัปเดตทุกวัน เพื่อ ป้องกันลิงก์เสีย ไม่ว่าจะช่วงเวลาพีกแค่ไหน คนเล่นเยอะยังไงก็เข้าเกมได้ไวปรู๊ดปร๊าด ลื่นไหลทุกการสปิน ไม่มีสะดุด 
+      </p>
       </div>
-    </div>
-
-    <div slot="center">
-      <div class="p-1">
-        <Picture
-          src={image2}
-          alt="panama888 2026"
-          loading="lazy"
-          fetchpriority="low"
-          widths={[200, 400, 600]}
-          sizes="(max-width: 768px) 100vw, 33vw"
-          class="mx-auto h-auto w-full max-w-[700px] object-contain shadow-xl"
-          decoding="async"
-          formats={["avif", "webp"]}
-          fallbackFormat="webp"
-          quality={60}
-        />
-      </div>
-    </div>
-
     <div slot="right">
-      <div class="p-1">
-        <Picture
-          src={image3}
-          alt="panama888 เกมAPIแท้"
-          loading="lazy"
-          fetchpriority="low"
-          widths={[200, 400, 600]}
-          sizes="(max-width: 768px) 100vw, 33vw"
-          class="mx-auto h-auto w-full max-w-[700px] object-contain shadow-xl"
-          decoding="async"
-          formats={["avif", "webp"]}
-          fallbackFormat="webp"
-          quality={60}
-        />
-      </div>
-    </div>
-  </ContentBoxThreeColums>
-
-  <ContentBox>
-    <h2 class="mb-4 text-2xl font-bold">ทางเข้า PANAMA888 เว็บจริง เข้าใช้งานได้ต่อเนื่อง ไม่มีลิ้งเสีย</h2>
+    <h2 class="mb-4 text-2xl font-bold">สล็อตเว็บตรง ลอนดอน45 มาตรฐาน API แท้ ไม่มีการปรับเรท</h2>
     <p>
-      เข้าถึงความบันเทิงอย่างลื่นไหล ลิ้ง <strong class="text-amber-500">ทางเข้า PANAMA888</strong> ของแท้ บนเซิร์ฟเวอร์ความปลอดภัยสูง (High-Security Server) เพื่อให้สมาชิกมั่นใจได้ว่าทุกลิงก์ที่คลิกคือ
-      เว็บจริง ที่ปกป้องข้อมูลส่วนบุคคลด้วยระบบเข้ารหัสขั้นสูง ล็อกอินเข้าสู่เกมได้รวดเร็ว ไร้ปัญหาคลิกหลายๆต่อ หรือโฆษณาเด้งขึ้นมากวนใจ คุณสามารถ เข้าใช้งานได้ต่อเนื่อง ไม่ว่าจะผ่านสมาร์ทโฟนหรือคอมพิวเตอร์
-      การันตี ไม่มีลิ้งเสีย หรือหน้าจอค้างให้เสียอรรถรส พร้อมให้คุณก้าวเข้าสู่โลกของคาสิโนได้อย่างมั่นใจและปลอดภัย 100%
+      ทำไมเล่นบางเว็บแล้วแตกยาก สาเหตุหลักๆ มักมาจากการตั้งค่าหลังบ้านหรือระบบ API ที่อาจะใช้ของปลอม หรือทำขึ้นมาเองแบบไม่มีมาตรฐาน สำหรับ <strong class="text-lime-500">สล็อตเว็บตรง ลอนดอน45</strong> จะใช้ระบบ มาตรฐาน API แท้ ซึ่งหมายความว่าตัวเกมถูกดึงมาจากค่ายเกมโดยตรง ไม่มีการปรับเรท อัตราการชนะ (RTP) จะขึ้นอยู่กับระบบของเกมนั้นๆ แบบ 100% ถูกต้องตามข้อมูลเกม
     </p>
-  </ContentBox>
+    </div>
+  </ContentBoxTwo>
   <SmoothCarousel />
   <ContentBox>
-    <h2 class="mb-7 text-2xl font-semibold text-white">นวัตกรรม "เว็บตรงคาสิโน" ระดับโลก ทำไม PANAMA888 ถึงเป็นศูนย์รวมความบันเทิง</h2>
+    <h2 class="mb-7 text-2xl font-semibold text-white">LONDON45 คลังรวมเกมสล็อต แตกหนัก สแกตเตอร์เข้าบ๊อยบ่อย</h2>
     <p>
-      สิ่งที่ทำให้ผู้เล่นมากมายไว้วางใจเลือก PANAMA888 คือ นวัตกรรม <strong class="text-lime-400">"เว็บตรงคาสิโน"</strong> ระดับโลก ของเราเชื่อมต่อระบบ API จากค่ายเกมแม่โดยตรงโดยไม่ผ่านคนกลาง ระบบนี้คือเครื่องการันตีความยุติธรรมในทุกๆ
-      การสุ่มรางวัล (RNG Certified) กติกาแฟร์ตรงตามมาตรฐานสากล ไร้การแทรกแซงหรือปรับแต่งระบบหลังบ้านใดๆ ทั้งสิ้น นี่คือเหตุผลที่ตอบคำถามว่า ทำไม PANAMA888 ถึงเป็นศูนย์รวมความบันเทิง ที่โดดเด่น เพราะเราสร้างเว็บไซต์ให้เป็นพื้นที่ที่คุณสามารถเพลิดเพลินกับเกมโปรด
-      และลุ้นรางวัลใหญ่ได้อย่างสบายใจ
+     <strong class="text-lime-500">LONDON45 คลังรวมเกมสล็อต</strong> ได้รวบรวมค่ายเกมดังๆ ไว้ให้เลือกเล่นเยอะมาก ข้อดีคือมีการคัดเฉพาะเกมที่ แตกหนัก และมีฟีเจอร์ช่วยเล่น อย่างบางเกมที่ สแกตเตอร์เข้าบ๊อยบ่อย จนต้องร้องว้าว ตัวคูณบวกยับๆ เล่นเพลินไม่มีเบื่อ มีเกมใหม่เข้ามาให้อัปเดตความมันส์ก่อนใครตลอด สิ่งเหล่านี้มันจะช่วยให้ผู้เล่นมีโอกาสเข้าไปลุ้นรางวัลในรอบฟรีสปินได้ง่ายขึ้น 
     </p>
   </ContentBox>
   <ContentBox>
-    <h2 class="mb-7 text-2xl font-semibold">อัปเดตเทรนด์ก่อนใคร! PANAMA888 เชื่อมต่อค่ายเกมแม่ "เกมอัปเดตตลอด"</h2>
+    <h2 class="mb-7 text-2xl font-semibold">การันตี ลอนดอน 45 จ่ายจริง ตรงเวลา ถอนยอดใหญ่โอนไว 24 ชม.</h2>
     <p>
-      ยุค 5G ผสม AI ในปัจจุบัน ทุกอย่างต้องขับเคลื่อน พัฒนาด้วยความเร็ว และเราไม่เคยปล่อยให้สมาชิกต้องตกเทรนด์ ที่นี่ให้คุณ อัปเดตเทรนด์ เกมยอดนอดนิยม มาแรงก่อนใคร! PANAMA888 เชื่อมต่อค่ายเกมแม่
-      ทำการซิงค์ข้อมูลกับผู้พัฒนาซอฟต์แวร์เกมชั้นนำระดับโลกแบบเรียลไทม์ ทำให้แพลตฟอร์มของเรามี "เกมอัปเดตตลอด" ไม่ว่าจะเป็นเกมสล็อต 3D กราฟิกสุดล้ำ หรือห้องคาสิโนสดที่มาพร้อมฟีเจอร์ใหม่สุดตื่นเต้น
-      ทันทีที่สตูดิโอระดับ Global ปล่อยเกมใหม่ลงตลาด แพลตฟอร์มของเราจะอิมพอร์ตเข้ามาให้คุณได้สัมผัสความสนุกก่อนใครเสมอ
+      เรากล้า การันตี <strong class="text-lime-500">ลอนดอน 45 จ่ายจริง ตรงเวลา</strong> ไม่มีลีลา ไม่มียึกยัก ด้วยระบบฝาก-ถอนออโต้ที่รวดเร็วทันใจสุดๆ ทันทีที่กดถอน ต่อให้คุณจะทำรายการ ถอนยอดใหญ่โอนไว 24 ชม. เงินก็จะเด้งเข้าแอปธนาคารของคุณภายในไม่กี่วินาที ไม่ต้องทักแชทง้อแอดมิน ไม่ต้องส่งสลิปให้วุ่นวาย ถอนได้ไม่อั้นต่อวัน เล่นได้ก็รับเงินไปเลยเต็มๆ ชัวร์ 
     </p>
   </ContentBox>
 
@@ -216,7 +163,7 @@ const allSchemas = [webPageSchema, orgSchema, faqSchema, webSiteSchema];
       <div class="rounded-xl p-5">
         <Picture
           src={image1}
-          alt="ทางเข้า kiki49 ล่าสุด"
+          alt="ทางเข้า LONDON45 ล่าสุด"
           loading="lazy"
           fetchpriority="low"
           widths={[200, 400, 600, 800]}
@@ -231,25 +178,18 @@ const allSchemas = [webPageSchema, orgSchema, faqSchema, webSiteSchema];
       </div>
     </div>
     <div slot="right">
-      <h2 class="mb-7 text-2xl font-semibold">สมัคร PANAMA888 ยูสเดียว เข้าเล่นได้ทุกเกมคาสิโน ไม่มีหมดอายุ</h2>
+      <h2 class="mb-7 text-2xl font-semibold">Londonสล็อต เล่นผ่านมือถือ ลื่นไหลทุกระบบ ไม่ต้องโหลดแอป</h2>
       <p class="mb-5">
-        เพียง <strong class="text-lime-500">สมัคร PANAMA888 แค่ครั้งเดียว</strong> คุณก็จะได้รับสิทธิ์เข้าถึงทุกเกม และการบริการจากทุกค่ายคาสิโนออนไลน์ ระดับโลกเปิด ยูสเดียว เข้าเล่นได้ทุกเกมคาสิโน นึกอยากสลับจากเกมสล็อตไปนั่งโต๊ะบาคาร่า
-        ยอดเครดิตของคุณก็จะรันตามไปอัตโนมัติ ไม่ต้องคอยกดโยกเงินให้วุ่นวาย ที่สำคัญบัญชีสมาชิกของคุณ ไม่มีหมดอายุ กลับมาเพลิดเพลินเมื่อไหร่ ระบบก็พร้อมต้อนรับคุณตลอดเวล
+       Londonสล็อต เล่นผ่านมือถือ ไม่ว่าจะอยู่ที่ไหนก็เล่นสล็อตได้ London 45 เล่นผ่านมือถือ ได้อย่างสมบูรณ์แบบ แพลตฟอร์มของเราถูกออกแบบด้วยเทคโนโลยี HTML5 แบบ Responsive ให้หน้าเว็บปรับขนาดเข้ากับสมาร์ทโฟนทุกรุ่นโดยอัตโนมัติ ทำให้คุณสนุกกับเกมสล็อตได้อย่าง ลื่นไหลทุกระบบ ไม่ว่าจะเป็น iOS หรือ Android 
       </p>
-      <h2 class="mb-7 text-2xl font-semibold">โปรโมชั่น PANAMA888 ข้อเสนอที่ออกแบบมาเพื่อยกระดับประสบการณ์เล่น</h2>
-      <p>
-        โปรโมชั่น PANAMA888 คือ ข้อเสนอที่ออกแบบมาเพื่อยกระดับประสบการณ์เล่น อย่างเป็นรูปธรรมและใช้งานได้จริง เว็บเราปฏิเสธการตั้งตัวเลขโบนัสสูงๆ ที่แฝงด้วยกติกาทำเทิร์นโอเวอร์ที่เอาเปรียบ
-        แต่เน้นมอบสิทธิพิเศษ อย่างยุติธรรม เช่น "โบนัสต้อนรับ" ที่เพิ่มเครดิตให้คุณเพลิดเพลินกับค่ายเกมได้นานขึ้นด้วยเงื่อนไขที่ต่ำและเป็นธรรม หรือนวัตกรรม "ระบบคืนยอดเสียอัตโนมัติ" (Auto Cashback)
-        ที่ประมวลผลด้วย AI ระบบจะคำนวณและรีเทิร์นเครดิตกลับเข้ากระเป๋าคุณโดยตรง คุณสามารถตรวจสอบยอดและกดรับสิทธิพิเศษทั้งหมดได้เองผ่านหน้าแดชบอร์ดส่วนตัว
-        นำไปสนุกต่อหรือสั่งถอนยอดรางวัลได้ทันทีโดยไม่ต้องรอแอดมินอนุมัติ
-      </p>
+      
     </div>
   </ContentBoxSevenThree>
   <ContentBox>
     <div class="rounded-xl p-5">
       <Picture
         src={banner1}
-        alt="ทางเข้า PANAMA888 ล่าสุด"
+        alt="ทางเข้า LONDON45 ล่าสุด"
         loading="lazy"
         fetchpriority="low"
         widths={[200, 400, 600, 900]}
@@ -262,12 +202,11 @@ const allSchemas = [webPageSchema, orgSchema, faqSchema, webSiteSchema];
         fallbackFormat="webp"
       />
     </div>
-    <h2 class="mb-5 text-2xl font-semibold text-amber-400">ระบบธุรกรรมอัจฉริยะ PANAMA888 "ฝากถอนไวทุกช่วงเวลา" โอนจ่ายได้อิสระ 24 ชม.</h2>
-    <p>
-      ความสมบูรณ์แบบของแพลตฟอร์ม เว็บไซต์คาสิโนออนไลน์ วัดกันที่เทคโนโลยีการจัดการยอดรางวัล ระบบธุรกรรมอัจฉริยะ PANAMA888 ขับเคลื่อนด้วย AI อัตโนมัติ 100% มอบความสะดวกสบายสูงสุดด้วยการ
-      "ฝากถอนไวทุกช่วงเวลา" ไม่ว่าคุณจะทำรายการยอดใหญ่ในช่วงเวลาพีก หรือดึกดื่นแค่ไหน ระบบก็พร้อมประมวลผลและ โอนจ่ายได้อิสระ 24 ชม. เงินรางวัลจะเข้าสู่บัญชีของคุณโดยตรงภายในไม่กี่วินาที ไร้รอยต่อ
-      ไม่ต้องรอคิว และไม่ต้องส่งสลิปให้แอดมินตรวจสอบ นี่คืออิสระขั้นสุดที่ออกแบบมาเพื่อคุณ
-    </p>
+    <h2 class="mb-7 text-2xl font-semibold">สมัคร London 45 รับโปรสมาชิกใหม่ โคตรเด็ด</h2>
+      <p>
+        เพียง <strong class="text-lime-500">สมัคร London 45 วันนี้</strong> (ใช้เวลาไม่ถึง 1 นาทีด้วยระบบออโต้) คุณก็จะได้รับสิทธิ์ รับโปรสมาชิกใหม่ โคตรเด็ด ที่เราจัดเตรียมไว้ต้อนรับอย่างสมน้ำสมเนื้อ! ทุกแคมเปญสิทธิพิเศษของเราออกแบบมาเพื่อยกระดับความสนุกและยืดเวลาในการเล่นของคุณโดยเฉพาะ ปราศจากเงื่อนไขทำเทิร์นโอเวอร์ที่ซับซ้อน มอบความคุ้มค่าตั้งแต่ก้าวแรก 
+      </p>
   </ContentBox>
+<Faq />
   <Navfoot />
 </MainLayout>

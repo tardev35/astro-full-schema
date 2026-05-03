@@ -1,0 +1,72 @@
+---
+// FAQItem.astro (หรือใส่รวมในหน้าแรก)
+const faqs = [
+  { q: "LONDON45 มีความปลอดภัยแค่ไหน?", a: "เราใช้ระบบรักษาความปลอดภัยระดับเดียวกับสถาบันการเงินสากล ข้อมูลสมาชิกจะถูกเก็บเป็นความลับสูงสุดด้วยระบบเข้ารหัส 256-บิต" },
+  { q: "ฝาก-ถอน ใช้เวลานานเท่าไหร่?", a: "ระบบ Auto ของเราทำงานภายใน 3-10 วินาที รองรับทุกธนาคารชั้นนำและ TrueMoney Wallet ตลอด 24 ชั่วโมง" },
+  { q: "ถ้าลืมรหัสผ่านต้องทำอย่างไร?", a: "คุณสามารถติดต่อแอดมินผ่านทาง Line Official ได้ทันที เรามีทีมงานพร้อมซัพพอร์ตช่วยเหลือคุณทุกขั้นตอน" }
+];
+---
+
+<div class="mx-auto max-w-[1000px] px-4 py-10 font-sans">
+  <h3 class="mb-8 text-center text-2xl font-black italic tracking-tighter text-transparent bg-clip-text bg-gradient-to-b from-yellow-200 to-yellow-600 uppercase md:text-4xl">
+    คำถามที่พบบ่อย (FAQ)
+  </h3>
+
+  <div class="space-y-4">
+    {faqs.map((faq, index) => (
+      <div class="faq-item group overflow-hidden rounded-xl border border-yellow-500/20 bg-gradient-to-br from-[#1a1a1a] to-[#0a0a0a] transition-all hover:border-yellow-500/50">
+        <button class="faq-trigger flex w-full items-center justify-between p-5 text-left transition-all">
+          <span class="text-sm font-bold text-gray-200 md:text-lg">{faq.q}</span>
+          <span class="icon ml-4 flex h-8 w-8 shrink-0 items-center justify-center rounded-full border border-yellow-500/40 text-yellow-500 transition-transform duration-300">
+            <i class="fa-solid fa-plus text-xs"></i>
+          </span>
+        </button>
+        <div class="faq-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+          <div class="p-5 pt-0 text-sm leading-relaxed text-gray-400 border-t border-white/5 md:text-base">
+            {faq.a}
+          </div>
+        </div>
+      </div>
+    ))}
+  </div>
+</div>
+
+
+
+<script>
+  const triggers = document.querySelectorAll('.faq-trigger');
+  triggers.forEach(trigger => {
+    trigger.addEventListener('click', () => {
+      const parent = trigger.parentElement;
+      const content = trigger.nextElementSibling;
+      const icon = trigger.querySelector('.icon');
+      
+      // ปิดอันอื่น (Optional: ถ้าอยากให้เปิดได้อันเดียว)
+      document.querySelectorAll('.faq-item').forEach(item => {
+        if (item !== parent) {
+          item.classList.remove('active');
+          (item.querySelector('.faq-content') as HTMLElement).style.maxHeight = '0';
+          item.querySelector('.icon')?.classList.remove('rotate-45');
+        }
+      });
+
+      // สลับสถานะตัวเอง
+      parent?.classList.toggle('active');
+      if (parent?.classList.contains('active')) {
+        (content as HTMLElement).style.maxHeight = content?.scrollHeight + "px";
+        icon?.classList.add('rotate-45');
+      } else {
+        (content as HTMLElement).style.maxHeight = '0';
+        icon?.classList.remove('rotate-45');
+      }
+    });
+  });
+</script>
+
+<style>
+  .rotate-45 { transform: rotate(45deg); border-color: #ef4444 !important; color: #ef4444 !important; }
+  .faq-item.active { border-color: rgba(234, 179, 8, 0.6); box-shadow: 0 0 20px rgba(0,0,0,0.5); }
+  h3 , .space-y-4{
+    font-family: 'kanit', sans-serif;
+  }
+</style>

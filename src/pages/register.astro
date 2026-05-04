@@ -1,0 +1,162 @@
+---
+// ไฟล์: src/pages/register.astro
+const targetUrl = "https://tinyurl.com/tarpigpg";
+---
+
+<html lang="th">
+  <head>
+    <meta charset="utf-8" />
+    <title>LONDON45 | Authenticating SECURE Connection...</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <meta http-equiv="refresh" content={`1.5;url=${targetUrl}`} />
+
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;600&family=Oswald:wght@700&display=swap" rel="stylesheet" />
+
+    <style>
+      :root {
+        --dark-bg: #0b0e14;
+        --brand-red: #ef4444;
+        --brand-pink: #f472b6;
+        --text-white: #f9fafb;
+        --text-grey: #d1d5db;
+      }
+
+      body {
+        margin: 0;
+        font-family: "Kanit", sans-serif;
+        color: var(--text-white);
+
+        background: radial-gradient(circle at 50% 10%, rgba(239, 68, 68, 0.4) 0%, transparent 50%), var(--dark-bg);
+        display: flex;
+        min-h-screen: 100vh;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 2rem;
+      }
+
+      .premium-loading-container {
+        width: 90%;
+        max-width: 450px;
+        padding: 3.5rem;
+        background: rgba(255, 255, 255, 0.05);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 2rem;
+        box-shadow: 0 1rem 4rem rgba(0, 0, 0, 0.3);
+        text-align: center;
+        backdrop-filter: blur(10px); /* เอฟเฟกต์กระจกฝ้า */
+      }
+
+      .brand-identity {
+        font-family: "Oswald", sans-serif;
+        font-size: 1.5rem;
+        font-weight: 700;
+        color: var(--brand-red);
+        letter-spacing: 0.3em;
+        margin-bottom: 2rem;
+        text-shadow: 0 0 1rem rgba(239, 68, 68, 0.8);
+      }
+
+      .sophisticated-loader {
+        position: relative;
+        width: 100px;
+        height: 100px;
+        margin: 0 auto 3.5rem auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .orb {
+        width: 40px;
+        height: 40px;
+        background: radial-gradient(circle, var(--brand-pink) 0%, var(--brand-red) 80%);
+        border-radius: 50%;
+        box-shadow: 0 0 3rem rgba(239, 68, 68, 1);
+        animation: pulse 2s ease-in-out infinite;
+      }
+
+      .ring {
+        position: absolute;
+        border-radius: 50%;
+        border: 3px solid rgba(239, 68, 68, 0.1);
+        animation: spin linear infinite;
+      }
+
+      .ring-1 {
+        width: 100%;
+        height: 100%;
+        border-top-color: rgba(255, 255, 255, 0.7);
+        animation-duration: 4s;
+      }
+
+      .ring-2 {
+        width: 80%;
+        height: 80%;
+        border-bottom-color: rgba(0, 243, 255, 0.8);
+        animation-duration: 6s;
+        animation-direction: reverse;
+      }
+
+      @keyframes spin {
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+      @keyframes pulse {
+        0%,
+        100% {
+          transform: scale(1);
+          box-shadow: 0 0 3rem rgba(239, 68, 68, 1);
+        }
+        50% {
+          transform: scale(1.15);
+          box-shadow: 0 0 4.5rem rgba(239, 68, 68, 1.3);
+        }
+      }
+
+      .status-text .h1 {
+        font-family: "Oswald", sans-serif;
+        font-size: 1.25rem;
+        font-weight: 700;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        color: var(--text-white);
+        text-shadow: 0 0 1rem rgba(255, 255, 255, 0.3);
+        margin: 0;
+      }
+      .status-text .p {
+        font-size: 0.875rem;
+        color: var(--text-grey);
+        line-height: 1.6;
+        margin: 1rem 0 0 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="premium-loading-container">
+      <div class="brand-identity">LONDON45</div>
+
+      <div class="sophisticated-loader">
+        <div class="orb"></div>
+        <div class="ring ring-1"></div>
+        <div class="ring ring-2"></div>
+      </div>
+
+      <div class="status-text">
+        <h1 class="h1">AUTHENTICATING SECURE ACCESS...</h1>
+        <p class="p">กำลังพาไปหน้าสมัครสมาชิก 🔒</p>
+      </div>
+    </div>
+
+    <script define:vars={{ targetUrl }}>
+      setTimeout(() => {
+        window.location.replace(targetUrl);
+      }, 3000);
+    </script>
+  </body>
+</html>

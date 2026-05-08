@@ -13,5 +13,5 @@ Disallow: /
 User-agent: Anthropic-ai
 Disallow: /
 
-Sitemap: https://xn--45-7ritb3eucc.com/sitemap-0.xml
+Sitemap: https://brazil999official.com/sitemap-0.xml
 

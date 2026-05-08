@@ -19,6 +19,6 @@ export default defineConfig({
     '/line': 'https://tinyurl.com/linepigpg'
   },
 
-  site: 'https://xn--45-7ritb3eucc.com',
+  site: 'https://brazil999official.com',
   integrations: [sitemap()]
 });

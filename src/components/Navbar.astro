@@ -1,7 +1,7 @@
 ---
 import { Picture } from "astro:assets";
 
-const images = import.meta.glob<{ default: ImageMetadata }>("../../assets/logo.{png,webp,jpg}", { eager: true });
+const images = import.meta.glob<{ default: ImageMetadata }>("../assets/logo.{png,webp,jpg}", { eager: true });
 
 const imagePaths = Object.keys(images);
 const mainLogo = imagePaths.length > 0 ? images[imagePaths[0]].default : null;

@@ -6,19 +6,19 @@ const imagePaths = Object.keys(images);
 const mainLogo = imagePaths.length > 0 ? images[imagePaths[0]].default : null;
 ---
 
-<footer class="relative mt-32 w-full border-t border-white/5 bg-[#0b0e14] pt-64 pb-6 font-sans text-gray-400 md:pt-40">
+<footer class="relative mt-32 w-full border-t border-white/5 bg-[#085f1f] pt-64 pb-6 font-sans text-white md:pt-40">
   <div
-    class="absolute -top-14 left-1/2 z-20 flex w-[92%] max-w-5xl -translate-x-1/2 flex-col items-center justify-between rounded-2xl border border-white/20 bg-gradient-to-r from-red-600 via-red-500 to-orange-500 p-6 shadow-[0_15px_40px_rgba(220,38,38,0.4)] md:-top-16 md:flex-row md:p-8">
+    class="absolute -top-14 left-1/2 z-20 flex w-[92%] max-w-5xl -translate-x-1/2 flex-col items-center justify-between rounded-2xl border border-white/20 bg-gradient-to-r from-green-700 via-green-600 to-green-500 p-6 shadow-[0_15px_40px_rgba(22,163,74,0.4)] md:-top-16 md:flex-row md:p-8">
     <div class="mb-5 flex flex-col text-center md:mb-0 md:text-left">
-      <h2 class="text-xl font-black tracking-wide text-white uppercase italic drop-shadow-md md:text-3xl">🔥 พร้อมเปิดประสบการณ์ แตกหนัก หรือยัง?</h2>
-      <p class="mt-2 text-sm font-medium text-white/80 md:text-base">สมัครสมาชิกวันนี้ รับโบนัสฟรี 100% คืนยอดเสียทุกวัน ฝาก-ถอน ไม่มีขั้นต่ำ!</p>
+      <h2 class="text-xl font-black tracking-wide text-yellow-400 uppercase italic drop-shadow-md md:text-3xl">🔥 พร้อมเปิดประสบการณ์ แตกหนัก หรือยัง?</h2>
+      <p class="mt-2 text-sm font-medium text-white md:text-base">สมัครสมาชิกวันนี้ รับโบนัสฟรี 100% คืนยอดเสียทุกวัน ฝาก-ถอน ไม่มีขั้นต่ำ!</p>
     </div>
 
     <a
       href="/register"
-      class="group relative flex items-center justify-center overflow-hidden rounded-full bg-white px-8 py-3.5 text-sm font-extrabold whitespace-nowrap text-red-600 shadow-lg transition-all hover:scale-105 md:text-base">
+      class="group relative flex items-center justify-center overflow-hidden rounded-full bg-yellow-400 px-8 py-3.5 text-sm font-extrabold whitespace-nowrap text-green-900 shadow-[0_0_15px_rgba(250,204,21,0.5)] transition-all hover:scale-105 md:text-base">
       <span class="relative z-10">สมัครสมาชิกเลย 🚀</span>
-      <div class="absolute inset-0 translate-y-full bg-gray-100 transition-transform duration-300 group-hover:translate-y-0"></div>
+      <div class="absolute inset-0 translate-y-full bg-yellow-300 transition-transform duration-300 group-hover:translate-y-0"></div>
     </a>
   </div>
 
@@ -26,11 +26,9 @@ const mainLogo = imagePaths.length > 0 ? images[imagePaths[0]].default : null;
     <div class="mb-10 grid grid-cols-1 gap-10 md:grid-cols-12 lg:gap-12">
       <div class="flex flex-col gap-6 md:col-span-12 lg:col-span-4">
         <a href="/" class="inline-block origin-left transition-transform hover:scale-105">
-          <Picture src={mainLogo!} alt="MAHAGAME Logo" class="h-[45px] w-auto drop-shadow-lg" formats={["avif", "webp"]} fallbackFormat="webp" />
+          <Picture src={mainLogo!} alt="BRAZIL999 Logo" class="h-[45px] w-auto drop-shadow-[0_0_10px_rgba(34,197,94,0.4)]" formats={["avif", "webp"]} fallbackFormat="webp" />
         </a>
-        <p class="text-sm leading-relaxed text-gray-400">
-          PANAMA888 เว็บตรงคาสิโน ไม่มีลิ้งเสีย เกมอัปเดตตลอด สมัครยูสเดียว เข้าเล่นได้ทุกอย่าง ระบบธุรกรรมอัจฉริยะ ฝากถอนไวทุกช่วงเวลา โอนจ่ายได้อิสระ 24 ชม.
-        </p>
+        <p class="text-sm leading-relaxed">BRAZIL999 คาสิโนสล็อตเว็บใหญ่ DNA ความสนุก บราซิล999 ทลายความกลัวด้วยระบบ API แท้ ถอนชัว จ่ายจริง ไม่ลีลา จ่ายหนักระดับพรีเมียมที่สุดในเอเชีย</p>
 
         <div class="mt-2 flex flex-wrap gap-3">
           <a
@@ -54,33 +52,33 @@ const mainLogo = imagePaths.length > 0 ? images[imagePaths[0]].default : null;
       <div class="md:col-span-6 lg:col-span-5">
         <h3 class="relative mb-5 inline-block text-lg font-bold tracking-wider text-white uppercase">
           ลิงก์ด่วน (Quick Links)
-          <span class="absolute -bottom-2 left-0 h-1 w-1/2 rounded-full bg-red-600"></span>
+          <span class="absolute -bottom-2 left-0 h-1 w-1/2 rounded-full bg-yellow-400 shadow-[0_0_8px_rgba(250,204,21,0.6)]"></span>
         </h3>
 
         <div class="grid grid-cols-2 gap-x-4 gap-y-3 text-sm">
-          <a href="/" class="group flex items-center text-gray-400 transition-colors hover:text-white">
-            <span class="mr-2 h-1.5 w-1.5 rounded-sm bg-red-600 transition-transform group-hover:rotate-45"></span> หน้าแรก
+          <a href="/" class="group flex items-center transition-colors hover:text-yellow-400">
+            <span class="mr-2 h-1.5 w-1.5 rounded-sm bg-yellow-400 transition-transform group-hover:rotate-45"></span> หน้าแรก
           </a>
-          <a href="/ทดลองเล่น" class="group flex items-center text-gray-400 transition-colors hover:text-white">
-            <span class="mr-2 h-1.5 w-1.5 rounded-sm bg-red-600 transition-transform group-hover:rotate-45"></span> ทดลองเล่นสล็อตฟรี
+          <a href="/ทดลองเล่น" class="group flex items-center transition-colors hover:text-yellow-400">
+            <span class="mr-2 h-1.5 w-1.5 rounded-sm bg-yellow-400 transition-transform group-hover:rotate-45"></span> ทดลองเล่นสล็อตฟรี
           </a>
-          <a href="/promotion" class="group flex items-center text-gray-400 transition-colors hover:text-white">
-            <span class="mr-2 h-1.5 w-1.5 rounded-sm bg-red-600 transition-transform group-hover:rotate-45"></span> โปรโมชั่นสมาชิกใหม่
+          <a href="/promotion" class="group flex items-center transition-colors hover:text-yellow-400">
+            <span class="mr-2 h-1.5 w-1.5 rounded-sm bg-yellow-400 transition-transform group-hover:rotate-45"></span> โปรโมชั่นสมาชิกใหม่
           </a>
-          <a href="/ทางเข้า" class="group flex items-center text-gray-400 transition-colors hover:text-white">
-            <span class="mr-2 h-1.5 w-1.5 rounded-sm bg-red-600 transition-transform group-hover:rotate-45"></span> คาสิโนสด บาคาร่า
+          <a href="/ทางเข้า" class="group flex items-center transition-colors hover:text-yellow-400">
+            <span class="mr-2 h-1.5 w-1.5 rounded-sm bg-yellow-400 transition-transform group-hover:rotate-45"></span> คาสิโนสด บาคาร่า
           </a>
-          <a href="/register" class="group flex items-center text-gray-400 transition-colors hover:text-white">
-            <span class="mr-2 h-1.5 w-1.5 rounded-sm bg-red-600 transition-transform group-hover:rotate-45"></span> สมัครสมาชิก
+          <a href="/register" class="group flex items-center transition-colors hover:text-yellow-400">
+            <span class="mr-2 h-1.5 w-1.5 rounded-sm bg-yellow-400 transition-transform group-hover:rotate-45"></span> สมัครสมาชิก
           </a>
-          <a href="/" class="group flex items-center text-gray-400 transition-colors hover:text-white">
-            <span class="mr-2 h-1.5 w-1.5 rounded-sm bg-red-600 transition-transform group-hover:rotate-45"></span> แทงบอลออนไลน์
+          <a href="/" class="group flex items-center transition-colors hover:text-yellow-400">
+            <span class="mr-2 h-1.5 w-1.5 rounded-sm bg-yellow-400 transition-transform group-hover:rotate-45"></span> แทงบอลออนไลน์
           </a>
-          <a href="/contact-us" class="group flex items-center text-gray-400 transition-colors hover:text-white">
-            <span class="mr-2 h-1.5 w-1.5 rounded-sm bg-red-600 transition-transform group-hover:rotate-45"></span> ติดต่อแอดมิน
+          <a href="/contact-us" class="group flex items-center transition-colors hover:text-yellow-400">
+            <span class="mr-2 h-1.5 w-1.5 rounded-sm bg-yellow-400 transition-transform group-hover:rotate-45"></span> ติดต่อแอดมิน
           </a>
-          <a href="/" class="group flex items-center text-gray-400 transition-colors hover:text-white">
-            <span class="mr-2 h-1.5 w-1.5 rounded-sm bg-red-600 transition-transform group-hover:rotate-45"></span> ดาวน์โหลดแอป
+          <a href="/" class="group flex items-center transition-colors hover:text-yellow-400">
+            <span class="mr-2 h-1.5 w-1.5 rounded-sm bg-yellow-400 transition-transform group-hover:rotate-45"></span> ดาวน์โหลดแอป
           </a>
         </div>
       </div>
@@ -88,10 +86,10 @@ const mainLogo = imagePaths.length > 0 ? images[imagePaths[0]].default : null;
       <div class="md:col-span-6 lg:col-span-3">
         <h3 class="relative mb-5 inline-block text-lg font-bold tracking-wider text-white uppercase">
           ระบบการเงิน
-          <span class="absolute -bottom-2 left-0 h-1 w-1/2 rounded-full bg-red-600"></span>
+          <span class="absolute -bottom-2 left-0 h-1 w-1/2 rounded-full bg-yellow-400 shadow-[0_0_8px_rgba(250,204,21,0.6)]"></span>
         </h3>
 
-        <p class="mb-4 text-xs text-gray-400">รองรับการฝาก-ถอนผ่านแอปธนาคารชั้นนำ, TrueMoney Wallet และระบบ Cryptocurrency</p>
+        <p class="mb-4 text-xs">รองรับการฝาก-ถอนผ่านแอปธนาคารชั้นนำ, TrueMoney Wallet และระบบ Cryptocurrency</p>
 
         <div class="grid grid-cols-3 gap-2">
           <div class="flex h-10 items-center justify-center rounded border border-white/5 bg-[#111620] transition-colors hover:border-orange-500/50" title="True Wallet">
@@ -110,15 +108,15 @@ const mainLogo = imagePaths.length > 0 ? images[imagePaths[0]].default : null;
       </div>
     </div>
 
-    <hr class="mb-6 border-white/5" />
+    <hr class="mb-6 border-green-900/50" />
 
-    <div class="mb-6 hidden text-justify text-[10px] leading-relaxed text-gray-600 md:block">
+    <div class="mb-6 hidden text-justify text-[10px] leading-relaxed text-white md:block">
       สล็อตเว็บตรง สล็อตแตกง่าย สล็อตออนไลน์ เล่นสล็อตฟรี pg slot ทางเข้า คาสิโนออนไลน์ บาคาร่าออนไลน์ แทงบอล สล็อตวอเลท ฝากถอนไม่มีขั้นต่ำ สล็อตเว็บตรงไม่ผ่านเอเย่นต์ เว็บพนันออนไลน์ เว็บสล็อตแตกบ่อย
       เกมสล็อตมือถือ ทดลองเล่นสล็อต pg เว็บตรงสล็อต คาสิโนสด รูเล็ต ไฮโล สล็อตทดลองเล่น เครดิตฟรี สล็อตpgแท้ โปรสล็อตทุนน้อย
     </div>
 
     <div class="flex flex-col items-center justify-between gap-4 text-xs text-gray-500 md:flex-row">
-      <p>&copy; {new Date().getFullYear()} <span class="font-bold text-white">KIKI49</span>. All Rights Reserved.</p>
+      <p>&copy; {new Date().getFullYear()} <span class="font-bold text-white">BRAZIL999</span>. All Rights Reserved.</p>
 
       <div class="flex items-center gap-6">
         <a href="/" class="transition-colors hover:text-white">เงื่อนไขและข้อตกลง</a>
@@ -126,7 +124,7 @@ const mainLogo = imagePaths.length > 0 ? images[imagePaths[0]].default : null;
 
         <button
           onclick="window.scrollTo({top: 0, behavior: 'smooth'})"
-          class="flex h-8 w-8 items-center justify-center rounded border border-white/10 bg-white/5 text-white transition-colors hover:bg-red-600"
+          class="flex h-8 w-8 items-center justify-center rounded border border-white/10 bg-white/5 text-white transition-colors hover:border-green-500 hover:bg-green-600 hover:text-yellow-400"
           aria-label="Back to top">
           ↑
         </button>
@@ -137,8 +135,10 @@ const mainLogo = imagePaths.length > 0 ? images[imagePaths[0]].default : null;
 <style>
   footer a {
     text-decoration: none;
+    color: white;
   }
   footer {
     font-family: "kanit", sans-serif;
+    color: white;
   }
 </style>

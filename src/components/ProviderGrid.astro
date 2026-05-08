@@ -14,7 +14,7 @@ import img6 from "../assets/providers/game6.webp";
 const providers = [
   { alt: "ON Gaming", users: "2,486", isHot: true, img: img1 },
   // ใส่ข้อมูลจำลองให้ครบ 6 ช่อง (ลูกพี่เปลี่ยนเป็น img2, img3 ของจริงได้เลย)
-  { alt: "Big Gaming", users: "1,892", isHot: true, img: img2 }, 
+  { alt: "Big Gaming", users: "1,892", isHot: true, img: img2 },
   { alt: "WM Casino", users: "3,102", isHot: true, img: img3 },
   { alt: "Evolution", users: "2,301", isHot: true, img: img4 },
   { alt: "SA Gaming", users: "1,954", isHot: true, img: img5 },
@@ -23,45 +23,46 @@ const providers = [
 ---
 
 <div class="mx-auto w-full max-w-[1300px] px-4 py-5 sm:px-6 lg:px-8">
-  <div class="mb-8 inline-flex w-full max-w-[850px] items-center gap-3 rounded-l-[12px] border-l-[3px] border-[#d4af37]/80 bg-[linear-gradient(90deg,rgba(212,175,55,0.2)_0%,rgba(184,134,11,0.3)_30%,rgba(15,15,15,0.95)_80%,transparent_100%)] py-2.5 pl-4 pr-12 shadow-[inset_1px_0_0_rgba(255,255,255,0.1)]">
-    <span class="text-xl drop-shadow-[0_0_5px_rgba(212,175,55,0.8)]">👑</span>
-    <h2 class="text-xl font-bold tracking-wide text-[#fef08a] drop-shadow-md md:text-2xl">
-      ค่ายคาสิโนยอดฮิต
-    </h2>
-  </div>
+  <div class="mx-auto w-full max-w-[1300px] px-4 py-5 font-sans sm:px-6 lg:px-8">
+    <div
+      class="mb-8 inline-flex w-full max-w-[1250px] items-center gap-3 rounded-l-[12px] border-l-[4px] border-[#1b8d3b] bg-gradient-to-r from-[#1b8d3b]/20 via-[#399537]/10 to-transparent py-2.5 pr-12 pl-4 shadow-[inset_1px_0_0_rgba(27,141,59,0.1)]">
+      <span class="text-xl drop-shadow-[0_0_5px_rgba(27,141,59,0.3)]">🎰</span>
+      <h2 class="text-xl font-bold tracking-wide text-[#1b8d3b] drop-shadow-sm md:text-2xl">ค่ายคาสิโนยอดฮิต</h2>
+    </div>
 
-  <div class="grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-6 lg:gap-4">
-    {providers.map((p) => (
-      <div class="group relative cursor-pointer overflow-hidden rounded-[18px] transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_10px_20px_rgba(0,0,0,0.5)]">
-        
-        <div class="absolute left-2 top-2 z-10 flex items-center gap-1 rounded-full bg-[#11003a] px-2 py-0.5 text-[10px] font-bold text-white shadow-md">
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3" viewBox="0 0 20 20" fill="currentColor">
-            <path fill-rule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clip-rule="evenodd" />
-          </svg>
-          {p.users}
-        </div>
+    <div class="grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-6 lg:gap-4">
+      {
+        providers.map((p) => (
+          <div class="group relative cursor-pointer overflow-hidden rounded-[18px] transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_10px_20px_rgba(0,0,0,0.5)]">
+            <div class="absolute top-3 left-3 z-10 flex items-center gap-1 rounded-full bg-[#11003a] px-2 py-0.5 text-[10px] font-bold text-white shadow-md">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3" viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clip-rule="evenodd" />
+              </svg>
+              {p.users}
+            </div>
 
-        {p.isHot && (
-          <div class="absolute right-2 top-2 z-10 flex items-center gap-1 rounded-full bg-gradient-to-r from-red-500 to-pink-500 px-2 py-0.5 text-[10px] font-black tracking-wide text-white shadow-md">
-            <span>🔥</span> HOT
+            {p.isHot && (
+              <div class="absolute top-3 right-3 z-10 flex items-center gap-1 rounded-full bg-gradient-to-r from-red-500 to-pink-500 px-2 py-0.5 text-[10px] font-black tracking-wide text-white shadow-md">
+                <span>🔥</span> HOT
+              </div>
+            )}
+
+            <Picture
+              src={p.img}
+              alt={p.alt}
+              formats={["avif", "webp"]}
+              fallbackFormat="webp"
+              loading="lazy"
+              fetchpriority="low"
+              widths={[200, 400, 600]}
+              decoding="async"
+              class="h-auto w-full object-cover transition-transform duration-500 group-hover:scale-105"
+            />
+
+            <div class="pointer-events-none absolute inset-0 bg-white opacity-0 mix-blend-overlay transition-opacity duration-300 group-hover:opacity-20" />
           </div>
-        )}
-
-        <Picture 
-          src={p.img} 
-          alt={p.alt}
-          formats={["avif", "webp"]} 
-          fallbackFormat="webp"
-          loading="lazy"
-          fetchpriority="low"
-          widths={[200, 400, 600]}
-          decoding="async"
-          class="h-auto w-full object-cover transition-transform duration-500 group-hover:scale-105"
-        />
-
-        <div class="pointer-events-none absolute inset-0 bg-white opacity-0 mix-blend-overlay transition-opacity duration-300 group-hover:opacity-20"></div>
-
-      </div>
-    ))}
+        ))
+      }
+    </div>
   </div>
 </div>

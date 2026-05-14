@@ -32,33 +32,30 @@ const demoGames = [
   { id: 11, src: image11, alt: "JOKER", link: "/register" },
   { id: 12, src: image12, alt: "AFB Gaming", link: "/register" },
 ];
-
-const currentPath = Astro.url.pathname;
-const siteUrl = "https://ceo66z.com";
-
+const homePage = Astro.url.origin;
 const gameList = [
-  { name: "AskmeSlot", image: siteUrl + image1.src },
-  { name: "Popular Game", image: siteUrl + image2.src },
-  { name: "SlotXO", image: siteUrl + image3.src },
-  { name: "Skywind Group", image: siteUrl + image4.src },
-  { name: "PG Soft", image: siteUrl + image5.src },
-  { name: "SBOBET", image: siteUrl + image6.src },
-  { name: "Sexy Slot", image: siteUrl + image7.src },
-  { name: "JILI", image: siteUrl + image8.src },
-  { name: "Ask Me Bet", image: siteUrl + image9.src },
-  { name: "New Game", image: siteUrl + image10.src },
-  { name: "JOKER", image: siteUrl + image11.src },
-  { name: "AFB Gaming", image: siteUrl + image12.src },
+  { name: "AskmeSlot", image: homePage + image1.src },
+  { name: "Popular Game", image: homePage + image2.src },
+  { name: "SlotXO", image: homePage + image3.src },
+  { name: "Skywind Group", image: homePage + image4.src },
+  { name: "PG Soft", image: homePage + image5.src },
+  { name: "SBOBET", image: homePage + image6.src },
+  { name: "Sexy Slot", image: homePage + image7.src },
+  { name: "JILI", image: homePage + image8.src },
+  { name: "Ask Me Bet", image: homePage + image9.src },
+  { name: "New Game", image: homePage + image10.src },
+  { name: "JOKER", image: homePage + image11.src },
+  { name: "AFB Gaming", image: homePage + image12.src },
 ];
 ---
 
 <script type="application/ld+json" set:html={JSON.stringify(gameList)} />
 <MainLayout
-  title="ทดลองเล่น CEO66 ลองระบบเกมแตกไวของจริง ทดสอบdemoแท้ฟรี"
-  description="ทดลองเล่น CEO66 เรียนรู้จังหวะ demo แท้ฟรี เกมสล็อตแตกไวจากค่ายดังทั่วโลกฟรี ทดสอบความเสถียรและ สัมผัสประสบการณ์จริง">
+  title="ทดลองเล่นสล็อต TEENOI69Z ฟรี 2026 ไม่ต้องฝากก่อน ลองเล่นได้ทุกเกม"
+  description="สัมผัสประสบการณ์จริงกับระบบทดลองเล่น TEENOI69Z ฟรี รวมเกมสล็อตและคาสิโนยอดฮิตให้คุณทดสอบเทคนิคก่อนวางเดิมพันจริง ไม่ต้องใช้ทุน เล่นได้ไม่จำกัด">
   <Announcement />
 
-  <ContentBox title="ทดลองเล่น CEO66 ลองระบบเกมแตกไวของจริง ทดสอบdemoแท้ฟรี">
+  <ContentBox title="ทดลองเล่นสล็อต TEENOI69Z ฟรี 2026 ไม่ต้องฝากก่อน ลองเล่นได้ทุกเกม">
     <div class="mb-5 grid grid-cols-2 gap-5 sm:grid-cols-2 md:grid-cols-4">
       {
         demoGames.map((game) => (

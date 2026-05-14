@@ -1,12 +1,12 @@
 ---
 import { Picture } from "astro:assets";
 
-import img1 from "../assets/providers/game1.webp";
-import img2 from "../assets/providers/game2.webp";
-import img3 from "../assets/providers/game3.webp";
-import img4 from "../assets/providers/game4.webp";
-import img5 from "../assets/providers/game5.webp";
-import img6 from "../assets/providers/game6.webp";
+import img1 from "../assets/providers/game1.avif";
+import img2 from "../assets/providers/game2.avif";
+import img3 from "../assets/providers/game3.avif";
+import img4 from "../assets/providers/game4.avif";
+import img5 from "../assets/providers/game5.avif";
+import img6 from "../assets/providers/game6.avif";
 
 const providers = [
   { alt: "ON Gaming", users: "2,486", isHot: true, img: img1 },
@@ -21,9 +21,9 @@ const providers = [
 <div class="mx-auto w-full max-w-[1300px] px-4 py-5 font-sans sm:px-6 lg:px-8">
  
   <div
-    class="mb-8 inline-flex w-full max-w-[1250px] items-center gap-3 rounded-l-[12px] border-l-[4px] border-[#a855f7] bg-gradient-to-r from-[#7e22ce]/20 via-[#a855f7]/10 to-transparent py-2.5 pr-12 pl-4 shadow-[inset_1px_0_0_rgba(168,85,247,0.1)]">
-    <span class="text-xl drop-shadow-[0_0_8px_rgba(168,85,247,0.6)]">🎰</span>
-    <h2 class="bg-gradient-to-r from-[#f5d0fe] to-[#d946ef] bg-clip-text text-xl font-black tracking-wide text-transparent drop-shadow-[0_2px_4px_rgba(0,0,0,0.3)] md:text-2xl">
+    class="mb-8 inline-flex w-full max-w-[1250px] items-center gap-3 rounded-l-[12px] border-l-[4px] border-[#f75555] bg-gradient-to-r from-[#cc0000]/20 via-[#f43535]/10 to-transparent py-2.5 pr-12 pl-4 shadow-[inset_1px_0_0_rgba(168,85,247,0.1)]">
+    <span class="text-xl drop-shadow-[0_0_8px_rgba(204,0,0,0.6)]">🎰</span>
+    <h2 class="bg-gradient-to-r from-[#ffffff] to-[#ef4646] bg-clip-text text-xl font-black tracking-wide text-transparent drop-shadow-[0_2px_4px_rgba(0,0,0,0.3)] md:text-2xl">
       ค่ายคาสิโนยอดฮิต
     </h2>
   </div>
@@ -31,13 +31,13 @@ const providers = [
   <div class="grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-6 lg:gap-4">
     {
       providers.map((p) => (
-        <div class="group relative flex cursor-pointer overflow-hidden rounded-[18px] bg-[#0f172a]/40 transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_10px_25px_rgba(168,85,247,0.3)]">
+        <div class="group relative flex cursor-pointer overflow-hidden rounded-[18px] bg-[#0f172a]/40 transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_10px_25px_rgba(204,0,0,0.3)]">
           
-          <div class="pointer-events-none absolute inset-0 z-20 rounded-[18px] border-2 border-purple-500/10 transition-all duration-300 group-hover:border-[#d946ef]/50" />
+          <div class="pointer-events-none absolute inset-0 z-20 rounded-[18px] border-2 border-purple-500/10 transition-all duration-300 group-hover:border-[#CC0000]/50" />
 
           <!-- ป้ายจำนวนผู้เล่น -->
-          <div class="absolute top-3 left-3 z-10 flex items-center gap-1 rounded-full bg-white/90 px-2 py-0.5 text-[10px] font-bold text-[#7e22ce] shadow-sm backdrop-blur-sm">
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3 text-[#a855f7]" viewBox="0 0 20 20" fill="currentColor">
+          <div class="absolute top-3 left-3 z-10 flex items-center gap-1 rounded-full bg-white/90 px-2 py-0.5 text-[10px] font-bold text-[#CC0000] shadow-sm backdrop-blur-sm">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3 text-[#e7e0ee]" viewBox="0 0 20 20" fill="currentColor">
               <path fill-rule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clip-rule="evenodd" />
             </svg>
             {p.users}

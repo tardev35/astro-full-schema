@@ -13,16 +13,14 @@ const bankPool = [
 ---
 
 <div class="font-kanit mx-auto w-full max-w-[1300px] p-4">
-  <!-- เปลี่ยนพื้นหลังเป็นสีเข้ม Midnight Purple และขอบม่วงนีออน -->
-  <div class="relative overflow-hidden rounded-[2rem] border-2 border-[#a855f7]/30 bg-[#020617] px-4 py-8 shadow-[0_10px_40px_rgba(0,0,0,0.8)] md:p-10">
-    <div class="theme-purple-gradient absolute top-0 left-0 h-1.5 w-full"></div>
+  <div class="relative overflow-hidden rounded-[2rem] border-2 border-red-900/50 bg-[#0a0000] px-4 py-8 shadow-[0_10px_40px_rgba(0,0,0,0.8)] md:p-10">
+    <div class="theme-gold-gradient absolute top-0 left-0 h-1.5 w-full"></div>
 
-    <!-- แสง Glow ด้านหลังหัวข้อ -->
-    <div class="pointer-events-none absolute top-10 left-1/2 h-20 w-40 -translate-x-1/2 rounded-full bg-[#d946ef]/20 blur-[40px]"></div>
+    <div class="pointer-events-none absolute top-10 left-1/2 h-20 w-40 -translate-x-1/2 rounded-full bg-red-600/20 blur-[40px]"></div>
 
     <div class="relative z-10 mb-8 flex items-center justify-center gap-3">
       <span class="text-2xl drop-shadow-[0_0_8px_rgba(250,204,21,0.6)]">🏆</span>
-      <h2 class="text-purple-gradient text-xl font-black tracking-wide text-transparent drop-shadow-sm md:text-3xl">รายการถอนเงินล่าสุด</h2>
+      <h2 class="text-gold-gradient text-xl font-black tracking-wide text-transparent drop-shadow-sm md:text-3xl">รายการถอนเงินล่าสุด</h2>
       <span class="text-2xl drop-shadow-[0_0_8px_rgba(250,204,21,0.6)]">🏆</span>
     </div>
 
@@ -49,14 +47,13 @@ const bankPool = [
     const user = `${getRandomStr(2, "abcdefghijklmnopqrstuvwxyz")}***${getRandomStr(4, "0123456789")}`;
     const isPending = Math.random() > 0.6;
 
-    // ปรับสีสถานะให้เข้ากับธีมม่วง (Pending = ส้มทอง / Success = ม่วงนีออน)
-    const statusClass = isPending ? "border-amber-400/50 bg-amber-400/10 text-amber-400 animate-pulse" : "border-[#d946ef]/50 bg-[#d946ef]/10 text-[#f5d0fe]";
+    const statusClass = isPending ? "border-red-500/50 bg-red-500/10 text-red-400 animate-pulse" : "border-yellow-500/50 bg-yellow-500/10 text-yellow-400";
     const statusText = isPending ? "กำลังถอน..." : "ถอนสำเร็จแล้ว";
 
     return `
       <div class="winner-row grid grid-rows-[0fr] opacity-0 transition-all duration-700 ease-in-out -translate-y-4">
         <div class="overflow-hidden">
-          <div class="mb-3 flex items-center justify-between rounded-xl border border-white/5 bg-white/5 p-4 shadow-sm transition-colors hover:border-[#a855f7]/50 hover:bg-white/10 backdrop-blur-md">
+          <div class="mb-3 flex items-center justify-between rounded-xl border border-red-900/30 bg-[#110000]/80 p-4 shadow-sm transition-colors hover:border-yellow-500/60 hover:bg-[#1a0000] backdrop-blur-md">
             
             <div class="flex items-center gap-4">
               <div class="relative flex h-11 w-11 shrink-0 items-center justify-center rounded-full border border-white/10 shadow-sm">
@@ -66,14 +63,14 @@ const bankPool = [
               </div>
               <div class="flex flex-col justify-center">
                 <div class="flex items-center gap-2">
-                  <span class="text-sm font-bold text-white/90 md:text-base">ยูสเซอร์: <span class="tracking-wider text-[#f5d0fe]">${user}</span></span>
+                  <span class="text-sm font-bold text-white/90 md:text-base">ยูสเซอร์: <span class="tracking-wider text-yellow-100">${user}</span></span>
                 </div>
                 <div class="mt-0.5 text-[10px] text-gray-400 md:text-xs">REF#${getRandomStr(8, "0123456789")} • วันนี้ ${getNowTime()}</div>
               </div>
             </div>
 
             <div class="flex flex-col items-end justify-center gap-1.5">
-              <div class="text-[#d946ef] text-base font-black tracking-tight md:text-xl drop-shadow-[0_0_5px_rgba(217,70,239,0.3)]">
+              <div class="text-yellow-400 text-base font-black tracking-tight md:text-xl drop-shadow-[0_0_5px_rgba(250,204,21,0.3)]">
                 ${getAmount()} <span class="text-[10px] font-bold text-gray-400 md:text-xs">THB</span>
               </div>
               <div class="rounded-full border px-2.5 py-0.5 text-[9px] font-bold md:text-[10px] ${statusClass}">
@@ -121,15 +118,15 @@ const bankPool = [
 </script>
 
 <style>
-  /* ไล่เฉดสีม่วง-ชมพู ตามธีม CEO66 */
-  .theme-purple-gradient {
-    background: linear-gradient(to right, #7e22ce, #d946ef, #7e22ce);
+  .theme-gold-gradient {
+    background: linear-gradient(to right, #7f1d1d, #facc15, #7f1d1d);
   }
   .font-kanit {
     font-family: "Kanit", sans-serif;
   }
-  .text-purple-gradient {
-    background: linear-gradient(to bottom, #f5d0fe 0%, #d946ef 100%);
+
+  .text-gold-gradient {
+    background: linear-gradient(to bottom, #fef08a 0%, #eab308 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;

@@ -19,6 +19,6 @@ export default defineConfig({
     '/line': 'https://tinyurl.com/linepigpg'
   },
 
-  site: 'https://lockdown168officials.com',
+  site: 'https://ceo66z.com',
   integrations: [sitemap()]
 });

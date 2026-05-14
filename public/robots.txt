@@ -13,5 +13,5 @@ Disallow: /
 User-agent: Anthropic-ai
 Disallow: /
 
-Sitemap: https://lockdown168officials.com/sitemap-0.xml
+Sitemap: https://ceo66z.com/sitemap-0.xml
 

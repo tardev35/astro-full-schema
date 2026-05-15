@@ -5,16 +5,11 @@ import ContentBoxTwo from "../components/ContentBoxTwo.astro";
 import ContentBoxSevenThree from "../components/ContentBoxSevenThree.astro";
 import ContentBoxThreeColums from "../components/ContentBox3Three.astro";
 import Navfoot from "../components/Navfoot.astro";
-import Announcement from "../components/Announcement4.astro";
+import Announcement from "../components/Announcement5.astro";
 import SmoothCarousel from "../components/SmoothCarousel.astro";
 import ProviderGrid from "../components/ProviderGrid.astro";
 import LatestWinners from "../components/LatestWinners.astro";
-
-import { Picture } from "astro:assets";
-import image1 from "../assets/pro1.webp";
-import image2 from "../assets/pro2.jpg";
-import image3 from "../assets/slide4.jpg";
-import banner1 from "../assets/banner1.webp";
+import Faq from "../components/Faq.astro";
 
 const currentPath = Astro.url.pathname;
 const homePage = Astro.url.origin;
@@ -23,140 +18,125 @@ const logoUrl = homePage + "/logo.webp";
 const webPageSchema = {
   "@context": "https://schema.org",
   "@type": "WebPage",
-  name: "TEENOI69 ทางเข้าเว็บตรง 2026 สมัครวันนี้ถอนได้จริง ไม่ผ่านเอเย่นต์",
-  description: "TEENOI69 ทางเข้าเว็บตรง เว็บแท้ รวมความบันเทิงครบวงจรที่ TEENOI69 สล็อต คาสิโน กีฬาในที่เดียว สมัคร พร้อมรับสิทธิพิเศษ ฝากถอนได้ง่าย ระบบออโต้ จ่ายจริง",
+  name: "SIXSLOT เว็บสล็อตคุณภาพ API แท้ ทุกค่าย แตกไว ถอนได้เต็ม 100%",
+  description: "SIXSLOT เว็บสล็อตคุณภาพ ใช้ API แท้ จากเซิร์ฟเวอร์หลัก เสถียร ปลอดถัย เกมสล็อต รวมค่าย คัดเลือกเฉพาะ มาตรฐานสากล แตกไว สมดุลที่สุด ถอนได้เต็มทุกยอด",
   url: currentPath,
 };
 
 const webSiteSchema = {
   "@context": "https://schema.org",
   "@type": "WebSite",
-  name: "TEENOI69",
-  alternateName: ["teeno69", "TEENOI69official", "TEENOI69officials", "TEENOI69"],
-  url: "https://teenoi69z.com/",
+  name: "SIXSLOT",
+  alternateName: ["sixslot", "SIXSLOTofficial", "SIXSLOTofficials", "SIXSLOT"],
+  url: "https://sixslot.com/",
 };
 
 const orgSchema = {
   "@context": "https://schema.org",
   "@type": "Organization",
-  name: "TEENOI69",
+  name: "SIXSLOT",
   logo: logoUrl,
   url: homePage,
 };
 
 const allSchemas = [webPageSchema, orgSchema, webSiteSchema];
+import { Picture } from "astro:assets";
+import image1 from "../assets/slide1.jpg";
 ---
 
 <MainLayout>
   <script type="application/ld+json" set:html={JSON.stringify(allSchemas)} />
-  <Announcement />
 
-  <ContentBox title="TEENOI69 ทางเข้าเว็บตรง 2026 สมัครวันนี้ถอนได้จริง ไม่ผ่านเอเย่นต์">
-    <p>
-      <strong class="text-amber-400">TEENOI69Z</strong> ขอต้นรับสู่ เว็บไซต์อย่างเป็นทางการที่รวมทุกความต้องการของผู้เล่นไว้ในที่เดียว เราคือ <strong class="text-amber-400">ทางเข้า TEENOI69</strong> หลักที่อัปเดตใหม่ล่าสุดในปี
-      2026 เพื่อให้คุณเข้าถึงความสนุกได้โดยตรง ไม่ต้องกังวลเรื่องการโดนบล็อกหรือลิงก์เสีย มั่นใจได้ในความเป็น เว็บตรง ที่มีความมั่นคงทางการเงินสูงสุด
+  <Announcement message="🚀 SIXSLOT-BKK อัปเดตระบบใหม่! ฝาก-ถอน Auto ภายใน 3 วินาที รองรับ True Wallet" />
+
+  <ContentBox title="SIXSLOT เว็บสล็อตคุณภาพ API แท้ ทุกค่าย แตกไว ถอนได้เต็ม 100%">
+    <p class="leading-relaxed">
+      <strong class="text-emerald-400">SIXSLOT</strong> เว็บสล็อตคุณภาพ มาตรฐานสากลที่ใช้กันทั่วโลก การเล่นสล็อตออนไลน์ด้วยระบบ <strong class="text-amber-400">API แท้</strong> ที่เชื่อมต่อกับผู้ผลิตเกมระดับโลกที่
+      ผ่านการทดสอบว่าไม่เปาเปรียบผู้เล่น โดยตรง ไม่ผ่านเอเย่นต์ การันตีโอกาสชนะที่เป็นธรรม ในระดับสูงสุดด้วยค่า RTP มาตรฐานสากล ทุกยอดการเดิมพันคือความแม่นยำที่ตรวจสอบได้จริง พร้อมการจ่ายเงินที่รวดเร็วและมั่นคง
+      จ่ายจริงครบทุกบาท 100%
     </p>
 
-    <div class="mt-3.5 flex flex-wrap justify-center gap-4">
+    <div class="mt-6 flex flex-wrap justify-center gap-4">
       <a
         href="/register"
-        aria-label="สมัครสมาชิก"
-        class="to-red to-red to-red flex items-center justify-center rounded-lg border border-gray-400 bg-gradient-to-b from-red-900 to-red-700 px-8 py-3 font-bold text-white transition-transform hover:scale-105">
-        สมัครสมาชิก
+        class="flex items-center justify-center rounded-xl bg-gradient-to-r from-emerald-600 to-green-500 px-10 py-3.5 font-black text-white shadow-[0_0_20px_rgba(16,185,129,0.4)] transition-transform hover:scale-105">
+        สมัครสมาชิกฟรี
       </a>
 
       <a
         href="/login"
-        aria-label="เข้าเล่นเกม"
-        class="flex items-center justify-center rounded-lg border border-yellow-600 bg-gradient-to-b from-yellow-200 to-yellow-500 px-8 py-3 font-extrabold text-black shadow-[0_0_15px_rgba(255,215,0,0.4)] transition-transform hover:scale-105">
-        เข้าเล่นเกม
-      </a>
-
-      <a
-        href="/line"
-        target="_blank"
-        rel="noopener noreferrer"
-        aria-label="ติดต่อเราผ่าน Line"
-        class="flex items-center justify-center rounded-lg border border-green-300 bg-gradient-to-b from-green-400 to-green-700 px-8 py-3 font-bold text-white transition-transform hover:scale-105">
-        ติดต่อเรา
+        class="flex items-center justify-center rounded-xl bg-gradient-to-r from-yellow-500 to-amber-400 px-10 py-3.5 font-black text-emerald-950 shadow-[0_0_20px_rgba(245,158,11,0.3)] transition-transform hover:scale-105">
+        ทางเข้าเล่น
       </a>
     </div>
   </ContentBox>
+
   <ProviderGrid />
-  <ContentBoxTwo>
-    <div slot="left">
-      <h2 class="text-blue-gradient mb-4 text-2xl font-bold">ทำความรู้จัก TEENOI69 เว็บแท้ที่ออกแบบมาเพื่อผู้เล่นยุคใหม่</h2>
+  <ContentBoxThreeColums titleleft="🔄 คืนยอดเสียทุกวัน" titlecenter="💰 คืนค่าคอมมิชชั่น" titleright="⚡ ฝาก-ถอน ออโต้">
+    <div slot="left" class="text-sm text-white/70">เล่นเสียไม่ต้องเศร้า เรามีระบบคืนยอดเสียให้คุณทุกวัน กดรับได้เองทันที ยิ่งเล่นเยอะยิ่งได้คืนเยอะ ไม่มีอั้น!</div>
+    <div slot="center" class="text-sm text-white/70">รับค่าคอมมิชชั่นจากการเล่นของคุณและเพื่อนที่แนะนำมา สร้างรายได้แบบ Passive Income ง่ายๆ ได้ทุกวัน</div>
+    <div slot="right" class="text-sm text-white/70">ทำรายการรวดเร็วทันใจภายใน 3 วินาที ผ่านระบบออโต้ที่เสถียรที่สุด รองรับทุกธนาคารชั้นนำและ TrueMoney Wallet</div>
+  </ContentBoxThreeColums>
+  <LatestWinners />
+
+  <ContentBoxTwo titleleft="SIXSLOT ระบบ API แท้ 100% จากเซิร์ฟเวอร์หลัก ปลอดภัย" titleright="เว็บเกมสล็อต รวมทุกค่าย คัดเลือกเฉพาะ มาตรฐานสากล">
+    <div slot="left" class="space-y-4 text-white/80">
       <p>
-        <strong class="text-amber-400">TEENOI69Z</strong> เกิดขึ้นจากความตั้งใจที่จะยกระดับการให้บริการขึ้นไปอีกขั้น เราไม่ใช่แค่เว็บไซต์เดิมพันทั่วไป แต่เราคือแพลตฟอร์มที่เน้นความโปร่งใสเป็นหัวใจหลัก ข้อมูลทุกอย่างตรวจสอบได้จริง
-        ระบบหลังบ้านมีความเสถียรสูง พร้อมลบทุกภาพจำด้านลบที่คุณเคยเจอมา เพราะที่นี่เราให้ความสำคัญกับเครดิตและความเชื่อใจของสมาชิกเป็นอันดับหนึ่ง ทุกยอดการเล่นคือความปลอดภัย
+        เว็บสล็อตคุณภาพสูงและปลอดภัย เราเลือกการเชื่อมต่อที่ถูกต้องที่สุด <strong class="text-amber-400">SIXSLOT</strong> ใช้ <strong class="text-emerald-400">ระบบ API แท้ 100%</strong> ที่ดึงข้อมูลจากเซิร์ฟเวอร์หลักของผู้พัฒนาเกมโดยตรง
+        เพื่อให้ระบบมีความเสถียรและแม่นยำในระดับมาตรฐานสากล โดยไม่ต้องผ่านคนกลาง ไร้ปัญหาเครื่องค้างหรือการเชื่อมต่อที่ผิดพลาด มั่นใจได้ว่าการเล่นของคุณจะเป็นไปอย่างราบรื่น
       </p>
     </div>
-    <div slot="right">
-      <h2 class="text-blue-gradient mb-4 text-2xl font-bold">ทางเข้า TEENOI69 อัปเดตลิงก์ใหม่ทุกวัน เข้าใช้งานได้แน่นอน</h2>
+    <div slot="right" class="text-white/80">
       <p>
-        ที่นี่คือ <strong class="text-amber-400">ทางเข้า teenoi69</strong> ที่อัปเดตแบบ Real-time ทุกวัน ทีมงานของเราตรวจสอบระบบตลอด 24 ชั่วโมง เพื่อให้มั่นใจว่าสมาชิกจะเข้าใช้งานได้ทุกแพลตฟอร์ม ทั้งมือถือและคอมพิวเตอร์
-        ไม่ว่าคุณจะอยู่ที่ไหน หรือใช้เครือข่ายอะไร ก็เข้าเล่นได้ทันทีแบบไม่มีสะดุด จบปัญหาลิงก์เสียหรือหน้าเว็บโดนแบนอย่างถาวร
+        คัดกรองสิ่งที่ดีที่สุดมาไว้ในที่เดียว <strong class="text-emerald-400">SIXSLOT</strong> คือ <strong class="text-amber-400">เว็บเกมสล็อต</strong> ที่รวมทุกค่ายชั้นนำระดับโลก โดยเราคัดเลือกเฉพาะเกมที่มีใบรับรองและได้รับมาตรฐานสากล
+        เพื่อให้มั่นใจในคุณภาพของระบบและตัวเกมที่ส่งตรงถึงมือคุณอย่างสมบูรณ์แบบที่สุด ให้สมาชิกได้รับประสบการณ์การเล่นที่ดีที่สุด ภาพคมชัด ระบบลื่นไหล
       </p>
     </div>
   </ContentBoxTwo>
-  <ContentBox>
-    <h2 class="text-blue-gradient mb-7 text-2xl font-semibold">ระบบฝาก-ถอนออโต้ของ TEENOI69 รวดเร็ว ทันใจ มั่นใจทุกยอดถอน</h2>
-    <p>
-      ระบบฝาก-ถอนของ <strong class="text-amber-400">TEENOI69Z</strong> เป็นระบบออโต้ 100% ที่ทำงานได้รวดเร็ว ทำรายการเสร็จภายในไม่กี่วินาที หมดปัญหาเรื่องยอดไม่เข้าหรือรอนานจนน่ารำคาญ ยืนยันจากผู้ใช้งานจริงว่าที่นี่
-      ถอนได้จริง ทุกยอด ไม่ว่าจะเป็นกำไรหลักร้อยหรือรางวัลใหญ่หลักล้าน เราจ่ายครบ จ่ายไว และไม่มีเงื่อนไขยุ่งยาก เพราะเราคือเว็บตรงที่ไม่ผ่านเอเย่นต์
-    </p>
-  </ContentBox>
   <SmoothCarousel />
-  <LatestWinners />
-  <ContentBox>
-    <h2 class="text-blue-gradient mb-7 text-2xl font-semibold">สมัครสมาชิก TEENOI69 ง่ายๆ ใน 3 ขั้นตอน พร้อมรับสิทธิพิเศษ</h2>
-    <p>
-      เริ่มต้นความสนุกและรับประสบการณ์ที่ดีกว่าเดิมได้ง่ายๆ เพียง ทำดังนี้
-      <ol class="mt-3 list-inside list-decimal space-y-2">
-        <li>สมัครสมาชิก: คลิกปุ่มสมัครบนหน้าเว็บแล้วกรอกข้อมูลเพียงเล็กน้อย</li>
-        <li>ฝากเงิน: ทำรายการผ่านระบบออโต้ที่รองรับทุกธนาคารและวอเลท</li>
-        <li>
-          เข้าเล่น: เลือกเกมที่ชอบแล้วเริ่มต้นทำกำไรได้ทันที พิเศษสำหรับสมาชิก <strong class="text-amber-400">teenoi69z</strong> วันนี้ รับสิทธิ์เข้าร่วมกิจกรรมและโปรโมชั่นใหม่ๆ ที่เราคัดสรรมาให้คุ้มค่ากว่าใคร
-        </li>
-      </ol>
-    </p>
-  </ContentBox>
   <ContentBoxSevenThree>
-    <div slot="left">
-      <div class="rounded-xl p-5">
-        <Picture
-          src={image3}
-          alt="ทางเข้า teenoi69 ล่าสุด"
-          loading="lazy"
-          fetchpriority="low"
-          widths={[200, 400, 600, 800]}
-          sizes="(max-width: 768px) 100vw, 33vw"
-          class="mx-auto h-auto w-full max-w-[400px] object-contain shadow-xl"
-          decoding="async"
-          formats={["avif", "webp"]}
-          fallbackFormat="webp"
-          quality={80}
-          fallbackFormat="webp"
-        />
-      </div>
+    <div slot="left" class="flex h-full flex-col justify-center">
+      <Picture
+        src={image1}
+        alt="โปรโมชั่นสมัครสมาชิกใหม่ ฝากครั้งแรกรับโบนัสฟรี 60% สำหรับคาสิโน"
+        loading="lazy"
+        fetchpriority="low"
+        widths={[200, 400, 600]}
+        sizes="(max-width: 768px) 100vw, 33vw"
+        class="mx-auto h-auto w-full rounded-xl object-contain shadow-lg transition-transform duration-300 hover:-translate-y-1 hover:shadow-2xl"
+        decoding="async"
+        formats={["avif", "webp"]}
+        fallbackFormat="webp"
+        quality={80}
+      />
     </div>
     <div slot="right">
-      <h2 class="text-blue-gradient mb-7 text-2xl font-semibold">รวมความบันเทิงครบวงจรที่ TEENOI69 สล็อต คาสิโน และกีฬาในที่เดียว</h2>
-      <p class="mb-5">
-        ที่เดียวจบครบทุกความต้องการ ไม่ว่าคุณจะเป็นสายปั่นสล็อตแตกง่าย คอคาสิโนสดที่ส่งตรงจากค่ายดังระดับโลก หรือจะลุ้นผลกีฬาทุกแมตช์สำคัญ <strong class="text-amber-400">TEENOI69Z</strong> ก็มีให้เลือกเล่นแบบจุใจ
-        พร้อมระบบ API แท้ที่ช่วยให้การเดิมพันของคุณลื่นไหล ยุติธรรม และมีโอกาสทำกำไรได้มากกว่าเดิม
+      <h2 class="text-emerald-gradient mb-4 text-3xl font-black uppercase">SIXSLOT เว็บสล็อตเล่นง่าย แตกไว สมดุลระบบเป็นธรรมที่สุด</h2>
+      <p class="mb-4 text-white/70">
+        เว็บสล็อตเล่นง่าย และเข้าถึงรอบโบนัสได้ แตกไวที่สุดในปัจจุบัน เราให้ความสำคัญกับการจ่ายเงินรางวัลที่แม่นยำโดยใช้กลไกสมดุลระบบเป็นธรรมที่สุด เพื่อให้สมาชิกมั่นใจในทุกการเดิมพันผ่านทาง SIXSLOT
+        ว่าทุกยอดจะได้รับความคุ้มค่าตามมาตรฐานการเดิมพันสากลไม่ต้องกังวลเรื่องการเอาเปรียบ
+      </p>
+      <h2 class="text-emerald-gradient mb-4 text-3xl font-black uppercase">ถอนได้เต็มทุกยอด ระบบออโต้แม่นยำที่สุด ใช้เวลาน้อยเพียง 5 วิ</h2>
+      <p>
+        สมาชิกสามารถถอนได้เต็มทุกยอดโดยไม่มีการหักค่าธรรมเนียมใดๆ ทั้งสิ้น เราใช้ระบบออโต้แม่นยำที่สุดในการประมวลผลข้อมูลเพื่อให้ยอดเงินเข้าสู่บัญชีของคุณทันที โดยใช้เวลาน้อยเพียง 5 วิ เท่านั้น
+        ตอบโจทย์ความต้องการที่เน้นความไวและความถูกต้องในทุกรายการธุรกรรมผ่าน SIXSLOT การันตีความรวดเร็วในการจัดการด้านการเงินที่แม่นยำ
       </p>
     </div>
   </ContentBoxSevenThree>
-
+  <ContentBox>
+    <h2 class="text-emerald-gradient mb-4 text-3xl font-black uppercase">เข้าสู่ระบบ SIXSLOT เว็บสล็อตคุณภาพ เสถียรและการรองรับการใช้งานหนัก</h2>
+    <p>
+      มั่นใจทุกครั้งที่ใช้งาน ผ่านประสิทธิภาพการเชื่อมต่อ สู่ระบบ เว็บสล็อตคุณภาพที่แท้จริง SIXSLOT รองรับการใช้งานหนักที่สามารถจัดการข้อมูลจำนวนมากได้อย่างแม่นยำและรวดเร็ว
+      ช่วยให้การเข้าถึงตัวเกมและบริการต่างๆ ของ SIXSLOT เป็นไปอย่างต่อเนื่อง ไม่มีสะดุด แม้ในช่วงเวลาที่มีผู้ใช้งานหนาแน่นที่สุดครับ
+    </p>
+  </ContentBox>
   <Navfoot />
 
   <style>
-    .text-blue-gradient {
-      background: linear-gradient(to bottom, #ea0000 0%, #e92a2a 100%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
+    :global(.text-emerald-gradient) {
+      background: linear-gradient(to bottom, #34d399 0%, #10b981 100%) !important;
+      -webkit-background-clip: text !important;
+      -webkit-text-fill-color: transparent !important;
     }
   </style>
 </MainLayout>

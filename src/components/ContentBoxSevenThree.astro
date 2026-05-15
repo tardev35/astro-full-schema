@@ -1,23 +1,29 @@
 ---
+//
 const { titleleft, titleright } = Astro.props;
 ---
 
 <section
-  class="mx-auto mb-3 w-full max-w-7xl rounded-[15px] border-2 border-[#c70000] bg-[#0a0000] p-8 px-4 text-center shadow-2xl"
-  style="box-shadow: 0 0 14px rgba(247, 85, 85, 0.5), inset 0 0 12px rgba(247, 85, 85, 0.5)">
+  class="mx-auto mb-4 w-full max-w-7xl rounded-[20px] border-2 border-emerald-900/50 bg-[#050c0a]/90 p-8 px-4 text-center font-sans shadow-[0_0_20px_rgba(16,185,129,0.1),inset_0_0_15px_rgba(16,185,129,0.05)] backdrop-blur-sm transition-all duration-300 hover:border-emerald-500/50 hover:shadow-[0_0_30px_rgba(16,185,129,0.2)]">
   <div class="grid grid-cols-1 gap-5 md:grid-cols-[3fr_7fr]">
     <article class="flex flex-col gap-4">
-      {titleleft && <h2 class="mb-4 text-3xl font-bold">{titleleft}</h2>}
-      <div class="text-white">
+      {titleleft && <h2 class="mb-4 text-3xl font-bold text-emerald-400 drop-shadow-[0_0_5px_rgba(16,185,129,0.3)]">{titleleft}</h2>}
+      <div class="text-white/80">
         <slot name="left" />
       </div>
     </article>
 
     <article class="flex flex-col gap-4">
-      {titleright && <h2 class="mb-4 text-3xl font-bold">{titleright}</h2>}
-      <div class="text-white">
+      {titleright && <h2 class="mb-4 text-3xl font-bold text-emerald-400 drop-shadow-[0_0_5px_rgba(16,185,129,0.3)]">{titleright}</h2>}
+      <div class="text-white/80">
         <slot name="right" />
       </div>
     </article>
   </div>
 </section>
+
+<style>
+  .font-sans {
+    font-family: "Kanit", sans-serif;
+  }
+</style>

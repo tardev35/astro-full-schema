@@ -1,4 +1,5 @@
 ---
+//
 import "swiper/css";
 
 import { Picture } from "astro:assets";
@@ -21,7 +22,8 @@ const displayImages = [...images, ...images, ...images];
             <Picture
               src={img}
               alt={`Banner ${index + 1}`}
-              class="block w-full rounded-xl object-contain object-cover shadow-md"
+              /* 🌟 เพิ่มเงาสีเขียวให้เข้ากับธีม */
+              class="block w-full rounded-xl object-contain object-cover shadow-[0_5px_15px_rgba(16,185,129,0.2)] border border-emerald-900/30"
               width={img.width}
               height={img.height}
               loading={index < 2 ? "eager" : "lazy"}

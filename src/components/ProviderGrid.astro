@@ -19,32 +19,27 @@ const providers = [
 ---
 
 <div class="mx-auto w-full max-w-[1300px] px-4 py-5 font-sans sm:px-6 lg:px-8">
- 
   <div
-    class="mb-8 inline-flex w-full max-w-[1250px] items-center gap-3 rounded-l-[12px] border-l-[4px] border-[#f75555] bg-gradient-to-r from-[#cc0000]/20 via-[#f43535]/10 to-transparent py-2.5 pr-12 pl-4 shadow-[inset_1px_0_0_rgba(168,85,247,0.1)]">
-    <span class="text-xl drop-shadow-[0_0_8px_rgba(204,0,0,0.6)]">🎰</span>
-    <h2 class="bg-gradient-to-r from-[#ffffff] to-[#ef4646] bg-clip-text text-xl font-black tracking-wide text-transparent drop-shadow-[0_2px_4px_rgba(0,0,0,0.3)] md:text-2xl">
-      ค่ายคาสิโนยอดฮิต
-    </h2>
+    class="mb-8 inline-flex w-full max-w-[1250px] items-center gap-3 rounded-l-[12px] border-l-[4px] border-emerald-500 bg-gradient-to-r from-emerald-600/20 via-emerald-500/10 to-transparent py-2.5 pr-12 pl-4 shadow-[inset_1px_0_0_rgba(16,185,129,0.1)]">
+    <span class="text-xl drop-shadow-[0_0_8px_rgba(16,185,129,0.6)]">🎰</span>
+    <h2 class="bg-gradient-to-r from-[#ffffff] to-[#10b981] bg-clip-text text-xl font-black tracking-wide text-transparent drop-shadow-[0_2px_4px_rgba(0,0,0,0.3)] md:text-2xl">ค่ายคาสิโนยอดฮิต</h2>
   </div>
 
   <div class="grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-6 lg:gap-4">
     {
       providers.map((p) => (
-        <div class="group relative flex cursor-pointer overflow-hidden rounded-[18px] bg-[#0f172a]/40 transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_10px_25px_rgba(204,0,0,0.3)]">
-          
-          <div class="pointer-events-none absolute inset-0 z-20 rounded-[18px] border-2 border-purple-500/10 transition-all duration-300 group-hover:border-[#CC0000]/50" />
+        <div class="group relative flex cursor-pointer overflow-hidden rounded-[18px] bg-[#051a10]/60 transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_10px_25px_rgba(16,185,129,0.3)]">
+          <div class="pointer-events-none absolute inset-0 z-20 rounded-[18px] border-2 border-emerald-500/10 transition-all duration-300 group-hover:border-emerald-500/50" />
 
-          <!-- ป้ายจำนวนผู้เล่น -->
-          <div class="absolute top-3 left-3 z-10 flex items-center gap-1 rounded-full bg-white/90 px-2 py-0.5 text-[10px] font-bold text-[#CC0000] shadow-sm backdrop-blur-sm">
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3 text-[#e7e0ee]" viewBox="0 0 20 20" fill="currentColor">
+          <div class="absolute top-3 left-3 z-10 flex items-center gap-1 rounded-full border border-emerald-500/30 bg-black/80 px-2 py-0.5 text-[10px] font-bold text-emerald-400 shadow-sm backdrop-blur-sm">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3 text-emerald-400" viewBox="0 0 20 20" fill="currentColor">
               <path fill-rule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clip-rule="evenodd" />
             </svg>
             {p.users}
           </div>
 
           {p.isHot && (
-            <div class="absolute top-3 right-3 z-10 flex items-center gap-1 rounded-full bg-gradient-to-r from-[#ec4899] to-[#d946ef] px-2 py-0.5 text-[10px] font-black tracking-wide text-white shadow-md">
+            <div class="absolute top-3 right-3 z-10 flex items-center gap-1 rounded-full bg-gradient-to-r from-yellow-400 to-yellow-600 px-2 py-0.5 text-[10px] font-black tracking-wide text-black shadow-md">
               <span>🔥</span> HOT
             </div>
           )}
@@ -61,8 +56,7 @@ const providers = [
             class="block h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
           />
 
-          
-          <div class="pointer-events-none absolute inset-0 z-10 bg-[#7e22ce] opacity-0 mix-blend-overlay transition-opacity duration-300 group-hover:opacity-30" />
+          <div class="pointer-events-none absolute inset-0 z-10 bg-emerald-500 opacity-0 mix-blend-overlay transition-opacity duration-300 group-hover:opacity-40" />
         </div>
       ))
     }
@@ -70,14 +64,7 @@ const providers = [
 </div>
 
 <style>
-  .text-blue-gradient {
-    background: linear-gradient(to bottom, #00b7ea 0%, #009ec3 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    
-  }
   .font-sans {
-    font-family: kanit, sans-serif;
+    font-family: "Kanit", sans-serif;
   }
 </style>

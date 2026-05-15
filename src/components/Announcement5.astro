@@ -1,16 +1,17 @@
 ---
-const { message = "🚀 อัปเดตระบบใหม่! ฝาก-ถอน Auto ภายใน 3 วินาที รองรับ True Wallet" } = Astro.props;
+// รับข้อความมาจาก Props ถ้าไม่ใส่จะใช้ค่า Default ของ SIXSLOT-BKK
+const { message = "🚀 SIXSLOT-BKK อัปเดตระบบใหม่! ฝาก-ถอน Auto ภายใน 3 วินาที รองรับทุกธนาคารและ True Wallet" } = Astro.props;
 ---
 
 <div class="mx-auto max-w-[900px] p-2">
-  <div class="relative flex h-[48px] items-center bg-[#050b14] p-[2px] [clip-path:polygon(15px_0,100%_0,100%_calc(100%-15px),calc(100%-15px)_100%,0_100%,0_15px)]">
-    <div class="flex h-full w-full items-center bg-gradient-to-r from-[#0a1128] to-[#000000] [clip-path:polygon(14px_0,100%_0,100%_calc(100%-14px),calc(100%-14px)_100%,0_100%,0_14px)]">
-      <div class="flex h-full items-center border-r border-[#00f3ff]/30 bg-[#00f3ff]/10 px-4 md:px-6">
-        <span class="font-mono text-sm font-bold tracking-widest text-[#00f3ff] drop-shadow-[0_0_8px_#00f3ff]">SYSTEM</span>
+  <div class="relative flex h-[48px] items-center bg-[#051a10] p-[2px] [clip-path:polygon(15px_0,100%_0,100%_calc(100%-15px),calc(100%-15px)_100%,0_100%,0_15px)]">
+    <div class="flex h-full w-full items-center bg-gradient-to-r from-[#022c22] to-[#000000] [clip-path:polygon(14px_0,100%_0,100%_calc(100%-14px),calc(100%-14px)_100%,0_100%,0_14px)]">
+      <div class="flex h-full items-center border-r border-emerald-500/30 bg-emerald-500/10 px-4 md:px-6">
+        <span class="font-mono text-sm font-bold tracking-widest text-emerald-400 drop-shadow-[0_0_8px_rgba(52,211,153,0.8)]">SYSTEM</span>
       </div>
 
       <div class="flex-1 overflow-hidden [mask-image:linear-gradient(90deg,transparent_0%,#000_10%,#000_90%,transparent_100%)]">
-        <div class="flex w-max animate-[scroll_20s_linear_infinite] gap-16 pl-6 text-sm font-medium whitespace-nowrap text-gray-300">
+        <div class="flex w-max animate-[scroll_20s_linear_infinite] gap-16 pl-6 text-sm font-medium whitespace-nowrap text-emerald-50">
           <span class="tracking-wide">{message}</span>
           <span class="tracking-wide">{message}</span>
         </div>

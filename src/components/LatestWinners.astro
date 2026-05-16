@@ -14,15 +14,15 @@ const bankPool = [
 ---
 
 <div class="font-kanit mx-auto w-full max-w-[1300px] p-4">
-  <div class="relative overflow-hidden rounded-[2rem] border-2 border-emerald-900/50 bg-[#050c0a] px-4 py-8 shadow-[0_10px_40px_rgba(16,185,129,0.15)] md:p-10">
-    <div class="theme-emerald-gradient absolute top-0 left-0 h-1.5 w-full"></div>
+  <div class="relative overflow-hidden rounded-[2rem] border-2 border-cyan-900/50 bg-[#001a33]/90 px-4 py-8 shadow-[0_10px_40px_rgba(6,182,212,0.15)] backdrop-blur-md md:p-10">
+    <div class="theme-gold-gradient absolute top-0 left-0 h-1.5 w-full"></div>
 
-    <div class="pointer-events-none absolute top-10 left-1/2 h-20 w-40 -translate-x-1/2 rounded-full bg-emerald-600/20 blur-[40px]"></div>
+    <div class="pointer-events-none absolute top-10 left-1/2 h-20 w-40 -translate-x-1/2 rounded-full bg-cyan-600/20 blur-[40px]"></div>
 
     <div class="relative z-10 mb-8 flex items-center justify-center gap-3">
-      <span class="text-2xl drop-shadow-[0_0_8px_rgba(16,185,129,0.6)]">🏆</span>
-      <h2 class="text-emerald-gradient text-xl font-black tracking-wide text-transparent drop-shadow-sm md:text-3xl">รายการถอนเงินล่าสุด</h2>
-      <span class="text-2xl drop-shadow-[0_0_8px_rgba(16,185,129,0.6)]">🏆</span>
+      <span class="text-2xl drop-shadow-[0_0_8px_rgba(234,179,8,0.6)]">🏆</span>
+      <h2 class="text-gold-gradient text-xl font-black tracking-wide text-transparent drop-shadow-sm md:text-3xl">รายการถอนเงินล่าสุด</h2>
+      <span class="text-2xl drop-shadow-[0_0_8px_rgba(234,179,8,0.6)]">🏆</span>
     </div>
 
     <div id="live-winners-feed" class="relative z-10 flex flex-col"></div>
@@ -49,13 +49,13 @@ const bankPool = [
     const user = `${getRandomStr(2, "abcdefghijklmnopqrstuvwxyz")}***${getRandomStr(4, "0123456789")}`;
     const isPending = Math.random() > 0.6;
 
-    const statusClass = isPending ? "border-yellow-500/50 bg-yellow-500/10 text-yellow-400 animate-pulse" : "border-emerald-500/50 bg-emerald-500/10 text-emerald-400";
+    const statusClass = isPending ? "border-cyan-500/50 text-cyan-400 animate-pulse" : "border-yellow-500/50 bg-yellow-500/10 text-yellow-400";
     const statusText = isPending ? "กำลังถอน..." : "ถอนสำเร็จแล้ว";
 
     return `
       <div class="winner-row grid grid-rows-[0fr] opacity-0 transition-all duration-700 ease-in-out -translate-y-4">
         <div class="overflow-hidden">
-          <div class="mb-3 flex items-center justify-between rounded-xl border border-emerald-900/30 bg-[#000000]/60 p-4 shadow-sm transition-colors hover:border-emerald-500/60 hover:bg-[#051a10] backdrop-blur-md">
+          <div class="mb-3 flex items-center justify-between rounded-xl border border-cyan-900/30 bg-[#001020]/60 p-4 shadow-sm transition-colors hover:border-cyan-500/60 hover:bg-[#002b4e] backdrop-blur-md">
             
             <div class="flex items-center gap-4">
               <div class="relative flex h-11 w-11 shrink-0 items-center justify-center rounded-full border border-white/10 shadow-sm">
@@ -65,15 +65,15 @@ const bankPool = [
               </div>
               <div class="flex flex-col justify-center">
                 <div class="flex items-center gap-2">
-                  <span class="text-sm font-bold text-white/90 md:text-base">ยูสเซอร์: <span class="tracking-wider text-emerald-100">${user}</span></span>
+                  <span class="text-sm font-bold text-white/90 md:text-base">ยูสเซอร์: <span class="tracking-wider text-cyan-100">${user}</span></span>
                 </div>
-                <div class="mt-0.5 text-[10px] text-gray-500 md:text-xs">REF#${getRandomStr(8, "0123456789")} • วันนี้ ${getNowTime()}</div>
+                <div class="mt-0.5 text-[10px] text-cyan-500 md:text-xs">REF#${getRandomStr(8, "0123456789")} • วันนี้ ${getNowTime()}</div>
               </div>
             </div>
 
             <div class="flex flex-col items-end justify-center gap-1.5">
-              <div class="text-emerald-400 text-base font-black tracking-tight md:text-xl drop-shadow-[0_0_5px_rgba(16,185,129,0.3)]">
-                ${getAmount()} <span class="text-[10px] font-bold text-gray-500 md:text-xs">THB</span>
+              <div class="text-yellow-400 text-base font-black tracking-tight md:text-xl drop-shadow-[0_0_5px_rgba(234,179,8,0.3)]">
+                ${getAmount()} <span class="text-[10px] font-bold text-cyan-500 md:text-xs">THB</span>
               </div>
               <div class="rounded-full border px-2.5 py-0.5 text-[9px] font-bold md:text-[10px] ${statusClass}">
                 ${statusText}
@@ -121,15 +121,15 @@ const bankPool = [
 </script>
 
 <style>
-  .theme-emerald-gradient {
-    background: linear-gradient(to right, #064e3b, #10b981, #064e3b);
+  .theme-gold-gradient {
+    background: linear-gradient(to right, #002b4e, #facc15, #002b4e);
   }
   .font-kanit {
     font-family: "Kanit", sans-serif;
   }
 
-  .text-emerald-gradient {
-    background: linear-gradient(to bottom, #a7f3d0 0%, #10b981 100%);
+  .text-gold-gradient {
+    background: linear-gradient(to bottom, #fef08a 0%, #eab308 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;

@@ -1,14 +1,17 @@
 ---
 import { Image } from "astro:assets";
-import mainBanner from "../assets/banner.jpg";
 import Bg from "../assets/bg.jpg";
 import "../styles/global.css";
-import NavbarStyle6 from "../components/NavbarStyle5.astro";
+import NavbarStyle6 from "../components/NavbarStyle3.astro";
 import Footer from "../components/Footer.astro";
 
+const bannerImages = import.meta.glob<{ default: ImageMetadata }>("../assets/banner*.{png,webp,jpg,jpeg}", { eager: true });
+const bannerPaths = Object.keys(bannerImages);
+const mainBanner = bannerPaths.length > 0 ? bannerImages[bannerPaths[0]].default : null;
+
 const {
-  title = "SIXSLOT เว็บสล็อตคุณภาพ API แท้ ทุกค่าย แตกไว ถอนได้เต็ม 100%",
-  description = "SIXSLOT เว็บสล็อตคุณภาพ ใช้ API แท้ จากเซิร์ฟเวอร์หลัก เสถียร ปลอดถัย เกมสล็อต รวมค่าย คัดเลือกเฉพาะ มาตรฐานสากล แตกไว สมดุลที่สุด ถอนได้เต็มทุกยอด",
+  title = "FUNNEMO เว็บสล็อตลิขสิทธิ์แท้ API ต่างประเทศ 2026 | ทางเข้าหลัก",
+  description = "FUNNEMO เว็บสล็อตลิขสิทธิ์แท้ API ต่างประเทศ ความเสถียรสูงสุด บนมือถือ อัตราจ่ายยุติธรรม ฝากถอนฉับไว บริการระดับ vip ทางเข้าหลัก FUNNEMO ที่ปลอดภัย",
   robots = "index, follow",
   ImageOg = "/pro3.webp",
 } = Astro.props;
@@ -16,13 +19,13 @@ const {
 const currentPath = Astro.url.pathname;
 const canonicalURL = new URL(currentPath, Astro.site);
 const ogImageURL = new URL(ImageOg, Astro.site);
-const ogSiteName = "SIXSLOT";
+const ogSiteName = "FUNNEMO";
 ---
 
 <html lang="th">
   <head>
     <meta charset="utf-8" />
-    <meta name="google-site-verification" content="CLLgXC8Qm_3-4xLKceT4iraawEHfQEeEM2WpQJL1qAQ" />
+    <meta name="google-site-verification" content="yTegarIr0l481yFn3R9gqUq3fj5gITO9BpjZgbuKAF8" />
     <meta name="robots" content={robots} />
     <meta name="googlebot" content={robots} />
     <title>{title}</title>
@@ -83,7 +86,7 @@ const ogSiteName = "SIXSLOT";
 
     <div class="mb-2.5 flex w-full items-center justify-center">
       <Image
-        src={mainBanner}
+        src={mainBanner!}
         alt="kiki49 banner"
         loading="eager"
         fetchpriority="high"

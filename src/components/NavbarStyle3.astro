@@ -13,189 +13,160 @@ const isActive = (path: string) => {
 };
 ---
 
-<header class="pointer-events-none fixed top-2 left-0 z-50 w-full px-3 md:top-4 md:px-6">
-  <div class="pointer-events-auto relative mx-auto max-w-[1400px] font-sans">
-    <nav
-      class="relative flex w-full items-center justify-between rounded-2xl border border-gray-200 bg-white/95 px-4 py-2.5 shadow-[0_8px_30px_rgba(0,0,0,0.08)] backdrop-blur-xl transition-all duration-300 md:rounded-full md:px-6 md:py-3 lg:px-8">
-      <div class="z-20 flex w-auto flex-shrink-0 items-center">
-        <a href="/" class="flex items-center transition-transform hover:scale-105">
-          <Picture src={mainLogo!} alt="LOCKDOWN168 Logo" loading="eager" fetchpriority="high" class="h-[35px] w-auto md:h-[40px]" formats={["avif", "webp"]} fallbackFormat="webp" />
-        </a>
-      </div>
+<header class="sticky top-4 z-50 w-full px-4 font-sans drop-shadow-[0_10px_20px_rgba(0,26,51,0.5)]">
+  <nav
+    class="mx-auto flex h-[70px] w-full max-w-7xl items-center justify-between rounded-full border border-cyan-500/30 bg-[#001a33]/85 px-6 shadow-[0_0_20px_rgba(6,182,212,0.15)] backdrop-blur-md xl:px-8">
+    <a href="/" class="z-50 flex-shrink-0 transition-transform hover:scale-105">
+      <Picture
+        src={mainLogo!}
+        alt="FUNNEMO Logo"
+        loading="eager"
+        fetchpriority="high"
+        class="h-[35px] w-auto drop-shadow-[0_0_10px_rgba(6,182,212,0.4)] xl:h-[40px]"
+        formats={["avif", "webp"]}
+        fallbackFormat="webp"
+      />
+    </a>
 
-      <div class="hidden flex-1 items-center justify-center gap-2 lg:flex xl:gap-4">
-        <a
-          href="/"
-          class={`whitespace-nowrap px-5 py-2 rounded-full text-sm font-bold transition-all duration-300 ${isActive("/") ? "bg-[#5f0909] text-white shadow-md" : "text-gray-600 hover:text-[#21a4da] hover:bg-blue-50"}`}>
-          หน้าแรก
-        </a>
-        <a
-          href="/promotion"
-          class={`whitespace-nowrap px-5 py-2 rounded-full text-sm font-bold transition-all duration-300 ${isActive("/promotion") ? "bg-[#5f0909] text-white shadow-md" : "text-gray-600 hover:text-[#21a4da] hover:bg-blue-50"}`}>
-          โปรโมชั่น
-        </a>
-        <a
-          href="/ทดลองเล่น"
-          class={`whitespace-nowrap px-5 py-2 rounded-full text-sm font-bold transition-all duration-300 ${isActive("/ทดลองเล่น") ? "bg-[#5f0909] text-white shadow-md" : "text-gray-600 hover:text-[#21a4da] hover:bg-blue-50"}`}>
-          ทดลองเล่น
-        </a>
-        <a
-          href="/ทางเข้า"
-          class={`whitespace-nowrap px-5 py-2 rounded-full text-sm font-bold transition-all duration-300 ${isActive("/ทางเข้า") ? "bg-[#5f0909] text-white shadow-md" : "text-gray-600 hover:text-[#21a4da] hover:bg-blue-50"}`}>
-          ทางเข้า
-        </a>
-        <a
-          href="/contact-us"
-          class={`whitespace-nowrap px-5 py-2 rounded-full text-sm font-bold transition-all duration-300 ${isActive("/contact-us") ? "bg-[#5f0909] text-white shadow-md" : "text-gray-600 hover:text-[#21a4da] hover:bg-blue-50"}`}>
-          ติดต่อเรา
-        </a>
-      </div>
-
-      <div class="z-20 flex w-auto flex-shrink-0 items-center justify-end gap-3">
-        <div class="hidden items-center gap-3 lg:flex">
+    <div class="hidden h-full items-center gap-6 lg:flex xl:gap-10">
+      {
+        [
+          { name: "หน้าแรก", path: "/" },
+          { name: "โปรโมชั่น", path: "/promotion" },
+          { name: "ทดลองเล่น", path: "/ทดลองเล่น" },
+          { name: "ทางเข้า", path: "/ทางเข้า" },
+          { name: "ติดต่อเรา", path: "/contact-us" },
+        ].map((item) => (
           <a
-            href="/login"
-            class="flex h-10 items-center justify-center rounded-full border-2 border-[#21a4da] px-6 text-sm font-bold whitespace-nowrap text-[#21a4da] transition-colors hover:bg-[#21a4da] hover:text-white">
-            เข้าสู่ระบบ
+            href={item.path}
+            class={`group relative flex h-full items-center text-sm font-bold transition-colors xl:text-base ${isActive(item.path) ? "text-cyan-400 drop-shadow-[0_0_8px_rgba(6,182,212,0.5)]" : "text-cyan-50/80 hover:text-cyan-400"}`}>
+            <span>{item.name}</span>
+            <div
+              class={`absolute bottom-[15px] left-0 h-[3px] w-full origin-left rounded-full bg-gradient-to-r from-cyan-500 to-blue-400 transition-transform duration-300 ${isActive(item.path) ? "scale-x-100" : "scale-x-0 group-hover:scale-x-100"}`}
+            />
           </a>
+        ))
+      }
+    </div>
 
+    <div class="z-50 flex items-center gap-3">
+      <a
+        href="/login"
+        class="hidden items-center justify-center rounded-full border border-yellow-500/50 bg-transparent px-5 py-2 text-sm font-bold text-yellow-400 transition-all hover:bg-yellow-500/10 lg:flex">
+        เข้าสู่ระบบ
+      </a>
+      <a
+        href="/register"
+        class="hidden items-center justify-center rounded-full bg-gradient-to-r from-cyan-600 to-blue-500 px-6 py-2 text-sm font-extrabold text-white shadow-[0_0_15px_rgba(6,182,212,0.4)] transition-all hover:scale-105 lg:flex">
+        สมัครสมาชิก
+      </a>
+
+      <button id="hamburger-btn" class="relative flex h-[40px] w-[40px] flex-col items-end justify-center gap-[6px] p-2 lg:hidden" aria-label="Menu">
+        <span class="line-1 h-[2px] w-6 origin-center rounded-full bg-cyan-400 shadow-sm transition-all duration-300"></span>
+        <span class="line-2 h-[2px] w-4 origin-center rounded-full bg-cyan-400 shadow-sm transition-all duration-300"></span>
+      </button>
+    </div>
+  </nav>
+
+  <div id="fullscreen-menu" class="pointer-events-none fixed inset-0 z-[60] flex flex-col items-center justify-center bg-[#000a14]/98 opacity-0 backdrop-blur-2xl transition-opacity duration-500">
+    <div class="flex w-full flex-col items-center space-y-6 px-6">
+      {
+        [
+          { name: "หน้าแรก", path: "/" },
+          { name: "โปรโมชั่น", path: "/promotion" },
+          { name: "ทดลองเล่น", path: "/ทดลองเล่น" },
+          { name: "ทางเข้า", path: "/ทางเข้า" },
+          { name: "ติดต่อเรา", path: "/contact-us" },
+        ].map((item) => (
           <a
-            href="/register"
-            class="flex h-10 items-center justify-center rounded-full border-2 border-transparent bg-[#5f0909] px-6 text-sm font-bold whitespace-nowrap text-white shadow-[0_4px_15px_rgba(95,9,9,0.3)] transition-all hover:bg-[#7a0c0c] hover:shadow-lg">
-            สมัครสมาชิก
+            href={item.path}
+            class={`fs-item text-3xl font-black tracking-widest uppercase transition-all duration-300 ${isActive(item.path) ? "text-cyan-400 drop-shadow-[0_0_10px_rgba(6,182,212,0.6)]" : "text-white/80 hover:text-white"}`}>
+            {item.name}
           </a>
-        </div>
+        ))
+      }
 
-        <button
-          id="hamburger-btn"
-          class="flex h-[40px] w-[40px] flex-col items-center justify-center space-y-[4px] rounded-full border border-gray-200 bg-gray-50 p-2 transition-colors hover:bg-gray-100 lg:hidden"
-          aria-label="Toggle menu">
-          <span class="hamburger-line h-[2px] w-5 rounded-full bg-gray-700 transition-all duration-300"></span>
-          <span class="hamburger-line h-[2px] w-5 rounded-full bg-gray-700 transition-all duration-300"></span>
-          <span class="hamburger-line h-[2px] w-5 rounded-full bg-gray-700 transition-all duration-300"></span>
-        </button>
-      </div>
-    </nav>
-
-    <div
-      id="mobile-menu"
-      class="mobile-menu absolute top-[110%] left-0 max-h-0 w-full origin-top overflow-hidden rounded-2xl border border-gray-200 bg-white/98 shadow-[0_15px_40px_rgba(0,0,0,0.1)] backdrop-blur-xl transition-all duration-500 ease-[cubic-bezier(0.4,0,0.2,1)]">
-      <div class="flex flex-col space-y-2 p-4">
-        <a href="/" class={`menu-item px-4 py-3 rounded-xl text-sm font-bold transition-all ${isActive("/") ? "bg-[#5f0909] text-white" : "text-gray-700 hover:text-[#21a4da] hover:bg-blue-50"}`}>
-          🏠 หน้าแรก
+      <div class="fs-item mt-4 flex w-full max-w-[250px] flex-col gap-4 pt-8">
+        <a
+          href="/register"
+          class="flex w-full items-center justify-center rounded-full bg-gradient-to-r from-cyan-600 to-blue-500 py-3.5 text-lg font-extrabold text-white shadow-[0_0_20px_rgba(6,182,212,0.4)]">
+          สมัครสมาชิก
         </a>
         <a
-          href="/promotion"
-          class={`menu-item px-4 py-3 rounded-xl text-sm font-bold transition-all ${isActive("/promotion") ? "bg-[#5f0909] text-white" : "text-gray-700 hover:text-[#21a4da] hover:bg-blue-50"}`}>
-          🎁 โปรโมชั่น
+          href="/login"
+          class="flex w-full items-center justify-center rounded-full border-2 border-yellow-500/50 bg-yellow-500/10 py-3.5 text-lg font-bold text-yellow-400 transition-colors hover:bg-yellow-500/20">
+          เข้าสู่ระบบ
         </a>
-        <a
-          href="/ทดลองเล่น"
-          class={`menu-item px-4 py-3 rounded-xl text-sm font-bold transition-all ${isActive("/ทดลองเล่น") ? "bg-[#5f0909] text-white" : "text-gray-700 hover:text-[#21a4da] hover:bg-blue-50"}`}>
-          🎰 ทดลองเล่น
-        </a>
-        <a
-          href="/ทางเข้า"
-          class={`menu-item px-4 py-3 rounded-xl text-sm font-bold transition-all ${isActive("/ทางเข้า") ? "bg-[#5f0909] text-white" : "text-gray-700 hover:text-[#21a4da] hover:bg-blue-50"}`}>
-          🌐 ทางเข้า
-        </a>
-        <a
-          href="/contact-us"
-          class={`menu-item px-4 py-3 rounded-xl text-sm font-bold transition-all ${isActive("/contact-us") ? "bg-[#5f0909] text-white" : "text-gray-700 hover:text-[#21a4da] hover:bg-blue-50"}`}>
-          📞 ติดต่อเรา
-        </a>
-
-        <div class="mt-2 grid grid-cols-2 gap-2 border-t border-gray-100 pt-4">
-          <a
-            href="/login"
-            class="menu-item flex justify-center rounded-xl border-2 border-[#21a4da] bg-white py-3 text-sm font-bold text-[#21a4da] transition-colors hover:bg-[#21a4da] hover:text-white">
-            เข้าสู่ระบบ
-          </a>
-          <a href="/register" class="menu-item flex justify-center rounded-xl bg-[#5f0909] py-3 text-sm font-bold text-white shadow-md transition-all hover:bg-[#7a0c0c]">สมัครสมาชิก</a>
-        </div>
       </div>
     </div>
   </div>
 </header>
 
-<div class="h-[90px] w-full md:h-[100px]"></div>
+<style is:global>
+  nav,
+  header {
+    font-family: kanit, sans-serif !important;
+  }
+  #hamburger-btn.active .line-1 {
+    transform: translateY(4px) rotate(45deg);
+  }
+  #hamburger-btn.active .line-2 {
+    width: 24px;
+    transform: translateY(-4px) rotate(-45deg);
+  }
 
-<style>
-  header a {
-    font-family: kanit, sans-serif;
-  }
-  #hamburger-btn.active .hamburger-line:nth-child(1) {
-    transform: translateY(6px) rotate(45deg);
-  }
-  #hamburger-btn.active .hamburger-line:nth-child(2) {
+  .fs-item {
     opacity: 0;
+    transform: translateY(30px) scale(0.9);
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
   }
-  #hamburger-btn.active .hamburger-line:nth-child(3) {
-    transform: translateY(-6px) rotate(-45deg);
-  }
-  .mobile-menu.open {
-    max-height: 500px;
+  .fs-item.show {
     opacity: 1;
-    transform: scaleY(1);
+    transform: translateY(0) scale(1);
   }
-  .mobile-menu {
-    opacity: 0;
-    transform: scaleY(0.95);
-  }
-  .menu-item {
-    opacity: 0;
-    transform: translateY(-10px);
-    transition: all 0.3s ease;
-  }
-  .mobile-menu.open .menu-item {
-    opacity: 1;
-    transform: translateY(0);
-  }
-  .mobile-menu.open .menu-item:nth-child(1) {
+  .fs-item:nth-child(1) {
     transition-delay: 0.1s;
   }
-  .mobile-menu.open .menu-item:nth-child(2) {
+  .fs-item:nth-child(2) {
     transition-delay: 0.15s;
   }
-  .mobile-menu.open .menu-item:nth-child(3) {
+  .fs-item:nth-child(3) {
     transition-delay: 0.2s;
   }
-  .mobile-menu.open .menu-item:nth-child(4) {
+  .fs-item:nth-child(4) {
     transition-delay: 0.25s;
   }
-  .mobile-menu.open .menu-item:nth-child(5) {
+  .fs-item:nth-child(5) {
     transition-delay: 0.3s;
   }
-  .mobile-menu.open .menu-item:nth-child(6) {
-    transition-delay: 0.35s;
-  }
-  .mobile-menu.open .menu-item:nth-child(7) {
+  .fs-item:nth-child(6) {
     transition-delay: 0.4s;
   }
 </style>
 
 <script>
   const hamburgerBtn = document.getElementById("hamburger-btn");
-  const mobileMenu = document.getElementById("mobile-menu");
-  const menuItems = document.querySelectorAll(".menu-item");
+  const fsMenu = document.getElementById("fullscreen-menu");
+  const fsItems = document.querySelectorAll(".fs-item");
 
-  hamburgerBtn?.addEventListener("click", () => {
-    hamburgerBtn.classList.toggle("active");
-    mobileMenu?.classList.toggle("open");
-  });
+  const toggleFsMenu = () => {
+    hamburgerBtn?.classList.toggle("active");
+    fsMenu?.classList.toggle("opacity-0");
+    fsMenu?.classList.toggle("pointer-events-none");
 
-  menuItems.forEach((item) => {
-    item.addEventListener("click", () => {
-      hamburgerBtn?.classList.remove("active");
-      mobileMenu?.classList.remove("open");
-    });
-  });
-
-  document.addEventListener("click", (e) => {
-    const target = e.target as HTMLElement;
-    if (!target.closest("header")) {
-      hamburgerBtn?.classList.remove("active");
-      mobileMenu?.classList.remove("open");
+    if (!fsMenu?.classList.contains("opacity-0")) {
+      document.body.style.overflow = "hidden";
+      fsItems.forEach((item) => item.classList.add("show"));
+    } else {
+      document.body.style.overflow = "";
+      fsItems.forEach((item) => item.classList.remove("show"));
     }
+  };
+
+  hamburgerBtn?.addEventListener("click", toggleFsMenu);
+  fsItems.forEach((item) => {
+    item.addEventListener("click", () => {
+      if (!fsMenu?.classList.contains("opacity-0")) toggleFsMenu();
+    });
   });
 </script>

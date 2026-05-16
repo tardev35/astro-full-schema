@@ -5,7 +5,7 @@ import ContentBoxTwo from "../components/ContentBoxTwo.astro";
 import ContentBoxSevenThree from "../components/ContentBoxSevenThree.astro";
 import ContentBoxThreeColums from "../components/ContentBox3Three.astro";
 import Navfoot from "../components/Navfoot.astro";
-import Announcement from "../components/Announcement5.astro";
+import Announcement from "../components/Announcement3.astro";
 import SmoothCarousel from "../components/SmoothCarousel.astro";
 import ProviderGrid from "../components/ProviderGrid.astro";
 import LatestWinners from "../components/LatestWinners.astro";
@@ -18,92 +18,102 @@ const logoUrl = homePage + "/logo.webp";
 const webPageSchema = {
   "@context": "https://schema.org",
   "@type": "WebPage",
-  name: "SIXSLOT เว็บสล็อตคุณภาพ API แท้ ทุกค่าย แตกไว ถอนได้เต็ม 100%",
-  description: "SIXSLOT เว็บสล็อตคุณภาพ ใช้ API แท้ จากเซิร์ฟเวอร์หลัก เสถียร ปลอดถัย เกมสล็อต รวมค่าย คัดเลือกเฉพาะ มาตรฐานสากล แตกไว สมดุลที่สุด ถอนได้เต็มทุกยอด",
+  name: "FUNNEMO เว็บสล็อตลิขสิทธิ์แท้ API ต่างประเทศ 2026 | ทางเข้าหลัก",
+  description: "FUNNEMO เว็บสล็อตลิขสิทธิ์แท้ API ต่างประเทศ ความเสถียรสูงสุด บนมือถือ อัตราจ่ายยุติธรรม ฝากถอนฉับไว บริการระดับ vip ทางเข้าหลัก FUNNEMO ที่ปลอดภัย ",
   url: currentPath,
 };
 
 const webSiteSchema = {
   "@context": "https://schema.org",
   "@type": "WebSite",
-  name: "SIXSLOT",
-  alternateName: ["sixslot", "SIXSLOTofficial", "SIXSLOTofficials", "SIXSLOT"],
-  url: "https://sixslot.com/",
+  name: "FUNNEMO",
+  alternateName: ["funnemo", "FUNNEMOofficial", "FUNNEMOofficials", "FUNNEMO"],
+  url: "https://funnemo.com/",
 };
 
 const orgSchema = {
   "@context": "https://schema.org",
   "@type": "Organization",
-  name: "SIXSLOT",
+  name: "FUNNEMO",
   logo: logoUrl,
   url: homePage,
 };
 
 const allSchemas = [webPageSchema, orgSchema, webSiteSchema];
+
 import { Picture } from "astro:assets";
-import image1 from "../assets/slide1.jpg";
+import image1 from "../assets/slide4.jpg";
 ---
 
 <MainLayout>
   <script type="application/ld+json" set:html={JSON.stringify(allSchemas)} />
 
-  <Announcement message="🚀 SIXSLOT-BKK อัปเดตระบบใหม่! ฝาก-ถอน Auto ภายใน 3 วินาที รองรับ True Wallet" />
+  <Announcement message="🌊 FUNNEMO ยินดีต้อนรับ! เว็บตรงระบบใหม่ล่าสุด 2026 ฝาก-ถอนไวที่สุดในมหาสมุทร" />
 
-  <ContentBox title="SIXSLOT เว็บสล็อตคุณภาพ API แท้ ทุกค่าย แตกไว ถอนได้เต็ม 100%">
+  <ContentBox title="FUNNEMO เว็บสล็อตลิขสิทธิ์แท้ API ต่างประเทศ 2026">
     <p class="leading-relaxed">
-      <strong class="text-emerald-400">SIXSLOT</strong> เว็บสล็อตคุณภาพ มาตรฐานสากลที่ใช้กันทั่วโลก การเล่นสล็อตออนไลน์ด้วยระบบ <strong class="text-amber-400">API แท้</strong> ที่เชื่อมต่อกับผู้ผลิตเกมระดับโลกที่
-      ผ่านการทดสอบว่าไม่เปาเปรียบผู้เล่น โดยตรง ไม่ผ่านเอเย่นต์ การันตีโอกาสชนะที่เป็นธรรม ในระดับสูงสุดด้วยค่า RTP มาตรฐานสากล ทุกยอดการเดิมพันคือความแม่นยำที่ตรวจสอบได้จริง พร้อมการจ่ายเงินที่รวดเร็วและมั่นคง
-      จ่ายจริงครบทุกบาท 100%
+      <strong class="text-emerald-400">FUNNEMO</strong> คือผู้นำการให้บริการ <strong class="text-amber-400">เว็บสล็อตลิขสิทธิ์แท้</strong> ที่ดีที่สุดในปี 2026 โดยเรามุ่งเน้นการนำเทคโนโลยี <strong
+        class="text-emerald-400">
+        API ต่างประเทศ
+      </strong> มาใช้เพื่อสร้างมาตรฐานใหม่ให้กับวงการเดิมพันในไทย ระบบของเราถูกออกแบบมาเพื่อรองรับกลุ่มนักเล่นที่ต้องการความมั่นคงสูงสุดและประสบการณ์การใช้งานระดับพรีเมียมที่หาไม่ได้จากเว็บไซต์ทั่วไป
     </p>
 
     <div class="mt-6 flex flex-wrap justify-center gap-4">
       <a
         href="/register"
-        class="flex items-center justify-center rounded-xl bg-gradient-to-r from-emerald-600 to-green-500 px-10 py-3.5 font-black text-white shadow-[0_0_20px_rgba(16,185,129,0.4)] transition-transform hover:scale-105">
-        สมัครสมาชิกฟรี
+        class="flex items-center justify-center rounded-full bg-gradient-to-r from-blue-700 to-cyan-500 px-10 py-3.5 font-black text-white shadow-[0_0_20px_rgba(6,182,212,0.4)] transition-transform hover:scale-105">
+        สมัครสมาชิกพรีเมียม
       </a>
 
       <a
         href="/login"
-        class="flex items-center justify-center rounded-xl bg-gradient-to-r from-yellow-500 to-amber-400 px-10 py-3.5 font-black text-emerald-950 shadow-[0_0_20px_rgba(245,158,11,0.3)] transition-transform hover:scale-105">
-        ทางเข้าเล่น
+        class="flex items-center justify-center rounded-full border-2 border-yellow-500/50 bg-gradient-to-b from-yellow-200 to-yellow-600 px-10 py-3.5 font-black text-blue-950 shadow-[0_0_20px_rgba(234,179,8,0.3)] transition-transform hover:scale-105">
+        ทางเข้าเล่น FUNNEMO
       </a>
     </div>
   </ContentBox>
 
   <ProviderGrid />
-  <ContentBoxThreeColums titleleft="🔄 คืนยอดเสียทุกวัน" titlecenter="💰 คืนค่าคอมมิชชั่น" titleright="⚡ ฝาก-ถอน ออโต้">
-    <div slot="left" class="text-sm text-white/70">เล่นเสียไม่ต้องเศร้า เรามีระบบคืนยอดเสียให้คุณทุกวัน กดรับได้เองทันที ยิ่งเล่นเยอะยิ่งได้คืนเยอะ ไม่มีอั้น!</div>
-    <div slot="center" class="text-sm text-white/70">รับค่าคอมมิชชั่นจากการเล่นของคุณและเพื่อนที่แนะนำมา สร้างรายได้แบบ Passive Income ง่ายๆ ได้ทุกวัน</div>
-    <div slot="right" class="text-sm text-white/70">ทำรายการรวดเร็วทันใจภายใน 3 วินาที ผ่านระบบออโต้ที่เสถียรที่สุด รองรับทุกธนาคารชั้นนำและ TrueMoney Wallet</div>
+
+  <ContentBoxThreeColums titleleft="💎 ระบบ VIP แท้" titlecenter="🛡️ API มาตรฐานโลก" titleright="⚡ ธุรกรรมความไวสูง">
+    <div slot="left" class="text-sm text-cyan-100/70">สิทธิพิเศษเหนือระดับสำหรับสมาชิก FUNNEMO รับโปรโมชั่นและโบนัสคืนเงินสูงสุดทุกวัน</div>
+    <div slot="center" class="text-sm text-cyan-100/70">มั่นใจด้วยระบบหลังบ้านส่งตรงจากเซิร์ฟเวอร์หลัก ไม่ผ่านเอเย่นต์ แตกง่าย เป็นธรรมที่สุด</div>
+    <div slot="right" class="text-sm text-cyan-100/70">ฝาก-ถอน ออโต้ผ่านระบบธนาคารและ True Wallet รวดเร็วภายใน 5 วินาที แม่นยำ 100%</div>
   </ContentBoxThreeColums>
+
   <LatestWinners />
 
-  <ContentBoxTwo titleleft="SIXSLOT ระบบ API แท้ 100% จากเซิร์ฟเวอร์หลัก ปลอดภัย" titleright="เว็บเกมสล็อต รวมทุกค่าย คัดเลือกเฉพาะ มาตรฐานสากล">
+  <SmoothCarousel />
+
+  <ContentBoxTwo>
     <div slot="left" class="space-y-4 text-white/80">
+      <h2 class="text-ocean-gradient mb-4 text-3xl font-black uppercase">ยกระดับประสบการณ์ปี 2026 บนมือถือผ่าน FUNNEMO มีความเสถียรภาพสูงสุด</h2>
       <p>
-        เว็บสล็อตคุณภาพสูงและปลอดภัย เราเลือกการเชื่อมต่อที่ถูกต้องที่สุด <strong class="text-amber-400">SIXSLOT</strong> ใช้ <strong class="text-emerald-400">ระบบ API แท้ 100%</strong> ที่ดึงข้อมูลจากเซิร์ฟเวอร์หลักของผู้พัฒนาเกมโดยตรง
-        เพื่อให้ระบบมีความเสถียรและแม่นยำในระดับมาตรฐานสากล โดยไม่ต้องผ่านคนกลาง ไร้ปัญหาเครื่องค้างหรือการเชื่อมต่อที่ผิดพลาด มั่นใจได้ว่าการเล่นของคุณจะเป็นไปอย่างราบรื่น
+        ในปี 2026 นี้ <strong class="text-emerald-400">FUNNEMO</strong> ได้พัฒนาโครงสร้างเว็บไซต์ให้รองรับการใช้งานบน มือถือ อย่างสมบูรณ์แบบ เพื่อให้การเข้าถึงหน้า <strong class="text-amber-400">
+          เว็บสล็อตลิขสิทธิ์แท้
+        </strong> ของคุณเป็นไปอย่างลื่นไหลและมีเสถียรภาพสูงสุด ระบบถูกปรับแต่งมาให้ใช้ทรัพยากรเครื่องน้อยแต่ให้ประสิทธิภาพในการประมวลผลสูง ลดอาการกระตุกและเพิ่มความเร็วในการโหลดเกม ช่วยให้คุณไม่พลาดทุกจังหวะสำคัญในระหว่างการเดิมพัน
       </p>
     </div>
     <div slot="right" class="text-white/80">
+      <h2 class="text-ocean-gradient mb-4 text-3xl font-black uppercase">คัดสรรค่ายเกมคุณภาพสูงด้วยระบบ API ต่างประเทศ และอัตราจ่ายยุติธรรม</h2>
       <p>
-        คัดกรองสิ่งที่ดีที่สุดมาไว้ในที่เดียว <strong class="text-emerald-400">SIXSLOT</strong> คือ <strong class="text-amber-400">เว็บเกมสล็อต</strong> ที่รวมทุกค่ายชั้นนำระดับโลก โดยเราคัดเลือกเฉพาะเกมที่มีใบรับรองและได้รับมาตรฐานสากล
-        เพื่อให้มั่นใจในคุณภาพของระบบและตัวเกมที่ส่งตรงถึงมือคุณอย่างสมบูรณ์แบบที่สุด ให้สมาชิกได้รับประสบการณ์การเล่นที่ดีที่สุด ภาพคมชัด ระบบลื่นไหล
+        ความโดดเด่นของ <strong class="text-amber-400">FUNNEMO</strong> คือการเชื่อมต่อกับค่ายเกมชั้นนำทั่วโลกผ่านระบบ <strong class="text-emerald-400">API ต่างประเทศ</strong> โดยตรง ซึ่งเป็นลิขสิทธิ์แท้ที่ไม่ผ่านเอเย่นต์คนกลาง
+        ข้อดีคือคุณจะได้สัมผัสกับอัตราการจ่ายเงินรางวัลที่ยุติธรรมตามมาตรฐาน RTP สากล นอกจากนี้ ระบบ <strong class="text-amber-400">API ต่างประเทศ</strong> ยังช่วยให้การอัปเดตเกมใหม่ๆ เป็นไปอย่างรวดเร็วทันใจ
+        พร้อมคุณภาพกราฟิกและเสียงที่คมชัดระดับ FHD
       </p>
     </div>
   </ContentBoxTwo>
-  <SmoothCarousel />
+
   <ContentBoxSevenThree>
     <div slot="left" class="flex h-full flex-col justify-center">
       <Picture
         src={image1}
-        alt="โปรโมชั่นสมัครสมาชิกใหม่ ฝากครั้งแรกรับโบนัสฟรี 60% สำหรับคาสิโน"
+        alt="FUNNEMO PROMOTION"
         loading="lazy"
         fetchpriority="low"
         widths={[200, 400, 600]}
         sizes="(max-width: 768px) 100vw, 33vw"
-        class="mx-auto h-auto w-full rounded-xl object-contain shadow-lg transition-transform duration-300 hover:-translate-y-1 hover:shadow-2xl"
+        class="mx-auto h-auto w-full rounded-3xl border-2 border-cyan-500/30 shadow-2xl transition-transform duration-300 hover:-translate-y-1"
         decoding="async"
         formats={["avif", "webp"]}
         fallbackFormat="webp"
@@ -111,30 +121,36 @@ import image1 from "../assets/slide1.jpg";
       />
     </div>
     <div slot="right">
-      <h2 class="text-emerald-gradient mb-4 text-3xl font-black uppercase">SIXSLOT เว็บสล็อตเล่นง่าย แตกไว สมดุลระบบเป็นธรรมที่สุด</h2>
-      <p class="mb-4 text-white/70">
-        เว็บสล็อตเล่นง่าย และเข้าถึงรอบโบนัสได้ แตกไวที่สุดในปัจจุบัน เราให้ความสำคัญกับการจ่ายเงินรางวัลที่แม่นยำโดยใช้กลไกสมดุลระบบเป็นธรรมที่สุด เพื่อให้สมาชิกมั่นใจในทุกการเดิมพันผ่านทาง SIXSLOT
-        ว่าทุกยอดจะได้รับความคุ้มค่าตามมาตรฐานการเดิมพันสากลไม่ต้องกังวลเรื่องการเอาเปรียบ
+      <h2 class="text-ocean-gradient mb-4 text-3xl font-black uppercase">ระบบฝาก-ถอนฉับไวและแม่นยำ ประดุจการเดินทางของเรือเร็วสมรรถนะสูง</h2>
+      <p class="mb-4 text-lg text-cyan-50/70">
+        หากเปรียบเทียบกับระบบในอดีตที่เชื่องช้า การทำธุรกรรมที่นี่จะเปลี่ยนความรู้สึกของคุณไปทันที ด้วยความเร็วที่ประดุจการเดินทางของเรือเร็วสมรรถนะสูงที่พุ่งตรงสู่เป้าหมายอย่างแม่นยำ
+        ระบบออโต้เวอร์ชันล่าสุดบน FUNNEMO ถูกเซ็ตค่ามาเพื่อลดความยุ่งยากและเพิ่มความฉับไวในการฝาก-ถอนเงิน ช่วยให้นักเดิมพันจัดการด้านการเงินได้ทันใจตลอด 24 ชั่วโมง
       </p>
-      <h2 class="text-emerald-gradient mb-4 text-3xl font-black uppercase">ถอนได้เต็มทุกยอด ระบบออโต้แม่นยำที่สุด ใช้เวลาน้อยเพียง 5 วิ</h2>
-      <p>
-        สมาชิกสามารถถอนได้เต็มทุกยอดโดยไม่มีการหักค่าธรรมเนียมใดๆ ทั้งสิ้น เราใช้ระบบออโต้แม่นยำที่สุดในการประมวลผลข้อมูลเพื่อให้ยอดเงินเข้าสู่บัญชีของคุณทันที โดยใช้เวลาน้อยเพียง 5 วิ เท่านั้น
-        ตอบโจทย์ความต้องการที่เน้นความไวและความถูกต้องในทุกรายการธุรกรรมผ่าน SIXSLOT การันตีความรวดเร็วในการจัดการด้านการเงินที่แม่นยำ
-      </p>
+      <a href="/line" class="inline-block rounded-full bg-[#00b900] px-8 py-3 font-bold text-white shadow-lg hover:brightness-110">ปรึกษาแอดมิน 24 ชม.</a>
     </div>
   </ContentBoxSevenThree>
   <ContentBox>
-    <h2 class="text-emerald-gradient mb-4 text-3xl font-black uppercase">เข้าสู่ระบบ SIXSLOT เว็บสล็อตคุณภาพ เสถียรและการรองรับการใช้งานหนัก</h2>
-    <p>
-      มั่นใจทุกครั้งที่ใช้งาน ผ่านประสิทธิภาพการเชื่อมต่อ สู่ระบบ เว็บสล็อตคุณภาพที่แท้จริง SIXSLOT รองรับการใช้งานหนักที่สามารถจัดการข้อมูลจำนวนมากได้อย่างแม่นยำและรวดเร็ว
-      ช่วยให้การเข้าถึงตัวเกมและบริการต่างๆ ของ SIXSLOT เป็นไปอย่างต่อเนื่อง ไม่มีสะดุด แม้ในช่วงเวลาที่มีผู้ใช้งานหนาแน่นที่สุดครับ
+    <h2 class="text-ocean-gradient mb-4 text-3xl font-black uppercase">สมาชิกจะได้รับ บริการระดับ VIP เพียง สมัคร FUNNEMO</h2>
+    <p class="mb-4 text-lg text-cyan-50/70">
+      เอกสิทธิ์สำหรับ สมาชิกระดับ VIP เริ่มต้นขึ้นทันทีหลังจากที่คุณ สมัคร สมาชิกเข้าเล่นกับ FUNNEMO โดยเราจัดเตรียมทีมงานมืออาชีพคอยดูแลและให้คำปรึกษาแบบเอ็กซ์คลูซีฟตลอด 24 ชั่วโมง
+      เพื่อสนับสนุนการใช้งานระบบ เว็บสล็อตลิขสิทธิ์แท้ ให้เป็นไปอย่างราบรื่นที่สุด ไม่ว่าจะเป็นการสอบถามข้อมูลเทคนิค หรือการจัดการธุรกรรม หรือ ทุกรายละเอียดการบริการ
+      ตอบโจทย์ผู้เล่นที่เน้นความพรีเมียมและความสะดวกสบายเป็นอันดับหนึ่ง
     </p>
   </ContentBox>
+  <ContentBox>
+    <h2 class="text-ocean-gradient mb-4 text-3xl font-black uppercase">FUNNEMO ทางเข้าหลัก ที่ปลอดภัย เข้าถึงระบบตรงไม่ผ่านเอเย่นต์และเว็บไซต์แอบอ้าง</h2>
+    <p class="mb-4 text-lg text-cyan-50/70">
+      โปรดตรวจสอบให้แน่ใจว่าคุณเข้าใช้งานผ่าน ทางเข้าหลัก ของ FUNNEMO เพื่อความปลอดภัยในการเข้าถึงระบบ เว็บสล็อตลิขสิทธิ์แท้ โดยตรง
+      การเลือกใช้ช่องทางที่เป็นทางการจะช่วยป้องกันปัญหาจากเว็บไซต์แอบอ้างหรือลิงก์ไม่หวังดีที่อาจส่งผลกระทบต่อบัญชีของคุณ โดยที่นี่คือศูนย์กลางระบบ API ต่างประเทศ ที่การันตีความปลอดภัย 100%
+      และพร้อมให้บริการนักเดิมพันตลอด 24 ชั่วโมง
+    </p>
+  </ContentBox>
+
   <Navfoot />
 
   <style>
-    :global(.text-emerald-gradient) {
-      background: linear-gradient(to bottom, #34d399 0%, #10b981 100%) !important;
+    :global(.text-ocean-gradient) {
+      background: linear-gradient(to bottom, #fef08a 0%, #ca8a04 100%) !important;
       -webkit-background-clip: text !important;
       -webkit-text-fill-color: transparent !important;
     }

@@ -1,45 +1,35 @@
 ---
-const { titleleft, titleright, titlecenter } = Astro.props;
+const { titleleft, titlecenter, titleright } = Astro.props;
 ---
 
-<section class="mx-auto mb-3 w-full max-w-7xl rounded-[15px] border-2 border-emerald-900/50 bg-[#050c0a]/90 p-8 px-4 text-center shadow-2xl">
-  <div class="grid grid-cols-2 gap-5 md:grid-cols-3">
-    <article class="flex flex-col gap-4">
-      {
-        titleleft && (
-          <h2 class="mb-4 bg-gradient-to-b from-[#a7f3d0] to-[#10b981] bg-clip-text text-3xl font-black tracking-tight text-transparent drop-shadow-[0_0_8px_rgba(16,185,129,0.4)]">{titleleft}</h2>
-        )
-      }
-      <div class="text-black">
+<section
+  class="mx-auto mb-4 w-full max-w-7xl rounded-[30px] border-2 border-cyan-900/50 bg-[#001a33]/90 p-8 text-center font-sans shadow-[0_0_20px_rgba(6,182,212,0.15),inset_0_0_15px_rgba(6,182,212,0.05)] backdrop-blur-md transition-all duration-300 hover:border-cyan-500/50 hover:shadow-[0_0_30px_rgba(6,182,212,0.3)]">
+  <div class="grid grid-cols-1 gap-6 md:grid-cols-3">
+    <article class="flex flex-col gap-4 border-b border-cyan-800/50 pb-4 md:border-r md:border-b-0 md:pr-4 md:pb-0">
+      {titleleft && <h3 class="mb-2 text-2xl font-bold text-yellow-400 drop-shadow-[0_0_5px_rgba(234,179,8,0.4)]">{titleleft}</h3>}
+      <div class="text-cyan-50/80">
         <slot name="left" />
       </div>
     </article>
 
-    <article class="flex flex-col gap-4">
-      {
-        titlecenter && (
-          <h2 class="mb-4 bg-gradient-to-b from-[#a7f3d0] to-[#10b981] bg-clip-text text-3xl font-black tracking-tight text-transparent drop-shadow-[0_0_8px_rgba(16,185,129,0.4)]">{titlecenter}</h2>
-        )
-      }
-      <div class="text-black">
+    <article class="flex flex-col gap-4 border-b border-cyan-800/50 pb-4 md:border-r md:border-b-0 md:px-2 md:pb-0">
+      {titlecenter && <h3 class="mb-2 text-2xl font-bold text-yellow-400 drop-shadow-[0_0_5px_rgba(234,179,8,0.4)]">{titlecenter}</h3>}
+      <div class="text-cyan-50/80">
         <slot name="center" />
       </div>
     </article>
 
-    <article class="flex flex-col gap-4">
-      {
-        titleright && (
-          <h2 class="mb-4 bg-gradient-to-b from-[#a7f3d0] to-[#10b981] bg-clip-text text-3xl font-black tracking-tight text-transparent drop-shadow-[0_0_8px_rgba(16,185,129,0.4)]">{titleright}</h2>
-        )
-      }
-      <div class="text-black">
+    <article class="flex flex-col gap-4 md:pl-4">
+      {titleright && <h3 class="mb-2 text-2xl font-bold text-yellow-400 drop-shadow-[0_0_5px_rgba(234,179,8,0.4)]">{titleright}</h3>}
+      <div class="text-cyan-50/80">
         <slot name="right" />
       </div>
     </article>
   </div>
 </section>
+
 <style>
-  .bg-red-gold-oklab {
-    background-image: linear-gradient(in oklab to right, #1b8d3b, #399537, #27a544);
+  .font-sans {
+    font-family: "Kanit", sans-serif;
   }
 </style>

@@ -8,38 +8,38 @@ import Navfoot from "../components/Navfoot.astro";
 import Announcement from "../components/Announcement5.astro";
 import SmoothCarousel from "../components/SmoothCarousel.astro";
 import ProviderGrid from "../components/ProviderGrid.astro";
-import LatestWinners from "../components/LatestWinners.astro";
+import LatestWinners from "../components/LatestWinners2.astro";
 
 const currentPath = Astro.url.pathname;
 const homePage = Astro.url.origin;
-const logoUrl = homePage + "/logo.png";
+const logoUrl = homePage + "/logo.webp";
 
+// 🌟 JS Schema ครบถ้วน ห้ามตัด!
 const webPageSchema = {
   "@context": "https://schema.org",
   "@type": "WebPage",
-  name: "HYDRA888 เว็บตรงไม่ผ่านเอเย่นต์ สมัครสมาชิก คาสิโนออนไลน์อันดับ 1",
-  description: "HYDRA888 ทางเข้าเล่น คาสิโนออนไลน์อันดับ 1 เว็บตรง เว็บตรงไม่ผ่านเอเย่นต์ รวมบาคาร่า สล็อต ครบวงจร ระบบออโต้ไวใน 3 วินาที ความปลอดภัย ระดับเอเชีย ",
+  name: "KONG24H เว็บเดิมพัน อันดับ 1 เกมคาสิโนล้ำสมัย โปรเด็ดดวง",
+  description: "KONG24H คาสิโนออนไลน์ สล็อต บาคาร่า หวย กีฬา ยิงปลา ฝากถอนออโต้ 24 ชั่วโมง การันตีคุณภาพระดับ VIP",
   url: currentPath,
 };
 const webSiteSchema = {
   "@context": "https://schema.org",
   "@type": "WebSite",
-  name: "HYDRA888",
-  alternateName: ["hydra888", "HYDRA888auto", "hydra888auto"],
-  url: "https://hydra888auto.com/",
+  name: "KONG24H",
+  alternateName: ["kong24h", "kong24", "kong24h auto"],
+  url: "https://kong24h-main.com/",
 };
 const orgSchema = {
   "@context": "https://schema.org",
   "@type": "Organization",
-  name: "HYDRA888",
+  name: "KONG24H",
   logo: logoUrl,
   url: homePage,
 };
 const allSchemas = [webPageSchema, orgSchema, webSiteSchema];
 
 import { Picture } from "astro:assets";
-import image1 from "../assets/slide1.jpg";
-import image2 from "../assets/slide2.jpg";
+import image1 from "../assets/slide2.jpg";
 ---
 
 <MainLayout>
@@ -47,25 +47,22 @@ import image2 from "../assets/slide2.jpg";
 
   <Announcement />
 
-  <ContentBox title="HYDRA888 เว็บคาสิโนออนไลน์อันดับ 1 ระบบออโต้ที่ดีที่สุด">
+  <ContentBox title="KONG24H เว็บเดิมพันออนไลน์ล้ำสมัย ศูนย์รวมคาสิโนระดับโลก">
     <p class="leading-relaxed">
-      <strong class="text-amber-400">HYDRA888 เว็บคาสิโนออนไลน์อันดับ 1</strong> ไร้ปัญหาเว็บหน่วง เกมค้าง และเครดิตหายตอนโยกเงินที่ผู้เล่นเจอบ่อยที่สุดในช่วงเวลาคนเล่นเยอะ (Peak Time) เว็บ <strong
-        class="text-emerald-400">
-        HYDRA888
-      </strong> ของเราใช้ระบบออโต้เวอร์ชันล่าสุดที่เชื่อม API ตรงกับค่ายเกมระดับโลก รองรับคนเล่นพร้อมกันได้กว่า 100,000 ยูสเซอร์ โดยที่หน้าเว็บยังคงโหลดไว สัญญาณเสถียร ไม่ล่ม และคำนวณเงินแม่นยำด้วยระบบกระเป๋าเดียว
-      ไม่ต้องเสียเวลาโยกเงิน
+      <strong class="text-amber-400">KONG24H</strong> แพลตฟอร์มเว็บเดิมพันออนไลน์ที่ล้ำสมัยที่สุดในยุคนี้ เราได้รวบรวมความบันเทิงระดับโลกมาไว้ให้คุณในที่เดียว เพื่อมอบประสบการณ์การเล่นเกมคาสิโนที่เหนือชั้น
+      ปลอดภัย และได้มาตรฐานสากล ไม่ว่าคุณจะเป็นนักเดิมพันสายไหน ที่นี่คือคำตอบสุดท้ายที่จะเปลี่ยนทุกการสปินและการวางเดิมพันของคุณให้กลายเป็นผลกำไรได้อย่างคุ้มค่า เปิดให้บริการเต็มรูปแบบตลอด 24 ชั่วโมง
     </p>
 
-    <div class="mt-6 flex flex-wrap justify-center gap-4">
+    <div class="mt-8 flex flex-wrap justify-center gap-5">
       <a
         href="/login"
-        class="flex items-center justify-center rounded-lg border-2 border-red-500 bg-black px-10 py-3.5 font-black text-white shadow-[0_0_20px_rgba(185,28,28,0.4)] transition-transform hover:scale-105">
+        class="flex items-center justify-center rounded-full border-2 border-yellow-500 bg-[#4a0404] px-10 py-3.5 font-black text-yellow-400 shadow-[0_0_20px_rgba(234,179,8,0.3)] transition-transform hover:scale-105 hover:bg-[#5c0a0a]">
         เข้าสู่ระบบ
       </a>
       <a
         href="/register"
-        class="flex items-center justify-center rounded-lg bg-gradient-to-r from-red-700 to-red-900 px-10 py-3.5 font-black text-white shadow-[0_0_20px_rgba(185,28,28,0.6)] transition-transform hover:scale-105">
-        สมัครสมาชิก
+        class="flex items-center justify-center rounded-full bg-gradient-to-r from-yellow-400 via-yellow-500 to-yellow-600 px-10 py-3.5 font-black text-red-950 shadow-[0_0_20px_rgba(234,179,8,0.5)] transition-transform hover:scale-105">
+        สมัครสมาชิกใหม่
       </a>
     </div>
   </ContentBox>
@@ -74,46 +71,29 @@ import image2 from "../assets/slide2.jpg";
 
   <ProviderGrid />
 
-  <ContentBoxThreeColums titleleft="💀 เว็บใหญ่สายแดง" titlecenter="⚡ ฝากถอนไว 3 วิ" titleright="📱 รองรับทุกระบบ">
-    <div slot="left" class="text-sm text-red-100/70">มั่นคงด้วยทุนจดทะเบียนมหาศาล จ่ายหนัก จ่ายจริง ทุกยอดเดิมพัน</div>
-    <div slot="center" class="text-sm text-red-100/70">ระบบออโต้ที่เร็วที่สุดในไทย ไม่ต้องรอนาน ยอดเข้าทันใจใน 3 วินาที</div>
-    <div slot="right" class="text-sm text-red-100/70">เล่นได้ทุกที่ทุกเวลา ทั้งมือถือและคอมพิวเตอร์ ระบบไหลลื่นไม่มีสะดุด</div>
+  <ContentBoxThreeColums titleleft="🥇 เว็บอันดับ 1" titlecenter="⚡ ฝาก-ถอน ออโต้" titleright="💎 VIP SERVICE">
+    <div slot="left" class="text-sm text-red-100/80">การันตีคุณภาพด้วยยอดผู้เล่นสูงสุด คัดสรรเฉพาะค่ายเกมระดับโลก มั่นคง ปลอดภัย 100%</div>
+    <div slot="center" class="text-sm text-red-100/80">ทำรายการธุรกรรมการเงินด้วยระบบอัตโนมัติที่รวดเร็วที่สุด ไม่ต้องรอนาน ใช้งานง่ายตลอด 24 ชั่วโมง</div>
+    <div slot="right" class="text-sm text-red-100/80">ดูแลลูกค้าอย่างดีเยี่ยมดุจญาติมิตร ด้วยทีมงานคุณภาพที่พร้อมให้คำปรึกษาและแก้ไขปัญหาทันที</div>
   </ContentBoxThreeColums>
 
-  <ContentBoxTwo titleleft="สมัครสมาชิก HYDRA888 ทางเข้าเล่น เว็บตรงไม่ผ่านเอเย่นต์  มั่นคง ปลอดภัย" titleright="บริการเกมเดิมพันยอดนิยมบน HYDRA888">
+  <ContentBoxTwo titleleft="KONG24H เว็บคาสิโนล้ำสมัย อันดับ 1" titleright="KONG24H เชื่อม API ตรง เกมคาสิโนยอดฮิต รันครบจบทุกค่าย">
     <div slot="left" class="text-white/80">
       <p>
-        <strong class="text-emerald-400">HYDRA888 ทางเข้าเล่นเว็บตรง</strong> เปิดระบบลงทะเบียนที่ง่ายและปลอดภัยที่สุดเพื่อคุ้มครองสิทธิ์และข้อมูลของสมาชิกทุกคน คุณสามารถสมัครสมาชิกได้ด้วยตนเองผ่านระบบออโต้หน้าเว็บไซต์
-        โดยไม่ต้องแชร์ข้อมูลส่วนตัวกับแอดมิน ช่วยตัดความเสี่ยงเรื่องการถูกบิดยอดหรือโกงเงินจากเว็บตัวแทนทั่วไป ขั้นตอนสั้นกระชับเพียงกรอกเบอร์โทรศัพท์และบัญชีธนาคารเพื่อใช้ฝากถอน ระบบจะอนุมัติยูสเซอร์ให้เข้าใช้งานได้ทันที
-        พร้อมการันตีความมั่นคงด้วยฐานระบบที่ได้มาตรฐานสากล เล่นได้เท่าไหร่ถอนได้เต็มจำนวน ไม่มีหักเปอร์เซ็นต์
+        ก้าวสู่มิติใหม่ของกาเดิมพัน เปลี่ยนเวลาว่างๆเป็นให้สนุกและอาจะทำเงินได้ง่ายๆ ได้กับ <strong class="text-yellow-400">KONG24H</strong> เว็บคาสิโนล้ำสมัยที่ครองอันดับ 1 ในใจผู้เล่นทั่วประเทศ เราโดดเด่นด้วยการพัฒนาระบบหลังบ้านให้มีความเสถียรสูงสุด
+        รองรับการเข้าใช้งานพร้อมกันได้นับแสนคนโดยไม่มีอาการกระตุก นอกจากนี้เรายังเป็นเว็บตรงมั่นคงปลอดภัย 100% ที่การเงินหนาที่สุด ทำให้ผู้เล่นมั่นใจได้เลยว่า ทุกยอดถอนจะได้รับเงินจริง ครบทุกบาททุกสตางค์อย่างแน่นอน
       </p>
     </div>
     <div slot="right" class="text-white/80">
       <p>
-        รวมเกมเดิมพันยอดนิยม จากทุกค่ายใหญ่ระดับสากลมา <strong class="text-amber-400">HYDRA888</strong> จัดมาให้เลือกเล่นครบวงจรในที่เดียว สมาชิกสามารถเข้าเล่นได้ทุกประเภทเกมผ่านระบบกระเป๋าเดียว (Single
-        Wallet) ไม่ต้องเสียเวลาโยกเงินเข้าออก ยอดเครดิตอัปเดตไวแบบเรียลไทม์ ช่วยให้การเปลี่ยนเกมและค่ายเดิมพันลื่นไหลไม่มีสะดุด
+        หมดปัญหาเรื่องเกมค้างหรือโบนัสไม่เข้า เพราะที่ KONG24H เราใช้ระบบ <strong class="text-amber-400">เชื่อม API ตรง</strong> จากค่ายเกมชั้นนำระดับโลก ไม่ผ่านคนกลาง ทำให้สัญญาณเกมมีความแม่นยำ ลื่นไหล
+        และมีอัตราการชนะ (RTP) ที่เป็นธรรมที่สุด สนุกไปกับเกมคาสิโนยอดฮิตมากมาย:
       </p>
-    </div>
-  </ContentBoxTwo>
-
-  <ContentBoxTwo>
-    <div slot="left">
-      <h3 class="bg-gradient-to-b from-[#ffffff] to-[#b91c1c] bg-clip-text text-3xl font-black tracking-tight text-transparent drop-shadow-[0_0_8px_rgba(185,28,28,0.6)] md:text-2xl">
-        คาสิโนสด & บาคาร่าออนไลน์ ถ่ายทอดสดคมชัด
-      </h3>
-      <p>
-        คาสิโนสดและบาคาร่าออนไลน์ เว็บ <strong class="text-emerald-400">HYDRA888</strong> ส่งตรงสัญญาณภาพความละเอียดสูงระดับ Full HD เรียลไทม์ 24 ชั่วโมงจากคาสิโนต่างประเทศ ให้คุณวางเดิมพันร่วมกับดีลเลอร์มืออาชีพได้อย่างโปร่งใส
-        สัญญาณเสถียร ลื่นไหล ไม่มีปัญหากล้องกระตุก หรือระบบหน่วงตอนกดยืนยันเดิมพัน
-      </p>
-    </div>
-    <div slot="right">
-      <h3 class="bg-gradient-to-b from-[#ffffff] to-[#b91c1c] bg-clip-text text-3xl font-black tracking-tight text-transparent drop-shadow-[0_0_8px_rgba(185,28,28,0.6)] md:text-2xl">
-        สล็อตเว็บตรง แตกง่าย รวมทุกค่ายดัง
-      </h3>
-      <p>
-        สล็อตเว็บตรงแตกง่าย รวบรวมเกมลิขสิทธิ์แท้จากค่ายยักษ์ใหญ่ เช่น PG Slot, Joker Gaming และค่ายชั้นนำระดับโลก ตัวเกมมีค่า RTP สูงตามมาตรฐานสากล โบนัสแตกบ่อย แจกแจ็กพอตจริง
-        รองรับฟีเจอร์ซื้อฟรีสปิน และเปิดให้เริ่มต้นเบทขั้นต่ำเพียง 1 บาท ทุนน้อยก็ลุ้นรางวัลใหญ่ได้ทันที
-      </p>
+      <ul class="list-inside list-disc text-white/80">
+        <li class="mb-2">สล็อตออนไลน์: รวมค่ายดังอย่าง PG Slot, Pragmatic Play, Joker Gaming สล็อตแตกง่าย กราฟิก 3D ล้ำสมัย</li>
+        <li class="mb-2">คาสิโนสด (Live Casino): ส่งตรงสัญญาณคมชัดระดับ Full HD จาก Evolution Gaming, Sexy Baccarat, SA Gaming ให้คุณเดิมพันบาคาร่าและไฮโลแบบเรียลไทม์</li>
+        <li class="mb-2">เกมเดิมพันอื่นๆ: ครบครันทั้งเกมยิงปลา, เดิมพันกีฬา, และ E-Sports ยอดนิยม รับครบจบในเว็บเดียวไม่ต้องโยกเงิน</li>
+      </ul>
     </div>
   </ContentBoxTwo>
 
@@ -131,70 +111,52 @@ import image2 from "../assets/slide2.jpg";
         formats={["avif", "webp"]}
         fallbackFormat="webp"
         quality={80}
-        alt="Hydra Promotion"
-        class="mx-auto h-auto w-full rounded-xl border border-red-500/50 shadow-2xl"
+        alt="KONG24H VIP Service"
+        class="mx-auto h-auto w-full rounded-2xl border-2 border-yellow-500/30 shadow-[0_10px_30px_rgba(234,179,8,0.2)]"
       />
     </div>
     <div slot="right">
-      <h2 class="text-crimson-gradient mb-4 text-3xl font-black uppercase">ระบบฝาก-ถอนออโต้ HYDRA888 มั่นคง ปลอดภัย ทำรายการไวใน 3 วินาที</h2>
-      <p class="mb-5 text-white/70">
-        ธุรกรรมทางการเงินที่รวดเร็วและแม่นยำคือหัวใจสำคัญ แพลตฟอร์มของเราจึงเลือกใช้ระบบอัตโนมัติ (Auto) เต็มรูปแบบที่เชื่อมต่อตรงกับธนาคารชั้นนำทั่วประเทศและ ทรูมันนี่ วอลเล็ท (TrueMoney Wallet)
-        สมาชิกสามารถทำรายการฝาก-ถอนเงินได้ด้วยตัวเองอย่างอิสระโดยไม่มีขั้นต่ำ ปลอดภัยสูงสุดเพราะไม่ต้องทำรายการผ่านคนกลาง ช่วยตัดปัญหาข้อมูลรั่วไหลหรือยอดเครดิตตกค้าง ระบบประมวลผลอัปเดตยอดเงินไวใน 3
-        วินาที จ่ายจริงทุกยอดถอนของ <strong class="text-amber-400">HYDRA888</strong> มั่นคง ตรงเวลา และไม่ต้องเสียเวลาส่งสลิปให้แอดมินตรวจสอบอีกต่อไป
-      </p>
-      <a href="/register" class="rounded-full bg-red-600 px-8 py-3 font-bold text-white shadow-lg hover:bg-red-700">รับสิทธิ์สมาชิก VIP</a>
+      <h2 class="text-imperial-gradient mb-4 text-3xl font-black uppercase">รวมโปรเด็ดดวงและสิทธิพิเศษสำหรับสมาชิก KONG24H</h2>
+      <p class="mb-6 text-white/80">เราพร้อมซัพพอร์ตนักเดิมพันทุกคนด้วย โปรเด็ดดวง และสิทธิพิเศษมากมายที่คุ้มค่ากว่าเว็บไหนๆ เพื่อเพิ่มทุนและเพิ่มโอกาสในการชนะรางวัลใหญ่ให้กับคุณ:</p>
+      <ul class="list-inside list-disc text-white/80">
+        <li class="mb-2">โปรโมชันสมาชิกใหม่: รับโบนัสต้อนรับทันทีเมื่อทำการสมัครและฝากเงินครั้งแรก</li>
+        <li class="mb-2">โบนัสเงินฝากรายวัน: แจกเครดิตเพิ่มให้ทุกยอดฝาก ยิ่งฝากมากยิ่งได้สิทธิ์หมุนวงล้อลุ้นโชคใหญ่</li>
+        <li class="mb-2">กิจกรรมแจกทองและเครดิตฟรี: ร่วมสนุกกับกิจกรรมพิเศษของทางเว็บไซต์ที่มีจัดขึ้นเป็นประจำทุกสัปดาห์</li>
+      </ul>
+      <a href="/line" class="inline-flex items-center rounded-full bg-[#00B900] px-8 py-3 font-bold text-white shadow-lg transition-transform hover:scale-105">
+        <span class="mr-2 text-xl">💬</span> LINE Call Center
+      </a>
     </div>
   </ContentBoxSevenThree>
-
-  <ContentBoxSevenThree>
-    <div slot="left" class="flex h-full flex-col justify-center">
-      <Picture
-        src={image2}
-        loading="lazy"
-        fetchpriority="low"
-        widths={[200, 400, 600, 800]}
-        sizes="(max-width: 768px) 100vw, 50vw"
-        decoding="async"
-        formats={["avif", "webp"]}
-        fallbackFormat="webp"
-        quality={80}
-        alt="Hydra Promotion"
-        class="mx-auto h-auto w-full rounded-xl border border-red-500/50 shadow-2xl"
-      />
-    </div>
-    <div slot="right">
-      <h2 class="text-crimson-gradient mb-4 text-3xl font-black uppercase">ทางเข้า HYDRA888 อัปเดตล่าสุด 2026 และวิธีแก้เมื่อเข้าหน้าเว็บไม่ได้</h2>
-      <p class="mb-5 text-white/70">
-        ลิงก์ทางเข้าเสีย หน้าจอขาว หรือระบบไม่โหลด มักเกิดจากการบล็อกสัญญาณของเครือข่ายอินเทอร์เน็ตในประเทศ ทีมงานของเราจึงคอยทดสอบและอัปเดตลิงก์สำรองล่าสุดปี 2026 อยู่เสมอ
-        เพื่อให้สมาชิกเข้าใช้งานกระเป๋าเงินและเล่นเกมได้อย่างต่อเนื่องไม่มีสะดุด หากคุณพบปัญหาเข้าหน้าหลักไม่ได้ สามารถใช้แนวทางแก้ไขเบื้องต้นที่ได้ผลแน่นอนดังนี้ครับ
-      </p>
-      <h3 class="text-crimson-gradient mb-4 text-2xl font-black uppercase">วิธีเคลียร์แคชและรีเซ็ตสัญญาณเบื้องต้นเมื่อหน้าเว็บโหลดไม่ขึ้น</h3>
+  <ContentBoxTwo titleleft="สมัครสมาชิก KONG24H ง่ายๆ ใน 3 ขั้นตอน" titleright="ฝากถอน ไม่มีขั้นต่ำ คืนยอดเสียสูงถึง10%">
+    <div slot="left" class="text-white/80">
+      <p>เริ่มต้นความสนุกและเข้ารับโปรเด็ดดวงกับเว็บอันดับ 1 ได้ง่ายๆ ภายในเวลาไม่ถึง 1 นาที ด้วยระบบสมัครสมาชิกอัตโนมัติ:</p>
       <ul>
-        <li class="mb-2">
-          1. ล้างแคชเบราว์เซอร์ (Clear Cache): เข้าไปที่เมนูตั้งค่าของ Chrome หรือ Safari จากนั้นกดล้างประวัติการเข้าชมและข้อมูลแคชเก่าออก เพื่อเคลียร์หน้าเว็บเดิมที่ค้างอยู่ในระบบ
-          แล้วจึงกดเข้าลิงก์ใหม่อีกครั้ง
-        </li>
-        <li class="mb-2">
-          2. สลับสัญญาณอินเทอร์เน็ตเพื่อเปลี่ยน IP: หากใช้งานผ่าน Wi-Fi แล้วติดปัญหา ให้ลองสลับมาใช้สัญญาณมือถือ (Mobile Data) หรือใช้วิธีเปิด-ปิด "โหมดเครื่องบิน" (Airplane Mode) ทิ้งไว้ 5 วินาที
-          เพื่อให้ระบบรีเซ็ตสัญญาณและเปลี่ยนหมายเลข IP ใหม่
-        </li>
+        <li class="mb-2">เข้าสู่หน้าเว็บ: คลิกที่ปุ่ม "สมัครสมาชิก" บนหน้าเว็บไซต์ KONG24H</li>
+        <li class="mb-2">กรอกข้อมูล: ใส่เบอร์โทรศัพท์ และข้อมูลบัญชีธนาคารสำหรับใช้ฝาก-ถอน (ข้อมูลจะถูกเก็บเป็นความลับสูงสุด)</li>
+        <li class="mb-2">เข้าเล่นได้ทันที: รับ Username และ Password จากนั้นล็อกอินเข้าสู่ระบบ เลือกรับโปรโมชันที่ต้องการแล้วลุยได้เลย!</li>
       </ul>
     </div>
-  </ContentBoxSevenThree>
-
+    <div slot="right" class="text-white/80">
+      <p>
+        อิสระทางการเงินที่แท้จริงเริ่มต้นที่นี่ KONG24H เปิดโอกาสให้ผู้เล่นทุกระดับทุนเข้ามาร่วมสนุกได้อย่างเท่าเทียมด้วยระบบ <strong class="text-yellow-400">ฝากถอน ไม่มีขั้นต่ำ</strong> มี 1 บาทก็ฝากเข้ามาเล่นได้
+        ทำรายการผ่านระบบออโต้รวดเร็วใน 3 วินาที และพิเศษสุดสำหรับสมาชิกของเรา เล่นเสียเราไม่ปล่อยให้หมดหวัง! ซัพพอร์ตด้วยการ คืนยอดเสียสูงถึง 10% ทุกวัน ให้คุณมีทุนกลับไปแก้มือและทำกำไรได้ใหม่อีกครั้ง
+      </p>
+    </div>
+  </ContentBoxTwo>
   <ContentBox>
-    <h2 class="text-crimson-gradient mb-4 text-3xl font-black uppercase">HYDRA888 มาตรฐานความปลอดภัยและใบอนุญาตการดำเนินงานระดับเอเชีย</h2>
-    <p class="leading-relaxed">
-      <strong class="text-emerald-400">HYDRA888</strong> เปิดให้บริการอย่างถูกต้องด้วยใบอนุญาตเดิมพันออนไลน์ระดับเอเชีย การันตีความปลอดภัยด้วยระบบเข้ารหัส SSL มาตรฐานเดียวกับสถาบันการเงิน ข้อมูลและยอดเงินของสมาชิกทั้งหมดจึงได้รับการคุ้มครองสูงสุด
-      ตัวเกมผ่านการตรวจสอบค่า RTP สากล มั่นใจได้ว่าโปร่งใส ไม่มีการล็อคยูสเซอร์ พร้อมกองทุนสำรองที่มั่นคง รองรับยอดถอนหลักล้าน จ่ายจริงทุกบิล ไม่มีบิดแน่นอน
+    <h2 class="text-imperial-gradient mb-4 text-3xl font-black uppercase">รวมโปรเด็ดดวงและสิทธิพิเศษสำหรับสมาชิก KONG24H</h2>
+    <p>
+      คุณสามารถเข้าถึงความสนุกกับ KONG24H ได้อย่างสะดวกสบายผ่าน <strong class="text-amber-400">ทางเข้า เว็บเดิมพัน</strong> ที่ทีมงานของเราคอยอัปเดตลิงก์ใหม่ล่าสุดอยู่เสมอ เพื่อป้องกันปัญหาลิงก์เสียหรือโดนบล็อก
+      รองรับการใช้งานตลอด 24 ชั่วโมงในทุกแพลตฟอร์ม ระบบมือถือ รองรับทั้ง iOS และ Android เล่นผ่านเบราว์เซอร์ได้ทันทีโดยไม่ต้องดาวน์โหลดแอปพลิเคชัน ระบบคอมพิวเตอร์: รองรับทั้ง Windows และ Mac หน้าจอปรับขนาดอัตโนมัติ
+      (Responsive Design) สวยงาม เต็มตา ทุกอุปกรณ์
     </p>
   </ContentBox>
-
   <Navfoot />
 
   <style>
-    :global(.text-crimson-gradient) {
-      background: linear-gradient(to bottom, #ffffff 0%, #b91c1c 100%) !important;
+    :global(.text-imperial-gradient) {
+      background: linear-gradient(to bottom, #fef08a 0%, #ca8a04 100%) !important;
       -webkit-background-clip: text !important;
       -webkit-text-fill-color: transparent !important;
     }

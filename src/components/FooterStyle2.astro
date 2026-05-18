@@ -2,134 +2,112 @@
 import { Picture } from "astro:assets";
 
 const images = import.meta.glob<{ default: ImageMetadata }>("../assets/logo.{png,webp,jpg}", { eager: true });
-
 const imagePaths = Object.keys(images);
 const mainLogo = imagePaths.length > 0 ? images[imagePaths[0]].default : null;
 ---
 
-<footer class="relative w-full overflow-hidden border-t-[3px] border-yellow-500 bg-[#020617] pt-16 pb-8 font-sans text-white">
-  <div class="pointer-events-none absolute top-0 right-0 h-96 w-96 rounded-full bg-yellow-600/5 blur-[100px]"></div>
-  <div class="pointer-events-none absolute bottom-0 left-0 h-96 w-96 rounded-full bg-yellow-600/5 blur-[100px]"></div>
+<footer class="relative w-full overflow-hidden border-t-[3px] border-yellow-500 bg-[#1a0202] pt-16 pb-8 font-sans text-white shadow-[0_-10px_30px_rgba(234,179,8,0.15)]">
+  <div class="pointer-events-none absolute top-0 right-0 h-96 w-96 rounded-full bg-yellow-600/10 blur-[100px]"></div>
+  <div class="pointer-events-none absolute bottom-0 left-0 h-96 w-96 rounded-full bg-red-700/10 blur-[100px]"></div>
 
   <div class="relative z-10 mx-auto w-full max-w-[1200px] px-6">
     <div class="mb-12 grid grid-cols-1 gap-10 md:grid-cols-2 lg:grid-cols-4 lg:gap-8">
       <div class="flex flex-col gap-5">
         <a href="/" class="inline-block origin-left transition-transform hover:scale-105">
-          <Picture src={mainLogo!} alt="MAHAGAME66 Logo" class="h-[50px] w-auto drop-shadow-[0_0_15px_rgba(234,179,8,0.3)]" formats={["avif", "webp"]} fallbackFormat="webp" />
+          {
+            mainLogo ? (
+              <Picture src={mainLogo} alt="KONG24H Logo" class="h-[50px] w-auto drop-shadow-[0_0_15px_rgba(234,179,8,0.4)]" formats={["avif", "webp"]} fallbackFormat="webp" />
+            ) : (
+              <h2 class="bg-gradient-to-b from-[#fef08a] to-[#ca8a04] bg-clip-text text-4xl font-black text-transparent drop-shadow-[0_0_10px_rgba(234,179,8,0.3)]">KONG24H</h2>
+            )
+          }
         </a>
-        <p class="text-sm leading-relaxed text-white">
-          LONDON45 ทางเข้าหลักสล็อตเว็บตรง แท้ มาตรฐาน API แท้ ล็อกอินปลอดภัย เล่นผ่านมือถือรวมคลังเกมสล็อต แตกหนัก ลอนดอน45 จ่ายจริง ตรงเวลา โปรโคตรเด็ด
-        </p>
+        <p class="text-sm leading-relaxed text-red-50/80">KONG24H เว็บใหญ่อันดับ 1 คาสิโนออนไลน์ สล็อต บาคาร่า หวย กีฬา ฝากถอนออโต้ 24 ชั่วโมง การันตีคุณภาพระดับ VIP มั่นคง ปลอดภัย 100%</p>
         <div class="mt-2 flex items-center gap-3">
-          <div class="flex items-center gap-1.5 rounded border border-green-500/30 bg-green-500/10 px-3 py-1.5 text-xs font-bold text-green-400">
-            <span class="text-base">🛡️</span> 100% SECURE
+          <div class="flex items-center gap-1.5 rounded border border-yellow-500/50 bg-yellow-500/10 px-3 py-1.5 text-xs font-bold text-yellow-400 shadow-[0_0_10px_rgba(234,179,8,0.2)]">
+            <span class="text-base">👑</span> VIP SERVICE
           </div>
-          <div class="flex items-center gap-1.5 rounded border border-yellow-500/30 bg-yellow-500/10 px-3 py-1.5 text-xs font-bold text-yellow-500">
-            <span class="text-base">⚡</span> AUTO SYSTEM
+          <div class="flex items-center gap-1.5 rounded border border-green-500/50 bg-green-500/10 px-3 py-1.5 text-xs font-bold text-green-400">
+            <span class="text-base">⚡</span> AUTO 24H
           </div>
         </div>
       </div>
 
       <nav aria-label="Quick Links" class="flex flex-col gap-4 lg:pl-8">
         <h3 class="flex items-center gap-2 text-lg font-extrabold text-white">
-          <span class="h-6 w-1.5 rounded-full bg-yellow-500"></span> เมนูหลัก
+          <span class="h-6 w-1.5 rounded-full bg-gradient-to-b from-yellow-300 to-yellow-600"></span> เมนูหลัก
         </h3>
         <ul class="flex flex-col gap-3 text-sm">
-          <li>
-            <a href="/" class="group flex items-center text-white transition-all hover:text-yellow-400">
-              <span class="mr-2 -ml-4 text-yellow-500 opacity-0 transition-all group-hover:ml-0 group-hover:opacity-100">➤</span>
-              หน้าแรก
-            </a>
-          </li>
-          <li>
-            <a href="/promotion" class="group flex items-center text-white transition-all hover:text-yellow-400">
-              <span class="mr-2 -ml-4 text-yellow-500 opacity-0 transition-all group-hover:ml-0 group-hover:opacity-100">➤</span>
-              โปรโมชั่น
-            </a>
-          </li>
-          <li>
-            <a href="/register" class="group flex items-center text-white transition-all hover:text-yellow-400">
-              <span class="mr-2 -ml-4 text-yellow-500 opacity-0 transition-all group-hover:ml-0 group-hover:opacity-100">➤</span>
-              สมัครสมาชิก
-            </a>
-          </li>
-          <li>
-            <a href="/ทดลองเล่น" class="group flex items-center text-white transition-all hover:text-yellow-400">
-              <span class="mr-2 -ml-4 text-yellow-500 opacity-0 transition-all group-hover:ml-0 group-hover:opacity-100">➤</span>
-              ทดลองเล่นสล็อต
-            </a>
-          </li>
+          {
+            [
+              { name: "หน้าแรก", path: "/" },
+              { name: "โปรโมชั่น", path: "/promotion" },
+              { name: "สมัครสมาชิก", path: "/register" },
+              { name: "เข้าสู่ระบบ", path: "/login" },
+            ].map((link) => (
+              <li>
+                <a href={link.path} class="group flex items-center text-red-50/80 transition-all hover:text-yellow-400">
+                  <span class="mr-2 -ml-4 text-yellow-500 opacity-0 transition-all group-hover:ml-0 group-hover:opacity-100">➤</span>
+                  {link.name}
+                </a>
+              </li>
+            ))
+          }
         </ul>
       </nav>
 
       <nav aria-label="Game Categories" class="flex flex-col gap-4">
         <h3 class="flex items-center gap-2 text-lg font-extrabold text-white">
-          <span class="h-6 w-1.5 rounded-full bg-yellow-500"></span> หมวดหมู่เกม
+          <span class="h-6 w-1.5 rounded-full bg-gradient-to-b from-yellow-300 to-yellow-600"></span> หมวดหมู่เกม
         </h3>
         <ul class="flex flex-col gap-3 text-sm">
-          <li>
-            <a href="/register" class="group flex items-center text-white transition-all hover:text-white">
-              <span class="mr-3 h-1.5 w-1.5 rounded-full bg-gray-600 transition-colors group-hover:bg-yellow-500"></span>
-              สล็อตออนไลน์ (Slot)
-            </a>
-          </li>
-          <li>
-            <a href="/register" class="group flex items-center text-white transition-all hover:text-white">
-              <span class="mr-3 h-1.5 w-1.5 rounded-full bg-gray-600 transition-colors group-hover:bg-yellow-500"></span>
-              คาสิโนสด (Live Casino)
-            </a>
-          </li>
-          <li>
-            <a href="/register" class="group flex items-center text-white transition-all hover:text-white">
-              <span class="mr-3 h-1.5 w-1.5 rounded-full bg-gray-600 transition-colors group-hover:bg-yellow-500"></span>
-              บาคาร่า (Baccarat)
-            </a>
-          </li>
-          <li>
-            <a href="/register" class="group flex items-center text-white transition-all hover:text-white">
-              <span class="mr-3 h-1.5 w-1.5 rounded-full bg-gray-600 transition-colors group-hover:bg-yellow-500"></span>
-              ยิงปลา (Fish Hunter)
-            </a>
-          </li>
+          {
+            ["สล็อตออนไลน์ (Slot)", "คาสิโนสด (Live Casino)", "บาคาร่า (Baccarat)", "เดิมพันกีฬา (Sportsbook)"].map((game) => (
+              <li>
+                <a href="/register" class="group flex items-center text-red-50/80 transition-all hover:text-white">
+                  <span class="mr-3 h-1.5 w-1.5 rounded-full bg-red-800 transition-colors group-hover:bg-yellow-500 group-hover:shadow-[0_0_8px_rgba(234,179,8,0.8)]" />
+                  {game}
+                </a>
+              </li>
+            ))
+          }
         </ul>
       </nav>
 
       <div class="flex flex-col gap-5">
         <h3 class="flex items-center gap-2 text-lg font-extrabold text-white">
-          <span class="h-6 w-1.5 rounded-full bg-yellow-500"></span> บริการลูกค้า 24 ชม.
+          <span class="h-6 w-1.5 rounded-full bg-gradient-to-b from-yellow-300 to-yellow-600"></span> บริการลูกค้า
         </h3>
 
         <a
           href="/line"
-          class="flex w-full items-center justify-center gap-2 rounded-lg bg-[#00B900] py-3 font-bold text-white shadow-[0_0_15px_rgba(0,185,0,0.3)] transition-colors hover:bg-[#009900]">
-          <span class="text-xl font-black">LINE</span> LONDON45
+          class="flex w-full items-center justify-center gap-2 rounded-lg bg-[#00B900] py-3 font-bold text-white shadow-[0_0_15px_rgba(0,185,0,0.3)] transition-transform hover:scale-105">
+          <span class="text-xl font-black">LINE</span> @KONG24H
         </a>
 
         <div class="mt-2">
-          <p class="mb-3 text-xs font-bold tracking-wider text-gray-500 uppercase">รองรับทุกธนาคาร & True Wallet</p>
+          <p class="mb-3 text-xs font-bold tracking-wider text-yellow-600/80 uppercase">รองรับทุกธนาคาร & True Wallet</p>
           <div class="flex flex-wrap gap-2">
-            <div class="flex h-6 w-10 items-center justify-center rounded border border-white/10 bg-[#118A44] text-[10px] font-bold text-white" title="KBANK">K</div>
-            <div class="flex h-6 w-10 items-center justify-center rounded border border-white/10 bg-[#4E2B7A] text-[10px] font-bold text-white" title="SCB">S</div>
-            <div class="flex h-6 w-10 items-center justify-center rounded border border-white/10 bg-[#1BA1E2] text-[10px] font-bold text-white" title="KTB">K</div>
-            <div class="flex h-6 w-10 items-center justify-center rounded border border-white/10 bg-[#00508F] text-[10px] font-bold text-white" title="BBL">B</div>
-            <div class="flex h-6 w-10 items-center justify-center rounded border border-white/10 bg-gradient-to-r from-orange-500 to-orange-400 text-[10px] font-bold text-white" title="TrueMoney">
-              TW
-            </div>
+            <div class="flex h-6 w-10 items-center justify-center rounded border border-yellow-500/30 bg-[#118A44] text-[10px] font-bold text-white">K</div>
+            <div class="flex h-6 w-10 items-center justify-center rounded border border-yellow-500/30 bg-[#4E2B7A] text-[10px] font-bold text-white">S</div>
+            <div class="flex h-6 w-10 items-center justify-center rounded border border-yellow-500/30 bg-[#1BA1E2] text-[10px] font-bold text-white">K</div>
+            <div class="flex h-6 w-10 items-center justify-center rounded border border-yellow-500/30 bg-[#00508F] text-[10px] font-bold text-white">B</div>
+            <div class="flex h-6 w-10 items-center justify-center rounded border border-yellow-500/30 bg-gradient-to-r from-orange-500 to-orange-400 text-[10px] font-bold text-white">TW</div>
           </div>
         </div>
       </div>
     </div>
 
-    <div class="mb-6 flex flex-wrap justify-center gap-4 border-y border-white/5 py-6 opacity-50 grayscale transition-all duration-500 hover:opacity-100 hover:grayscale-0 md:gap-8">
+    <div class="mb-6 flex flex-wrap justify-center gap-4 border-y border-red-900/50 py-6 opacity-60 grayscale transition-all duration-500 hover:opacity-100 hover:grayscale-0 md:gap-8">
       <span class="text-lg font-black text-gray-300 italic md:text-2xl">PG<span class="text-yellow-500">SLOT</span></span>
-      <span class="text-lg font-black text-gray-300 italic md:text-2xl">JOKER<span class="text-red-500">GAMING</span></span>
-      <span class="text-lg font-black text-gray-300 italic md:text-2xl">PRAGMATIC<span class="text-orange-500">PLAY</span></span>
-      <span class="text-lg font-black text-gray-300 italic md:text-2xl">JILI<span class="text-yellow-500">CITY</span></span>
+      <span class="text-lg font-black text-gray-300 italic md:text-2xl">SEXY<span class="text-pink-500">BACCARAT</span></span>
       <span class="text-lg font-black text-gray-300 italic md:text-2xl">SA<span class="text-green-500">GAMING</span></span>
+      <span class="text-lg font-black text-gray-300 italic md:text-2xl">JOKER<span class="text-red-500">GAMING</span></span>
+      <span class="text-lg font-black text-gray-300 italic md:text-2xl">JILI<span class="text-yellow-500">CITY</span></span>
     </div>
 
-    <div class="flex flex-col items-center justify-between gap-4 text-xs text-gray-600 md:flex-row">
-      <p>&copy; {new Date().getFullYear()} <span class="text-white">LONDON45</span>. All rights reserved. เว็บพนันออนไลน์ถูกกฎหมาย</p>
+    <div class="flex flex-col items-center justify-between gap-4 text-xs text-red-200/50 md:flex-row">
+      <p>&copy; {new Date().getFullYear()} <span class="font-bold text-yellow-500">KONG24H</span>. All rights reserved. เว็บคาสิโนออนไลน์อันดับ 1</p>
       <div class="flex gap-4">
         <a href="/" class="transition-colors hover:text-yellow-500">เงื่อนไขการให้บริการ</a>
         <a href="/" class="transition-colors hover:text-yellow-500">นโยบายความเป็นส่วนตัว</a>

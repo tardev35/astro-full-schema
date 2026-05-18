@@ -2,16 +2,16 @@
 import { Image } from "astro:assets";
 import Bg from "../assets/bg.jpg";
 import "../styles/global.css";
-import NavbarStyle6 from "../components/NavbarStyle5.astro";
-import Footer from "../components/FooterStyle3.astro";
+import NavbarStyle6 from "../components/NavbarStyle10.astro";
+import Footer from "../components/FooterStyle2.astro";
 
 const bannerImages = import.meta.glob<{ default: ImageMetadata }>("../assets/banner*.{png,webp,jpg,jpeg}", { eager: true });
 const bannerPaths = Object.keys(bannerImages);
 const mainBanner = bannerPaths.length > 0 ? bannerImages[bannerPaths[0]].default : null;
 
 const {
-  title = "HYDRA888 เว็บตรงไม่ผ่านเอเย่นต์ สมัครสมาชิก คาสิโนออนไลน์อันดับ 1",
-  description = "HYDRA888 ทางเข้าเล่น คาสิโนออนไลน์อันดับ 1 เว็บตรง เว็บตรงไม่ผ่านเอเย่นต์ รวมบาคาร่า สล็อต ครบวงจร ระบบออโต้ไวใน 3 วินาที ความปลอดภัย ระดับเอเชีย ",
+  title = "KONG24H เว็บเดิมพัน อันดับ 1 เกมคาสิโนล้ำสมัย โปรเด็ดดวง",
+  description = "KONG24H เว็บเดิมพันออนไลน์ อันดับ 1 มี เกมคาสิโนล้ำสมัย เชื่อม API ตรง ทางเข้า ใช้งานได้ 24 ชั่วโมง ทุกระบบ KONG24H สมัครง่าย มีโปรเด็ดดวง รอคุณอยู่",
   robots = "index, follow",
   ImageOg = "/pro3.webp",
 } = Astro.props;
@@ -19,13 +19,13 @@ const {
 const currentPath = Astro.url.pathname;
 const canonicalURL = new URL(currentPath, Astro.site);
 const ogImageURL = new URL(ImageOg, Astro.site);
-const ogSiteName = "HYDRA888";
+const ogSiteName = "KONG24H";
 ---
 
 <html lang="th">
   <head>
     <meta charset="utf-8" />
-    <meta name="google-site-verification" content="jfGRMBlbNveJZiYJSxFyg3zJCHgg5yZfn-7wsVdKz_Q" />
+    <meta name="google-site-verification" content="PRYGSapONSAnHeSmCTDNk6YDgYieY_xxmqnQdsya4Bc" />
     <meta name="robots" content={robots} />
     <meta name="googlebot" content={robots} />
     <title>{title}</title>

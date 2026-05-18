@@ -19,6 +19,6 @@ export default defineConfig({
     '/line': 'https://tinyurl.com/linepigpg'
   },
 
-  site: 'https://hydra888auto.com',
+  site: 'https://kong24h-main.com',
   integrations: [sitemap()]
 });

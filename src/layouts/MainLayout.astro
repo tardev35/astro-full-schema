@@ -2,16 +2,16 @@
 import { Image } from "astro:assets";
 import Bg from "../assets/bg.jpg";
 import "../styles/global.css";
-import NavbarStyle6 from "../components/NavbarStyle3.astro";
-import Footer from "../components/Footer.astro";
+import NavbarStyle6 from "../components/NavbarStyle5.astro";
+import Footer from "../components/FooterStyle3.astro";
 
 const bannerImages = import.meta.glob<{ default: ImageMetadata }>("../assets/banner*.{png,webp,jpg,jpeg}", { eager: true });
 const bannerPaths = Object.keys(bannerImages);
 const mainBanner = bannerPaths.length > 0 ? bannerImages[bannerPaths[0]].default : null;
 
 const {
-  title = "FUNNEMO เว็บสล็อตลิขสิทธิ์แท้ API ต่างประเทศ 2026 | ทางเข้าหลัก",
-  description = "FUNNEMO เว็บสล็อตลิขสิทธิ์แท้ API ต่างประเทศ ความเสถียรสูงสุด บนมือถือ อัตราจ่ายยุติธรรม ฝากถอนฉับไว บริการระดับ vip ทางเข้าหลัก FUNNEMO ที่ปลอดภัย",
+  title = "HYDRA888 เว็บตรงไม่ผ่านเอเย่นต์ สมัครสมาชิก คาสิโนออนไลน์อันดับ 1",
+  description = "HYDRA888 ทางเข้าเล่น คาสิโนออนไลน์อันดับ 1 เว็บตรง เว็บตรงไม่ผ่านเอเย่นต์ รวมบาคาร่า สล็อต ครบวงจร ระบบออโต้ไวใน 3 วินาที ความปลอดภัย ระดับเอเชีย ",
   robots = "index, follow",
   ImageOg = "/pro3.webp",
 } = Astro.props;
@@ -19,13 +19,13 @@ const {
 const currentPath = Astro.url.pathname;
 const canonicalURL = new URL(currentPath, Astro.site);
 const ogImageURL = new URL(ImageOg, Astro.site);
-const ogSiteName = "FUNNEMO";
+const ogSiteName = "HYDRA888";
 ---
 
 <html lang="th">
   <head>
     <meta charset="utf-8" />
-    <meta name="google-site-verification" content="yTegarIr0l481yFn3R9gqUq3fj5gITO9BpjZgbuKAF8" />
+    <meta name="google-site-verification" content="jfGRMBlbNveJZiYJSxFyg3zJCHgg5yZfn-7wsVdKz_Q" />
     <meta name="robots" content={robots} />
     <meta name="googlebot" content={robots} />
     <title>{title}</title>

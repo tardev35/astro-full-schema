@@ -1,19 +1,26 @@
 ---
-// รับข้อความมาจาก Props ถ้าไม่ใส่จะใช้ค่า Default ของ SIXSLOT-BKK
-const { message = "🚀 SIXSLOT-BKK อัปเดตระบบใหม่! ฝาก-ถอน Auto ภายใน 3 วินาที รองรับทุกธนาคารและ True Wallet" } = Astro.props;
+const { message = "🔥 HYDRA888: เว็บใหญ่สายแดง ระบบใหม่ 2026 ฝาก-ถอนไวใน 3 วินาที รองรับทุกระบบธนาคาร" } = Astro.props;
 ---
 
-<div class="mx-auto max-w-[900px] p-2">
-  <div class="relative flex h-[48px] items-center bg-[#051a10] p-[2px] [clip-path:polygon(15px_0,100%_0,100%_calc(100%-15px),calc(100%-15px)_100%,0_100%,0_15px)]">
-    <div class="flex h-full w-full items-center bg-gradient-to-r from-[#022c22] to-[#000000] [clip-path:polygon(14px_0,100%_0,100%_calc(100%-14px),calc(100%-14px)_100%,0_100%,0_14px)]">
-      <div class="flex h-full items-center border-r border-emerald-500/30 bg-emerald-500/10 px-4 md:px-6">
-        <span class="font-mono text-sm font-bold tracking-widest text-emerald-400 drop-shadow-[0_0_8px_rgba(52,211,153,0.8)]">SYSTEM</span>
+<div class="mx-auto w-full max-w-7xl px-4 py-3 font-sans">
+  <div class="relative overflow-hidden rounded-md border border-red-900/50 bg-[#050000] shadow-[0_0_15px_rgba(185,28,28,0.15)]">
+    <div class="absolute top-0 -left-4 h-full w-8 -skew-x-12 bg-red-700"></div>
+    <div class="absolute top-0 -right-4 h-full w-8 -skew-x-12 bg-red-900/30"></div>
+
+    <div class="flex items-center">
+      <div class="relative z-10 flex w-12 shrink-0 items-center justify-center bg-red-700 py-2.5">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 animate-pulse text-white drop-shadow-[0_0_5px_rgba(255,255,255,0.8)]" viewBox="0 0 20 20" fill="currentColor">
+          <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7 4a1 1 0 11-2 0 1 1 0 012 0zm-1-9a1 1 0 00-1 1v4a1 1 0 102 0V6a1 1 0 00-1-1z" clip-rule="evenodd"></path>
+        </svg>
       </div>
 
-      <div class="flex-1 overflow-hidden [mask-image:linear-gradient(90deg,transparent_0%,#000_10%,#000_90%,transparent_100%)]">
-        <div class="flex w-max animate-[scroll_20s_linear_infinite] gap-16 pl-6 text-sm font-medium whitespace-nowrap text-emerald-50">
-          <span class="tracking-wide">{message}</span>
-          <span class="tracking-wide">{message}</span>
+      <div class="marquee-container relative flex-1 overflow-hidden py-2.5 pr-6">
+        <div class="pointer-events-none absolute top-0 left-0 z-10 h-full w-8 bg-gradient-to-r from-[#050000] to-transparent"></div>
+        <div class="pointer-events-none absolute top-0 right-0 z-10 h-full w-12 bg-gradient-to-l from-[#050000] to-transparent"></div>
+
+        <div class="marquee-content inline-block pl-4 text-sm font-bold tracking-wide whitespace-nowrap text-red-400">
+          <span class="mr-8 inline-flex items-center gap-2"><span class="h-1.5 w-1.5 rounded-full bg-red-500 shadow-[0_0_5px_rgba(239,68,68,0.8)]"></span>{message}</span>
+          <span class="mr-8 inline-flex items-center gap-2"><span class="h-1.5 w-1.5 rounded-full bg-red-500 shadow-[0_0_5px_rgba(239,68,68,0.8)]"></span>{message}</span>
         </div>
       </div>
     </div>
@@ -21,12 +28,21 @@ const { message = "🚀 SIXSLOT-BKK อัปเดตระบบใหม่! 
 </div>
 
 <style>
-  @keyframes scroll {
-    from {
+  .font-sans {
+    font-family: "Kanit", sans-serif;
+  }
+  .marquee-content {
+    animation: marquee 25s linear infinite;
+  }
+  .marquee-container:hover .marquee-content {
+    animation-play-state: paused;
+  }
+  @keyframes marquee {
+    0% {
       transform: translateX(0);
     }
-    to {
-      transform: translateX(calc(-50% - 32px));
+    100% {
+      transform: translateX(-50%);
     }
   }
 </style>

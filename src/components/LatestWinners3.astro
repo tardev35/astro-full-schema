@@ -1,0 +1,80 @@
+---
+import kbankLogo from "../assets/banks/kbank.png";
+import scbLogo from "../assets/banks/scb.png";
+import krungsriLogo from "../assets/banks/krungsri.png";
+import ktbLogo from "../assets/banks/ktb.png";
+
+const bankPool = [
+  { name: "KBank", color: "bg-[#1155cc]", icon: kbankLogo.src },
+  { name: "SCB", color: "bg-[#4e1c80]", icon: scbLogo.src },
+  { name: "Krungsri", color: "bg-[#fcd34d]", icon: krungsriLogo.src },
+  { name: "KTB", color: "bg-[#0ea5e9]", icon: ktbLogo.src },
+];
+---
+
+<div class="mx-auto w-full max-w-[900px] p-4 font-sans">
+  <div class="relative overflow-hidden rounded-[30px] border-2 border-cyan-900/50 bg-[#001a33]/90 px-4 py-8 shadow-lg backdrop-blur-md md:p-10">
+    <div class="mb-8 text-center">
+      <h2 class="bg-gradient-to-b from-[#fef08a] to-[#eab308] bg-clip-text text-xl font-black text-transparent md:text-3xl">ประวัติการถอนเงิน (Real-time)</h2>
+    </div>
+
+    <div class="relative ml-4 border-l-2 border-cyan-800/50 pl-6 md:ml-8 md:pl-8" id="feed-timeline"></div>
+  </div>
+</div>
+
+<script define:vars={{ bankPool }}>
+  const feed = document.getElementById("feed-timeline");
+  const getRandomStr = (len, chars) =>
+    Array.from({ length: len })
+      .map(() => chars.charAt(Math.floor(Math.random() * chars.length)))
+      .join("");
+  const getAmount = () => (Math.floor(Math.random() * (95000 - 15000 + 1)) + 15000).toLocaleString("en-US");
+
+  const createHTML = () => {
+    const bank = bankPool[Math.floor(Math.random() * bankPool.length)];
+    const user = `${getRandomStr(2, "abcdefghijklmnopqrstuvwxyz")}***${getRandomStr(4, "0123456789")}`;
+    const d = new Date();
+    const time = `${d.getHours().toString().padStart(2, "0")}:${d.getMinutes().toString().padStart(2, "0")}`;
+
+    return `
+      <div class="relative mb-6 opacity-0 -translate-x-4 transition-all duration-500 ease-out">
+        <div class="absolute -left-[35px] md:-left-[43px] top-2 h-4 w-4 rounded-full border-2 border-[#001a33] bg-cyan-400 shadow-[0_0_10px_rgba(6,182,212,0.8)]"></div>
+        
+        <div class="flex items-center gap-4 rounded-[20px] bg-gradient-to-r from-cyan-900/20 to-transparent p-4 hover:from-cyan-900/40">
+          <div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-full ${bank.color}">
+            <img src="${bank.icon}" alt="bank" class="h-6 w-6 object-contain" />
+          </div>
+          <div class="flex-1">
+            <div class="text-sm text-cyan-100">ยูสเซอร์: <span class="font-bold text-white">${user}</span> <span class="text-xs text-cyan-600 ml-2">${time}</span></div>
+            <div class="text-xl font-black text-yellow-400">${getAmount()} THB</div>
+          </div>
+          <div class="hidden md:block rounded-full border border-yellow-500/50 px-3 py-1 text-[10px] text-yellow-400">สำเร็จ</div>
+        </div>
+      </div>
+    `;
+  };
+
+  const trigger = () => {
+    const tempDiv = document.createElement("div");
+    tempDiv.innerHTML = createHTML();
+    const newEl = tempDiv.firstElementChild;
+    feed.prepend(newEl);
+    setTimeout(() => {
+      newEl.classList.remove("opacity-0", "-translate-x-4");
+    }, 50);
+    if (feed.children.length > 5) {
+      const last = feed.lastElementChild;
+      last.classList.add("opacity-0", "translate-x-4");
+      setTimeout(() => last.remove(), 500);
+    }
+  };
+  for (let i = 0; i < 5; i++) {
+    trigger();
+  }
+  setInterval(trigger, 4000);
+</script>
+<style>
+  .font-sans {
+    font-family: "Kanit", sans-serif;
+  }
+</style>

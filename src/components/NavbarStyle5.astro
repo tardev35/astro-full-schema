@@ -14,25 +14,25 @@ const isActive = (path: string) => {
 ---
 
 <header class="sticky top-0 z-50 w-full font-sans shadow-[0_4px_20px_rgba(0,0,0,0.8)]">
-  <div class="hidden items-center justify-between border-b border-emerald-900/50 bg-[#051a10] px-6 py-1.5 text-xs font-medium tracking-wide lg:flex xl:px-10">
+  <div class="hidden items-center justify-between border-b border-red-900/50 bg-[#450a0a] px-6 py-1.5 text-xs font-medium tracking-wide lg:flex xl:px-10">
     <div class="flex items-center gap-2 text-white/80">
-      <span class="text-sm text-emerald-400">✦</span>
-      ยินดีต้อนรับสู่ SIXSLOT-BKK สล็อตออโต้ที่ดีที่สุด ฝาก-ถอน 3 วินาที
+      <span class="text-sm text-red-500">✦</span>
+      ยินดีต้อนรับสู่ HYDRA888auto สล็อตออโต้ที่ดีที่สุด ฝาก-ถอน 3 วินาที
     </div>
     <div class="flex items-center gap-5">
-      <a href="/login" class="flex items-center gap-1 text-white/80 transition-colors hover:text-emerald-400">🔒 เข้าสู่ระบบ</a>
-      <a href="/register" class="flex items-center gap-1 font-bold text-yellow-400 drop-shadow-[0_0_5px_rgba(16,185,129,0.5)] transition-colors hover:text-white">🔥 สมัครใหม่รับโบนัส 100%</a>
+      <a href="/login" class="flex items-center gap-1 text-white/80 transition-colors hover:text-red-500">🔒 เข้าสู่ระบบ</a>
+      <a href="/register" class="flex items-center gap-1 font-bold text-yellow-400 drop-shadow-[0_0_5px_rgba(220,38,38,0.5)] transition-colors hover:text-white">🔥 สมัครใหม่รับโบนัส 100%</a>
     </div>
   </div>
 
-  <nav class="relative z-[70] flex h-[70px] w-full items-center justify-between border-b border-emerald-900/40 bg-[#000]/95 px-4 shadow-xl backdrop-blur-md xl:px-10">
+  <nav class="relative z-[70] flex h-[70px] w-full items-center justify-between border-b border-red-900/40 bg-[#000]/95 px-4 shadow-xl backdrop-blur-md xl:px-10">
     <a href="/" class="z-50 flex-shrink-0 transition-transform hover:scale-105">
       <Picture
         src={mainLogo!}
-        alt="SIXSLOT Logo"
+        alt="HYDRA888 Logo"
         loading="eager"
         fetchpriority="high"
-        class="h-[35px] w-auto drop-shadow-[0_0_10px_rgba(16,185,129,0.3)] xl:h-[40px]"
+        class="h-[35px] w-auto drop-shadow-[0_0_10px_rgba(220,38,38,0.3)] xl:h-[40px]"
         formats={["avif", "webp"]}
         fallbackFormat="webp"
       />
@@ -49,10 +49,10 @@ const isActive = (path: string) => {
         ].map((item) => (
           <a
             href={item.path}
-            class={`group relative flex h-full items-center text-sm font-bold transition-colors xl:text-base ${isActive(item.path) ? "text-emerald-400 drop-shadow-[0_0_8px_rgba(16,185,129,0.5)]" : "text-white/80 hover:text-emerald-400"}`}>
+            class={`group relative flex h-full items-center text-sm font-bold transition-colors xl:text-base ${isActive(item.path) ? "text-red-500 drop-shadow-[0_0_8px_rgba(220,38,38,0.5)]" : "text-white/80 hover:text-red-500"}`}>
             <span>{item.name}</span>
             <div
-              class={`absolute bottom-[-1px] left-0 h-[3px] w-full origin-left bg-gradient-to-r from-emerald-500 to-green-300 transition-transform duration-300 ${isActive(item.path) ? "scale-x-100" : "scale-x-0 group-hover:scale-x-100"}`}
+              class={`absolute bottom-[-1px] left-0 h-[3px] w-full origin-left bg-gradient-to-r from-red-600 to-red-400 transition-transform duration-300 ${isActive(item.path) ? "scale-x-100" : "scale-x-0 group-hover:scale-x-100"}`}
             />
           </a>
         ))
@@ -62,18 +62,18 @@ const isActive = (path: string) => {
     <div class="z-50 flex items-center gap-4">
       <a
         href="/register"
-        class="hidden items-center justify-center rounded-full bg-gradient-to-r from-emerald-600 via-green-500 to-emerald-700 px-6 py-2 text-sm font-extrabold text-white shadow-[0_0_15px_rgba(16,185,129,0.4)] transition-all hover:scale-105 lg:flex">
+        class="hidden items-center justify-center rounded-full bg-gradient-to-r from-red-700 via-red-600 to-red-800 px-6 py-2 text-sm font-extrabold text-white shadow-[0_0_15px_rgba(220,38,38,0.4)] transition-all hover:scale-105 lg:flex">
         สมัครสมาชิก
       </a>
 
       <button id="hamburger-btn" class="relative flex h-[40px] w-[40px] flex-col items-end justify-center gap-[6px] p-2 lg:hidden" aria-label="Menu">
-        <span class="line-1 h-[2px] w-6 origin-center rounded-full bg-emerald-400 shadow-sm transition-all duration-300"></span>
-        <span class="line-2 h-[2px] w-4 origin-center rounded-full bg-emerald-400 shadow-sm transition-all duration-300"></span>
+        <span class="line-1 h-[2px] w-6 origin-center rounded-full bg-red-500 shadow-sm transition-all duration-300"></span>
+        <span class="line-2 h-[2px] w-4 origin-center rounded-full bg-red-500 shadow-sm transition-all duration-300"></span>
       </button>
     </div>
   </nav>
 
-  <div id="fullscreen-menu" class="pointer-events-none fixed inset-0 z-[60] flex flex-col items-center justify-center bg-[#051a10]/98 opacity-0 backdrop-blur-2xl transition-opacity duration-500">
+  <div id="fullscreen-menu" class="pointer-events-none fixed inset-0 z-[60] flex flex-col items-center justify-center bg-[#050000]/98 opacity-0 backdrop-blur-2xl transition-opacity duration-500">
     <div class="flex w-full flex-col items-center space-y-6 px-6">
       {
         [
@@ -85,7 +85,7 @@ const isActive = (path: string) => {
         ].map((item) => (
           <a
             href={item.path}
-            class={`fs-item text-3xl font-black tracking-widest uppercase transition-all duration-300 ${isActive(item.path) ? "text-emerald-400 drop-shadow-[0_0_10px_rgba(16,185,129,0.6)]" : "text-white/80 hover:text-white"}`}>
+            class={`fs-item text-3xl font-black tracking-widest uppercase transition-all duration-300 ${isActive(item.path) ? "text-red-500 drop-shadow-[0_0_10px_rgba(220,38,38,0.6)]" : "text-white/80 hover:text-white"}`}>
             {item.name}
           </a>
         ))
@@ -94,12 +94,10 @@ const isActive = (path: string) => {
       <div class="fs-item mt-4 flex w-full max-w-[250px] flex-col gap-4 pt-8">
         <a
           href="/register"
-          class="flex w-full items-center justify-center rounded-full bg-gradient-to-r from-emerald-600 to-green-500 py-3.5 text-lg font-extrabold text-white shadow-[0_0_20px_rgba(16,185,129,0.4)]">
+          class="flex w-full items-center justify-center rounded-full bg-gradient-to-r from-red-700 to-red-500 py-3.5 text-lg font-extrabold text-white shadow-[0_0_20px_rgba(220,38,38,0.4)]">
           สมัครสมาชิก
         </a>
-        <a
-          href="/login"
-          class="flex w-full items-center justify-center rounded-full border-2 border-emerald-500/40 py-3.5 text-lg font-bold text-emerald-400 transition-colors hover:bg-emerald-500/10">
+        <a href="/login" class="flex w-full items-center justify-center rounded-full border-2 border-red-500/40 py-3.5 text-lg font-bold text-red-500 transition-colors hover:bg-red-500/10">
           เข้าสู่ระบบ
         </a>
       </div>

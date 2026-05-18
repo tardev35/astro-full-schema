@@ -1,0 +1,90 @@
+---
+import kbankLogo from "../assets/banks/kbank.png";
+import scbLogo from "../assets/banks/scb.png";
+import krungsriLogo from "../assets/banks/krungsri.png";
+import ktbLogo from "../assets/banks/ktb.png";
+
+const bankPool = [
+  { name: "KBank", color: "bg-[#1155cc]", icon: kbankLogo.src },
+  { name: "SCB", color: "bg-[#4e1c80]", icon: scbLogo.src },
+  { name: "Krungsri", color: "bg-[#fcd34d]", icon: krungsriLogo.src },
+  { name: "KTB", color: "bg-[#0ea5e9]", icon: ktbLogo.src },
+];
+---
+
+<div class="mx-auto w-full max-w-[1300px] p-4 font-sans">
+  <div class="relative overflow-hidden rounded-[30px] border-2 border-cyan-900/50 bg-[#001a33]/90 px-4 py-8 shadow-[0_10px_40px_rgba(6,182,212,0.15)] backdrop-blur-md md:p-10">
+    <div class="relative z-10 mb-8 flex items-center justify-center gap-3">
+      <span class="text-2xl drop-shadow-[0_0_8px_rgba(234,179,8,0.6)]">🏆</span>
+      <h2 class="bg-gradient-to-b from-[#fef08a] to-[#eab308] bg-clip-text text-xl font-black tracking-wide text-transparent drop-shadow-sm md:text-3xl">รายการถอนเงินล่าสุด</h2>
+      <span class="text-2xl drop-shadow-[0_0_8px_rgba(234,179,8,0.6)]">🏆</span>
+    </div>
+
+    <div id="feed-grid" class="relative z-10 grid grid-cols-1 gap-4 md:grid-cols-2"></div>
+  </div>
+</div>
+
+<script define:vars={{ bankPool }}>
+  const feed = document.getElementById("feed-grid");
+  const getRandomStr = (len, chars) =>
+    Array.from({ length: len })
+      .map(() => chars.charAt(Math.floor(Math.random() * chars.length)))
+      .join("");
+  const getAmount = () => (Math.floor(Math.random() * (95000 - 15000 + 1)) + 15000).toLocaleString("en-US");
+
+  const createHTML = () => {
+    const bank = bankPool[Math.floor(Math.random() * bankPool.length)];
+    const user = `${getRandomStr(2, "abcdefghijklmnopqrstuvwxyz")}***${getRandomStr(4, "0123456789")}`;
+    const isPending = Math.random() > 0.6;
+    const statusClass = isPending ? "text-cyan-400 bg-cyan-900/40 animate-pulse" : "text-yellow-400 bg-yellow-900/40";
+    const statusText = isPending ? "กำลังดำเนินการ" : "สำเร็จแล้ว";
+
+    return `
+      <div class="winner-card transform scale-95 opacity-0 transition-all duration-500 ease-out">
+        <div class="flex flex-col rounded-[20px] border border-cyan-500/20 bg-[#000a14]/60 p-5 shadow-sm hover:border-cyan-500/50 hover:bg-[#002b4e]/80">
+          <div class="flex justify-between items-start mb-4">
+            <div class="flex h-10 w-10 items-center justify-center rounded-full ${bank.color} shadow-inner">
+              <img src="${bank.icon}" alt="bank" class="h-6 w-6 object-contain" />
+            </div>
+            <div class="rounded-full px-3 py-1 text-[10px] font-bold ${statusClass}">${statusText}</div>
+          </div>
+          <div>
+            <div class="text-sm text-cyan-100/70">ยูสเซอร์: <span class="font-bold text-white">${user}</span></div>
+            <div class="mt-1 text-2xl font-black text-yellow-400 drop-shadow-[0_0_5px_rgba(234,179,8,0.3)]">${getAmount()} <span class="text-xs text-cyan-500">THB</span></div>
+          </div>
+        </div>
+      </div>
+    `;
+  };
+
+  const trigger = () => {
+    const tempDiv = document.createElement("div");
+    tempDiv.innerHTML = createHTML();
+    const newEl = tempDiv.firstElementChild;
+    feed.prepend(newEl);
+
+    // Animation trigger
+    setTimeout(() => {
+      newEl.classList.remove("scale-95", "opacity-0");
+      newEl.classList.add("scale-100", "opacity-100");
+    }, 50);
+
+    if (feed.children.length > 4) {
+      // โชว์แค่ 4 กล่อง (2x2)
+      const last = feed.lastElementChild;
+      last.classList.remove("scale-100", "opacity-100");
+      last.classList.add("scale-95", "opacity-0");
+      setTimeout(() => last.remove(), 500);
+    }
+  };
+
+  for (let i = 0; i < 4; i++) {
+    trigger();
+  }
+  setInterval(trigger, 5000);
+</script>
+<style>
+  .font-sans {
+    font-family: "Kanit", sans-serif;
+  }
+</style>

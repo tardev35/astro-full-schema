@@ -19,6 +19,6 @@ export default defineConfig({
     '/line': 'https://tinyurl.com/linepigpg'
   },
 
-  site: 'https://funnemo.net',
+  site: 'https://hydra888auto.com',
   integrations: [sitemap()]
 });

@@ -5,152 +5,196 @@ import ContentBoxTwo from "../components/ContentBoxTwo.astro";
 import ContentBoxSevenThree from "../components/ContentBoxSevenThree.astro";
 import ContentBoxThreeColums from "../components/ContentBox3Three.astro";
 import Navfoot from "../components/Navfoot.astro";
-import Announcement from "../components/Announcement3.astro";
+import Announcement from "../components/Announcement5.astro";
 import SmoothCarousel from "../components/SmoothCarousel.astro";
 import ProviderGrid from "../components/ProviderGrid.astro";
 import LatestWinners from "../components/LatestWinners.astro";
-import Faq from "../components/Faq.astro";
 
 const currentPath = Astro.url.pathname;
 const homePage = Astro.url.origin;
-const logoUrl = homePage + "/logo.webp";
+const logoUrl = homePage + "/logo.png";
 
 const webPageSchema = {
   "@context": "https://schema.org",
   "@type": "WebPage",
-  name: "FUNNEMO เว็บสล็อตลิขสิทธิ์แท้ API ต่างประเทศ 2026 | ทางเข้าหลัก",
-  description: "FUNNEMO เว็บสล็อตลิขสิทธิ์แท้ API ต่างประเทศ ความเสถียรสูงสุด บนมือถือ อัตราจ่ายยุติธรรม ฝากถอนฉับไว บริการระดับ vip ทางเข้าหลัก FUNNEMO ที่ปลอดภัย ",
+  name: "HYDRA888 เว็บตรงไม่ผ่านเอเย่นต์ สมัครสมาชิก คาสิโนออนไลน์อันดับ 1",
+  description: "HYDRA888 ทางเข้าเล่น คาสิโนออนไลน์อันดับ 1 เว็บตรง เว็บตรงไม่ผ่านเอเย่นต์ รวมบาคาร่า สล็อต ครบวงจร ระบบออโต้ไวใน 3 วินาที ความปลอดภัย ระดับเอเชีย ",
   url: currentPath,
 };
-
 const webSiteSchema = {
   "@context": "https://schema.org",
   "@type": "WebSite",
-  name: "FUNNEMO",
-  alternateName: ["funnemo", "FUNNEMOofficial", "FUNNEMOofficials", "FUNNEMO"],
-  url: "https://funnemo.com/",
+  name: "HYDRA888",
+  alternateName: ["hydra888", "HYDRA888auto", "hydra888auto"],
+  url: "https://hydra888auto.com/",
 };
-
 const orgSchema = {
   "@context": "https://schema.org",
   "@type": "Organization",
-  name: "FUNNEMO",
+  name: "HYDRA888",
   logo: logoUrl,
   url: homePage,
 };
-
 const allSchemas = [webPageSchema, orgSchema, webSiteSchema];
 
 import { Picture } from "astro:assets";
-import image1 from "../assets/slide4.jpg";
+import image1 from "../assets/slide1.jpg";
+import image2 from "../assets/slide2.jpg";
 ---
 
 <MainLayout>
   <script type="application/ld+json" set:html={JSON.stringify(allSchemas)} />
 
-  <Announcement message="🌊 FUNNEMO ยินดีต้อนรับ! เว็บตรงระบบใหม่ล่าสุด 2026 ฝาก-ถอนไวที่สุดในมหาสมุทร" />
+  <Announcement />
 
-  <ContentBox title="FUNNEMO เว็บสล็อตลิขสิทธิ์แท้ API ต่างประเทศ 2026">
+  <ContentBox title="HYDRA888 เว็บคาสิโนออนไลน์อันดับ 1 ระบบออโต้ที่ดีที่สุด">
     <p class="leading-relaxed">
-      <strong class="text-emerald-400">FUNNEMO</strong> คือผู้นำการให้บริการ <strong class="text-amber-400">เว็บสล็อตลิขสิทธิ์แท้</strong> ที่ดีที่สุดในปี 2026 โดยเรามุ่งเน้นการนำเทคโนโลยี <strong
+      <strong class="text-amber-400">HYDRA888 เว็บคาสิโนออนไลน์อันดับ 1</strong> ไร้ปัญหาเว็บหน่วง เกมค้าง และเครดิตหายตอนโยกเงินที่ผู้เล่นเจอบ่อยที่สุดในช่วงเวลาคนเล่นเยอะ (Peak Time) เว็บ <strong
         class="text-emerald-400">
-        API ต่างประเทศ
-      </strong> มาใช้เพื่อสร้างมาตรฐานใหม่ให้กับวงการเดิมพันในไทย ระบบของเราถูกออกแบบมาเพื่อรองรับกลุ่มนักเล่นที่ต้องการความมั่นคงสูงสุดและประสบการณ์การใช้งานระดับพรีเมียมที่หาไม่ได้จากเว็บไซต์ทั่วไป
+        HYDRA888
+      </strong> ของเราใช้ระบบออโต้เวอร์ชันล่าสุดที่เชื่อม API ตรงกับค่ายเกมระดับโลก รองรับคนเล่นพร้อมกันได้กว่า 100,000 ยูสเซอร์ โดยที่หน้าเว็บยังคงโหลดไว สัญญาณเสถียร ไม่ล่ม และคำนวณเงินแม่นยำด้วยระบบกระเป๋าเดียว
+      ไม่ต้องเสียเวลาโยกเงิน
     </p>
 
     <div class="mt-6 flex flex-wrap justify-center gap-4">
       <a
-        href="/register"
-        class="flex items-center justify-center rounded-full bg-gradient-to-r from-blue-700 to-cyan-500 px-10 py-3.5 font-black text-white shadow-[0_0_20px_rgba(6,182,212,0.4)] transition-transform hover:scale-105">
-        สมัครสมาชิกพรีเมียม
-      </a>
-
-      <a
         href="/login"
-        class="flex items-center justify-center rounded-full border-2 border-yellow-500/50 bg-gradient-to-b from-yellow-200 to-yellow-600 px-10 py-3.5 font-black text-blue-950 shadow-[0_0_20px_rgba(234,179,8,0.3)] transition-transform hover:scale-105">
-        ทางเข้าเล่น FUNNEMO
+        class="flex items-center justify-center rounded-lg border-2 border-red-500 bg-black px-10 py-3.5 font-black text-white shadow-[0_0_20px_rgba(185,28,28,0.4)] transition-transform hover:scale-105">
+        เข้าสู่ระบบ
+      </a>
+      <a
+        href="/register"
+        class="flex items-center justify-center rounded-lg bg-gradient-to-r from-red-700 to-red-900 px-10 py-3.5 font-black text-white shadow-[0_0_20px_rgba(185,28,28,0.6)] transition-transform hover:scale-105">
+        สมัครสมาชิก
       </a>
     </div>
   </ContentBox>
 
-  <ProviderGrid />
-
-  <ContentBoxThreeColums titleleft="💎 ระบบ VIP แท้" titlecenter="🛡️ API มาตรฐานโลก" titleright="⚡ ธุรกรรมความไวสูง">
-    <div slot="left" class="text-sm text-cyan-100/70">สิทธิพิเศษเหนือระดับสำหรับสมาชิก FUNNEMO รับโปรโมชั่นและโบนัสคืนเงินสูงสุดทุกวัน</div>
-    <div slot="center" class="text-sm text-cyan-100/70">มั่นใจด้วยระบบหลังบ้านส่งตรงจากเซิร์ฟเวอร์หลัก ไม่ผ่านเอเย่นต์ แตกง่าย เป็นธรรมที่สุด</div>
-    <div slot="right" class="text-sm text-cyan-100/70">ฝาก-ถอน ออโต้ผ่านระบบธนาคารและ True Wallet รวดเร็วภายใน 5 วินาที แม่นยำ 100%</div>
-  </ContentBoxThreeColums>
-
   <LatestWinners />
 
-  <SmoothCarousel />
+  <ProviderGrid />
 
-  <ContentBoxTwo>
-    <div slot="left" class="space-y-4 text-white/80">
-      <h2 class="text-ocean-gradient mb-4 text-3xl font-black uppercase">ยกระดับประสบการณ์ปี 2026 บนมือถือผ่าน FUNNEMO มีความเสถียรภาพสูงสุด</h2>
+  <ContentBoxThreeColums titleleft="💀 เว็บใหญ่สายแดง" titlecenter="⚡ ฝากถอนไว 3 วิ" titleright="📱 รองรับทุกระบบ">
+    <div slot="left" class="text-sm text-red-100/70">มั่นคงด้วยทุนจดทะเบียนมหาศาล จ่ายหนัก จ่ายจริง ทุกยอดเดิมพัน</div>
+    <div slot="center" class="text-sm text-red-100/70">ระบบออโต้ที่เร็วที่สุดในไทย ไม่ต้องรอนาน ยอดเข้าทันใจใน 3 วินาที</div>
+    <div slot="right" class="text-sm text-red-100/70">เล่นได้ทุกที่ทุกเวลา ทั้งมือถือและคอมพิวเตอร์ ระบบไหลลื่นไม่มีสะดุด</div>
+  </ContentBoxThreeColums>
+
+  <ContentBoxTwo titleleft="สมัครสมาชิก HYDRA888 ทางเข้าเล่น เว็บตรงไม่ผ่านเอเย่นต์  มั่นคง ปลอดภัย" titleright="บริการเกมเดิมพันยอดนิยมบน HYDRA888">
+    <div slot="left" class="text-white/80">
       <p>
-        ในปี 2026 นี้ <strong class="text-emerald-400">FUNNEMO</strong> ได้พัฒนาโครงสร้างเว็บไซต์ให้รองรับการใช้งานบน มือถือ อย่างสมบูรณ์แบบ เพื่อให้การเข้าถึงหน้า <strong class="text-amber-400">
-          เว็บสล็อตลิขสิทธิ์แท้
-        </strong> ของคุณเป็นไปอย่างลื่นไหลและมีเสถียรภาพสูงสุด ระบบถูกปรับแต่งมาให้ใช้ทรัพยากรเครื่องน้อยแต่ให้ประสิทธิภาพในการประมวลผลสูง ลดอาการกระตุกและเพิ่มความเร็วในการโหลดเกม ช่วยให้คุณไม่พลาดทุกจังหวะสำคัญในระหว่างการเดิมพัน
+        <strong class="text-emerald-400">HYDRA888 ทางเข้าเล่นเว็บตรง</strong> เปิดระบบลงทะเบียนที่ง่ายและปลอดภัยที่สุดเพื่อคุ้มครองสิทธิ์และข้อมูลของสมาชิกทุกคน คุณสามารถสมัครสมาชิกได้ด้วยตนเองผ่านระบบออโต้หน้าเว็บไซต์
+        โดยไม่ต้องแชร์ข้อมูลส่วนตัวกับแอดมิน ช่วยตัดความเสี่ยงเรื่องการถูกบิดยอดหรือโกงเงินจากเว็บตัวแทนทั่วไป ขั้นตอนสั้นกระชับเพียงกรอกเบอร์โทรศัพท์และบัญชีธนาคารเพื่อใช้ฝากถอน ระบบจะอนุมัติยูสเซอร์ให้เข้าใช้งานได้ทันที
+        พร้อมการันตีความมั่นคงด้วยฐานระบบที่ได้มาตรฐานสากล เล่นได้เท่าไหร่ถอนได้เต็มจำนวน ไม่มีหักเปอร์เซ็นต์
       </p>
     </div>
     <div slot="right" class="text-white/80">
-      <h2 class="text-ocean-gradient mb-4 text-3xl font-black uppercase">คัดสรรค่ายเกมคุณภาพสูงด้วยระบบ API ต่างประเทศ และอัตราจ่ายยุติธรรม</h2>
       <p>
-        ความโดดเด่นของ <strong class="text-amber-400">FUNNEMO</strong> คือการเชื่อมต่อกับค่ายเกมชั้นนำทั่วโลกผ่านระบบ <strong class="text-emerald-400">API ต่างประเทศ</strong> โดยตรง ซึ่งเป็นลิขสิทธิ์แท้ที่ไม่ผ่านเอเย่นต์คนกลาง
-        ข้อดีคือคุณจะได้สัมผัสกับอัตราการจ่ายเงินรางวัลที่ยุติธรรมตามมาตรฐาน RTP สากล นอกจากนี้ ระบบ <strong class="text-amber-400">API ต่างประเทศ</strong> ยังช่วยให้การอัปเดตเกมใหม่ๆ เป็นไปอย่างรวดเร็วทันใจ
-        พร้อมคุณภาพกราฟิกและเสียงที่คมชัดระดับ FHD
+        รวมเกมเดิมพันยอดนิยม จากทุกค่ายใหญ่ระดับสากลมา <strong class="text-amber-400">HYDRA888</strong> จัดมาให้เลือกเล่นครบวงจรในที่เดียว สมาชิกสามารถเข้าเล่นได้ทุกประเภทเกมผ่านระบบกระเป๋าเดียว (Single
+        Wallet) ไม่ต้องเสียเวลาโยกเงินเข้าออก ยอดเครดิตอัปเดตไวแบบเรียลไทม์ ช่วยให้การเปลี่ยนเกมและค่ายเดิมพันลื่นไหลไม่มีสะดุด
       </p>
     </div>
   </ContentBoxTwo>
+
+  <ContentBoxTwo>
+    <div slot="left">
+      <h3 class="bg-gradient-to-b from-[#ffffff] to-[#b91c1c] bg-clip-text text-3xl font-black tracking-tight text-transparent drop-shadow-[0_0_8px_rgba(185,28,28,0.6)] md:text-2xl">
+        คาสิโนสด & บาคาร่าออนไลน์ ถ่ายทอดสดคมชัด
+      </h3>
+      <p>
+        คาสิโนสดและบาคาร่าออนไลน์ เว็บ <strong class="text-emerald-400">HYDRA888</strong> ส่งตรงสัญญาณภาพความละเอียดสูงระดับ Full HD เรียลไทม์ 24 ชั่วโมงจากคาสิโนต่างประเทศ ให้คุณวางเดิมพันร่วมกับดีลเลอร์มืออาชีพได้อย่างโปร่งใส
+        สัญญาณเสถียร ลื่นไหล ไม่มีปัญหากล้องกระตุก หรือระบบหน่วงตอนกดยืนยันเดิมพัน
+      </p>
+    </div>
+    <div slot="right">
+      <h3 class="bg-gradient-to-b from-[#ffffff] to-[#b91c1c] bg-clip-text text-3xl font-black tracking-tight text-transparent drop-shadow-[0_0_8px_rgba(185,28,28,0.6)] md:text-2xl">
+        สล็อตเว็บตรง แตกง่าย รวมทุกค่ายดัง
+      </h3>
+      <p>
+        สล็อตเว็บตรงแตกง่าย รวบรวมเกมลิขสิทธิ์แท้จากค่ายยักษ์ใหญ่ เช่น PG Slot, Joker Gaming และค่ายชั้นนำระดับโลก ตัวเกมมีค่า RTP สูงตามมาตรฐานสากล โบนัสแตกบ่อย แจกแจ็กพอตจริง
+        รองรับฟีเจอร์ซื้อฟรีสปิน และเปิดให้เริ่มต้นเบทขั้นต่ำเพียง 1 บาท ทุนน้อยก็ลุ้นรางวัลใหญ่ได้ทันที
+      </p>
+    </div>
+  </ContentBoxTwo>
+
+  <SmoothCarousel />
 
   <ContentBoxSevenThree>
     <div slot="left" class="flex h-full flex-col justify-center">
       <Picture
         src={image1}
-        alt="FUNNEMO PROMOTION"
         loading="lazy"
         fetchpriority="low"
-        widths={[200, 400, 600]}
-        sizes="(max-width: 768px) 100vw, 33vw"
-        class="mx-auto h-auto w-full rounded-3xl border-2 border-cyan-500/30 shadow-2xl transition-transform duration-300 hover:-translate-y-1"
+        widths={[200, 400, 600, 800]}
+        sizes="(max-width: 768px) 100vw, 50vw"
         decoding="async"
         formats={["avif", "webp"]}
         fallbackFormat="webp"
         quality={80}
+        alt="Hydra Promotion"
+        class="mx-auto h-auto w-full rounded-xl border border-red-500/50 shadow-2xl"
       />
     </div>
     <div slot="right">
-      <h2 class="text-ocean-gradient mb-4 text-3xl font-black uppercase">ระบบฝาก-ถอนฉับไวและแม่นยำ ประดุจการเดินทางของเรือเร็วสมรรถนะสูง</h2>
-      <p class="mb-4 text-lg text-cyan-50/70">
-        หากเปรียบเทียบกับระบบในอดีตที่เชื่องช้า การทำธุรกรรมที่นี่จะเปลี่ยนความรู้สึกของคุณไปทันที ด้วยความเร็วที่ประดุจการเดินทางของเรือเร็วสมรรถนะสูงที่พุ่งตรงสู่เป้าหมายอย่างแม่นยำ
-        ระบบออโต้เวอร์ชันล่าสุดบน FUNNEMO ถูกเซ็ตค่ามาเพื่อลดความยุ่งยากและเพิ่มความฉับไวในการฝาก-ถอนเงิน ช่วยให้นักเดิมพันจัดการด้านการเงินได้ทันใจตลอด 24 ชั่วโมง
+      <h2 class="text-crimson-gradient mb-4 text-3xl font-black uppercase">ระบบฝาก-ถอนออโต้ HYDRA888 มั่นคง ปลอดภัย ทำรายการไวใน 3 วินาที</h2>
+      <p class="mb-5 text-white/70">
+        ธุรกรรมทางการเงินที่รวดเร็วและแม่นยำคือหัวใจสำคัญ แพลตฟอร์มของเราจึงเลือกใช้ระบบอัตโนมัติ (Auto) เต็มรูปแบบที่เชื่อมต่อตรงกับธนาคารชั้นนำทั่วประเทศและ ทรูมันนี่ วอลเล็ท (TrueMoney Wallet)
+        สมาชิกสามารถทำรายการฝาก-ถอนเงินได้ด้วยตัวเองอย่างอิสระโดยไม่มีขั้นต่ำ ปลอดภัยสูงสุดเพราะไม่ต้องทำรายการผ่านคนกลาง ช่วยตัดปัญหาข้อมูลรั่วไหลหรือยอดเครดิตตกค้าง ระบบประมวลผลอัปเดตยอดเงินไวใน 3
+        วินาที จ่ายจริงทุกยอดถอนของ <strong class="text-amber-400">HYDRA888</strong> มั่นคง ตรงเวลา และไม่ต้องเสียเวลาส่งสลิปให้แอดมินตรวจสอบอีกต่อไป
       </p>
-      <a href="/line" class="inline-block rounded-full bg-[#00b900] px-8 py-3 font-bold text-white shadow-lg hover:brightness-110">ปรึกษาแอดมิน 24 ชม.</a>
+      <a href="/register" class="rounded-full bg-red-600 px-8 py-3 font-bold text-white shadow-lg hover:bg-red-700">รับสิทธิ์สมาชิก VIP</a>
     </div>
   </ContentBoxSevenThree>
+
+  <ContentBoxSevenThree>
+    <div slot="left" class="flex h-full flex-col justify-center">
+      <Picture
+        src={image2}
+        loading="lazy"
+        fetchpriority="low"
+        widths={[200, 400, 600, 800]}
+        sizes="(max-width: 768px) 100vw, 50vw"
+        decoding="async"
+        formats={["avif", "webp"]}
+        fallbackFormat="webp"
+        quality={80}
+        alt="Hydra Promotion"
+        class="mx-auto h-auto w-full rounded-xl border border-red-500/50 shadow-2xl"
+      />
+    </div>
+    <div slot="right">
+      <h2 class="text-crimson-gradient mb-4 text-3xl font-black uppercase">ทางเข้า HYDRA888 อัปเดตล่าสุด 2026 และวิธีแก้เมื่อเข้าหน้าเว็บไม่ได้</h2>
+      <p class="mb-5 text-white/70">
+        ลิงก์ทางเข้าเสีย หน้าจอขาว หรือระบบไม่โหลด มักเกิดจากการบล็อกสัญญาณของเครือข่ายอินเทอร์เน็ตในประเทศ ทีมงานของเราจึงคอยทดสอบและอัปเดตลิงก์สำรองล่าสุดปี 2026 อยู่เสมอ
+        เพื่อให้สมาชิกเข้าใช้งานกระเป๋าเงินและเล่นเกมได้อย่างต่อเนื่องไม่มีสะดุด หากคุณพบปัญหาเข้าหน้าหลักไม่ได้ สามารถใช้แนวทางแก้ไขเบื้องต้นที่ได้ผลแน่นอนดังนี้ครับ
+      </p>
+      <h3 class="text-crimson-gradient mb-4 text-2xl font-black uppercase">วิธีเคลียร์แคชและรีเซ็ตสัญญาณเบื้องต้นเมื่อหน้าเว็บโหลดไม่ขึ้น</h3>
+      <ul>
+        <li class="mb-2">
+          1. ล้างแคชเบราว์เซอร์ (Clear Cache): เข้าไปที่เมนูตั้งค่าของ Chrome หรือ Safari จากนั้นกดล้างประวัติการเข้าชมและข้อมูลแคชเก่าออก เพื่อเคลียร์หน้าเว็บเดิมที่ค้างอยู่ในระบบ
+          แล้วจึงกดเข้าลิงก์ใหม่อีกครั้ง
+        </li>
+        <li class="mb-2">
+          2. สลับสัญญาณอินเทอร์เน็ตเพื่อเปลี่ยน IP: หากใช้งานผ่าน Wi-Fi แล้วติดปัญหา ให้ลองสลับมาใช้สัญญาณมือถือ (Mobile Data) หรือใช้วิธีเปิด-ปิด "โหมดเครื่องบิน" (Airplane Mode) ทิ้งไว้ 5 วินาที
+          เพื่อให้ระบบรีเซ็ตสัญญาณและเปลี่ยนหมายเลข IP ใหม่
+        </li>
+      </ul>
+    </div>
+  </ContentBoxSevenThree>
+
   <ContentBox>
-    <h2 class="text-ocean-gradient mb-4 text-3xl font-black uppercase">สมาชิกจะได้รับ บริการระดับ VIP เพียง สมัคร FUNNEMO</h2>
-    <p class="mb-4 text-lg text-cyan-50/70">
-      เอกสิทธิ์สำหรับ สมาชิกระดับ VIP เริ่มต้นขึ้นทันทีหลังจากที่คุณ สมัคร สมาชิกเข้าเล่นกับ FUNNEMO โดยเราจัดเตรียมทีมงานมืออาชีพคอยดูแลและให้คำปรึกษาแบบเอ็กซ์คลูซีฟตลอด 24 ชั่วโมง
-      เพื่อสนับสนุนการใช้งานระบบ เว็บสล็อตลิขสิทธิ์แท้ ให้เป็นไปอย่างราบรื่นที่สุด ไม่ว่าจะเป็นการสอบถามข้อมูลเทคนิค หรือการจัดการธุรกรรม หรือ ทุกรายละเอียดการบริการ
-      ตอบโจทย์ผู้เล่นที่เน้นความพรีเมียมและความสะดวกสบายเป็นอันดับหนึ่ง
-    </p>
-  </ContentBox>
-  <ContentBox>
-    <h2 class="text-ocean-gradient mb-4 text-3xl font-black uppercase">FUNNEMO ทางเข้าหลัก ที่ปลอดภัย เข้าถึงระบบตรงไม่ผ่านเอเย่นต์และเว็บไซต์แอบอ้าง</h2>
-    <p class="mb-4 text-lg text-cyan-50/70">
-      โปรดตรวจสอบให้แน่ใจว่าคุณเข้าใช้งานผ่าน ทางเข้าหลัก ของ FUNNEMO เพื่อความปลอดภัยในการเข้าถึงระบบ เว็บสล็อตลิขสิทธิ์แท้ โดยตรง
-      การเลือกใช้ช่องทางที่เป็นทางการจะช่วยป้องกันปัญหาจากเว็บไซต์แอบอ้างหรือลิงก์ไม่หวังดีที่อาจส่งผลกระทบต่อบัญชีของคุณ โดยที่นี่คือศูนย์กลางระบบ API ต่างประเทศ ที่การันตีความปลอดภัย 100%
-      และพร้อมให้บริการนักเดิมพันตลอด 24 ชั่วโมง
+    <h2 class="text-crimson-gradient mb-4 text-3xl font-black uppercase">HYDRA888 มาตรฐานความปลอดภัยและใบอนุญาตการดำเนินงานระดับเอเชีย</h2>
+    <p class="leading-relaxed">
+      <strong class="text-emerald-400">HYDRA888</strong> เปิดให้บริการอย่างถูกต้องด้วยใบอนุญาตเดิมพันออนไลน์ระดับเอเชีย การันตีความปลอดภัยด้วยระบบเข้ารหัส SSL มาตรฐานเดียวกับสถาบันการเงิน ข้อมูลและยอดเงินของสมาชิกทั้งหมดจึงได้รับการคุ้มครองสูงสุด
+      ตัวเกมผ่านการตรวจสอบค่า RTP สากล มั่นใจได้ว่าโปร่งใส ไม่มีการล็อคยูสเซอร์ พร้อมกองทุนสำรองที่มั่นคง รองรับยอดถอนหลักล้าน จ่ายจริงทุกบิล ไม่มีบิดแน่นอน
     </p>
   </ContentBox>
 
   <Navfoot />
 
   <style>
-    :global(.text-ocean-gradient) {
-      background: linear-gradient(to bottom, #fef08a 0%, #ca8a04 100%) !important;
+    :global(.text-crimson-gradient) {
+      background: linear-gradient(to bottom, #ffffff 0%, #b91c1c 100%) !important;
       -webkit-background-clip: text !important;
       -webkit-text-fill-color: transparent !important;
     }

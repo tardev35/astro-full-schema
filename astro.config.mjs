@@ -19,6 +19,6 @@ export default defineConfig({
     '/line': 'https://tinyurl.com/linepigpg'
   },
 
-  site: 'https://waiver388-homepage.com',
+  site: 'https://s8p888-homepage.com',
   integrations: [sitemap()]
 });

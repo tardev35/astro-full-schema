@@ -6,23 +6,37 @@ const faqs = [
 ];
 ---
 
-<div class="mx-auto max-w-[1000px] px-4 py-10 font-sans">
-  <h3 class="mb-8 bg-gradient-to-b from-yellow-200 to-yellow-600 bg-clip-text text-center text-2xl font-black tracking-tighter text-transparent uppercase italic md:text-4xl">
-    คำถามที่พบบ่อย (FAQ) เกี่ยวกับการใช้งาน S8P888
-  </h3>
+
+ <div class="mx-auto max-w-[1000px] px-4 py-10 font-sans">
+  <div class="mb-8 flex items-center gap-3 border-l-4 border-emerald-500 bg-gradient-to-r from-emerald-900/40 via-emerald-900/10 to-transparent py-2.5 px-4"
+       style="clip-path: polygon(0 0, 100% 0, calc(100% - 15px) 100%, 0 100%);">
+    <h3 class="text-xl font-black uppercase tracking-widest text-amber-400 drop-shadow-[0_0_8px_rgba(16,185,129,0.5)] md:text-2xl">คำถามที่พบบ่อย (FAQ) เกี่ยวกับการใช้งาน S8P888
+    </h3>
+  </div>
 
   <div class="space-y-4">
     {
       faqs.map((faq, index) => (
-        <div class="faq-item group overflow-hidden rounded-xl border border-yellow-500/20 bg-gradient-to-br from-[#1a1a1a] to-[#0a0a0a] transition-all hover:border-yellow-500/50">
+        <div class="faq-item group relative overflow-hidden bg-[#01120a]/80 border border-emerald-500/30 transition-all duration-300 hover:border-emerald-400 hover:shadow-[0_0_20px_rgba(16,185,129,0.2)] backdrop-blur-sm"
+             style="clip-path: polygon(15px 0, 100% 0, 100% calc(100% - 15px), calc(100% - 15px) 100%, 0 100%, 0 15px);">
+          
+          <div class="absolute top-0 left-0 h-[2px] w-16 bg-gradient-to-r from-emerald-500 to-transparent"></div>
+          
           <button class="faq-trigger flex w-full items-center justify-between p-5 text-left transition-all">
-            <span class="text-sm font-bold text-gray-200 md:text-lg">{faq.q}</span>
-            <span class="icon ml-4 flex h-8 w-8 shrink-0 items-center justify-center rounded-full border border-yellow-500/40 text-yellow-500 transition-transform duration-300">
+            <span class="text-sm font-bold text-white/90 transition-colors group-hover:text-emerald-300 md:text-lg flex items-center gap-2">
+              <span class="text-yellow-400 font-mono">>_</span> {faq.q}
+            </span>
+            
+            <span class="icon ml-4 flex h-8 w-8 shrink-0 items-center justify-center border border-emerald-500/40 bg-[#064e3b]/50 text-emerald-400 transition-all duration-300 group-hover:border-yellow-400 group-hover:text-yellow-400 group-hover:shadow-[0_0_10px_rgba(255,215,0,0.5)]"
+                  style="clip-path: polygon(25% 0, 100% 0, 100% 75%, 75% 100%, 0 100%, 0 25%);">
               <i class="fa-solid fa-plus text-xs" />
             </span>
           </button>
+          
           <div class="faq-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
-            <div class="border-t border-white/5 p-5 pt-0 text-sm leading-relaxed text-gray-400 md:text-base">{faq.a}</div>
+            <div class="border-t border-emerald-500/20 p-5 pt-0 text-sm leading-relaxed text-emerald-50/70 md:text-base">
+              {faq.a}
+            </div>
           </div>
         </div>
       ))
@@ -38,7 +52,7 @@ const faqs = [
       const content = trigger.nextElementSibling;
       const icon = trigger.querySelector(".icon");
 
-      // ปิดอันอื่น (Optional: ถ้าอยากให้เปิดได้อันเดียว)
+  
       document.querySelectorAll(".faq-item").forEach((item) => {
         if (item !== parent) {
           item.classList.remove("active");

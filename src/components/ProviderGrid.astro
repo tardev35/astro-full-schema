@@ -19,24 +19,24 @@ const providers = [
 
 <div class="mx-auto w-full max-w-[1300px] px-4 py-5 font-sans sm:px-6 lg:px-8">
   <div
-    class="mb-8 inline-flex w-full max-w-[1250px] items-center gap-3 border-l-4 border-purple-500 bg-gradient-to-r from-purple-900/50 via-purple-900/10 to-transparent py-2.5 pr-12 pl-4"
+    class="mb-8 inline-flex w-full max-w-[1250px] items-center gap-3 border-l-4 border-emerald-500 bg-gradient-to-r from-emerald-900/50 via-emerald-900/10 to-transparent py-2.5 pr-12 pl-4"
     style="clip-path: polygon(0 0, 100% 0, calc(100% - 15px) 100%, 0 100%);">
-    <span class="text-xl drop-shadow-[0_0_8px_rgba(157,78,221,0.8)]">🎮</span>
-    <h2 class="text-xl font-black tracking-widest text-purple-300 uppercase drop-shadow-[0_0_8px_rgba(157,78,221,0.5)] md:text-2xl">/// เกมยอดนิยม</h2>
+    <span class="text-xl drop-shadow-[0_0_8px_rgba(16,185,129,0.8)]">🎮</span>
+    <h2 class="text-xl font-black tracking-widest text-emerald-300 uppercase drop-shadow-[0_0_8px_rgba(16,185,129,0.5)] md:text-2xl">/// เกมยอดนิยม</h2>
   </div>
 
   <div class="grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-6 lg:gap-4">
     {
       providers.map((p) => (
         <div
-          class="group relative flex cursor-pointer overflow-hidden bg-[#10002b] transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_10px_25px_rgba(157,78,221,0.4)]"
+          class="group relative flex cursor-pointer overflow-hidden bg-[#10002b] transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_10px_25px_rgba(16,185,129,0.4)]"
           style="clip-path: polygon(10px 0, 100% 0, 100% calc(100% - 10px), calc(100% - 10px) 100%, 0 100%, 0 10px);">
-          <div class="pointer-events-none absolute inset-0 z-20 border-2 border-purple-500/20 transition-all duration-300 group-hover:border-purple-400 group-hover:shadow-[inset_0_0_15px_rgba(157,78,221,0.5)]" />
+          <div class="pointer-events-none absolute inset-0 z-20 border-2 border-emerald-500/20 transition-all duration-300 group-hover:border-emerald-400 group-hover:shadow-[inset_0_0_15px_rgba(16,185,129,0.5)]" />
 
           <div
-            class="absolute top-0 left-0 z-10 flex items-center gap-1 border-r border-b border-purple-500/50 bg-purple-900/90 px-2 py-1 font-mono text-[10px] font-bold text-yellow-400 shadow-sm backdrop-blur-sm"
+            class="absolute top-0 left-0 z-10 flex items-center gap-1 border-r border-b border-emerald-500/50 bg-emerald-900/90 px-2 py-1 font-mono text-[10px] font-bold text-yellow-400 shadow-sm backdrop-blur-sm"
             style="clip-path: polygon(0 0, 100% 0, calc(100% - 5px) 100%, 0 100%);">
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3 text-purple-300" viewBox="0 0 20 20" fill="currentColor">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3 text-emerald-300" viewBox="0 0 20 20" fill="currentColor">
               <path fill-rule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clip-rule="evenodd" />
             </svg>
             {p.users}
@@ -62,7 +62,7 @@ const providers = [
             class="block h-full w-full object-cover opacity-80 grayscale-[30%] transition-transform duration-500 group-hover:scale-110 group-hover:opacity-100 group-hover:grayscale-0"
           />
 
-          <div class="pointer-events-none absolute inset-0 z-10 bg-purple-600 opacity-0 mix-blend-overlay transition-opacity duration-300 group-hover:opacity-40" />
+          <div class="pointer-events-none absolute inset-0 z-10 bg-emerald-600 opacity-0 mix-blend-overlay transition-opacity duration-300 group-hover:opacity-40" />
         </div>
       ))
     }

@@ -19,6 +19,6 @@ export default defineConfig({
     '/line': 'https://tinyurl.com/linepigpg'
   },
 
-  site: 'https://kong24h-main.com',
+  site: 'https://vegus24r.com',
   integrations: [sitemap()]
 });

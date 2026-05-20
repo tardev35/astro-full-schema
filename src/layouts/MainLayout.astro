@@ -2,7 +2,7 @@
 import { Image } from "astro:assets";
 import Bg from "../assets/bg.jpg";
 import "../styles/global.css";
-import NavbarStyle6 from "../components/NavbarStyle10.astro";
+import NavbarStyle6 from "../components/NavbarStyle2.astro";
 import Footer from "../components/FooterStyle2.astro";
 
 const bannerImages = import.meta.glob<{ default: ImageMetadata }>("../assets/banner*.{png,webp,jpg,jpeg}", { eager: true });
@@ -10,8 +10,8 @@ const bannerPaths = Object.keys(bannerImages);
 const mainBanner = bannerPaths.length > 0 ? bannerImages[bannerPaths[0]].default : null;
 
 const {
-  title = "KONG24H เว็บเดิมพัน อันดับ 1 เกมคาสิโนล้ำสมัย โปรเด็ดดวง",
-  description = "KONG24H เว็บเดิมพันออนไลน์ อันดับ 1 มี เกมคาสิโนล้ำสมัย เชื่อม API ตรง ทางเข้า ใช้งานได้ 24 ชั่วโมง ทุกระบบ KONG24H สมัครง่าย มีโปรเด็ดดวง รอคุณอยู่",
+  title = "VEGUS24 ทางเข้าเว็บตรง เวกัสคาสิโน สล็อต AUTO รองรับ True Wallet ",
+  description = "VEGUS24 ทางเข้าเว็บตรง อัปเดตล่าสุด สล็อตแตกง่าย เวกัสคาสิโน API แท้ ระบบออโต้ ไว 3 วิ รองรับ True Wallet ไม่มีขั้นต่ำ ถอนหลักล้านโอนจ่ายเต็ม",
   robots = "index, follow",
   ImageOg = "/pro3.webp",
 } = Astro.props;
@@ -25,7 +25,7 @@ const ogSiteName = "KONG24H";
 <html lang="th">
   <head>
     <meta charset="utf-8" />
-    <meta name="google-site-verification" content="PRYGSapONSAnHeSmCTDNk6YDgYieY_xxmqnQdsya4Bc" />
+    <meta name="google-site-verification" content="AvP_dIiAX131fNjdT9XbTatcRBPJZ2iUMaJ7PadJlaQ" />
     <meta name="robots" content={robots} />
     <meta name="googlebot" content={robots} />
     <title>{title}</title>

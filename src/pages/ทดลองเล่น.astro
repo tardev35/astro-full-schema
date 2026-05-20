@@ -1,6 +1,6 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
-import ContentBox from "../components/ContentBox.astro";
+import ContentBox from "../components/ContentBoxFloatingBadge.astro";
 import Navfoot from "../components/Navfoot.astro";
 import Announcement from "../components/Announcement5.astro";
 
@@ -51,11 +51,11 @@ const gameList = [
 
 <script type="application/ld+json" set:html={JSON.stringify(gameList)} />
 <MainLayout
-  title="ทดลอง KONG24H เล่นสล็อตฟรี ทุกค่ายดัง"
-  description="ทดลอง KONG24H  ลองใช้งานระบบทดลองเล่นฟรี เล่นเกมคาสิโนและสล็อตออนไลน์เชื่อม API ตรงแท้ 100% เล่นฟรีไม่ต้องฝากเงิน เรียนรู้ฟีเจอร์เด็ดดวง">
+  title="ทดลองเล่นสล็อต VEGUS24 เดโม่แท้ทุกค่าย ฟรี ไม่ต้องฝาก ไม่ต้องสมัคร"
+  description="ทดลองเล่น VEGUS24 รวมเกมเดโม่ (Demo) สล็อตแท้ทุกค่ายดัง เทสฟรีจังหวะสล็อตแตก ซื้อฟรีสปินได้เหมือนจริง ไม่ต้องสมัครสมาชิก ไม่ต้องฝากเงินก่อน ซ้อมมือ">
   <Announcement />
 
-  <ContentBox title="ทดลอง KONG24H เล่นสล็อตฟรี ทุกค่ายดัง">
+  <ContentBox title="ทดลองเล่นสล็อต VEGUS24 เดโม่แท้ทุกค่าย ฟรี ไม่ต้องฝาก ไม่ต้องสมัคร">
     <div class="mb-5 grid grid-cols-2 gap-5 sm:grid-cols-2 md:grid-cols-4">
       {
         demoGames.map((game) => (

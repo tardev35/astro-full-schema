@@ -1,0 +1,37 @@
+---
+const { title, titleleft, titleright } = Astro.props;
+---
+
+<section class="my-10 flex w-full justify-center px-4 font-sans">
+  <div class="relative w-full max-w-7xl rounded-2xl border-2 border-[#10b981]/40 bg-gradient-to-b from-[#062b15] to-[#021207] p-8 pt-12 shadow-[0_10px_40px_rgba(0,0,0,0.5)]">
+    {
+      title && (
+        <div class="absolute -top-6 left-1/2 -translate-x-1/2 rounded-lg border-2 border-[#10b981]/50 bg-[#021207] px-8 py-2.5 whitespace-nowrap shadow-[0_5px_15px_rgba(16,185,129,0.2)]">
+          <h2 class="bg-gradient-to-r from-yellow-200 via-yellow-400 to-yellow-600 bg-clip-text text-xl font-black tracking-tighter text-transparent uppercase md:text-2xl">✦ {title} ✦</h2>
+        </div>
+      )
+    }
+
+    <div class="grid grid-cols-1 gap-10 md:grid-cols-2">
+      <article class="flex flex-col gap-4">
+        {titleleft && <h3 class="text-2xl font-bold text-yellow-400 drop-shadow-[0_0_5px_rgba(234,179,8,0.3)]">{titleleft}</h3>}
+        <div class="text-lg leading-relaxed text-green-50/80">
+          <slot name="left" />
+        </div>
+      </article>
+
+      <article class="flex flex-col gap-4 md:border-l md:border-[#10b981]/30 md:pl-10">
+        {titleright && <h3 class="text-2xl font-bold text-yellow-400 drop-shadow-[0_0_5px_rgba(234,179,8,0.3)]">{titleright}</h3>}
+        <div class="text-lg leading-relaxed text-green-50/80">
+          <slot name="right" />
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<style>
+  .font-sans {
+    font-family: "Kanit", sans-serif;
+  }
+</style>

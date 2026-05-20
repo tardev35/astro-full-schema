@@ -1,38 +1,37 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
-import ContentBox from "../components/ContentBox.astro";
-import ContentBoxTwo from "../components/ContentBoxTwo.astro";
-import ContentBoxSevenThree from "../components/ContentBoxSevenThree.astro";
-import ContentBoxThreeColums from "../components/ContentBox3Three.astro";
+import ContentBox from "../components/ContentBoxFloatingBadge.astro";
+import ContentBoxTwo from "../components/ContentBoxTwoFloatingBadge.astro";
+import ContentBoxSevenThree from "../components/ContentBoxSevenThreeFloatingBadge.astro";
+import ContentBoxThreeColums from "../components/ContentBox3ThreeFloatingBadge.astro";
 import Navfoot from "../components/Navfoot.astro";
 import Announcement from "../components/Announcement5.astro";
 import SmoothCarousel from "../components/SmoothCarousel.astro";
 import ProviderGrid from "../components/ProviderGrid.astro";
-import LatestWinners from "../components/LatestWinners2.astro";
+import LatestWinners from "../components/LatestWinners.astro";
 
 const currentPath = Astro.url.pathname;
 const homePage = Astro.url.origin;
 const logoUrl = homePage + "/logo.webp";
 
-// 🌟 JS Schema ครบถ้วน ห้ามตัด!
 const webPageSchema = {
   "@context": "https://schema.org",
   "@type": "WebPage",
-  name: "KONG24H เว็บเดิมพัน อันดับ 1 เกมคาสิโนล้ำสมัย โปรเด็ดดวง",
-  description: "KONG24H คาสิโนออนไลน์ สล็อต บาคาร่า หวย กีฬา ยิงปลา ฝากถอนออโต้ 24 ชั่วโมง การันตีคุณภาพระดับ VIP",
+  name: "VEGUS24 ทางเข้าเว็บตรง เวกัสคาสิโน สล็อต AUTO รองรับ True Wallet ",
+  description: "VEGUS24 ทางเข้าเว็บตรง อัปเดตล่าสุด สล็อตแตกง่าย เวกัสคาสิโน API แท้ ระบบออโต้ ไว 3 วิ รองรับ True Wallet ไม่มีขั้นต่ำ ถอนหลักล้านโอนจ่ายเต็ม",
   url: currentPath,
 };
 const webSiteSchema = {
   "@context": "https://schema.org",
   "@type": "WebSite",
-  name: "KONG24H",
-  alternateName: ["kong24h", "kong24", "kong24h auto"],
-  url: "https://kong24h-main.com/",
+  name: "VEGUS24",
+  alternateName: ["vegus24", "vegus24h", "vegus24 auto"],
+  url: "https://vegus24r.com/",
 };
 const orgSchema = {
   "@context": "https://schema.org",
   "@type": "Organization",
-  name: "KONG24H",
+  name: "VEGUS24",
   logo: logoUrl,
   url: homePage,
 };
@@ -47,22 +46,23 @@ import image1 from "../assets/slide2.jpg";
 
   <Announcement />
 
-  <ContentBox title="KONG24H เว็บเดิมพันออนไลน์ล้ำสมัย ศูนย์รวมคาสิโนระดับโลก">
+  <ContentBox title="VEGUS24 ทางเข้าเว็บตรง เวกัสคาสิโน สล็อต AUTO รองรับ True Wallet">
     <p class="leading-relaxed">
-      <strong class="text-amber-400">KONG24H</strong> แพลตฟอร์มเว็บเดิมพันออนไลน์ที่ล้ำสมัยที่สุดในยุคนี้ เราได้รวบรวมความบันเทิงระดับโลกมาไว้ให้คุณในที่เดียว เพื่อมอบประสบการณ์การเล่นเกมคาสิโนที่เหนือชั้น
-      ปลอดภัย และได้มาตรฐานสากล ไม่ว่าคุณจะเป็นนักเดิมพันสายไหน ที่นี่คือคำตอบสุดท้ายที่จะเปลี่ยนทุกการสปินและการวางเดิมพันของคุณให้กลายเป็นผลกำไรได้อย่างคุ้มค่า เปิดให้บริการเต็มรูปแบบตลอด 24 ชั่วโมง
+      <strong class="text-[#10b981]">VEGUS24</strong> เว็บตรงลิขสิทธิ์แท้ (API ตรง) ทางเข้า ล่าสุด เล่น เวกัสคาสิโน หรือ สล็อต ไม่ผ่านเอเย่นต์ ตัดปัญหาเว็บสะดุด โดนบิด หรือล็อคยูสเซอร์ รวมสล็อตแตกหนักและคาสิโนสดไว้ในยูสเดียว
+      ให้ความสะบายใจเพราะทุกยอดด้วย<strong class="text-yellow-400">ระบบฝาก-ถอนออโต้</strong> ทำรายการไวใน 3 วินาที ไม่มีบัญชีธนาคารก็เติมเครดิตได้ รองรับ True Wallet ไม่มีขั้นต่ำ แตกหมื่นหรือถอนหลักล้านเราก็โอนจ่ายเต็ม
+      100%
     </p>
 
     <div class="mt-8 flex flex-wrap justify-center gap-5">
       <a
         href="/login"
-        class="flex items-center justify-center rounded-full border-2 border-yellow-500 bg-[#4a0404] px-10 py-3.5 font-black text-yellow-400 shadow-[0_0_20px_rgba(234,179,8,0.3)] transition-transform hover:scale-105 hover:bg-[#5c0a0a]">
+        class="flex items-center justify-center rounded-full border-2 border-yellow-500 bg-[#062b15] px-10 py-3.5 font-black text-yellow-400 shadow-[0_0_20px_rgba(234,179,8,0.3)] transition-transform hover:scale-105 hover:bg-[#021207]">
         เข้าสู่ระบบ
       </a>
       <a
         href="/register"
-        class="flex items-center justify-center rounded-full bg-gradient-to-r from-yellow-400 via-yellow-500 to-yellow-600 px-10 py-3.5 font-black text-red-950 shadow-[0_0_20px_rgba(234,179,8,0.5)] transition-transform hover:scale-105">
-        สมัครสมาชิกใหม่
+        class="flex items-center justify-center rounded-full border border-[#34d399] bg-gradient-to-r from-[#10b981] to-[#047857] px-10 py-3.5 font-black text-white shadow-[0_0_20px_rgba(16,185,129,0.5)] transition-transform hover:scale-105">
+        สมัครสมาชิก
       </a>
     </div>
   </ContentBox>
@@ -71,28 +71,26 @@ import image1 from "../assets/slide2.jpg";
 
   <ProviderGrid />
 
-  <ContentBoxThreeColums titleleft="🥇 เว็บอันดับ 1" titlecenter="⚡ ฝาก-ถอน ออโต้" titleright="💎 VIP SERVICE">
-    <div slot="left" class="text-sm text-red-100/80">การันตีคุณภาพด้วยยอดผู้เล่นสูงสุด คัดสรรเฉพาะค่ายเกมระดับโลก มั่นคง ปลอดภัย 100%</div>
-    <div slot="center" class="text-sm text-red-100/80">ทำรายการธุรกรรมการเงินด้วยระบบอัตโนมัติที่รวดเร็วที่สุด ไม่ต้องรอนาน ใช้งานง่ายตลอด 24 ชั่วโมง</div>
-    <div slot="right" class="text-sm text-red-100/80">ดูแลลูกค้าอย่างดีเยี่ยมดุจญาติมิตร ด้วยทีมงานคุณภาพที่พร้อมให้คำปรึกษาและแก้ไขปัญหาทันที</div>
+  <ContentBoxThreeColums titleleft="🟢 เว็บใหญ่สายเขียว" titlecenter="⚡ ฝาก-ถอน เร็ว" titleright="📱 เล่นง่ายทุกระบบ">
+    <div slot="left" class="text-sm text-green-100/80">มั่นคง ปลอดภัย 100% การันตีด้วยฐานลูกค้าที่มากที่สุดในไทย จ่ายจริงทุกยอดการเดิมพัน</div>
+    <div slot="center" class="text-sm text-green-100/80">ระบบออโต้ที่ดีที่สุดในตอนนี้ ทำรายการรวดเร็วทันใจ รองรับทุกธนาคารและทรูวอเลท</div>
+    <div slot="right" class="text-sm text-green-100/80">ไม่ต้องโหลดแอป รองรับทั้ง iOS และ Android ภาพคมชัดระดับ Full HD ไม่มีสะดุด</div>
   </ContentBoxThreeColums>
 
-  <ContentBoxTwo titleleft="KONG24H เว็บคาสิโนล้ำสมัย อันดับ 1" titleright="KONG24H เชื่อม API ตรง เกมคาสิโนยอดฮิต รันครบจบทุกค่าย">
+  <ContentBoxTwo titleleft="ทางเข้าเล่น VEGUS24 อัปเดตล่าสุด เว็บตรงไม่ผ่านเอเย่นต์" titleright="เวกัสคาสิโน และ สล็อต แตกง่าย ลิขสิทธิ์แท้ทุกค่าย">
     <div slot="left" class="text-white/80">
       <p>
-        ก้าวสู่มิติใหม่ของกาเดิมพัน เปลี่ยนเวลาว่างๆเป็นให้สนุกและอาจะทำเงินได้ง่ายๆ ได้กับ <strong class="text-yellow-400">KONG24H</strong> เว็บคาสิโนล้ำสมัยที่ครองอันดับ 1 ในใจผู้เล่นทั่วประเทศ เราโดดเด่นด้วยการพัฒนาระบบหลังบ้านให้มีความเสถียรสูงสุด
-        รองรับการเข้าใช้งานพร้อมกันได้นับแสนคนโดยไม่มีอาการกระตุก นอกจากนี้เรายังเป็นเว็บตรงมั่นคงปลอดภัย 100% ที่การเงินหนาที่สุด ทำให้ผู้เล่นมั่นใจได้เลยว่า ทุกยอดถอนจะได้รับเงินจริง ครบทุกบาททุกสตางค์อย่างแน่นอน
+        <strong class="text-yellow-400">ทางเข้าเล่น VEGUS24</strong> (Vegus24r) อัปเดตลิงก์ใหม่ ใช้งานได้จริง 100% หมดปัญหาลิงก์เสียหรือโดนบล็อก ไม่ต้องดาวน์โหลดแอปให้หนักเครื่อง รองรับมือถือทุกรุ่น (iOS
+        และ Android) ล็อกอินปุ๊บเข้าถึงหน้าล็อบบี้เกมได้ทันที การันตีเล่นกับเว็บแม่ ไม่ผ่านเอเย่นต์ ไม่โดนโกงแน่นอน
       </p>
     </div>
     <div slot="right" class="text-white/80">
       <p>
-        หมดปัญหาเรื่องเกมค้างหรือโบนัสไม่เข้า เพราะที่ KONG24H เราใช้ระบบ <strong class="text-amber-400">เชื่อม API ตรง</strong> จากค่ายเกมชั้นนำระดับโลก ไม่ผ่านคนกลาง ทำให้สัญญาณเกมมีความแม่นยำ ลื่นไหล
-        และมีอัตราการชนะ (RTP) ที่เป็นธรรมที่สุด สนุกไปกับเกมคาสิโนยอดฮิตมากมาย:
+        รวมเกม เวกัสคาสิโน และ สล็อตเว็บตรง ไว้ในที่เดียว <strong class="text-[#10b981]">VEGUS24</strong> ยูสเดียวเล่นได้ครบทุกค่าย ไม่ต้องโยกกระเป๋าเงินให้เสียเวลา
       </p>
-      <ul class="list-inside list-disc text-white/80">
-        <li class="mb-2">สล็อตออนไลน์: รวมค่ายดังอย่าง PG Slot, Pragmatic Play, Joker Gaming สล็อตแตกง่าย กราฟิก 3D ล้ำสมัย</li>
-        <li class="mb-2">คาสิโนสด (Live Casino): ส่งตรงสัญญาณคมชัดระดับ Full HD จาก Evolution Gaming, Sexy Baccarat, SA Gaming ให้คุณเดิมพันบาคาร่าและไฮโลแบบเรียลไทม์</li>
-        <li class="mb-2">เกมเดิมพันอื่นๆ: ครบครันทั้งเกมยิงปลา, เดิมพันกีฬา, และ E-Sports ยอดนิยม รับครบจบในเว็บเดียวไม่ต้องโยกเงิน</li>
+      <ul class="list-disc pl-5">
+        <li class="mb-2">สล็อตลิขสิทธิ์แท้ (API ตรง): แตกง่าย อัตราจ่ายสูง (RTP มาตรฐาน) ปั่นสปินเข้าฟรีเกมบ่อย แตกหนักแค่ไหนก็จ่ายเต็ม ไม่มีการล็อคยูสเซอร์</li>
+        <li class="mb-2">คาสิโนสด: บาคาร่า รูเล็ต ไฮโล ส่งตรงภาพสตรีมมิ่งจากคาสิโนจริง ภาพชัด ลื่นไหล แทงขั้นต่ำหลักสิบก็ทำกำไรได้</li>
       </ul>
     </div>
   </ContentBoxTwo>
@@ -111,41 +109,39 @@ import image1 from "../assets/slide2.jpg";
         formats={["avif", "webp"]}
         fallbackFormat="webp"
         quality={80}
-        alt="KONG24H VIP Service"
+        alt="Vegus24 VIP Service"
         class="mx-auto h-auto w-full rounded-2xl border-2 border-yellow-500/30 shadow-[0_10px_30px_rgba(234,179,8,0.2)]"
       />
     </div>
     <div slot="right">
-      <h2 class="text-imperial-gradient mb-4 text-3xl font-black uppercase">รวมโปรเด็ดดวงและสิทธิพิเศษสำหรับสมาชิก KONG24H</h2>
-      <p class="mb-6 text-white/80">เราพร้อมซัพพอร์ตนักเดิมพันทุกคนด้วย โปรเด็ดดวง และสิทธิพิเศษมากมายที่คุ้มค่ากว่าเว็บไหนๆ เพื่อเพิ่มทุนและเพิ่มโอกาสในการชนะรางวัลใหญ่ให้กับคุณ:</p>
-      <ul class="list-inside list-disc text-white/80">
-        <li class="mb-2">โปรโมชันสมาชิกใหม่: รับโบนัสต้อนรับทันทีเมื่อทำการสมัครและฝากเงินครั้งแรก</li>
-        <li class="mb-2">โบนัสเงินฝากรายวัน: แจกเครดิตเพิ่มให้ทุกยอดฝาก ยิ่งฝากมากยิ่งได้สิทธิ์หมุนวงล้อลุ้นโชคใหญ่</li>
-        <li class="mb-2">กิจกรรมแจกทองและเครดิตฟรี: ร่วมสนุกกับกิจกรรมพิเศษของทางเว็บไซต์ที่มีจัดขึ้นเป็นประจำทุกสัปดาห์</li>
-      </ul>
-      <a href="/line" class="inline-flex items-center rounded-full bg-[#00B900] px-8 py-3 font-bold text-white shadow-lg transition-transform hover:scale-105">
-        <span class="mr-2 text-xl">💬</span> LINE Call Center
+      <h2 class="text-emerald-gradient mb-4 text-3xl font-black uppercase">ระบบฝาก-ถอน AUTO ไม่มีขั้นต่ำ รองรับ True Wallet (ทรูวอเลท)</h2>
+      <p class="mb-6 text-white/80">
+        <strong class="text-yellow-400">ระบบฝาก-ถอนออโต้</strong> ฝากปุ๊บเงินเข้าปั๊บ ถอนยอดใหญ่ได้ทันทีภายใน 3 วินาที ไม่ต้องรอคิวส่งสลิปให้แอดมิน ทุนน้อยก็เล่นได้สบายเพราะ <strong
+          class="text-[#10b981]">
+          VEGUS24
+        </strong> เราให้สิทธิ์ฝากถอนไม่มีขั้นต่ำ (1 บาทก็ฝากได้) ไม่ต้องง้อบัญชีธนาคาร: รองรับการเติมเครดิตผ่านแอป TrueMoney Wallet ตลอด 24 ชั่วโมง สะดวก รวดเร็ว แอปธนาคารล่มก็เข้าเล่นเกมได้
+      </p>
+      <a href="/line" class="inline-flex items-center rounded-full bg-yellow-500 px-8 py-3 font-bold text-green-950 shadow-lg transition-transform hover:scale-105">
+        <span class="mr-2 text-xl">LINE</span> ติดต่อแอดมิน
       </a>
     </div>
   </ContentBoxSevenThree>
-  <ContentBoxTwo titleleft="สมัครสมาชิก KONG24H ง่ายๆ ใน 3 ขั้นตอน" titleright="ฝากถอน ไม่มีขั้นต่ำ คืนยอดเสียสูงถึง10%">
+  <ContentBoxTwo titleleft="สมัครสมาชิก และ ติดต่อเรา VEGUS24 บริการตลอด 24 ชั่วโมง" titleright="มาตรฐานบริการ VEGUS24 เว็บตรงลิขสิทธิ์แท้ มั่นคง ปลอดภัย 100%">
     <div slot="left" class="text-white/80">
-      <p>เริ่มต้นความสนุกและเข้ารับโปรเด็ดดวงกับเว็บอันดับ 1 ได้ง่ายๆ ภายในเวลาไม่ถึง 1 นาที ด้วยระบบสมัครสมาชิกอัตโนมัติ:</p>
-      <ul>
-        <li class="mb-2">เข้าสู่หน้าเว็บ: คลิกที่ปุ่ม "สมัครสมาชิก" บนหน้าเว็บไซต์ KONG24H</li>
-        <li class="mb-2">กรอกข้อมูล: ใส่เบอร์โทรศัพท์ และข้อมูลบัญชีธนาคารสำหรับใช้ฝาก-ถอน (ข้อมูลจะถูกเก็บเป็นความลับสูงสุด)</li>
-        <li class="mb-2">เข้าเล่นได้ทันที: รับ Username และ Password จากนั้นล็อกอินเข้าสู่ระบบ เลือกรับโปรโมชันที่ต้องการแล้วลุยได้เลย!</li>
-      </ul>
+      <p>
+        <strong class="text-[#10b981]">สมัครสมาชิกฟรี</strong> เปิดยูสเซอร์ใหม่ไม่มีค่าธรรมเนียม ทำรายการง่ายด้วยตัวเองผ่านหน้าเว็บ หากติดปัญหา ลืมรหัสผ่าน หรืออยากได้โปรโมชั่นเด็ดๆ ทักแชทหาแอดมินคนไทยผ่าน
+        Line Official ได้ตลอด 24 ชม. เราใช้ทีมงานคนจริงดูแล (ไม่ใช่บอท) ตอบไว แก้ปัญหาจบ พร้อมซัพพอร์ตระดับ VIP
+      </p>
     </div>
     <div slot="right" class="text-white/80">
       <p>
-        อิสระทางการเงินที่แท้จริงเริ่มต้นที่นี่ KONG24H เปิดโอกาสให้ผู้เล่นทุกระดับทุนเข้ามาร่วมสนุกได้อย่างเท่าเทียมด้วยระบบ <strong class="text-yellow-400">ฝากถอน ไม่มีขั้นต่ำ</strong> มี 1 บาทก็ฝากเข้ามาเล่นได้
-        ทำรายการผ่านระบบออโต้รวดเร็วใน 3 วินาที และพิเศษสุดสำหรับสมาชิกของเรา เล่นเสียเราไม่ปล่อยให้หมดหวัง! ซัพพอร์ตด้วยการ คืนยอดเสียสูงถึง 10% ทุกวัน ให้คุณมีทุนกลับไปแก้มือและทำกำไรได้ใหม่อีกครั้ง
+        <strong class="text-yellow-400">มาตรฐานบริการเว็บตรง ลิขสิทธิ์แท้ VEGUS24</strong> คือความมั่นคง ดังนั้น การันตีด้วยฐานการเงินระดับเอเชีย เล่นได้หลักร้อยหรือสล็อตแตกหลักล้าน เราพร้อมโอนจ่ายเต็มจำนวนในบิลเดียว
+        ไม่หักเปอร์เซ็นต์ ข้อมูลลูกค้าเก็บเป็นความลับสูงสุด เล่นง่าย ได้เงินจริง ปลอดภัย 100% จบทุกความกังวล เล่นกับเว็บของเราอย่างสบายใจ
       </p>
     </div>
   </ContentBoxTwo>
   <ContentBox>
-    <h2 class="text-imperial-gradient mb-4 text-3xl font-black uppercase">รวมโปรเด็ดดวงและสิทธิพิเศษสำหรับสมาชิก KONG24H</h2>
+    <h2 class="text-emerald-gradient mb-4 text-3xl font-black uppercase">รวมโปรเด็ดดวงและสิทธิพิเศษสำหรับสมาชิก KONG24H</h2>
     <p>
       คุณสามารถเข้าถึงความสนุกกับ KONG24H ได้อย่างสะดวกสบายผ่าน <strong class="text-amber-400">ทางเข้า เว็บเดิมพัน</strong> ที่ทีมงานของเราคอยอัปเดตลิงก์ใหม่ล่าสุดอยู่เสมอ เพื่อป้องกันปัญหาลิงก์เสียหรือโดนบล็อก
       รองรับการใช้งานตลอด 24 ชั่วโมงในทุกแพลตฟอร์ม ระบบมือถือ รองรับทั้ง iOS และ Android เล่นผ่านเบราว์เซอร์ได้ทันทีโดยไม่ต้องดาวน์โหลดแอปพลิเคชัน ระบบคอมพิวเตอร์: รองรับทั้ง Windows และ Mac หน้าจอปรับขนาดอัตโนมัติ
@@ -155,8 +151,8 @@ import image1 from "../assets/slide2.jpg";
   <Navfoot />
 
   <style>
-    :global(.text-imperial-gradient) {
-      background: linear-gradient(to bottom, #fef08a 0%, #ca8a04 100%) !important;
+    :global(.text-emerald-gradient) {
+      background: linear-gradient(to bottom, #34d399 0%, #10b981 100%) !important;
       -webkit-background-clip: text !important;
       -webkit-text-fill-color: transparent !important;
     }

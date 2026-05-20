@@ -1,6 +1,6 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
-import ContentBox from "../components/ContentBox.astro";
+import ContentBox from "../components/ContentBoxFloatingBadge.astro";
 import Navfoot from "../components/Navfoot.astro";
 import Announcement from "../components/Announcement5.astro";
 
@@ -14,12 +14,12 @@ const logoUrl = homePage + "/logo.webp";
 const contactPageSchema = {
   "@context": "https://schema.org",
   "@type": "ContactPage",
-  name: "ติดต่อ KONG24H ฝ่ายบริการลูกค้า สอบถาม-แก้ปัญหาทันใจ",
-  description: "ติดต่อ KONG24H ทีมงานบริการลูกค้า ได้อย่างรวดเร็วตลอด 24 ชั่วโมง แอดไลน์คุยกับเจ้าหน้าที่ระดับมืออาชีพ พร้อมดูแลและซัพพอร์ตคุณทุกเรื่อง",
+  name: "ติดต่อ VEGUS24 แจ้งฝากถอน แอดมินคนจริงดูแล 24 ชม. ไม่ใช้บอท",
+  description: "ติดต่อ VEGUS24 ช่องทาง แอดไลน์แจ้งปัญหาฝาก-ถอน ลืมรหัส สมัครสมาชิก หรือขอรับโปรโมชั่น ทีมงานคนไทย ไม่ใช่บอท ตอบแชทไวใน 1 นาทีซัพพอร์ตตลอด 24 ชม.",
   url: currentPath,
   mainEntity: {
     "@type": "Organization",
-    name: "SIXSLOT",
+    name: "VEGUS24",
     logo: logoUrl,
     url: homePage,
     contactPoint: [
@@ -38,12 +38,12 @@ const contactPageSchema = {
 
 <script type="application/ld+json" set:html={JSON.stringify(contactPageSchema)} />
 <MainLayout
-  title="ติดต่อ KONG24H ฝ่ายบริการลูกค้า สอบถาม-แก้ปัญหาทันใจ"
-  ,description="ติดต่อ KONG24H ทีมงานบริการลูกค้า ได้อย่างรวดเร็วตลอด 24 ชั่วโมง แอดไลน์คุยกับเจ้าหน้าที่ระดับมืออาชีพ พร้อมดูแลและซัพพอร์ตคุณทุกเรื่อง">
+  title="ติดต่อ VEGUS24 แจ้งฝากถอน แอดมินคนจริงดูแล 24 ชม. ไม่ใช้บอท"
+  ,description="ติดต่อ VEGUS24 ช่องทาง แอดไลน์แจ้งปัญหาฝาก-ถอน ลืมรหัส สมัครสมาชิก หรือขอรับโปรโมชั่น ทีมงานคนไทย ไม่ใช่บอท ตอบแชทไวใน 1 นาทีซัพพอร์ตตลอด 24 ชม.">
   <Announcement />
 
   <ContentBox>
-    <h1 class="mb-8 text-3xl text-amber-400">ติดต่อ KONG24H ฝ่ายบริการลูกค้า สอบถาม-แก้ปัญหาทันใจ</h1>
+    <h1 class="mb-8 text-3xl text-amber-400">ติดต่อ VEGUS24 แจ้งฝากถอน แอดมินคนจริงดูแล 24 ชม. ไม่ใช้บอท</h1>
     <Picture
       src={imgLine}
       alt="Pigauto"

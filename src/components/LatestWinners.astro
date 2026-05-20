@@ -13,20 +13,19 @@ const bankPool = [
 ---
 
 <div class="mx-auto w-full max-w-[1300px] p-4 font-sans">
-  <div class="relative overflow-hidden border-x-4 border-y border-red-700 bg-[#050000] px-4 py-8 shadow-[0_0_30px_rgba(185,28,28,0.2)] md:p-10">
+  <div class="relative overflow-hidden rounded-[20px] border border-[#10b981]/40 bg-[#062b15]/80 px-4 py-8 shadow-[0_10px_30px_rgba(16,185,129,0.15)] backdrop-blur-md md:p-10">
     <div class="relative z-10 mb-8 flex items-center justify-center gap-3">
-      <span class="text-2xl drop-shadow-[0_0_8px_rgba(185,28,28,0.8)]">💀</span>
-      <h2 class="bg-gradient-to-r from-[#ffffff] to-[#b91c1c] bg-clip-text text-xl font-black tracking-widest text-transparent uppercase drop-shadow-[0_0_10px_rgba(185,28,28,0.5)] md:text-3xl">
-        LIVE PAYOUTS
-      </h2>
-      <span class="text-2xl drop-shadow-[0_0_8px_rgba(185,28,28,0.8)]">💀</span>
+      <span class="text-2xl drop-shadow-[0_0_8px_rgba(234,179,8,0.6)]">🏆</span>
+      <h2 class="bg-gradient-to-b from-[#fef08a] to-[#ca8a04] bg-clip-text text-xl font-black tracking-wide text-transparent drop-shadow-sm md:text-3xl">รายการถอนเงินล่าสุด</h2>
+      <span class="text-2xl drop-shadow-[0_0_8px_rgba(234,179,8,0.6)]">🏆</span>
     </div>
-    <div id="feed-cyber" class="relative z-10 flex flex-col gap-2"></div>
+
+    <div id="feed-standard" class="relative z-10 flex flex-col"></div>
   </div>
 </div>
 
 <script define:vars={{ bankPool }}>
-  const feed = document.getElementById("feed-cyber");
+  const feed = document.getElementById("feed-standard");
   const getRandomStr = (len, chars) =>
     Array.from({ length: len })
       .map(() => chars.charAt(Math.floor(Math.random() * chars.length)))
@@ -42,28 +41,30 @@ const bankPool = [
     const user = `${getRandomStr(2, "abcdefghijklmnopqrstuvwxyz")}***${getRandomStr(4, "0123456789")}`;
     const isPending = Math.random() > 0.6;
 
-    // 🌟 ธีมแดง: Pending สีเทาดำ, Success สีแดงเรืองแสง
-    const statusClass = isPending ? "border-gray-600 text-gray-400 bg-gray-900 animate-pulse" : "border-red-600 text-red-500 bg-red-950";
-    const statusText = isPending ? "PROCESSING" : "TRANSFER_OK";
+    // สีเขียวมรกตและทอง
+    const statusClass = isPending ? "bg-gray-700/50 text-gray-300 animate-pulse border border-gray-500/50" : "bg-[#10b981]/20 text-[#34d399] border border-[#10b981]/50";
+    const statusText = isPending ? "กำลังทำรายการ..." : "ถอนสำเร็จแล้ว";
 
     return `
-      <div class="winner-row grid grid-rows-[0fr] opacity-0 transition-all duration-500 ease-in-out -translate-x-10">
+      <div class="winner-row grid grid-rows-[0fr] opacity-0 transition-all duration-700 ease-in-out -translate-y-4">
         <div class="overflow-hidden">
-          <div class="mb-2 flex items-center justify-between border-l-4 border-r border-y border-[#1a0505] border-l-red-600 bg-black/80 p-4 transition-colors hover:bg-[#0a0000]">
+          <div class="mb-3 flex items-center justify-between rounded-xl border border-[#10b981]/20 bg-[#021207]/60 p-4 shadow-sm transition-all hover:bg-[#062b15] hover:border-[#10b981]/50 backdrop-blur-md">
             <div class="flex items-center gap-4">
-              <div class="flex h-10 w-10 shrink-0 items-center justify-center overflow-hidden rounded-sm ${bank.color} grayscale-[30%]">
-                <img src="${bank.icon}" alt="bank" class="h-6 w-6 object-contain" />
+              <div class="relative flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-white/5 shadow-sm border border-[#10b981]/30">
+                <div class="flex h-9 w-9 items-center justify-center overflow-hidden rounded-full ${bank.color}">
+                  <img src="${bank.icon}" alt="bank" class="h-6 w-6 object-contain" />
+                </div>
               </div>
               <div class="flex flex-col justify-center">
-                <div class="text-sm font-bold text-white md:text-base">USR: <span class="tracking-widest text-red-300">${user}</span></div>
-                <div class="mt-0.5 text-[10px] text-gray-500 md:text-xs">ID_${getRandomStr(8, "0123456789")} // ${getNowTime()}</div>
+                <div class="text-sm font-bold text-white md:text-base">User: <span class="text-[#34d399] tracking-wider">${user}</span></div>
+                <div class="mt-0.5 text-[10px] text-green-100/50 md:text-xs">REF#${getRandomStr(8, "0123456789")} • ${getNowTime()}</div>
               </div>
             </div>
             <div class="flex flex-col items-end justify-center gap-1.5">
-              <div class="text-xl font-black text-white md:text-2xl drop-shadow-[2px_2px_0_rgba(185,28,28,0.8)]">
-                ${getAmount()} <span class="text-[10px] text-red-500">THB</span>
+              <div class="text-lg font-black tracking-tight text-yellow-400 md:text-2xl drop-shadow-[0_0_5px_rgba(234,179,8,0.3)]">
+                ${getAmount()} <span class="text-[10px] font-medium text-yellow-600 md:text-xs">THB</span>
               </div>
-              <div class="border px-2 py-0.5 text-[9px] font-bold tracking-widest ${statusClass}">${statusText}</div>
+              <div class="rounded-full px-3 py-1 text-[9px] font-medium md:text-[10px] ${statusClass}">${statusText}</div>
             </div>
           </div>
         </div>
@@ -77,21 +78,21 @@ const bankPool = [
     const newEl = tempDiv.firstElementChild;
     feed.prepend(newEl);
     newEl.getBoundingClientRect();
-    newEl.classList.remove("grid-rows-[0fr]", "opacity-0", "-translate-x-10");
-    newEl.classList.add("grid-rows-[1fr]", "opacity-100", "translate-x-0");
+    newEl.classList.remove("grid-rows-[0fr]", "opacity-0", "-translate-y-4");
+    newEl.classList.add("grid-rows-[1fr]", "opacity-100", "translate-y-0");
     if (feed.children.length > 4) {
       const last = feed.lastElementChild;
-      last.classList.remove("grid-rows-[1fr]", "opacity-100", "translate-x-0");
-      last.classList.add("grid-rows-[0fr]", "opacity-0", "translate-x-10");
-      setTimeout(() => last.remove(), 500);
+      last.classList.remove("grid-rows-[1fr]", "opacity-100", "translate-y-0");
+      last.classList.add("grid-rows-[0fr]", "opacity-0", "translate-y-4");
+      setTimeout(() => last.remove(), 700);
     }
   };
   for (let i = 0; i < 4; i++) {
     const t = document.createElement("div");
     t.innerHTML = createHTML();
     const e = t.firstElementChild;
-    e.classList.remove("grid-rows-[0fr]", "opacity-0", "-translate-x-10");
-    e.classList.add("grid-rows-[1fr]", "opacity-100", "translate-x-0");
+    e.classList.remove("grid-rows-[0fr]", "opacity-0", "-translate-y-4");
+    e.classList.add("grid-rows-[1fr]", "opacity-100", "translate-y-0");
     feed.appendChild(e);
   }
   setInterval(trigger, 5000);

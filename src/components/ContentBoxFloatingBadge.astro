@@ -1,0 +1,31 @@
+---
+export interface Props {
+  title?: string;
+  as?: "h1" | "h2" | "h3" | "h4" | "h5" | "h6";
+}
+const { title, as: HeadingTag = "h1" } = Astro.props;
+---
+
+<section class="my-10 flex w-full justify-center px-4 font-sans">
+  <div class="relative w-full max-w-7xl rounded-2xl border-2 border-[#10b981]/40 bg-gradient-to-b from-[#062b15] to-[#021207] p-8 pt-12 shadow-[0_10px_40px_rgba(0,0,0,0.5)]">
+    {
+      title && (
+        <div class="absolute -top-6 left-1/2 -translate-x-1/2 rounded-lg border-2 border-[#10b981]/50 bg-[#021207] px-8 py-2.5 whitespace-nowrap shadow-[0_5px_15px_rgba(16,185,129,0.2)]">
+          <HeadingTag class="bg-gradient-to-r from-yellow-200 via-yellow-400 to-yellow-600 bg-clip-text text-xl font-black tracking-tighter text-transparent uppercase md:text-2xl">
+            ✦ {title} ✦
+          </HeadingTag>
+        </div>
+      )
+    }
+
+    <div class="text-center text-lg leading-relaxed text-green-50/90">
+      <slot />
+    </div>
+  </div>
+</section>
+
+<style>
+  .font-sans {
+    font-family: "Kanit", sans-serif;
+  }
+</style>

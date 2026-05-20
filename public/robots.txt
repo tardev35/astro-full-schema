@@ -13,5 +13,5 @@ Disallow: /
 User-agent: Anthropic-ai
 Disallow: /
 
-Sitemap: https://vegus24r.com/sitemap-0.xml
+Sitemap: https://waiver388-homepage.com/sitemap-0.xml
 

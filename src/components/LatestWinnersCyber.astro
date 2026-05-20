@@ -1,0 +1,97 @@
+---
+import kbankLogo from "../assets/banks/kbank.png";
+import scbLogo from "../assets/banks/scb.png";
+import krungsriLogo from "../assets/banks/krungsri.png";
+import ktbLogo from "../assets/banks/ktb.png";
+
+const bankPool = [
+  { name: "KBank", color: "bg-[#1155cc]", icon: kbankLogo.src },
+  { name: "SCB", color: "bg-[#4e1c80]", icon: scbLogo.src },
+  { name: "Krungsri", color: "bg-[#fcd34d]", icon: krungsriLogo.src },
+  { name: "KTB", color: "bg-[#0ea5e9]", icon: ktbLogo.src },
+];
+---
+
+<div class="mx-auto w-full max-w-[1300px] p-4 font-sans">
+  <div
+    class="relative border-r-4 border-l-4 border-purple-600 bg-[#0a001a]/80 px-4 py-8 shadow-[0_0_30px_rgba(157,78,221,0.2)] md:p-10"
+    style="clip-path: polygon(20px 0, calc(100% - 20px) 0, 100% 20px, 100% calc(100% - 20px), calc(100% - 20px) 100%, 20px 100%, 0 calc(100% - 20px), 0 20px);">
+    <div class="absolute top-0 left-0 h-[1px] w-full bg-gradient-to-r from-transparent via-purple-500 to-transparent"></div>
+    <div class="absolute bottom-0 left-0 h-[1px] w-full bg-gradient-to-r from-transparent via-purple-500 to-transparent"></div>
+
+    <div class="relative z-10 mb-8 flex items-center justify-between border-b border-purple-500/30 pb-4">
+      <h2 class="text-xl font-black tracking-[0.2em] text-purple-400 drop-shadow-[0_0_8px_rgba(157,78,221,0.8)]">/// รายการถอนเงินล่าสุด</h2>
+      <span class="animate-pulse border border-yellow-400/50 px-2 py-1 text-xs font-bold tracking-widest text-yellow-400">ONLINE</span>
+    </div>
+
+    <div id="feed-cyber-hud" class="relative z-10 flex flex-col gap-3"></div>
+  </div>
+</div>
+
+<script define:vars={{ bankPool }}>
+  const feed = document.getElementById("feed-cyber-hud");
+  const getRandomStr = (len, chars) =>
+    Array.from({ length: len })
+      .map(() => chars.charAt(Math.floor(Math.random() * chars.length)))
+      .join("");
+  const getAmount = () => (Math.floor(Math.random() * (95000 - 15000 + 1)) + 15000).toLocaleString("en-US");
+
+  const createHTML = () => {
+    const bank = bankPool[Math.floor(Math.random() * bankPool.length)];
+    const user = `${getRandomStr(2, "abcdefghijklmnopqrstuvwxyz")}***${getRandomStr(4, "0123456789")}`;
+    const isPending = Math.random() > 0.6;
+
+    const statusClass = isPending ? "text-gray-400 border-gray-600 animate-pulse" : "text-green-400 border-green-500/50";
+    const statusText = isPending ? "[PROCESSING]" : "[VERIFIED]";
+
+    return `
+      <div class="winner-row origin-left transform scale-x-95 opacity-0 transition-all duration-500 ease-out">
+        <div class="flex items-center justify-between border-l-2 border-purple-500 bg-gradient-to-r from-purple-900/40 to-transparent p-3 backdrop-blur-sm transition-colors hover:bg-purple-900/60">
+          <div class="flex items-center gap-4">
+            <div class="flex h-8 w-8 items-center justify-center bg-black/50 border border-white/10 ${bank.color} mix-blend-screen">
+              <img src="${bank.icon}" alt="bank" class="h-5 w-5 object-contain grayscale" />
+            </div>
+            <div class="font-mono text-sm text-indigo-200">
+              USR_ID: <span class="font-bold text-white">${user}</span>
+            </div>
+          </div>
+          <div class="flex items-center gap-6">
+            <div class="font-mono text-[10px] tracking-widest ${statusClass}">${statusText}</div>
+            <div class="font-mono text-xl font-black text-yellow-400 drop-shadow-[0_0_8px_rgba(255,215,0,0.5)]">
+              ${getAmount()} <span class="text-xs text-yellow-600">THB</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    `;
+  };
+
+  const trigger = () => {
+    const tempDiv = document.createElement("div");
+    tempDiv.innerHTML = createHTML();
+    const newEl = tempDiv.firstElementChild;
+    feed.prepend(newEl);
+    setTimeout(() => {
+      newEl.classList.remove("scale-x-95", "opacity-0");
+      newEl.classList.add("scale-x-100", "opacity-100");
+    }, 50);
+    if (feed.children.length > 5) {
+      const last = feed.lastElementChild;
+      last.classList.remove("scale-x-100", "opacity-100");
+      last.classList.add("scale-x-95", "opacity-0");
+      setTimeout(() => last.remove(), 500);
+    }
+  };
+  for (let i = 0; i < 5; i++) {
+    trigger();
+  }
+  setInterval(trigger, 4000);
+</script>
+<style>
+  .font-sans {
+    font-family: "Kanit", sans-serif;
+  }
+  .font-mono {
+    font-family: monospace;
+  }
+</style>

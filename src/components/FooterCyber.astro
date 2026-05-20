@@ -1,0 +1,97 @@
+---
+import { Picture } from "astro:assets";
+const images = import.meta.glob<{ default: ImageMetadata }>("../assets/logo.{png,webp,jpg}", { eager: true });
+const imagePaths = Object.keys(images);
+const mainLogo = imagePaths.length > 0 ? images[imagePaths[0]].default : null;
+---
+
+<footer
+  class="relative mt-10 w-full overflow-hidden border-t border-purple-500/50 bg-[#0a001a] pt-16 pb-8 font-sans text-white"
+  style="clip-path: polygon(0 30px, 50vw 0, 100% 30px, 100% 100%, 0 100%);">
+  <div
+    class="pointer-events-none absolute inset-0 opacity-10"
+    style="background-image: linear-gradient(#9d4edd 1px, transparent 1px), linear-gradient(90deg, #9d4edd 1px, transparent 1px); background-size: 30px 30px;">
+  </div>
+
+  <div class="relative z-10 mx-auto w-full max-w-[1200px] px-6">
+    <div class="mb-12 grid grid-cols-1 gap-10 md:grid-cols-12">
+      <div class="flex flex-col gap-5 md:col-span-5">
+        <a href="/" class="inline-block transition-transform hover:scale-105">
+          {
+            mainLogo ? (
+              <Picture src={mainLogo} alt="WAIVER388 Logo" class="h-[50px] w-auto drop-shadow-[0_0_15px_rgba(157,78,221,0.5)]" formats={["avif", "webp"]} fallbackFormat="webp" />
+            ) : (
+              <h2 class="text-3xl font-black tracking-widest text-purple-400">WAIVER388</h2>
+            )
+          }
+        </a>
+        <p class="border-l-2 border-purple-500 pl-4 text-sm leading-relaxed text-indigo-200/70">
+          แพลตฟอร์มคาสิโนออนไลน์แห่งอนาคต ระบบประมวลผล Cyber-Auto ที่เสถียรที่สุด ฝากถอนไวใน 3 วินาที บริการระดับพรีเมียม 24 ชั่วโมง
+        </p>
+        <div class="mt-4 flex gap-3">
+          <span class="border border-purple-500/30 bg-purple-900/50 px-3 py-1 font-mono text-xs text-purple-300">API_V2.0</span>
+          <span class="border border-green-500/30 bg-green-900/50 px-3 py-1 font-mono text-xs text-green-400">100%_SECURE</span>
+        </div>
+      </div>
+
+      <nav class="flex flex-col gap-4 md:col-span-3 lg:pl-8">
+        <h3 class="text-lg font-black tracking-widest text-yellow-400 uppercase drop-shadow-[0_0_5px_rgba(255,215,0,0.5)]">/// สารบัญนำทาง</h3>
+        <ul class="flex flex-col gap-3 font-mono text-sm text-indigo-200/80">
+          <li><a href="/" class="transition-colors hover:text-purple-400">> หน้าแรก</a></li>
+          <li><a href="/promotion" class="transition-colors hover:text-purple-400">> โปรโมชั่น</a></li>
+          <li><a href="/register" class="transition-colors hover:text-purple-400">> สมัครสมาชิก</a></li>
+          <li><a href="/login" class="transition-colors hover:text-purple-400">> เข้าสู่ระบบ</a></li>
+        </ul>
+      </nav>
+
+      <div class="flex flex-col gap-5 md:col-span-4">
+        <h3 class="text-lg font-black tracking-widest text-yellow-400 uppercase drop-shadow-[0_0_5px_rgba(255,215,0,0.5)]">/// SUPPORT_LINK</h3>
+
+        <a
+          href="/line"
+          class="flex w-full items-center justify-center gap-2 bg-[#00B900] py-3 font-bold text-white transition-all hover:bg-[#009900]"
+          style="clip-path: polygon(10px 0, 100% 0, 100% calc(100% - 10px), calc(100% - 10px) 100%, 0 100%, 0 10px);">
+          LINE CONNECT
+        </a>
+
+        <div class="mt-2 font-mono text-xs text-purple-400">รองรับทุกธนาคาร</div>
+        <div class="flex flex-wrap gap-2 opacity-80">
+          <div class="flex h-6 w-10 items-center justify-center border border-white/10 bg-[#118A44] text-[10px] font-bold text-white shadow-sm" title="KBank">KB</div>
+          <div class="flex h-6 w-10 items-center justify-center border border-white/10 bg-[#4E2B7A] text-[10px] font-bold text-white shadow-sm" title="SCB">SCB</div>
+          <div class="flex h-6 w-10 items-center justify-center border border-white/10 bg-[#1BA1E2] text-[10px] font-bold text-white shadow-sm" title="KTB">KTB</div>
+          <div class="flex h-6 w-10 items-center justify-center border border-white/10 bg-[#1E4598] text-[10px] font-bold text-white shadow-sm" title="Bangkok Bank">BBL</div>
+          <div class="flex h-6 w-10 items-center justify-center border border-white/10 bg-[#FEC400] text-[10px] font-bold text-[#1E4598] shadow-sm" title="Krungsri">BAY</div>
+          <div class="flex h-6 w-10 items-center justify-center border border-white/10 bg-[#0050F0] text-[10px] font-bold text-white shadow-sm" title="TTB">TTB</div>
+          <div class="flex h-6 w-10 items-center justify-center border border-white/10 bg-[#EB008B] text-[10px] font-bold text-white shadow-sm" title="GSB">GSB</div>
+          <div
+            class="flex h-6 w-10 items-center justify-center border border-white/10 bg-gradient-to-r from-orange-500 to-orange-400 text-[10px] font-bold text-white shadow-sm"
+            title="TrueMoney Wallet">
+            TW
+          </div>
+          <div class="flex h-6 w-10 items-center justify-center border border-white/10 bg-gradient-to-r from-[#113566] to-[#E31D24] text-[10px] font-bold text-white shadow-sm" title="PromptPay">
+            PP
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="flex flex-col items-center justify-between border-t border-purple-500/30 pt-6 font-mono text-xs text-indigo-300/40 md:flex-row">
+      <p>SYSTEM_COPYRIGHT &copy; {new Date().getFullYear()} WAIVER388</p>
+      <div class="mt-4 flex gap-4 md:mt-0">
+        <a href="/" class="hover:text-purple-400">TERMS_OF_SERVICE</a>
+        <a href="/" class="hover:text-purple-400">PRIVACY_POLICY</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<style>
+  footer a {
+    text-decoration: none;
+    font-family: "Kanit", sans-serif;
+  }
+
+  .font-sans {
+    font-family: "Kanit", sans-serif;
+  }
+</style>

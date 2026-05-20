@@ -1,0 +1,44 @@
+---
+const { message = "🧬 WAIVER388 CYBER-AUTO SYSTEM ACTIVATED: ฝาก-ถอน เร็วแรงทะลุมิติ สมาชิกใหม่รับสิทธิพิเศษสูงสุด 500 บาท!" } = Astro.props;
+---
+
+<div class="mx-auto w-full max-w-7xl px-4 py-3 font-sans">
+  <div
+    class="relative flex overflow-hidden border border-purple-500/50 bg-[#10002b]/90 shadow-[0_0_15px_rgba(157,78,221,0.3)] backdrop-blur-md"
+    style="clip-path: polygon(15px 0, 100% 0, calc(100% - 15px) 100%, 0 100%);">
+    <div
+      class="relative z-10 flex shrink-0 items-center justify-center bg-gradient-to-r from-purple-700 to-indigo-600 px-6 py-2.5 font-black text-yellow-400"
+      style="clip-path: polygon(0 0, 100% 0, calc(100% - 10px) 100%, 0 100%);">
+      ประกาศสำคัญจาก WAIVER388
+    </div>
+
+    <div class="marquee-container relative flex-1 overflow-hidden py-2.5 pr-6">
+      <div class="pointer-events-none absolute top-0 left-0 z-10 h-full w-8 bg-gradient-to-r from-[#10002b] to-transparent"></div>
+
+      <div class="marquee-content inline-block pl-4 text-sm font-bold tracking-widest whitespace-nowrap text-indigo-300">
+        <span class="mr-8 inline-flex items-center gap-2"><span class="h-2 w-2 bg-purple-500 shadow-[0_0_8px_rgba(157,78,221,1)]"></span>{message}</span>
+        <span class="mr-8 inline-flex items-center gap-2"><span class="h-2 w-2 bg-purple-500 shadow-[0_0_8px_rgba(157,78,221,1)]"></span>{message}</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+  .font-sans {
+    font-family: "Kanit", sans-serif;
+  }
+  .marquee-content {
+    animation: marquee 20s linear infinite;
+  }
+  .marquee-container:hover .marquee-content {
+    animation-play-state: paused;
+  }
+  @keyframes marquee {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+</style>

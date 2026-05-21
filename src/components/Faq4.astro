@@ -1,40 +1,49 @@
 ---
 const faqs = [
-  { q: "S8P888 ต้องโยกเงินก่อนเล่นไหม?", a: "ไม่จำเป็นครับ ระบบของเราใช้กระเป๋าเงินเดียว (Single Wallet) เล่นได้ทุกค่ายเกมในยูสเซอร์เดียว" },
-  { q: "หากมีปัญหาเข้าใช้งานไม่ได้ ต้องทำอย่างไร?", a: "สามารถติดต่อ Call Center ของเราได้ทันทีตลอด 24 ชั่วโมง เรามีทีมงานพร้อมให้คำแนะนำและส่งลิงก์ทางเข้าล่าสุดให้คุณเสมอ" },
-  { q: "รับโบนัส 100% ต้องทำอย่างไร?", a: "เพียงสมัครสมาชิกใหม่และทำตามเงื่อนไขที่ระบุหน้าเว็บไซต์ โบนัสจะถูกเติมเข้าสู่ระบบให้ทันที" },
+  {
+    q: "ขั้นตอนการสมัครสมาชิก Teenoi168 อย่างปลอดภัยและรวดเร็ว",
+    a: "การสมัครสมาชิกกับเราทำได้ง่ายผ่านระบบออโต้หน้าเว็บ กรอกข้อมูลเพียงไม่กี่ขั้นตอน ข้อมูลส่วนตัวของคุณจะถูกจัดเก็บด้วยระบบเข้ารหัส SSL ขั้นสูง ทำให้ปลอดภัยจากการรั่วไหล 100% และไม่มีการนำข้อมูลไปใช้ในทางที่ผิด",
+  },
+  {
+    q: "แนวทางแก้ไขเบื้องต้นเมื่อพบปัญหาเข้าหน้าเว็บ Teenoi168 ไม่ได้",
+    a: "หากคุณพบปัญหาเข้าเว็บไม่ได้ อาจเกิดจากแคช (Cache) บราวเซอร์เก่าสะสม แนะนำให้ทำการล้างแคชหรือเปลี่ยนบราวเซอร์ หากยังพบปัญหา สามารถติดต่อแอดมินเพื่อขอรับ ลิงก์ทางเข้าสำรองล่าสุด ได้ทันที ทีมงานเราเตรียมช่องทางสำรองไว้รองรับสถานการณ์ฉุกเฉินเสมอ",
+  },
+  {
+    q: "ช่องทางการติดต่อทีมงาน Teenoi168 ดูแลตลอด 24 ชั่วโมง",
+    a: "เรามีทีมงานมืออาชีพสแตนด์บายดูแลคุณตลอด 24 ชั่วโมง ไม่มีวันหยุด ไม่ว่าจะเป็นปัญหาด้านการใช้งาน การสอบถามโปรโมชั่น หรือปัญหาด้านเทคนิค คุณสามารถติดต่อเราผ่านช่องทาง Line Official ที่ระบุหน้าเว็บไซต์ เราพร้อมดูแลทุกท่านด้วยความรวดเร็วและเป็นกันเอง ",
+  },
 ];
 ---
 
 
  <div class="mx-auto max-w-[1000px] px-4 py-10 font-sans">
-  <div class="mb-8 flex items-center gap-3 border-l-4 border-emerald-500 bg-gradient-to-r from-emerald-900/40 via-emerald-900/10 to-transparent py-2.5 px-4"
+  <div class="mb-8 flex items-center gap-3 border-l-4 border-red-500 bg-gradient-to-r from-red-900/40 via-red-900/10 to-transparent py-2.5 px-4"
        style="clip-path: polygon(0 0, 100% 0, calc(100% - 15px) 100%, 0 100%);">
-    <h3 class="text-xl font-black uppercase tracking-widest text-amber-400 drop-shadow-[0_0_8px_rgba(16,185,129,0.5)] md:text-2xl">คำถามที่พบบ่อย (FAQ) เกี่ยวกับการใช้งาน S8P888
+    <h3 class="text-xl font-black uppercase tracking-widest text-amber-400 drop-shadow-[0_0_8px_rgba(239,68,68,0.4)] md:text-2xl">คำถามที่พบบ่อย (FAQ) เกี่ยวกับการใช้งาน Teenoi168
     </h3>
   </div>
 
   <div class="space-y-4">
     {
       faqs.map((faq, index) => (
-        <div class="faq-item group relative overflow-hidden bg-[#01120a]/80 border border-emerald-500/30 transition-all duration-300 hover:border-emerald-400 hover:shadow-[0_0_20px_rgba(16,185,129,0.2)] backdrop-blur-sm"
+        <div class="faq-item group relative overflow-hidden bg-[#01120a]/80 border border-red-500/30 transition-all duration-300 hover:border-red-400 hover:shadow-[0_0_20px_rgba(239,68,68,0.2)] backdrop-blur-sm"
              style="clip-path: polygon(15px 0, 100% 0, 100% calc(100% - 15px), calc(100% - 15px) 100%, 0 100%, 0 15px);">
           
-          <div class="absolute top-0 left-0 h-[2px] w-16 bg-gradient-to-r from-emerald-500 to-transparent"></div>
+          <div class="absolute top-0 left-0 h-[2px] w-16 bg-gradient-to-r from-red-500 to-transparent"></div>
           
           <button class="faq-trigger flex w-full items-center justify-between p-5 text-left transition-all">
-            <span class="text-sm font-bold text-white/90 transition-colors group-hover:text-emerald-300 md:text-lg flex items-center gap-2">
+            <span class="text-sm font-bold text-white/90 transition-colors group-hover:text-red-300 md:text-lg flex items-center gap-2">
               <span class="text-yellow-400 font-mono">>_</span> {faq.q}
             </span>
             
-            <span class="icon ml-4 flex h-8 w-8 shrink-0 items-center justify-center border border-emerald-500/40 bg-[#064e3b]/50 text-emerald-400 transition-all duration-300 group-hover:border-yellow-400 group-hover:text-yellow-400 group-hover:shadow-[0_0_10px_rgba(255,215,0,0.5)]"
+            <span class="icon ml-4 flex h-8 w-8 shrink-0 items-center justify-center border border-red-500/40 bg-[#7f1d1d]/50 text-red-400 transition-all duration-300 group-hover:border-yellow-400 group-hover:text-yellow-400 group-hover:shadow-[0_0_10px_rgba(255,215,0,0.5)]"
                   style="clip-path: polygon(25% 0, 100% 0, 100% 75%, 75% 100%, 0 100%, 0 25%);">
               <i class="fa-solid fa-plus text-xs" />
             </span>
           </button>
           
           <div class="faq-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
-            <div class="border-t border-emerald-500/20 p-5 pt-0 text-sm leading-relaxed text-emerald-50/70 md:text-base">
+            <div class="border-t border-red-500/20 p-5 pt-0 text-sm leading-relaxed text-red-50/70 md:text-base">
               {faq.a}
             </div>
           </div>

@@ -19,6 +19,6 @@ export default defineConfig({
     '/line': 'https://tinyurl.com/linepigpg'
   },
 
-  site: 'https://teenoi168bkk.com',
+  site: 'https://marangs7777.com',
   integrations: [sitemap()]
 });

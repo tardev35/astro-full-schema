@@ -41,7 +41,6 @@ const bankPool = [
     const user = `${getRandomStr(2, "abcdefghijklmnopqrstuvwxyz")}***${getRandomStr(4, "0123456789")}`;
     const isPending = Math.random() > 0.6;
 
-    // สีเขียวมรกตและทอง
     const statusClass = isPending ? "bg-gray-700/50 text-gray-300 animate-pulse border border-gray-500/50" : "bg-[#10b981]/20 text-[#34d399] border border-[#10b981]/50";
     const statusText = isPending ? "กำลังทำรายการ..." : "ถอนสำเร็จแล้ว";
 

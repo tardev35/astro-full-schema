@@ -1,17 +1,17 @@
 ---
 import { Image } from "astro:assets";
-import Bg from "../assets/bg.webp";
+import Bg from "../assets/bg.jpg";
 import "../styles/global.css";
-import NavbarStyle6 from "../components/NavbarCyber.astro";
-import Footer from "../components/FooterCyber.astro";
+import NavbarStyle6 from "../components/NavbarPremium.astro";
+import Footer from "../components/FooterPremium.astro";
 
 const bannerImages = import.meta.glob<{ default: ImageMetadata }>("../assets/banner*.{png,webp,jpg,jpeg}", { eager: true });
 const bannerPaths = Object.keys(bannerImages);
 const mainBanner = bannerPaths.length > 0 ? bannerImages[bannerPaths[0]].default : null;
 
 const {
-  title = "MARANGS777 เว็บตรง API แท้ มีครบเกมสล็อตออนไลน์ ทางเข้าหลัก",
-  description = "ทางเข้าหลัก MARANGS777 เว็บตรง API แท้ จากเซิร์ฟเวอร์จริง ไม่เสี่ยงโดนโกง จ่ายจริงไม่ล็อคยูส ฝากถอนออโต้ ทำงานเอง ไม่ผ่านแอดมิน สมัครที่นี่ปลอดภัย 100%",
+  title = "สล็อตเว็บตรงแตกไว จ่ายจริง 2026 ทางเข้าหลัก ลิงก์สมัครแท้ QQ882",
+  description = "ทางเข้าหลัก QQ882 สล็อตเว็บตรงแตกไวปี 2026 สมัครกับเว็บตรง API แท้ ฝากถอนออโต้ไว จ่ายจริงทุกยอด ไม่ผ่านเอเย่นต์ มั่นคง ปลอดภัยที่สุดในไทย",
   robots = "index, follow",
   ImageOg = "/pro3.webp",
 } = Astro.props;
@@ -19,13 +19,13 @@ const {
 const currentPath = Astro.url.pathname;
 const canonicalURL = new URL(currentPath, Astro.site);
 const ogImageURL = new URL(ImageOg, Astro.site);
-const ogSiteName = "MARANGS777";
+const ogSiteName = "QQ882";
 ---
 
 <html lang="th">
   <head>
     <meta charset="utf-8" />
-    <meta name="google-site-verification" content="QBlyU6ykSCvx9r-jtnRYJi9MVvsZ5XDmBdz5nNvYoRg" />
+    <meta name="google-site-verification" content="qtefgN5TXK0pbDGFoG1TWAhJdbatpOp514BBsk45ypc" />
     <meta name="robots" content={robots} />
     <meta name="googlebot" content={robots} />
     <title>{title}</title>

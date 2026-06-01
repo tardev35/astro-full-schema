@@ -2,7 +2,7 @@
 import MainLayout from "../layouts/MainLayout.astro";
 import ContentBox from "../components/ContentBoxCyberCut.astro";
 import Navfoot from "../components/Navfoot.astro";
-import Announcement from "../components/AnnouncementCyber.astro";
+import Announcement from "../components/AnnouncementPremium.astro";
 
 import { Picture } from "astro:assets";
 import image1 from "../assets/gamedemo7.webp";
@@ -50,10 +50,10 @@ const gameList = [
 ---
 
 <script type="application/ld+json" set:html={JSON.stringify(gameList)} />
-<MainLayout title="ทดลองเล่นสล็อต MARANGS777" description="ทดลองเล่น MARANGS777">
+<MainLayout title="ทดลองเล่นสล็อต QQ882" description="ทดลองเล่น QQ882">
   <Announcement />
 
-  <ContentBox title="ทดลองเล่นสล็อต MARANGS777">
+  <ContentBox title="ทดลองเล่นสล็อต QQ882">
     <div class="mb-5 grid grid-cols-2 gap-5 sm:grid-cols-2 md:grid-cols-4">
       {
         demoGames.map((game) => (

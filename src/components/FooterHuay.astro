@@ -1,0 +1,76 @@
+---
+import { Picture } from "astro:assets";
+const images = import.meta.glob<{ default: ImageMetadata }>("../assets/logo.{png,webp,jpg}", { eager: true });
+const imagePaths = Object.keys(images);
+const mainLogo = imagePaths.length > 0 ? images[imagePaths[0]].default : null;
+---
+
+<footer class="relative mt-12 w-full overflow-hidden rounded-t-[3rem] border-t border-red-800/60 bg-[#1a0202] pt-16 pb-8 font-sans text-white shadow-[0_-10px_30px_rgba(220,38,38,0.2)]">
+  <div class="relative z-10 mx-auto w-full max-w-[1200px] px-6">
+    <div class="mb-12 grid grid-cols-1 gap-12 md:grid-cols-12">
+      <div class="flex flex-col gap-5 md:col-span-5">
+        <a href="/" class="inline-block transition-transform duration-300 hover:scale-105">
+          {
+            mainLogo ? (
+              <Picture src={mainLogo} alt="HUAYPUNG Logo" class="h-[65px] w-auto drop-shadow-[0_5px_15px_rgba(251,191,36,0.3)]" formats={["avif", "webp"]} fallbackFormat="webp" />
+            ) : (
+              <h2 class="bg-gradient-to-r from-yellow-300 to-yellow-600 bg-clip-text text-4xl font-black tracking-widest text-transparent">HUAYPUNG</h2>
+            )
+          }
+        </a>
+        <p class="border-l-2 border-yellow-500/50 pl-4 text-sm leading-relaxed text-red-200/70">
+          อาณาจักรหวยออนไลน์ที่มั่นคงที่สุด จ่ายจริง จ่ายไว ไม่มีอั้น ฝากถอนระบบอัตโนมัติ 3 วินาที พร้อมแอดมินดูแล 24 ชั่วโมง
+        </p>
+        <div class="mt-4 flex gap-3">
+          <span class="rounded-full border border-red-500/30 bg-red-900/30 px-4 py-1 text-xs font-medium text-red-300">AUTO SYSTEM</span>
+          <span class="rounded-full border border-yellow-500/30 bg-yellow-900/30 px-4 py-1 text-xs font-medium text-yellow-400">100% PAYOUT</span>
+        </div>
+      </div>
+
+      <nav class="flex flex-col gap-4 md:col-span-3 lg:pl-8">
+        <h3 class="text-lg font-black tracking-widest text-white uppercase">เมนูลัด</h3>
+        <div class="h-[1px] w-12 bg-yellow-500"></div>
+        <ul class="flex flex-col gap-3 text-sm font-medium text-red-200/70">
+          <li><a href="/" class="transition-colors hover:text-yellow-400">หน้าหลัก</a></li>
+          <li><a href="/ตรวจหวย" class="transition-colors hover:text-yellow-400">ผลรางวัล / ตรวจหวย</a></li>
+          <li><a href="/register" class="transition-colors hover:text-yellow-400">สมัครสมาชิกฟรี</a></li>
+          <li><a href="/login" class="transition-colors hover:text-yellow-400">เข้าสู่ระบบ</a></li>
+        </ul>
+      </nav>
+
+      <div class="flex flex-col gap-5 md:col-span-4">
+        <h3 class="text-lg font-black tracking-widest text-white uppercase">ติดต่อเรา</h3>
+        <div class="h-[1px] w-12 bg-yellow-500"></div>
+
+        <a
+          href="/line"
+          class="flex w-full items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-[#00B900] to-[#009900] py-3.5 font-bold text-white shadow-md transition-all hover:-translate-y-1">
+          เพิ่มเพื่อน LINE @HUAYPUNG
+        </a>
+
+        <div class="mt-4 text-xs font-medium text-red-300/50">ธนาคารที่รองรับ</div>
+        <div class="flex flex-wrap gap-2 opacity-90">
+          <div class="flex h-7 w-11 items-center justify-center rounded-md border border-white/10 bg-[#118A44] text-[10px] font-bold text-white">KB</div>
+          <div class="flex h-7 w-11 items-center justify-center rounded-md border border-white/10 bg-[#4E2B7A] text-[10px] font-bold text-white">SCB</div>
+          <div class="flex h-7 w-11 items-center justify-center rounded-md border border-white/10 bg-[#1BA1E2] text-[10px] font-bold text-white">KTB</div>
+          <div class="flex h-7 w-11 items-center justify-center rounded-md border border-white/10 bg-[#1E4598] text-[10px] font-bold text-white">BBL</div>
+          <div class="flex h-7 w-11 items-center justify-center rounded-md border border-white/10 bg-[#FEC400] text-[10px] font-bold text-[#1E4598]">BAY</div>
+          <div class="flex h-7 w-11 items-center justify-center rounded-md border border-white/10 bg-gradient-to-r from-orange-500 to-orange-400 text-[10px] font-bold text-white">TW</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="flex flex-col items-center justify-between border-t border-red-800/40 pt-8 text-xs font-medium text-red-300/40 md:flex-row">
+      <p>COPYRIGHT &copy; {new Date().getFullYear()} HUAYPUNG. ALL RIGHTS RESERVED.</p>
+      <div class="mt-4 flex gap-4 md:mt-0">
+        <a href="/" class="hover:text-red-300">เงื่อนไขการใช้งาน</a>
+        <a href="/" class="hover:text-red-300">นโยบายความเป็นส่วนตัว</a>
+      </div>
+    </div>
+  </div>
+</footer>
+<style>
+  .font-sans {
+    font-family: "Kanit", sans-serif;
+  }
+</style>

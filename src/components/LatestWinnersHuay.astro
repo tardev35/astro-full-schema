@@ -1,0 +1,96 @@
+---
+import kbankLogo from "../assets/banks/kbank.png";
+import scbLogo from "../assets/banks/scb.png";
+import krungsriLogo from "../assets/banks/krungsri.png";
+import ktbLogo from "../assets/banks/ktb.png";
+
+const bankPool = [
+  { name: "KBank", color: "bg-[#1155cc]", icon: kbankLogo.src },
+  { name: "SCB", color: "bg-[#4e1c80]", icon: scbLogo.src },
+  { name: "Krungsri", color: "bg-[#fcd34d]", icon: krungsriLogo.src },
+  { name: "KTB", color: "bg-[#0ea5e9]", icon: ktbLogo.src },
+];
+---
+
+<div class="mx-auto w-full max-w-[1300px] p-4 font-sans">
+  <div class="relative rounded-3xl border border-red-600/40 bg-[#450a0a]/80 px-4 py-8 shadow-[0_10px_30px_rgba(220,38,38,0.3)] backdrop-blur-md md:p-8">
+    <div class="relative z-10 mb-6 flex items-center justify-between border-b border-red-800/50 pb-4">
+      <div class="flex items-center gap-3">
+        <span class="text-2xl drop-shadow-[0_0_8px_rgba(251,191,36,0.8)]">💰</span>
+        <h2 class="bg-gradient-to-r from-yellow-300 to-yellow-600 bg-clip-text text-xl font-black tracking-widest text-transparent drop-shadow-sm">รายการถอนเงินล่าสุด</h2>
+      </div>
+      <span class="animate-pulse rounded-full border border-green-500/50 bg-green-900/30 px-3 py-1 text-[10px] font-bold tracking-widest text-green-400">REAL-TIME</span>
+    </div>
+
+    <div id="feed-huay-hud" class="relative z-10 flex flex-col gap-3"></div>
+  </div>
+</div>
+
+<script define:vars={{ bankPool }}>
+  const feed = document.getElementById("feed-huay-hud");
+  const getRandomStr = (len, chars) =>
+    Array.from({ length: len })
+      .map(() => chars.charAt(Math.floor(Math.random() * chars.length)))
+      .join("");
+  const getAmount = () => (Math.floor(Math.random() * (150000 - 5000 + 1)) + 5000).toLocaleString("en-US");
+
+  const createHTML = () => {
+    const bank = bankPool[Math.floor(Math.random() * bankPool.length)];
+    const user = `08${getRandomStr(1, "0123456789")}***${getRandomStr(4, "0123456789")}`; // ให้ดูเป็นเบอร์โทร
+    const isPending = Math.random() > 0.7;
+
+    const statusClass = isPending ? "text-yellow-400 animate-pulse" : "text-green-400";
+    const statusText = isPending ? "กำลังโอนเงิน..." : "โอนสำเร็จ";
+
+    return `
+      <div class="winner-row origin-bottom transform translate-y-4 opacity-0 transition-all duration-500 ease-out">
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 rounded-xl border border-red-700/30 bg-[#2a0404]/80 p-4 shadow-sm transition-all duration-300 hover:border-yellow-500/50 hover:bg-[#450a0a]">
+          <div class="flex items-center gap-4">
+            <div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-white/10 ${bank.color} shadow-inner">
+              <img src="${bank.icon}" alt="bank" class="h-6 w-6 object-contain grayscale" />
+            </div>
+            <div class="flex flex-col">
+              <span class="text-[10px] font-medium tracking-widest text-red-200/70">เบอร์โทรศัพท์</span>
+              <span class="font-mono text-sm font-bold text-white">${user}</span>
+            </div>
+          </div>
+          <div class="flex items-center justify-between sm:justify-end gap-6 border-t border-red-800/50 pt-3 sm:border-none sm:pt-0">
+            <div class="text-[11px] font-medium tracking-wider ${statusClass}">${statusText}</div>
+            <div class="font-sans text-xl font-black text-yellow-400 drop-shadow-[0_2px_5px_rgba(251,191,36,0.3)]">
+              ${getAmount()} <span class="text-xs font-bold text-yellow-600">บาท</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    `;
+  };
+
+  const trigger = () => {
+    const tempDiv = document.createElement("div");
+    tempDiv.innerHTML = createHTML();
+    const newEl = tempDiv.firstElementChild;
+    feed.prepend(newEl);
+    setTimeout(() => {
+      newEl.classList.remove("translate-y-4", "opacity-0");
+      newEl.classList.add("translate-y-0", "opacity-100");
+    }, 50);
+    if (feed.children.length > 5) {
+      const last = feed.lastElementChild;
+      last.classList.remove("translate-y-0", "opacity-100");
+      last.classList.add("-translate-y-4", "opacity-0");
+      setTimeout(() => last.remove(), 500);
+    }
+  };
+  for (let i = 0; i < 5; i++) {
+    trigger();
+  }
+  setInterval(trigger, 3000);
+</script>
+<style>
+  .font-sans {
+    font-family: "Kanit", sans-serif;
+  }
+  .font-mono {
+    font-family: monospace;
+  }
+</style>

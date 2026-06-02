@@ -1,0 +1,129 @@
+---
+import MainLayout from "../layouts/MainLayout.astro";
+import AnnouncementHuay from "../components/AnnouncementHuay.astro";
+import ContentBoxHuay from "../components/ContentBoxHuay.astro";
+import Navfoot from "../components/Navfoot.astro";
+---
+
+<MainLayout title="HUAYPUNG | ตรวจหวย ผลรางวัลล่าสุด อัปเดตเรียลไทม์">
+  <AnnouncementHuay message="🔥 อัปเดตผลรางวัลเรียลไทม์! ตรวจหวยรัฐบาล ฮานอย ลาว ยี่กี ได้ที่นี่ รวดเร็ว แม่นยำ 100%" />
+
+  <section class="mx-auto my-8 w-full max-w-5xl px-4 font-sans">
+    <div class="relative overflow-hidden rounded-3xl border border-red-600/40 bg-[#2a0404]/90 p-8 shadow-[0_15px_40px_rgba(220,38,38,0.4)] backdrop-blur-xl md:p-12">
+      <div class="pointer-events-none absolute -top-20 -left-20 h-64 w-64 rounded-full bg-yellow-600/10 blur-[60px]"></div>
+
+      <div class="relative z-10 flex flex-col items-center justify-center text-center">
+        <span class="mb-4 text-5xl drop-shadow-[0_0_15px_rgba(251,191,36,0.8)]">🏆</span>
+        <h1 class="mb-2 bg-gradient-to-r from-yellow-300 to-yellow-600 bg-clip-text text-4xl font-black tracking-widest text-transparent uppercase">ตรวจผลรางวัล</h1>
+        <p class="mb-8 text-red-200/80">กรอกตัวเลข 6 หลักเพื่อตรวจผลรางวัลของคุณ</p>
+
+        <div class="flex w-full max-w-2xl flex-col gap-4 md:flex-row">
+          <select
+            class="h-14 w-full rounded-xl border border-red-700/50 bg-[#450a0a] px-4 font-bold text-yellow-400 transition-all outline-none focus:border-yellow-500 focus:ring-2 focus:ring-yellow-500/30 md:w-1/3">
+            <option>หวยรัฐบาลไทย</option>
+            <option>หวยฮานอย</option>
+            <option>หวยลาวพัฒนา</option>
+            <option>หวยยี่กี</option>
+          </select>
+
+          <input
+            type="text"
+            id="lotto-input"
+            placeholder="ระบุตัวเลขที่ต้องการตรวจ..."
+            maxlength="6"
+            class="h-14 w-full flex-1 rounded-xl border border-red-700/50 bg-[#450a0a] px-6 text-center text-xl font-bold tracking-widest text-white transition-all outline-none focus:border-yellow-500 focus:ring-2 focus:ring-yellow-500/30 md:text-left"
+          />
+
+          <button
+            id="check-btn"
+            class="flex h-14 w-full items-center justify-center rounded-xl bg-gradient-to-r from-yellow-500 via-yellow-400 to-yellow-500 px-8 font-black text-[#2a0404] shadow-[0_5px_15px_rgba(251,191,36,0.4)] transition-all hover:scale-105 hover:shadow-[0_8px_25px_rgba(251,191,36,0.6)] md:w-auto">
+            ตรวจหวย
+          </button>
+        </div>
+
+        <div
+          id="result-box"
+          class="mt-8 hidden w-full max-w-2xl transform flex-col items-center justify-center rounded-2xl border border-green-500/50 bg-green-900/20 p-6 opacity-0 transition-all duration-500">
+          <h3 class="text-2xl font-black text-green-400">🎉 ยินดีด้วย! คุณถูกรางวัล</h3>
+          <p class="mt-2 text-lg text-white">หมายเลข <span id="show-number" class="font-bold tracking-widest text-yellow-400"></span> ถูกรางวัลเลขท้าย 2 ตัว</p>
+          <p class="mt-1 text-sm text-green-200">ระบบได้ทำการเพิ่มเครดิตเข้ากระเป๋าของคุณเรียบร้อยแล้ว</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <ContentBoxHuay title="ผลรางวัลล่าสุด (อัปเดตวันนี้)">
+    <div class="overflow-x-auto rounded-xl border border-red-800/50 bg-[#1a0202]">
+      <table class="w-full min-w-[600px] text-left text-sm">
+        <thead class="bg-gradient-to-r from-[#450a0a] to-[#2a0404]">
+          <tr class="text-yellow-400">
+            <th class="p-4 font-bold">ประเภทหวย</th>
+            <th class="p-4 text-center font-bold">รางวัลที่ 1 / 3 ตัวบน</th>
+            <th class="p-4 text-center font-bold">2 ตัวบน</th>
+            <th class="p-4 text-center font-bold">2 ตัวล่าง</th>
+            <th class="p-4 text-right font-bold">สถานะ</th>
+          </tr>
+        </thead>
+        <tbody class="divide-y divide-red-900/30 text-white">
+          <tr class="transition-colors hover:bg-red-900/20">
+            <td class="p-4 font-bold text-red-100">🇹🇭 หวยรัฐบาล (16 พ.ค.)</td>
+            <td class="p-4 text-center text-xl font-black tracking-wider text-yellow-400">205690</td>
+            <td class="p-4 text-center font-bold">90</td>
+            <td class="p-4 text-center font-bold">60</td>
+            <td class="p-4 text-right"><span class="rounded-full bg-green-900/50 px-3 py-1 text-[10px] font-bold text-green-400">จ่ายแล้ว</span></td>
+          </tr>
+          <tr class="transition-colors hover:bg-red-900/20">
+            <td class="p-4 font-bold text-red-100">🇻🇳 หวยฮานอย (พิเศษ)</td>
+            <td class="p-4 text-center text-xl font-black tracking-wider text-yellow-400">842</td>
+            <td class="p-4 text-center font-bold">42</td>
+            <td class="p-4 text-center font-bold">11</td>
+            <td class="p-4 text-right"><span class="rounded-full bg-green-900/50 px-3 py-1 text-[10px] font-bold text-green-400">จ่ายแล้ว</span></td>
+          </tr>
+          <tr class="transition-colors hover:bg-red-900/20">
+            <td class="p-4 font-bold text-red-100">🇱🇦 หวยลาวพัฒนา</td>
+            <td class="p-4 text-center text-xl font-black tracking-wider text-yellow-400">4781</td>
+            <td class="p-4 text-center font-bold">81</td>
+            <td class="p-4 text-center font-bold">03</td>
+            <td class="p-4 text-right"><span class="rounded-full bg-green-900/50 px-3 py-1 text-[10px] font-bold text-green-400">จ่ายแล้ว</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </ContentBoxHuay>
+
+  <Navfoot />
+</MainLayout>
+
+<script>
+  const checkBtn = document.getElementById("check-btn");
+  const input = document.getElementById("lotto-input") as HTMLInputElement;
+  const resultBox = document.getElementById("result-box");
+  const showNumber = document.getElementById("show-number");
+
+  checkBtn?.addEventListener("click", () => {
+    if (!input.value || input.value.length < 2) {
+      alert("กรุณากรอกตัวเลขอย่างน้อย 2 หลักครับ");
+      return;
+    }
+
+    checkBtn.innerHTML = "กำลังตรวจสอบ...";
+
+    setTimeout(() => {
+      checkBtn.innerHTML = "ตรวจหวย";
+      if (showNumber) showNumber.innerText = input.value;
+      if (resultBox) {
+        resultBox.classList.remove("hidden");
+
+        setTimeout(() => {
+          resultBox.classList.remove("opacity-0", "translate-y-4");
+          resultBox.classList.add("opacity-100", "translate-y-0");
+        }, 50);
+      }
+    }, 800);
+  });
+</script>
+<style>
+  .font-sans {
+    font-family: "Kanit", sans-serif;
+  }
+</style>

@@ -1,0 +1,41 @@
+---
+const { titleleft, titleright } = Astro.props;
+---
+
+<section class="mx-auto mb-8 w-full max-w-7xl px-4 font-sans">
+  <div
+    class="group relative w-full overflow-hidden rounded-3xl border border-red-600/30 bg-[#2a0404]/80 p-8 text-white/90 shadow-[0_10px_30px_rgba(220,38,38,0.3)] backdrop-blur-xl transition-all duration-500 hover:border-yellow-500/40 hover:shadow-[0_15px_40px_rgba(251,191,36,0.2)] md:p-10">
+    <div class="relative z-10 grid grid-cols-1 gap-10 md:grid-cols-[3fr_7fr] md:items-center">
+      <article class="flex flex-col gap-4">
+        {
+          titleleft && (
+            <h2 class="bg-gradient-to-r from-yellow-300 to-yellow-600 bg-clip-text text-center text-xl font-black tracking-widest text-transparent uppercase drop-shadow-sm md:text-left">
+              {titleleft}
+            </h2>
+          )
+        }
+        <div class="text-base leading-relaxed text-red-100/80">
+          <slot name="left" />
+        </div>
+      </article>
+
+      <article class="flex flex-col gap-4 md:border-l md:border-red-800/50 md:pl-10">
+        {
+          titleright && (
+            <h2 class="mb-2 flex items-center gap-2 text-2xl font-black tracking-widest text-yellow-400 uppercase drop-shadow-sm">
+              <span class="text-xl">🔥</span> {titleright}
+            </h2>
+          )
+        }
+        <div class="text-base leading-relaxed text-red-100/80">
+          <slot name="right" />
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+<style>
+  .font-sans {
+    font-family: "Kanit", sans-serif;
+  }
+</style>

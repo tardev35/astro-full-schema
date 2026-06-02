@@ -19,6 +19,6 @@ export default defineConfig({
     '/line': 'https://tinyurl.com/linepigpg'
   },
 
-  site: 'https://qq882-homepage.com',
+  site: 'https://huaypung-homepage.com',
   integrations: [sitemap()]
 });

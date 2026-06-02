@@ -2,16 +2,16 @@
 import { Image } from "astro:assets";
 import Bg from "../assets/bg.jpg";
 import "../styles/global.css";
-import NavbarStyle6 from "../components/NavbarPremium.astro";
-import Footer from "../components/FooterPremium.astro";
+import NavbarStyle6 from "../components/NavbarHuay.astro";
+import Footer from "../components/FooterHuay.astro";
 
 const bannerImages = import.meta.glob<{ default: ImageMetadata }>("../assets/banner*.{png,webp,jpg,jpeg}", { eager: true });
 const bannerPaths = Object.keys(bannerImages);
 const mainBanner = bannerPaths.length > 0 ? bannerImages[bannerPaths[0]].default : null;
 
 const {
-  title = "สล็อตเว็บตรงแตกไว จ่ายจริง 2026 ทางเข้าหลัก ลิงก์สมัครแท้ QQ882",
-  description = "ทางเข้าหลัก QQ882 สล็อตเว็บตรงแตกไวปี 2026 สมัครกับเว็บตรง API แท้ ฝากถอนออโต้ไว จ่ายจริงทุกยอด ไม่ผ่านเอเย่นต์ มั่นคง ปลอดภัยที่สุดในไทย",
+  title = "HUAYPUNG เว็บหวยออนไลน์อันดับ 1 ซื้อแล้วมั่นใจ จ่ายจริง หวยปัง",
+  description = "HUAYPUNG เว็บหวยออนไลน์อันดับ 1 อัตราจ่าย ดีงามทั้งตัวบน ตัวล่าง ซื้อออนไลน์หวยไม่ผ่านเอเย่นต์ ระบบประมวลผลผลรางวัล Real-time จ่ายจริง ผ่านบัญชีแท้",
   robots = "index, follow",
   ImageOg = "/pro3.webp",
 } = Astro.props;
@@ -19,13 +19,13 @@ const {
 const currentPath = Astro.url.pathname;
 const canonicalURL = new URL(currentPath, Astro.site);
 const ogImageURL = new URL(ImageOg, Astro.site);
-const ogSiteName = "QQ882";
+const ogSiteName = "HUAYPUNG";
 ---
 
 <html lang="th">
   <head>
     <meta charset="utf-8" />
-    <meta name="google-site-verification" content="qtefgN5TXK0pbDGFoG1TWAhJdbatpOp514BBsk45ypc" />
+    <meta name="google-site-verification" content="vzqgEM2RmHxcr4x7ZXEZ1Psaqivi9axYtpqRSazKc0g" />
     <meta name="robots" content={robots} />
     <meta name="googlebot" content={robots} />
     <title>{title}</title>
@@ -87,7 +87,7 @@ const ogSiteName = "QQ882";
     <div class="mb-2.5 flex w-full items-center justify-center">
       <Image
         src={mainBanner!}
-        alt="WAIVER388 banner"
+        alt="HUAYPUNG banner"
         loading="eager"
         fetchpriority="high"
         widths={[412, 768, 1900]}

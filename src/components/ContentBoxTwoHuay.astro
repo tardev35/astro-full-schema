@@ -2,36 +2,17 @@
 const { titleleft, titleright } = Astro.props;
 ---
 
-<section class="mx-auto mb-8 w-full max-w-7xl px-4 font-sans">
-  <div
-    class="group relative w-full overflow-hidden rounded-3xl border border-red-400/20 bg-[#5f0914]/60 p-8 text-white/90 shadow-[0_10px_30px_rgba(0,0,0,0.3)] backdrop-blur-xl transition-all duration-500 hover:border-yellow-400/40 hover:shadow-[0_15px_40px_rgba(250,204,21,0.15)] md:p-10">
-    <div class="pointer-events-none absolute inset-0 bg-gradient-to-br from-red-900/20 to-transparent opacity-50"></div>
+<section class="mx-auto mb-10 w-full max-w-5xl px-4 font-sans">
+  <div class="grid grid-cols-1 gap-8 md:grid-cols-2">
+    <article class="flex flex-col gap-4">
+      {titleleft && <h2 class="border-l-4 border-[#ffd60a] pl-3 text-xl font-black tracking-widest text-[#0a1128] uppercase">{titleleft}</h2>}
+      <div class="text-base leading-relaxed text-gray-700"><slot name="left" /></div>
+    </article>
 
-    <div class="relative z-10 grid grid-cols-1 gap-10 md:grid-cols-2">
-      <article class="flex flex-col gap-4">
-        {
-          titleleft && (
-            <h2 class="flex items-center gap-3 border-b border-red-500/30 pb-3 text-xl font-black tracking-widest text-yellow-400 uppercase">
-              <span class="flex h-6 w-6 items-center justify-center rounded-full bg-yellow-500/20 text-sm shadow-[0_0_10px_rgba(250,204,21,0.3)]">🔐</span>
-              {titleleft}
-            </h2>
-          )
-        }
-        <div class="text-base leading-relaxed text-red-50/90"><slot name="left" /></div>
-      </article>
-
-      <article class="flex flex-col gap-4 md:border-l md:border-red-500/30 md:pl-10">
-        {
-          titleright && (
-            <h2 class="flex items-center gap-3 border-b border-red-500/30 pb-3 text-xl font-black tracking-widest text-yellow-400 uppercase">
-              <span class="flex h-6 w-6 items-center justify-center rounded-full bg-yellow-500/20 text-sm shadow-[0_0_10px_rgba(250,204,21,0.3)]">🏆</span>
-              {titleright}
-            </h2>
-          )
-        }
-        <div class="text-base leading-relaxed text-red-50/90"><slot name="right" /></div>
-      </article>
-    </div>
+    <article class="flex flex-col gap-4">
+      {titleright && <h2 class="border-l-4 border-[#ffd60a] pl-3 text-xl font-black tracking-widest text-[#0a1128] uppercase">{titleright}</h2>}
+      <div class="text-base leading-relaxed text-gray-700"><slot name="right" /></div>
+    </article>
   </div>
 </section>
 <style>

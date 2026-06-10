@@ -1,20 +1,19 @@
 ---
-const { message = "🔥 LOT888 ยินดีต้อนรับ! สมัครสมาชิกใหม่รับโบนัสสูงสุด 3,000 บาท แทงหวยออนไลน์ จ่ายเต็ม ไม่มีอั้น ฝาก-ถอน ระบบออโต้ 3 วินาที!" } = Astro.props;
+const { message = "⚽ FINNBET แจ้งข่าวสาร เลขเด็ด เลขดัง จ่ายสูงกว่าทุกเว็บ ไม่มีปิดเลข รองรับการฝาก-ถอนทุกธนาคาร 24 ชั่วโมง" } = Astro.props;
 ---
 
-<div class="mx-auto w-full max-w-7xl px-4 py-3 font-sans">
-  <div class="relative flex overflow-hidden rounded-full border border-red-400/30 bg-[#5f0914]/80 shadow-[0_5px_15px_rgba(0,0,0,0.3)] backdrop-blur-md">
-    <div
-      class="relative z-10 flex shrink-0 items-center justify-center rounded-full bg-gradient-to-r from-yellow-500 via-yellow-300 to-yellow-500 px-6 py-2.5 font-black text-[#5f0914] shadow-[4px_0_15px_rgba(0,0,0,0.3)]">
-      <span class="mr-2 animate-pulse text-lg">📢</span> ประกาศ
+<div class="w-full border-b border-[#ffd60a]/30 bg-[#0a1128] py-2 font-sans">
+  <div class="mx-auto flex w-full max-w-[1600px] items-center px-4">
+    <div class="flex shrink-0 items-center justify-center rounded-sm bg-[#ffd60a] px-4 py-1 text-xs font-black tracking-wider text-[#0a1128] uppercase">
+      <span class="mr-2 animate-pulse">🔥</span> ด่วน!
     </div>
 
-    <div class="marquee-container relative flex-1 overflow-hidden py-2.5 pr-6">
-      <div class="pointer-events-none absolute top-0 left-0 z-10 h-full w-8 bg-gradient-to-r from-[#5f0914] to-transparent"></div>
+    <div class="marquee-container relative ml-4 flex-1 overflow-hidden py-1 pr-6">
+      <div class="pointer-events-none absolute top-0 left-0 z-10 h-full w-8 bg-gradient-to-r from-[#0a1128] to-transparent"></div>
 
-      <div class="marquee-content inline-block pl-4 text-sm font-bold tracking-widest whitespace-nowrap text-white/90">
-        <span class="mr-8 inline-flex items-center gap-2"><span class="h-2 w-2 rounded-full bg-yellow-400 shadow-[0_0_8px_rgba(250,204,21,0.8)]"></span>{message}</span>
-        <span class="mr-8 inline-flex items-center gap-2"><span class="h-2 w-2 rounded-full bg-yellow-400 shadow-[0_0_8px_rgba(250,204,21,0.8)]"></span>{message}</span>
+      <div class="marquee-content inline-block pl-4 text-sm font-medium tracking-wide whitespace-nowrap text-white">
+        <span class="mr-8 inline-flex items-center gap-2"><span class="h-1.5 w-1.5 rounded-full bg-[#ffd60a]"></span>{message}</span>
+        <span class="mr-8 inline-flex items-center gap-2"><span class="h-1.5 w-1.5 rounded-full bg-[#ffd60a]"></span>{message}</span>
       </div>
     </div>
   </div>

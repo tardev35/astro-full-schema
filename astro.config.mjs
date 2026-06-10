@@ -19,6 +19,6 @@ export default defineConfig({
     '/line': 'https://tinyurl.com/linepigpg'
   },
 
-  site: 'https://lot888-promotion.com',
+  site: 'https://finnbet-vip.com',
   integrations: [sitemap()]
 });

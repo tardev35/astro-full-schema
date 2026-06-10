@@ -1,8 +1,11 @@
 ---
 import { Picture } from "astro:assets";
-const images = import.meta.glob<{ default: ImageMetadata }>("../assets/logo.{png,webp,jpg}", { eager: true });
+
+const images = import.meta.glob<{ default: ImageMetadata }>("../assets/logo.*", { eager: true });
 const imagePaths = Object.keys(images);
-const mainLogo = imagePaths.length > 0 ? images[imagePaths[0]].default : null;
+const targetPath = imagePaths.find((path) => path.endsWith(".webp")) || imagePaths.find((path) => path.endsWith(".png")) || (imagePaths.length > 0 ? imagePaths[0] : null);
+const mainLogo = targetPath ? images[targetPath].default : null;
+
 const currentPath = Astro.url.pathname;
 const isActive = (path: string) => {
   if (path === "/") return currentPath === "/";
@@ -11,25 +14,20 @@ const isActive = (path: string) => {
 ---
 
 <header class="sticky top-0 z-[100] w-full font-sans">
-  <nav class="relative mx-auto flex h-[80px] w-full items-center justify-between border-b border-yellow-600/50 bg-[#450a0a]/95 px-4 shadow-[0_5px_25px_rgba(251,191,36,0.2)] backdrop-blur-xl xl:px-8">
-    <a href="/" class="z-[110] flex-shrink-0 transition-transform hover:scale-105">
+  <nav class="relative mx-auto flex h-[70px] w-full items-center justify-between bg-[#0a1128] shadow-lg xl:px-4">
+    <a href="/" class="z-[110] flex h-full items-center px-4 transition-transform hover:scale-105">
       {
         mainLogo ? (
-          <Picture
-            src={mainLogo}
-            alt="HUAYPUNG Logo"
-            loading="eager"
-            class="h-[60px] w-auto drop-shadow-[0_0_12px_rgba(251,191,36,0.6)] xl:h-[75px]"
-            formats={["avif", "webp"]}
-            fallbackFormat="webp"
-          />
+          <Picture src={mainLogo} alt="FINNBET Logo" loading="eager" class="h-[40px] w-auto xl:h-[45px]" formats={["avif", "webp"]} fallbackFormat="webp" />
         ) : (
-          <h1 class="bg-gradient-to-r from-yellow-400 to-yellow-600 bg-clip-text text-3xl font-black tracking-wider text-transparent">HUAYPUNG</h1>
+          <h1 class="text-3xl font-black tracking-widest text-white">
+            <span class="text-[#ffd60a]">FINN</span>BET
+          </h1>
         )
       }
     </a>
 
-    <div class="hidden h-full flex-1 items-center justify-center gap-6 lg:flex">
+    <div class="hidden h-full flex-1 items-center justify-center lg:flex">
       {
         [
           { name: "หน้าแรก", path: "/" },
@@ -40,39 +38,29 @@ const isActive = (path: string) => {
         ].map((item) => (
           <a
             href={item.path}
-            class={`group relative flex h-full items-center px-2 text-sm font-bold tracking-widest uppercase transition-colors ${isActive(item.path) ? "text-yellow-400" : "text-white/70 hover:text-white"}`}>
-            <span>{item.name}</span>
-            <div
-              class={`absolute bottom-0 left-0 h-[4px] w-full bg-yellow-500 shadow-[0_-2px_10px_rgba(251,191,36,1)] transition-transform duration-300 ${isActive(item.path) ? "scale-x-100" : "scale-x-0 group-hover:scale-x-100"}`}
-            />
+            class={`flex h-full items-center px-6 text-sm font-bold tracking-wide transition-colors ${isActive(item.path) ? "bg-[#ffd60a] text-[#0a1128]" : "text-white hover:text-[#ffd60a]"}`}>
+            {item.name}
           </a>
         ))
       }
     </div>
 
-    <div class="z-[110] flex items-center gap-4">
-      <a href="/login" class="hidden rounded-full border border-yellow-500/50 bg-red-950/50 px-6 py-2 text-sm font-bold text-yellow-500 transition-all hover:bg-red-900/50 lg:flex">เข้าแทงหวย</a>
-      <a
-        href="/register"
-        class="hidden rounded-full bg-gradient-to-r from-yellow-500 to-yellow-300 px-6 py-2 text-sm font-black text-red-900 shadow-[0_0_15px_rgba(251,191,36,0.4)] transition-all hover:scale-105 lg:flex">
-        สมัครสมาชิก
-      </a>
+    <div class="z-[110] flex items-center gap-3 pr-4">
+      <a href="/login" class="hidden rounded-md bg-[#ffd60a] px-5 py-2 text-sm font-bold text-[#0a1128] transition-all hover:opacity-90 lg:flex">เข้าสู่ระบบ</a>
+      <a href="/register" class="hidden rounded-md border border-white/20 bg-white/10 px-5 py-2 text-sm font-bold text-white transition-all hover:bg-white/20 lg:flex">สมัครสมาชิก</a>
 
-      <button
-        id="hamburger-btn"
-        class="relative flex h-[45px] w-[45px] flex-col items-center justify-center gap-[6px] rounded-full border border-yellow-500/30 bg-[#2a0404] lg:hidden"
-        aria-label="Menu">
-        <span class="line-1 h-[2px] w-5 origin-center rounded-full bg-yellow-400 shadow-[0_0_5px_rgba(251,191,36,0.8)] transition-all duration-300"></span>
-        <span class="line-2 h-[2px] w-5 origin-center rounded-full bg-yellow-400 shadow-[0_0_5px_rgba(251,191,36,0.8)] transition-all duration-300"></span>
-        <span class="line-3 h-[2px] w-5 origin-center rounded-full bg-yellow-400 shadow-[0_0_5px_rgba(251,191,36,0.8)] transition-all duration-300"></span>
+      <button id="hamburger-btn" class="relative flex h-[40px] w-[40px] flex-col items-center justify-center gap-[5px] rounded-md border border-white/20 bg-transparent lg:hidden" aria-label="Menu">
+        <span class="line-1 h-[2px] w-5 origin-center rounded-full bg-white transition-all duration-300"></span>
+        <span class="line-2 h-[2px] w-5 origin-center rounded-full bg-white transition-all duration-300"></span>
+        <span class="line-3 h-[2px] w-5 origin-center rounded-full bg-white transition-all duration-300"></span>
       </button>
     </div>
   </nav>
 
   <div
     id="mobile-menu"
-    class="pointer-events-none absolute top-[80px] left-0 w-full origin-top -translate-y-4 scale-y-95 flex-col rounded-b-3xl border-b border-yellow-600/40 bg-[#2a0404]/98 px-6 pt-4 pb-8 opacity-0 shadow-2xl backdrop-blur-xl transition-all duration-300 lg:hidden">
-    <div class="flex flex-col gap-2">
+    class="pointer-events-none absolute top-[70px] left-0 w-full origin-top -translate-y-4 scale-y-95 flex-col border-b border-[#0a1128] bg-[#0a1128] px-6 pt-4 pb-8 opacity-0 shadow-xl transition-all duration-300 lg:hidden">
+    <div class="flex flex-col gap-1">
       {
         [
           { name: "หน้าแรก", path: "/" },
@@ -83,19 +71,15 @@ const isActive = (path: string) => {
         ].map((item) => (
           <a
             href={item.path}
-            class={`flex items-center rounded-xl px-4 py-3 text-lg font-bold tracking-widest uppercase transition-colors ${isActive(item.path) ? "border-l-4 border-yellow-500 bg-red-900/30 pl-3 text-yellow-400" : "text-white/70 hover:bg-white/5 hover:text-white"}`}>
+            class={`flex items-center rounded-md px-4 py-3 text-base font-bold transition-colors ${isActive(item.path) ? "bg-[#ffd60a] text-[#0a1128]" : "text-white hover:bg-white/10"}`}>
             {item.name}
           </a>
         ))
       }
     </div>
-    <div class="mt-6 flex flex-col gap-4">
-      <a
-        href="/register"
-        class="flex w-full justify-center rounded-full bg-gradient-to-r from-yellow-500 to-yellow-300 py-3.5 text-lg font-black text-red-900 shadow-[0_5px_15px_rgba(251,191,36,0.3)]">
-        สมัครสมาชิก
-      </a>
-      <a href="/login" class="flex w-full justify-center rounded-full border border-yellow-500/50 bg-red-950/50 py-3.5 text-lg font-bold text-yellow-500">เข้าสู่ระบบ</a>
+    <div class="mt-6 flex flex-col gap-3">
+      <a href="/register" class="flex w-full justify-center rounded-md bg-[#ffd60a] py-3 text-lg font-black text-[#0a1128] shadow-md">สมัครสมาชิก</a>
+      <a href="/login" class="flex w-full justify-center rounded-md border border-white/30 bg-transparent py-3 text-lg font-bold text-white">เข้าสู่ระบบ</a>
     </div>
   </div>
 </header>
@@ -106,13 +90,13 @@ const isActive = (path: string) => {
     font-family: "Kanit", sans-serif !important;
   }
   #hamburger-btn.active .line-1 {
-    transform: translateY(8px) rotate(45deg);
+    transform: translateY(7px) rotate(45deg);
   }
   #hamburger-btn.active .line-2 {
     opacity: 0;
   }
   #hamburger-btn.active .line-3 {
-    transform: translateY(-8px) rotate(-45deg);
+    transform: translateY(-7px) rotate(-45deg);
   }
   #mobile-menu.show {
     opacity: 1;

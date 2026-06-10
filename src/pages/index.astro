@@ -17,21 +17,21 @@ const logoUrl = homePage + "/logo.webp";
 const webPageSchema = {
   "@context": "https://schema.org",
   "@type": "WebPage",
-  name: "HUAYPUNG เว็บหวยออนไลน์อันดับ 1 ซื้อแล้วมั่นใจ จ่ายจริง หวยปัง",
-  description: "HUAYPUNG เว็บหวยออนไลน์อันดับ 1 อัตราจ่าย ดีงามทั้งตัวบน ตัวล่าง ซื้อออนไลน์หวยไม่ผ่านเอเย่นต์ ระบบประมวลผลผลรางวัล Real-time จ่ายจริง ผ่านบัญชีแท้",
+  name: "LOT888 (ลอต888) เว็บหวยออนไลน์ที่คนแทงหวยไว้วางใจที่สุด",
+  description: "LOT888 (ลอต888) เว็บหวยออนไลน์ เว็บตรงไม่ผ่านเอเย่นต์ ที่คนแทงหวยไว้ วางใจที่สุด มีหวยทั่วโลก เลือกตลาดที่ชอบ ฝาก-ถอน ซื้อหวย Auto จ่ายยอดทันใจ",
   url: currentPath,
 };
 const webSiteSchema = {
   "@context": "https://schema.org",
   "@type": "WebSite",
-  name: "HUAYPUNG",
-  alternateName: ["huaypung", "huaypung lotto"],
-  url: "https://huaypung.com/",
+  name: "LOT888",
+  alternateName: ["lot888", "lot888 lotto"],
+  url: "https://lot888-promotion.com/",
 };
 const orgSchema = {
   "@context": "https://schema.org",
   "@type": "Organization",
-  name: "HUAYPUNG",
+  name: "LOT888",
   logo: logoUrl,
   url: homePage,
 };
@@ -46,11 +46,11 @@ import image2 from "../assets/banner1.jpg";
   <script type="application/ld+json" set:html={JSON.stringify(allSchemas)} />
 
   <Announcement />
-  <ContentBox title="HUAYPUNG เว็บหวยออนไลน์อันดับ 1 ซื้อแล้วมั่นใจ จ่ายจริง หวยปัง">
+  <ContentBox title="LOT888 (ลอต888) เว็บหวยออนไลน์ที่คนแทงหวยไว้วางใจที่สุด">
     <p class="leading-relaxed">
-      HUAYPUNG เว็บหวยออนไลน์อันดับ 1 ที่คอหวยทั่วไทยให้ความไว้วางใจ ด้วยระบบการจัดการที่โปร่งใสและตรวจสอบได้ ซื้อแล้วมั่นใจ ว่าทุกตัวเลขที่คุณเลือกจะได้รับการดูแลอย่างดีที่สุด
-      บริการในรูปแบบเว็บตรงไม่ผ่านเอเย่นต์ ตัดปัญหาการกั๊กยอดหรือการอั้นเลขที่เว็บกระจอกๆ ชอบทำ จ่ายจริง ทุกยอด รองรับการแทงทุกรูปแบบและพร้อมจ่ายรางวัลใหญ่ทันทีโดยไม่มีข้อแม้ ไม่มีการเบี้ยว ผลัดงวด
-      HUAYPUNG คือจุดยืนใหม่ของคอหวยที่ต้องการความมั่นคง ระบบการเงินของเราแข็งแกร่ง
+      <strong class="text-yellow-500">LOT888 (ลอต888)</strong> เว็บที่คอหวยยุค 2026 ตามหา ตอบสนองความต้องการขั้นสุดพวกผู้บ้าหวย มากที่สุด เว็บแทงหวยที่ตัดพิธีรีตองออกไป แล้วเหลือแค่ "แทงได้-จ่ายไว-ไม่กั๊ก"
+      <strong class="text-green-400">LOT888</strong>
+      คือที่ที่คุณจะได้สัมผัสประสบการณ์แบบนั้น เราสร้างแพลตฟอร์มนี้ขึ้นมาเพื่อคนเล่นหวยที่รู้ใจตัวเองว่าต้องการอะไร: ความเร็วในการส่งโพย ความแม่นยำของผลรางวัล และความอิสระในการถอนเงินโดยไม่ต้องรอใครมานั่งอนุมัติ
     </p>
 
     <div class="mt-8 flex flex-wrap justify-center gap-6">
@@ -67,32 +67,57 @@ import image2 from "../assets/banner1.jpg";
       </a>
     </div>
   </ContentBox>
-  <ContentBoxTwo titleleft="ทางเข้าเล่นมังกรทอง" titleright="ผลรางวัลล่าสุด">
+  <ContentBoxTwo titleleft="เข้าสู่ระบบ LOT888" titleright="ผลรางวัลล่าสุด">
     <div slot="left" class="flex flex-col gap-4">
-      <div class="rounded-xl border border-yellow-600/30 bg-black/40 p-6">
-        <p class="mb-4 text-center font-bold text-yellow-400">ล็อคอินเข้าระบบ HUAYPUNG</p>
-        <div class="flex flex-col gap-3">
-          <input type="text" placeholder="ชื่อผู้ใช้งาน" class="w-full rounded-lg border border-red-500/30 bg-white/10 p-3 text-white" />
-          <input type="password" placeholder="รหัสผ่าน" class="w-full rounded-lg border border-red-500/30 bg-white/10 p-3 text-white" />
-          <button class="mt-2 w-full rounded-lg bg-gradient-to-r from-yellow-500 to-yellow-300 p-3 font-black text-red-900 shadow-lg transition-transform hover:scale-105">เข้าสู่ระบบ</button>
-          <button class="w-full rounded-lg border border-yellow-500/50 p-3 font-bold text-yellow-500 transition-colors hover:bg-yellow-500/10">สมัครสมาชิกใหม่</button>
+      <div class="rounded-2xl border border-white/10 bg-white/5 p-6 backdrop-blur-sm">
+        <div class="flex flex-col gap-4">
+          <div class="relative">
+            <span class="absolute top-3.5 left-4 text-red-300">👤</span>
+            <input
+              type="text"
+              placeholder="รหัสผู้ใช้งาน"
+              class="w-full rounded-full border border-red-500/30 bg-black/40 py-3 pr-4 pl-12 text-white transition-colors outline-none focus:border-yellow-400"
+            />
+          </div>
+          <div class="relative">
+            <span class="absolute top-3.5 left-4 text-red-300">🔒</span>
+            <input
+              type="password"
+              placeholder="รหัสผ่าน"
+              class="w-full rounded-full border border-red-500/30 bg-black/40 py-3 pr-4 pl-12 text-white transition-colors outline-none focus:border-yellow-400"
+            />
+          </div>
+          <button class="mt-2 w-full rounded-full bg-gradient-to-r from-red-600 to-red-500 p-3.5 font-black text-white shadow-[0_5px_15px_rgba(220,38,38,0.5)] transition-transform hover:scale-105">
+            เข้าสู่ระบบ
+          </button>
+
+          <div class="mt-2 flex items-center justify-between px-2 text-sm">
+            <a href="#" class="text-red-300 transition-colors hover:text-white">ลืมรหัสผ่าน?</a>
+            <a href="/register" class="font-bold text-yellow-400 transition-colors hover:text-yellow-300">สมัครสมาชิกใหม่</a>
+          </div>
         </div>
       </div>
     </div>
     <div slot="right">
-      <div class="rounded-xl border border-yellow-600/30 bg-red-950/60 p-4">
+      <div class="rounded-2xl border border-red-500/20 bg-black/40 p-4 backdrop-blur-sm">
         <table class="w-full text-sm">
           <thead>
-            <tr class="border-b border-yellow-600/30 text-yellow-400">
-              <th class="py-2 text-left">ประเภทหวย</th>
-              <th class="py-2">รางวัลที่ 1 / บน</th>
-              <th class="py-2">2 ตัวล่าง</th>
+            <tr class="border-b border-red-500/30 text-yellow-400">
+              <th class="py-3 pl-2 text-left">งวดหวย</th>
+              <th class="py-3">รางวัลที่ 1 / บน</th>
+              <th class="py-3">2 ตัวล่าง</th>
             </tr>
           </thead>
           <tbody class="text-white">
-            <tr class="border-b border-white/5"><td class="py-3">หวยรัฐบาล</td><td class="text-center font-bold text-yellow-400">173770</td><td class="text-center">95</td></tr>
-            <tr class="border-b border-white/5"><td class="py-3">หวยลาว</td><td class="text-center font-bold text-yellow-400">4781</td><td class="text-center">03</td></tr>
-            <tr><td class="py-3">หวยยี่กี</td><td class="text-center font-bold text-yellow-400">512</td><td class="text-center">14</td></tr>
+            <tr class="border-b border-white/5 transition-colors hover:bg-white/5">
+              <td class="py-4 pl-2 font-bold">🇹🇭 หวยรัฐบาล</td><td class="text-center text-xl font-black text-yellow-400">122003</td><td class="text-center text-lg font-bold">23</td>
+            </tr>
+            <tr class="border-b border-white/5 transition-colors hover:bg-white/5">
+              <td class="py-4 pl-2 font-bold">🇻🇳 หวยฮานอย</td><td class="text-center text-xl font-black text-yellow-400">8495</td><td class="text-center text-lg font-bold">11</td>
+            </tr>
+            <tr class="transition-colors hover:bg-white/5">
+              <td class="py-4 pl-2 font-bold">🇱🇦 หวยลาวพัฒนา</td><td class="text-center text-xl font-black text-yellow-400">6522</td><td class="text-center text-lg font-bold">90</td>
+            </tr>
           </tbody>
         </table>
       </div>
@@ -101,13 +126,13 @@ import image2 from "../assets/banner1.jpg";
   <ProviderGrid />
   <LatestWinners />
 
-  <ContentBoxThreeColums titleleft="มั่งคั่งปลอดภัย" titlecenter="ระบบออโต้ 3 วิ" titleright="หวยครบทุกชนิด">
-    <div slot="left">การเงินมั่นคง จ่ายจริงทุกยอดหลักล้าน ปลอดภัยด้วยระบบเข้ารหัสข้อมูลขั้นสูง</div>
-    <div slot="center">ฝาก-ถอน รวดเร็วทันใจด้วยระบบอัตโนมัติ AI ประมวลผลไวที่สุดในไทย</div>
-    <div slot="right">รวมหวยทุกประเภทไว้ในที่เดียว ทั้งไทย ลาว ฮานอย ยี่กี หุ้น และหวยชุด</div>
+  <ContentBoxThreeColums titleleft="โบนัสสมาชิกใหม่" titlecenter="ระบบ AUTO อัจฉริยะ" titleright="แทงง่าย จ่ายเต็ม">
+    <div slot="left">สมัครสมาชิกวันนี้ รับโบนัสต้อนรับสูงสุด 3,000 บาท พร้อมโปรโมชั่นคืนยอดเสียทุกสัปดาห์ คุ้มค่าที่สุด</div>
+    <div slot="center">ทำรายการฝาก-ถอนด้วยตัวเองผ่านระบบอัตโนมัติ 100% เงินเข้ากระเป๋าภายใน 3 วินาที ไม่ต้องรอแอดมิน</div>
+    <div slot="right">รวมหวยรัฐบาล ฮานอย ลาว ยี่กี หุ้น เปิดรับแทงทุกตัว ไม่มีเลขอั้น จ่ายสูงสุดบาทละ 900 ถอนได้ไม่อั้น</div>
   </ContentBoxThreeColums>
   <ContentBox>
-    <h2 class="mb-4 text-3xl font-black tracking-[0.2em] text-yellow-400 uppercase drop-shadow-[0_0_10px_rgba(220,38,38,0.8)]">HUAYPUNG เว็บหวยออนไลน์อันดับ 1 อัตราจ่าย สองตัวบน ล่าง 95 บาท</h2>
+    <h2 class="mb-4 text-3xl font-black tracking-[0.2em] text-yellow-400 uppercase drop-shadow-[0_0_10px_rgba(220,38,38,0.8)]">LOT888 เว็บหวยออนไลน์อันดับ 1 อัตราจ่าย สองตัวบน ล่าง 95 บาท</h2>
     <p class="leading-relaxed">
       เว็บหวยออนไลน์อันดับ 1 ที่จัดเต็มทุกอัตราจ่ายดีงาม ไม่ว่าจะเป็นเลขสอง 2 ตัวบน ล่าง 95 บาท ตัวหรือสามตัว 3 ตัวบน / โต๊ด จ่ายสูงสุด 900 บาท HUAYPUNG เราให้เรทที่สูงกว่ามาตรฐานทั่วไปในตลาด
       เพื่อให้คุณได้รับผลตอบแทนที่คุ้มค่าที่สุดในทุกบิลที่แทง ความคุ้มค่านี้คือเหตุผลหลักที่คนเล่นหวยย้ายค่ายมาใช้บริการ HUAYPUNG อัตราจ่ายของที่นี่ไม่ใช่แค่คำโฆษณา
@@ -131,10 +156,11 @@ import image2 from "../assets/banner1.jpg";
       />
     </div>
     <div slot="right">
-      <h2 class="text-yellow-4000 mb-4 text-3xl font-black tracking-[0.2em] uppercase drop-shadow-[0_0_10px_rgba(220,38,38,0.8)]">ซื้อแล้วมั่นใจ ซื้อหวยออนไลน์ไม่ผ่านเอเย่นต์ ต้องเว็บ HUAYPUNG</h2>
+      <h2 class="text-yellow-4000 mb-4 text-3xl font-black tracking-[0.2em] uppercase drop-shadow-[0_0_10px_rgba(220,38,38,0.8)]">ทำไมต้องแทงหวยที่ LOT888? เว็บตรงไม่ผ่านเอเย่นต์ จ่ายจริงทุกบิล</h2>
       <p>
-        หวยเว็บตรง HUAYPUNG ที่ขึ้นตรงกับเซิร์ฟเวอร์หลักเท่านั้น ระบบนี้ช่วยให้ข้อมูลการแทงของคุณปลอดภัยที่สุด ไม่มีการแทรกแซงจากคนกลาง ทุกโพยที่คุณกดยืนยันจะถูกบันทึกลงฐานข้อมูลหลักทันที
-        ทำให้คุณซื้อหวยด้วยความมั่นใจ 100% ข้อมูลหลักอย่างปลอดภัยไร้กังวล หมดปัญหาเรื่องการโดนหักหัวคิว หรือการโดนปิดบัญชีโดยไม่มีสาเหตุ
+        ปัญหาเรื่องโดนเอเย่นต์โกง หรือโดนตัดยอดรางวัลจะหมดไป เมื่อคุณเปลี่ยนมาใช้บริการกับ <strong class="text-yellow-500">LOT888</strong> เราดำเนินงานในรูปแบบเว็บตรงไม่ผ่านเอเย่นต์ ทำให้คุณได้รับอัตราจ่ายที่สูงที่สุดและเข้าถึงแหล่งหวยโดยตรง
+        ความเป็นเว็บตรงทำให้เรามีสภาพคล่องทางการเงินสูง พร้อมจ่ายจริงทุกบิล ไม่ว่าคุณจะแทงยอดหลักร้อยหรือถอนรางวัลหลักล้าน ระบบการเงินของเราก็พร้อมดำเนินรายการให้คุณอย่างรวดเร็ว นี่คือความแตกต่างที่ทำให้คอหวยตัวจริงเลือกไว้วางใจเราเป็นอันดับ
+        1
       </p>
 
       <a
@@ -147,34 +173,51 @@ import image2 from "../assets/banner1.jpg";
   </ContentBoxSevenThree>
   <SmoothCarousel />
   <ContentBox>
-    <h2 class="mb-4 text-3xl font-black tracking-[0.2em] text-yellow-400 uppercase drop-shadow-[0_0_10px_rgba(220,38,38,0.8)]">หวยปัง ลุ้นหวยนานาชนิด รวมทุกการแทงหวย</h2>
+    <h2 class="mb-4 text-3xl font-black tracking-[0.2em] text-yellow-400 uppercase drop-shadow-[0_0_10px_rgba(220,38,38,0.8)]">LOT888 x หวยทั่วโลก เลือกตลาดที่ชอบ ทำกำไรได้ตามจังหวะชีวิต</h2>
     <p class="leading-relaxed">
-      ไม่ว่าจะเป็นหวยรัฐบาล หวยลาว หวยฮานอย หรือหวยหุ้น เราจัดมาให้ครบตามคอนเซปต์ หวยปัง ที่รวมทุกความต้องการไว้ในที่เดียว ให้คุณสามารถลุ้นรางวัลได้หลากหลายชนิดตลอด 24 ชั่วโมง
-      ช่วยให้คุณกระจายความเสี่ยงและมีโอกาสทำกำไรได้มากกว่าการรอแค่หวยไทยเพียงอย่างเดียว
+      ชีวิตวัยรุ่นไม่มีคำว่ารอคอย <strong class="text-green-400">LOT888</strong> จึงจัดตลาดหวยมาให้คุณเลือกลุยได้แบบ 24/7 ไม่ว่าจะเป็นหวยฮานอยที่ออกผลทุกวัน หรือหวยหุ้นต่างประเทศที่เปลี่ยนไปตามกราฟตลาดหลักทรัพย์
+      คุณสามารถเลือกแทงตามสไตล์ที่ตัวเองถนัดได้เลย เราไม่มีข้อผูกมัดว่าต้องแทงเลขอะไร อยากตามเลขเบิ้ล เลขพี่น้อง หรือเลขสูตรไหน ก็ใส่ให้สุดได้เลยในหน้ากระดานที่ใช้ง่ายที่สุดในตลาดหวยตอนนี้
     </p>
   </ContentBox>
 
   <Faq />
-  <ContentBoxTwo titleleft="ระบบประมวลผลผลรางวัล หวย และ ฉลากกินแบ่งแบบ Real-time" titleright="จ่ายจริง ไม่ผลัดวัน ผ่านบัญชีแท้ ปลอดภัย">
+  <ContentBoxTwo titleleft="LOT888 หวยออนไลน์ลุ้นสนุก ครบทุกประเภทไทยและต่างประเทศ" titleright="ฝาก-ถอน ซื้อหวย Auto ไวเหมือนแอปธนาคาร นี่แหละ เว็บหวยยุคใหม่">
     <div slot="left" class="flex flex-col gap-4">
       <p>
-        ระบบของเราเชื่อมต่อข้อมูลผลรางวัลโดยตรงและประมวลผลแบบ Real-time ทันทีที่หวยออก ทำให้คุณไม่ต้องนั่งลุ้นว่ายอดเงินจะเข้าเมื่อไหร่
-        เพราะระบบออโต้ของเราจะทำการคำนวณและปรับยอดเครดิตให้คุณทันทีอย่างแม่นยำและเที่ยงตรงที่สุด
+        ที่ <strong class="text-yellow-500">LOT888</strong> เราเตรียมความบันเทิงผ่านตัวเลขไว้ให้คุณแบบครบวงจร ไม่ได้มีเพียงหวยรัฐบาลไทยที่ต้องรอคอยนาน แต่เรายังมีหวยลาว หวยฮานอย หวยมาเลย์ และหวยหุ้นทั่วโลกให้คุณร่วมสนุกได้ตลอด
+        24 ชั่วโมง การมีหวยที่หลากหลายช่วยให้คุณวางแผนการเล่นและทำกำไรได้ทุกช่วงเวลา ไม่ว่าจะเป็นรอบเช้า บ่าย หรือเย็น ระบบแสดงผลที่แม่นยำและสถิติย้อนหลังที่ครบครัน จะช่วยให้คุณวิเคราะห์เลขเด็ดได้อย่างแม่นยำและลุ้นสนุกได้ทุกวันไม่มีเบื่อ
       </p>
     </div>
     <div slot="right">
       <p>
-        เมื่อคุณถูกรางวัล การได้รับเงินคือสิ่งสำคัญที่สุด เราจึงยึดมั่นในนโยบาย จ่ายจริง ไม่ผลัดวัน ไม่มีการดึงเกม ยอดเงินทุกบาทที่คุณทำรายการถอน จะถูกโอนผ่านระบบบัญชีแท้ที่ปลอดภัย
-        ตรวจสอบเส้นทางการเงินได้ เกินล้านเปร์เซ็น ทำให้คุณมั่นใจได้ว่าเงินทุกยอดที่คุณลงทุนกับเราจะกลับคืนสู่มือคุณอย่างรวดเร็วและปลอดภัยแน่นอน
+        ถ้าเว็บไหนยังให้รอแอดมินตอบแชทเพื่อถอนเงิน ให้หนีไปครับ เพราะที่ <strong class="text-green-400">LOT888</strong> ระบบการเงินเราเป็น Auto 100% เงินเข้าเครดิตปุ๊บแทงได้ทันที จอง ล็อคเลขเด็ด หรือ ถูกรางวัลปุ๊บถอนเข้าบัญชีคุณได้ทันทีโดยไม่ต้องผ่านคนกลาง
+        คุณคุมเกมได้เองเบ็ดเสร็จ การเงินเป็นเรื่องที่ต้องตรงไปตรงมา และเราก็ทำให้มันง่ายพอที่คุณจะจัดการได้ในระหว่างรอรถไฟฟ้าหรือนั่งดื่มกาแฟชิลๆ
       </p>
     </div>
   </ContentBoxTwo>
   <ContentBox>
-    <h2 class="mb-4 text-2xl font-black tracking-[0.2em] text-yellow-400 uppercase drop-shadow-[0_0_10px_rgba(220,38,38,0.8)]">วิธีการเช็คโพยหวยว่าเข้าแล้วหรือยัง</h2>
+    <h2 class="mb-4 text-2xl font-black tracking-[0.2em] text-yellow-400 uppercase drop-shadow-[0_0_10px_rgba(220,38,38,0.8)]">สเต็ปการแทงหวยยุคใหม่: กดเลขไว จ่ายยอดทันใจแบบมืออาชีพ</h2>
     <p class="leading-relaxed">
-      สำหรับใครที่เป็นมือใหม่หรืออยากเช็คความถูกต้อง วิธีการตรวจสอบโพยหวยกับเรานั้นง่ายมาก เพียงเข้าไปที่เมนู <a class="text-amber-400" href="/ตรวจหวย">"ประวัติการแทง"</a> ในระบบของ HUAYPUNG คุณก็จะเห็นรายการเลขที่ซื้อ
-      สถานะการอนุมัติ และรายละเอียดบิลทั้งหมด ซึ่งเป็นระบบที่ชัดเจนและใช้งานง่ายที่สุด เพื่อให้สมาชิกทุกคนสัมผัสได้ถึงความสะดวกสบายในแบบฉบับเว็บหวยอันดับ 1 อย่างแท้จริงครับ
+      การแทงหวยที่ <strong class="text-yellow-500">LOT888</strong> ไม่ได้มีขั้นตอนยุ่งยากเหมือนการแทงผ่านโพยกระดาษแบบเดิม เราออกแบบ Workflow การใช้งานให้เป็นระบบ Single-Flow:
     </p>
+    <ul class="list-disc pl-6 text-left">
+      <li>ล็อกอินเข้าสู่ระบบ: สัมผัส UI ที่ลื่นไหล รองรับการใช้งานผ่านสมาร์ทโฟนเต็มรูปแบบ</li>
+      <li>เลือกตลาดหวย: ระบบคัดกรองหวยทุกประเภทให้คุณเลือกกดได้ทันที ไม่ต้องค้นหา</li>
+      <li>วางตัวเลขและระบุยอด: ระบบจะคำนวณอัตราจ่ายและสรุปยอดให้เห็นก่อนกดส่ง</li>
+      <li>กดยืนยันโพย: ข้อมูลจะถูกบันทึกลงฐานข้อมูลส่วนตัวของคุณทันที</li>
+    </ul>
+  </ContentBox>
+  <ContentBox>
+    <h2 class="mb-4 text-2xl font-black tracking-[0.2em] text-yellow-400 uppercase drop-shadow-[0_0_10px_rgba(220,38,38,0.8)]">รีวิว ทำไมประสบการณ์แทงหวยที่ LOT888 ถึงต่างจากที่อื่น?</h2>
+    <p class="leading-relaxed">
+      การแทงหวยที่ <strong class="text-green-400">LOT888</strong> "กดโพยไปแล้วเว็บค้าง" หรือ "ผลรางวัลออกแล้วแต่ยอดไม่ปรับ" แต่ที่ <strong class="text-yellow-500">LOT888</strong> เราเน้นสิ่งที่เรียกว่า
+      Seamless User Experience:
+    </p>
+    <ul class="list-disc pl-6 text-left">
+      <li>Real-time Tracking: คุณสามารถมอนิเตอร์สถานะบิลได้แบบสดๆ ว่าโพยที่ส่งไปอยู่ในสถานะใด (รอดำเนินการ / อนุมัติ / ถูกรางวัล)</li>
+      <li>Smart Dashboard: เรามีแดชบอร์ดสรุปยอดรวมที่คุณเคยแทงไปทั้งหมด ช่วยให้คุณมองเห็นภาพรวมการลงทุน (Spending Insight) ไม่ต้องไปจดบันทึกเอง</li>
+      <li>Zero-Lag Interface: ระบบถูกออกแบบมาให้ตอบสนองไวที่สุด แม้จะเป็นช่วงนาทีทองก่อนหวยออกที่มีผู้ใช้งานพร้อมกันนับหมื่นคน ระบบของเราก็ยังนิ่งและทำงานได้อย่างแม่นยำ</li>
+    </ul>
   </ContentBox>
 
   <Navfoot />

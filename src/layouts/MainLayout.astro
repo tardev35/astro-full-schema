@@ -10,8 +10,8 @@ const bannerPaths = Object.keys(bannerImages);
 const mainBanner = bannerPaths.length > 0 ? bannerImages[bannerPaths[0]].default : null;
 
 const {
-  title = "HUAYPUNG เว็บหวยออนไลน์อันดับ 1 ซื้อแล้วมั่นใจ จ่ายจริง หวยปัง",
-  description = "HUAYPUNG เว็บหวยออนไลน์อันดับ 1 อัตราจ่าย ดีงามทั้งตัวบน ตัวล่าง ซื้อออนไลน์หวยไม่ผ่านเอเย่นต์ ระบบประมวลผลผลรางวัล Real-time จ่ายจริง ผ่านบัญชีแท้",
+  title = "LOT888 (ลอต888) เว็บหวยออนไลน์ที่คนแทงหวยไว้วางใจที่สุด",
+  description = "LOT888 (ลอต888) เว็บหวยออนไลน์ เว็บตรงไม่ผ่านเอเย่นต์ ที่คนแทงหวยไว้ วางใจที่สุด มีหวยทั่วโลก เลือกตลาดที่ชอบ ฝาก-ถอน ซื้อหวย Auto จ่ายยอดทันใจ",
   robots = "index, follow",
   ImageOg = "/pro3.webp",
 } = Astro.props;
@@ -19,13 +19,13 @@ const {
 const currentPath = Astro.url.pathname;
 const canonicalURL = new URL(currentPath, Astro.site);
 const ogImageURL = new URL(ImageOg, Astro.site);
-const ogSiteName = "HUAYPUNG";
+const ogSiteName = "LOT888";
 ---
 
 <html lang="th">
   <head>
     <meta charset="utf-8" />
-    <meta name="google-site-verification" content="vzqgEM2RmHxcr4x7ZXEZ1Psaqivi9axYtpqRSazKc0g" />
+    <meta name="google-site-verification" content="KZ6BI3MZr3jVJmGq-DsraoM0799UXH21LTxJQ3cwAyM" />
     <meta name="robots" content={robots} />
     <meta name="googlebot" content={robots} />
     <title>{title}</title>
@@ -87,7 +87,7 @@ const ogSiteName = "HUAYPUNG";
     <div class="mb-2.5 flex w-full items-center justify-center">
       <Image
         src={mainBanner!}
-        alt="HUAYPUNG banner"
+        alt="LOT888 banner"
         loading="eager"
         fetchpriority="high"
         widths={[412, 768, 1900]}

@@ -13,5 +13,5 @@ Disallow: /
 User-agent: Anthropic-ai
 Disallow: /
 
-Sitemap: https://huaypung-homepage.com/sitemap-0.xml
+Sitemap: https://lot888-promotion.com/sitemap-0.xml
 

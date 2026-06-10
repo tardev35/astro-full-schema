@@ -19,6 +19,6 @@ export default defineConfig({
     '/line': 'https://tinyurl.com/linepigpg'
   },
 
-  site: 'https://huaypung-homepage.com',
+  site: 'https://lot888-promotion.com',
   integrations: [sitemap()]
 });

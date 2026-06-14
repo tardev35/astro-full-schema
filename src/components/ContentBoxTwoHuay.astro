@@ -2,16 +2,30 @@
 const { titleleft, titleright } = Astro.props;
 ---
 
-<section class="mx-auto mb-10 w-full max-w-5xl px-4 font-sans">
-  <div class="grid grid-cols-1 gap-8 md:grid-cols-2">
+<section class="relative z-10 mx-auto mb-10 w-full max-w-[1400px] px-4 font-sans">
+  <div class="grid grid-cols-1 gap-6 md:grid-cols-2">
     <article class="flex flex-col gap-4">
-      {titleleft && <h2 class="border-l-4 border-[#ffd60a] pl-3 text-xl font-black tracking-widest text-[#0a1128] uppercase">{titleleft}</h2>}
-      <div class="text-base leading-relaxed text-gray-700"><slot name="left" /></div>
+      {
+        titleleft && (
+          <h2 class="flex items-center gap-3 border-b border-green-500/30 pb-3 text-xl font-black tracking-widest text-yellow-400 uppercase drop-shadow-md">
+            <span class="flex h-8 w-8 items-center justify-center rounded-full bg-gradient-to-br from-yellow-400 to-yellow-600 text-sm text-[#021c13] shadow-[0_0_10px_rgba(251,191,36,0.5)]">🔐</span>
+            {titleleft}
+          </h2>
+        )
+      }
+      <div class="text-base leading-relaxed text-white/90"><slot name="left" /></div>
     </article>
 
     <article class="flex flex-col gap-4">
-      {titleright && <h2 class="border-l-4 border-[#ffd60a] pl-3 text-xl font-black tracking-widest text-[#0a1128] uppercase">{titleright}</h2>}
-      <div class="text-base leading-relaxed text-gray-700"><slot name="right" /></div>
+      {
+        titleright && (
+          <h2 class="flex items-center gap-3 border-b border-green-500/30 pb-3 text-xl font-black tracking-widest text-yellow-400 uppercase drop-shadow-md">
+            <span class="w- flex h-8 items-center justify-center rounded-full bg-gradient-to-br from-yellow-400 to-yellow-600 text-sm text-[#021c13] shadow-[0_0_10px_rgba(251,191,36,0.5)]">🏆</span>
+            {titleright}
+          </h2>
+        )
+      }
+      <div class="h-full text-base leading-relaxed text-white/90"><slot name="right" /></div>
     </article>
   </div>
 </section>

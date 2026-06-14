@@ -10,8 +10,8 @@ const bannerPaths = Object.keys(bannerImages);
 const mainBanner = bannerPaths.length > 0 ? bannerImages[bannerPaths[0]].default : null;
 
 const {
-  title = "FINBET เล่นหวยออนไลน์ แทงหวยได้สนุก จ่ายเต็ม ไม่มีการอั้นเลข",
-  description = "FINBET เล่นหวยออนไลน์ ข้าสู่ระบบ ซื้อหวยได้ตลอด 24 ชม แทงหวยได้สนุก ปิดรับช้า แต่ออกผลเร็ว จ่ายเต็มทุกเลข ไม่มีการอั้นเลข ตอบโจทย์ชีวิตคนยุค 2026",
+  title = "LOTTO432 รีวิว แนะนำ โปรโมชั่น หวยออนไลน์ จ่าย900 คืนยอดเสีย5%",
+  description = "รีวิว แนะนำโปรโมชั่น LOTTO432 แทงหวยออนไลน์ที่คุ้มที่สุด จ่ายหนัก 3 ตัวบน 900 บาท พร้อมสิทธิ์คืนยอดเสีย 5% รับสูงสุด 3,000 บาท และโบนัสชวนเพื่อน 8%",
   robots = "index, follow",
   ImageOg = "/pro3.webp",
 } = Astro.props;
@@ -19,13 +19,13 @@ const {
 const currentPath = Astro.url.pathname;
 const canonicalURL = new URL(currentPath, Astro.site);
 const ogImageURL = new URL(ImageOg, Astro.site);
-const ogSiteName = "LOT888";
+const ogSiteName = "LOTTO432";
 ---
 
 <html lang="th">
   <head>
     <meta charset="utf-8" />
-    <meta name="google-site-verification" content="RtfOMEqVZYU7N24c5ipmqm-TvoIiO2ZlP4-jCXJviPY" />
+    <meta name="google-site-verification" content="I7wqPYkZA8HBB41PpV-HV_zCQ7YzXDekR3mUqIBXP78" />
     <meta name="robots" content={robots} />
     <meta name="googlebot" content={robots} />
     <title>{title}</title>
@@ -87,7 +87,7 @@ const ogSiteName = "LOT888";
     <div class="mb-2.5 flex w-full items-center justify-center">
       <Image
         src={mainBanner!}
-        alt="LOT888 banner"
+        alt="LOTTO432 banner"
         loading="eager"
         fetchpriority="high"
         widths={[412, 768, 1900]}

@@ -12,21 +12,24 @@ const bankPool = [
 ];
 ---
 
-<div class="mx-auto mb-10 w-full max-w-[1300px] px-4 font-sans">
-  <div class="rounded-2xl border border-gray-200 bg-white px-4 py-8 shadow-sm md:p-8">
-    <div class="mb-6 flex items-center justify-between border-b border-gray-100 pb-4">
+<div class="relative z-10 mx-auto mb-10 w-full max-w-[1400px] px-4 font-sans">
+  <div class="relative rounded-2xl border border-green-500/20 bg-[#032e1f]/80 px-4 py-8 shadow-[0_10px_30px_rgba(0,0,0,0.5)] backdrop-blur-md md:p-8">
+    <div class="relative z-10 mb-6 flex items-center justify-between border-b border-green-500/30 pb-4">
       <div class="flex items-center gap-3">
-        <h2 class="text-xl font-black tracking-widest text-[#0a1128]">รายการถอนเงิน <span class="text-[#007bff]">ล่าสุด</span></h2>
+        <span class="flex h-8 w-8 items-center justify-center rounded-full bg-green-500/20 text-green-400">💸</span>
+        <h2 class="text-xl font-black tracking-widest text-white drop-shadow-sm">รายการถอนเงิน <span class="text-yellow-400">LOTTO432</span></h2>
       </div>
-      <span class="animate-pulse rounded-md bg-green-100 px-3 py-1 text-[10px] font-bold tracking-widest text-green-700">LIVE FEED</span>
+      <span class="animate-pulse rounded-full border border-green-400/50 bg-green-900/40 px-3 py-1 text-[10px] font-bold tracking-widest text-green-400 shadow-[0_0_10px_rgba(74,222,128,0.2)]">
+        REAL-TIME
+      </span>
     </div>
 
-    <div id="feed-finn-hud" class="flex flex-col gap-3"></div>
+    <div id="feed-lotto432-hud" class="relative z-10 flex flex-col gap-3"></div>
   </div>
 </div>
 
 <script define:vars={{ bankPool }}>
-  const feed = document.getElementById("feed-finn-hud");
+  const feed = document.getElementById("feed-lotto432-hud");
   const getRandomStr = (len, chars) =>
     Array.from({ length: len })
       .map(() => chars.charAt(Math.floor(Math.random() * chars.length)))
@@ -38,25 +41,25 @@ const bankPool = [
     const user = `0${getRandomStr(1, "89")}***${getRandomStr(4, "0123456789")}`;
     const isPending = Math.random() > 0.7;
 
-    const statusClass = isPending ? "text-orange-500" : "text-green-600";
+    const statusClass = isPending ? "text-yellow-400 animate-pulse" : "text-green-400";
     const statusText = isPending ? "กำลังดำเนินการ" : "โอนเงินสำเร็จ";
 
     return `
       <div class="winner-row origin-bottom transform translate-y-4 opacity-0 transition-all duration-500 ease-out">
-        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 rounded-xl border border-gray-100 bg-gray-50 p-4 transition-all duration-300 hover:border-[#ffd60a] hover:bg-white hover:shadow-md">
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 rounded-xl border border-white/5 bg-[#021c13]/60 p-4 shadow-sm backdrop-blur-sm transition-all duration-300 hover:border-yellow-400/40 hover:bg-[#021c13]">
           <div class="flex items-center gap-4">
-            <div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-gray-200 ${bank.color}">
-              <img src="${bank.icon}" alt="bank" class="h-6 w-6 object-contain grayscale brightness-200 contrast-200" />
+            <div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-white/10 ${bank.color} shadow-inner">
+              <img src="${bank.icon}" alt="bank" class="h-6 w-6 object-contain grayscale" />
             </div>
             <div class="flex flex-col">
-              <span class="text-[10px] font-medium tracking-widest text-gray-500">ID สมาชิก</span>
-              <span class="font-mono text-sm font-bold text-[#0a1128]">${user}</span>
+              <span class="text-[10px] font-medium tracking-widest text-green-300/60">เบอร์สมาชิก</span>
+              <span class="font-mono text-sm font-bold text-white">${user}</span>
             </div>
           </div>
-          <div class="flex items-center justify-between sm:justify-end gap-6 border-t border-gray-200 pt-3 sm:border-none sm:pt-0">
-            <div class="text-[11px] font-bold tracking-wider ${statusClass}">${statusText}</div>
-            <div class="font-sans text-xl font-black text-[#0a1128]">
-              ${getAmount()} <span class="text-xs font-bold text-gray-500">THB</span>
+          <div class="flex items-center justify-between sm:justify-end gap-6 border-t border-green-500/20 pt-3 sm:border-none sm:pt-0">
+            <div class="text-[11px] font-medium tracking-wider ${statusClass}">${statusText}</div>
+            <div class="font-sans text-xl font-black text-yellow-400 drop-shadow-[0_2px_5px_rgba(251,191,36,0.3)]">
+              ${getAmount()} <span class="text-xs font-bold text-yellow-600">บาท</span>
             </div>
           </div>
         </div>
@@ -88,5 +91,8 @@ const bankPool = [
 <style>
   .font-sans {
     font-family: "Kanit", sans-serif;
+  }
+  .font-mono {
+    font-family: monospace;
   }
 </style>

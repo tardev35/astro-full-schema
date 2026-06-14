@@ -14,20 +14,20 @@ const isActive = (path: string) => {
 ---
 
 <header class="sticky top-0 z-[100] w-full font-sans">
-  <nav class="relative mx-auto flex h-[70px] w-full items-center justify-between bg-[#0a1128] shadow-lg xl:px-4">
-    <a href="/" class="z-[110] flex h-full items-center px-4 transition-transform hover:scale-105">
+  <nav class="relative mx-auto flex h-[80px] w-full items-center justify-between border-b border-green-500/40 bg-[#021c13]/90 px-4 shadow-[0_5px_20px_rgba(0,0,0,0.8)] backdrop-blur-md xl:px-6">
+    <a href="/" class="z-[110] flex-shrink-0 transition-transform duration-300 hover:scale-105">
       {
         mainLogo ? (
-          <Picture src={mainLogo} alt="FINNBET Logo" loading="eager" class="h-[40px] w-auto xl:h-[45px]" formats={["avif", "webp"]} fallbackFormat="webp" />
+          <Picture src={mainLogo} alt="LOTTO432 Logo" loading="eager" class="h-[45px] w-auto drop-shadow-[0_0_8px_rgba(34,197,94,0.5)] xl:h-[55px]" formats={["avif", "webp"]} fallbackFormat="webp" />
         ) : (
-          <h1 class="text-3xl font-black tracking-widest text-white">
-            <span class="text-[#ffd60a]">FINN</span>BET
+          <h1 class="text-3xl font-black tracking-widest text-white drop-shadow-md">
+            LOTTO<span class="text-green-500">432</span>
           </h1>
         )
       }
     </a>
 
-    <div class="hidden h-full flex-1 items-center justify-center lg:flex">
+    <div class="hidden h-full flex-1 items-center justify-center gap-6 lg:flex">
       {
         [
           { name: "หน้าแรก", path: "/" },
@@ -38,18 +38,28 @@ const isActive = (path: string) => {
         ].map((item) => (
           <a
             href={item.path}
-            class={`flex h-full items-center px-6 text-sm font-bold tracking-wide transition-colors ${isActive(item.path) ? "bg-[#ffd60a] text-[#0a1128]" : "text-white hover:text-[#ffd60a]"}`}>
-            {item.name}
+            class={`group relative flex h-full items-center px-2 text-sm font-bold tracking-widest transition-colors ${isActive(item.path) ? "text-yellow-400" : "text-white/80 hover:text-white"}`}>
+            <span>{item.name}</span>
+            <div
+              class={`absolute bottom-0 left-0 h-[3px] w-full bg-yellow-400 shadow-[0_-2px_8px_rgba(251,191,36,0.8)] transition-transform duration-300 ${isActive(item.path) ? "scale-x-100" : "scale-x-0 group-hover:scale-x-100"}`}
+            />
           </a>
         ))
       }
     </div>
 
-    <div class="z-[110] flex items-center gap-3 pr-4">
-      <a href="/login" class="hidden rounded-md bg-[#ffd60a] px-5 py-2 text-sm font-bold text-[#0a1128] transition-all hover:opacity-90 lg:flex">เข้าสู่ระบบ</a>
-      <a href="/register" class="hidden rounded-md border border-white/20 bg-white/10 px-5 py-2 text-sm font-bold text-white transition-all hover:bg-white/20 lg:flex">สมัครสมาชิก</a>
+    <div class="z-[110] flex items-center gap-3">
+      <a
+        href="/login"
+        class="hidden rounded-sm bg-gradient-to-b from-yellow-300 to-yellow-600 px-5 py-2 text-sm font-black text-[#021c13] shadow-[0_0_10px_rgba(251,191,36,0.3)] transition-all hover:scale-105 lg:flex">
+        เข้าสู่ระบบ
+      </a>
+      <a href="/register" class="hidden items-center gap-2 rounded-sm border border-gray-400 bg-[#1f2937] px-5 py-2 text-sm font-bold text-white transition-all hover:bg-gray-700 lg:flex">
+        <span class="text-xs">👤</span> สมัครสมาชิก
+      </a>
+      <a href="#" class="hidden items-center gap-1 rounded-sm border border-white bg-white px-3 py-2 text-sm font-bold text-[#021c13] transition-all hover:bg-gray-200 lg:flex">💬 ติดต่อเรา</a>
 
-      <button id="hamburger-btn" class="relative flex h-[40px] w-[40px] flex-col items-center justify-center gap-[5px] rounded-md border border-white/20 bg-transparent lg:hidden" aria-label="Menu">
+      <button id="hamburger-btn" class="relative flex h-[45px] w-[45px] flex-col items-center justify-center gap-[6px] rounded-md border border-green-500/50 bg-[#032e1f] lg:hidden" aria-label="Menu">
         <span class="line-1 h-[2px] w-5 origin-center rounded-full bg-white transition-all duration-300"></span>
         <span class="line-2 h-[2px] w-5 origin-center rounded-full bg-white transition-all duration-300"></span>
         <span class="line-3 h-[2px] w-5 origin-center rounded-full bg-white transition-all duration-300"></span>
@@ -59,7 +69,7 @@ const isActive = (path: string) => {
 
   <div
     id="mobile-menu"
-    class="pointer-events-none absolute top-[70px] left-0 w-full origin-top -translate-y-4 scale-y-95 flex-col border-b border-[#0a1128] bg-[#0a1128] px-6 pt-4 pb-8 opacity-0 shadow-xl transition-all duration-300 lg:hidden">
+    class="pointer-events-none absolute top-[80px] left-0 w-full origin-top -translate-y-4 scale-y-95 flex-col border-b border-green-500/50 bg-[#021c13]/98 px-6 pt-4 pb-8 opacity-0 shadow-2xl backdrop-blur-xl transition-all duration-300 lg:hidden">
     <div class="flex flex-col gap-1">
       {
         [
@@ -71,15 +81,15 @@ const isActive = (path: string) => {
         ].map((item) => (
           <a
             href={item.path}
-            class={`flex items-center rounded-md px-4 py-3 text-base font-bold transition-colors ${isActive(item.path) ? "bg-[#ffd60a] text-[#0a1128]" : "text-white hover:bg-white/10"}`}>
+            class={`flex items-center rounded-md px-4 py-3 text-base font-bold transition-colors ${isActive(item.path) ? "border-l-4 border-yellow-400 bg-[#032e1f] text-yellow-400" : "text-white/80 hover:bg-white/5 hover:text-white"}`}>
             {item.name}
           </a>
         ))
       }
     </div>
     <div class="mt-6 flex flex-col gap-3">
-      <a href="/register" class="flex w-full justify-center rounded-md bg-[#ffd60a] py-3 text-lg font-black text-[#0a1128] shadow-md">สมัครสมาชิก</a>
-      <a href="/login" class="flex w-full justify-center rounded-md border border-white/30 bg-transparent py-3 text-lg font-bold text-white">เข้าสู่ระบบ</a>
+      <a href="/login" class="flex w-full justify-center rounded-sm bg-gradient-to-b from-yellow-300 to-yellow-600 py-3 text-lg font-black text-[#021c13] shadow-md">เข้าสู่ระบบ</a>
+      <a href="/register" class="flex w-full justify-center rounded-sm border border-gray-400 bg-[#1f2937] py-3 text-lg font-bold text-white">สมัครสมาชิก</a>
     </div>
   </div>
 </header>
@@ -90,13 +100,13 @@ const isActive = (path: string) => {
     font-family: "Kanit", sans-serif !important;
   }
   #hamburger-btn.active .line-1 {
-    transform: translateY(7px) rotate(45deg);
+    transform: translateY(8px) rotate(45deg);
   }
   #hamburger-btn.active .line-2 {
     opacity: 0;
   }
   #hamburger-btn.active .line-3 {
-    transform: translateY(-7px) rotate(-45deg);
+    transform: translateY(-8px) rotate(-45deg);
   }
   #mobile-menu.show {
     opacity: 1;

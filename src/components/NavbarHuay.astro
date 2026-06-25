@@ -1,10 +1,9 @@
 ---
 import { Picture } from "astro:assets";
-
+// เช็คไฟล์โลโก้ PNG ในโฟลเดอร์ assets ให้ตรงกับ image_7.png
 const images = import.meta.glob<{ default: ImageMetadata }>("../assets/logo.*", { eager: true });
 const imagePaths = Object.keys(images);
-const targetPath = imagePaths.find((path) => path.endsWith(".webp")) || imagePaths.find((path) => path.endsWith(".png")) || (imagePaths.length > 0 ? imagePaths[0] : null);
-const mainLogo = targetPath ? images[targetPath].default : null;
+const mainLogo = imagePaths.length > 0 ? images[imagePaths[0]].default : null;
 
 const currentPath = Astro.url.pathname;
 const isActive = (path: string) => {
@@ -14,52 +13,53 @@ const isActive = (path: string) => {
 ---
 
 <header class="sticky top-0 z-[100] w-full font-sans">
-  <nav class="relative mx-auto flex h-[80px] w-full items-center justify-between border-b border-green-500/40 bg-[#021c13]/90 px-4 shadow-[0_5px_20px_rgba(0,0,0,0.8)] backdrop-blur-md xl:px-6">
-    <a href="/" class="z-[110] flex-shrink-0 transition-transform duration-300 hover:scale-105">
+  <nav class="relative mx-auto flex h-[85px] w-full items-center justify-between border-b border-red-500/30 bg-[#7f1d1d]/95 px-4 shadow-[0_5px_20px_rgba(0,0,0,0.5)] backdrop-blur-xl xl:px-8">
+    <a href="/" class="z-[110] flex-shrink-0 rounded-xl border border-white/20 bg-white/10 px-4 py-2 backdrop-blur-sm transition-transform duration-300 hover:scale-105">
       {
         mainLogo ? (
-          <Picture src={mainLogo} alt="LOTTO432 Logo" loading="eager" class="h-[45px] w-auto drop-shadow-[0_0_8px_rgba(34,197,94,0.5)] xl:h-[55px]" formats={["avif", "webp"]} fallbackFormat="webp" />
+          <Picture src={mainLogo} alt="LOTTO888 Logo" loading="eager" class="h-[45px] w-auto drop-shadow-md xl:h-[55px]" formats={["avif", "webp"]} fallbackFormat="webp" />
         ) : (
-          <h1 class="text-3xl font-black tracking-widest text-white drop-shadow-md">
-            LOTTO<span class="text-green-500">432</span>
+          <h1 class="text-3xl font-black tracking-widest text-white italic drop-shadow-md">
+            <span class="rounded-md bg-white px-2 text-red-500">LOT</span>888
           </h1>
         )
       }
     </a>
 
-    <div class="hidden h-full flex-1 items-center justify-center gap-6 lg:flex">
+    <div class="hidden h-full flex-1 items-center justify-center gap-8 lg:flex">
       {
         [
           { name: "หน้าแรก", path: "/" },
           { name: "ตรวจหวย", path: "/ตรวจหวย" },
-          { name: "แนวทางหวย", path: "/แนวทาง" },
+          { name: "แนวทาง", path: "/แนวทาง" },
           { name: "โปรโมชั่น", path: "/promotion" },
           { name: "ติดต่อเรา", path: "/contact-us" },
         ].map((item) => (
           <a
             href={item.path}
-            class={`group relative flex h-full items-center px-2 text-sm font-bold tracking-widest transition-colors ${isActive(item.path) ? "text-yellow-400" : "text-white/80 hover:text-white"}`}>
+            class={`group relative flex h-full items-center px-2 text-sm font-bold tracking-widest uppercase transition-colors ${isActive(item.path) ? "text-yellow-400" : "text-white/80 hover:text-white"}`}>
             <span>{item.name}</span>
             <div
-              class={`absolute bottom-0 left-0 h-[3px] w-full bg-yellow-400 shadow-[0_-2px_8px_rgba(251,191,36,0.8)] transition-transform duration-300 ${isActive(item.path) ? "scale-x-100" : "scale-x-0 group-hover:scale-x-100"}`}
+              class={`absolute bottom-0 left-0 h-[4px] w-full rounded-t-full bg-yellow-400 shadow-[0_-2px_10px_rgba(250,204,21,0.8)] transition-transform duration-300 ${isActive(item.path) ? "scale-x-100" : "scale-x-0 group-hover:scale-x-100"}`}
             />
           </a>
         ))
       }
     </div>
 
-    <div class="z-[110] flex items-center gap-3">
+    <div class="z-[110] flex items-center gap-4">
       <a
         href="/login"
-        class="hidden rounded-sm bg-gradient-to-b from-yellow-300 to-yellow-600 px-5 py-2 text-sm font-black text-[#021c13] shadow-[0_0_10px_rgba(251,191,36,0.3)] transition-all hover:scale-105 lg:flex">
+        class="hidden rounded-full border-2 border-white/20 bg-black/20 px-6 py-2.5 text-sm font-bold text-white backdrop-blur-md transition-all hover:border-white/50 hover:bg-white/10 lg:flex">
         เข้าสู่ระบบ
       </a>
-      <a href="/register" class="hidden items-center gap-2 rounded-sm border border-gray-400 bg-[#1f2937] px-5 py-2 text-sm font-bold text-white transition-all hover:bg-gray-700 lg:flex">
-        <span class="text-xs">👤</span> สมัครสมาชิก
+      <a
+        href="/register"
+        class="hidden rounded-full bg-gradient-to-r from-yellow-400 to-yellow-500 px-6 py-2.5 text-sm font-black text-[#5f0914] shadow-[0_4px_15px_rgba(250,204,21,0.4)] transition-all hover:-translate-y-0.5 hover:shadow-[0_8px_20px_rgba(250,204,21,0.6)] lg:flex">
+        สมัครสมาชิก
       </a>
-      <a href="#" class="hidden items-center gap-1 rounded-sm border border-white bg-white px-3 py-2 text-sm font-bold text-[#021c13] transition-all hover:bg-gray-200 lg:flex">💬 ติดต่อเรา</a>
 
-      <button id="hamburger-btn" class="relative flex h-[45px] w-[45px] flex-col items-center justify-center gap-[6px] rounded-md border border-green-500/50 bg-[#032e1f] lg:hidden" aria-label="Menu">
+      <button id="hamburger-btn" class="relative flex h-[45px] w-[45px] flex-col items-center justify-center gap-[6px] rounded-full border border-red-400/30 bg-red-900/50 lg:hidden" aria-label="Menu">
         <span class="line-1 h-[2px] w-5 origin-center rounded-full bg-white transition-all duration-300"></span>
         <span class="line-2 h-[2px] w-5 origin-center rounded-full bg-white transition-all duration-300"></span>
         <span class="line-3 h-[2px] w-5 origin-center rounded-full bg-white transition-all duration-300"></span>
@@ -69,27 +69,31 @@ const isActive = (path: string) => {
 
   <div
     id="mobile-menu"
-    class="pointer-events-none absolute top-[80px] left-0 w-full origin-top -translate-y-4 scale-y-95 flex-col border-b border-green-500/50 bg-[#021c13]/98 px-6 pt-4 pb-8 opacity-0 shadow-2xl backdrop-blur-xl transition-all duration-300 lg:hidden">
-    <div class="flex flex-col gap-1">
+    class="pointer-events-none absolute top-[85px] left-0 w-full origin-top -translate-y-4 scale-y-95 flex-col rounded-b-3xl border-b border-red-500/50 bg-[#7f1d1d]/98 px-6 pt-4 pb-8 opacity-0 shadow-2xl backdrop-blur-2xl transition-all duration-300 lg:hidden">
+    <div class="flex flex-col gap-2">
       {
         [
           { name: "หน้าแรก", path: "/" },
           { name: "ตรวจหวย", path: "/ตรวจหวย" },
-          { name: "แนวทางหวย", path: "/แนวทาง" },
+          { name: "แนวทาง", path: "/แนวทาง" },
           { name: "โปรโมชั่น", path: "/promotion" },
           { name: "ติดต่อเรา", path: "/contact-us" },
         ].map((item) => (
           <a
             href={item.path}
-            class={`flex items-center rounded-md px-4 py-3 text-base font-bold transition-colors ${isActive(item.path) ? "border-l-4 border-yellow-400 bg-[#032e1f] text-yellow-400" : "text-white/80 hover:bg-white/5 hover:text-white"}`}>
+            class={`flex items-center rounded-xl px-4 py-3.5 text-lg font-bold tracking-widest uppercase transition-colors ${isActive(item.path) ? "border-l-4 border-yellow-400 bg-white/10 text-yellow-400" : "text-white/80 hover:bg-white/5 hover:text-white"}`}>
             {item.name}
           </a>
         ))
       }
     </div>
-    <div class="mt-6 flex flex-col gap-3">
-      <a href="/login" class="flex w-full justify-center rounded-sm bg-gradient-to-b from-yellow-300 to-yellow-600 py-3 text-lg font-black text-[#021c13] shadow-md">เข้าสู่ระบบ</a>
-      <a href="/register" class="flex w-full justify-center rounded-sm border border-gray-400 bg-[#1f2937] py-3 text-lg font-bold text-white">สมัครสมาชิก</a>
+    <div class="mt-6 flex flex-col gap-4">
+      <a
+        href="/register"
+        class="flex w-full justify-center rounded-full bg-gradient-to-r from-yellow-400 to-yellow-500 py-3.5 text-lg font-black text-[#5f0914] shadow-[0_5px_15px_rgba(250,204,21,0.4)]">
+        สมัครสมาชิก
+      </a>
+      <a href="/login" class="flex w-full justify-center rounded-full border-2 border-white/20 bg-black/20 py-3.5 text-lg font-bold text-white">เข้าสู่ระบบ</a>
     </div>
   </div>
 </header>

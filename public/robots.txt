@@ -13,5 +13,5 @@ Disallow: /
 User-agent: Anthropic-ai
 Disallow: /
 
-Sitemap: https://lotto432-promotion.com/sitemap-0.xml
+Sitemap: https://xn---88-3mlb0cgdfwtee4czmi4ztb.com/sitemap-0.xml
 

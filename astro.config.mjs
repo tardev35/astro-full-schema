@@ -19,6 +19,6 @@ export default defineConfig({
     '/line': 'https://tinyurl.com/linepigpg'
   },
 
-  site: 'https://xn---88-3mlb0cgdfwtee4czmi4ztb.com',
+  site: 'https://var99-promotion.com',
   integrations: [sitemap()]
 });

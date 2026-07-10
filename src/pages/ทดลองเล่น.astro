@@ -1,6 +1,6 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
-import ContentBox from "../components/ContentBoxCyberCut.astro";
+import ContentBox from "../components/ContentBox.astro";
 import Navfoot from "../components/Navfoot.astro";
 import Announcement from "../components/AnnouncementHuay.astro";
 
@@ -50,10 +50,10 @@ const gameList = [
 ---
 
 <script type="application/ld+json" set:html={JSON.stringify(gameList)} />
-<MainLayout title="ทดลองเล่นสล็อต Var99" description="ทดลองเล่น Var99">
+<MainLayout title="ทดลองเล่นสล็อต SUMOHENG" description="ทดลองเล่น SUMOHENG">
   <Announcement />
 
-  <ContentBox title="ทดลองเล่นสล็อต Var99">
+  <ContentBox title="ทดลองเล่นสล็อต SUMOHENG">
     <div class="mb-5 grid grid-cols-2 gap-5 sm:grid-cols-2 md:grid-cols-4">
       {
         demoGames.map((game) => (

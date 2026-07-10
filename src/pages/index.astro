@@ -1,13 +1,15 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
-import ContentBox from "../components/ContentBoxHuay.astro";
-import ContentBoxTwo from "../components/ContentBoxTwoHuay.astro";
-import ContentBoxSevenThree from "../components/ContentBoxSevenThreeHuay.astro";
-import ContentBoxThreeColums from "../components/ContentBox3ThreeHuay.astro";
-import Announcement from "../components/AnnouncementHuay.astro";
-import ProviderGrid from "../components/LottoGrid.astro";
-import LatestWinners from "../components/LatestWinnersHuay.astro";
+import ContentBox from "../components/ContentBox.astro";
+import ContentBoxTwo from "../components/ContentBoxTwo.astro";
+import ContentBoxSevenThree from "../components/ContentBoxSevenThree.astro";
+import ContentBoxThreeColums from "../components/ContentBox3Three.astro";
+import ContentBoxSpecial from "../components/ContentBoxSpecial.astro";
+import Announcement from "../components/Announcement6.astro";
+import ProviderGrid from "../components/ProviderGrid.astro";
+import LatestWinners from "../components/LatestWinnersPremium.astro";
 import SmoothCarousel from "../components/SmoothCarousel.astro";
+import ReviewCardSumo from "../components/ReviewCardSumo.astro";
 import Navfoot from "../components/Navfoot.astro";
 import Faq from "../components/FaqHuay.astro";
 const currentPath = Astro.url.pathname;
@@ -17,28 +19,28 @@ const logoUrl = homePage + "/logo.webp";
 const webPageSchema = {
   "@context": "https://schema.org",
   "@type": "WebPage",
-  name: "Var99 ทางเข้าหลัก ครบวงจร ทั้งคาสิโนและหวยออนไลน์ โปรโมชั่น 2026",
-  description: "ทางเข้าหลัก Var99 เว็บหวยออนไลน์ ครบทุกประเทศ และคาสิโนครบวงจร ปลอดภัย โปรโมชั่นล่าสุดปี 2026  ระบบฝากถอนออโต้ ซื้อหวยได้ตลอด 24 ชม",
+  name: "SUMOHENG ทางเข้าหลัก สล็อตแท้ ฝากถอนออโต้ จ่ายจริง เฮงทุกสปิน",
+  description: "SUMOHENG ทางเข้าหลัก เว็บไซต์ทางการ ให้บริการสล็อตแท้ ฝากถอนออโต้ จ่ายจริง สมัครง่าย พร้อมโปรโมชั่นและผลทดสอบการใช้งาน เฮงทุกสปิน",
   url: currentPath,
 };
 const webSiteSchema = {
   "@context": "https://schema.org",
   "@type": "WebSite",
-  name: "Var99",
-  alternateName: ["Var99", "Var99 หวยออนไลน์"],
-  url: "https://var99-promotion.com/",
+  name: "SUMOHENG",
+  alternateName: ["SUMOHENG", "SUMOHENG สล็อตออนไลน์"],
+  url: "https://sumoheng-brand.com/",
 };
 const orgSchema = {
   "@context": "https://schema.org",
   "@type": "Organization",
-  name: "Var99",
+  name: "SUMOHENG",
   logo: logoUrl,
   url: homePage,
 };
 const allSchemas = [webPageSchema, orgSchema, webSiteSchema];
 
 import { Picture } from "astro:assets";
-import image1 from "../assets/slide1.jpg";
+import image1 from "../assets/slide1.png";
 import image2 from "../assets/banner1.webp";
 ---
 
@@ -47,17 +49,15 @@ import image2 from "../assets/banner1.webp";
 
   <Announcement />
   <div class="mx-auto w-full max-w-5xl px-4 py-8 text-center">
-    <p class="text-4xl leading-tight font-black text-[#0a1128] drop-shadow-sm md:text-5xl">
-      เลขเด็ด เลขดัง ลุ้นหวย88 <br />
-      <span class="text-[#ffdb0e]">จ่ายสูงกว่าทุกเว็บ</span>
-      <br />
-      ไม่มีปิดเลข
+    <p class="text-4xl leading-tight font-black text-[#470000] drop-shadow-sm md:text-5xl">
+      SUMOHENG <br />
+      <span class="text-[#ffdb0e]">เว็บใหญ่ ใจปล้ำ</span>
     </p>
   </div>
-  <ContentBox title="Var99 ทางเข้าหลัก ครบวงจร ทั้งคาสิโนและหวยออนไลน์ โปรโมชั่น 2026">
+  <ContentBox title="SUMOHENG ทางเข้าหลัก สล็อตแท้ ฝากถอนออโต้ จ่ายจริง เฮงทุกสปิน">
     <p class="leading-relaxed">
-      Var99 ทางเข้าหลัก ที่รวบรวมความสนุก สำหรับการ แทงหวย ออนไลน์ แบบครบวงจรไว้ในที่เดียว ไม่ว่าคุณจะเป็นคอคาสิโนที่ชอบความตื่นเต้น หรือนักเสี่ยงโชคที่มองหา เว็บหวยออนไลน์ที่จ่ายจริง
-      เราคือแพลตฟอร์มที่ได้รับมาตรฐาน มั่นคง และปลอดภัยที่สุดในปี 2026 พร้อมให้คุณเข้าถึงความสนุกได้ตลอด 24 ชั่วโมง
+      <strong class="text-amber-400">SUMOHENG</strong> คือเว็บไซต์ทางเข้าหลักที่รวบรวมบริการสล็อตแท้จากค่ายเกมชั้นนำ พร้อมระบบฝากถอนออโต้ที่ให้ความสำคัญกับความถูกต้องของทุกธุรกรรมและการจ่ายจริง เพื่อให้สมาชิกใช้งานได้อย่างมั่นใจ
+      ภายใต้แนวคิด "เฮงทุกสปิน" ที่สะท้อนตัวตนของแบรนด์ในทุกประสบการณ์การใช้งาน
     </p>
 
     <div class="mt-8 flex flex-wrap justify-center gap-6">
@@ -75,45 +75,66 @@ import image2 from "../assets/banner1.webp";
     </div>
   </ContentBox>
 
-  <ContentBoxTwo titleleft="เข้าสู่ระบบ Var99" titleright="อัปเดตผลรางวัล">
+  <ContentBoxTwo titleleft="ทางเข้า SUMOHENG" titleright="JACKPOT แตกพาร์ทเนอร์">
     <div slot="left" class="flex flex-col gap-4">
-      <div class="rounded-2xl border border-white/10 bg-white/5 p-6 backdrop-blur-sm">
+      <div class="rounded-2xl border border-red-500/30 bg-white/5 p-6 shadow-[0_0_20px_rgba(220,38,38,0.1)] backdrop-blur-md">
         <div class="flex flex-col gap-4">
-          <input
-            type="text"
-            placeholder="Username / เบอร์โทรศัพท์"
-            class="w-full rounded-full border border-red-500/30 bg-black/40 px-6 py-3 text-white transition-colors outline-none focus:border-yellow-400"
-          />
-          <input type="password" placeholder="Password" class="w-full rounded-full border border-red-500/30 bg-black/40 px-6 py-3 text-white transition-colors outline-none focus:border-yellow-400" />
-          <button class="mt-2 w-full rounded-full bg-gradient-to-r from-red-600 to-red-500 p-3.5 font-black text-white shadow-[0_5px_15px_rgba(220,38,38,0.5)] transition-transform hover:scale-105">
+          <div class="relative">
+            <span class="absolute top-3.5 left-4 text-red-500">👤</span>
+            <input
+              type="text"
+              placeholder="ยูสเซอร์เนม / เบอร์โทรศัพท์"
+              class="w-full rounded-full border border-red-500/50 bg-black/60 py-3 pr-4 pl-12 text-white transition-all outline-none focus:border-yellow-400 focus:ring-1 focus:ring-yellow-400/50"
+            />
+          </div>
+          <div class="relative">
+            <span class="absolute top-3.5 left-4 text-red-500">🔑</span>
+            <input
+              type="password"
+              placeholder="รหัสผ่าน"
+              class="w-full rounded-full border border-red-500/50 bg-black/60 py-3 pr-4 pl-12 text-white transition-all outline-none focus:border-yellow-400 focus:ring-1 focus:ring-yellow-400/50"
+            />
+          </div>
+          <button
+            class="mt-2 w-full rounded-full border border-red-400/50 bg-gradient-to-r from-red-600 to-red-700 p-3.5 font-black text-white shadow-[0_5px_15px_rgba(220,38,38,0.5)] transition-all hover:scale-[1.02] hover:shadow-[0_8px_25px_rgba(220,38,38,0.7)]">
             เข้าสู่ระบบ
           </button>
           <div class="mt-2 flex items-center justify-between px-2 text-sm">
-            <a href="#" class="text-red-300 transition-colors hover:text-white">ลืมรหัสผ่าน?</a>
-            <a href="/register" class="font-bold text-yellow-400 transition-colors hover:text-yellow-300">สมัครสมาชิกใหม่</a>
+            <a href="#" class="text-gray-400 transition-colors hover:text-white">ลืมรหัสผ่าน?</a>
+            <a href="/register" class="animate-pulse font-bold text-yellow-400 transition-colors hover:text-yellow-300">สมัครสมาชิกใหม่</a>
           </div>
         </div>
       </div>
     </div>
     <div slot="right">
-      <div class="rounded-2xl border border-red-500/20 bg-black/40 p-4 backdrop-blur-sm">
-        <table class="w-full text-sm">
+      <div class="flex h-full flex-col justify-center rounded-2xl border border-red-500/30 bg-gradient-to-br from-red-900/40 to-black/60 p-5 backdrop-blur-md">
+        <div class="mb-4 text-center">
+          <span class="text-sm font-bold text-gray-300">แจ็คพอตรวม (THB)</span>
+          <div class="bg-gradient-to-r from-yellow-300 via-yellow-400 to-yellow-500 bg-clip-text text-4xl font-black text-transparent drop-shadow-[0_2px_10px_rgba(250,204,21,0.4)]">8,459,230.50</div>
+        </div>
+        <table class="mt-2 w-full text-sm">
           <thead>
-            <tr class="border-b border-red-500/30 text-yellow-400">
-              <th class="py-3 pl-2 text-left">งวดหวย</th>
-              <th class="py-3">รางวัลที่ 1 / บน</th>
-              <th class="py-3">2 ตัวล่าง</th>
+            <tr class="border-b border-red-500/30 text-red-400">
+              <th class="py-2 pl-2 text-left">ค่ายเกม</th>
+              <th class="py-2 pr-2 text-right">RTP</th>
             </tr>
           </thead>
           <tbody class="text-white">
-            <tr class="border-b border-white/5 transition-colors hover:bg-white/5">
-              <td class="py-4 pl-2 font-bold">🇹🇭 หวยรัฐบาล</td><td class="text-center text-xl font-black text-yellow-400">122003</td><td class="text-center text-lg font-bold">23</td>
+            <tr class="border-b border-white/5 transition-colors hover:bg-white/10">
+              <td class="flex items-center gap-2 py-3 pl-2 font-bold"><span class="h-2 w-2 animate-ping rounded-full bg-green-500"></span> PG Soft</td><td
+                class="pr-2 text-right font-black text-green-400">
+                98.5%
+              </td>
             </tr>
-            <tr class="border-b border-white/5 transition-colors hover:bg-white/5">
-              <td class="py-4 pl-2 font-bold">🇻🇳 หวยฮานอย</td><td class="text-center text-xl font-black text-yellow-400">8495</td><td class="text-center text-lg font-bold">11</td>
+            <tr class="border-b border-white/5 transition-colors hover:bg-white/10">
+              <td class="flex items-center gap-2 py-3 pl-2 font-bold"><span class="h-2 w-2 rounded-full bg-green-500"></span> Joker Gaming</td><td class="pr-2 text-right font-black text-green-400">
+                97.2%
+              </td>
             </tr>
-            <tr class="transition-colors hover:bg-white/5">
-              <td class="py-4 pl-2 font-bold">🇱🇦 หวยลาวพัฒนา</td><td class="text-center text-xl font-black text-yellow-400">6522</td><td class="text-center text-lg font-bold">90</td>
+            <tr class="transition-colors hover:bg-white/10">
+              <td class="flex items-center gap-2 py-3 pl-2 font-bold"><span class="h-2 w-2 rounded-full bg-green-500"></span> Pragmatic Play</td><td class="pr-2 text-right font-black text-green-400">
+                96.8%
+              </td>
             </tr>
           </tbody>
         </table>
@@ -123,19 +144,20 @@ import image2 from "../assets/banner1.webp";
 
   <LatestWinners />
 
-  <ContentBoxThreeColums titleleft="ฝาก-ถอน อัตโนมัติ" titlecenter="ศูนย์รวมหวยออนไลน์" titleright="จ่ายจริง ถอนจริง">
-    <div slot="left">ระบบการเงินมั่นคง ฝาก-ถอน ด้วยระบบ AI อัจฉริยะ เงินเข้าภายใน 5 นาที รวดเร็ว ทันใจ ไม่ต้องรอแอดมิน</div>
-    <div slot="center">หวยไทย ฮานอย ลาว หุ้น ยี่กี มีให้เลือกแทงครบจบในเว็บเดียว เปิดรับเดิมพันตลอด 24 ชั่วโมง</div>
-    <div slot="right">เว็บตรงไม่ผ่านเอเย่นต์ การันตีความปลอดภัย 100% ถูกล้านจ่ายล้าน ถอนได้ไม่อั้นทุกวัน</div>
+  <ContentBoxThreeColums titleleft="รวมครบจบในที่เดียว" titlecenter="RTP สูง แตกง่าย" titleright="ฝาก-ถอน ระบบออโต้">
+    <div slot="left">สล็อตทุกค่าย คาสิโน กีฬา หวย มีครบจบที่ SUMOHENG เว็บตรงไม่ผ่านเอเย่นต์ มั่นคง ปลอดภัย มาตรฐานระดับสากล</div>
+    <div slot="center">เกมสล็อตคุณภาพ คัดสรรมาอย่างดี อัตราการชนะ (RTP) สูง โบนัสจัดเต็ม โปรแรงแจกหนักทุกวัน แจ็คพอตแตกง่ายสุดๆ</div>
+    <div slot="right">ทำรายการรวดเร็วทันใจด้วยระบบออโต้ 100% รองรับทุกธนาคารและทรูมันนี่วอเลท เงินเข้าไวภายใน 5 วินาที</div>
   </ContentBoxThreeColums>
   <ProviderGrid />
   <ContentBox>
-    <h2 class="mb-4 text-3xl font-black tracking-[0.2em] text-black uppercase drop-shadow-[0_0_10px_rgba(0,0,0,0.05)]">เว็บหวยออนไลน์ ครบทุกประเทศ และคาสิโนครบวงจร</h2>
+    <h2 class="mb-4 text-3xl font-black tracking-[0.2em] text-amber-400 uppercase drop-shadow-[0_0_10px_rgba(0,0,0,0.05)]">SUMOHENG ทางเข้าหลัก เว็บไซต์ทางการ พร้อมลิงก์เข้าใช้งานที่ถูกต้อง</h2>
     <p class="leading-relaxed">
-      เราให้บริการซื้อหวยออนไลน์ครบทุกประเภท ทั้งหวยรัฐบาล หวยลาว หวยฮานอย และหวยหุ้นทั่วโลก พร้อมด้วยโซนคาสิโนออนไลน์ที่ยกทัพเกมยอดนิยมมาไว้ให้คุณเล่นแบบจุใจ ครบจบในยูสเซอร์เดียว
+      <strong class="text-yellow-500">SUMOHENG</strong> คือทางเข้าหลักของเว็บไซต์ทางการ ที่ใช้สำหรับเข้าใช้งานผ่านลิงก์ที่ถูกต้อง ช่วยลดโอกาสพบเว็บไซต์ปลอมหรือลิงก์ที่ไม่เกี่ยวข้อง สมาชิกสามารถตรวจสอบความถูกต้องของเว็บไซต์ก่อนเข้าสู่ระบบ
+      เพื่อให้สามารถเข้าสู่ระบบได้อย่างมั่นใจ พร้อมใช้งานบริการต่าง ๆ ได้จากเว็บไซต์เดียว
     </p>
   </ContentBox>
-  <ContentBoxSevenThree titleleft="" titleright="ถอนจริง 3 วินาที">
+  <ContentBoxSevenThree titleleft="" titleright="บริการ สล็อตแท้ จากค่ายเกมชั้นนำ เป็นหนึ่งในจุดเด่นของ SUMOHENG">
     <div slot="left" class="flex h-full flex-col justify-center">
       <Picture
         src={image1}
@@ -147,15 +169,14 @@ import image2 from "../assets/banner1.webp";
         formats={["avif", "webp"]}
         fallbackFormat="webp"
         quality={80}
-        alt="Vegus24 VIP Service"
+        alt="sumoheng VIP Service"
         class="mx-auto h-auto w-full rounded-2xl border-2 border-yellow-500/30 shadow-[0_10px_30px_rgba(220,38,38,0.3)]"
       />
     </div>
     <div slot="right">
-      <h2 class="text-yellow-4000 mb-4 text-3xl font-black tracking-[0.2em] uppercase drop-shadow-[0_0_10px_rgba(0,0,0,0.05)]">แทงหวยลาวออนไลน์ Var99 อัปเดตผลรางวัล แม่นยำทุกงวด</h2>
       <p>
-        หวยลาวกลายเป็นตัวเลือกยอดนิยมที่นักเดิมพันไทยชื่นชอบ ด้วยการออกรางวัลที่บ่อยและรูปแบบการเล่นที่เข้าใจง่าย ที่ Var99 เราเปิดให้คุณแทงหวยลาวครบทุกรูปแบบ ไม่ว่าจะเป็นหวยลาวพัฒนา หรือหวยลาวชุด
-        พร้อมระบบอัปเดตผลรางวัลที่รวดเร็วและแม่นยำที่สุด ตรวจสอบเลขเด็ดและสถิติย้อนหลังได้ทันที ช่วยให้คุณวางแผนการลงทุนได้อย่างมั่นใจในทุกงวด
+        เกมสล็อตทั้งหมดมาจากค่ายเกมชั้นนำที่ได้รับความนิยม แต่ละเกมยังคงรูปแบบการเล่น ฟีเจอร์ และอัตราการจ่ายรางวัลตามต้นฉบับ <strong class="text-amber-400">SUMOHENG</strong> เปิดโอกาสให้ท่านเลือกได้อย่าง
+        อิสระ ทั้งเกมยอดนิยม เกมใหม่ และเกมที่ได้รับความนิยมในแต่ละช่วงเวลา เมื่อเลือกเกมได้แล้ว การทำรายการฝากและถอนสามารถดำเนินการผ่านระบบอัตโนมัติของเว็บไซต์
       </p>
 
       <a
@@ -168,68 +189,119 @@ import image2 from "../assets/banner1.webp";
   </ContentBoxSevenThree>
   <SmoothCarousel />
   <ContentBox>
-    <h2 class="mb-4 text-3xl font-black tracking-[0.2em] text-yellow-400 uppercase drop-shadow-[0_0_10px_rgba(0,0,0,0.05)]">หวยไทยออนไลน์ ซื้อง่าย Var99 เว็บตรง จ่ายจริง</h2>
-    <p class="leading-relaxed">
-      หมดกังวลเรื่องการหาซื้อเลขเด็ด หรือปัญหาระบบจ่ายเงินที่ไม่ชัดเจน กับบริการหวยรัฐบาลไทยออนไลน์ที่ Var99 เราให้บริการบนแพลตฟอร์มเว็บตรงที่ปลอดภัย 100% เปิดรับเลขทุกประเภท ไม่ว่าจะเป็นเลขดัง
-      เลขอั้น หรือเลขมงคล ด้วยอัตราจ่ายที่สูงที่สุดในตลาด พร้อมระบบแจ้งเตือนผลรางวัลแบบเรียลไทม์ ซื้อง่าย จ่ายจริง มั่นใจได้ทุกยอดเดิมพัน
-    </p>
-    <h2 class="mb-4 text-3xl font-black tracking-[0.2em] text-yellow-400 uppercase drop-shadow-[0_0_10px_rgba(0,0,0,0.05)]">หวยฮานอย หวยยอดนิยม เล่นได้ทุกวันไม่ต้องรอนาน</h2>
-    <p class="leading-relaxed">
-      หากคุณเบื่อกับการรอหวยรัฐบาลเดือนละ 2 ครั้ง หวยฮานอยคือคำตอบที่ตอบโจทย์ที่สุด! ที่ Var99 เราจัดเต็มให้คุณแทงได้ทุกวัน ทั้งหวยฮานอยปกติ ฮานอยพิเศษ และฮานอย VIP
-      ลุ้นผลรางวัลได้ตลอดทั้งคืนด้วยรูปแบบการเล่นที่หลากหลาย ทั้ง 3 ตัวบน 2 ตัวล่าง และเลขวิ่ง ใช้งานง่ายผ่านหน้าเว็บหรือมือถือ เดิมพันสนุกได้แบบไม่มีวันหยุด
-    </p>
-    <h2 class="mb-4 text-3xl font-black tracking-[0.2em] text-yellow-400 uppercase drop-shadow-[0_0_10px_rgba(0,0,0,0.05)]">
-      หวยยี่กีออนไลน์ ออกรางวัลถี่ ลุ้นสนุกได้ทุก 15 นาที/h2>
-      <p class="leading-relaxed">
-        สำหรับคอหวยสายปั่นที่ต้องการความรวดเร็ว หวยยี่กี (หวยปิงปอง) คือบริการที่ห้ามพลาด! เราเปิดให้เดิมพันตลอด 24 ชั่วโมง โดยมีการออกรางวัลต่อเนื่องทุกๆ 15 นาที รวมกว่า 88 รอบต่อวัน
-        ระบบของเรามีความเสถียรสูง รองรับการส่งโพยที่รวดเร็ว ช่วยให้คุณทำกำไรได้ไวและต่อเนื่อง เหมาะสำหรับนักลงทุนที่ต้องการความตื่นเต้นและผลตอบแทนที่รวดเร็วในทุกๆ วัน
-      </p>
-    </h2>
-    <ContentBox>
-      <h2 class="mb-4 text-3xl font-black tracking-[0.2em] text-yellow-400 uppercase drop-shadow-[0_0_10px_rgba(0,0,0,0.05)]">หวยธกส. ทางเลือกใหม่ของการเสี่ยงโชคผ่าน Var99</h2>
-      <p class="leading-relaxed">
-        เพิ่มความหลากหลายในการเสี่ยงโชคกับหวยธกส. ที่มาพร้อมความน่าเชื่อถือและการใช้งานที่สะดวกสบายบนเว็บไซต์ Var99 เราเปิดช่องทางให้คุณเข้าถึงการแทงหวยธกส. ได้อย่างง่ายดาย
-        ด้วยขั้นตอนการแทงที่โปร่งใสและระบบการคำนวณเงินรางวัลที่รวดเร็ว มอบประสบการณ์การเสี่ยงโชคที่แตกต่างและคุ้มค่าสำหรับสมาชิกที่ต้องการทางเลือกใหม่ๆ ในการทำกำไร
-      </p>
-    </ContentBox>
+    <div class="mt-4 flex flex-col gap-5">
+      <!-- หัวข้อที่ 1 -->
+      <div
+        class="group flex flex-col items-start gap-4 rounded-2xl border border-red-900/30 bg-[#171717]/50 p-6 transition-all duration-300 hover:-translate-y-1 hover:border-yellow-500/50 hover:bg-[#1a1505] hover:shadow-[0_10px_20px_rgba(250,204,21,0.1)] sm:flex-row">
+        <div
+          class="flex h-14 w-14 shrink-0 items-center justify-center rounded-xl border border-yellow-300/50 bg-gradient-to-br from-yellow-400 to-yellow-600 text-3xl shadow-[0_0_15px_rgba(250,204,21,0.4)] transition-transform duration-300 group-hover:scale-110 group-hover:rotate-3">
+          🎰
+        </div>
+        <div class="flex flex-col gap-2">
+          <h3 class="bg-gradient-to-r from-yellow-300 to-yellow-500 bg-clip-text text-xl font-black tracking-wide text-transparent drop-shadow-sm">รวมค่ายเกมสล็อตที่ได้รับความนิยมจากผู้เล่น</h3>
+          <p class="text-sm leading-relaxed text-gray-400 transition-colors group-hover:text-gray-300">
+            ค่ายเกมที่เปิดให้บริการมีทั้ง PG Soft, Pragmatic Play, JILI, Joker Gaming, Habanero, CQ9 Gaming, Microgaming, NetEnt และผู้พัฒนาเกมอีกหลายราย
+            แต่ละค่ายมีจุดเด่นและรูปแบบการเล่นที่แตกต่างกัน สมาชิกสามารถเลือกเล่นได้ตามความชอบจากบัญชีเดียว
+          </p>
+        </div>
+      </div>
 
-    <ContentBox>
-      <Picture
-        src={image2}
-        loading="lazy"
-        fetchpriority="low"
-        widths={[200, 400, 600, 800]}
-        sizes="(max-width: 768px) 100vw, 50vw"
-        decoding="async"
-        formats={["avif", "webp"]}
-        fallbackFormat="webp"
-        quality={80}
-        alt="Vegus24 VIP Service"
-        class="mx-auto h-auto w-full rounded-2xl border-2 border-yellow-500/30 shadow-[0_10px_30px_rgba(220,38,38,0.3)]"
-      />
-      <h2 class="mb-4 text-2xl font-black tracking-[0.2em] text-yellow-400 uppercase drop-shadow-[0_0_10px_rgba(0,0,0,0.05)]">อัปเดตโปรโมชั่น หวยออนไลน์ Var99 ล่าสุด ปี 2026</h2>
-      <p class="leading-relaxed">
-        เพื่อการฝากเงินที่คุ้มค่าก่อนการ เล่นเกมคาสิโน หรือ ซื้อหวย ออนไลน์ กว่าใคร สมาชิกทุกท่านสามารถกดรับโปรโมชั่นพิเศษที่เราคัดสรรมาให้ ทั้งโบนัสต้อนรับสมาชิกใหม่ โปรโมชั่นฝากประจำ
-        และกิจกรรมคืนยอดเสียที่คุณไม่ควรพลาด อัปเดตเงื่อนไขล่าสุดตลอดปี 2026 เพื่อให้มั่นใจว่าการเดิมพันของคุณจะได้รับผลตอบแทนที่ดีที่สุด
-      </p>
-    </ContentBox>
+      <!-- หัวข้อที่ 2 -->
+      <div
+        class="group flex flex-col items-start gap-4 rounded-2xl border border-red-900/30 bg-[#171717]/50 p-6 transition-all duration-300 hover:-translate-y-1 hover:border-red-500/50 hover:bg-[#1a0505] hover:shadow-[0_10px_20px_rgba(220,38,38,0.15)] sm:flex-row">
+        <div
+          class="flex h-14 w-14 shrink-0 items-center justify-center rounded-xl border border-red-400/50 bg-gradient-to-br from-red-600 to-red-800 text-3xl shadow-[0_0_15px_rgba(220,38,38,0.4)] transition-transform duration-300 group-hover:scale-110">
+          🌟
+        </div>
+        <div class="flex flex-col gap-2">
+          <h3 class="bg-gradient-to-r from-white to-gray-300 bg-clip-text text-xl font-black tracking-wide text-transparent drop-shadow-sm transition-colors group-hover:text-yellow-400">
+            สล็อตใหม่และเกมยอดนิยมอัปเดตอยู่เสมอ
+          </h3>
+          <p class="text-sm leading-relaxed text-gray-400 transition-colors group-hover:text-gray-300">
+            รายชื่อเกมและค่ายผู้พัฒนาจะมีการอัปเดตตามรอบการให้บริการของแต่ละค่าย ทำให้สมาชิกสามารถพบทั้งเกมสล็อตยอดนิยม เกมเปิดใหม่ และเกมที่กำลังได้รับความนิยมในช่วงเวลาต่างๆ
+          </p>
+        </div>
+      </div>
 
-    <ContentBox>
-      <h2 class="mb-4 text-3xl font-black tracking-[0.2em] text-yellow-400 uppercase drop-shadow-[0_0_10px_rgba(0,0,0,0.05)]">ระบบฝากถอน ออโต้ ซื้อหวย มั่นใจได้ 24 ชั่วโมง</h2>
-      <p class="leading-relaxed">
-        ลืมปัญหาการฝากถอน และการซือ้หวยที่ช้าที่ล่าช้าไปได้เลย! Var99 ระบบฝาก-ถอนเงินออโต้ และซื้อหวย จองเลขที่รวดเร็วและแม่นยำ ทำรายการทุกอย่างได้ด้วยตัวเองเพียงไม่กี่วินาที
-        รองรับทุกธนาคารชั้นนำในไทย มั่นใจในความปลอดภัยด้วยระบบรักษาความปลอดภัยระดับสูง ให้คุณโฟกัสกับการเล่นและสนุกกับการลุ้นหวยได้อย่างเต็มที่
-      </p>
-    </ContentBox>
-
-    <Navfoot />
-
-    <style>
-      :global(.text-yellow-gradient) {
-        background: linear-gradient(to bottom, #e7d800 0%, #ddd44e 100%) !important;
-        -webkit-background-clip: text !important;
-        -webkit-text-fill-color: transparent !important;
-      }
-    </style>
+      <!-- หัวข้อที่ 3 -->
+      <div
+        class="group flex flex-col items-start gap-4 rounded-2xl border border-red-900/30 bg-[#171717]/50 p-6 transition-all duration-300 hover:-translate-y-1 hover:border-red-500/50 hover:bg-[#1a0505] hover:shadow-[0_10px_20px_rgba(220,38,38,0.15)] sm:flex-row">
+        <div
+          class="flex h-14 w-14 shrink-0 items-center justify-center rounded-xl border border-red-400/50 bg-gradient-to-br from-red-600 to-red-800 text-3xl shadow-[0_0_15px_rgba(220,38,38,0.4)] transition-transform duration-300 group-hover:scale-110">
+          🔑
+        </div>
+        <div class="flex flex-col gap-2">
+          <h2 class="bg-gradient-to-r from-white to-gray-300 bg-clip-text text-xl font-black tracking-wide text-transparent drop-shadow-sm transition-colors group-hover:text-yellow-400">
+            เลือกเล่นได้หลายค่ายภายในบัญชีเดียว
+          </h2>
+          <p class="text-sm leading-relaxed text-gray-400 transition-colors group-hover:text-gray-300">
+            สมาชิกไม่จำเป็นต้องสมัครหลายเว็บไซต์เพื่อเข้าเล่นเกมจากแต่ละค่าย เพราะระบบรวบรวมผู้ให้บริการไว้ในที่เดียว ช่วยให้สลับเกมและเลือกเล่นได้สะดวกมากขึ้น
+          </p>
+        </div>
+      </div>
+    </div>
   </ContentBox>
+  <ContentBox>
+    <h2 class="mb-4 text-3xl font-black tracking-[0.2em] text-yellow-400 uppercase drop-shadow-[0_0_10px_rgba(0,0,0,0.05)]">เฮงทุกสปิน มากกว่าสโลแกน แต่คือแนวคิดของ SUMOHENG</h2>
+    <p class="leading-relaxed">
+      คำว่า "เฮงทุกสปิน" ไม่ได้หมายถึงการรับประกันผลลัพธ์ของการเล่น แต่เป็นแนวคิดที่สะท้อนถึงประสบการณ์การใช้งานของเว็บไซต์ ตั้งแต่การเข้าใช้งาน ระบบฝากถอนออโต้
+      ไปจนถึงการเลือกเล่นสล็อตแท้จากค่ายเกมชั้นนำ ทุกองค์ประกอบถูกจัดวางให้ใช้งานได้สะดวกและเป็นระเบียบ
+    </p>
+  </ContentBox>
+
+  <ContentBox>
+    <Picture
+      src={image2}
+      loading="lazy"
+      fetchpriority="low"
+      widths={[200, 400, 600, 800]}
+      sizes="(max-width: 768px) 100vw, 50vw"
+      decoding="async"
+      formats={["avif", "webp"]}
+      fallbackFormat="webp"
+      quality={80}
+      alt="sumoheng VIP Service"
+      class="mx-auto h-auto w-full max-w-2xl rounded-2xl border-2 border-yellow-500/30 shadow-[0_10px_30px_rgba(220,38,38,0.3)] transition-transform hover:scale-[1.02]"
+    />
+    <h2 class="mb-4 text-2xl font-black tracking-[0.2em] text-yellow-400 uppercase drop-shadow-[0_0_10px_rgba(0,0,0,0.05)]">
+      ระบบ ฝากถอนออโต้ ที่ให้ความสำคัญกับยอดที่ถูกต้อง จ่ายจริง รวดเร็วและแม่นยำ
+    </h2>
+    <p class="leading-relaxed">
+      ระบบฝากถอนออโต้ <strong class="text-yellow-500">SUMOHENG</strong> เป็นส่วนสำคัญที่ช่วยให้การทำธุรกรรมมีความรวดเร็วและเป็นระเบียบ ทุกยอดฝากและถอนผ่านการตรวจสอบของระบบก่อนดำเนินการ พร้อมบันทึกสถานะของรายการเพื่อให้สมาชิกสามารถตรวจสอบได้ทุกขั้นตอน
+      ความถูกต้องของข้อมูลและการจ่ายจริงจึงเป็นอีกหนึ่งปัจจัยที่ช่วยสร้างความมั่นใจในการใช้งานเว็บไซต์ และเป็นส่วนหนึ่งของประสบการณ์ที่ทีมรีวิวเว็บไซต์นำไปใช้ในการประเมินระบบ
+    </p>
+  </ContentBox>
+
+  <ContentBox>
+    <h2 class="mb-4 text-3xl font-black tracking-[0.2em] text-yellow-400 uppercase drop-shadow-[0_0_10px_rgba(0,0,0,0.05)]">ผลทดสอบการใช้งาน SUMOHENG โดยทีมรีวิวเว็บไซต์</h2>
+    <p class="leading-relaxed">
+      ทีมรีวิวเว็บไซต์ได้ และ ทีมอาสาสมัครจากหลายแหล่ง ทดสอบการใช้งานในหลายส่วน ตั้งแต่การเข้าสู่ระบบ การเลือกเล่นสล็อตแท้ การฝากถอนออโต้ ไปจนถึงการใช้งานผ่านอุปกรณ์ต่าง ๆ พร้อมตรวจสอบความรวดเร็ว
+      ความถูกต้องของระบบ และความสะดวกในแต่ละขั้นตอน ก่อนสรุปผลการใช้งานในภาพรวม <strong class="text-amber-400">SUMOHENG</strong> เพื่อใช้เป็นข้อมูลประกอบสำหรับผู้ที่กำลังพิจารณาสมัครสมาชิกและเข้าใช้งานเว็บไซต์
+    </p>
+  </ContentBox>
+
+  <ReviewCardSumo />
+
+  <ContentBoxSpecial>
+    <h2 slot="title-left">สมัครสมาชิก ง่ายๆ ใช้งานผ่านระบบที่มีมาตรฐานและปลอดภัย</h2>
+    <p slot="content-left" class="leading-relaxed">
+      การสมัครสมาชิกใช้เวลาเพียงไม่กี่ขั้นตอน ข้อมูลที่จำเป็นมีเฉพาะส่วนสำหรับเปิดบัญชีและยืนยันการใช้งาน เมื่อสมัครเรียบร้อย สมาชิกสามารถเข้าสู่ระบบ เลือกเล่นสล็อตแท้ ใช้งานระบบฝากถอนออโต้
+      และเข้าถึงบริการทั้งหมดของเว็บไซต์ได้จากบัญชีเดียว พร้อมรับสิทธิประโยชน์และโปรโมชั่นสำหรับสมาชิกใหม่
+    </p>
+
+    <h2 slot="title-right">SUMOHENG โปรโมชั่น สิทธิประโยชน์ ที่ช่วยเพิ่มความคุ้มค่าเพื่อนักเล่นสล็อตตัวจริง</h2>
+    <p slot="content-right" class="leading-relaxed">
+      โปรโมชั่นและสิทธิประโยชน์ของ SUMOHENG เปิดให้สมาชิกติดตามได้จากหน้าเว็บไซต์ โดยแต่ละรายการจะแสดงรายละเอียด เงื่อนไข และช่วงเวลาการรับสิทธิ์ไว้อย่างชัดเจน
+    </p>
+  </ContentBoxSpecial>
+
+  <Navfoot />
+
+  <style>
+    :global(.text-yellow-gradient) {
+      background: linear-gradient(to bottom, #e7d800 0%, #ddd44e 100%) !important;
+      -webkit-background-clip: text !important;
+      -webkit-text-fill-color: transparent !important;
+    }
+  </style>
 </MainLayout>

@@ -13,5 +13,5 @@ Disallow: /
 User-agent: Anthropic-ai
 Disallow: /
 
-Sitemap: https://var99-promotion.com/sitemap-0.xml
+Sitemap: https://sumoheng-brand.com/sitemap-0.xml
 

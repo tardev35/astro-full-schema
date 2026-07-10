@@ -1,31 +1,31 @@
 ---
 import { Image } from "astro:assets";
-import Bg from "../assets/bg.jpg";
+import Bg from "../assets/bg.png";
 import "../styles/global.css";
-import NavbarStyle6 from "../components/NavbarHuay.astro";
-import Footer from "../components/FooterHuay.astro";
+import NavbarStyle6 from "../components/NavbarStyle11.astro";
+import Footer from "../components/Footer.astro";
 
 const bannerImages = import.meta.glob<{ default: ImageMetadata }>("../assets/banner*.{png,webp,jpg,jpeg}", { eager: true });
 const bannerPaths = Object.keys(bannerImages);
 const mainBanner = bannerPaths.length > 0 ? bannerImages[bannerPaths[0]].default : null;
 
 const {
-  title = "Var99 ทางเข้าหลัก ครบวงจร ทั้งคาสิโนและหวยออนไลน์ โปรโมชั่น 2026",
-  description = "ทางเข้าหลัก Var99 เว็บหวยออนไลน์ ครบทุกประเทศ และคาสิโนครบวงจร ปลอดภัย โปรโมชั่นล่าสุดปี 2026  ระบบฝากถอนออโต้ ซื้อหวยได้ตลอด 24 ชม",
+  title = "SUMOHENG ทางเข้าหลัก สล็อตแท้ ฝากถอนออโต้ จ่ายจริง เฮงทุกสปิน",
+  description = "SUMOHENG ทางเข้าหลัก เว็บไซต์ทางการ ให้บริการสล็อตแท้ ฝากถอนออโต้ จ่ายจริง สมัครง่าย พร้อมโปรโมชั่นและผลทดสอบการใช้งาน เฮงทุกสปิน",
   robots = "index, follow",
-  ImageOg = "/pro3.webp",
+  ImageOg = "/slide3.webp",
 } = Astro.props;
 
 const currentPath = Astro.url.pathname;
 const canonicalURL = new URL(currentPath, Astro.site);
 const ogImageURL = new URL(ImageOg, Astro.site);
-const ogSiteName = "Var99";
+const ogSiteName = "SUMOHENG";
 ---
 
 <html lang="th">
   <head>
     <meta charset="utf-8" />
-    <meta name="google-site-verification" content="WxHuhxjCcSOckp98Yr9q_BmS3U6FiITt6eV8XXvj2R8" />
+    <meta name="google-site-verification" content="THWudFWFF0XOm6rXgwUIGavBdxyu7lmo9oQ1XaoA15M" />
     <meta name="robots" content={robots} />
     <meta name="googlebot" content={robots} />
     <title>{title}</title>
@@ -87,7 +87,7 @@ const ogSiteName = "Var99";
     <div class="mb-2.5 flex w-full items-center justify-center">
       <Image
         src={mainBanner!}
-        alt="LOTTO432 banner"
+        alt="SUMOHENG banner"
         loading="eager"
         fetchpriority="high"
         widths={[412, 768, 1900]}

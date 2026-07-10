@@ -12,85 +12,79 @@ const bankPool = [
 ];
 ---
 
-<div class="mx-auto w-full max-w-[1300px] p-4 font-sans">
-  <div class="relative rounded-3xl border border-purple-700/40 bg-[#120322]/70 px-4 py-8 shadow-[0_15px_40px_rgba(59,7,100,0.5)] backdrop-blur-xl md:p-10">
-    <div class="absolute inset-x-0 top-0 mx-auto h-[1px] w-3/4 bg-gradient-to-r from-transparent via-purple-400/50 to-transparent"></div>
-    <div class="absolute inset-x-0 bottom-0 mx-auto h-[1px] w-1/2 bg-gradient-to-r from-transparent via-purple-600/30 to-transparent"></div>
-
-    <div class="relative z-10 mb-8 flex items-center justify-between border-b border-purple-800/50 pb-4">
+<div class="relative z-10 mx-auto mb-10 w-full max-w-[1400px] px-4 font-sans">
+  <div class="relative rounded-3xl border border-red-600/30 bg-[#0a0a0a]/80 px-4 py-8 shadow-[0_10px_40px_rgba(0,0,0,0.8)] backdrop-blur-xl md:p-8">
+    <div class="relative z-10 mb-6 flex items-center justify-between border-b border-red-600/30 pb-4">
       <div class="flex items-center gap-3">
-        <span class="text-2xl drop-shadow-[0_0_8px_rgba(234,179,8,0.8)]">💸</span>
-        <h2 class="bg-gradient-to-r from-yellow-300 to-yellow-600 bg-clip-text text-xl font-black tracking-widest text-transparent drop-shadow-sm">รายการถอนเงินล่าสุด</h2>
+        <span class="flex h-10 w-10 items-center justify-center rounded-full border border-red-500/30 bg-red-600/20 text-2xl text-red-500">🏆</span>
+        <h2 class="text-xl font-black tracking-widest text-white drop-shadow-sm">รายการถอนเงินล่าสุด <span class="text-red-500">SUMO</span>HENG</h2>
       </div>
-      <span class="animate-pulse rounded-full border border-yellow-500/50 bg-yellow-500/10 px-3 py-1 text-[10px] font-bold tracking-widest text-yellow-400">ONLINE</span>
+      <span class="animate-pulse rounded-full border border-green-500/50 bg-green-900/40 px-3 py-1 text-[10px] font-bold tracking-widest text-green-400 shadow-[0_0_10px_rgba(74,222,128,0.2)]">
+        LIVE NOW
+      </span>
     </div>
 
-    <div id="feed-premium-hud" class="relative z-10 flex flex-col gap-3"></div>
+    <div id="feed-sumo-hud" class="relative z-10 flex h-[380px] flex-col gap-3 overflow-hidden"></div>
   </div>
 </div>
 
 <script define:vars={{ bankPool }}>
-  const feed = document.getElementById("feed-premium-hud");
+  const feed = document.getElementById("feed-sumo-hud");
   const getRandomStr = (len, chars) =>
     Array.from({ length: len })
       .map(() => chars.charAt(Math.floor(Math.random() * chars.length)))
       .join("");
-  const getAmount = () => (Math.floor(Math.random() * (95000 - 15000 + 1)) + 15000).toLocaleString("en-US");
+  const getAmount = () => (Math.floor(Math.random() * (250000 - 1000 + 1)) + 1000).toLocaleString("en-US");
 
   const createHTML = () => {
     const bank = bankPool[Math.floor(Math.random() * bankPool.length)];
-    const user = `${getRandomStr(2, "abcdefghijklmnopqrstuvwxyz")}***${getRandomStr(4, "0123456789")}`;
-    const isPending = Math.random() > 0.6;
+    const user = `0${getRandomStr(1, "89")}***${getRandomStr(4, "0123456789")}`;
+    const isBigWin = Math.random() > 0.8;
 
-    const statusClass = isPending ? "text-purple-300/60 animate-pulse" : "text-green-400 drop-shadow-[0_0_5px_rgba(74,222,128,0.5)]";
-    const statusText = isPending ? "กำลังตรวจสอบ..." : "โอนเงินสำเร็จ";
+    const statusClass = isBigWin ? "text-yellow-400 animate-pulse font-black" : "text-green-400 font-bold";
+    const statusText = isBigWin ? "SUPER MEGA WIN!" : "ถอนเงินสำเร็จ";
+    const boxBorder = isBigWin ? "border-yellow-500/50 shadow-[0_0_15px_rgba(250,204,21,0.2)]" : "border-red-600/20";
 
     return `
-      <div class="winner-row origin-bottom transform translate-y-4 opacity-0 transition-all duration-700 ease-out">
-        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 rounded-2xl border border-purple-700/30 bg-gradient-to-r from-[#260b42]/80 to-[#120322]/80 p-4 shadow-lg backdrop-blur-md transition-all duration-300 hover:border-purple-500/60 hover:bg-[#260b42] hover:shadow-[0_5px_20px_rgba(147,51,234,0.2)]">
-          
+      <div class="winner-row origin-bottom transform translate-y-6 opacity-0 transition-all duration-500 ease-out">
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 rounded-xl border ${boxBorder} bg-[#171717]/80 p-4 shadow-sm backdrop-blur-sm transition-all duration-300 hover:border-red-500 hover:bg-[#262626]">
           <div class="flex items-center gap-4">
             <div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-white/10 ${bank.color} shadow-inner">
               <img src="${bank.icon}" alt="bank" class="h-6 w-6 object-contain grayscale" />
             </div>
             <div class="flex flex-col">
-              <span class="text-[10px] font-medium tracking-widest text-purple-300/70">USER ID</span>
+              <span class="text-[10px] font-medium tracking-widest text-gray-400">ยูสเซอร์เนม</span>
               <span class="font-mono text-sm font-bold text-white">${user}</span>
             </div>
           </div>
-
-          <div class="flex items-center justify-between sm:justify-end gap-6 border-t border-purple-800/50 pt-3 sm:border-none sm:pt-0">
-            <div class="text-[11px] font-medium tracking-wider ${statusClass}">${statusText}</div>
-            <div class="font-sans text-xl font-black text-yellow-400 drop-shadow-[0_2px_10px_rgba(234,179,8,0.4)]">
+          <div class="flex items-center justify-between sm:justify-end gap-6 border-t border-red-900/30 pt-3 sm:border-none sm:pt-0">
+            <div class="text-[11px] tracking-wider ${statusClass}">${statusText}</div>
+            <div class="font-sans text-xl font-black text-transparent bg-clip-text bg-gradient-to-r from-yellow-300 to-yellow-500 drop-shadow-[0_2px_5px_rgba(250,204,21,0.3)]">
               ${getAmount()} <span class="text-xs font-bold text-yellow-600">THB</span>
             </div>
           </div>
-
         </div>
       </div>
     `;
   };
 
   const trigger = () => {
+    if (!feed) return;
     const tempDiv = document.createElement("div");
     tempDiv.innerHTML = createHTML();
     const newEl = tempDiv.firstElementChild;
     feed.prepend(newEl);
-
-    // Smooth entrance animation
     setTimeout(() => {
-      newEl.classList.remove("translate-y-4", "opacity-0");
+      newEl.classList.remove("translate-y-6", "opacity-0");
       newEl.classList.add("translate-y-0", "opacity-100");
     }, 50);
-
     if (feed.children.length > 5) {
       const last = feed.lastElementChild;
       last.classList.remove("translate-y-0", "opacity-100");
-      last.classList.add("-translate-y-4", "opacity-0");
-      setTimeout(() => last.remove(), 700);
+      last.classList.add("translate-y-6", "opacity-0");
+      setTimeout(() => last.remove(), 500);
     }
   };
-
   for (let i = 0; i < 5; i++) {
     trigger();
   }

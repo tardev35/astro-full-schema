@@ -19,6 +19,6 @@ export default defineConfig({
     '/line': 'https://tinyurl.com/linepigpg'
   },
 
-  site: 'https://var99-promotion.com',
+  site: 'https://sumoheng-brand.com',
   integrations: [sitemap()]
 });

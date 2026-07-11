@@ -13,56 +13,94 @@ const bankPool = [
 ---
 
 <div class="relative z-10 mx-auto mb-10 w-full max-w-[1400px] px-4 font-sans">
-  <div class="relative rounded-3xl border border-red-600/30 bg-[#0a0a0a]/80 px-4 py-8 shadow-[0_10px_40px_rgba(0,0,0,0.8)] backdrop-blur-xl md:p-8">
-    <div class="relative z-10 mb-6 flex items-center justify-between border-b border-red-600/30 pb-4">
+  <div class="relative overflow-hidden rounded-3xl border border-red-600/30 bg-[#0a0a0a]/80 shadow-[0_10px_40px_rgba(0,0,0,0.8)] backdrop-blur-xl">
+
+    <!-- Header -->
+    <div class="relative z-10 flex flex-col gap-4 border-b border-red-600/30 px-5 py-5 sm:flex-row sm:items-center sm:justify-between md:px-8">
       <div class="flex items-center gap-3">
         <span class="flex h-10 w-10 items-center justify-center rounded-full border border-red-500/30 bg-red-600/20 text-2xl text-red-500">🏆</span>
-        <h2 class="text-xl font-black tracking-widest text-white drop-shadow-sm">รายการถอนเงินล่าสุด <span class="text-red-500">SUMO</span>HENG</h2>
+        <div class="flex flex-col">
+          <h2 class="text-lg font-black tracking-widest text-white drop-shadow-sm sm:text-xl">
+            รายการถอนเงินล่าสุด <span class="text-red-500">SUMO</span>HENG
+          </h2>
+          <span class="text-[11px] font-medium tracking-wide text-gray-500">อัปเดตอัตโนมัติแบบเรียลไทม์ จากระบบฝากถอนออโต้</span>
+        </div>
       </div>
-      <span class="animate-pulse rounded-full border border-green-500/50 bg-green-900/40 px-3 py-1 text-[10px] font-bold tracking-widest text-green-400 shadow-[0_0_10px_rgba(74,222,128,0.2)]">
-        LIVE NOW
-      </span>
+      <div class="flex items-center gap-2 self-start rounded-full border border-green-500/40 bg-green-900/20 px-3 py-1.5 sm:self-auto">
+        <span class="h-1.5 w-1.5 animate-pulse rounded-full bg-green-400 shadow-[0_0_8px_rgba(74,222,128,0.8)]"></span>
+        <span class="text-[10px] font-bold tracking-widest text-green-400 uppercase">Live</span>
+      </div>
     </div>
 
-    <div id="feed-sumo-hud" class="relative z-10 flex h-[380px] flex-col gap-3 overflow-hidden"></div>
+    <!-- Stat strip -->
+    <div class="relative z-10 grid grid-cols-2 gap-px overflow-hidden border-b border-red-900/30 bg-red-950/10 sm:grid-cols-3">
+      <div class="flex flex-col items-center gap-1 bg-[#0a0a0a] px-4 py-4">
+        <span class="text-[11px] font-medium tracking-wide text-gray-500">ยอดถอนรวมวันนี้</span>
+        <span id="hud-total" class="font-mono text-lg font-black text-transparent bg-clip-text bg-gradient-to-r from-yellow-300 to-yellow-500 sm:text-xl">฿0</span>
+      </div>
+      <div class="flex flex-col items-center gap-1 bg-[#0a0a0a] px-4 py-4">
+        <span class="text-[11px] font-medium tracking-wide text-gray-500">รายการสำเร็จวันนี้</span>
+        <span id="hud-count" class="font-mono text-lg font-black text-white sm:text-xl">0</span>
+      </div>
+      <div class="col-span-2 flex flex-col items-center gap-1 bg-[#0a0a0a] px-4 py-4 sm:col-span-1">
+        <span class="text-[11px] font-medium tracking-wide text-gray-500">เวลาดำเนินการเฉลี่ย</span>
+        <span class="font-mono text-lg font-black text-white sm:text-xl">~5 วินาที</span>
+      </div>
+    </div>
+
+    <!-- Column labels (desktop) -->
+    <div class="relative z-10 hidden grid-cols-[2fr_1.3fr_1fr_0.8fr] gap-4 px-8 pt-4 text-[11px] font-bold tracking-widest text-gray-500 uppercase sm:grid">
+      <span>ผู้ใช้งาน</span>
+      <span>สถานะ</span>
+      <span class="text-right">จำนวนเงิน</span>
+      <span class="text-right">เวลา</span>
+    </div>
+
+    <div id="feed-sumo-hud" class="relative z-10 flex h-[380px] flex-col gap-2 overflow-hidden px-4 py-4 md:px-8"></div>
   </div>
 </div>
 
 <script define:vars={{ bankPool }}>
   const feed = document.getElementById("feed-sumo-hud");
+  const hudTotal = document.getElementById("hud-total");
+  const hudCount = document.getElementById("hud-count");
+
   const getRandomStr = (len, chars) =>
     Array.from({ length: len })
       .map(() => chars.charAt(Math.floor(Math.random() * chars.length)))
       .join("");
-  const getAmount = () => (Math.floor(Math.random() * (250000 - 1000 + 1)) + 1000).toLocaleString("en-US");
+  const getAmount = () => Math.floor(Math.random() * (250000 - 1000 + 1)) + 1000;
 
-  const createHTML = () => {
+  let runningTotal = 0;
+  let runningCount = 0;
+
+  const createRow = () => {
     const bank = bankPool[Math.floor(Math.random() * bankPool.length)];
     const user = `0${getRandomStr(1, "89")}***${getRandomStr(4, "0123456789")}`;
     const isBigWin = Math.random() > 0.8;
+    const amount = getAmount();
 
-    const statusClass = isBigWin ? "text-yellow-400 animate-pulse font-black" : "text-green-400 font-bold";
-    const statusText = isBigWin ? "SUPER MEGA WIN!" : "ถอนเงินสำเร็จ";
-    const boxBorder = isBigWin ? "border-yellow-500/50 shadow-[0_0_15px_rgba(250,204,21,0.2)]" : "border-red-600/20";
+    runningTotal += amount;
+    runningCount += 1;
+
+    const statusClass = isBigWin ? "text-yellow-400 font-black" : "text-green-400 font-bold";
+    const statusText = isBigWin ? "🔥 SUPER MEGA WIN" : "✓ ถอนสำเร็จ";
+    const rowBorder = isBigWin ? "border-yellow-500/40 shadow-[0_0_15px_rgba(250,204,21,0.15)]" : "border-red-900/20";
 
     return `
-      <div class="winner-row origin-bottom transform translate-y-6 opacity-0 transition-all duration-500 ease-out">
-        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 rounded-xl border ${boxBorder} bg-[#171717]/80 p-4 shadow-sm backdrop-blur-sm transition-all duration-300 hover:border-red-500 hover:bg-[#262626]">
-          <div class="flex items-center gap-4">
-            <div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-white/10 ${bank.color} shadow-inner">
-              <img src="${bank.icon}" alt="bank" class="h-6 w-6 object-contain grayscale" />
+      <div class="winner-row origin-top -translate-y-3 transform opacity-0 transition-all duration-500 ease-out">
+        <div class="grid grid-cols-[auto_1fr] items-center gap-4 rounded-xl border ${rowBorder} bg-[#141414]/80 p-3.5 shadow-sm transition-colors duration-300 hover:border-red-500/60 hover:bg-[#1c1c1c] sm:grid-cols-[2fr_1.3fr_1fr_0.8fr]">
+          <div class="col-span-2 flex items-center gap-3 sm:col-span-1">
+            <div class="flex h-9 w-9 shrink-0 items-center justify-center rounded-full border border-white/10 ${bank.color} shadow-inner">
+              <img src="${bank.icon}" alt="${bank.name}" class="h-5 w-5 object-contain grayscale" />
             </div>
-            <div class="flex flex-col">
-              <span class="text-[10px] font-medium tracking-widest text-gray-400">ยูสเซอร์เนม</span>
-              <span class="font-mono text-sm font-bold text-white">${user}</span>
-            </div>
+            <span class="font-mono text-sm font-bold text-white">${user}</span>
           </div>
-          <div class="flex items-center justify-between sm:justify-end gap-6 border-t border-red-900/30 pt-3 sm:border-none sm:pt-0">
-            <div class="text-[11px] tracking-wider ${statusClass}">${statusText}</div>
-            <div class="font-sans text-xl font-black text-transparent bg-clip-text bg-gradient-to-r from-yellow-300 to-yellow-500 drop-shadow-[0_2px_5px_rgba(250,204,21,0.3)]">
-              ${getAmount()} <span class="text-xs font-bold text-yellow-600">THB</span>
-            </div>
+          <div class="text-[11px] tracking-wide ${statusClass} sm:text-xs">${statusText}</div>
+          <div class="text-right font-mono text-base font-black text-transparent bg-clip-text bg-gradient-to-r from-yellow-300 to-yellow-500 sm:text-lg">
+            ฿${amount.toLocaleString("en-US")}
           </div>
+          <div class="text-right text-[11px] font-medium text-gray-500 sm:text-xs">เมื่อสักครู่</div>
         </div>
       </div>
     `;
@@ -71,23 +109,26 @@ const bankPool = [
   const trigger = () => {
     if (!feed) return;
     const tempDiv = document.createElement("div");
-    tempDiv.innerHTML = createHTML();
+    tempDiv.innerHTML = createRow();
     const newEl = tempDiv.firstElementChild;
     feed.prepend(newEl);
-    setTimeout(() => {
-      newEl.classList.remove("translate-y-6", "opacity-0");
+
+    if (hudTotal) hudTotal.textContent = `฿${runningTotal.toLocaleString("en-US")}`;
+    if (hudCount) hudCount.textContent = runningCount.toLocaleString("en-US");
+
+    requestAnimationFrame(() => {
+      newEl.classList.remove("-translate-y-3", "opacity-0");
       newEl.classList.add("translate-y-0", "opacity-100");
-    }, 50);
+    });
+
     if (feed.children.length > 5) {
       const last = feed.lastElementChild;
-      last.classList.remove("translate-y-0", "opacity-100");
-      last.classList.add("translate-y-6", "opacity-0");
-      setTimeout(() => last.remove(), 500);
+      last.classList.add("opacity-0");
+      setTimeout(() => last.remove(), 400);
     }
   };
-  for (let i = 0; i < 5; i++) {
-    trigger();
-  }
+
+  for (let i = 0; i < 5; i++) trigger();
   setInterval(trigger, 3500);
 </script>
 <style>
@@ -95,6 +136,6 @@ const bankPool = [
     font-family: "Kanit", sans-serif;
   }
   .font-mono {
-    ffont-family: "Kanit", sans-serif;
+    font-family: "Kanit", sans-serif;
   }
 </style>

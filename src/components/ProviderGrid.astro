@@ -1,51 +1,106 @@
 ---
 const providers = [
-  { name: "PG SLOT", desc: "สล็อตภาพสวย แตกง่าย", tag: "HOT 🔥", color: "from-red-600 to-red-900" },
-  { name: "Pragmatic Play", desc: "ซื้อฟรีสปินสุดคุ้ม", tag: "HIT ⭐", color: "from-orange-600 to-red-800" },
-  { name: "Joker Gaming", desc: "สล็อตโรม่าในตำนาน", tag: "POPULAR", color: "from-red-700 to-black" },
-  { name: "JILI Games", desc: "เกมยิงปลาอันดับ 1", tag: "NEW 🌟", color: "from-yellow-600 to-red-800" },
-  { name: "Habanero", desc: "แจ็คพอตแตกบ่อย", tag: "RECOMMEND", color: "from-red-800 to-gray-900" },
-  { name: "EVO Play", desc: "สล็อต 3D ล้ำสมัย", tag: "VIP 💎", color: "from-red-600 to-red-800" },
+  { name: "PG SLOT", desc: "สล็อตภาพสวย แตกง่าย", tag: "HOT", initial: "PG", color: "from-red-600 to-red-900", category: "hot", online: 3241 },
+  { name: "Pragmatic Play", desc: "ซื้อฟรีสปินสุดคุ้ม", tag: "HOT", initial: "PP", color: "from-orange-600 to-red-800", category: "hot", online: 2876 },
+  { name: "Joker Gaming", desc: "สล็อตโรม่าในตำนาน", tag: "แนะนำ", initial: "JK", color: "from-red-700 to-black", category: "recommend", online: 1954 },
+  { name: "JILI Games", desc: "เกมยิงปลาอันดับ 1", tag: "ใหม่", initial: "JI", color: "from-yellow-600 to-red-800", category: "new", online: 1327 },
+  { name: "Habanero", desc: "แจ็คพอตแตกบ่อย", tag: "แนะนำ", initial: "HB", color: "from-red-800 to-gray-900", category: "recommend", online: 2108 },
+  { name: "EVO Play", desc: "สล็อต 3D ล้ำสมัย", tag: "แนะนำ", initial: "EV", color: "from-red-600 to-red-800", category: "recommend", online: 1689 },
+];
+
+const filters = [
+  { key: "all", label: "ทั้งหมด" },
+  { key: "hot", label: "มาแรง 🔥" },
+  { key: "new", label: "ใหม่ 🌟" },
+  { key: "recommend", label: "แนะนำ" },
 ];
 ---
 
 <div class="mx-auto mb-10 w-full max-w-[1400px] px-4 font-sans relative z-10">
-  <div class="mb-8 flex w-full flex-col items-center justify-center gap-2 text-center">
+  <div class="mb-6 flex w-full flex-col items-center justify-center gap-2 text-center">
     <h2 class="text-3xl font-black uppercase tracking-widest text-transparent bg-clip-text bg-gradient-to-r from-red-800 via-gray-800 to-gray-400 drop-shadow-[0_2px_10px_rgba(255,255,255,0.2)]">
       ค่ายเกมชั้นนำ <span class="text-red-500">SUMOHENG</span>
     </h2>
     <div class="h-[4px] w-24 rounded-full bg-gradient-to-r from-transparent via-red-600 to-transparent mt-2"></div>
   </div>
 
-  <div class="grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-6 lg:gap-5">
+  <!-- แท็บกรองหมวดหมู่ -->
+  <div class="mb-6 flex flex-wrap items-center justify-center gap-2">
+    {
+      filters.map((f, i) => (
+        <button
+          type="button"
+          data-filter-btn={f.key}
+          class={`rounded-full border px-4 py-1.5 text-xs font-bold tracking-wide transition-colors duration-200 ${
+            i === 0 ? "border-red-500 bg-red-600 text-white" : "border-white/10 bg-white/5 text-gray-400 hover:border-red-500/40 hover:text-white"
+          }`}>
+          {f.label}
+        </button>
+      ))
+    }
+  </div>
+
+  <div id="provider-grid" class="grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-6 lg:gap-5">
     {
       providers.map((game) => (
-        <div class={`group relative flex cursor-pointer flex-col items-center justify-center overflow-hidden rounded-2xl border border-red-500/20 bg-gradient-to-b ${game.color} p-5 shadow-lg backdrop-blur-md transition-all duration-300 hover:-translate-y-2 hover:border-red-400 hover:shadow-[0_10px_30px_rgba(220,38,38,0.4)]`}>
-          
-          <!-- แสงแฟลร์ตอนโฮเวอร์ -->
-          <div class="absolute inset-0 bg-white/5 opacity-0 transition-opacity duration-300 group-hover:opacity-100"></div>
-          
-          <div class="absolute -right-4 -top-4 flex h-12 w-12 items-end justify-center rounded-bl-full bg-gradient-to-br from-yellow-400 to-yellow-600 text-[9px] font-black text-black shadow-sm transition-transform duration-300 group-hover:scale-110 pl-2 pb-2">
-            {game.tag.split(' ')[0]}
+        <div
+          data-category={game.category}
+          class="group relative flex flex-col overflow-hidden rounded-2xl border border-red-600/20 bg-[#0a0a0a]/80 p-5 shadow-lg backdrop-blur-md transition-all duration-300 hover:-translate-y-1.5 hover:border-red-500/50 hover:shadow-[0_10px_30px_rgba(220,38,38,0.25)]">
+
+          <div class="mb-3 flex items-start justify-between">
+            <div class={`flex h-11 w-11 items-center justify-center rounded-xl border border-white/10 bg-gradient-to-br ${game.color} text-xs font-black text-white shadow-inner transition-transform duration-300 group-hover:scale-110`}>
+              {game.initial}
+            </div>
+            <span class="rounded-full border border-yellow-400/30 bg-yellow-400/10 px-2 py-0.5 text-[9px] font-black tracking-wide text-yellow-400">{game.tag}</span>
           </div>
-          
-          <div class="text-4xl mb-3 drop-shadow-[0_0_15px_rgba(255,255,255,0.3)] transition-transform duration-300 group-hover:scale-125 group-hover:rotate-3">🎰</div>
-          <h3 class="text-center text-sm font-black text-white transition-colors group-hover:text-yellow-400">{game.name}</h3>
-          <p class="mt-1 text-center text-[10px] text-gray-300 group-hover:text-white">{game.desc}</p>
-          
-          <div class="mt-4 w-full rounded-full bg-black/40 py-1.5 text-center text-[11px] font-bold text-red-400 shadow-inner border border-red-500/30 transition-colors duration-300 group-hover:bg-red-600 group-hover:text-white group-hover:border-red-400">
+
+          <h3 class="text-sm font-black text-white transition-colors group-hover:text-yellow-400">{game.name}</h3>
+          <p class="mt-1 text-[10px] leading-relaxed text-gray-400">{game.desc}</p>
+
+          <div class="mt-3 flex items-center gap-1.5 text-[10px] text-gray-500">
+            <span class="h-1.5 w-1.5 rounded-full bg-green-400 shadow-[0_0_6px_rgba(74,222,128,0.7)] animate-pulse"></span>
+            ผู้เล่นออนไลน์ {game.online.toLocaleString("en-US")}
+          </div>
+
+          <div class="mt-4 w-full rounded-lg border border-red-500/20 bg-red-950/40 py-2 text-center text-[11px] font-bold text-red-400 shadow-inner transition-colors duration-300 group-hover:border-red-400 group-hover:bg-gradient-to-r group-hover:from-red-600 group-hover:to-red-700 group-hover:text-white">
             เข้าเล่นเกม
           </div>
         </div>
       ))
     }
   </div>
+
+  <p id="provider-empty" class="mt-6 hidden text-center text-sm text-gray-500">ยังไม่มีค่ายเกมในหมวดนี้</p>
 </div>
+
+<script>
+  const buttons = document.querySelectorAll<HTMLButtonElement>("[data-filter-btn]");
+  const cards = document.querySelectorAll<HTMLElement>("#provider-grid [data-category]");
+  const emptyState = document.getElementById("provider-empty");
+
+  buttons.forEach((btn) => {
+    btn.addEventListener("click", () => {
+      buttons.forEach((b) => {
+        b.classList.remove("border-red-500", "bg-red-600", "text-white");
+        b.classList.add("border-white/10", "bg-white/5", "text-gray-400");
+      });
+      btn.classList.remove("border-white/10", "bg-white/5", "text-gray-400");
+      btn.classList.add("border-red-500", "bg-red-600", "text-white");
+
+      const filter = btn.dataset.filterBtn;
+      let visibleCount = 0;
+      cards.forEach((card) => {
+        const show = filter === "all" || card.dataset.category === filter;
+        card.style.display = show ? "" : "none";
+        if (show) visibleCount++;
+      });
+      if (emptyState) emptyState.classList.toggle("hidden", visibleCount > 0);
+    });
+  });
+</script>
+
 <style>
   .font-sans {
     font-family: "Kanit", sans-serif;
-  }
-  .font-mono {
-    font-family: monospace;
   }
 </style>

@@ -19,112 +19,127 @@ const logoUrl = homePage + "/logo.webp";
 const webPageSchema = {
   "@context": "https://schema.org",
   "@type": "WebPage",
-  name: "SUMOHENG เว็บหลัก ทางเข้า ซูโม่เฮง เกมสล็อตแท้ ฝากถอนออโต้",
-  description: "SUMOHENG เว็บหลัก ซูโม่เฮง บริการ เกมสล็อตแท้ ทุกค่าย ทางเข้า เดียว เชื่อมต่อทุกฟังก์ชัน ฝากถอนออโต้ ด้วยความแม่นยำ สมัครสมาชิก เพื่อติดตาม โปรโมชั่น",
+  name: "BABYSHARK88 สล็อตเว็บนอกตรงแท้จากต่างประเทศ แตกหนัก จ่ายจริง",
+  description: "BABYSHARK88 สล็อตเว็บนอกตรงแท้ต่างประเทศ แตกหนัก ใช้ค่า RTP ตามลิขสิทธิ์ ระบบฝากถอน รองรับวอเล็ทเต็มระบบ ไม่ใช้บัญชีม้า สมัครง่าย",
   url: currentPath,
 };
 const webSiteSchema = {
   "@context": "https://schema.org",
   "@type": "WebSite",
-  name: "SUMOHENG",
-  alternateName: ["SUMOHENG", "SUMOHENG สล็อตออนไลน์"],
-  url: "https://sumoheng-brand.com/",
+  name: "BABYSHARK88",
+  alternateName: ["BABYSHARK88", "BABYSHARK88 สล็อตเว็บนอก"],
+  url: "https://babyshark88-brand.com/",
 };
 const orgSchema = {
   "@context": "https://schema.org",
   "@type": "Organization",
-  name: "SUMOHENG",
+  name: "BABYSHARK88",
   logo: logoUrl,
   url: homePage,
 };
 const allSchemas = [webPageSchema, orgSchema, webSiteSchema];
 
 import { Picture } from "astro:assets";
-import image1 from "../assets/slide1.png";
+import image1 from "../assets/banner2.webp";
 import image2 from "../assets/banner1.webp";
 
 const jackpotProviders = [
-  { rank: "🥇", name: "PG Soft", rtp: 98.5 },
-  { rank: "🥈", name: "Joker Gaming", rtp: 97.2 },
-  { rank: "🥉", name: "Pragmatic Play", rtp: 96.8 },
-  { rank: "4", name: "JILI", rtp: 96.2 },
+  { rank: "🥇", name: "PG Soft", rtp: 98.8 },
+  { rank: "🥈", name: "Pragmatic Play", rtp: 98.5 },
+  { rank: "🥉", name: "Relax Gaming", rtp: 97.9 },
+  { rank: "4", name: "Red Tiger", rtp: 97.4 },
+  { rank: "5", name: "Hacksaw Gaming", rtp: 97.1 },
+];
+
+const faqs = [
+  {
+    q: "BABYSHARK88 ต่างจากเว็บสล็อตไทยทั่วไปอย่างไร?",
+    a: "BABYSHARK88 เป็นเว็บนอกแท้ที่นำระบบจากต่างประเทศเข้ามาให้บริการโดยตรง ค่า RTP คงเดิมตามลิขสิทธิ์ ไม่มีการปรับเรทกลางอากาศ ระบบสุ่ม RNG แท้จากผู้ให้บริการต่างประเทศ ไม่ผ่านระบบปรับแต้มแบบเว็บไทย",
+  },
+  { q: "ฝากถอนใช้เวลานานแค่ไหน?", a: "ระบบฝากถอนออโต้แท้ ฝากออโต้ 3-5 วินาที ถอนออโต้โอนเข้าบัญชีตรง ไม่มีแอดมินกด ไม่ต้องส่งสลิป ระบบตรวจจับยอดอัตโนมัติเหมือน Mobile Banking ต่างประเทศ" },
+  { q: "รองรับช่องทางการเงินอะไรบ้าง?", a: "รองรับ True Wallet, Mobile Banking ทุกธนาคาร และ QR Payment ฝาก-ถอนได้คล่องเท่าเว็บใหญ่ แต่เสถียรกว่าเพราะไม่มีการพักระบบหรือปิดรายการกลางคัน" },
+  { q: "สมัครสมาชิกยุ่งยากไหม?", a: "ขั้นตอนการสมัครถูกย่นให้เหลือน้อยที่สุด กดปุ่มสมัครสมาชิก กรอกข้อมูลเท่าที่ระบบร้องขอ ไม่ต้องส่งเอกสาร ไม่ต้องยืนยันตัวตนหลายขั้นตอน ไม่ต้องรอแอดมิน" },
+  {
+    q: "ปลอดภัยแค่ไหน มีบัญชีม้าหรือไม่?",
+    a: "BABYSHARK88 ใช้ระบบ Anti-Fraud ป้องกันธุรกรรมผิดปกติ เชื่อมตรง API ค่ายเกม ไม่มีบัญชีม้า ไม่มีโอนบัญชีส่วนบุคคล ไม่มีการลบหรือปรับยอดย้อนหลัง ทุกธุรกรรมตรวจสอบได้",
+  },
 ];
 ---
 
 <MainLayout
-  title="SUMOHENG เว็บหลัก ทางเข้า ซูโม่เฮง เกมสล็อตแท้ ฝากถอนออโต้"
-  description="SUMOHENG เว็บหลัก ซูโม่เฮง บริการ เกมสล็อตแท้ ทุกค่าย ทางเข้า เดียว เชื่อมต่อทุกฟังก์ชัน ฝากถอนออโต้ ด้วยความแม่นยำ สมัครสมาชิก เพื่อติดตาม โปรโมชั่น">
+  title="BABYSHARK88 สล็อตเว็บนอกตรงแท้จากต่างประเทศ แตกหนัก จ่ายจริง"
+  description="BABYSHARK88 สล็อตเว็บนอกตรงแท้ต่างประเทศ แตกหนัก ใช้ค่า RTP ตามลิขสิทธิ์ ระบบฝากถอน รองรับวอเล็ทเต็มระบบ ไม่ใช้บัญชีม้า สมัครง่าย">
   <script type="application/ld+json" set:html={JSON.stringify(allSchemas)} />
 
   <Announcement />
   <div class="mx-auto w-full max-w-5xl px-4 py-8 text-center">
-    <p class="text-4xl leading-tight font-black text-[#470000] drop-shadow-sm md:text-5xl">
-      SUMOHENG <br />
-      <span class="text-[#ffdb0e]">เว็บใหญ่ ใจปล้ำ</span>
+    <p class="bg-gradient-to-b from-cyan-200 to-cyan-500 bg-clip-text text-4xl leading-tight font-black text-transparent drop-shadow-sm md:text-5xl">
+      BABYSHARK88 <br />
+      <span class="text-[#ffdb0e]">แตกหนัก จ่ายจริง เว็บนอกตรงแท้</span>
     </p>
   </div>
-  <ContentBox title="SUMOHENG เว็บหลัก ทางเข้า ซูโม่เฮง เกมสล็อตแท้ ฝากถอนออโต้">
+  <ContentBox title="BABYSHARK88 สล็อตเว็บนอกตรงแท้จากต่างประเทศ แตกหนัก จ่ายจริง">
     <p class="leading-relaxed">
-      <strong class="text-amber-400">SUMOHENG</strong> คือเว็บหลักของซูโม่เฮงที่ใช้สำหรับการเข้าใช้งานและเข้าถึงข้อมูลเว็บไซต์อย่างเป็นทางการ ภายในเว็บไซต์เชื่อมต่อเกมสล็อตแท้จากหลายค่ายผ่านระบบเดียว พร้อมระบบฝากถอนออโต้ที่ช่วยจัดการธุรกรรมตามขั้นตอนของระบบ
-      เพื่อให้สมาชิกสามารถใช้งานทุกบริการได้จากบัญชีเดียว
+      <strong class="text-amber-400">BABYSHARK88</strong> เว็บสล็อตเว็บนอกแท้ที่นำระบบจากต่างประเทศเข้ามาเปิดให้บริการในประเทศไทยโดยตรง ระบบเดียวกับที่ยุโรปและอเมริกาใช้งาน ทั้งความเสถียร ความปลอดภัย และแนวทางการบริการแบบพรีเมียม
+      แบรนด์ BABYSHARK88 เรามีความตั้งใจเดียวคือ ให้ผู้เล่นไทยได้สัมผัสเว็บที่ โปร่งใส ตรวจสอบได้ ไม่ปรับเรท ไม่ล็อกยูส และจ่ายจริงตามระบบ
     </p>
 
     <div class="mt-8 flex flex-wrap justify-center gap-6">
       <a
         href="/login"
-        class="group relative flex items-center justify-center rounded-full border border-red-500/50 bg-[#450a0a]/80 px-10 py-3.5 font-black text-yellow-500 backdrop-blur-sm transition-all duration-300 hover:scale-105 hover:bg-red-900/60 hover:shadow-[0_0_15px_rgba(220,38,38,0.4)]">
+        class="group relative flex items-center justify-center rounded-full border border-cyan-500/50 bg-[#04222f]/80 px-10 py-3.5 font-black text-yellow-500 backdrop-blur-sm transition-all duration-300 hover:scale-105 hover:bg-cyan-900/60 hover:shadow-[0_0_15px_rgba(6,182,212,0.4)]">
         เข้าระบบเกม
       </a>
 
       <a
         href="/register"
-        class="group relative flex items-center justify-center rounded-full bg-gradient-to-r from-yellow-500 via-yellow-400 to-yellow-500 px-10 py-3.5 font-black text-[#450a0a] shadow-[0_5px_20px_rgba(251,191,36,0.4)] transition-all duration-300 hover:-translate-y-1 hover:scale-105 hover:shadow-[0_8px_25px_rgba(251,191,36,0.6)]">
+        class="group relative flex items-center justify-center rounded-full bg-gradient-to-r from-yellow-500 via-yellow-400 to-yellow-500 px-10 py-3.5 font-black text-[#042f3d] shadow-[0_5px_20px_rgba(251,191,36,0.4)] transition-all duration-300 hover:-translate-y-1 hover:scale-105 hover:shadow-[0_8px_25px_rgba(251,191,36,0.6)]">
         สมัครสมาชิก
       </a>
     </div>
   </ContentBox>
 
-  <ContentBoxTwo titleleft="ทางเข้า SUMOHENG" titleright="JACKPOT แตกพาร์ทเนอร์">
+  <ContentBoxTwo titleleft="เข้าสู่ระบบ BABYSHARK88" titleright="ค่ายเกมลิขสิทธิ์นอกแท้">
     <div slot="left" class="flex h-full flex-col gap-4">
-      <div class="relative overflow-hidden rounded-2xl border border-red-500/30 bg-gradient-to-br from-red-900/40 to-black/60 p-6 shadow-[0_0_20px_rgba(220,38,38,0.1)] backdrop-blur-md">
-        <div class="pointer-events-none absolute -top-10 -right-10 h-32 w-32 rounded-full bg-red-600/10 blur-[50px]"></div>
+      <div class="relative overflow-hidden rounded-2xl border border-cyan-500/30 bg-gradient-to-br from-cyan-900/40 to-black/60 p-6 shadow-[0_0_20px_rgba(6,182,212,0.1)] backdrop-blur-md">
+        <div class="pointer-events-none absolute -top-10 -right-10 h-32 w-32 rounded-full bg-cyan-600/10 blur-[50px]"></div>
 
         <div class="relative z-10 mb-5 flex items-center gap-3">
-          <span class="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl border border-yellow-400/40 bg-gradient-to-br from-red-700 to-black text-xl shadow-inner">🎮</span>
+          <span class="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl border border-yellow-400/40 bg-gradient-to-br from-cyan-700 to-black text-xl shadow-inner">🦈</span>
           <div class="flex flex-col">
             <h3 class="text-base font-black text-white">ยินดีต้อนรับกลับ</h3>
-            <span class="text-[11px] text-gray-400">บัญชีเดียว เชื่อมต่อทุกฟังก์ชันของ SUMOHENG</span>
+            <span class="text-[11px] text-gray-400">บัญชีเดียว เชื่อมต่อทุกฟังก์ชันของ BABYSHARK88</span>
           </div>
         </div>
 
         <div class="relative z-10 flex flex-col gap-3.5">
           <div class="relative">
-            <span class="absolute top-3.5 left-4 text-red-500">👤</span>
+            <span class="absolute top-3.5 left-4 text-cyan-400">👤</span>
             <input
               type="text"
               placeholder="ยูสเซอร์เนม / เบอร์โทรศัพท์"
-              class="w-full rounded-xl border border-red-500/50 bg-black/60 py-3 pr-4 pl-12 text-white transition-all outline-none focus:border-yellow-400 focus:ring-1 focus:ring-yellow-400/50"
+              class="w-full rounded-xl border border-cyan-500/50 bg-black/60 py-3 pr-4 pl-12 text-white transition-all outline-none focus:border-yellow-400 focus:ring-1 focus:ring-yellow-400/50"
             />
           </div>
           <div class="relative">
-            <span class="absolute top-3.5 left-4 text-red-500">🔑</span>
+            <span class="absolute top-3.5 left-4 text-cyan-400">🔑</span>
             <input
               type="password"
               placeholder="รหัสผ่าน"
-              class="w-full rounded-xl border border-red-500/50 bg-black/60 py-3 pr-4 pl-12 text-white transition-all outline-none focus:border-yellow-400 focus:ring-1 focus:ring-yellow-400/50"
+              class="w-full rounded-xl border border-cyan-500/50 bg-black/60 py-3 pr-4 pl-12 text-white transition-all outline-none focus:border-yellow-400 focus:ring-1 focus:ring-yellow-400/50"
             />
           </div>
 
           <div class="flex items-center justify-between px-1 text-xs">
             <label class="flex items-center gap-2 text-gray-400">
-              <input type="checkbox" class="h-3.5 w-3.5 rounded border-red-500/50 bg-black/60 accent-red-600" />
+              <input type="checkbox" class="h-3.5 w-3.5 rounded border-cyan-500/50 bg-black/60 accent-cyan-500" />
               จดจำฉันไว้
             </label>
             <a href="#" class="text-gray-400 transition-colors hover:text-white">ลืมรหัสผ่าน?</a>
           </div>
 
           <button
-            class="mt-1 w-full rounded-xl border border-red-400/50 bg-gradient-to-r from-red-600 to-red-700 p-3.5 font-black text-white shadow-[0_5px_15px_rgba(220,38,38,0.5)] transition-all hover:scale-[1.02] hover:shadow-[0_8px_25px_rgba(220,38,38,0.7)]">
+            class="mt-1 w-full rounded-xl border border-cyan-400/50 bg-gradient-to-r from-cyan-600 to-cyan-700 p-3.5 font-black text-white shadow-[0_5px_15px_rgba(6,182,212,0.5)] transition-all hover:scale-[1.02] hover:shadow-[0_8px_25px_rgba(6,182,212,0.7)]">
             เข้าสู่ระบบ
           </button>
 
@@ -143,7 +158,7 @@ const jackpotProviders = [
           <div class="mt-1 flex items-center justify-between px-1">
             <div class="flex gap-2">
               <span class="rounded-full border border-green-500/30 bg-green-900/20 px-2.5 py-1 text-[10px] font-bold text-green-400">🔒 SSL Secure</span>
-              <span class="rounded-full border border-yellow-500/30 bg-yellow-900/20 px-2.5 py-1 text-[10px] font-bold text-yellow-400">⚡ Super API</span>
+              <span class="rounded-full border border-yellow-500/30 bg-yellow-900/20 px-2.5 py-1 text-[10px] font-bold text-yellow-400">⚡ เว็บนอกแท้</span>
             </div>
             <a href="/register" class="animate-pulse text-xs font-bold text-yellow-400 transition-colors hover:text-yellow-300">สมัครสมาชิกใหม่</a>
           </div>
@@ -152,12 +167,12 @@ const jackpotProviders = [
     </div>
 
     <div slot="right" class="h-full">
-      <div class="flex h-full flex-col rounded-2xl border border-red-500/30 bg-gradient-to-br from-red-900/40 to-black/60 p-5 backdrop-blur-md">
+      <div class="flex h-full flex-col rounded-2xl border border-cyan-500/30 bg-gradient-to-br from-cyan-900/40 to-black/60 p-5 backdrop-blur-md">
         <div class="mb-5 flex items-center justify-between">
           <div>
-            <span class="text-xs font-bold tracking-wide text-gray-400">แจ็คพอตรวม (THB)</span>
+            <span class="text-xs font-bold tracking-wide text-gray-400">RTP ตามลิขสิทธิ์ (%)</span>
             <div class="bg-gradient-to-r from-yellow-300 via-yellow-400 to-yellow-500 bg-clip-text text-3xl font-black text-transparent drop-shadow-[0_2px_10px_rgba(250,204,21,0.4)] sm:text-4xl">
-              8,459,230.50
+              คงเดิม ไม่ปรับเรท
             </div>
           </div>
           <span class="flex items-center gap-1.5 self-start rounded-full border border-green-500/40 bg-green-900/20 px-2.5 py-1">
@@ -174,7 +189,7 @@ const jackpotProviders = [
         <div class="flex flex-1 flex-col gap-2.5">
           {
             jackpotProviders.map((p) => (
-              <div class="rounded-xl border border-white/5 bg-white/5 px-3.5 py-2.5 transition-colors hover:border-red-500/40 hover:bg-white/10">
+              <div class="rounded-xl border border-white/5 bg-white/5 px-3.5 py-2.5 transition-colors hover:border-cyan-400/40 hover:bg-white/10">
                 <div class="flex items-center justify-between text-sm">
                   <span class="flex items-center gap-2 font-bold text-white">
                     <span class="w-5 text-center">{p.rank}</span> {p.name}
@@ -189,27 +204,28 @@ const jackpotProviders = [
           }
         </div>
 
-        <div class="mt-4 text-center text-[10px] tracking-wide text-gray-500">อัปเดตล่าสุด: เมื่อสักครู่</div>
+        <div class="mt-4 text-center text-[10px] tracking-wide text-gray-500">ทุกค่ายเชื่อมตรงเซิร์ฟเวอร์แม่ ไม่ผ่านระบบปรับแต้ม</div>
       </div>
     </div>
   </ContentBoxTwo>
 
   <LatestWinners />
 
-  <ContentBoxThreeColums titleleft="รวมครบจบในที่เดียว" titlecenter="RTP สูง แตกง่าย" titleright="ฝาก-ถอน ระบบออโต้">
-    <div slot="left">สล็อตทุกค่าย คาสิโน กีฬา หวย มีครบจบที่ SUMOHENG เว็บตรงไม่ผ่านเอเย่นต์ มั่นคง ปลอดภัย มาตรฐานระดับสากล</div>
-    <div slot="center">เกมสล็อตคุณภาพ คัดสรรมาอย่างดี อัตราการชนะ (RTP) สูง โบนัสจัดเต็ม โปรแรงแจกหนักทุกวัน แจ็คพอตแตกง่ายสุดๆ</div>
-    <div slot="right">ทำรายการรวดเร็วทันใจด้วยระบบออโต้ 100% รองรับทุกธนาคารและทรูมันนี่วอเลท เงินเข้าไวภายใน 5 วินาที</div>
+  <ContentBoxThreeColums titleleft="RTP คงเดิม ไม่ปรับลด" titlecenter="RNG แท้ ไม่ผ่านแอดมิน" titleright="จ่ายตรง ไม่ใช้บัญชีม้า">
+    <div slot="left">ค่า RTP คงเดิม ไม่ปรับลดเรทกลางอากาศ เพราะเราเป็นเว็บนอกแท้ที่ต้องคงค่า RTP จริงตามสัญญาของผู้ให้บริการค่ายเกมแต่ละเจ้า</div>
+    <div slot="center">ระบบสุ่ม RNG แท้จากผู้ให้บริการต่างประเทศ เซิร์ฟเวอร์ไม่อืด ไม่ปิดปรับแต่งบ่อยๆ การฝากถอนเป็นออโต้แท้ ไม่ผ่านทีมแอดมิน</div>
+    <div slot="right">การจ่ายเงินตรง ไม่ใช้บัญชีส่วนตัวหรือบัญชีม้า นอกจริง ไม่ใช่เว็บที่แต่งหน้าเว็บไซต์ให้ดูเหมือนเว็บนอก</div>
   </ContentBoxThreeColums>
   <ProviderGrid />
   <ContentBox>
-    <h2 class="mb-4 text-3xl font-black tracking-[0.2em] text-amber-400 uppercase drop-shadow-[0_0_10px_rgba(0,0,0,0.05)]">เกี่ยวกับ SUMOHENG เว็บหลัก ซูโม่เฮง ข้อมูลเว็บไซต์อย่างเป็นทางการ</h2>
+    <h2 class="mb-4 text-3xl font-black tracking-[0.2em] text-amber-400 uppercase drop-shadow-[0_0_10px_rgba(0,0,0,0.05)]">แตกหนัก เกินมาตรฐานเว็บไทย เพราะใช้ค่า RTP เดิมตามลิขสิทธิ์</h2>
     <p class="leading-relaxed">
-      <strong class="text-yellow-500">SUMOHENG</strong> เป็นเว็บหลักของซูโม่เฮงที่รวบรวมข้อมูลและระบบสำคัญของเว็บไซต์ไว้ในที่เดียว โดยมีเกมสล็อตเป็นหมวดหลัก พร้อมเกมบาคาร่า หวย กีฬา และยิงปลา ผ่านระบบ Super
-      API ที่เชื่อมต่อผู้ให้บริการหลายค่าย สมาชิกสามารถติดตามข่าวสาร ประกาศ ทางเข้าหลัก และสถานะการอัปเดตของเว็บไซต์ รวมถึงใช้งานระบบ Wallet และฝากถอนออโต้ได้ผ่านเว็บไซต์อย่างเป็นทางการ เพื่อให้ทุกส่วนของการใช้งานเชื่อมโยงกันจากเว็บแม่ศูนย์กลางเดียวกัน
+      <strong class="text-yellow-500">BABYSHARK88</strong> เว็บที่มีเกมสล็อตต่างประเทศที่แตกหนักเกินมาตรฐานไทย เพราะเราเป็นเว็บนอกแท้ต้องคงค่า RTP จริง ตามสัญญาของผู้ให้บริการค่ายเกมแต่ละเจ้า และไม่สามารถลดเรทได้ตามใจเว็บเหมือนบางตลาดในไทย
+      เราคัดค่ายเกมระดับสากล เช่น PG Soft ลิขสิทธิ์นอกแท้, Pragmatic Play, Relax Gaming, Red Tiger, Hacksaw Gaming เป็นต้น ทุกเกมทำงานจากเซิร์ฟเวอร์แม่ ไม่ผ่านระบบปรับแต้มของเว็บไทย ทำให้เข้าฟีเจอร์ง่ายกว่า
+      โบนัสแตกหนักกว่า เบทต่ำก็มีลุ้นใหญ่ เล่นลื่นแม้เวลาไพรม์ไทม์
     </p>
   </ContentBox>
-  <ContentBoxSevenThree titleleft="" titleright="SUMOHENG บริการ เกมสล็อตแท้ Super API ที่สามารถเล่นผ่านเว็บหลัก">
+  <ContentBoxSevenThree titleleft="" titleright="ระบบฝากถอน BABYSHARK88 แบบเว็บยุโรปเร็วมากๆ">
     <div slot="left" class="flex h-full flex-col justify-center">
       <Picture
         src={image1}
@@ -221,14 +237,14 @@ const jackpotProviders = [
         formats={["avif", "webp"]}
         fallbackFormat="webp"
         quality={80}
-        alt="sumoheng VIP Service"
-        class="mx-auto h-auto w-full rounded-2xl border-2 border-yellow-500/30 shadow-[0_10px_30px_rgba(220,38,38,0.3)]"
+        alt="BABYSHARK88 ระบบฝากถอนออโต้แบบเว็บยุโรป"
+        class="mx-auto h-auto w-full rounded-2xl border-2 border-cyan-400/30 shadow-[0_10px_30px_rgba(6,182,212,0.3)]"
       />
     </div>
     <div slot="right">
       <p>
-        ระบบ <strong class="text-amber-400">Super API</strong> ของ SUMOHENG ทำหน้าที่เชื่อมต่อเกมสล็อตแท้จากผู้พัฒนาเกมหลายค่ายเข้าสู่เว็บไซต์หลัก เพื่อให้สมาชิกสามารถเลือกเล่นเกมจากค่ายต่าง ๆ ได้ภายในยูสเซอร์เดียว
-        พร้อมเข้าถึงเกมใหม่ เกมยอดนิยม และฟีเจอร์ของแต่ละค่ายผ่านระบบเดียวกัน
+        เราใช้ระบบการเงินออโต้แท้ ที่เหมือน <strong class="text-amber-400">"ธนาคารออนไลน์เต็มระบบ"</strong> ฝากออโต้ 3-5 วินาที ถอนออโต้ โอนเข้าบัญชีตรง ไม่มีแอดมินกด ไม่ต้องส่งสลิป ระบบตรวจจับยอดอัตโนมัติ
+        นี่คือเทคโนโลยีที่ต่างจากเว็บไทยทั่วไปที่ยังใช้ระบบ "แอดมินเป็นตัวกลาง" ซึ่งเสี่ยงผิดพลาดและล่าช้า แต่ BABYSHARK88 ออกแบบให้เงินของคุณเข้า-ออกได้เหมือนใช้ Mobile Banking ต่างประเทศ
       </p>
 
       <a
@@ -241,14 +257,7 @@ const jackpotProviders = [
   </ContentBoxSevenThree>
   <SmoothCarousel />
   <ContentBox>
-    <h2 class="mb-4 text-3xl font-black tracking-[0.2em] text-yellow-400 uppercase drop-shadow-[0_0_10px_rgba(0,0,0,0.05)]">ทางเข้า ใช้บัญชีสมาชิกเดียว เชื่อมต่อทุกฟังก์ชัน ของ SUMOHENG</h2>
-    <p class="leading-relaxed">
-      ทางเข้า <strong class="text-yellow-500">SUMOHENG</strong> รองรับการใช้งานผ่านบัญชีสมาชิกเดียว เพื่อเชื่อมต่อทุกฟังก์ชันของเว็บไซต์ภายในระบบเดียว สมาชิกสามารถเข้าถึงเกมสล็อตแท้ ระบบฝากถอนออโต้ ข้อมูลบัญชี
-      ข่าวสาร และโปรโมชั่นได้อย่างต่อเนื่อง โดยทุกส่วนถูกเชื่อมโยงให้ทำงานร่วมกันผ่านเว็บไซต์หลักของ SUMOHENG
-    </p>
-  </ContentBox>
-
-  <ContentBox>
+    <h2 class="mb-4 text-3xl font-black tracking-[0.2em] text-yellow-400 uppercase drop-shadow-[0_0_10px_rgba(0,0,0,0.05)]">BABYSHARK88 ปลอดภัยระดับสากล ไม่ใช้บัญชีม้า ไม่ใช้บัญชีส่วนตัว</h2>
     <Picture
       src={image2}
       loading="lazy"
@@ -259,29 +268,32 @@ const jackpotProviders = [
       formats={["avif", "webp"]}
       fallbackFormat="webp"
       quality={80}
-      alt="sumoheng VIP Service"
-      class="mx-auto h-auto w-full max-w-2xl rounded-2xl border-2 border-yellow-500/30 shadow-[0_10px_30px_rgba(220,38,38,0.3)] transition-transform hover:scale-[1.02]"
+      alt="BABYSHARK88 เว็บสล็อตเว็บนอกแท้ RTP 99%"
+      class="mx-auto h-auto w-full max-w-2xl rounded-2xl border-2 border-cyan-400/30 shadow-[0_10px_30px_rgba(6,182,212,0.3)] transition-transform hover:scale-[1.02]"
     />
-    <h2 class="mb-4 text-2xl font-black tracking-[0.2em] text-yellow-400 uppercase drop-shadow-[0_0_10px_rgba(0,0,0,0.05)]">ฝากถอนออโต้ ดำเนินการอย่างเป็นขั้นเป็นตอน ด้วยความแม่นยำ</h2>
     <p class="leading-relaxed">
-      การทำรายการฝากและถอนผ่านระบบออโต้ของ <strong class="text-yellow-500">SUMOHENG</strong> จะดำเนินไปตามลำดับตั้งแต่การรับข้อมูล ตรวจสอบยอด ไปจนถึงการยืนยันรายการก่อนประมวลผล ทุกขั้นตอนอ้างอิงข้อมูลจากบัญชีผู้ใช้เพื่อลดความคลาดเคลื่อน
-      และช่วยให้สถานะของแต่ละธุรกรรมตรวจสอบได้ง่ายขึ้น เมื่อข้อมูลครบถ้วน ระบบจะดำเนินการตามรายการที่ส่งเข้ามา ทำให้การฝากถอนมีความเป็นระเบียบ ถูกต้อง และเชื่อมต่อกับการใช้งานส่วนอื่นของเว็บไซต์ได้ทันที
+      จุดที่เราให้ความสำคัญที่สุดคือ <strong class="text-yellow-500">"ความปลอดภัย"</strong> เพราะความน่าเชื่อถือคือเหตุผลที่ผู้เล่นเลือกเว็บนอกแท้ BABYSHARK88 ใช้ระบบ Anti-Fraud (ป้องกันธุรกรรมผิดปกติ)
+      API เชื่อมตรงค่ายเกม ไม่มีบัญชีม้า ไม่มีโอนบัญชีส่วนบุคคล ไม่มีการลบ/ปรับยอดย้อนหลัง ทุกธุรกรรมเดินผ่านระบบที่ตรวจสอบได้ เหมือนการใช้บริการเว็บพนันต่างประเทศในลอนดอน
     </p>
   </ContentBox>
 
   <ReviewCardSumo />
 
   <ContentBoxSpecial>
-    <h2 slot="title-left">สมัครสมาชิก เพื่อติดตามข่าวสารและโปรโมชั่นของ SUMOHENG</h2>
+    <h2 slot="title-left">รองรับวอเล็ทเต็มระบบ เพื่อผู้เล่นไทยโดยเฉพาะ</h2>
     <p slot="content-left" class="leading-relaxed">
-      การสมัครสมาชิกช่วยให้ผู้ใช้งานสามารถเข้าถึงฟังก์ชันต่าง ๆ ของเว็บไซต์ได้ครบถ้วน พร้อมติดตามข่าวสาร ประกาศ และโปรโมชั่นของ SUMOHENG ได้จากเว็บไซต์หลัก
+      แม้จะเป็นระบบต่างประเทศ แต่เราออกแบบให้ใช้งานง่ายในไทย รองรับ True Wallet, Mobile Banking ทุกธนาคาร หรือแม้แต่ QR Payment ฝาก-ถอนได้คล่องเท่ากับเว็บใหญ่
+      แต่เสถียรกว่าเพราะไม่มีการพักระบบหรือปิดรายการกลางคัน
     </p>
 
-    <h2 slot="title-right">รายละเอียด เงื่อนไข และช่วงเวลาของแต่ละโปรโมชั่น ตรวจสอบได้ชัดเจน</h2>
+    <h2 slot="title-right">สมัคร BABYSHARK88 ง่าย กรองข้อมูลเท่าที่จำเป็น</h2>
     <p slot="content-right" class="leading-relaxed">
-      ข้อมูลแต่ละรายการโปรโมชั่นจะแสดงรายละเอียด เงื่อนไข และช่วงเวลาที่เกี่ยวข้องไว้อย่างชัดเจน เพื่อให้สมาชิกสามารถตรวจสอบข้อมูลล่าสุดและติดตามความเคลื่อนไหวของเว็บไซต์ได้อย่างสะดวก
+      ขั้นตอนการสมัครถูกย่นให้เหลือน้อยที่สุด กดปุ่ม "สมัครสมาชิก" กรอกข้อมูลเท่าที่ระบบร้องขอ ไม่ต้องส่งเอกสาร ไม่ต้องยืนยันตัวตนหลายขั้นตอน ไม่ต้องรอแอดมิน เพราะเว็บนอกของแท้จะเน้น
+      "ลดขั้นตอนที่ไม่จำเป็น"
     </p>
   </ContentBoxSpecial>
+
+  <Faq faqs={faqs} />
 
   <Navfoot />
 

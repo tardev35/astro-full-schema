@@ -14,14 +14,14 @@ const isActive = (path: string) => {
 ---
 
 <header class="sticky top-0 z-[100] w-full font-sans">
-  <nav class="relative mx-auto flex h-[80px] w-full items-center justify-between border-b border-red-600/40 bg-[#0a0a0a]/95 px-4 shadow-[0_5px_20px_rgba(0,0,0,0.8)] backdrop-blur-lg xl:px-6">
-    <a href="/" class="z-[110] flex-shrink-0 rounded-xl bg-white px-3 py-1.5 shadow-[0_0_15px_rgba(220,38,38,0.5)] transition-transform duration-300 hover:scale-105">
+  <nav class="relative mx-auto flex h-[80px] w-full items-center justify-between border-b border-cyan-500/40 bg-[#050d16]/95 px-4 shadow-[0_5px_20px_rgba(0,0,0,0.8)] backdrop-blur-lg xl:px-6">
+    <a href="/" class="z-[110] flex-shrink-0 rounded-xl bg-white px-3 py-1.5 shadow-[0_0_15px_rgba(6,182,212,0.5)] transition-transform duration-300 hover:scale-105">
       {
         mainLogo ? (
-          <Picture src={mainLogo} alt="SUMOHENG Logo" loading="eager" class="h-[40px] w-auto object-contain xl:h-[50px]" formats={["avif", "webp"]} fallbackFormat="webp" />
+          <Picture src={mainLogo} alt="BABYSHARK88 Logo" loading="eager" class="h-[40px] w-auto object-contain xl:h-[50px]" formats={["avif", "webp"]} fallbackFormat="webp" />
         ) : (
           <h1 class="text-3xl font-black tracking-widest text-[#0a0a0a]">
-            SUMO<span class="text-red-600">HENG</span>
+            BABY<span class="text-cyan-600">SHARK88</span>
           </h1>
         )
       }
@@ -41,7 +41,7 @@ const isActive = (path: string) => {
             class={`group relative flex h-full items-center px-2 text-sm font-bold tracking-widest transition-colors ${isActive(item.path) ? "text-yellow-400" : "text-white/90 hover:text-white"}`}>
             <span>{item.name}</span>
             <div
-              class={`absolute bottom-0 left-0 h-[4px] w-full rounded-t-md bg-red-600 shadow-[0_-2px_10px_rgba(220,38,38,0.8)] transition-transform duration-300 ${isActive(item.path) ? "scale-x-100" : "scale-x-0 group-hover:scale-x-100"}`}
+              class={`absolute bottom-0 left-0 h-[4px] w-full rounded-t-md bg-cyan-500 shadow-[0_-2px_10px_rgba(6,182,212,0.8)] transition-transform duration-300 ${isActive(item.path) ? "scale-x-100" : "scale-x-0 group-hover:scale-x-100"}`}
             />
           </a>
         ))
@@ -51,16 +51,16 @@ const isActive = (path: string) => {
     <div class="z-[110] flex items-center gap-3">
       <a
         href="/login"
-        class="hidden rounded-full border border-red-500/50 bg-black/50 px-6 py-2.5 text-sm font-bold text-white shadow-inner transition-all hover:border-red-500 hover:bg-red-900/30 lg:flex">
+        class="hidden rounded-full border border-cyan-500/50 bg-black/50 px-6 py-2.5 text-sm font-bold text-white shadow-inner transition-all hover:border-cyan-400 hover:bg-cyan-900/30 lg:flex">
         เข้าสู่ระบบ
       </a>
       <a
         href="/register"
-        class="hidden rounded-full border border-red-400/50 bg-gradient-to-r from-red-600 to-red-700 px-6 py-2.5 text-sm font-black text-white shadow-[0_4px_15px_rgba(220,38,38,0.4)] transition-all hover:scale-105 hover:shadow-[0_6px_20px_rgba(220,38,38,0.6)] lg:flex">
+        class="hidden rounded-full border border-yellow-400/50 bg-gradient-to-r from-yellow-500 to-yellow-600 px-6 py-2.5 text-sm font-black text-[#042f3d] shadow-[0_4px_15px_rgba(250,204,21,0.4)] transition-all hover:scale-105 hover:shadow-[0_6px_20px_rgba(250,204,21,0.6)] lg:flex">
         สมัครสมาชิก
       </a>
 
-      <button id="hamburger-btn" class="relative flex h-[45px] w-[45px] flex-col items-center justify-center gap-[6px] rounded-full border border-red-600/50 bg-[#171717] lg:hidden" aria-label="Menu">
+      <button id="hamburger-btn" class="relative flex h-[45px] w-[45px] flex-col items-center justify-center gap-[6px] rounded-full border border-cyan-500/50 bg-[#0d1b28] lg:hidden" aria-label="Menu">
         <span class="line-1 h-[2px] w-5 origin-center rounded-full bg-white transition-all duration-300"></span>
         <span class="line-2 h-[2px] w-5 origin-center rounded-full bg-white transition-all duration-300"></span>
         <span class="line-3 h-[2px] w-5 origin-center rounded-full bg-white transition-all duration-300"></span>
@@ -70,7 +70,7 @@ const isActive = (path: string) => {
 
   <div
     id="mobile-menu"
-    class="pointer-events-none absolute top-[80px] left-0 w-full origin-top -translate-y-4 scale-y-95 flex-col border-b-2 border-red-600 bg-[#0a0a0a]/98 px-6 pt-4 pb-8 opacity-0 shadow-2xl backdrop-blur-2xl transition-all duration-300 lg:hidden">
+    class="pointer-events-none absolute top-[80px] left-0 w-full origin-top -translate-y-4 scale-y-95 flex-col border-b-2 border-cyan-500 bg-[#050d16]/98 px-6 pt-4 pb-8 opacity-0 shadow-2xl backdrop-blur-2xl transition-all duration-300 lg:hidden">
     <div class="flex flex-col gap-2">
       {
         [
@@ -82,17 +82,17 @@ const isActive = (path: string) => {
         ].map((item) => (
           <a
             href={item.path}
-            class={`flex items-center rounded-xl px-4 py-3 text-base font-bold transition-colors ${isActive(item.path) ? "border-l-4 border-red-600 bg-red-900/30 text-yellow-400" : "text-white/80 hover:bg-white/5 hover:text-white"}`}>
+            class={`flex items-center rounded-xl px-4 py-3 text-base font-bold transition-colors ${isActive(item.path) ? "border-l-4 border-cyan-500 bg-cyan-900/30 text-yellow-400" : "text-white/80 hover:bg-white/5 hover:text-white"}`}>
             {item.name}
           </a>
         ))
       }
     </div>
     <div class="mt-6 flex flex-col gap-3">
-      <a href="/register" class="flex w-full justify-center rounded-full border border-red-400/50 bg-gradient-to-r from-red-600 to-red-700 py-3.5 text-lg font-black text-white shadow-md">
+      <a href="/register" class="flex w-full justify-center rounded-full border border-yellow-400/50 bg-gradient-to-r from-yellow-500 to-yellow-600 py-3.5 text-lg font-black text-[#042f3d] shadow-md">
         สมัครสมาชิก
       </a>
-      <a href="/login" class="flex w-full justify-center rounded-full border border-red-500/50 bg-black/50 py-3.5 text-lg font-bold text-white">เข้าสู่ระบบ</a>
+      <a href="/login" class="flex w-full justify-center rounded-full border border-cyan-500/50 bg-black/50 py-3.5 text-lg font-bold text-white">เข้าสู่ระบบ</a>
     </div>
   </div>
 </header>
@@ -104,14 +104,14 @@ const isActive = (path: string) => {
   }
   #hamburger-btn.active .line-1 {
     transform: translateY(8px) rotate(45deg);
-    bg: #facc15;
+    bg: #22d3ee;
   }
   #hamburger-btn.active .line-2 {
     opacity: 0;
   }
   #hamburger-btn.active .line-3 {
     transform: translateY(-8px) rotate(-45deg);
-    bg: #facc15;
+    bg: #22d3ee;
   }
   #mobile-menu.show {
     opacity: 1;

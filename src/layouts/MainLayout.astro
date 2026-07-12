@@ -1,17 +1,20 @@
 ---
 import { Image } from "astro:assets";
-import Bg from "../assets/bg.png";
+import Bg from "../assets/bg.jpg";
 import "../styles/global.css";
 import NavbarStyle6 from "../components/NavbarStyle11.astro";
 import Footer from "../components/FooterPremiumSumo.astro";
 
 const bannerImages = import.meta.glob<{ default: ImageMetadata }>("../assets/banner*.{png,webp,jpg,jpeg}", { eager: true });
 const bannerPaths = Object.keys(bannerImages);
-const mainBanner = bannerPaths.length > 0 ? bannerImages[bannerPaths[0]].default : null;
+const preferredBannerPath = bannerPaths.find((path) => path.endsWith("banner1.webp"));
+const webpBannerPath = bannerPaths.find((path) => path.endsWith(".webp"));
+const mainBannerPath = preferredBannerPath ?? webpBannerPath ?? bannerPaths[0];
+const mainBanner = mainBannerPath ? bannerImages[mainBannerPath].default : null;
 
 const {
-  title = "SUMOHENG เว็บหลัก ทางเข้า ซูโม่เฮง เกมสล็อตแท้ ฝากถอนออโต้",
-  description = "SUMOHENG เว็บหลัก ซูโม่เฮง บริการ เกมสล็อตแท้ ทุกค่าย ทางเข้า เดียว เชื่อมต่อทุกฟังก์ชัน ฝากถอนออโต้ ด้วยความแม่นยำ สมัครสมาชิก เพื่อติดตาม โปรโมชั่น",
+  title = "BABYSHARK88 สล็อตเว็บนอกตรงแท้จากต่างประเทศ แตกหนัก จ่ายจริง",
+  description = "BABYSHARK88 สล็อตเว็บนอกตรงแท้ต่างประเทศ แตกหนัก ใช้ค่า RTP ตามลิขสิทธิ์ ระบบฝากถอน รองรับวอเล็ทเต็มระบบ ไม่ใช้บัญชีม้า สมัครง่าย",
   robots = "index, follow",
   ImageOg = "/slide3.webp",
 } = Astro.props;
@@ -19,7 +22,7 @@ const {
 const currentPath = Astro.url.pathname;
 const canonicalURL = new URL(currentPath, Astro.site);
 const ogImageURL = new URL(ImageOg, Astro.site);
-const ogSiteName = "SUMOHENG";
+const ogSiteName = "BABYSHARK88";
 ---
 
 <html lang="th">
@@ -35,10 +38,14 @@ const ogSiteName = "SUMOHENG";
     <link rel="preload" href="/fonts/kanit-v17-latin_thai-700.woff2" as="font" type="font/woff2" crossorigin />
     <link rel="preload" href="/fonts/kanit-v17-latin_thai-600.woff2" as="font" type="font/woff2" crossorigin="anonymous" />
     <link rel="canonical" href={canonicalURL} />
-    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
-    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="icon" href="/favicon.ico" sizes="32x32" />
+    <link rel="icon" href="/genfavicon-32.png" sizes="32x32" />
+    <link rel="icon" href="/genfavicon-16.png" sizes="16x16" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon-57x57.png" sizes="57x57" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon-114x114.png" sizes="114x114" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon-120x120.png" sizes="120x120" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon-180x180.png" sizes="180x180" />
+    <link rel="manifest" href="/site.webmanifest" />
 
     <meta property="og:type" content="website" />
     <meta property="og:url" content={canonicalURL} />
@@ -87,7 +94,7 @@ const ogSiteName = "SUMOHENG";
     <div class="mb-2.5 flex w-full items-center justify-center">
       <Image
         src={mainBanner!}
-        alt="SUMOHENG banner"
+        alt="BABYSHARK88 banner"
         loading="eager"
         fetchpriority="high"
         widths={[412, 768, 1900]}

@@ -8,12 +8,12 @@ import img5 from "../assets/providers/game5.avif";
 import img6 from "../assets/providers/game6.avif";
 
 const games = [
-  { rank: 1, name: "PG Soft", type: "สล็อตยอดนิยม", rtp: 98.7, players: "5,124", img: img1 },
-  { rank: 2, name: "Joker Gaming", type: "สล็อตคลาสสิก", rtp: 97.9, players: "3,842", img: img2 },
-  { rank: 3, name: "JILI Games", type: "สล็อต & อาร์เคด", rtp: 97.6, players: "3,517", img: img3 },
-  { rank: 4, name: "Evolution", type: "คาสิโนสด", rtp: 97.2, players: "2,905", img: img4 },
-  { rank: 5, name: "SA Gaming", type: "บาคาร่าสด", rtp: 96.8, players: "2,431", img: img5 },
-  { rank: 6, name: "Sexy Baccarat", type: "คาสิโนสด", rtp: 96.5, players: "2,108", img: img6 },
+  { rank: 1, name: "PG Soft", type: "สล็อตยอดนิยม", rtp: 98.7, players: 5124, img: img1 },
+  { rank: 2, name: "Joker Gaming", type: "สล็อตคลาสสิก", rtp: 97.9, players: 3842, img: img2 },
+  { rank: 3, name: "JILI Games", type: "สล็อต & อาร์เคด", rtp: 97.6, players: 3517, img: img3 },
+  { rank: 4, name: "Evolution", type: "คาสิโนสด", rtp: 97.2, players: 2905, img: img4 },
+  { rank: 5, name: "SA Gaming", type: "บาคาร่าสด", rtp: 96.8, players: 2431, img: img5 },
+  { rank: 6, name: "Sexy Baccarat", type: "คาสิโนสด", rtp: 96.5, players: 2108, img: img6 },
 ];
 
 const medal = (rank: number) => (rank === 1 ? "🥇" : rank === 2 ? "🥈" : rank === 3 ? "🥉" : null);
@@ -88,7 +88,10 @@ const medal = (rank: number) => (rank === 1 ? "🥇" : rank === 2 ? "🥈" : ran
             <div class="relative z-10 hidden shrink-0 flex-col items-end gap-1 sm:flex">
               <span class="flex items-center gap-1.5 text-[11px] text-blue-100/50">
                 <span class="h-1.5 w-1.5 animate-pulse rounded-full bg-green-400 shadow-[0_0_6px_rgba(74,222,128,0.7)]" />
-                {g.players} ออนไลน์
+                <span class="tabular-nums" data-players data-base={g.players}>
+                  {g.players.toLocaleString("en-US")}
+                </span>{" "}
+                ออนไลน์
               </span>
               <a
                 href="/register"
@@ -112,3 +115,26 @@ const medal = (rank: number) => (rank === 1 ? "🥇" : rank === 2 ? "🥈" : ran
     font-family: "Kanit", sans-serif;
   }
 </style>
+
+<script>
+  // ทำให้ตัวเลขผู้เล่นออนไลน์ขยับตลอดเวลาแบบสุ่มรอบค่าฐาน
+  const nf = new Intl.NumberFormat("en-US");
+
+  document.querySelectorAll<HTMLElement>("[data-players]").forEach((el) => {
+    const base = Number(el.dataset.base) || 0;
+    let current = base;
+
+    const tick = () => {
+      // แกว่งภายใน ±3.5% ของค่าฐาน แล้วดึงกลับเข้าหาค่าฐานเบาๆ
+      const drift = Math.round((Math.random() - 0.5) * base * 0.02);
+      const pull = Math.round((base - current) * 0.15);
+      current = Math.max(1, current + drift + pull);
+      el.textContent = nf.format(current);
+
+      // สุ่มช่วงเวลาถัดไป 1.5–3.5 วินาที ให้ดูเป็นธรรมชาติ
+      setTimeout(tick, 1500 + Math.random() * 2000);
+    };
+
+    setTimeout(tick, Math.random() * 2000);
+  });
+</script>

@@ -5,34 +5,34 @@ const imagePaths = Object.keys(images);
 const mainLogo = imagePaths.length > 0 ? images[imagePaths[0]].default : null;
 ---
 
-<footer class="relative mt-16 w-full overflow-hidden rounded-t-[3rem] border-t border-cyan-500/60 bg-[#030d16] pt-16 pb-8 font-sans text-white shadow-[0_-15px_40px_rgba(6,182,212,0.25)]">
-  <div class="pointer-events-none absolute inset-x-0 -top-20 mx-auto h-[250px] w-full max-w-4xl rounded-full bg-cyan-600/20 blur-[100px]"></div>
+<footer class="relative mt-16 w-full overflow-hidden rounded-t-[3rem] border-t border-blue-500/60 bg-[#030d16] pt-16 pb-8 font-sans text-white shadow-[0_-15px_40px_rgba(37,99,235,0.25)]">
+  <div class="pointer-events-none absolute inset-x-0 -top-20 mx-auto h-[250px] w-full max-w-4xl rounded-full bg-blue-600/20 blur-[100px]"></div>
 
   <div class="relative z-10 mx-auto w-full max-w-[1200px] px-6">
     <div class="mb-12 grid grid-cols-1 gap-12 md:grid-cols-12">
       <div class="flex flex-col gap-5 md:col-span-5">
-        <a href="/" class="inline-block max-w-max rounded-xl border border-cyan-500/30 bg-white px-4 py-2 transition-transform duration-300 hover:scale-105">
+        <a href="/" class="inline-block max-w-max rounded-xl border border-blue-500/30 bg-white px-4 py-2 transition-transform duration-300 hover:scale-105">
           {
             mainLogo ? (
-              <Picture src={mainLogo} alt="BABYSHARK88 Logo" class="h-[50px] w-auto object-contain" formats={["avif", "webp"]} fallbackFormat="webp" />
+              <Picture src={mainLogo} alt="HENGJUD365 Logo" class="h-[50px] w-auto object-contain" formats={["avif", "webp"]} fallbackFormat="webp" />
             ) : (
               <h2 class="text-3xl font-black tracking-widest text-[#0a0a0a]">
-                BABY<span class="text-cyan-600">SHARK88</span>
+                HENG<span class="text-blue-600">JUD365</span>
               </h2>
             )
           }
         </a>
         <p class="border-l-2 border-yellow-500/50 pl-4 text-sm leading-relaxed text-gray-400">
-          BABYSHARK88 เว็บสล็อตเว็บนอกแท้จากต่างประเทศ ใช้ค่า RTP ตามลิขสิทธิ์ ระบบฝากถอนออโต้แท้ 3-5 วินาที ไม่ผ่านแอดมิน และการดูแลสมาชิกตลอด 24 ชั่วโมง
+          HENGJUD365 เว็บไซต์รีวิวเกมสล็อตออนไลน์ผ่านระบบเว็บตรง ข้อมูลเว็บตรง ระบบฝากถอนอัตโนมัติ และทางเข้าล่าสุด อัปเดตต่อเนื่องเพื่อผู้เริ่มต้นเล่นเกมสล็อต
         </p>
         <div class="mt-4 flex gap-3">
-          <span class="rounded-full border border-cyan-400/30 bg-cyan-900/30 px-4 py-1 text-xs font-medium text-cyan-300 backdrop-blur-sm">เว็บนอกแท้</span>
-          <span class="rounded-full border border-yellow-500/30 bg-yellow-900/20 px-4 py-1 text-xs font-medium text-yellow-400 backdrop-blur-sm">RTP 99%</span>
+          <span class="rounded-full border border-blue-400/30 bg-blue-900/30 px-4 py-1 text-xs font-medium text-blue-300 backdrop-blur-sm">เว็บตรง</span>
+          <span class="rounded-full border border-yellow-500/30 bg-yellow-900/20 px-4 py-1 text-xs font-medium text-yellow-400 backdrop-blur-sm">RTP 96.7%</span>
         </div>
       </div>
 
       <nav class="flex flex-col gap-4 md:col-span-3 lg:pl-8">
-        <h3 class="text-lg font-black tracking-widest text-white uppercase drop-shadow-sm">ทางลัด</h3>
+        <h2 class="text-lg font-black tracking-widest text-white uppercase drop-shadow-sm">ทางลัด</h2>
         <div class="h-[1px] w-12 bg-yellow-500"></div>
         <ul class="flex flex-col gap-3 text-sm font-medium text-gray-400">
           <li><a href="/" class="transition-colors hover:text-yellow-400">หน้าหลัก</a></li>
@@ -43,7 +43,7 @@ const mainLogo = imagePaths.length > 0 ? images[imagePaths[0]].default : null;
       </nav>
 
       <div class="flex flex-col gap-5 md:col-span-4">
-        <h3 class="text-lg font-black tracking-widest text-white uppercase drop-shadow-sm">บริการลูกค้า 24 ชม.</h3>
+        <h2 class="text-lg font-black tracking-widest text-white uppercase drop-shadow-sm">บริการลูกค้า 24 ชม.</h2>
         <div class="h-[1px] w-12 bg-yellow-500"></div>
 
         <a
@@ -68,8 +68,8 @@ const mainLogo = imagePaths.length > 0 ? images[imagePaths[0]].default : null;
       </div>
     </div>
 
-    <div class="flex flex-col items-center justify-between border-t border-cyan-900/40 pt-8 text-xs font-medium tracking-wide text-gray-500 md:flex-row">
-      <p>COPYRIGHT &copy; {new Date().getFullYear()} BABYSHARK88.COM. ALL RIGHTS RESERVED.</p>
+    <div class="flex flex-col items-center justify-between border-t border-blue-900/40 pt-8 text-xs font-medium tracking-wide text-gray-500 md:flex-row">
+      <p>COPYRIGHT &copy; {new Date().getFullYear()} HENGJUD365.COM. ALL RIGHTS RESERVED.</p>
       <div class="mt-4 flex gap-4 md:mt-0">
         <a href="/" class="transition-colors hover:text-yellow-400">เงื่อนไขข้อตกลง</a>
         <a href="/" class="transition-colors hover:text-yellow-400">นโยบายความเป็นส่วนตัว</a>

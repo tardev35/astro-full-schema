@@ -1,17 +1,23 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
 import ContentBox from "../components/ContentBox.astro";
-import ContentBoxTwo from "../components/ContentBoxTwo.astro";
+import FeatureHighlights from "../components/FeatureHighlights.astro";
+import ContentBoxPremium from "../components/ContentBoxPremium.astro";
+import ContentBoxCyberCut from "../components/ContentBoxCyberCut.astro";
+import ContentBoxFloatingBadge from "../components/ContentBoxFloatingBadge.astro";
+import LoginRtpSection from "../components/LoginRtpSection.astro";
 import ContentBoxSevenThree from "../components/ContentBoxSevenThree.astro";
+import ContentBoxSevenThreePremium from "../components/ContentBoxSevenThreePremium.astro";
+import ContentBoxSevenThreeCyberCut from "../components/ContentBoxSevenThreeCyberCut.astro";
+import ContentBoxSevenThreeFloatingBadge from "../components/ContentBoxSevenThreeFloatingBadge.astro";
 import ContentBoxThreeColums from "../components/ContentBox3Three.astro";
 import ContentBoxSpecial from "../components/ContentBoxSpecial.astro";
 import Announcement from "../components/Announcement6.astro";
 import ProviderGrid from "../components/ProviderGrid.astro";
-import LatestWinners from "../components/LatestWinnersPremium.astro";
+import LatestWinners from "../components/LatestWinners2.astro";
 import SmoothCarousel from "../components/SmoothCarousel.astro";
 import ReviewCardSumo from "../components/ReviewCardSumo2.astro";
 import Navfoot from "../components/Navfoot.astro";
-import Faq from "../components/FaqHuay.astro";
 const currentPath = Astro.url.pathname;
 const homePage = Astro.url.origin;
 const logoUrl = homePage + "/logo.webp";
@@ -19,216 +25,172 @@ const logoUrl = homePage + "/logo.webp";
 const webPageSchema = {
   "@context": "https://schema.org",
   "@type": "WebPage",
-  name: "BABYSHARK88 สล็อตเว็บนอกตรงแท้จากต่างประเทศ แตกหนัก จ่ายจริง",
-  description: "BABYSHARK88 สล็อตเว็บนอกตรงแท้ต่างประเทศ แตกหนัก ใช้ค่า RTP ตามลิขสิทธิ์ ระบบฝากถอน รองรับวอเล็ทเต็มระบบ ไม่ใช้บัญชีม้า สมัครง่าย",
+  name: "HENGJUD365 รีวิวเว็บสล็อต แตกง่ายอย่างไร? ข้อมูลเว็บตรง และทางเข้าล่าสุด",
+  description: "HENGJUD365 รีวิวเว็บสล็อต วิเคราะห์เกมแตกง่าย ข้อมูลเว็บตรง จุดเด่น ฟีเจอร์ ค่ายเกม ทางเข้า ล่าสุด ระบบฝากถอนอัตโนมัติ และความน่าเชื่อถือของเว็บไซต์",
   url: currentPath,
 };
 const webSiteSchema = {
   "@context": "https://schema.org",
   "@type": "WebSite",
-  name: "BABYSHARK88",
-  alternateName: ["BABYSHARK88", "BABYSHARK88 สล็อตเว็บนอก"],
-  url: "https://babyshark88-brand.com/",
+  name: "HENGJUD365",
+  alternateName: ["HENGJUD365", "HENGJUD365 รีวิวเว็บสล็อต"],
+  url: "https://www.hengjud365-guideline.com/",
 };
 const orgSchema = {
   "@context": "https://schema.org",
   "@type": "Organization",
-  name: "BABYSHARK88",
+  name: "HENGJUD365",
   logo: logoUrl,
   url: homePage,
 };
 const allSchemas = [webPageSchema, orgSchema, webSiteSchema];
 
 import { Picture } from "astro:assets";
-import image1 from "../assets/banner2.webp";
-import image2 from "../assets/banner1.webp";
-
-const jackpotProviders = [
-  { rank: "🥇", name: "PG Soft", rtp: 98.8 },
-  { rank: "🥈", name: "Pragmatic Play", rtp: 98.5 },
-  { rank: "🥉", name: "Relax Gaming", rtp: 97.9 },
-  { rank: "4", name: "Red Tiger", rtp: 97.4 },
-  { rank: "5", name: "Hacksaw Gaming", rtp: 97.1 },
-];
-
-const faqs = [
-  {
-    q: "BABYSHARK88 ต่างจากเว็บสล็อตไทยทั่วไปอย่างไร?",
-    a: "BABYSHARK88 เป็นเว็บนอกแท้ที่นำระบบจากต่างประเทศเข้ามาให้บริการโดยตรง ค่า RTP คงเดิมตามลิขสิทธิ์ ไม่มีการปรับเรทกลางอากาศ ระบบสุ่ม RNG แท้จากผู้ให้บริการต่างประเทศ ไม่ผ่านระบบปรับแต้มแบบเว็บไทย",
-  },
-  { q: "ฝากถอนใช้เวลานานแค่ไหน?", a: "ระบบฝากถอนออโต้แท้ ฝากออโต้ 3-5 วินาที ถอนออโต้โอนเข้าบัญชีตรง ไม่มีแอดมินกด ไม่ต้องส่งสลิป ระบบตรวจจับยอดอัตโนมัติเหมือน Mobile Banking ต่างประเทศ" },
-  { q: "รองรับช่องทางการเงินอะไรบ้าง?", a: "รองรับ True Wallet, Mobile Banking ทุกธนาคาร และ QR Payment ฝาก-ถอนได้คล่องเท่าเว็บใหญ่ แต่เสถียรกว่าเพราะไม่มีการพักระบบหรือปิดรายการกลางคัน" },
-  { q: "สมัครสมาชิกยุ่งยากไหม?", a: "ขั้นตอนการสมัครถูกย่นให้เหลือน้อยที่สุด กดปุ่มสมัครสมาชิก กรอกข้อมูลเท่าที่ระบบร้องขอ ไม่ต้องส่งเอกสาร ไม่ต้องยืนยันตัวตนหลายขั้นตอน ไม่ต้องรอแอดมิน" },
-  {
-    q: "ปลอดภัยแค่ไหน มีบัญชีม้าหรือไม่?",
-    a: "BABYSHARK88 ใช้ระบบ Anti-Fraud ป้องกันธุรกรรมผิดปกติ เชื่อมตรง API ค่ายเกม ไม่มีบัญชีม้า ไม่มีโอนบัญชีส่วนบุคคล ไม่มีการลบหรือปรับยอดย้อนหลัง ทุกธุรกรรมตรวจสอบได้",
-  },
-];
+import imgCrackEasy from "../assets/slide3.png";
+import imgWebInfo from "../assets/slide4.png";
+import imgProviders from "../assets/slide2.png";
+import imgWithdraw from "../assets/slide1.png";
 ---
 
 <MainLayout
-  title="BABYSHARK88 สล็อตเว็บนอกตรงแท้จากต่างประเทศ แตกหนัก จ่ายจริง"
-  description="BABYSHARK88 สล็อตเว็บนอกตรงแท้ต่างประเทศ แตกหนัก ใช้ค่า RTP ตามลิขสิทธิ์ ระบบฝากถอน รองรับวอเล็ทเต็มระบบ ไม่ใช้บัญชีม้า สมัครง่าย">
+  title="HENGJUD365 รีวิวเว็บสล็อต แตกง่ายอย่างไร? ข้อมูลเว็บตรง และทางเข้าล่าสุด"
+  description="HENGJUD365 รีวิวเว็บสล็อต วิเคราะห์เกมแตกง่าย ข้อมูลเว็บตรง จุดเด่น ฟีเจอร์ ค่ายเกม ทางเข้า ล่าสุด ระบบฝากถอนอัตโนมัติ และความน่าเชื่อถือของเว็บไซต์">
   <script type="application/ld+json" set:html={JSON.stringify(allSchemas)} />
 
   <Announcement />
   <div class="mx-auto w-full max-w-5xl px-4 py-8 text-center">
-    <p class="bg-gradient-to-b from-cyan-200 to-cyan-500 bg-clip-text text-4xl leading-tight font-black text-transparent drop-shadow-sm md:text-5xl">
-      BABYSHARK88 <br />
-      <span class="text-[#ffdb0e]">แตกหนัก จ่ายจริง เว็บนอกตรงแท้</span>
+    <p class="bg-gradient-to-b from-blue-200 to-blue-500 bg-clip-text text-4xl leading-tight font-black text-transparent drop-shadow-sm md:text-5xl">
+      HENGJUD<span class="text-[#ffdb0e]">365</span>
+      <br />
     </p>
   </div>
-  <ContentBox title="BABYSHARK88 สล็อตเว็บนอกตรงแท้จากต่างประเทศ แตกหนัก จ่ายจริง">
+
+  <!-- H1: HENGJUD365 รีวิวเว็บสล็อต พร้อมข้อมูลเว็บตรง และคู่มือสำหรับผู้เริ่มต้น -->
+  <ContentBox title="HENGJUD365 รีวิวเว็บสล็อต พร้อมข้อมูลเว็บตรง และคู่มือสำหรับผู้เริ่มต้น">
     <p class="leading-relaxed">
-      <strong class="text-amber-400">BABYSHARK88</strong> เว็บสล็อตเว็บนอกแท้ที่นำระบบจากต่างประเทศเข้ามาเปิดให้บริการในประเทศไทยโดยตรง ระบบเดียวกับที่ยุโรปและอเมริกาใช้งาน ทั้งความเสถียร ความปลอดภัย และแนวทางการบริการแบบพรีเมียม
-      แบรนด์ BABYSHARK88 เรามีความตั้งใจเดียวคือ ให้ผู้เล่นไทยได้สัมผัสเว็บที่ โปร่งใส ตรวจสอบได้ ไม่ปรับเรท ไม่ล็อกยูส และจ่ายจริงตามระบบ
+      <strong class="text-amber-400">HENGJUD365</strong> เป็นเว็บไซต์ที่ให้บริการเกมสล็อตออนไลน์ผ่านระบบเว็บตรง พร้อมรวบรวมเกมจากหลายค่ายไว้ในที่เดียว จากการวิเคราะห์โครงสร้างเว็บไซต์ ระบบการใช้งาน และข้อมูลที่เปิดเผย
+      พบว่ามีจุดเด่นในด้านความหลากหลายของเกม ระบบฝากถอนอัตโนมัติ และการรองรับการใช้งานบนอุปกรณ์ต่าง ๆ ข้อมูลทั้งหมดจึงถูกนำมาวิเคราะห์และสรุปในมุมมองของการรีวิวเว็บไซต์ พร้อมอธิบายข้อมูลเว็บตรงและประเด็นสำคัญที่ผู้เริ่มต้นควรรู้ก่อนใช้งาน
     </p>
 
     <div class="mt-8 flex flex-wrap justify-center gap-6">
       <a
         href="/login"
-        class="group relative flex items-center justify-center rounded-full border border-cyan-500/50 bg-[#04222f]/80 px-10 py-3.5 font-black text-yellow-500 backdrop-blur-sm transition-all duration-300 hover:scale-105 hover:bg-cyan-900/60 hover:shadow-[0_0_15px_rgba(6,182,212,0.4)]">
+        class="group relative flex items-center justify-center rounded-full border border-blue-500/50 bg-[#0b1633]/80 px-10 py-3.5 font-black text-yellow-500 backdrop-blur-sm transition-all duration-300 hover:scale-105 hover:bg-blue-900/60 hover:shadow-[0_0_15px_rgba(37,99,235,0.4)]">
         เข้าระบบเกม
       </a>
 
       <a
         href="/register"
-        class="group relative flex items-center justify-center rounded-full bg-gradient-to-r from-yellow-500 via-yellow-400 to-yellow-500 px-10 py-3.5 font-black text-[#042f3d] shadow-[0_5px_20px_rgba(251,191,36,0.4)] transition-all duration-300 hover:-translate-y-1 hover:scale-105 hover:shadow-[0_8px_25px_rgba(251,191,36,0.6)]">
+        class="group relative flex items-center justify-center rounded-full bg-gradient-to-r from-yellow-500 via-yellow-400 to-yellow-500 px-10 py-3.5 font-black text-[#0b1633] shadow-[0_5px_20px_rgba(251,191,36,0.4)] transition-all duration-300 hover:-translate-y-1 hover:scale-105 hover:shadow-[0_8px_25px_rgba(251,191,36,0.6)]">
         สมัครสมาชิก
       </a>
     </div>
   </ContentBox>
 
-  <ContentBoxTwo titleleft="เข้าสู่ระบบ BABYSHARK88" titleright="ค่ายเกมลิขสิทธิ์นอกแท้">
-    <div slot="left" class="flex h-full flex-col gap-4">
-      <div class="relative overflow-hidden rounded-2xl border border-cyan-500/30 bg-gradient-to-br from-cyan-900/40 to-black/60 p-6 shadow-[0_0_20px_rgba(6,182,212,0.1)] backdrop-blur-md">
-        <div class="pointer-events-none absolute -top-10 -right-10 h-32 w-32 rounded-full bg-cyan-600/10 blur-[50px]"></div>
-
-        <div class="relative z-10 mb-5 flex items-center gap-3">
-          <span class="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl border border-yellow-400/40 bg-gradient-to-br from-cyan-700 to-black text-xl shadow-inner">🦈</span>
-          <div class="flex flex-col">
-            <h3 class="text-base font-black text-white">ยินดีต้อนรับกลับ</h3>
-            <span class="text-[11px] text-gray-400">บัญชีเดียว เชื่อมต่อทุกฟังก์ชันของ BABYSHARK88</span>
-          </div>
-        </div>
-
-        <div class="relative z-10 flex flex-col gap-3.5">
-          <div class="relative">
-            <span class="absolute top-3.5 left-4 text-cyan-400">👤</span>
-            <input
-              type="text"
-              placeholder="ยูสเซอร์เนม / เบอร์โทรศัพท์"
-              class="w-full rounded-xl border border-cyan-500/50 bg-black/60 py-3 pr-4 pl-12 text-white transition-all outline-none focus:border-yellow-400 focus:ring-1 focus:ring-yellow-400/50"
-            />
-          </div>
-          <div class="relative">
-            <span class="absolute top-3.5 left-4 text-cyan-400">🔑</span>
-            <input
-              type="password"
-              placeholder="รหัสผ่าน"
-              class="w-full rounded-xl border border-cyan-500/50 bg-black/60 py-3 pr-4 pl-12 text-white transition-all outline-none focus:border-yellow-400 focus:ring-1 focus:ring-yellow-400/50"
-            />
-          </div>
-
-          <div class="flex items-center justify-between px-1 text-xs">
-            <label class="flex items-center gap-2 text-gray-400">
-              <input type="checkbox" class="h-3.5 w-3.5 rounded border-cyan-500/50 bg-black/60 accent-cyan-500" />
-              จดจำฉันไว้
-            </label>
-            <a href="#" class="text-gray-400 transition-colors hover:text-white">ลืมรหัสผ่าน?</a>
-          </div>
-
-          <button
-            class="mt-1 w-full rounded-xl border border-cyan-400/50 bg-gradient-to-r from-cyan-600 to-cyan-700 p-3.5 font-black text-white shadow-[0_5px_15px_rgba(6,182,212,0.5)] transition-all hover:scale-[1.02] hover:shadow-[0_8px_25px_rgba(6,182,212,0.7)]">
-            เข้าสู่ระบบ
-          </button>
-
-          <div class="flex items-center gap-3 py-1 text-[11px] text-gray-500">
-            <span class="h-px flex-1 bg-white/10"></span>
-            หรือ
-            <span class="h-px flex-1 bg-white/10"></span>
-          </div>
-
-          <a
-            href="/line"
-            class="flex w-full items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-[#00B900] to-[#009900] p-3 text-sm font-bold text-white shadow-md transition-all hover:scale-[1.02]">
-            💬 ติดต่อแอดมิน LINE
-          </a>
-
-          <div class="mt-1 flex items-center justify-between px-1">
-            <div class="flex gap-2">
-              <span class="rounded-full border border-green-500/30 bg-green-900/20 px-2.5 py-1 text-[10px] font-bold text-green-400">🔒 SSL Secure</span>
-              <span class="rounded-full border border-yellow-500/30 bg-yellow-900/20 px-2.5 py-1 text-[10px] font-bold text-yellow-400">⚡ เว็บนอกแท้</span>
-            </div>
-            <a href="/register" class="animate-pulse text-xs font-bold text-yellow-400 transition-colors hover:text-yellow-300">สมัครสมาชิกใหม่</a>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div slot="right" class="h-full">
-      <div class="flex h-full flex-col rounded-2xl border border-cyan-500/30 bg-gradient-to-br from-cyan-900/40 to-black/60 p-5 backdrop-blur-md">
-        <div class="mb-5 flex items-center justify-between">
-          <div>
-            <span class="text-xs font-bold tracking-wide text-gray-400">RTP ตามลิขสิทธิ์ (%)</span>
-            <div class="bg-gradient-to-r from-yellow-300 via-yellow-400 to-yellow-500 bg-clip-text text-3xl font-black text-transparent drop-shadow-[0_2px_10px_rgba(250,204,21,0.4)] sm:text-4xl">
-              คงเดิม ไม่ปรับเรท
-            </div>
-          </div>
-          <span class="flex items-center gap-1.5 self-start rounded-full border border-green-500/40 bg-green-900/20 px-2.5 py-1">
-            <span class="h-1.5 w-1.5 animate-pulse rounded-full bg-green-400 shadow-[0_0_8px_rgba(74,222,128,0.8)]"></span>
-            <span class="text-[10px] font-bold tracking-widest text-green-400 uppercase">Live</span>
-          </span>
-        </div>
-
-        <div class="mb-2 flex items-center justify-between text-[11px] font-bold tracking-widest text-gray-500 uppercase">
-          <span>ค่ายเกม</span>
-          <span>RTP</span>
-        </div>
-
-        <div class="flex flex-1 flex-col gap-2.5">
-          {
-            jackpotProviders.map((p) => (
-              <div class="rounded-xl border border-white/5 bg-white/5 px-3.5 py-2.5 transition-colors hover:border-cyan-400/40 hover:bg-white/10">
-                <div class="flex items-center justify-between text-sm">
-                  <span class="flex items-center gap-2 font-bold text-white">
-                    <span class="w-5 text-center">{p.rank}</span> {p.name}
-                  </span>
-                  <span class="font-black text-green-400">{p.rtp}%</span>
-                </div>
-                <div class="mt-1.5 h-1.5 w-full overflow-hidden rounded-full bg-black/40">
-                  <div class="h-full rounded-full bg-gradient-to-r from-green-500 to-emerald-400" style={`width:${p.rtp}%`} />
-                </div>
-              </div>
-            ))
-          }
-        </div>
-
-        <div class="mt-4 text-center text-[10px] tracking-wide text-gray-500">ทุกค่ายเชื่อมตรงเซิร์ฟเวอร์แม่ ไม่ผ่านระบบปรับแต้ม</div>
-      </div>
-    </div>
-  </ContentBoxTwo>
-
-  <LatestWinners />
-
-  <ContentBoxThreeColums titleleft="RTP คงเดิม ไม่ปรับลด" titlecenter="RNG แท้ ไม่ผ่านแอดมิน" titleright="จ่ายตรง ไม่ใช้บัญชีม้า">
-    <div slot="left">ค่า RTP คงเดิม ไม่ปรับลดเรทกลางอากาศ เพราะเราเป็นเว็บนอกแท้ที่ต้องคงค่า RTP จริงตามสัญญาของผู้ให้บริการค่ายเกมแต่ละเจ้า</div>
-    <div slot="center">ระบบสุ่ม RNG แท้จากผู้ให้บริการต่างประเทศ เซิร์ฟเวอร์ไม่อืด ไม่ปิดปรับแต่งบ่อยๆ การฝากถอนเป็นออโต้แท้ ไม่ผ่านทีมแอดมิน</div>
-    <div slot="right">การจ่ายเงินตรง ไม่ใช้บัญชีส่วนตัวหรือบัญชีม้า นอกจริง ไม่ใช่เว็บที่แต่งหน้าเว็บไซต์ให้ดูเหมือนเว็บนอก</div>
-  </ContentBoxThreeColums>
-  <ProviderGrid />
-  <ContentBox>
-    <h2 class="mb-4 text-3xl font-black tracking-[0.2em] text-amber-400 uppercase drop-shadow-[0_0_10px_rgba(0,0,0,0.05)]">แตกหนัก เกินมาตรฐานเว็บไทย เพราะใช้ค่า RTP เดิมตามลิขสิทธิ์</h2>
-    <p class="leading-relaxed">
-      <strong class="text-yellow-500">BABYSHARK88</strong> เว็บที่มีเกมสล็อตต่างประเทศที่แตกหนักเกินมาตรฐานไทย เพราะเราเป็นเว็บนอกแท้ต้องคงค่า RTP จริง ตามสัญญาของผู้ให้บริการค่ายเกมแต่ละเจ้า และไม่สามารถลดเรทได้ตามใจเว็บเหมือนบางตลาดในไทย
-      เราคัดค่ายเกมระดับสากล เช่น PG Soft ลิขสิทธิ์นอกแท้, Pragmatic Play, Relax Gaming, Red Tiger, Hacksaw Gaming เป็นต้น ทุกเกมทำงานจากเซิร์ฟเวอร์แม่ ไม่ผ่านระบบปรับแต้มของเว็บไทย ทำให้เข้าฟีเจอร์ง่ายกว่า
-      โบนัสแตกหนักกว่า เบทต่ำก็มีลุ้นใหญ่ เล่นลื่นแม้เวลาไพรม์ไทม์
-    </p>
-  </ContentBox>
-  <ContentBoxSevenThree titleleft="" titleright="ระบบฝากถอน BABYSHARK88 แบบเว็บยุโรปเร็วมากๆ">
+  <!-- H2: HENGJUD365 แตกง่ายอย่างไร? คู่มือสำหรับผู้เริ่มต้นเล่นเกมสล็อต — ภาพประกอบ slide3.png (RTP/Volatility) -->
+  <ContentBoxSevenThreeFloatingBadge title="HENGJUD365 แตกง่ายอย่างไร? คู่มือสำหรับผู้เริ่มต้นเล่นเกมสล็อต">
     <div slot="left" class="flex h-full flex-col justify-center">
       <Picture
-        src={image1}
+        src={imgCrackEasy}
+        loading="lazy"
+        fetchpriority="low"
+        widths={[200, 400, 600, 800]}
+        sizes="(max-width: 768px) 100vw, 30vw"
+        decoding="async"
+        formats={["avif", "webp"]}
+        fallbackFormat="webp"
+        quality={80}
+        alt="HENGJUD365 แตกง่ายอย่างไร RTP และ Volatility"
+        class="mx-auto h-auto w-full rounded-2xl border-2 border-blue-400/30 shadow-[0_10px_30px_rgba(37,99,235,0.3)]"
+      />
+    </div>
+    <div slot="right">
+      <p class="leading-relaxed">
+        HENGJUD365 รวบรวมเกมสล็อตจากหลายค่ายไว้ในระบบเดียว ทำให้โอกาสในการเล่นและลักษณะการจ่ายรางวัลแตกต่างกันไปในแต่ละเกม คำว่า "แตกง่าย" ส่วนใหญ่เกิดจากการเลือกเกมที่มีค่า RTP เหมาะสม
+        ระดับความผันผวน (Volatility) ฟีเจอร์โบนัส และอัตราการออกรางวัลของแต่ละค่าย มากกว่าตัวเว็บไซต์เอง ดังนั้นก่อนเริ่มเล่น สำหรับผู้เริ่มต้นเล่นเกมสล็อตควรทำความเข้าใจข้อมูลของเกมแต่ละประเภท
+        เพื่อเลือกเกมที่เหมาะกับสไตล์การเล่นของตนเอง หลักการทำงานของเกมได้อย่างถูกต้อง
+      </p>
+    </div>
+  </ContentBoxSevenThreeFloatingBadge>
+  <ContentBoxThreeColums titleleft="ค่า RTP เหมาะสม" titlecenter="ระดับความผันผวน (Volatility)" titleright="ฟีเจอร์โบนัสและอัตราออกรางวัล">
+    <div slot="left">การเลือกเกมที่มีค่า RTP เหมาะสมเป็นปัจจัยแรกที่ควรพิจารณา เพราะส่งผลโดยตรงต่อโอกาสในการเล่นและลักษณะการจ่ายรางวัลของแต่ละเกม</div>
+    <div slot="center">ระดับความผันผวนของแต่ละเกมมีทั้งแบบสูงและต่ำ ควรเลือกให้เหมาะกับสไตล์การเล่นและงบประมาณของตนเองก่อนเริ่มเล่นทุกครั้ง</div>
+    <div slot="right">ฟีเจอร์โบนัสและอัตราการออกรางวัลแตกต่างกันไปในแต่ละค่ายเกม ควรศึกษาข้อมูลของเกมแต่ละประเภทเพื่อเข้าใจหลักการทำงานได้อย่างถูกต้อง</div>
+  </ContentBoxThreeColums>
+
+  <!-- H2: ข้อมูลเว็บตรง HENGJUD365 ฟีเจอร์และองค์ประกอบของเว็บไซต์ — ภาพประกอบ slide4.png (Website Structure) -->
+  <ContentBoxSevenThreeCyberCut titleleft="" titleright="ข้อมูลเว็บตรง HENGJUD365 ฟีเจอร์และองค์ประกอบของเว็บไซต์">
+    <div slot="left" class="flex h-full flex-col justify-center">
+      <Picture
+        src={imgWebInfo}
+        loading="lazy"
+        fetchpriority="low"
+        widths={[200, 400, 600, 800]}
+        sizes="(max-width: 768px) 100vw, 30vw"
+        decoding="async"
+        formats={["avif", "webp"]}
+        fallbackFormat="webp"
+        quality={80}
+        alt="HENGJUD365 ข้อมูลเว็บตรงและโครงสร้างเว็บไซต์"
+        class="mx-auto h-auto w-full rounded-xl border-2 border-blue-400/30 shadow-[0_10px_30px_rgba(37,99,235,0.3)]"
+      />
+    </div>
+    <div slot="right">
+      <p class="leading-relaxed">
+        จากการวิเคราะห์โครงสร้างเว็บไซต์ พบว่า HENGJUD365 รวบรวมฟีเจอร์และองค์ประกอบสำคัญไว้ภายในระบบเดียว ไม่ว่าจะเป็นระบบสมาชิก หมวดหมู่เกม ค่ายผู้ให้บริการ โปรโมชั่น กระเป๋าเงิน
+        และระบบฝากถอนอัตโนมัติ โดยออกแบบเมนูให้แยกการใช้งานเป็นสัดส่วน ช่วยให้ผู้ใช้งานเข้าถึงแต่ละฟังก์ชันได้สะดวกและเข้าใจโครงสร้างเว็บไซต์ได้ง่ายขึ้น
+      </p>
+    </div>
+  </ContentBoxSevenThreeCyberCut>
+
+  <ContentBoxPremium as="h2" title="วิเคราะห์จุดเด่นของเว็บไซต์ ผลทดสอบ จากการใช้งาน">
+    <p class="leading-relaxed">
+      จากการวิเคราะห์การใช้งานในภาพรวม พบว่าเว็บไซต์มีจุดเด่นในด้านการจัดหมวดหมู่เกม ความรวดเร็วในการเข้าถึงเมนู ระบบสมาชิก และการรองรับการใช้งานบนอุปกรณ์หลายประเภท
+      นอกจากนี้ยังมีฟังก์ชันที่ช่วยให้การค้นหาเกม การทำรายการ และการติดตามข้อมูลต่าง ๆ ทำได้สะดวกยิ่งขึ้นเมื่อเทียบกับรูปแบบเว็บไซต์ทั่วไป
+    </p>
+  </ContentBoxPremium>
+  <LatestWinners />
+
+  <!-- H2: รีวิวเกมสล็อต คาสิโน และค่ายเกมที่ให้บริการ ครอบคลุมแค่ไหน — ภาพประกอบ slide2.png (Top Providers) -->
+  <ContentBoxSevenThreePremium titleleft="" titleright="รีวิวเกมสล็อต คาสิโน และค่ายเกมที่ให้บริการ ครอบคลุมแค่ไหน">
+    <div slot="left" class="flex h-full flex-col justify-center">
+      <Picture
+        src={imgProviders}
+        loading="lazy"
+        fetchpriority="low"
+        widths={[200, 400, 600, 800]}
+        sizes="(max-width: 768px) 100vw, 30vw"
+        decoding="async"
+        formats={["avif", "webp"]}
+        fallbackFormat="webp"
+        quality={80}
+        alt="HENGJUD365 ค่ายเกม Top Providers"
+        class="mx-auto h-auto w-full rounded-2xl border-2 border-blue-400/30 shadow-[0_10px_30px_rgba(37,99,235,0.3)]"
+      />
+    </div>
+    <div slot="right">
+      <p class="leading-relaxed">
+        เว็บไซต์รวบรวมเกมสล็อต คาสิโนสด และเกมออนไลน์จากผู้ให้บริการหลายค่ายไว้ภายในระบบเดียว ทำให้ผู้ใช้งานสามารถเลือกเล่นเกมได้หลากหลายตามความสนใจ ทั้งเกมยอดนิยม เกมใหม่ และหมวดหมู่อื่น ๆ
+        โดยไม่ต้องสลับบัญชีหรือเปลี่ยนระบบการใช้งานระหว่างค่ายเกมแต่ละแห่ง
+      </p>
+    </div>
+  </ContentBoxSevenThreePremium>
+  <LoginRtpSection />
+  <ProviderGrid />
+
+  <!-- H2: ทางเข้า HENGJUD365 ล่าสุด เข้าอย่างไร ให้ปลอดภัย -->
+  <ContentBoxFloatingBadge as="h2" title="ทางเข้า HENGJUD365 ล่าสุด เข้าอย่างไร ให้ปลอดภัย">
+    <p class="leading-relaxed">
+      การเลือกใช้ <strong class="text-yellow-500">ทางเข้า HENGJUD365</strong> ที่ถูกต้องเป็นอีกปัจจัยสำคัญก่อนเข้าสู่ระบบ ควรตรวจสอบชื่อโดเมน ความปลอดภัยของเว็บไซต์ และเลือกใช้งานผ่านลิงก์ที่ได้รับการอัปเดต
+      เพื่อลดความเสี่ยงจากเว็บไซต์เลียนแบบหรือหน้าล็อกอินที่ไม่ได้เชื่อมต่อกับระบบจริง
+    </p>
+  </ContentBoxFloatingBadge>
+
+  <!-- H2: ระบบฝากถอนอัตโนมัติ รองรับระบบใดบ้าง — ภาพประกอบ slide1.png (Auto Wallet) -->
+  <ContentBoxSevenThree titleleft="" titleright="ระบบฝากถอนอัตโนมัติ รองรับระบบใดบ้าง">
+    <div slot="left" class="flex h-full flex-col justify-center">
+      <Picture
+        src={imgWithdraw}
         loading="lazy"
         fetchpriority="low"
         widths={[200, 400, 600, 800]}
@@ -237,14 +199,14 @@ const faqs = [
         formats={["avif", "webp"]}
         fallbackFormat="webp"
         quality={80}
-        alt="BABYSHARK88 ระบบฝากถอนออโต้แบบเว็บยุโรป"
-        class="mx-auto h-auto w-full rounded-2xl border-2 border-cyan-400/30 shadow-[0_10px_30px_rgba(6,182,212,0.3)]"
+        alt="HENGJUD365 ระบบฝากถอนอัตโนมัติและทางเข้า"
+        class="mx-auto h-auto w-full rounded-2xl border-2 border-blue-400/30 shadow-[0_10px_30px_rgba(37,99,235,0.3)]"
       />
     </div>
     <div slot="right">
       <p>
-        เราใช้ระบบการเงินออโต้แท้ ที่เหมือน <strong class="text-amber-400">"ธนาคารออนไลน์เต็มระบบ"</strong> ฝากออโต้ 3-5 วินาที ถอนออโต้ โอนเข้าบัญชีตรง ไม่มีแอดมินกด ไม่ต้องส่งสลิป ระบบตรวจจับยอดอัตโนมัติ
-        นี่คือเทคโนโลยีที่ต่างจากเว็บไทยทั่วไปที่ยังใช้ระบบ "แอดมินเป็นตัวกลาง" ซึ่งเสี่ยงผิดพลาดและล่าช้า แต่ BABYSHARK88 ออกแบบให้เงินของคุณเข้า-ออกได้เหมือนใช้ Mobile Banking ต่างประเทศ
+        ระบบฝากถอนของ <strong class="text-amber-400">HENGJUD365</strong> รองรับการทำรายการผ่านช่องทางที่หลากหลาย ทั้งบัญชีธนาคารและบริการทางการเงินที่เว็บไซต์รองรับ โดยทำงานผ่านระบบอัตโนมัติที่ช่วยลดขั้นตอนในการยืนยันรายการ
+        ผู้ใช้งานสามารถศึกษารูปแบบการทำธุรกรรม เงื่อนไขการให้บริการ และช่องทางที่รองรับก่อนเริ่มใช้งานจริง
       </p>
 
       <a
@@ -255,45 +217,32 @@ const faqs = [
       </a>
     </div>
   </ContentBoxSevenThree>
-  <SmoothCarousel />
-  <ContentBox>
-    <h2 class="mb-4 text-3xl font-black tracking-[0.2em] text-yellow-400 uppercase drop-shadow-[0_0_10px_rgba(0,0,0,0.05)]">BABYSHARK88 ปลอดภัยระดับสากล ไม่ใช้บัญชีม้า ไม่ใช้บัญชีส่วนตัว</h2>
-    <Picture
-      src={image2}
-      loading="lazy"
-      fetchpriority="low"
-      widths={[200, 400, 600, 800]}
-      sizes="(max-width: 768px) 100vw, 50vw"
-      decoding="async"
-      formats={["avif", "webp"]}
-      fallbackFormat="webp"
-      quality={80}
-      alt="BABYSHARK88 เว็บสล็อตเว็บนอกแท้ RTP 99%"
-      class="mx-auto h-auto w-full max-w-2xl rounded-2xl border-2 border-cyan-400/30 shadow-[0_10px_30px_rgba(6,182,212,0.3)] transition-transform hover:scale-[1.02]"
-    />
+
+  <!-- H2: ข้อสังเกต และ ความน่าเชื่อถือ HENGJUD365 จากการวิเคราะห์ -->
+  <ContentBoxCyberCut as="h2" title="ข้อสังเกต และ ความน่าเชื่อถือ HENGJUD365 จากการวิเคราะห์">
     <p class="leading-relaxed">
-      จุดที่เราให้ความสำคัญที่สุดคือ <strong class="text-yellow-500">"ความปลอดภัย"</strong> เพราะความน่าเชื่อถือคือเหตุผลที่ผู้เล่นเลือกเว็บนอกแท้ BABYSHARK88 ใช้ระบบ Anti-Fraud (ป้องกันธุรกรรมผิดปกติ)
-      API เชื่อมตรงค่ายเกม ไม่มีบัญชีม้า ไม่มีโอนบัญชีส่วนบุคคล ไม่มีการลบ/ปรับยอดย้อนหลัง ทุกธุรกรรมเดินผ่านระบบที่ตรวจสอบได้ เหมือนการใช้บริการเว็บพนันต่างประเทศในลอนดอน
+      การประเมินความน่าเชื่อถือของเว็บไซต์ควรพิจารณาจากหลายองค์ประกอบร่วมกัน ไม่ว่าจะเป็นโครงสร้างเว็บไซต์ การเชื่อมต่อผ่าน HTTPS ระบบสมาชิก ช่องทางการติดต่อ การอัปเดตข้อมูล
+      และความต่อเนื่องของการให้บริการ โดย <strong class="text-yellow-500">HENGJUD365</strong> มีรายละเอียดหลายส่วนที่สามารถนำมาใช้ประกอบการวิเคราะห์ เพื่อช่วยให้ผู้ใช้งานประเมินความน่าเชื่อถือของเว็บไซต์ได้ด้วยตนเอง
+      ก่อนตัดสินใจสมัครสมาชิกหรือเริ่มใช้งานจริง
     </p>
-  </ContentBox>
+  </ContentBoxCyberCut>
+
+  <SmoothCarousel />
 
   <ReviewCardSumo />
 
   <ContentBoxSpecial>
     <h2 slot="title-left">รองรับวอเล็ทเต็มระบบ เพื่อผู้เล่นไทยโดยเฉพาะ</h2>
     <p slot="content-left" class="leading-relaxed">
-      แม้จะเป็นระบบต่างประเทศ แต่เราออกแบบให้ใช้งานง่ายในไทย รองรับ True Wallet, Mobile Banking ทุกธนาคาร หรือแม้แต่ QR Payment ฝาก-ถอนได้คล่องเท่ากับเว็บใหญ่
-      แต่เสถียรกว่าเพราะไม่มีการพักระบบหรือปิดรายการกลางคัน
+      HENGJUD365 ออกแบบให้ใช้งานง่าย รองรับบัญชีธนาคารชั้นนำ วอเล็ทชั้นนำ และ QR Payment ฝาก-ถอนได้สะดวก ทำงานผ่านระบบอัตโนมัติที่ช่วยลดขั้นตอนในการยืนยันรายการ
+      ควรศึกษารูปแบบการทำธุรกรรมและเงื่อนไขการให้บริการก่อนเริ่มใช้งานจริง
     </p>
 
-    <h2 slot="title-right">สมัคร BABYSHARK88 ง่าย กรองข้อมูลเท่าที่จำเป็น</h2>
+    <h2 slot="title-right">สมัคร HENGJUD365 ง่าย กรอกข้อมูลเท่าที่จำเป็น</h2>
     <p slot="content-right" class="leading-relaxed">
-      ขั้นตอนการสมัครถูกย่นให้เหลือน้อยที่สุด กดปุ่ม "สมัครสมาชิก" กรอกข้อมูลเท่าที่ระบบร้องขอ ไม่ต้องส่งเอกสาร ไม่ต้องยืนยันตัวตนหลายขั้นตอน ไม่ต้องรอแอดมิน เพราะเว็บนอกของแท้จะเน้น
-      "ลดขั้นตอนที่ไม่จำเป็น"
+      ขั้นตอนการสมัครถูกย่นให้เหลือน้อยที่สุด กดปุ่ม "สมัครสมาชิก" กรอกข้อมูลเท่าที่ระบบร้องขอ ไม่ต้องส่งเอกสาร ไม่ต้องยืนยันตัวตนหลายขั้นตอน ไม่ต้องรอแอดมิน
     </p>
   </ContentBoxSpecial>
-
-  <Faq faqs={faqs} />
 
   <Navfoot />
 

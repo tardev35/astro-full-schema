@@ -16,9 +16,9 @@ export default defineConfig({
   },
 
   redirects: {
-    "/line": "https://tinyurl.com/linepigpg",
+    "/line": "https://tinyurl.com/suhng",
   },
 
-  site: "https://babyshark88-home.com",
+  site: "https://www.hengjud365-guideline.com",
   integrations: [sitemap()],
 });

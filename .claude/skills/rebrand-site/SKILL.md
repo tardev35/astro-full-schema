@@ -51,6 +51,22 @@ every past run of this skill has caught at least one real bug there.
    it's often already been updated to the new domain before you're
    asked to do the content work.
 
+**Never invent a domain from the brand name.** A bare "rebrand to
+`<brand>`" request is content/design work only — it does *not* license
+guessing a URL like `https://www.<brand>.com` from the brand name, a
+reference image, or the docx (a past run guessed a domain off a
+reference image that happened to show a URL, and it was wrong). Leave
+`astro.config.mjs`'s `site:`, `public/robots.txt`'s `Sitemap:` line,
+and any hardcoded `url:` string literal in `index.astro`'s
+`webSiteSchema`/similar schema.org objects exactly as they already are
+— even if they still show a previous brand's domain, that's expected
+drift, not something to silently "fix." Only touch those three spots
+when the user explicitly gives a real URL alongside the brand name
+(e.g. "rebrand to `<brand>` and real url `<XXXX>`"), and then set all
+three to that exact URL — don't miss the schema.org one, it's a plain
+string literal that doesn't auto-follow `site:` the way
+`Astro.url.origin`-derived values do.
+
 ## Phase 2 — Map docx content onto existing component slots
 
 List every component `src/pages/index.astro` currently imports and
@@ -74,6 +90,173 @@ copy; if it has a specific list of game providers/payment methods,
 prefer real values in **both** the provider grid/table props and any
 provider-name mentions in prose paragraphs, so they don't contradict.
 
+**Don't reach for plain `ContentBox` for every single section — use the
+whole component "family," and this applies to every repeated family in
+the repo, not just `ContentBox`.** `src/components/` groups many
+sections into a base file plus mood-suffixed siblings — `Premium`,
+`CyberCut`, `FloatingBadge`, `Huay`, `Neumorphism`, `Cyber`, plus
+numbered `Style1..11` for navbars — different *shapes*, not just
+different colors:
+- `ContentBox`/`ContentBoxSevenThree`/`ContentBox3Three`/`ContentBoxTwo`
+  — content section wrappers (see the image-pairing note below).
+- `Announcement`/`Announcement2..6`/`AnnouncementCyber`/
+  `AnnouncementPremium`/`AnnouncementHuay` — the scrolling top ticker.
+  Every variant's `message` prop **defaults to a different old brand's
+  slogan** (a past run found defaults for six unrelated old brands
+  across this one family alone) — when you pick a variant, you must
+  always pass an explicit `message` prop with the current brand's copy;
+  never leave the default in place assuming it's generic filler.
+- `LatestWinners`/`LatestWinners2..4`/`LatestWinnersCyber`/
+  `LatestWinnersPremium`/`LatestWinnersHuay` — the live withdrawal/win
+  feed. These are self-contained (own bank-logo imports, own mock-data
+  generator script) but the brand name and hue are hardcoded straight
+  into the JSX, not passed as props — swapping variants means doing the
+  full retheme + brand-name pass on the newly chosen file, same as any
+  other component in Phase 3.
+- `Navbar`/`NavbarStyle1..11`/`NavbarCyber`/`NavbarHuay`/
+  `NavbarPremium` and `Footer`/`FooterStyle2..3`/`FooterCyber`/
+  `FooterHuay`/`FooterPremium`(`Sumo`) — **unlike the families above,
+  only one navbar file and one footer file are ever active at once**,
+  imported directly into `MainLayout.astro`. "Picking a variant" here
+  means choosing which single file to point `MainLayout.astro`'s
+  import at (and updating that one import), not composing several on
+  one page. Whichever one you pick, it almost certainly still has the
+  *previous* brand's name hardcoded in a logo-fallback heading and
+  footer copyright line (exactly like the currently-wired one did) —
+  retheme and swap that text before wiring it in, not after.
+
+For every family, two things before wiring a new variant in:
+1. **Retheme it first.** These variants ship in whatever color family
+   a past brand used (often purple or emerald green) — grep-check with
+   `grep -rln "ComponentName" src/pages/` that no *other* page already
+   uses it (if none, it's safe to retheme in place), then swap its hue
+   to the current brand's palette exactly like Phase 3, before dropping
+   it into `index.astro` or `MainLayout.astro`.
+2. **Check its heading tags before use**, same rule as the heading-tags
+   note above — some variants (e.g. a `SevenThree*FloatingBadge`'s
+   `titleleft`/`titleright`) hardcode a different level than others.
+   Normalize to match the docx's level for every variant you introduce,
+   not just the ones you already had.
+3. **Test any `*FloatingBadge` variant with a full-sentence docx
+   heading before trusting it, not a short placeholder title.** These
+   variants render their `title` inside a `position: absolute`,
+   horizontally-centered pill badge with no width cap — a past run
+   found every `FloatingBadge` file (`ContentBox`, `ContentBoxTwo`,
+   `ContentBox3Three`, `ContentBoxSevenThree`) shipped with
+   `whitespace-nowrap` on that badge, which was invisible in a desktop
+   check but blew the badge past the viewport width on mobile the
+   moment the title was a real docx sentence instead of a 2-3 word
+   placeholder — cutting text off and forcing the whole page into
+   horizontal scroll (no `<body>` `overflow-x: hidden` existed to
+   contain it either). Before using any `*FloatingBadge` variant, grep
+   it for `whitespace-nowrap` on the title badge and replace with a
+   width cap (e.g. `w-[92%] max-w-2xl`) plus `text-center` so long
+   titles wrap instead of overflowing, and confirm `MainLayout.astro`
+   still has `overflow-x: hidden` on `html, body` as a second line of
+   defense. Verify by checking the actual rendered badge at a mobile
+   viewport width with the real (long) title text, not just that the
+   build succeeds.
+
+   **Same bug, vertical axis: check the badge doesn't overlap the
+   card's own content once it wraps to 2 lines.** All three
+   `*FloatingBadge` files position the title as `absolute -top-6`
+   inside a card whose top padding (`pt-12`/`pt-14`/`pt-16`/`pt-18`) was
+   sized for a *short, one-line* title. Do the arithmetic before
+   trusting it: badge height ≈ (line-height × number of wrapped lines)
+   + vertical padding + border, and its bottom edge sits at
+   `badge height − 24px` (the `-top-6` offset) measured from the card's
+   top. If that number is ≥ the card's `pt-*` value, the badge visually
+   overlaps the slot content below it — this actually happened with a
+   real two-line docx H2 title (`ContentBoxSevenThreeFloatingBadge`
+   only reserved `pt-12`/48px; a 2-line mobile-size title came out to
+   ~48-72px, i.e. zero or negative clearance) and was fixed by bumping
+   the padding (`pt-12`→`pt-16`, `pt-14`→`pt-18` across all three
+   `*FloatingBadge` files, kept in sync). Don't just eyeball a desktop
+   screenshot with the badge on one line — resize to a narrow mobile
+   width with the *actual* long title so it wraps, and confirm there's
+   visible daylight between the badge's bottom border and the card's
+   inner content.
+
+When a docx has many sections (6+), pick a *different* `ContentBox*`
+variant for several of them so the page has rhythm instead of eight
+identical rounded cards in a row.
+
+**Pair `ContentBoxSevenThree*` (image+text) variants with the brand's
+slide/banner images, matched by what's actually drawn in the image, not
+by leftover order.** If the brand assets include multiple slide images
+(`slide1.png`, `slide2.png`, …) each depicting a different topic (e.g.
+one showing an RTP/volatility chart, one showing a provider-logo wall,
+one showing a login+security diagram), read each image again with
+`Read` and match it to the docx section it actually illustrates —
+don't just reuse the same one or two images across sections. This
+often means moving an image off a section it was previously (loosely)
+paired with in an earlier pass, onto the section it fits better; that's
+fine, note the reassignment in the workspec so it's traceable.
+
+**Every docx heading must survive, in document order, before you touch
+theming.** Before writing a single line of `index.astro`, list out
+*all* H1/H2/H3 lines from the Phase 1 extraction as a numbered
+checklist (not just the ones that obviously map to an existing slot).
+This catches two failure modes a past run actually hit:
+- **Dropped sections.** It's easy to map the 5-6 headings that map
+  cleanly onto existing slots and quietly skip the 2-3 that don't have
+  an obvious home (e.g. a "site strengths / usage results" heading, or
+  a "which providers are covered" heading with no dedicated slot).
+  Every heading gets its own titled block with the **full paragraph
+  text that follows it in the docx** — never just the heading with no
+  body, and never a summarized/merged version that quietly folds two
+  docx paragraphs into one. If no existing component slot fits, reuse
+  a plain `ContentBox` with a manual `<h2>` + `<p>` rather than
+  dropping the section.
+- **Reordered sections.** Don't let the *pre-existing* component order
+  in `index.astro` (hero → login widget → carousel → reviews → ...)
+  dictate where docx content lands. Walk the docx top to bottom and
+  place each section's `ContentBox`/etc. in that same order; only
+  *then* slot in the non-docx UI widgets (login form, image carousel,
+  review cards, wallet/signup blurbs) around the docx content — at the
+  very start (before section 1) or the very end (after the last docx
+  section), not spliced between two docx sections. If a supporting
+  component (provider grid, live-winners feed, RTP/volatility 3-col)
+  visually belongs to one specific docx section, place it immediately
+  after that section's `ContentBox`, not wherever it happened to sit
+  in the old file.
+
+**Heading tags: match what the docx actually uses, everywhere.** If
+every section in the docx is marked H2 (no H3 sub-headings), every
+section title in the rendered page must be an `<h2>` — not just in the
+`ContentBox`/`ContentBox3Three` markup you write by hand, but also
+inside any shared component you call into. Several of this template's
+components hardcode a lower heading level for their title prop (e.g. a
+"seven-three" image block's `titleright` rendering as `<h3>`, a
+provider-grid card name rendering as `<h3>`, a footer column heading
+rendering as `<h3>`) — these render on the final page even though
+you never typed `<h3>` yourself. Grep every component `index.astro`
+touches for `<h[1-6]` and normalize each one to match the docx's
+actual heading level before calling the page done; don't stop at
+grepping `index.astro`'s own markup. (Only keep a real level
+*hierarchy* — e.g. H1 page title → H2 section → H3 sub-item — if the
+docx itself has that nested structure; if it's flat H1+H2 only,
+flatten the page to match.)
+
+**The one sanctioned exception to "flatten everything to H2": a docx
+section with a short bullet-style sub-list under it.** When one docx
+H2 section's body isn't just a paragraph but 2-4 short sub-points
+(each with its own short label, e.g. "feature A / feature B / feature
+C" under one "features" heading), don't hand-roll a repeated
+icon-card `<div>` block with its own `<h2>` per point — that both
+breaks the one-H2-per-docx-heading rule and duplicates markup. Use
+`src/components/FeatureHighlights.astro`: pass an `items` prop
+(`{ icon, title, description, accent?: "gold" | "blue" }[]`), and it
+renders each point's `title` as an `<h3>` — the section's own H2
+stays the only H2, the sub-points become real H3 children under it.
+This is the only place a docx-driven page should have an `<h3>` at
+all; if you find yourself wanting more than one heading level below a
+section for the same content, that's a sign to reconsider the mapping,
+not to add another exception. Wire `FeatureHighlights` into
+`index.astro` the same way as any other family component (import it,
+pass the docx's sub-points as `items`) whenever a docx section fits
+this shape — don't reinvent the icon-card markup inline again.
+
 ## Phase 3 — Retheme every component index.astro touches
 
 Identify the old brand's dominant Tailwind color family (grep the
@@ -94,6 +277,19 @@ rewrite (cleaner than dozens of tiny edits) that:
 Also grep the whole `src/` tree for the old brand name after this pass
 — report (don't silently fix) any hits in pages/components outside
 `index.astro`'s scope, since those are likely a separate ask.
+
+**Components can be nested — don't stop at grepping `index.astro`'s own
+JSX.** Some sections get extracted into their own wrapper component
+that itself imports and renders another shared component (e.g.
+`LoginRtpSection.astro` wraps `ContentBoxTwo.astro` — `index.astro`
+only ever sees `<LoginRtpSection />`, never `ContentBoxTwo` directly).
+A shallow `grep "<ComponentName" src/pages/index.astro` will miss
+`ContentBoxTwo` entirely in that case. Build the "every component
+`index.astro` touches" list recursively: for each component
+`index.astro` imports, also grep *that file* for further
+`import ... from "./..."` components it renders, and repeat, before
+doing the hue/brand-name sweep in this phase or the verification pass
+in Phase 5.
 
 ## Phase 4 — Fix stale asset references (the actual bug class this skill exists for)
 
@@ -135,8 +331,27 @@ preferring `.webp` and/or the specific file the user referenced as
      Phase 4 glob trap didn't resurface
    - grep for `undefined`, `NaN`, `[object Object]` as a cheap check
      for broken prop plumbing
+   - if any `*FloatingBadge` component is in play, re-check its
+     vertical clearance (see the Phase 2 note) with the page's *actual*
+     title text at a narrow/mobile width — a long title that wraps to
+     2 lines is the trigger, and it won't show up in a desktop-width
+     screenshot or in a build log
    - if a FAQ/accordion was wired up, count its item markup to confirm
      all entries rendered
+   - **content completeness/order**: extract every `<h1>`/`<h2>`
+     (whatever level the docx uses) from the rendered HTML with a
+     regex pass, strip tags, and diff that list against the numbered
+     docx heading checklist from Phase 2 — same count, same text, same
+     top-to-bottom order. A missing heading or a section that comes
+     out of order is a real bug, not a nitpick; go back and fix the
+     page structure, don't just note it.
+   - **heading-tag consistency**: `grep -o "<h3" dist/index.html |
+     wc -l` (adjust the level to whatever the docx *doesn't* use) —
+     should be 0 unless the docx genuinely has a nested sub-heading
+     under those sections. A non-zero count almost always means a
+     shared component (provider card, footer column, image-block
+     title prop) is still hardcoding the wrong tag — grep the dist
+     HTML around each hit to find which component to fix.
 3. Stop the dev server when done (best effort — `pkill`/`taskkill`
    often aren't available in this sandbox; a leftover background dev
    server on port 4321 is harmless, don't fight it).
@@ -157,8 +372,10 @@ rather than rewriting history.
 
 After the initial rebrand, the user routinely comes back with a narrow
 ask on one already-themed component: "re design Announcement6 again",
-"เปลี่ยน card แบบใหม่" for the review section, etc. Treat these as a
-distinct, smaller task — don't re-run the full rebrand:
+"เปลี่ยน card แบบใหม่" for the review section, "redesign LoginRtpSection"
+(the login-form + RTP-table two-column section extracted out of
+`index.astro`), etc. Treat these as a distinct, smaller task — don't
+re-run the full rebrand:
 
 1. **Read the file fresh first.** It may have been hand-edited (by the
    user or a formatter) since your last write — don't assume your last

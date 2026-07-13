@@ -636,3 +636,75 @@ CLAUDE.md ที่ห้ามลบ component สำรอง)
   `group-hover:opacity-100`/`group-hover:scale-105` แบบไม่ตั้งชื่อบนการ์ดแล้ว
 - ควรตรวจซ้ำด้วยตาจริงในเบราว์เซอร์ (เซสชันนี้ไม่มี browser tool) ว่า hover
   แต่ละการ์ดแล้วปุ่มขึ้นเฉพาะใบนั้นจริง
+
+## เพิ่มฟีเจอร์: 2026-07-13 — สร้าง 3 component ใหม่จากรูป `providers/game1-6.avif` + wire เข้า index
+
+ต่อเนื่องจากงานทำความสะอาดไฟล์ (รอบ 16:xx) ที่ตั้งใจไม่ลบ `providers/game1-6.avif`
+เพราะยัง import อยู่ใน `ProviderGridPremium.astro` (component สำรองที่ไม่ถูกใช้) — ผู้ใช้
+ขอให้เอารูปชุดนี้มาออกแบบ UI ประกอบเป็น ~3 component ตามธีมปัจจุบัน (HENGJUD365
+น้ำเงิน-ทอง) แบบมืออาชีพ แล้วนำเข้าไปใช้จริงในหน้า index
+
+**หลักการออกแบบ:** ทำ 3 component ที่ "รูปทรงต่างกันจริง" (ไม่ใช่แค่ recolor กริดเดิม)
+และต่างจาก component เกม/ค่ายที่มีอยู่แล้ว (`ProviderGrid` = กริด 6 ช่องมีแท็บกรอง +
+initial ไม่มีรูป, `ProviderGridPremium` = กริดรูป 6 ช่องโทนม่วง unused, `SmoothCarousel`
+= marquee เลื่อนอัตโนมัติของรูป slide กว้าง) — ทั้ง 3 ตัวใหม่ใช้รูป game1-6 ทั้งชุด
+ในธีมน้ำเงิน-ทอง + ฟอนต์ Kanit + heading เป็น `<h2>` (ตามกฎ heading ของ skill)
+
+**ไฟล์ที่สร้างใหม่:**
+- `src/components/GameRankingBoard.astro` — บอร์ดจัดอันดับเกม RTP สูงสุด: แถวเรียง
+  แนวตั้ง (list rows ไม่ใช่กริด) มีเหรียญอันดับ 🥇🥈🥉/`#4-6`, thumbnail สี่เหลี่ยม,
+  แถบ RTP % (gradient bar), จำนวนผู้เล่นออนไลน์ (pulse dot), ปุ่มเล่นเลย — แถวอันดับ 1
+  ไฮไลต์ทองพิเศษ
+- `src/components/PopularGamesStrip.astro` — แถวเกมยอดนิยมเลื่อนแนวนอน: `snap-x
+  snap-mandatory overflow-x-auto` การ์ดแนวตั้ง `aspect-[3/4]` มี gradient overlay +
+  แท็บ "🔥 มาแรง/ยอดนิยม" + ปุ่ม "เล่นเลย" ตอน hover (ใช้ named group `group/card`
+  กันบั๊ก nested-group ที่เพิ่งแก้ในหน้า `ทดลองเล่น`) — ต่างจาก SmoothCarousel ตรงที่
+  เลื่อนเองด้วยมือ + scroll-snap + การ์ดสี่เหลี่ยม ไม่ใช่ marquee อัตโนมัติ
+- `src/components/FeaturedGames.astro` — บอร์ดเกมแนะนำแบบ bento ไม่สมมาตร: game1 เป็น
+  hero 2x2 (มีป้าย "⭐ แนะนำสูงสุด"), game4/5/6 เป็นช่องกว้าง col-span-2, game2/3 เป็น
+  ช่องเล็ก — layout ไม่มีช่องว่างทั้ง mobile (2 คอลัมน์) และ desktop (4 คอลัมน์)
+
+**Wire เข้า `src/pages/index.astro` (วางตามบริบทเนื้อหา ไม่ยัดรวมกันเป็นก้อนเดียว):**
+- `<GameRankingBoard />` ต่อจาก section 3 คอลัมน์ RTP/Volatility (หัวข้อ "แตกง่าย
+  อย่างไร") — เพราะเป็นเรื่อง RTP เหมือนกัน
+- `<PopularGamesStrip />` ต่อจาก section "รีวิวเกมสล็อต คาสิโน และค่ายเกม" — เพราะพูด
+  เรื่องความหลากหลายของเกม
+- `<FeaturedGames />` ต่อจาก `<ProviderGrid />` — โซนรวมเกม/ค่ายต่อเนื่องกัน
+
+ชื่อเกม/ค่ายใน 3 component ใช้ชุดเดียวกับ `ProviderGridPremium` เดิม (PG Soft, Joker
+Gaming, JILI, Evolution, SA Gaming, Sexy Baccarat) เพื่อความสอดคล้อง
+
+### การทดสอบ
+- `npm run build` ผ่านสะอาด (9 หน้า) — warning `noise.png` เป็นของเดิมในโค้ดเบส
+  ไม่เกี่ยวกับ component ใหม่
+- grep `dist/index.html`: เจอหัวข้อทั้ง 3 component, ป้าย TOP RTP/เหรียญ/bento hero,
+  `snap-mandatory`, รูป `game[1-6].*.avif/webp` รวม 105 ref (3 component × 6 เกม ×
+  หลาย width/format), ไม่มี `undefined`/`NaN`/`[object Object]`
+- ควรตรวจซ้ำด้วยตาจริงในเบราว์เซอร์ (เซสชันนี้ไม่มี browser tool) เรื่อง responsive
+  ของ bento/strip และ hover overlay
+
+## อัปเดต: 2026-07-13 — ผู้ใช้เอา 2 ใน 3 component ออกจาก index + เพิ่มกฎ "สลับ variant ทุก rebrand" ลง skill
+
+**ผู้ใช้ปรับ index เอง:** เอา `<PopularGamesStrip />` และ `<FeaturedGames />` ออกจาก
+`index.astro` (บอกว่า "ไม่สวย") เหลือใช้แค่ `<GameRankingBoard />` ตัวเดียว — ตัว
+`GameRankingBoard` ยังอยู่ในหน้า ต่อจาก section 3 คอลัมน์ RTP ตามเดิม
+
+**ไฟล์ 2 ตัวที่ถูกเอาออก — เก็บไว้เป็น inventory ไม่ลบ:**
+`PopularGamesStrip.astro` และ `FeaturedGames.astro` ตอนนี้ไม่ถูก import จากหน้าไหนแล้ว
+(grep ทั้ง `src/` ไม่เจอ) — ตามกฎ CLAUDE.md "ห้ามลบ component ที่ไม่ได้ใช้ เว้นแต่สั่ง
+โดยตรง" จึงเก็บไฟล์ไว้เป็นของสำรองสำหรับแบรนด์หน้า (เหมือน `ProviderGridPremium`) ผู้ใช้
+ไม่ได้สั่งลบไฟล์ สั่งแค่เอาออกจากหน้า — ถ้าต้องการลบไฟล์จริงค่อยแจ้ง
+
+**เพิ่มกฎใหม่ลง `.claude/skills/rebrand-site/SKILL.md`:** ทุกครั้งที่ rebrand ต้อง
+"หมุนสลับ variant" ของแต่ละ family ให้ต่างจากแบรนด์ก่อนเสมอ ไม่ใช่แค่เปลี่ยนสีของตัวเดิม —
+ครอบคลุม **ContentBox family, Announcement family, LatestWinners family, Navbar/
+NavbarStyle family, Footer family** โดย:
+- Phase 2: เพิ่มบล็อกกฎ "Rotate every family's variant on each rebrand" — สั่งให้ระบุ
+  variant ที่แบรนด์เดิมใช้ก่อน (grep import จริงใน index.astro/MainLayout.astro) แล้ว
+  จงใจเลือก sibling คนละตัวสำหรับแบรนด์ใหม่ (คนละ *รูปทรง* ไม่ใช่ recolor) ถ้าจำเป็นต้อง
+  ใช้ตัวเดิมให้บันทึกเหตุผลใน workspec
+- Phase 6: เพิ่มให้บันทึก variant แบบ before→after ต่อ family (เช่น `Navbar:
+  NavbarStyle11 → NavbarStyle6`) เพื่อให้แบรนด์หน้าอ่านย้อนได้ว่าห้ามใช้ตัวไหนซ้ำ
+
+### การทดสอบ
+- `npm run build` ผ่านสะอาด (9 หน้า) หลังผู้ใช้เอา 2 component ออก

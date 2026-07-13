@@ -14,6 +14,7 @@ import ContentBoxThreeColums from "../components/ContentBox3Three.astro";
 import ContentBoxSpecial from "../components/ContentBoxSpecial.astro";
 import Announcement from "../components/Announcement6.astro";
 import ProviderGrid from "../components/ProviderGrid.astro";
+import GameRankingBoard from "../components/GameRankingBoard.astro";
 import LatestWinners from "../components/LatestWinners2.astro";
 import SmoothCarousel from "../components/SmoothCarousel.astro";
 import ReviewCardSumo from "../components/ReviewCardSumo2.astro";
@@ -87,7 +88,6 @@ import imgWithdraw from "../assets/slide1.png";
     </div>
   </ContentBox>
 
-  <!-- H2: HENGJUD365 แตกง่ายอย่างไร? คู่มือสำหรับผู้เริ่มต้นเล่นเกมสล็อต — ภาพประกอบ slide3.png (RTP/Volatility) -->
   <ContentBoxSevenThreeFloatingBadge title="HENGJUD365 แตกง่ายอย่างไร? คู่มือสำหรับผู้เริ่มต้นเล่นเกมสล็อต">
     <div slot="left" class="flex h-full flex-col justify-center">
       <Picture
@@ -118,7 +118,9 @@ import imgWithdraw from "../assets/slide1.png";
     <div slot="right">ฟีเจอร์โบนัสและอัตราการออกรางวัลแตกต่างกันไปในแต่ละค่ายเกม ควรศึกษาข้อมูลของเกมแต่ละประเภทเพื่อเข้าใจหลักการทำงานได้อย่างถูกต้อง</div>
   </ContentBoxThreeColums>
 
-  <!-- H2: ข้อมูลเว็บตรง HENGJUD365 ฟีเจอร์และองค์ประกอบของเว็บไซต์ — ภาพประกอบ slide4.png (Website Structure) -->
+  <!-- บอร์ดจัดอันดับเกม RTP สูงสุด — ต่อเนื่องจากหัวข้อ RTP/Volatility -->
+  <GameRankingBoard />
+
   <ContentBoxSevenThreeCyberCut titleleft="" titleright="ข้อมูลเว็บตรง HENGJUD365 ฟีเจอร์และองค์ประกอบของเว็บไซต์">
     <div slot="left" class="flex h-full flex-col justify-center">
       <Picture
@@ -151,7 +153,6 @@ import imgWithdraw from "../assets/slide1.png";
   </ContentBoxPremium>
   <LatestWinners />
 
-  <!-- H2: รีวิวเกมสล็อต คาสิโน และค่ายเกมที่ให้บริการ ครอบคลุมแค่ไหน — ภาพประกอบ slide2.png (Top Providers) -->
   <ContentBoxSevenThreePremium titleleft="" titleright="รีวิวเกมสล็อต คาสิโน และค่ายเกมที่ให้บริการ ครอบคลุมแค่ไหน">
     <div slot="left" class="flex h-full flex-col justify-center">
       <Picture
@@ -175,6 +176,7 @@ import imgWithdraw from "../assets/slide1.png";
       </p>
     </div>
   </ContentBoxSevenThreePremium>
+
   <LoginRtpSection />
   <ProviderGrid />
 

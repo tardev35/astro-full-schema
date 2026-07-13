@@ -125,6 +125,44 @@ different colors:
   footer copyright line (exactly like the currently-wired one did) —
   retheme and swap that text before wiring it in, not after.
 
+**Rotate every family's variant on each rebrand — the ONE variant you
+must not reuse is the one the previous brand had wired in.** This is a
+hard rule, not a nice-to-have: these are unrelated clients on a shared
+template, and two consecutive brands must not come out looking like the
+same site with new colors. Before writing `index.astro`/`MainLayout.astro`,
+for each family below, first *identify the outgoing brand's current pick*
+(grep the live imports in `src/pages/index.astro` and
+`src/layouts/MainLayout.astro`), then **deliberately choose a different
+sibling** for the new brand — a different *shape*, not just a recolor of
+the same one:
+- **ContentBox family** (`ContentBox`/`*Premium`/`*CyberCut`/
+  `*FloatingBadge`/`*SevenThree*`/`*3Three*`/`*Special`) — if the last
+  brand leaned on `FloatingBadge` + `CyberCut`, this brand should lead
+  with a different mix (e.g. `Premium` + plain + `Special`). Vary which
+  shape carries the H1 hero vs the H2 sections.
+- **Announcement family** (`Announcement`/`Announcement2..6`/
+  `*Cyber`/`*Premium`/`*Huay`) — switch to a different ticker number/
+  suffix than the one currently imported.
+- **LatestWinners family** (`LatestWinners`/`2..4`/`*Cyber`/`*Premium`/
+  `*Huay`) — pick a different feed variant than the live one, then do
+  the full retheme + brand-name pass on the newly chosen file (its hue
+  and brand name are hardcoded in JSX, not props).
+- **Navbar / NavbarStyle family** (`Navbar`/`NavbarStyle1..11`/
+  `*Cyber`/`*Huay`/`*Premium`) — point `MainLayout.astro` at a
+  *different* single navbar file than the outgoing brand's, and retheme
+  it. Only one is active at a time, so "rotating" here means changing
+  which one file the layout imports.
+- **Footer family** (`Footer`/`FooterStyle2..3`/`*Cyber`/`*Huay`/
+  `*Premium`(`Sumo`)) — same as navbar: switch `MainLayout.astro` to a
+  different single footer file and retheme it.
+
+If a family genuinely has no better-fitting alternative for this brand's
+mood and you must reuse the previous variant, say so explicitly in the
+`workspec.md` entry with the reason — don't silently leave the old pick
+in place. The default expectation on every rebrand is: different navbar,
+different footer, different announcement, different winners feed, and a
+visibly different ContentBox shape-mix than the brand before.
+
 For every family, two things before wiring a new variant in:
 1. **Retheme it first.** These variants ship in whatever color family
    a past brand used (often purple or emerald green) — grep-check with
@@ -367,6 +405,18 @@ section listing anything left untouched (other pages still on the old
 brand, dead leftover asset files not deleted). Append a new dated
 section for follow-up asks (e.g. a later single-component redesign)
 rather than rewriting history.
+
+**Record each family's variant pick as a before→after line so the
+rotation rule (Phase 2) stays auditable.** For this rebrand, write out
+which sibling each family moved *from* and *to* — e.g. `Navbar:
+NavbarStyle11 → NavbarStyle6`, `Footer: FooterPremiumSumo → FooterCyber`,
+`Announcement: Announcement6 → Announcement3`, `LatestWinners:
+LatestWinners2 → LatestWinnersPremium`, `ContentBox mix:
+FloatingBadge+CyberCut-heavy → Premium+plain-heavy`. The next rebrand
+reads this section to know what NOT to reuse; if any family stayed on
+the same variant, the line must say so with the reason. Grep the
+previous dated entry's picks before choosing this brand's, so you don't
+accidentally land on the same sibling two brands running.
 
 ## Phase 7 — Follow-up single-component redesign requests
 

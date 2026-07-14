@@ -215,6 +215,46 @@ For every family, two things before wiring a new variant in:
    visible daylight between the badge's bottom border and the card's
    inner content.
 
+**Keeping DOM depth shallow when rethemeing a ContentBox variant —
+hoist redundant slot-wrapper `<div>`s, don't add new ones.** These
+templates aim for shallow, HTML5-semantic markup (`section` → `article`
+→ heading/content) for SEO; a repeated wrapper pattern quietly adds a
+dead nesting level. In every *multi-column* variant (`*SevenThree*`,
+`*3Three*`) each column is
+`<article class="flex … gap-N"> <h2>…</h2> <div class="text-…"><slot/></div> </article>`
+— that inner `<div>` exists only to carry **inheritable** text classes
+(font-size / `leading-*` / text color), so it's a removable level: move
+those classes onto the `<article>` and delete the `<div>`, letting the
+slot render as a direct child. This is a *safe / zero-visual-change*
+edit **only** when you handle the one property that leaks to the sibling
+heading:
+- Headings here set their own size/weight/color but **not**
+  `line-height`, so a `leading-relaxed` hoisted onto the `<article>`
+  would leak into the `<h2>` (Tailwind's `html` sets `line-height: 1.5`,
+  so the heading currently renders at 1.5). Neutralize the leak by
+  adding `leading-normal` (= 1.5, a genuine no-op) to every heading that
+  is a flex-sibling of the hoisted slot. Verify with `npm run build`
+  then grep `dist/index.html` that the `<article>` now carries the text
+  classes and the wrapper `<div>` is gone.
+- The single-child count must stay the same for `gap-N` to behave: this
+  works because the *consumer* already wraps slot content in one element
+  (`<div slot="right"><p>…</p></div>`). Don't flatten a case where the
+  slot would inject multiple block children directly into the
+  `gap-N` flex column — the gap would then apply between them and shift
+  spacing.
+
+**Do NOT flatten the single-slot variants the same way** (`ContentBox`,
+`*Premium`, `*CyberCut`, `*FloatingBadge`, `*Huay`, `*Special`). Their
+content wrapper carries `relative z-10` so text paints *above* the
+decorative `absolute` aura/corner layers inside the card (or uses
+`bg-clip-text`, which must stay on the text element itself). Hoisting
+those classes away removes the stacking context and the decoration
+paints over the text — a real regression, not a zero-change edit. Leave
+them unless you also convert the decoration to `::before`/`::after`
+pseudo-elements (a deliberate CSS change to verify visually, not a
+"safe merge"). Applied this to HENGJUD365 on 2026-07-15: flattened the 5
+live multi-column variants only; see that `workspec.md` entry.
+
 When a docx has many sections (6+), pick a *different* `ContentBox*`
 variant for several of them so the page has rhythm instead of eight
 identical rounded cards in a row.

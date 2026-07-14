@@ -708,3 +708,18 @@ NavbarStyle family, Footer family** โดย:
 
 ### การทดสอบ
 - `npm run build` ผ่านสะอาด (9 หน้า) หลังผู้ใช้เอา 2 component ออก
+
+---
+
+## 2026-07-15 — ContentBox family: ลด DOM depth (คงโครง HTML5 semantic)
+
+**เป้าหมาย:** ปรับ ContentBox family ให้ DOM ไม่ลึกเกินไป โดยยังคง semantic tag (section/article/header/h1–h6) ครบเดิม — เลือกแนวทาง "safe merges only / zero visual change" และทำเฉพาะ variant ที่ใช้งานจริง (ไม่แตะ inventory ที่ยังไม่ถูก render)
+
+**สิ่งที่ทำ:** ในกลุ่ม multi-column ทุกคอลัมน์เดิมเป็น `<article class="flex ... gap-N"> <h2> <div class="text-…"><slot/></div> </article>` — `<div>` ชั้นในทำหน้าที่แค่ถือ class ตัวอักษร (size/leading/color) ซึ่ง inherit ได้ จึงย้าย class เหล่านั้นขึ้นไปไว้บน `<article>` แล้วลบ `<div>` ทิ้ง = ตัดความลึกลงคอลัมน์ละ 1 ชั้น
+- กัน `leading-relaxed` รั่วไปที่ `<h2>` (heading ไม่ได้ตั้ง line-height เอง จะ inherit เป็น 1.625) ด้วยการเติม `leading-normal` (=1.5, no-op ตรงกับค่าเดิม) ให้ทุก h2 ที่เป็นพี่น้องกับ slot
+
+**ไฟล์ที่แก้ (5):** ContentBoxSevenThree, ContentBoxSevenThreeFloatingBadge, ContentBoxSevenThreeCyberCut, ContentBoxSevenThreePremium (คอลัมน์ text ทั้งคู่), ContentBox3Three (ทั้ง 3 คอลัมน์)
+
+**จงใจไม่แตะ:** single-slot variants (ContentBox, Premium, CyberCut, FloatingBadge, Huay) และ Special — content wrapper ถือ `relative z-10` เพื่อลอยเหนือเลเยอร์ตกแต่ง absolute (หรือ bg-clip-text ที่ต้องอยู่บน element ของ text เอง) การ flatten จึงเสี่ยง stacking regression ไม่ผ่านเกณฑ์ zero-visual-change — เว้นไว้เป็น follow-up ถ้าต้องการ
+
+**การทดสอบ:** `npm run build` ผ่านสะอาด (9 หน้า) + grep `dist/index.html` ยืนยัน `<article>` ถือ text class โดยตรงและ wrapper `<div>` หายไปแล้ว

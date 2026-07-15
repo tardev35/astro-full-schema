@@ -19,6 +19,6 @@ export default defineConfig({
     "/line": "https://tinyurl.com/suhng",
   },
 
-  site: "https://www.funbeyond-brand.com",
+  site: "https://www.999lord-review.com",
   integrations: [sitemap()],
 });

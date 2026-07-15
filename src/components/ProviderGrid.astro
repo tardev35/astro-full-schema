@@ -1,11 +1,11 @@
 ---
 const providers = [
-  { name: "PG Soft", desc: "เกมภาพสวย ค่าย RTP เป็นที่นิยม", tag: "HOT", initial: "PG", color: "from-purple-500 to-purple-800", category: "hot", online: 3241 },
-  { name: "Pragmatic Play", desc: "ซื้อฟรีสปินสุดคุ้ม RTP เดิม", tag: "HOT", initial: "PP", color: "from-fuchsia-500 to-purple-800", category: "hot", online: 2876 },
-  { name: "JILI", desc: "เกมยอดฮิต ธีมหลากหลาย เข้าฟีเจอร์ง่าย", tag: "แนะนำ", initial: "JL", color: "from-purple-600 to-slate-900", category: "recommend", online: 1954 },
+  { name: "PG Soft", desc: "เกมภาพสวย ค่าย RTP เป็นที่นิยม", tag: "HOT", initial: "PG", color: "from-blue-500 to-blue-800", category: "hot", online: 3241 },
+  { name: "Pragmatic Play", desc: "ซื้อฟรีสปินสุดคุ้ม RTP เดิม", tag: "HOT", initial: "PP", color: "from-cyan-500 to-blue-800", category: "hot", online: 2876 },
+  { name: "JILI", desc: "เกมยอดฮิต ธีมหลากหลาย เข้าฟีเจอร์ง่าย", tag: "แนะนำ", initial: "JL", color: "from-blue-600 to-slate-900", category: "recommend", online: 1954 },
   { name: "Habanero", desc: "โบนัสจัดเต็ม เบทต่ำลุ้นใหญ่", tag: "ใหม่", initial: "HB", color: "from-orange-500 to-red-700", category: "new", online: 1327 },
-  { name: "CQ9 Gaming", desc: "แจ็คพอตแตกบ่อย เข้าฟีเจอร์ง่าย", tag: "แนะนำ", initial: "CQ", color: "from-purple-700 to-slate-900", category: "recommend", online: 2108 },
-  { name: "Microgaming", desc: "สล็อตค่ายใหญ่ ยืนหนึ่งด้านความเสถียร", tag: "แนะนำ", initial: "MG", color: "from-violet-600 to-purple-800", category: "recommend", online: 1689 },
+  { name: "CQ9 Gaming", desc: "แจ็คพอตแตกบ่อย เข้าฟีเจอร์ง่าย", tag: "แนะนำ", initial: "CQ", color: "from-sky-600 to-slate-900", category: "recommend", online: 2108 },
+  { name: "Microgaming", desc: "สล็อตค่ายใหญ่ ยืนหนึ่งด้านความเสถียร", tag: "แนะนำ", initial: "MG", color: "from-indigo-600 to-blue-800", category: "recommend", online: 1689 },
 ];
 
 const filters = [
@@ -18,10 +18,10 @@ const filters = [
 
 <div class="mx-auto mb-10 w-full max-w-[1400px] px-4 font-sans relative z-10">
   <div class="mb-6 flex w-full flex-col items-center justify-center gap-2 text-center">
-    <h2 class="text-3xl font-black uppercase tracking-widest text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-gray-200 to-gray-400 drop-shadow-[0_2px_10px_rgba(255,255,255,0.2)]">
-      ค่ายเกมยอดนิยม <span class="text-purple-400">FUNBEYOND</span>
+    <h2 class="text-2xl font-black uppercase tracking-widest text-transparent bg-clip-text bg-gradient-to-r from-cyan-300 via-gray-200 to-gray-400 drop-shadow-[0_2px_10px_rgba(255,255,255,0.2)]">
+      ค่ายเกมยอดนิยม <span class="text-red-400">999LORD</span>
     </h2>
-    <div class="h-[4px] w-24 rounded-full bg-gradient-to-r from-transparent via-purple-500 to-transparent mt-2"></div>
+    <div class="h-[4px] w-24 rounded-full bg-gradient-to-r from-transparent via-red-500 to-transparent mt-2"></div>
   </div>
 
   <div class="mb-6 flex flex-wrap items-center justify-center gap-2">
@@ -31,7 +31,7 @@ const filters = [
           type="button"
           data-filter-btn={f.key}
           class={`rounded-full border px-4 py-1.5 text-xs font-bold tracking-wide transition-colors duration-200 ${
-            i === 0 ? "border-purple-400 bg-purple-600 text-white" : "border-white/10 bg-white/5 text-gray-400 hover:border-purple-400/40 hover:text-white"
+            i === 0 ? "border-blue-400 bg-blue-600 text-white" : "border-white/10 bg-white/5 text-gray-400 hover:border-blue-400/40 hover:text-white"
           }`}>
           {f.label}
         </button>
@@ -44,16 +44,16 @@ const filters = [
       providers.map((game) => (
         <div
           data-category={game.category}
-          class="group relative flex flex-col overflow-hidden rounded-2xl border border-purple-500/20 bg-[#0a001a]/80 p-5 shadow-lg backdrop-blur-md transition-all duration-300 hover:-translate-y-1.5 hover:border-purple-400/50 hover:shadow-[0_10px_30px_rgba(157,78,221,0.25)]">
+          class="group relative flex flex-col overflow-hidden rounded-2xl border border-blue-500/20 bg-[#050d16]/80 p-5 shadow-lg backdrop-blur-md transition-all duration-300 hover:-translate-y-1.5 hover:border-blue-400/50 hover:shadow-[0_10px_30px_rgba(37,99,235,0.25)]">
 
           <div class="mb-3 flex items-start justify-between">
             <div class={`flex h-11 w-11 items-center justify-center rounded-xl border border-white/10 bg-gradient-to-br ${game.color} text-xs font-black text-white shadow-inner transition-transform duration-300 group-hover:scale-110`}>
               {game.initial}
             </div>
-            <span class="rounded-full border border-yellow-400/30 bg-yellow-400/10 px-2 py-0.5 text-[9px] font-black tracking-wide text-yellow-400">{game.tag}</span>
+            <span class="rounded-full border border-red-400/30 bg-red-400/10 px-2 py-0.5 text-[9px] font-black tracking-wide text-red-400">{game.tag}</span>
           </div>
 
-          <h3 class="text-sm font-black text-white transition-colors group-hover:text-yellow-400">{game.name}</h3>
+          <h3 class="text-sm font-black text-white transition-colors group-hover:text-cyan-300">{game.name}</h3>
           <p class="mt-1 text-[10px] leading-relaxed text-gray-400">{game.desc}</p>
 
           <div class="mt-3 flex items-center gap-1.5 text-[10px] text-gray-500">
@@ -61,7 +61,7 @@ const filters = [
             ผู้เล่นออนไลน์ {game.online.toLocaleString("en-US")}
           </div>
 
-          <div class="mt-4 w-full rounded-lg border border-purple-500/20 bg-purple-950/40 py-2 text-center text-[11px] font-bold text-purple-300 shadow-inner transition-colors duration-300 group-hover:border-purple-400 group-hover:bg-gradient-to-r group-hover:from-purple-600 group-hover:to-purple-700 group-hover:text-white">
+          <div class="mt-4 w-full rounded-lg border border-blue-500/20 bg-blue-950/40 py-2 text-center text-[11px] font-bold text-blue-300 shadow-inner transition-colors duration-300 group-hover:border-blue-400 group-hover:bg-gradient-to-r group-hover:from-blue-600 group-hover:to-blue-700 group-hover:text-white">
             เข้าเล่นเกม
           </div>
         </div>
@@ -80,11 +80,11 @@ const filters = [
   buttons.forEach((btn) => {
     btn.addEventListener("click", () => {
       buttons.forEach((b) => {
-        b.classList.remove("border-purple-400", "bg-purple-600", "text-white");
+        b.classList.remove("border-blue-400", "bg-blue-600", "text-white");
         b.classList.add("border-white/10", "bg-white/5", "text-gray-400");
       });
       btn.classList.remove("border-white/10", "bg-white/5", "text-gray-400");
-      btn.classList.add("border-purple-400", "bg-purple-600", "text-white");
+      btn.classList.add("border-blue-400", "bg-blue-600", "text-white");
 
       const filter = btn.dataset.filterBtn;
       let visibleCount = 0;

@@ -1,17 +1,16 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
 import ContentBox from "../components/ContentBox.astro";
-import FeatureHighlights from "../components/FeatureHighlights.astro";
 import ContentBoxPremium from "../components/ContentBoxPremium.astro";
 import ContentBoxCyberCut from "../components/ContentBoxCyberCut.astro";
 import ContentBoxNeumorphism from "../components/ContentBoxNeumorphism.astro";
 import ContentBoxSevenThree from "../components/ContentBoxSevenThree.astro";
-import ContentBoxSpecial from "../components/ContentBoxSpecial.astro";
+import ContentBoxFloatingBadge from "../components/ContentBoxFloatingBadge.astro";
 import LoginRtpSection from "../components/LoginRtpSection.astro";
-import Announcement from "../components/AnnouncementCyber.astro";
+import Announcement from "../components/Announcement4.astro";
 import ProviderGrid from "../components/ProviderGrid.astro";
 import GameRankingBoard from "../components/GameRankingBoard.astro";
-import LatestWinners from "../components/LatestWinnersCyber.astro";
+import LatestWinners from "../components/LatestWinnersPremium.astro";
 import SmoothCarousel from "../components/SmoothCarousel.astro";
 import ReviewCardSumo from "../components/ReviewCardSumo2.astro";
 import Navfoot from "../components/Navfoot.astro";
@@ -22,78 +21,79 @@ const logoUrl = homePage + "/logo.webp";
 const webPageSchema = {
   "@context": "https://schema.org",
   "@type": "WebPage",
-  name: "FUNBEYOND เว็บสล็อตมีใบรับรอง เกมลิขสิทธิ์แท้ ระบบออโต้ เข้าเล่นเลย",
-  description: "FUNBEYOND เว็บสล็อตมีใบรับรอง เว็บน้องใหม่ ที่มีเกมลิขสิทธิ์แท้ ระบบออโต้ ผ่านผลทดสอบการใช้งาน และคำวิจารณ์ที่ควรรู้ก่อนเข้าเล่น สมัครสมาชิก รับโปรพิเศษ",
+  name: "999LORD รีวิวเว็บสล็อต | ทางเข้าเว็บตรง สล็อตทุกค่าย ระบบออโต้",
+  description: "999LORD รีวิวเว็บสล็อต ภาพรวม จุดเด่น โครงสร้างเว็บไซต์ ฟีเจอร์ที่ให้บริการ รวมค่ายสล็อต ระบบอัตโนมัติ ช่องทางเข้า มาตรฐานด้านความปลอดภัย ข้อมูลก่อนสมัคร",
   url: currentPath,
 };
 const webSiteSchema = {
   "@context": "https://schema.org",
   "@type": "WebSite",
-  name: "FUNBEYOND",
-  alternateName: ["FUNBEYOND", "FUNBEYOND เว็บสล็อตมีใบรับรอง"],
-  url: "https://www.funbeyond-brand.com/",
+  name: "999LORD",
+  alternateName: ["999LORD", "999LORD รีวิวเว็บสล็อต"],
+  url: "https://www.999lord-review.com/",
 };
 const orgSchema = {
   "@context": "https://schema.org",
   "@type": "Organization",
-  name: "FUNBEYOND",
+  name: "999LORD",
   logo: logoUrl,
   url: homePage,
 };
 const allSchemas = [webPageSchema, orgSchema, webSiteSchema];
 
 import { Picture } from "astro:assets";
-import imgCertified from "../assets/slide3.png";
-import imgPromo from "../assets/banner2.png";
+import imgStructure from "../assets/slide1.png";
+import imgAuto from "../assets/slide4.png";
 ---
 
 <MainLayout
-  title="FUNBEYOND เว็บสล็อตมีใบรับรอง เกมลิขสิทธิ์แท้ ระบบออโต้ เข้าเล่นเลย"
-  description="FUNBEYOND เว็บสล็อตมีใบรับรอง เว็บน้องใหม่ ที่มีเกมลิขสิทธิ์แท้ ระบบออโต้ ผ่านผลทดสอบการใช้งาน และคำวิจารณ์ที่ควรรู้ก่อนเข้าเล่น สมัครสมาชิก รับโปรพิเศษ">
+  title="999LORD รีวิวเว็บสล็อต | ทางเข้าเว็บตรง สล็อตทุกค่าย ระบบออโต้"
+  description="999LORD รีวิวเว็บสล็อต ภาพรวม จุดเด่น โครงสร้างเว็บไซต์ ฟีเจอร์ที่ให้บริการ รวมค่ายสล็อต ระบบอัตโนมัติ ช่องทางเข้า มาตรฐานด้านความปลอดภัย ข้อมูลก่อนสมัคร">
   <script type="application/ld+json" set:html={JSON.stringify(allSchemas)} />
 
-  <Announcement message="💎 FUNBEYOND: เว็บสล็อตมีใบรับรอง เกมลิขสิทธิ์แท้ ระบบออโต้ ฝาก-ถอน รวดเร็ว สมัครสมาชิกวันนี้ รับโปรโมชั่นต้อนรับสมาชิกใหม่สูงสุด 150%" />
+  <Announcement message="🦅 999LORD รีวิวเว็บสล็อตเว็บตรง สล็อตทุกค่าย ระบบออโต้ ฝาก-ถอนอัตโนมัติ รวดเร็ว ปลอดภัย มาตรฐาน SSL ทางเข้าอัปเดตล่าสุด www.999lord-review.com" />
 
   <div class="mx-auto w-full max-w-5xl px-4 py-8 text-center">
-    <p class="bg-gradient-to-b from-purple-200 to-purple-500 bg-clip-text text-4xl leading-tight font-black text-transparent drop-shadow-sm md:text-5xl">
-      FUN<span class="bg-gradient-to-b from-yellow-200 to-yellow-500 bg-clip-text text-transparent">BEYOND</span>
+    <p class="bg-gradient-to-b from-blue-200 to-blue-500 bg-clip-text text-4xl leading-tight font-black text-transparent drop-shadow-sm md:text-5xl">
+      999<span class="bg-gradient-to-b from-red-300 to-red-600 bg-clip-text text-transparent">LORD</span>
       <br />
     </p>
   </div>
 
-  <ContentBox title="FUNBEYOND เว็บสล็อตมีใบรับรอง เกมลิขสิทธิ์แท้ ระบบออโต้ เข้าเล่นเลย">
+  <ContentBox title="999LORD รีวิวเว็บสล็อต พร้อมข้อมูลเว็บตรง ทางเข้า และระบบออโต้">
     <p class="leading-relaxed">
-      <strong class="text-amber-400">FUNBEYOND</strong> เว็บสล็อตมีใบรับรอง ที่ให้บริการเกมลิขสิทธิ์แท้จากหลายค่ายผ่านแพลตฟอร์มเดียว โดยมีระบบออโต้ รองรับการใช้งานตั้งแต่สมัครสมาชิกไปจนถึงการจัดการธุรกรรมต่าง
-      ๆ ภายในเว็บไซต์ FUNBEYOND มีข้อมูลเกี่ยวกับเกม ระบบ และการให้บริการที่ช่วยให้ผู้เล่นศึกษารายละเอียดได้ก่อนเริ่มต้นใช้งาน หากต้องการเริ่มสัมผัสประสบการณ์ของเว็บไซต์ สามารถสมัครสมาชิกและเข้าเล่นเลยผ่านเว็บไซต์ทางการได้ทันที
+      <strong class="text-cyan-300">999LORD</strong> เป็นเว็บไซต์สล็อตที่เริ่มมีผู้ค้นหาและถูกพูดถึงมากขึ้นในช่วงที่ผ่านมา หลายคนจึงอยากรู้ว่าเว็บไซต์นี้มีจุดเด่นอะไร ใช้งานเป็นอย่างไร
+      และมีระบบต่าง ๆ ที่ตอบโจทย์ผู้เล่นหรือไม่ เนื้อหานี้จะพาไป รีวิวเว็บสล็อต ตั้งแต่ภาพรวมของเว็บไซต์ ฟีเจอร์ที่น่าสนใจ ข้อมูลเว็บตรง ค่ายเกมที่รองรับ ทางเข้า สำหรับการใช้งาน ไปจนถึง ระบบออโต้
+      ที่ใช้จัดการขั้นตอนสมัครสมาชิก ฝากเงิน และถอนเงิน เพื่อให้เห็นภาพของเว็บไซต์ 999LORD ได้ชัดเจนมากขึ้น
     </p>
 
     <div class="mt-8 flex flex-wrap justify-center gap-6">
       <a
         href="/login"
-        class="group relative flex items-center justify-center rounded-full border border-purple-500/50 bg-[#0a001a]/80 px-10 py-3.5 font-black text-yellow-400 backdrop-blur-sm transition-all duration-300 hover:scale-105 hover:bg-purple-900/60 hover:shadow-[0_0_15px_rgba(157,78,221,0.4)]">
+        class="group relative flex items-center justify-center rounded-full border border-blue-500/50 bg-[#050d16]/80 px-10 py-3.5 font-black text-cyan-300 backdrop-blur-sm transition-all duration-300 hover:scale-105 hover:bg-blue-900/60 hover:shadow-[0_0_15px_rgba(37,99,235,0.4)]">
         เข้าสู่ระบบ
       </a>
 
       <a
         href="/register"
-        class="group relative flex items-center justify-center rounded-full bg-gradient-to-r from-yellow-500 via-yellow-400 to-yellow-500 px-10 py-3.5 font-black text-[#0a001a] shadow-[0_5px_20px_rgba(251,191,36,0.4)] transition-all duration-300 hover:-translate-y-1 hover:scale-105 hover:shadow-[0_8px_25px_rgba(251,191,36,0.6)]">
-        เข้าเล่นเลย
+        class="group relative flex items-center justify-center rounded-full bg-gradient-to-r from-red-500 via-red-500 to-red-600 px-10 py-3.5 font-black text-white shadow-[0_5px_20px_rgba(239,68,68,0.4)] transition-all duration-300 hover:-translate-y-1 hover:scale-105 hover:shadow-[0_8px_25px_rgba(239,68,68,0.6)]">
+        สมัครสมาชิก
       </a>
     </div>
   </ContentBox>
 
-  <ContentBoxPremium as="h2" title="ทำความรู้จักกับ FUNBEYOND เว็บสล็อตน้องใหม่ ที่กำลังถูกจับตามอง">
+  <ContentBoxPremium as="h2" title="ภาพรวม เว็บไซต์ 999LORD ที่ถูกพูดถึงในกลุ่มผู้เล่นสล็อตออนไลน์">
     <p class="leading-relaxed">
-      FUNBEYOND เปิดให้บริการอย่างเป็นทางการในปี 2026 โดยเกิดจากแนวคิดที่ต้องการพัฒนาเว็บไซต์เกมออนไลน์ให้ตอบโจทย์ผู้เล่นยุคใหม่ หลังพบว่าหลายเว็บไซต์ยังประสบปัญหาด้านความเสถียร
-      ระบบฝากถอนที่ใช้เวลานาน การรวบรวมเกมจากหลายค่ายที่ไม่เป็นระบบ รวมถึงข้อมูลเว็บไซต์ที่ไม่ครบถ้วนจนทำให้ผู้เล่นต้องเสียเวลาค้นหาจากหลายแหล่ง จึงเป็นจุดเริ่มต้นของการพัฒนาแพลตฟอร์ม FUNBEYOND
-      ที่รวบรวมเกมลิขสิทธิ์แท้ ระบบออโต้ และข้อมูลสำคัญเกี่ยวกับการใช้งานไว้ในที่เดียว เพื่อให้ผู้เล่นสามารถศึกษารายละเอียด เปรียบเทียบข้อมูล และเลือกใช้งานเว็บไซต์ได้อย่างสะดวกมากขึ้น
+      ภาพรวมของ 999LORD สะท้อนให้เห็นว่าเว็บไซต์เลือกนำเสนอเกมสล็อตเป็นบริการหลัก ควบคู่กับเกมคาสิโนประเภทอื่นภายใต้แพลตฟอร์มเดียว โครงสร้างของเว็บไซต์แบ่งหมวดหมู่เกมอย่างชัดเจน รองรับการเชื่อมต่อกับ
+      <strong class="text-cyan-300">สล็อตทุกค่าย</strong> และใช้ ระบบออโต้ จัดการธุรกรรมภายในเว็บไซต์ ขณะที่ ทางเข้าเว็บตรง ถูกจัดไว้เป็นช่องทางหลักสำหรับเข้าสู่บริการทั้งหมด
+      จึงทำให้เว็บไซต์ถูกหยิบยกขึ้นมาพูดถึงบ่อยครั้งเมื่อมีการรีวิวเว็บสล็อตในช่วงที่ผ่านมา
     </p>
   </ContentBoxPremium>
 
-  <ContentBoxSevenThree titleleft="" titleright="FUNBEYOND เว็บสล็อตมีใบรับรอง เกมลิขสิทธิ์แท้ และมาตรฐานการให้บริการ">
+  <ContentBoxSevenThree titleright="รีวิว 999LORD จากการสำรวจโครงสร้างเว็บไซต์และฟีเจอร์ที่ให้บริการ">
     <div slot="left" class="flex h-full flex-col justify-center">
       <Picture
-        src={imgCertified}
+        src={imgStructure}
         loading="lazy"
         fetchpriority="low"
         widths={[200, 400, 600, 800]}
@@ -102,89 +102,111 @@ import imgPromo from "../assets/banner2.png";
         formats={["avif", "webp"]}
         fallbackFormat="webp"
         quality={80}
-        alt="FUNBEYOND เว็บสล็อตมีใบรับรอง SSL RNG GLI MGA PAGCOR"
-        class="mx-auto h-auto w-full rounded-2xl border-2 border-purple-400/30 shadow-[0_10px_30px_rgba(157,78,221,0.3)]"
+        alt="999LORD โครงสร้างเว็บไซต์ Auto Wallet ระบบสมาชิก ประวัติธุรกรรม แจ้งเตือน ค้นหาเกม"
+        class="mx-auto h-auto w-full rounded-2xl border-2 border-blue-400/30 shadow-[0_10px_30px_rgba(37,99,235,0.3)]"
       />
     </div>
     <div slot="right">
       <p class="leading-relaxed">
-        เว็บสล็อตมีใบรับรอง ช่วยเพิ่มความมั่นใจก่อนเลือกใช้งานเว็บไซต์ <strong class="text-amber-400">FUNBEYOND</strong> รวบรวมเกมลิขสิทธิ์แท้จากผู้พัฒนาเกมระดับสากล พร้อมผู้ให้บริการที่อยู่ภายใต้การกำกับดูแลของ
-        MGA, PAGCOR และ Anjouan Gaming รวมถึงเกมที่ผ่านมาตรฐาน RNG, GLI, iTech Labs และการเชื่อมต่อข้อมูลด้วย SSL/TLS Encryption เพื่อเสริมความปลอดภัยในการใช้งาน
+        เมื่อเข้าสู่ <strong class="text-cyan-300">999LORD</strong> จะเห็นว่าโครงสร้างเว็บไซต์ถูกแบ่งออกเป็นหมวดหมู่ที่ชัดเจน ตั้งแต่หน้าเกม ศูนย์ระบบสมาชิก โปรโมชั่น และเมนูจัดการบัญชี ช่วยให้ค้นหาบริการต่าง
+        ๆ ได้สะดวก ภายในเว็บไซต์ยังเชื่อมต่อ ระบบออโต้ และ Auto Wallet สำหรับจัดการการฝากถอน พร้อมแสดง ประวัติธุรกรรม ให้ตรวจสอบย้อนหลังได้ ขณะเดียวกันยังมี ระบบแจ้งเตือน สำหรับข้อมูลสำคัญ การค้นหาเกม
+        และการบันทึกเกมโปรด (Favorite) เพื่อกลับมาเล่นได้รวดเร็ว อีกทั้งยังรองรับมือถือ และมีตัวเลือกเปลี่ยนภาษา เพื่อให้การใช้งานเหมาะกับผู้เล่นในแต่ละภูมิภาคมากขึ้น
       </p>
     </div>
   </ContentBoxSevenThree>
 
-  <ProviderGrid />
-
-  <ContentBoxNeumorphism as="h2" title="ผลทดสอบการใช้งาน ระบบออโต้ ฝาก ถอน ความเร็ว และเสถียรภาพของเว็บไซต์">
+  <ContentBoxCyberCut as="h2" title="ฟีเจอร์และระบบที่เป็นจุดเด่น เมื่อเทียบกับเว็บไซต์ในกลุ่มเดียวกัน">
     <p class="leading-relaxed">
-      จากการทดลองใช้งานในช่วงเวลาต่าง ๆ พบว่าระบบออโต้ของเว็บไซต์สามารถรองรับการสมัครสมาชิก ฝากเงิน ถอนเงิน และเข้าเล่นเกมได้อย่างต่อเนื่อง โดยขั้นตอนการทำรายการตอบสนองได้รวดเร็ว
-      การเชื่อมต่อระหว่างหน้าเว็บไซต์มีความลื่นไหล และไม่พบปัญหาการโหลดข้อมูลซ้ำหรือระบบหยุดทำงานระหว่างการทดสอบ นอกจากนี้การเข้าใช้งานผ่านมือถือและคอมพิวเตอร์ยังสามารถใช้งานได้อย่างเสถียร
-      ช่วยให้การเล่นเกมและการจัดการธุรกรรมเป็นไปอย่างต่อเนื่องตลอดการใช้งาน
-    </p>
-    <FeatureHighlights
-      items={[
-        {
-          icon: "⚡",
-          title: "ผลทดสอบความเร็วในการเข้าใช้งาน",
-          accent: "gold",
-          description:
-            "จากการทดลองเข้าใช้งานเว็บไซต์ผ่านเครือข่ายอินเทอร์เน็ตและอุปกรณ์หลายรูปแบบ พบว่าหน้าเว็บไซต์สามารถเปิดได้อย่างรวดเร็ว การเปลี่ยนหน้าเมนูและการเข้าสู่หน้าเกมทำได้ต่อเนื่อง ไม่พบอาการโหลดค้างหรือหน้าจอหยุดทำงานระหว่างการใช้งาน ช่วยให้ผู้เล่นเข้าถึงบริการต่าง ๆ ได้สะดวกตลอดเวลา",
-        },
-        {
-          icon: "💸",
-          title: "ผลทดสอบระบบฝากถอนอัตโนมัติ",
-          accent: "blue",
-          description:
-            "ระบบฝากถอนอัตโนมัติสามารถรองรับการทำรายการได้ตามขั้นตอนของเว็บไซต์ ตั้งแต่การยืนยันข้อมูล การประมวลผลธุรกรรม ไปจนถึงการอัปเดตยอดในบัญชีสมาชิก โดยระหว่างการทดสอบไม่พบความผิดปกติของระบบหรือปัญหาการประมวลผลที่ส่งผลต่อการใช้งาน ทำให้การจัดการธุรกรรมเป็นไปอย่างต่อเนื่อง",
-        },
-        {
-          icon: "🛡️",
-          title: "ผลทดสอบความเสถียรของเว็บไซต์",
-          accent: "gold",
-          description:
-            "ทีมงานได้ทดลองใช้งานเว็บไซต์ในช่วงเวลาที่แตกต่างกัน ทั้งบนคอมพิวเตอร์และโทรศัพท์มือถือ พบว่าระบบสามารถรองรับการเข้าใช้งานได้อย่างเสถียร การสลับเมนู เข้าเกม และใช้งานฟังก์ชันต่าง ๆ เป็นไปอย่างลื่นไหล ไม่พบปัญหาการหลุดจากระบบหรือข้อผิดพลาดที่กระทบต่อการใช้งานโดยรวม จึงช่วยให้ผู้เล่นใช้งานเว็บไซต์ได้อย่างต่อเนื่องมากยิ่งขึ้น",
-        },
-      ]}
-    />
-  </ContentBoxNeumorphism>
-
-  <GameRankingBoard />
-  <LatestWinners />
-
-  <ContentBoxCyberCut as="h2" title="คำวิจารณ์เกี่ยวกับ FUNBEYOND พร้อมข้อสังเกตที่ควรรู้ก่อนใช้งาน">
-    <p class="leading-relaxed">
-      จากการรวบรวมความคิดเห็นของอาสาสมัครผู้ทดลองเล่นกับ <strong class="text-yellow-400">FUNBEYOND</strong> พบว่าผู้เข้าร่วมส่วนใหญ่ให้ความเห็นว่าหน้าเว็บไซต์ใช้งานง่าย ระบบออโต้ตอบสนองได้รวดเร็ว และการค้นหาเกมทำได้สะดวก
-      อย่างไรก็ตาม มีข้อเสนอแนะว่าควรศึกษารายละเอียดของโปรโมชั่นและเงื่อนไขการใช้งานก่อนสมัครสมาชิก เพื่อให้เข้าใจสิทธิประโยชน์และข้อกำหนดต่าง ๆ ได้ครบถ้วน
+      หลายเว็บไซต์ยังแยกเมนูสมาชิก การเงิน และประวัติธุรกรรมออกจากกัน ทำให้ต้องสลับหลายหน้าก่อนจะดำเนินการแต่ละขั้นตอน ภายในเว็บไซต์นี้จึงรวม ระบบสมาชิก, Auto Wallet, ประวัติธุรกรรม
+      และเมนูจัดการบัญชีไว้ในศูนย์เดียว ลดการค้นหาเมนูที่ซ้ำซ้อนและตรวจสอบข้อมูลได้จากหน้าเดียว
     </p>
   </ContentBoxCyberCut>
+
+  <ContentBoxNeumorphism as="h2" title="รวมค่ายสล็อตที่พบภายใน 999LORD พร้อมรายละเอียดของผู้พัฒนาเกมแต่ละราย">
+    <p class="leading-relaxed">
+      เว็บไซต์สล็อตหลายแห่งมักเชื่อมต่อกับผู้พัฒนาเกมเพียงบางค่าย ทำให้ผู้เล่นต้องสลับไปใช้งานหลายเว็บไซต์หากต้องการเล่นเกมที่หลากหลาย ภายใน 999LORD มีการรวบรวมเกมสล็อตจากผู้พัฒนาเกมหลายรายไว้ในแพลตฟอร์มเดียว
+      ไม่ว่าจะเป็น PG Soft, Pragmatic Play, JILI, Habanero, CQ9 และค่ายเกมอื่น ๆ แต่ละค่ายมีเอกลักษณ์แตกต่างกัน ทั้งรูปแบบกราฟิก ระบบโบนัส ความผันผวน (Volatility) และฟีเจอร์ภายในเกม
+      ทำให้ผู้เล่นสามารถเลือกแนวเกมที่เหมาะกับสไตล์การเล่นของตนเอง
+    </p>
+  </ContentBoxNeumorphism>
+
+  <ProviderGrid />
+  <GameRankingBoard />
+
+  <ContentBoxSevenThree titleright="ระบบอัตโนมัติ สล็อตเว็บนี้ ทำงานอย่างไร ตั้งแต่สมัครสมาชิกจนถึงฝากถอน">
+    <div slot="left" class="flex h-full flex-col justify-center">
+      <Picture
+        src={imgAuto}
+        loading="lazy"
+        fetchpriority="low"
+        widths={[200, 400, 600, 800]}
+        sizes="(max-width: 768px) 100vw, 30vw"
+        decoding="async"
+        formats={["avif", "webp"]}
+        fallbackFormat="webp"
+        quality={80}
+        alt="999LORD ระบบอัตโนมัติ Auto System Auto Wallet ฝาก ถอน อัตโนมัติ 24 ชม."
+        class="mx-auto h-auto w-full rounded-2xl border-2 border-blue-400/30 shadow-[0_10px_30px_rgba(37,99,235,0.3)]"
+      />
+    </div>
+    <div slot="right">
+      <p class="leading-relaxed">
+        เว็บไซต์สล็อตบางแห่งยังต้องยืนยันข้อมูลหรือรอเจ้าหน้าที่ตรวจสอบในแต่ละขั้นตอน ส่งผลให้การสมัครสมาชิก การฝากเงิน หรือการถอนเงินใช้เวลานานกว่าที่ควร ภายในเว็บไซต์นี้มีการเชื่อมต่อ
+        <strong class="text-cyan-300">ระบบอัตโนมัติ (Auto System)</strong> เข้ากับการจัดการสมาชิกและ Auto Wallet ตั้งแต่การเปิดบัญชี การบันทึกข้อมูลผู้ใช้ ไปจนถึงการตรวจสอบยอดฝากและคำขอถอน
+        ทำให้แต่ละขั้นตอนเชื่อมต่อกัน
+      </p>
+    </div>
+  </ContentBoxSevenThree>
+
+  <LatestWinners />
+
+  <ContentBoxFloatingBadge as="h2" title="ช่องทางเข้าสู่ 999LORD และวิธีตรวจสอบเว็บไซต์ก่อนเข้าใช้งาน">
+    <p class="leading-relaxed">
+      เว็บไซต์สล็อตที่ได้รับความนิยมมักมีหลายโดเมนและหลายลิงก์ที่อ้างว่าเป็นเว็บไซต์หลัก ทำให้ผู้ใช้งานพบปัญหาเข้าสู่เว็บไซต์ผิด หรือพบหน้าที่เลียนแบบจนไม่สามารถใช้งานได้ตามปกติ ก่อนเข้าใช้งานจึงควรตรวจสอบ
+      ชื่อโดเมน, การเชื่อมต่อ HTTPS, เครื่องหมาย SSL และข้อมูลหน้าเว็บไซต์ให้ตรงกับช่องทางที่ใช้งานอยู่ รวมถึงหลีกเลี่ยงการเข้าสู่ระบบผ่านลิงก์ที่ไม่ทราบแหล่งที่มา
+    </p>
+  </ContentBoxFloatingBadge>
+
+  <ContentBox as="h2" title="มาตรฐานด้านความปลอดภัยของ 999LORD และระบบที่ช่วยปกป้องข้อมูลผู้ใช้งาน">
+    <p class="leading-relaxed">
+      เว็บไซต์สล็อตหลายแห่งให้ความสำคัญกับการปกป้องข้อมูลสมาชิก เนื่องจากมีการใช้งานข้อมูลบัญชีและธุรกรรมทางการเงินภายในระบบ ก่อนเข้าใช้งานจึงควรตรวจสอบว่าหน้าเว็บไซต์มีการเชื่อมต่อผ่าน HTTPS มี SSL
+      Certificate และแสดงข้อมูลการเข้ารหัสการรับส่งข้อมูลอย่างถูกต้อง นอกจากนี้ยังควรสังเกตการยืนยันตัวตนก่อนเข้าสู่ระบบ
+    </p>
+  </ContentBox>
 
   <ReviewCardSumo />
   <SmoothCarousel />
 
-  <LoginRtpSection />
-
-  <ContentBoxNeumorphism as="h2" title="สมัครสมาชิก FUNBEYOND เว็บไซต์ทางการ เข้าเล่นเลย พร้อมรับโปรพิเศษ">
+  <ContentBox as="h2" title="ขั้นตอนการสมัครสมาชิก 999LORD พร้อมการเตรียมข้อมูลก่อนเริ่มใช้งาน">
     <p class="leading-relaxed">
-      การสมัครสมาชิก <strong class="text-yellow-400">FUNBEYOND</strong> สามารถดำเนินการผ่านเว็บไซต์ทางการได้อย่างสะดวก เพียงกรอกข้อมูลตามขั้นตอนและยืนยันบัญชี ระบบออโต้จะช่วยจัดการกระบวนการต่าง ๆ เพื่อให้เข้าใช้งานได้รวดเร็ว
-      หลังสมัครสมาชิกเรียบร้อย ผู้เล่นสามารถเข้าเล่นเกมลิขสิทธิ์แท้ได้ทันที พร้อมรับสิทธิพิเศษสำหรับสมาชิกใหม่ ไม่ว่าจะเป็นโปรโมชั่นต้อนรับ กิจกรรมประจำเว็บไซต์ หรือข้อเสนอที่อัปเดตในแต่ละช่วงเวลา เพื่อเพิ่มความคุ้มค่าก่อนเริ่มต้นใช้งาน
+      ก่อนเริ่มสมัครสมาชิกกับ <strong class="text-cyan-300">999LORD</strong> ควรเตรียมข้อมูลพื้นฐานให้พร้อม เพื่อให้การสมัครผ่านระบบอัตโนมัติดำเนินไปได้อย่างต่อเนื่อง โดยแบ่งเป็นสิ่งที่ควรเตรียม
+      และลำดับขั้นตอนการสมัคร ดังนี้
     </p>
 
-    <Picture
-      src={imgPromo}
-      loading="lazy"
-      fetchpriority="low"
-      widths={[400, 600, 768]}
-      sizes="(max-width: 768px) 100vw, 42rem"
-      decoding="async"
-      formats={["avif", "webp"]}
-      fallbackFormat="webp"
-      quality={70}
-      alt="FUNBEYOND โปรโมชั่นคืนยอดเสีย 5% รับทุกวันสูงสุด 30,000 บาท"
-      class="mx-auto mt-6 h-auto w-full max-w-2xl rounded-2xl border border-purple-500/30 shadow-[0_5px_20px_rgba(157,78,221,0.25)]"
-    />
+    <div class="mx-auto mt-8 grid max-w-4xl grid-cols-1 gap-6 text-left md:grid-cols-2">
+      <div class="rounded-2xl border border-blue-500/30 bg-[#050d16]/70 p-6">
+        <p class="mb-4 text-lg font-black tracking-wide text-cyan-300">สิ่งที่ควรเตรียม</p>
+        <ul class="flex flex-col gap-3 text-gray-300">
+          <li class="flex items-start gap-3"><span class="mt-1 text-red-400">◆</span> หมายเลขโทรศัพท์</li>
+          <li class="flex items-start gap-3"><span class="mt-1 text-red-400">◆</span> บัญชีธนาคารที่ใช้ทำธุรกรรม</li>
+          <li class="flex items-start gap-3"><span class="mt-1 text-red-400">◆</span> รหัสผ่านที่ต้องการใช้งาน</li>
+        </ul>
+      </div>
 
-    <div class="mt-6 flex justify-center">
+      <div class="rounded-2xl border border-blue-500/30 bg-[#050d16]/70 p-6">
+        <p class="mb-4 text-lg font-black tracking-wide text-cyan-300">ขั้นตอนการสมัคร</p>
+        <ol class="flex flex-col gap-3 text-gray-300">
+          <li class="flex items-start gap-3"><span class="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-red-500/20 text-xs font-black text-red-400">1</span> เข้าสู่หน้าสมัครสมาชิก</li>
+          <li class="flex items-start gap-3"><span class="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-red-500/20 text-xs font-black text-red-400">2</span> กรอกข้อมูลตามแบบฟอร์ม</li>
+          <li class="flex items-start gap-3"><span class="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-red-500/20 text-xs font-black text-red-400">3</span> ตรวจสอบข้อมูลก่อนยืนยัน</li>
+          <li class="flex items-start gap-3"><span class="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-red-500/20 text-xs font-black text-red-400">4</span> เข้าสู่ระบบสมาชิก</li>
+          <li class="flex items-start gap-3"><span class="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-red-500/20 text-xs font-black text-red-400">5</span> ฝากเงินผ่านระบบอัตโนมัติ</li>
+          <li class="flex items-start gap-3"><span class="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-red-500/20 text-xs font-black text-red-400">6</span> เลือกเกมและเริ่มใช้งาน</li>
+        </ol>
+      </div>
+    </div>
+
+    <div class="mt-8 flex justify-center">
       <a
         href="/line"
         class="inline-flex items-center bg-[#00B900] px-8 py-3 font-bold text-white shadow-lg transition-transform hover:scale-105"
@@ -192,28 +214,9 @@ import imgPromo from "../assets/banner2.png";
         <span class="mr-2 text-xl">LINE</span> ติดต่อแอดมิน
       </a>
     </div>
-  </ContentBoxNeumorphism>
+  </ContentBox>
 
-  <ContentBoxSpecial>
-    <h2 slot="title-left">รองรับวอเล็ทเต็มระบบ เพื่อผู้เล่นไทยโดยเฉพาะ</h2>
-    <p slot="content-left" class="leading-relaxed">
-      FUNBEYOND ออกแบบให้ใช้งานง่าย รองรับบัญชีธนาคารชั้นนำ วอเล็ทชั้นนำ และ QR Payment ฝาก-ถอนได้สะดวก ทำงานผ่านระบบออโต้ที่ช่วยลดขั้นตอนในการยืนยันรายการ
-      ควรศึกษารูปแบบการทำธุรกรรมและเงื่อนไขการให้บริการก่อนเริ่มใช้งานจริง
-    </p>
-
-    <h2 slot="title-right">สมัคร FUNBEYOND ง่าย กรอกข้อมูลเท่าที่จำเป็น</h2>
-    <p slot="content-right" class="leading-relaxed">
-      ขั้นตอนการสมัครถูกย่นให้เหลือน้อยที่สุด กดปุ่ม "สมัครสมาชิก" กรอกข้อมูลเท่าที่ระบบร้องขอ ไม่ต้องส่งเอกสาร ไม่ต้องยืนยันตัวตนหลายขั้นตอน ระบบออโต้พร้อมให้เข้าเล่นเลยได้ทันที
-    </p>
-  </ContentBoxSpecial>
+  <LoginRtpSection />
 
   <Navfoot />
-
-  <style>
-    :global(.text-yellow-gradient) {
-      background: linear-gradient(to bottom, #e7d800 0%, #ddd44e 100%) !important;
-      -webkit-background-clip: text !important;
-      -webkit-text-fill-color: transparent !important;
-    }
-  </style>
 </MainLayout>

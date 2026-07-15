@@ -4,14 +4,15 @@ export interface Props {
   as?: "h1" | "h2" | "h3" | "h4" | "h5" | "h6";
 }
 const { title, as: HeadingTag = "h1" } = Astro.props;
+const headingSize = HeadingTag === "h1" ? "text-3xl" : "text-2xl";
 ---
 
 <section class="my-10 flex w-full justify-center px-4 font-sans">
-  <div class="relative w-full max-w-7xl rounded-2xl border-2 border-blue-500/40 bg-gradient-to-b from-[#0b1633] to-[#020617] p-8 pt-16 shadow-[0_10px_40px_rgba(0,0,0,0.5)]">
+  <div class="relative w-full max-w-[1400px] rounded-2xl border-2 border-blue-500/40 bg-gradient-to-b from-[#0b1633] to-[#020617] p-8 pt-24 shadow-[0_10px_40px_rgba(0,0,0,0.5)]">
     {
       title && (
-        <div class="absolute -top-6 left-1/2 w-[92%] max-w-2xl -translate-x-1/2 rounded-lg border-2 border-blue-500/50 bg-[#020617] px-4 py-2.5 text-center shadow-[0_5px_15px_rgba(37,99,235,0.3)] sm:px-8">
-          <HeadingTag class="bg-gradient-to-r from-yellow-200 via-yellow-400 to-yellow-600 bg-clip-text text-base font-black tracking-tighter text-transparent uppercase sm:text-xl md:text-2xl">
+        <div class="absolute -top-6 left-1/2 w-[92%] max-w-2xl -translate-x-1/2 rounded-lg border-2 border-red-500/50 bg-[#020617] px-4 py-2.5 text-center shadow-[0_5px_15px_rgba(239,68,68,0.3)] sm:px-8">
+          <HeadingTag class={`bg-gradient-to-r from-cyan-200 via-blue-300 to-blue-500 bg-clip-text ${headingSize} font-black tracking-tighter text-transparent uppercase`}>
             ✦ {title} ✦
           </HeadingTag>
         </div>

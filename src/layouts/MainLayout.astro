@@ -2,8 +2,8 @@
 import { Image } from "astro:assets";
 import Bg from "../assets/bg.png";
 import "../styles/global.css";
-import NavbarCyber from "../components/NavbarCyber.astro";
-import Footer from "../components/FooterCyber.astro";
+import NavbarPremium from "../components/NavbarPremium.astro";
+import Footer from "../components/FooterPremium.astro";
 
 const bannerImages = import.meta.glob<{ default: ImageMetadata }>("../assets/banner*.{png,webp,jpg,jpeg}", { eager: true });
 const bannerPaths = Object.keys(bannerImages);
@@ -13,8 +13,8 @@ const mainBannerPath = preferredBannerPath ?? webpBannerPath ?? bannerPaths[0];
 const mainBanner = mainBannerPath ? bannerImages[mainBannerPath].default : null;
 
 const {
-  title = "FUNBEYOND เว็บสล็อตมีใบรับรอง เกมลิขสิทธิ์แท้ ระบบออโต้ เข้าเล่นเลย",
-  description = "FUNBEYOND เว็บสล็อตมีใบรับรอง เว็บน้องใหม่ ที่มี เกมลิขสิทธิ์แท้ ระบบออโต้ ผ่านผลทดสอบการใช้งาน และคำวิจารณ์ที่ควรรู้ก่อน เข้าเล่น สมัครสมาชิก รับโปรพิเศษ",
+  title = "999LORD รีวิวเว็บสล็อต | ทางเข้าเว็บตรง สล็อตทุกค่าย ระบบออโต้",
+  description = "999LORD รีวิวเว็บสล็อต ภาพรวม จุดเด่น โครงสร้างเว็บไซต์ ฟีเจอร์ที่ให้บริการ รวมค่ายสล็อต ระบบอัตโนมัติ ช่องทางเข้า มาตรฐานด้านความปลอดภัย ข้อมูลก่อนสมัคร",
   robots = "index, follow",
   ImageOg = "/slide3.webp",
 } = Astro.props;
@@ -22,7 +22,7 @@ const {
 const currentPath = Astro.url.pathname;
 const canonicalURL = new URL(currentPath, Astro.site);
 const ogImageURL = new URL(ImageOg, Astro.site);
-const ogSiteName = "FUNBEYOND";
+const ogSiteName = "999LORD";
 ---
 
 <html lang="th">
@@ -42,7 +42,7 @@ const ogSiteName = "FUNBEYOND";
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="shortcut icon" href="/favicon.ico" />
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-    <meta name="apple-mobile-web-app-title" content="funbeyond" />
+    <meta name="apple-mobile-web-app-title" content="999lord" />
     <link rel="manifest" href="/site.webmanifest" />
 
     <meta property="og:type" content="website" />
@@ -92,12 +92,12 @@ const ogSiteName = "FUNBEYOND";
       decoding="sync"
     />
 
-    <NavbarCyber />
+    <NavbarPremium />
 
     <div class="mb-2.5 flex w-full items-center justify-center">
       <Image
         src={mainBanner!}
-        alt="FUNBEYOND banner"
+        alt="999LORD banner"
         loading="eager"
         fetchpriority="high"
         widths={[412, 768, 1900]}

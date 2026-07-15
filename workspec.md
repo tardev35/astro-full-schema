@@ -813,3 +813,49 @@ NavbarStyle family, Footer family** โดย:
 **Exception หน้าหวย = inventory (ยืนยันตาม feedback ผู้ใช้, choice ข):** `ตรวจหวย.astro`, `แนวทาง.astro` **ตั้งใจคงแบรนด์ Var99 + เนื้อหาหวย + ธีม Huay ไว้ทั้งหมด** ไม่ sweep เป็น FUNBEYOND — เพราะเป็น vertical หวยคนละเจ้า เก็บเป็น inventory ไว้ดึงมาใช้ (พร้อม wire เข้า navbar) เฉพาะตอน rebrand แบรนด์หวย ไม่เกี่ยวกับ FUNBEYOND (สล็อต/คาสิโน) ยกเว้นทั้ง **hue และชื่อ Var99** ของตัวเอง (กว้างกว่าที่ Phase 4.5 ข้อ 5 เขียนว่า "ยกเว้นแค่ธีม") — ยังยืนยันไม่มีชื่อ casino เก่า HENGJUD บนหน้าเหล่านี้ (=0); ที่คงไว้คือ Var99 = identity หวยของมันเอง
 
 **ไม่ได้ทำ (optional):** rename CSS var `--brand-red`/`--brand-pink` ใน `login`/`register` — ค่าเป็นม่วง `#9d4edd` ถูกแล้ว ชื่อ var สื่อผิด (zero-visual) เว้นไว้ตามที่ผู้ใช้ยังไม่ขอ
+
+---
+
+## 2026-07-15 — รีแบรนด์ FUNBEYOND → 999LORD (blue/red neon-cyber)
+
+**เป้าหมาย:** รีแบรนด์+รีธีมทั้งไซต์เป็น "999LORD" (โลโก้อินทรี+มงกุฎ+โพดำ "ACE FAIRGAMES UNION") พร้อม real url `https://www.999lord-review.com`
+
+**พาเลตต์:** น้ำเงินไฟฟ้า (primary, `blue-*`) + ไฮไลต์นีออน `cyan-*`/`sky-*` + แดง/คอรัล (accent, `red-*`) บนพื้นเนวี่เข้ม (`#050d16`/`#03071c`/`#020617`/`#0b1633`) — แทนที่ม่วง+ทองของ FUNBEYOND
+**mapping:** `purple/violet/fuchsia-*`→`blue-*`; `#0a001a`ฯลฯ→navy hex; `rgba(157,78,221)`→`rgba(37,99,235)`; ทอง/เหลือง (accent เดิม) → **หัวข้อ=cyan→blue gradient, CTA/badge/divider/เงิน=red** `rgba(239,68,68)`; คงสี semantic (LINE เขียว, เขียว success/live, สีธนาคาร, ส้ม TrueMoney/Habanero)
+
+**docx (`src/assets/content.docx`) = H1 + 8×H2 (flat ไม่มี H3):** ครบทุกหัวข้อ เรียงตามเอกสาร:
+1. H1 → `ContentBox` + ปุ่ม CTA (login/register)
+2. H2 ภาพรวมเว็บไซต์ → `ContentBoxPremium`
+3. H2 รีวิวโครงสร้าง/ฟีเจอร์ → `ContentBoxSevenThree` + **slide1** (โครงสร้าง/ฟีเจอร์) [SevenThree #1]
+4. H2 ฟีเจอร์จุดเด่นเทียบคู่แข่ง → `ContentBoxCyberCut`
+5. H2 รวมค่ายสล็อต (PG/Pragmatic/JILI/Habanero/CQ9) → `ContentBoxNeumorphism` → `ProviderGrid` → `GameRankingBoard`
+6. H2 ระบบอัตโนมัติ Auto System → `ContentBoxSevenThree` + **slide4** (Auto System) [SevenThree #2] → `LatestWinners`
+7. H2 ช่องทางเข้า/ตรวจสอบเว็บไซต์ → `ContentBoxFloatingBadge` (รูปทรงใหม่)
+8. H2 มาตรฐานความปลอดภัย SSL/HTTPS → `ContentBox` → `ReviewCardSumo` + `SmoothCarousel`
+9. H2 ขั้นตอนการสมัคร + เตรียมข้อมูล → `ContentBox` (2-col: สิ่งที่ควรเตรียม 3 ข้อ / ขั้นตอน 6 ข้อ เป็น `<ul>/<ol>` ไม่ใช่ heading) → `LoginRtpSection`
+
+**การแมปรูป:** banner1=hero(MainLayout); slide1=โครงสร้าง(SevenThree#1); slide4=auto(SevenThree#2); slide2+slide3=SmoothCarousel widget. **banner2 = ของเก่า FUNBEYOND (โปรฯคืนยอดเสีย 5% โลโก้ funbeyond ม่วง/ทอง) → ข้าม ไม่ใช้เป็นรูปประกอบ**; banner3 เก่ากว่า (2026-07-12) = leftover ข้าม → รอบนี้ไม่มี banner ประกอบที่ valid จึงไม่ใส่รูป inline (ตามกฎ skill)
+
+**Variant rotation (before → after) — ห้ามแบรนด์ถัดไปใช้ตัว "after" ซ้ำ:**
+- Navbar: `NavbarCyber` → **`NavbarPremium`** (pill โค้งมน ต่างจาก clip-path เหลี่ยมของ Cyber)
+- Footer: `FooterCyber` → **`FooterPremium`** (rounded-t-3rem)
+- Announcement: `AnnouncementCyber` → **`Announcement4`** (LIVE ticker, badge แดง+บาร์น้ำเงิน, ตั้ง default message = 999LORD)
+- LatestWinners: `LatestWinnersCyber` → **`LatestWinnersPremium`** (เป็นน้ำเงินอยู่แล้ว → เปลี่ยนชื่อ HENGJUD→999LORD + ทอง→แดง)
+- ContentBox mix: (FUNBEYOND=plain+Premium+SevenThree×1+Neumorphism+CyberCut+**Special**+**FeatureHighlights**) → **999LORD=plain+Premium+SevenThree×2+CyberCut+Neumorphism+FloatingBadge**; ตัด Special + FeatureHighlights ออก, เพิ่ม **FloatingBadge** เป็นรูปทรงใหม่ (FUNBEYOND ไม่ได้ใช้) + SevenThree ตัวที่ 2 → shape-mix ต่างชัด
+  - **หมายเหตุ:** ไม่ใช้ `ContentBox3Three` เพราะไม่มี section ไหนใน docx เป็น 3-parallel-points จริง (security เป็น prose ย่อหน้าเดียว ไม่ใช่ bullet 3 ข้อ) — ไม่ยัด 3Three แบบสร้าง sub-heading เกินจริง; ไม่ใช้ FeatureHighlights ด้วยเหตุผลเดียวกัน (registration lists เป็น label ล้วน ไม่มี description)
+  - **FloatingBadge:** ไฟล์เป็นน้ำเงิน+bug-fixed อยู่แล้ว (`w-[92%] max-w-2xl` + `pt-16`, ไม่มี `whitespace-nowrap`) → ปรับหัวข้อทอง→cyan, badge border ทอง→แดง, `max-w-7xl`→`max-w-[1400px]` ให้เท่ากล่องอื่น; ยืนยัน dist ไม่มี whitespace-nowrap ที่ badge (2 hit ที่เหลือ = ticker Announcement4 ตั้งใจ)
+
+**URL (3 จุด → `https://www.999lord-review.com`):** `astro.config.mjs` site, `public/robots.txt` Sitemap, `src/pages/index.astro` webSiteSchema.url (string literal)
+
+**ไฟล์ที่แก้ — chrome/layout:** `MainLayout.astro` (import NavbarPremium/FooterPremium, hero=banner1(เดิมถูกแล้ว), brand strings/apple-title/og_site_name=999LORD, default title/desc), `NavbarPremium`/`FooterPremium` (QQ882→999LORD + retheme น้ำเงิน/แดง), `Announcement4` (retheme + message), `LatestWinnersPremium` (HENGJUD→999LORD, ทอง→แดง, ลบ HTML comment 3 จุด)
+**ไฟล์ที่แก้ — retheme ม่วง/ทอง→น้ำเงิน/แดง + brand:** `ContentBox`, `ContentBoxPremium`, `ContentBoxSevenThree`, `ContentBoxCyberCut`, `ContentBoxNeumorphism`, `ContentBoxFloatingBadge`, `ContentBoxTwo`, `LoginRtpSection`, `ProviderGrid`, `GameRankingBoard`, `ReviewCardSumo2`, `SmoothCarousel`, `Navfoot` (ทั้งหมด FUNBEYOND→999LORD)
+**heading:** docx flat → H1(1) + H2(8 section) เรียงตามเอกสารครบ; widget h3 (ProviderGrid card, GameRanking, Review author, LoginRtp "ยินดีต้อนรับกลับ") = sub-item ภายใน widget คงไว้เหมือน FUNBEYOND
+
+**หน้าอื่น (Phase 4.5) — รีแบรนด์ครบ:**
+- `contact-us` (Announcement4, ContactPage schema+meta+h1+alt 999LORD, ปุ่มทอง→แดง), `promotion` (Announcement4, slide1-4 .png มีจริง, h1+4 alt+border รูป+ปุ่ม, .text-purple-gradient hex→blue), `ทางเข้า` (Announcement4, 2 ปุ่ม→น้ำเงิน/แดง), `ทดลองเล่น` (Announcement4, ปุ่มเล่นเลย→แดง) — ทั้งหมดใช้ MainLayout จึงได้ nav/footer/hero 999LORD อัตโนมัติ
+- `login`/`register` (standalone HTML ไม่ใช้ MainLayout, ธีม CSS var ใน `<style>`): title+`.brand-identity` FUNBEYOND→999LORD, `--brand-red:#9d4edd`→`#ef4444`, `--brand-pink:#fbbf24`→`--brand-blue:#3b82f6`, `rgba(157,78,221)`→น้ำเงิน/แดง
+- **Announcement ทั้งไซต์ตรงกัน:** ทุกหน้า casino ใช้ `Announcement4`; index ส่ง message ตรงกับ default ของ Announcement4 → หน้าอื่นเรียกเปล่าก็ได้ข้อความ 999LORD ชุดเดียวกัน
+
+**ยกเว้น (inventory คงไว้):** `แนวทาง.astro`, `ตรวจหวย.astro` = หวย Var99 ธีม Huay (แดง/ทอง) + `AnnouncementHuay` — คงเนื้อหา/ชื่อ Var99/ธีมไว้; แชร์ `MainLayout` จึง inherit nav/footer/hero + meta default (og_site_name/description) ของแบรนด์ casino ปัจจุบัน (= 999LORD ตอนนี้ เหมือนที่เคย inherit FUNBEYOND) — เป็น drift ที่มีมาก่อน ไม่ใช่บั๊ก ไม่แตะ; ยืนยันไม่มีชื่อ casino เก่า (FUNBEYOND/HENGJUD) หลงเหลือ = 0
+
+**การทดสอบ (Phase 5):** `npm run build` ผ่านสะอาด (9 หน้า); `grep -rlE "FUNBEYOND|funbeyond|HENGJUD|QQ882|TEENOI|MARANG|เฮงทุกสปิน" dist/` = **0 ทุกหน้า**; purple/yellow/violet/fuchsia ใน class attr = **0** ทุกหน้า casino (ที่เหลือใน `<style>` bundle = inventory/ไม่ render = noise ที่คาดไว้); `<!--` ใน dist = 0; undefined/NaN/[object Object] = 0; hero=banner1; slide1+slide4 = SevenThree, slide2+slide3 = carousel (ใช้ครบ 4); URL 999lord-review.com ใน schema/canonical/og/sitemap, ไม่มี funbeyond; H1=1 + 8 docx H2 เรียงถูกลำดับครบ; FloatingBadge badge = `w-[92%] max-w-2xl` ไม่มี overflow

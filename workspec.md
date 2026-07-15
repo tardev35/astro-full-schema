@@ -723,3 +723,93 @@ NavbarStyle family, Footer family** โดย:
 **จงใจไม่แตะ:** single-slot variants (ContentBox, Premium, CyberCut, FloatingBadge, Huay) และ Special — content wrapper ถือ `relative z-10` เพื่อลอยเหนือเลเยอร์ตกแต่ง absolute (หรือ bg-clip-text ที่ต้องอยู่บน element ของ text เอง) การ flatten จึงเสี่ยง stacking regression ไม่ผ่านเกณฑ์ zero-visual-change — เว้นไว้เป็น follow-up ถ้าต้องการ
 
 **การทดสอบ:** `npm run build` ผ่านสะอาด (9 หน้า) + grep `dist/index.html` ยืนยัน `<article>` ถือ text class โดยตรงและ wrapper `<div>` หายไปแล้ว
+
+---
+
+## 2026-07-15 — เปิดตัวแบรนด์ใหม่ FUNBEYOND (rebrand + retheme + real URL)
+
+**เป้าหมาย:** รีแบรนด์เต็มจาก HENGJUD365 (น้ำเงิน+ทอง) → **FUNBEYOND** (ม่วง/violet นีออน + ทอง) ตาม docx + ชุดรูปใหม่ พร้อมตั้ง real URL `https://www.funbeyond-brand.com`
+
+**อินพุตแบรนด์:**
+- โลโก้: "FUN" ไล่เฉด magenta→ม่วง + "Beyond" สคริปต์ทอง → พาเลตต์ = ม่วง (`purple-*`, glow `rgba(157,78,221)`) + ทอง (`yellow/amber` คงไว้), พื้นเข้ม `#0a001a`
+- มู้ด: neon-cyber luxury ม่วง → เลือกตระกูล chrome เป็น **Cyber** (ซึ่งบังเอิญเป็นม่วง+ทองของแบรนด์เก่า MARANG7777 อยู่แล้ว เลยรีธีมน้อย)
+- docx: `src/assets/content.docx` → H1 + 5×H2 + 3×H3 (nested ใต้ H2 "ผลทดสอบ")
+
+**docx heading checklist (เรียงตามเอกสาร) — ครบทุกหัวข้อ:**
+1. H1: FUNBEYOND เว็บสล็อตมีใบรับรอง เกมลิขสิทธิ์แท้ ระบบออโต้ เข้าเล่นเลย → `ContentBox` (as h1) + ปุ่ม CTA
+2. H2: ทำความรู้จักกับ FUNBEYOND น้องใหม่ → `ContentBoxSevenThreePremium` + **slide1**
+3. H2: เว็บสล็อตมีใบรับรอง เกมลิขสิทธิ์แท้ มาตรฐาน (MGA/PAGCOR/Anjouan, RNG/GLI/iTech, SSL/TLS) → `ContentBoxSevenThree` + **slide3** → ตามด้วย `ProviderGrid`
+4. H2: ผลทดสอบการใช้งาน ระบบออโต้ → `ContentBoxSevenThreeNeumorphism` + **slide2**
+   - H3×3 (ความเร็ว / ฝากถอนอัตโนมัติ / ความเสถียร) → `FeatureHighlights` (title=h3) — เคส H2→H3 ที่ skill อนุญาต + wire ตัว FeatureHighlights ที่เดิม import ค้างไม่ได้ใช้
+   - ตามด้วย `GameRankingBoard` + `LatestWinnersCyber`
+5. H2: คำวิจารณ์เกี่ยวกับ FUNBEYOND → `ContentBoxPremium` (as h2) → ตามด้วย `ReviewCardSumo2` + `SmoothCarousel`
+6. H2: สมัครสมาชิก FUNBEYOND เข้าเล่นเลย รับโปรพิเศษ → `ContentBoxSevenThreeCyberCut` + **slide4** → ตามด้วยแถบโปรฯ **banner2** (คืนยอดเสีย 5%) + `LoginRtpSection` + `ContentBoxSpecial`
+
+**การแมปรูป (ตามเนื้อในภาพจริง):** banner1=hero (MainLayout), slide1=รู้จักแบรนด์, slide3=ใบรับรอง/SSL/RNG/GLI/MGA/PAGCOR, slide2=performance test, slide4=member-center/สมัคร, banner2=แถบโปรฯคืนยอดเสีย 5%
+
+**Variant rotation (before → after) — ห้ามแบรนด์ถัดไปใช้ตัว "after" ซ้ำ:**
+- Navbar: `NavbarStyle11` → **`NavbarCyber`**
+- Footer: `FooterPremiumSumo` → **`FooterCyber`**
+- Announcement: `Announcement6` → **`AnnouncementCyber`**
+- LatestWinners: `LatestWinners2` → **`LatestWinnersCyber`**
+- ContentBox mix: FloatingBadge+CyberCut-heavy (น้ำเงิน) → **Premium + plain + Neumorphism + FeatureHighlights** (นำ), ตัด FloatingBadge ทั้งคู่ออก, เพิ่ม Neumorphism เป็นรูปทรงใหม่
+  - **ข้อยกเว้นเดียว:** `ContentBoxSevenThreeCyberCut` ยัง carry over จาก HENGJUD (ใช้ 1 ครั้งที่ section สมัครสมาชิก) — เหตุผล: ตัวเลือก SevenThree ที่เหลือ (Huay=ธีมแดง+เรนเดอร์ h3, FloatingBadge=บั๊ก mobile overflow) ไม่เข้ากับมู้ด neon ม่วงและต้องผ่าตัดเยอะ; CyberCut เข้ามู้ดสุด ใช้แค่ครั้งเดียว ส่วนที่เหลือหมุนครบแล้ว
+
+**stale-asset / glob (Phase 4):**
+- `MainLayout.astro`: repoint `preferredBannerPath` จาก hardcode `banner3.png` → regex `banner1.(png|webp|jpg|jpeg)` ตามธรรมเนียม banner1=hero (กันแบรนด์หน้าอัปโหลด banner3 เป็นรูปประกอบแล้วโดนหยิบเป็น hero)
+- slide1–4.png / banner1–2.png มีครบ ไม่มีปัญหานามสกุลค้าง (SmoothCarousel/promotion.astro อ้าง .png ที่มีจริง)
+
+**URL (3 จุด ตั้งเป็น `https://www.funbeyond-brand.com`):** `astro.config.mjs` site, `public/robots.txt` Sitemap, `src/pages/index.astro` `webSiteSchema.url` (string literal)
+
+**ไฟล์ที่แก้ — chrome/layout:** MainLayout (import Cyber nav/footer, hero=banner1, brand strings, apple-title), NavbarCyber/FooterCyber/AnnouncementCyber (MARANG7777→FUNBEYOND + copy), LatestWinnersCyber (ม่วง+ทองอยู่แล้ว ไม่มีชื่อแบรนด์)
+**ไฟล์ที่แก้ — retheme น้ำเงิน→ม่วง + brand (15):** ContentBox, ContentBoxPremium, ContentBoxSevenThree, ContentBoxSevenThreePremium, ContentBoxSevenThreeCyberCut, ContentBox3Three, ContentBoxSpecial, ContentBoxTwo, FeatureHighlights, ProviderGrid, GameRankingBoard, LoginRtpSection, ReviewCardSumo2, SmoothCarousel, Navfoot (swap `blue-`→`purple-`, `sky-`→`fuchsia-`, `indigo-`→`violet-`, `#050d16`/`#0b1633`→`#0a001a`, `rgba(37,99,235)`→`rgba(157,78,221)`, คงทอง/เขียว/สีธนาคาร)
+**heading normalize:** demote ProviderGrid card name, ReviewCardSumo2 author, LoginRtpSection "ยินดีต้อนรับกลับ" จาก h2→h3 (เป็น sub-item ใต้ section) → outline สะอาด H1 → H2(section) → H3(sub-item/3 tests)
+
+**การทดสอบ (Phase 5):** `npm run build` ผ่านสะอาด (9 หน้า); grep `dist/index.html`: HENGJUD=0, MARANG=0, `<!--`=0, undefined/NaN/[object Object]=0, ไม่มี blue/sky/indigo ใน class attr, hero=banner1, ใช้ slide1–4+banner2 ครบ, ไม่มี .png อ้างตรงค้าง; heading H1=1 + docx H2 5 หัวข้อครบตามลำดับ + H3 3 tests ครบ; purple class เรนเดอร์เต็มหน้า, ทองคงอยู่; URL funbeyond ใน schema/canonical/sitemap
+
+**นอกสโคป (ไม่แตะ — รายงานไว้):** หน้าอื่นยังเป็น HENGJUD365 — `login`, `register`, `promotion`, `contact-us`, `ทางเข้า.astro`, `ทดลองเล่น.astro` (grep เจอใน dist ของหน้าเหล่านั้น); component inventory เก่าที่ไม่ได้ render (NavbarStyle11, FooterPremiumSumo, Announcement6, LatestWinners2/Premium, PopularGamesStrip, Faq*, FloatingBadge variants ฯลฯ) ยังเป็นของเก่า = drift ที่คาดไว้ ไม่ลบ; ContentBox3Three รีธีมม่วงไว้แล้วแต่รอบนี้ไม่ได้ render (เป็น inventory พร้อมใช้)
+
+### แก้เพิ่ม (ตาม feedback ผู้ใช้ 2026-07-15): จำกัดการใช้ ContentBoxSevenThree + วางแบนเนอร์ใน ContentBox คอลัมน์เดียว
+
+**กฎใหม่ (บันทึกลง SKILL.md แล้ว — Phase 1 + Phase 2):**
+- `ContentBoxSevenThree*` (ทั้ง family) ใช้ได้ **มากสุด 2 ครั้ง/รีแบรนด์** (ถ้าบทความน้อยใช้ 1 ครั้ง) — สุ่ม slide มา 2 รูปที่เข้ากับ section จริง ที่เหลือปล่อยว่างได้
+- section อื่น ๆ **เน้น `ContentBox*` คอลัมน์เดียว + `ContentBoxTwo*`** ไม่ใช่ยัด SevenThree ทุกอัน
+- `banner2/3/4` = รูปประกอบ ให้ใส่ **ในกล่อง `ContentBox` คอลัมน์เดียว** แบบ inline + resize คุมความกว้าง (`max-w-2xl` ฯลฯ) ไม่ใช่แถบเต็มจอ ไม่ใช่ hero ไม่ใช่คอลัมน์ SevenThree — และใช้เฉพาะไฟล์ของ asset ชุดปัจจุบัน (banner3.png เก่ากว่า banner1/2 = leftover ข้าม)
+
+**สิ่งที่แก้ใน FUNBEYOND ให้ตรงกฎ:** เดิมใช้ SevenThree 4 ครั้ง (slide1–4) + banner2 เป็นแถบเต็มกว้าง → ปรับเป็น
+- SevenThree **2 ครั้ง**: `ContentBoxSevenThree` + **slide3** (ใบรับรอง), `ContentBoxSevenThreePremium` + **slide2** (ผลทดสอบ)
+- section เดี่ยว: H1 intro=`ContentBox`, ทำความรู้จัก=`ContentBoxPremium`, คำวิจารณ์=`ContentBoxCyberCut`, สมัคร=`ContentBoxNeumorphism` (มี **banner2** inline `max-w-2xl` + ปุ่ม LINE) + `ContentBoxTwo` ผ่าน `LoginRtpSection`
+- retheme เพิ่ม `ContentBoxCyberCut` (เดี่ยว) น้ำเงิน→ม่วง; `ContentBoxNeumorphism` เป็นโทนกลางอยู่แล้วไม่ต้องแก้
+- slide1/slide4 ไม่ใช้เป็นรูปประกอบ SevenThree แล้ว (ยังโผล่ใน SmoothCarousel ซึ่งเป็น widget วนรูปโปรฯ ต่างหาก — ปล่อยตามเดิม)
+
+**ทดสอบ:** `npm run build` ผ่าน (9 หน้า); grep `dist/index.html`: SevenThree opening tag = 2, รูปประกอบ = slide2+slide3, banner2 inline `max-w-2xl`, hero=banner1, HENGJUD/MARANG/comment/blue-in-class = 0, H1 + 5 docx H2 ครบตามลำดับ
+
+### แก้เพิ่ม (feedback ผู้ใช้): ความกว้างกล่องไม่เท่ากัน
+`ContentBox`/`ContentBoxSevenThree`/`ContentBoxSpecial` ใช้ `max-w-[1400px]` แต่ `ContentBoxPremium`/`ContentBoxNeumorphism`/`ContentBoxCyberCut` ใช้ `max-w-7xl` (1280px) → กล่องแคบกว่า ไม่ align กัน แก้ทั้ง 3 ไฟล์เป็น `max-w-[1400px]` ให้เท่ากันทั้งหน้า (มีแค่ index ที่ใช้ ปลอดภัย)
+- ผู้ใช้แก้ section "ผลทดสอบ" เองจาก SevenThreePremium+slide2 → `ContentBoxNeumorphism` + FeatureHighlights (SevenThree เหลือ 1 ครั้ง = ใบรับรอง+slide3) → ลบ import ที่ค้าง (`ContentBoxSevenThreePremium`, slide2/imgPerformance) ออก
+- `npm run build` ผ่าน (9 หน้า), ทุกกล่อง max-w-[1400px] = 6/6
+
+### แก้เพิ่ม (feedback ผู้ใช้): รีแบรนด์หน้าอื่นให้ครบ + Announcement ตรงกับ index
+เดิม index เสร็จแล้วแต่หน้าอื่นยังเป็น HENGJUD365 (ตอนแรกระบุว่า out of scope) — ผู้ใช้สั่งให้ตามไปแก้ให้ครบ และเพิ่มกฎนี้ลง SKILL.md (Phase 4.5 ใหม่: "รีแบรนด์ทุกหน้า ไม่ใช่แค่ index" + เช็ก Announcement/chrome ให้ตรง index)
+
+**หน้าที่แก้ (6):**
+- `contact-us`, `promotion`, `ทางเข้า`, `ทดลองเล่น` (ใช้ MainLayout → nav/footer/hero เป็น Cyber/ม่วง อยู่แล้ว): เปลี่ยน `Announcement6` → **`AnnouncementCyber`** (ตรงกับ index), แก้ชื่อแบรนด์ HENGJUD365→FUNBEYOND (title/desc/h1/schema/alt), retheme `blue-*`→`purple-*` + `#0b1633`→`#0a001a` + `#93c5fd/#2563eb` gradient → ม่วง + `rgba(37,99,235)`→`rgba(157,78,221)` (promotion/ทางเข้า มีสีน้ำเงิน)
+- `login`, `register` (standalone HTML ไม่ใช้ MainLayout, ธีมด้วย raw hex/rgba ใน `<style>` — grep `blue-[0-9]` จับไม่เจอ): แก้ `.brand-identity`/title HENGJUD365→FUNBEYOND, `--brand-red:#2563eb`→`#9d4edd`, `rgba(37,99,235)`/`rgba(0,243,255)`→`rgba(157,78,221)`
+
+**Announcement ทั้งไซต์ตรงกัน:** index ส่ง `message` prop = ข้อความเดียวกับ default ของ `AnnouncementCyber` พอดี → หน้าอื่นเรียก `<Announcement />` เปล่า ๆ ก็ได้ข้อความ FUNBEYOND ชุดเดียวกัน สไตล์ ticker ม่วงเหมือนกันหมด
+
+**ยกเว้นตามตั้งใจ:** `แนวทาง.astro`, `ตรวจหวย.astro` = หน้าหวย ธีม Huay (แดง/ทอง) + `AnnouncementHuay` — คงธีมไว้ (grep แล้วไม่มีชื่อแบรนด์เก่า HENGJUD=0) ไม่บังคับเป็นม่วง
+
+**ทดสอบ:** `npm run build` ผ่าน (9 หน้า); `grep -rl HENGJUD dist/` = **ไม่เหลือเลยทุกหน้า**, ไม่มี blue ใน class attr ทั้ง dist, ทุกหน้า casino ใช้ AnnouncementCyber ม่วงตรงกัน
+
+### แก้เพิ่ม (feedback ผู้ใช้ 2026-07-15): เก็บตก slogan HENGJUD ที่ contact-us + ยืนยัน exception หน้าหวย (Var99) เป็น inventory
+
+**เก็บตก contact-us:** รอบ "รีแบรนด์หน้าอื่น" ก่อนหน้าเปลี่ยน literal `HENGJUD365`→FUNBEYOND แล้ว แต่ **สโลแกน "ฝากถอนออโต้ จ่ายจริง เฮงทุกสปิน"** (เฮง = รากคำ HENGJUD ในภาษาไทย) หลุด grep เพราะ Phase 5 grep หา "HENGJUD" (อังกฤษ) ไม่ครอบคำไทย → ค้างใน h1, ContactPage JSON-LD `name`/`description`, meta `description` แก้ 4 จุดเป็นคอปปี้ FUNBEYOND (`ติดต่อ FUNBEYOND ทีมงานดูแลตลอด 24 ชม.` / `ติดต่อทีมงาน FUNBEYOND ดูแลตลอด 24 ชม. ผ่าน LINE Official`) + แก้บั๊ก attribute `title="..." ,description=...` (คอมมาเกินหน้า `description`) → `description=...`
+- ไฟล์: `src/pages/contact-us.astro` (4 จุด + comma)
+- ทดสอบ: `npm run build` ผ่าน (9 หน้า); `grep -c "เฮงทุกสปิน\|HENGJUD" dist/contact-us/index.html` = 0; h1 เดียว = FUNBEYOND; JSON-LD/meta = FUNBEYOND
+
+**บทเรียน (ควรใส่ Phase 5):** grep หา old brand ใน Phase 5 ต้องรวม **รากคำ/สโลแกนภาษาไทย** ด้วย (เช่น "เฮง" ของ HENGJUD) ไม่ใช่แค่ literal อังกฤษ — leftover แบบสโลแกนจะหลุด grep ตัวอังกฤษ
+
+**Exception หน้าหวย = inventory (ยืนยันตาม feedback ผู้ใช้, choice ข):** `ตรวจหวย.astro`, `แนวทาง.astro` **ตั้งใจคงแบรนด์ Var99 + เนื้อหาหวย + ธีม Huay ไว้ทั้งหมด** ไม่ sweep เป็น FUNBEYOND — เพราะเป็น vertical หวยคนละเจ้า เก็บเป็น inventory ไว้ดึงมาใช้ (พร้อม wire เข้า navbar) เฉพาะตอน rebrand แบรนด์หวย ไม่เกี่ยวกับ FUNBEYOND (สล็อต/คาสิโน) ยกเว้นทั้ง **hue และชื่อ Var99** ของตัวเอง (กว้างกว่าที่ Phase 4.5 ข้อ 5 เขียนว่า "ยกเว้นแค่ธีม") — ยังยืนยันไม่มีชื่อ casino เก่า HENGJUD บนหน้าเหล่านี้ (=0); ที่คงไว้คือ Var99 = identity หวยของมันเอง
+
+**ไม่ได้ทำ (optional):** rename CSS var `--brand-red`/`--brand-pink` ใน `login`/`register` — ค่าเป็นม่วง `#9d4edd` ถูกแล้ว ชื่อ var สื่อผิด (zero-visual) เว้นไว้ตามที่ผู้ใช้ยังไม่ขอ

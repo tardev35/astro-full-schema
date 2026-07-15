@@ -2,19 +2,19 @@
 import { Image } from "astro:assets";
 import Bg from "../assets/bg.png";
 import "../styles/global.css";
-import NavbarStyle6 from "../components/NavbarStyle11.astro";
-import Footer from "../components/FooterPremiumSumo.astro";
+import NavbarCyber from "../components/NavbarCyber.astro";
+import Footer from "../components/FooterCyber.astro";
 
 const bannerImages = import.meta.glob<{ default: ImageMetadata }>("../assets/banner*.{png,webp,jpg,jpeg}", { eager: true });
 const bannerPaths = Object.keys(bannerImages);
-const preferredBannerPath = bannerPaths.find((path) => path.endsWith("banner3.png"));
+const preferredBannerPath = bannerPaths.find((path) => /banner1\.(png|webp|jpg|jpeg)$/.test(path));
 const webpBannerPath = bannerPaths.find((path) => path.endsWith(".webp"));
 const mainBannerPath = preferredBannerPath ?? webpBannerPath ?? bannerPaths[0];
 const mainBanner = mainBannerPath ? bannerImages[mainBannerPath].default : null;
 
 const {
-  title = "HENGJUD365 รีวิวเว็บสล็อต แตกง่ายอย่างไร? ข้อมูลเว็บตรง และทางเข้าล่าสุด",
-  description = "HENGJUD365 รีวิวเว็บสล็อต วิเคราะห์เกมแตกง่าย ข้อมูลเว็บตรง จุดเด่น ฟีเจอร์ ค่ายเกม ทางเข้า ล่าสุด ระบบฝากถอนอัตโนมัติ และความน่าเชื่อถือของเว็บไซต์",
+  title = "FUNBEYOND เว็บสล็อตมีใบรับรอง เกมลิขสิทธิ์แท้ ระบบออโต้ เข้าเล่นเลย",
+  description = "FUNBEYOND เว็บสล็อตมีใบรับรอง เว็บน้องใหม่ ที่มี เกมลิขสิทธิ์แท้ ระบบออโต้ ผ่านผลทดสอบการใช้งาน และคำวิจารณ์ที่ควรรู้ก่อน เข้าเล่น สมัครสมาชิก รับโปรพิเศษ",
   robots = "index, follow",
   ImageOg = "/slide3.webp",
 } = Astro.props;
@@ -22,7 +22,7 @@ const {
 const currentPath = Astro.url.pathname;
 const canonicalURL = new URL(currentPath, Astro.site);
 const ogImageURL = new URL(ImageOg, Astro.site);
-const ogSiteName = "HENGJUD365";
+const ogSiteName = "FUNBEYOND";
 ---
 
 <html lang="th">
@@ -42,7 +42,7 @@ const ogSiteName = "HENGJUD365";
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="shortcut icon" href="/favicon.ico" />
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-    <meta name="apple-mobile-web-app-title" content="hengjud365" />
+    <meta name="apple-mobile-web-app-title" content="funbeyond" />
     <link rel="manifest" href="/site.webmanifest" />
 
     <meta property="og:type" content="website" />
@@ -92,12 +92,12 @@ const ogSiteName = "HENGJUD365";
       decoding="sync"
     />
 
-    <NavbarStyle6 />
+    <NavbarCyber />
 
     <div class="mb-2.5 flex w-full items-center justify-center">
       <Image
         src={mainBanner!}
-        alt="HENGJUD365 banner"
+        alt="FUNBEYOND banner"
         loading="eager"
         fetchpriority="high"
         widths={[412, 768, 1900]}
@@ -110,7 +110,9 @@ const ogSiteName = "HENGJUD365";
     </div>
 
     <main class="w-full flex-1">
-      <slot />
+      <article>
+        <slot />
+      </article>
     </main>
 
     <Footer />

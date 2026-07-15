@@ -19,6 +19,6 @@ export default defineConfig({
     "/line": "https://tinyurl.com/suhng",
   },
 
-  site: "https://www.hengjud365-guideline.com",
+  site: "https://www.funbeyond-brand.com",
   integrations: [sitemap()],
 });

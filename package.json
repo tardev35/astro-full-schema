@@ -6,7 +6,8 @@
     "dev": "astro dev --host 127.0.0.1 --port 8888",
     "build": "astro build",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "rebrand:upload": "node tools/rebrand-uploader/server.mjs"
   },
   "dependencies": {
     "@astrojs/sitemap": "^3.7.2",

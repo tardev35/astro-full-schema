@@ -8,21 +8,21 @@ const { title, as: HeadingTag = "h1" } = Astro.props;
 
 <section class="my-6 flex w-full justify-center px-4 text-center font-sans">
   <div
-    class="relative w-full max-w-7xl border border-blue-500/30 bg-[#050d16]/90 p-8 text-white/90 shadow-[0_0_20px_rgba(37,99,235,0.15)] backdrop-blur-md"
+    class="relative w-full max-w-[1400px] border border-purple-500/30 bg-[#0a001a]/90 p-8 text-white/90 shadow-[0_0_20px_rgba(157,78,221,0.15)] backdrop-blur-md"
     style="clip-path: polygon(40px 0, 100% 0, 100% calc(100% - 40px), calc(100% - 40px) 100%, 0 100%, 0 40px);">
-    <div class="absolute top-0 left-0 h-1 w-32 bg-gradient-to-r from-blue-500 to-transparent"></div>
-    <div class="absolute right-0 bottom-0 h-1 w-32 bg-gradient-to-l from-blue-500 to-transparent"></div>
-    <div class="absolute top-0 left-0 h-32 w-1 bg-gradient-to-b from-blue-500 to-transparent"></div>
-    <div class="absolute right-0 bottom-0 h-32 w-1 bg-gradient-to-t from-blue-500 to-transparent"></div>
+    <div class="absolute top-0 left-0 h-1 w-32 bg-gradient-to-r from-purple-500 to-transparent"></div>
+    <div class="absolute right-0 bottom-0 h-1 w-32 bg-gradient-to-l from-purple-500 to-transparent"></div>
+    <div class="absolute top-0 left-0 h-32 w-1 bg-gradient-to-b from-purple-500 to-transparent"></div>
+    <div class="absolute right-0 bottom-0 h-32 w-1 bg-gradient-to-t from-purple-500 to-transparent"></div>
 
     {
       title && (
-        <header class="mb-8 border-l-4 border-blue-500 pl-6">
-          <HeadingTag class="text-3xl font-black tracking-[0.2em] text-blue-400 uppercase drop-shadow-[0_0_10px_rgba(37,99,235,0.5)]">{title}</HeadingTag>
+        <header class="mb-8 border-l-4 border-purple-500 pl-6">
+          <HeadingTag class="text-3xl font-black tracking-[0.2em] text-purple-400 uppercase drop-shadow-[0_0_10px_rgba(157,78,221,0.5)]">{title}</HeadingTag>
         </header>
       )
     }
-    <div class="text-lg leading-relaxed text-blue-50/80">
+    <div class="text-lg leading-relaxed text-purple-50/80">
       <slot />
     </div>
   </div>

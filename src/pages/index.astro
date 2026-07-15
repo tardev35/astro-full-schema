@@ -4,18 +4,14 @@ import ContentBox from "../components/ContentBox.astro";
 import FeatureHighlights from "../components/FeatureHighlights.astro";
 import ContentBoxPremium from "../components/ContentBoxPremium.astro";
 import ContentBoxCyberCut from "../components/ContentBoxCyberCut.astro";
-import ContentBoxFloatingBadge from "../components/ContentBoxFloatingBadge.astro";
-import LoginRtpSection from "../components/LoginRtpSection.astro";
+import ContentBoxNeumorphism from "../components/ContentBoxNeumorphism.astro";
 import ContentBoxSevenThree from "../components/ContentBoxSevenThree.astro";
-import ContentBoxSevenThreePremium from "../components/ContentBoxSevenThreePremium.astro";
-import ContentBoxSevenThreeCyberCut from "../components/ContentBoxSevenThreeCyberCut.astro";
-import ContentBoxSevenThreeFloatingBadge from "../components/ContentBoxSevenThreeFloatingBadge.astro";
-import ContentBoxThreeColums from "../components/ContentBox3Three.astro";
 import ContentBoxSpecial from "../components/ContentBoxSpecial.astro";
-import Announcement from "../components/Announcement6.astro";
+import LoginRtpSection from "../components/LoginRtpSection.astro";
+import Announcement from "../components/AnnouncementCyber.astro";
 import ProviderGrid from "../components/ProviderGrid.astro";
 import GameRankingBoard from "../components/GameRankingBoard.astro";
-import LatestWinners from "../components/LatestWinners2.astro";
+import LatestWinners from "../components/LatestWinnersCyber.astro";
 import SmoothCarousel from "../components/SmoothCarousel.astro";
 import ReviewCardSumo from "../components/ReviewCardSumo2.astro";
 import Navfoot from "../components/Navfoot.astro";
@@ -26,137 +22,78 @@ const logoUrl = homePage + "/logo.webp";
 const webPageSchema = {
   "@context": "https://schema.org",
   "@type": "WebPage",
-  name: "HENGJUD365 รีวิวเว็บสล็อต แตกง่ายอย่างไร? ข้อมูลเว็บตรง และทางเข้าล่าสุด",
-  description: "HENGJUD365 รีวิวเว็บสล็อต วิเคราะห์เกมแตกง่าย ข้อมูลเว็บตรง จุดเด่น ฟีเจอร์ ค่ายเกม ทางเข้า ล่าสุด ระบบฝากถอนอัตโนมัติ และความน่าเชื่อถือของเว็บไซต์",
+  name: "FUNBEYOND เว็บสล็อตมีใบรับรอง เกมลิขสิทธิ์แท้ ระบบออโต้ เข้าเล่นเลย",
+  description: "FUNBEYOND เว็บสล็อตมีใบรับรอง เว็บน้องใหม่ ที่มีเกมลิขสิทธิ์แท้ ระบบออโต้ ผ่านผลทดสอบการใช้งาน และคำวิจารณ์ที่ควรรู้ก่อนเข้าเล่น สมัครสมาชิก รับโปรพิเศษ",
   url: currentPath,
 };
 const webSiteSchema = {
   "@context": "https://schema.org",
   "@type": "WebSite",
-  name: "HENGJUD365",
-  alternateName: ["HENGJUD365", "HENGJUD365 รีวิวเว็บสล็อต"],
-  url: "https://www.hengjud365-guideline.com/",
+  name: "FUNBEYOND",
+  alternateName: ["FUNBEYOND", "FUNBEYOND เว็บสล็อตมีใบรับรอง"],
+  url: "https://www.funbeyond-brand.com/",
 };
 const orgSchema = {
   "@context": "https://schema.org",
   "@type": "Organization",
-  name: "HENGJUD365",
+  name: "FUNBEYOND",
   logo: logoUrl,
   url: homePage,
 };
 const allSchemas = [webPageSchema, orgSchema, webSiteSchema];
 
 import { Picture } from "astro:assets";
-import imgCrackEasy from "../assets/slide3.png";
-import imgWebInfo from "../assets/slide4.png";
-import imgProviders from "../assets/slide2.png";
-import imgWithdraw from "../assets/slide1.png";
+import imgCertified from "../assets/slide3.png";
+import imgPromo from "../assets/banner2.png";
 ---
 
 <MainLayout
-  title="HENGJUD365 รีวิวเว็บสล็อต แตกง่ายอย่างไร? ข้อมูลเว็บตรง และทางเข้าล่าสุด"
-  description="HENGJUD365 รีวิวเว็บสล็อต วิเคราะห์เกมแตกง่าย ข้อมูลเว็บตรง จุดเด่น ฟีเจอร์ ค่ายเกม ทางเข้า ล่าสุด ระบบฝากถอนอัตโนมัติ และความน่าเชื่อถือของเว็บไซต์">
+  title="FUNBEYOND เว็บสล็อตมีใบรับรอง เกมลิขสิทธิ์แท้ ระบบออโต้ เข้าเล่นเลย"
+  description="FUNBEYOND เว็บสล็อตมีใบรับรอง เว็บน้องใหม่ ที่มีเกมลิขสิทธิ์แท้ ระบบออโต้ ผ่านผลทดสอบการใช้งาน และคำวิจารณ์ที่ควรรู้ก่อนเข้าเล่น สมัครสมาชิก รับโปรพิเศษ">
   <script type="application/ld+json" set:html={JSON.stringify(allSchemas)} />
 
-  <Announcement />
+  <Announcement message="💎 FUNBEYOND: เว็บสล็อตมีใบรับรอง เกมลิขสิทธิ์แท้ ระบบออโต้ ฝาก-ถอน รวดเร็ว สมัครสมาชิกวันนี้ รับโปรโมชั่นต้อนรับสมาชิกใหม่สูงสุด 150%" />
+
   <div class="mx-auto w-full max-w-5xl px-4 py-8 text-center">
-    <p class="bg-gradient-to-b from-blue-200 to-blue-500 bg-clip-text text-4xl leading-tight font-black text-transparent drop-shadow-sm md:text-5xl">
-      HENGJUD<span class="text-[#ffdb0e]">365</span>
+    <p class="bg-gradient-to-b from-purple-200 to-purple-500 bg-clip-text text-4xl leading-tight font-black text-transparent drop-shadow-sm md:text-5xl">
+      FUN<span class="bg-gradient-to-b from-yellow-200 to-yellow-500 bg-clip-text text-transparent">BEYOND</span>
       <br />
     </p>
   </div>
 
-  <!-- H1: HENGJUD365 รีวิวเว็บสล็อต พร้อมข้อมูลเว็บตรง และคู่มือสำหรับผู้เริ่มต้น -->
-  <ContentBox title="HENGJUD365 รีวิวเว็บสล็อต พร้อมข้อมูลเว็บตรง และคู่มือสำหรับผู้เริ่มต้น">
+  <ContentBox title="FUNBEYOND เว็บสล็อตมีใบรับรอง เกมลิขสิทธิ์แท้ ระบบออโต้ เข้าเล่นเลย">
     <p class="leading-relaxed">
-      <strong class="text-amber-400">HENGJUD365</strong> เป็นเว็บไซต์ที่ให้บริการเกมสล็อตออนไลน์ผ่านระบบเว็บตรง พร้อมรวบรวมเกมจากหลายค่ายไว้ในที่เดียว จากการวิเคราะห์โครงสร้างเว็บไซต์ ระบบการใช้งาน และข้อมูลที่เปิดเผย
-      พบว่ามีจุดเด่นในด้านความหลากหลายของเกม ระบบฝากถอนอัตโนมัติ และการรองรับการใช้งานบนอุปกรณ์ต่าง ๆ ข้อมูลทั้งหมดจึงถูกนำมาวิเคราะห์และสรุปในมุมมองของการรีวิวเว็บไซต์ พร้อมอธิบายข้อมูลเว็บตรงและประเด็นสำคัญที่ผู้เริ่มต้นควรรู้ก่อนใช้งาน
+      <strong class="text-amber-400">FUNBEYOND</strong> เว็บสล็อตมีใบรับรอง ที่ให้บริการเกมลิขสิทธิ์แท้จากหลายค่ายผ่านแพลตฟอร์มเดียว โดยมีระบบออโต้ รองรับการใช้งานตั้งแต่สมัครสมาชิกไปจนถึงการจัดการธุรกรรมต่าง
+      ๆ ภายในเว็บไซต์ FUNBEYOND มีข้อมูลเกี่ยวกับเกม ระบบ และการให้บริการที่ช่วยให้ผู้เล่นศึกษารายละเอียดได้ก่อนเริ่มต้นใช้งาน หากต้องการเริ่มสัมผัสประสบการณ์ของเว็บไซต์ สามารถสมัครสมาชิกและเข้าเล่นเลยผ่านเว็บไซต์ทางการได้ทันที
     </p>
 
     <div class="mt-8 flex flex-wrap justify-center gap-6">
       <a
         href="/login"
-        class="group relative flex items-center justify-center rounded-full border border-blue-500/50 bg-[#0b1633]/80 px-10 py-3.5 font-black text-yellow-500 backdrop-blur-sm transition-all duration-300 hover:scale-105 hover:bg-blue-900/60 hover:shadow-[0_0_15px_rgba(37,99,235,0.4)]">
-        เข้าระบบเกม
+        class="group relative flex items-center justify-center rounded-full border border-purple-500/50 bg-[#0a001a]/80 px-10 py-3.5 font-black text-yellow-400 backdrop-blur-sm transition-all duration-300 hover:scale-105 hover:bg-purple-900/60 hover:shadow-[0_0_15px_rgba(157,78,221,0.4)]">
+        เข้าสู่ระบบ
       </a>
 
       <a
         href="/register"
-        class="group relative flex items-center justify-center rounded-full bg-gradient-to-r from-yellow-500 via-yellow-400 to-yellow-500 px-10 py-3.5 font-black text-[#0b1633] shadow-[0_5px_20px_rgba(251,191,36,0.4)] transition-all duration-300 hover:-translate-y-1 hover:scale-105 hover:shadow-[0_8px_25px_rgba(251,191,36,0.6)]">
-        สมัครสมาชิก
+        class="group relative flex items-center justify-center rounded-full bg-gradient-to-r from-yellow-500 via-yellow-400 to-yellow-500 px-10 py-3.5 font-black text-[#0a001a] shadow-[0_5px_20px_rgba(251,191,36,0.4)] transition-all duration-300 hover:-translate-y-1 hover:scale-105 hover:shadow-[0_8px_25px_rgba(251,191,36,0.6)]">
+        เข้าเล่นเลย
       </a>
     </div>
   </ContentBox>
 
-  <ContentBoxSevenThreeFloatingBadge title="HENGJUD365 แตกง่ายอย่างไร? คู่มือสำหรับผู้เริ่มต้นเล่นเกมสล็อต">
-    <div slot="left" class="flex h-full flex-col justify-center">
-      <Picture
-        src={imgCrackEasy}
-        loading="lazy"
-        fetchpriority="low"
-        widths={[200, 400, 600, 800]}
-        sizes="(max-width: 768px) 100vw, 30vw"
-        decoding="async"
-        formats={["avif", "webp"]}
-        fallbackFormat="webp"
-        quality={80}
-        alt="HENGJUD365 แตกง่ายอย่างไร RTP และ Volatility"
-        class="mx-auto h-auto w-full rounded-2xl border-2 border-blue-400/30 shadow-[0_10px_30px_rgba(37,99,235,0.3)]"
-      />
-    </div>
-    <div slot="right">
-      <p class="leading-relaxed">
-        HENGJUD365 รวบรวมเกมสล็อตจากหลายค่ายไว้ในระบบเดียว ทำให้โอกาสในการเล่นและลักษณะการจ่ายรางวัลแตกต่างกันไปในแต่ละเกม คำว่า "แตกง่าย" ส่วนใหญ่เกิดจากการเลือกเกมที่มีค่า RTP เหมาะสม
-        ระดับความผันผวน (Volatility) ฟีเจอร์โบนัส และอัตราการออกรางวัลของแต่ละค่าย มากกว่าตัวเว็บไซต์เอง ดังนั้นก่อนเริ่มเล่น สำหรับผู้เริ่มต้นเล่นเกมสล็อตควรทำความเข้าใจข้อมูลของเกมแต่ละประเภท
-        เพื่อเลือกเกมที่เหมาะกับสไตล์การเล่นของตนเอง หลักการทำงานของเกมได้อย่างถูกต้อง
-      </p>
-    </div>
-  </ContentBoxSevenThreeFloatingBadge>
-  <ContentBoxThreeColums titleleft="ค่า RTP เหมาะสม" titlecenter="ระดับความผันผวน (Volatility)" titleright="ฟีเจอร์โบนัสและอัตราออกรางวัล">
-    <div slot="left">การเลือกเกมที่มีค่า RTP เหมาะสมเป็นปัจจัยแรกที่ควรพิจารณา เพราะส่งผลโดยตรงต่อโอกาสในการเล่นและลักษณะการจ่ายรางวัลของแต่ละเกม</div>
-    <div slot="center">ระดับความผันผวนของแต่ละเกมมีทั้งแบบสูงและต่ำ ควรเลือกให้เหมาะกับสไตล์การเล่นและงบประมาณของตนเองก่อนเริ่มเล่นทุกครั้ง</div>
-    <div slot="right">ฟีเจอร์โบนัสและอัตราการออกรางวัลแตกต่างกันไปในแต่ละค่ายเกม ควรศึกษาข้อมูลของเกมแต่ละประเภทเพื่อเข้าใจหลักการทำงานได้อย่างถูกต้อง</div>
-  </ContentBoxThreeColums>
-
-  <!-- บอร์ดจัดอันดับเกม RTP สูงสุด — ต่อเนื่องจากหัวข้อ RTP/Volatility -->
-  <GameRankingBoard />
-
-  <ContentBoxSevenThreeCyberCut titleleft="" titleright="ข้อมูลเว็บตรง HENGJUD365 ฟีเจอร์และองค์ประกอบของเว็บไซต์">
-    <div slot="left" class="flex h-full flex-col justify-center">
-      <Picture
-        src={imgWebInfo}
-        loading="lazy"
-        fetchpriority="low"
-        widths={[200, 400, 600, 800]}
-        sizes="(max-width: 768px) 100vw, 30vw"
-        decoding="async"
-        formats={["avif", "webp"]}
-        fallbackFormat="webp"
-        quality={80}
-        alt="HENGJUD365 ข้อมูลเว็บตรงและโครงสร้างเว็บไซต์"
-        class="mx-auto h-auto w-full rounded-xl border-2 border-blue-400/30 shadow-[0_10px_30px_rgba(37,99,235,0.3)]"
-      />
-    </div>
-    <div slot="right">
-      <p class="leading-relaxed">
-        จากการวิเคราะห์โครงสร้างเว็บไซต์ พบว่า HENGJUD365 รวบรวมฟีเจอร์และองค์ประกอบสำคัญไว้ภายในระบบเดียว ไม่ว่าจะเป็นระบบสมาชิก หมวดหมู่เกม ค่ายผู้ให้บริการ โปรโมชั่น กระเป๋าเงิน
-        และระบบฝากถอนอัตโนมัติ โดยออกแบบเมนูให้แยกการใช้งานเป็นสัดส่วน ช่วยให้ผู้ใช้งานเข้าถึงแต่ละฟังก์ชันได้สะดวกและเข้าใจโครงสร้างเว็บไซต์ได้ง่ายขึ้น
-      </p>
-    </div>
-  </ContentBoxSevenThreeCyberCut>
-
-  <ContentBoxPremium as="h2" title="วิเคราะห์จุดเด่นของเว็บไซต์ ผลทดสอบ จากการใช้งาน">
+  <ContentBoxPremium as="h2" title="ทำความรู้จักกับ FUNBEYOND เว็บสล็อตน้องใหม่ ที่กำลังถูกจับตามอง">
     <p class="leading-relaxed">
-      จากการวิเคราะห์การใช้งานในภาพรวม พบว่าเว็บไซต์มีจุดเด่นในด้านการจัดหมวดหมู่เกม ความรวดเร็วในการเข้าถึงเมนู ระบบสมาชิก และการรองรับการใช้งานบนอุปกรณ์หลายประเภท
-      นอกจากนี้ยังมีฟังก์ชันที่ช่วยให้การค้นหาเกม การทำรายการ และการติดตามข้อมูลต่าง ๆ ทำได้สะดวกยิ่งขึ้นเมื่อเทียบกับรูปแบบเว็บไซต์ทั่วไป
+      FUNBEYOND เปิดให้บริการอย่างเป็นทางการในปี 2026 โดยเกิดจากแนวคิดที่ต้องการพัฒนาเว็บไซต์เกมออนไลน์ให้ตอบโจทย์ผู้เล่นยุคใหม่ หลังพบว่าหลายเว็บไซต์ยังประสบปัญหาด้านความเสถียร
+      ระบบฝากถอนที่ใช้เวลานาน การรวบรวมเกมจากหลายค่ายที่ไม่เป็นระบบ รวมถึงข้อมูลเว็บไซต์ที่ไม่ครบถ้วนจนทำให้ผู้เล่นต้องเสียเวลาค้นหาจากหลายแหล่ง จึงเป็นจุดเริ่มต้นของการพัฒนาแพลตฟอร์ม FUNBEYOND
+      ที่รวบรวมเกมลิขสิทธิ์แท้ ระบบออโต้ และข้อมูลสำคัญเกี่ยวกับการใช้งานไว้ในที่เดียว เพื่อให้ผู้เล่นสามารถศึกษารายละเอียด เปรียบเทียบข้อมูล และเลือกใช้งานเว็บไซต์ได้อย่างสะดวกมากขึ้น
     </p>
   </ContentBoxPremium>
-  <LatestWinners />
 
-  <ContentBoxSevenThreePremium titleleft="" titleright="รีวิวเกมสล็อต คาสิโน และค่ายเกมที่ให้บริการ ครอบคลุมแค่ไหน">
+  <ContentBoxSevenThree titleleft="" titleright="FUNBEYOND เว็บสล็อตมีใบรับรอง เกมลิขสิทธิ์แท้ และมาตรฐานการให้บริการ">
     <div slot="left" class="flex h-full flex-col justify-center">
       <Picture
-        src={imgProviders}
+        src={imgCertified}
         loading="lazy"
         fetchpriority="low"
         widths={[200, 400, 600, 800]}
@@ -165,52 +102,89 @@ import imgWithdraw from "../assets/slide1.png";
         formats={["avif", "webp"]}
         fallbackFormat="webp"
         quality={80}
-        alt="HENGJUD365 ค่ายเกม Top Providers"
-        class="mx-auto h-auto w-full rounded-2xl border-2 border-blue-400/30 shadow-[0_10px_30px_rgba(37,99,235,0.3)]"
+        alt="FUNBEYOND เว็บสล็อตมีใบรับรอง SSL RNG GLI MGA PAGCOR"
+        class="mx-auto h-auto w-full rounded-2xl border-2 border-purple-400/30 shadow-[0_10px_30px_rgba(157,78,221,0.3)]"
       />
     </div>
     <div slot="right">
       <p class="leading-relaxed">
-        เว็บไซต์รวบรวมเกมสล็อต คาสิโนสด และเกมออนไลน์จากผู้ให้บริการหลายค่ายไว้ภายในระบบเดียว ทำให้ผู้ใช้งานสามารถเลือกเล่นเกมได้หลากหลายตามความสนใจ ทั้งเกมยอดนิยม เกมใหม่ และหมวดหมู่อื่น ๆ
-        โดยไม่ต้องสลับบัญชีหรือเปลี่ยนระบบการใช้งานระหว่างค่ายเกมแต่ละแห่ง
+        เว็บสล็อตมีใบรับรอง ช่วยเพิ่มความมั่นใจก่อนเลือกใช้งานเว็บไซต์ <strong class="text-amber-400">FUNBEYOND</strong> รวบรวมเกมลิขสิทธิ์แท้จากผู้พัฒนาเกมระดับสากล พร้อมผู้ให้บริการที่อยู่ภายใต้การกำกับดูแลของ
+        MGA, PAGCOR และ Anjouan Gaming รวมถึงเกมที่ผ่านมาตรฐาน RNG, GLI, iTech Labs และการเชื่อมต่อข้อมูลด้วย SSL/TLS Encryption เพื่อเสริมความปลอดภัยในการใช้งาน
       </p>
     </div>
-  </ContentBoxSevenThreePremium>
+  </ContentBoxSevenThree>
 
-  <LoginRtpSection />
   <ProviderGrid />
 
-  <!-- H2: ทางเข้า HENGJUD365 ล่าสุด เข้าอย่างไร ให้ปลอดภัย -->
-  <ContentBoxFloatingBadge as="h2" title="ทางเข้า HENGJUD365 ล่าสุด เข้าอย่างไร ให้ปลอดภัย">
+  <ContentBoxNeumorphism as="h2" title="ผลทดสอบการใช้งาน ระบบออโต้ ฝาก ถอน ความเร็ว และเสถียรภาพของเว็บไซต์">
     <p class="leading-relaxed">
-      การเลือกใช้ <strong class="text-yellow-500">ทางเข้า HENGJUD365</strong> ที่ถูกต้องเป็นอีกปัจจัยสำคัญก่อนเข้าสู่ระบบ ควรตรวจสอบชื่อโดเมน ความปลอดภัยของเว็บไซต์ และเลือกใช้งานผ่านลิงก์ที่ได้รับการอัปเดต
-      เพื่อลดความเสี่ยงจากเว็บไซต์เลียนแบบหรือหน้าล็อกอินที่ไม่ได้เชื่อมต่อกับระบบจริง
+      จากการทดลองใช้งานในช่วงเวลาต่าง ๆ พบว่าระบบออโต้ของเว็บไซต์สามารถรองรับการสมัครสมาชิก ฝากเงิน ถอนเงิน และเข้าเล่นเกมได้อย่างต่อเนื่อง โดยขั้นตอนการทำรายการตอบสนองได้รวดเร็ว
+      การเชื่อมต่อระหว่างหน้าเว็บไซต์มีความลื่นไหล และไม่พบปัญหาการโหลดข้อมูลซ้ำหรือระบบหยุดทำงานระหว่างการทดสอบ นอกจากนี้การเข้าใช้งานผ่านมือถือและคอมพิวเตอร์ยังสามารถใช้งานได้อย่างเสถียร
+      ช่วยให้การเล่นเกมและการจัดการธุรกรรมเป็นไปอย่างต่อเนื่องตลอดการใช้งาน
     </p>
-  </ContentBoxFloatingBadge>
+    <FeatureHighlights
+      items={[
+        {
+          icon: "⚡",
+          title: "ผลทดสอบความเร็วในการเข้าใช้งาน",
+          accent: "gold",
+          description:
+            "จากการทดลองเข้าใช้งานเว็บไซต์ผ่านเครือข่ายอินเทอร์เน็ตและอุปกรณ์หลายรูปแบบ พบว่าหน้าเว็บไซต์สามารถเปิดได้อย่างรวดเร็ว การเปลี่ยนหน้าเมนูและการเข้าสู่หน้าเกมทำได้ต่อเนื่อง ไม่พบอาการโหลดค้างหรือหน้าจอหยุดทำงานระหว่างการใช้งาน ช่วยให้ผู้เล่นเข้าถึงบริการต่าง ๆ ได้สะดวกตลอดเวลา",
+        },
+        {
+          icon: "💸",
+          title: "ผลทดสอบระบบฝากถอนอัตโนมัติ",
+          accent: "blue",
+          description:
+            "ระบบฝากถอนอัตโนมัติสามารถรองรับการทำรายการได้ตามขั้นตอนของเว็บไซต์ ตั้งแต่การยืนยันข้อมูล การประมวลผลธุรกรรม ไปจนถึงการอัปเดตยอดในบัญชีสมาชิก โดยระหว่างการทดสอบไม่พบความผิดปกติของระบบหรือปัญหาการประมวลผลที่ส่งผลต่อการใช้งาน ทำให้การจัดการธุรกรรมเป็นไปอย่างต่อเนื่อง",
+        },
+        {
+          icon: "🛡️",
+          title: "ผลทดสอบความเสถียรของเว็บไซต์",
+          accent: "gold",
+          description:
+            "ทีมงานได้ทดลองใช้งานเว็บไซต์ในช่วงเวลาที่แตกต่างกัน ทั้งบนคอมพิวเตอร์และโทรศัพท์มือถือ พบว่าระบบสามารถรองรับการเข้าใช้งานได้อย่างเสถียร การสลับเมนู เข้าเกม และใช้งานฟังก์ชันต่าง ๆ เป็นไปอย่างลื่นไหล ไม่พบปัญหาการหลุดจากระบบหรือข้อผิดพลาดที่กระทบต่อการใช้งานโดยรวม จึงช่วยให้ผู้เล่นใช้งานเว็บไซต์ได้อย่างต่อเนื่องมากยิ่งขึ้น",
+        },
+      ]}
+    />
+  </ContentBoxNeumorphism>
 
-  <!-- H2: ระบบฝากถอนอัตโนมัติ รองรับระบบใดบ้าง — ภาพประกอบ slide1.png (Auto Wallet) -->
-  <ContentBoxSevenThree titleleft="" titleright="ระบบฝากถอนอัตโนมัติ รองรับระบบใดบ้าง">
-    <div slot="left" class="flex h-full flex-col justify-center">
-      <Picture
-        src={imgWithdraw}
-        loading="lazy"
-        fetchpriority="low"
-        widths={[200, 400, 600, 800]}
-        sizes="(max-width: 768px) 100vw, 50vw"
-        decoding="async"
-        formats={["avif", "webp"]}
-        fallbackFormat="webp"
-        quality={80}
-        alt="HENGJUD365 ระบบฝากถอนอัตโนมัติและทางเข้า"
-        class="mx-auto h-auto w-full rounded-2xl border-2 border-blue-400/30 shadow-[0_10px_30px_rgba(37,99,235,0.3)]"
-      />
-    </div>
-    <div slot="right">
-      <p>
-        ระบบฝากถอนของ <strong class="text-amber-400">HENGJUD365</strong> รองรับการทำรายการผ่านช่องทางที่หลากหลาย ทั้งบัญชีธนาคารและบริการทางการเงินที่เว็บไซต์รองรับ โดยทำงานผ่านระบบอัตโนมัติที่ช่วยลดขั้นตอนในการยืนยันรายการ
-        ผู้ใช้งานสามารถศึกษารูปแบบการทำธุรกรรม เงื่อนไขการให้บริการ และช่องทางที่รองรับก่อนเริ่มใช้งานจริง
-      </p>
+  <GameRankingBoard />
+  <LatestWinners />
 
+  <ContentBoxCyberCut as="h2" title="คำวิจารณ์เกี่ยวกับ FUNBEYOND พร้อมข้อสังเกตที่ควรรู้ก่อนใช้งาน">
+    <p class="leading-relaxed">
+      จากการรวบรวมความคิดเห็นของอาสาสมัครผู้ทดลองเล่นกับ <strong class="text-yellow-400">FUNBEYOND</strong> พบว่าผู้เข้าร่วมส่วนใหญ่ให้ความเห็นว่าหน้าเว็บไซต์ใช้งานง่าย ระบบออโต้ตอบสนองได้รวดเร็ว และการค้นหาเกมทำได้สะดวก
+      อย่างไรก็ตาม มีข้อเสนอแนะว่าควรศึกษารายละเอียดของโปรโมชั่นและเงื่อนไขการใช้งานก่อนสมัครสมาชิก เพื่อให้เข้าใจสิทธิประโยชน์และข้อกำหนดต่าง ๆ ได้ครบถ้วน
+    </p>
+  </ContentBoxCyberCut>
+
+  <ReviewCardSumo />
+  <SmoothCarousel />
+
+  <LoginRtpSection />
+
+  <ContentBoxNeumorphism as="h2" title="สมัครสมาชิก FUNBEYOND เว็บไซต์ทางการ เข้าเล่นเลย พร้อมรับโปรพิเศษ">
+    <p class="leading-relaxed">
+      การสมัครสมาชิก <strong class="text-yellow-400">FUNBEYOND</strong> สามารถดำเนินการผ่านเว็บไซต์ทางการได้อย่างสะดวก เพียงกรอกข้อมูลตามขั้นตอนและยืนยันบัญชี ระบบออโต้จะช่วยจัดการกระบวนการต่าง ๆ เพื่อให้เข้าใช้งานได้รวดเร็ว
+      หลังสมัครสมาชิกเรียบร้อย ผู้เล่นสามารถเข้าเล่นเกมลิขสิทธิ์แท้ได้ทันที พร้อมรับสิทธิพิเศษสำหรับสมาชิกใหม่ ไม่ว่าจะเป็นโปรโมชั่นต้อนรับ กิจกรรมประจำเว็บไซต์ หรือข้อเสนอที่อัปเดตในแต่ละช่วงเวลา เพื่อเพิ่มความคุ้มค่าก่อนเริ่มต้นใช้งาน
+    </p>
+
+    <Picture
+      src={imgPromo}
+      loading="lazy"
+      fetchpriority="low"
+      widths={[400, 600, 768]}
+      sizes="(max-width: 768px) 100vw, 42rem"
+      decoding="async"
+      formats={["avif", "webp"]}
+      fallbackFormat="webp"
+      quality={70}
+      alt="FUNBEYOND โปรโมชั่นคืนยอดเสีย 5% รับทุกวันสูงสุด 30,000 บาท"
+      class="mx-auto mt-6 h-auto w-full max-w-2xl rounded-2xl border border-purple-500/30 shadow-[0_5px_20px_rgba(157,78,221,0.25)]"
+    />
+
+    <div class="mt-6 flex justify-center">
       <a
         href="/line"
         class="inline-flex items-center bg-[#00B900] px-8 py-3 font-bold text-white shadow-lg transition-transform hover:scale-105"
@@ -218,31 +192,18 @@ import imgWithdraw from "../assets/slide1.png";
         <span class="mr-2 text-xl">LINE</span> ติดต่อแอดมิน
       </a>
     </div>
-  </ContentBoxSevenThree>
-
-  <!-- H2: ข้อสังเกต และ ความน่าเชื่อถือ HENGJUD365 จากการวิเคราะห์ -->
-  <ContentBoxCyberCut as="h2" title="ข้อสังเกต และ ความน่าเชื่อถือ HENGJUD365 จากการวิเคราะห์">
-    <p class="leading-relaxed">
-      การประเมินความน่าเชื่อถือของเว็บไซต์ควรพิจารณาจากหลายองค์ประกอบร่วมกัน ไม่ว่าจะเป็นโครงสร้างเว็บไซต์ การเชื่อมต่อผ่าน HTTPS ระบบสมาชิก ช่องทางการติดต่อ การอัปเดตข้อมูล
-      และความต่อเนื่องของการให้บริการ โดย <strong class="text-yellow-500">HENGJUD365</strong> มีรายละเอียดหลายส่วนที่สามารถนำมาใช้ประกอบการวิเคราะห์ เพื่อช่วยให้ผู้ใช้งานประเมินความน่าเชื่อถือของเว็บไซต์ได้ด้วยตนเอง
-      ก่อนตัดสินใจสมัครสมาชิกหรือเริ่มใช้งานจริง
-    </p>
-  </ContentBoxCyberCut>
-
-  <SmoothCarousel />
-
-  <ReviewCardSumo />
+  </ContentBoxNeumorphism>
 
   <ContentBoxSpecial>
     <h2 slot="title-left">รองรับวอเล็ทเต็มระบบ เพื่อผู้เล่นไทยโดยเฉพาะ</h2>
     <p slot="content-left" class="leading-relaxed">
-      HENGJUD365 ออกแบบให้ใช้งานง่าย รองรับบัญชีธนาคารชั้นนำ วอเล็ทชั้นนำ และ QR Payment ฝาก-ถอนได้สะดวก ทำงานผ่านระบบอัตโนมัติที่ช่วยลดขั้นตอนในการยืนยันรายการ
+      FUNBEYOND ออกแบบให้ใช้งานง่าย รองรับบัญชีธนาคารชั้นนำ วอเล็ทชั้นนำ และ QR Payment ฝาก-ถอนได้สะดวก ทำงานผ่านระบบออโต้ที่ช่วยลดขั้นตอนในการยืนยันรายการ
       ควรศึกษารูปแบบการทำธุรกรรมและเงื่อนไขการให้บริการก่อนเริ่มใช้งานจริง
     </p>
 
-    <h2 slot="title-right">สมัคร HENGJUD365 ง่าย กรอกข้อมูลเท่าที่จำเป็น</h2>
+    <h2 slot="title-right">สมัคร FUNBEYOND ง่าย กรอกข้อมูลเท่าที่จำเป็น</h2>
     <p slot="content-right" class="leading-relaxed">
-      ขั้นตอนการสมัครถูกย่นให้เหลือน้อยที่สุด กดปุ่ม "สมัครสมาชิก" กรอกข้อมูลเท่าที่ระบบร้องขอ ไม่ต้องส่งเอกสาร ไม่ต้องยืนยันตัวตนหลายขั้นตอน ไม่ต้องรอแอดมิน
+      ขั้นตอนการสมัครถูกย่นให้เหลือน้อยที่สุด กดปุ่ม "สมัครสมาชิก" กรอกข้อมูลเท่าที่ระบบร้องขอ ไม่ต้องส่งเอกสาร ไม่ต้องยืนยันตัวตนหลายขั้นตอน ระบบออโต้พร้อมให้เข้าเล่นเลยได้ทันที
     </p>
   </ContentBoxSpecial>
 

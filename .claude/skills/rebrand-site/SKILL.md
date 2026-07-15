@@ -47,6 +47,26 @@ every past run of this skill has caught at least one real bug there.
      you may pick from the wider component library
    - if the user pastes one specific image path as "ref", treat it as
      the primary hero reference (see Phase 4 hero-selection bug).
+   - **`banner*` splits into two roles by number, `slide*` is content.**
+     `banner1` is the site's single **hero** banner (the one
+     `MainLayout.astro`'s glob picks — see Phase 4); every **higher-
+     numbered banner (`banner2`, `banner3`, `banner4`)** is a spare
+     **article-illustration image** for composing the front page, *not*
+     another hero candidate. This is what the `tools/rebrand-uploader`
+     UI stages them as (`banner1` = hero, `banner2-4` = "รูปประกอบ
+     บทความ").
+   - **`banner2/3/4` go INSIDE a single-column `ContentBox` as a
+     resized inline illustration — never a `ContentBoxSevenThree`
+     column, never a full-width strip, never the hero.** Pick the
+     single-col docx section the banner best fits (e.g. a cashback/
+     bonus banner → the register/promo section), drop the image into
+     that box's slot, and **cap its width so it sits "พอดี"** — e.g.
+     `mx-auto h-auto w-full max-w-2xl rounded-2xl` — not edge-to-edge.
+     Only use a `banner2+` file that belongs to the *current* asset
+     drop (check the mtime / that it's not a stale leftover from an
+     older brand — a `banner3.png` dated before the new `banner1/2`
+     drop is old inventory, skip it). It's fine to leave a `banner2+`
+     unused if no section fits; don't force it or turn it into a hero.
 3. Confirm the new brand name and check `astro.config.mjs` `site:` —
    it's often already been updated to the new domain before you're
    asked to do the content work.
@@ -81,9 +101,11 @@ content, not by editing the shared component's defaults.)
 Map each docx H1/H2/H3 section onto one existing slot 1:1 — most of
 these templates have: hero title, an intro `ContentBox`, a two-column
 `ContentBoxTwo` (often a login widget + a stats/provider table), a
-three-column `ContentBox3Three`/`ContentBoxThreeColums`, one or two
-image+text `ContentBoxSevenThree`/`ContentBox` blocks, a
-`ContentBoxSpecial` two-half block, review cards, and a FAQ. Don't
+three-column `ContentBox3Three`/`ContentBoxThreeColums`, at most one or
+two image+text `ContentBoxSevenThree` blocks (see the hard 2-max rule
+below — lean on single-column `ContentBox*` and two-column
+`ContentBoxTwo*` for the rest), a `ContentBoxSpecial` two-half block,
+review cards, and a FAQ. Don't
 invent new sections or duplicate content across two slots — if the
 docx has fewer sections than slots, some slots keep more generic
 copy; if it has a specific list of game providers/payment methods,
@@ -259,17 +281,28 @@ When a docx has many sections (6+), pick a *different* `ContentBox*`
 variant for several of them so the page has rhythm instead of eight
 identical rounded cards in a row.
 
-**Pair `ContentBoxSevenThree*` (image+text) variants with the brand's
-slide/banner images, matched by what's actually drawn in the image, not
-by leftover order.** If the brand assets include multiple slide images
-(`slide1.png`, `slide2.png`, …) each depicting a different topic (e.g.
-one showing an RTP/volatility chart, one showing a provider-logo wall,
-one showing a login+security diagram), read each image again with
-`Read` and match it to the docx section it actually illustrates —
-don't just reuse the same one or two images across sections. This
-often means moving an image off a section it was previously (loosely)
-paired with in an earlier pass, onto the section it fits better; that's
-fine, note the reassignment in the workspec so it's traceable.
+**Use the `ContentBoxSevenThree*` (image+text) family SPARINGLY — at
+most TWICE per rebrand, ONCE if the docx is short.** The point of a
+SevenThree block is to bring *one* image alongside text; it is NOT the
+default section shape, and you do NOT need to give every slide its own
+SevenThree. Hard limit: **2 `ContentBoxSevenThree*` blocks per rebrand**
+(counting the whole family — plain/`*Premium`/`*CyberCut`/
+`*Neumorphism`/etc. together). If the brand's docx has only a few
+sections, use it **once**. Every other docx section should lean on
+**single-column `ContentBox*` and two-column `ContentBoxTwo*`** instead
+— those carry the bulk of the page.
+
+**Pick exactly the 2 (or 1) `slide*` images that best illustrate their
+sections for those SevenThree blocks; the rest of the slides can go
+unused.** The image pool for SevenThree is the **`slide*` files only**
+(`banner1` is the hero; `banner2/3/4` are single-column `ContentBox`
+inline illustrations — see Phase 1, they do NOT go in a SevenThree
+column). Read the slides with `Read`, choose the 2 whose drawn content
+maps cleanly onto a docx section (e.g. a certification/SSL image → the
+"licensed/standards" section, a speed-test image → the "performance
+test" section), and don't feel obliged to place all four — leaving 2
+slides unused is expected and fine. Note which slides you used vs left
+out in the workspec.
 
 **Every docx heading must survive, in document order, before you touch
 theming.** Before writing a single line of `index.astro`, list out
@@ -335,6 +368,35 @@ not to add another exception. Wire `FeatureHighlights` into
 pass the docx's sub-points as `items`) whenever a docx section fits
 this shape — don't reinvent the icon-card markup inline again.
 
+**Don't leave HTML comments (`<!-- … -->`) in `index.astro`, any page,
+or any component that renders on the page.** Astro does *not* strip
+`<!-- -->` comments — they ship verbatim into the built HTML, so
+section-label breadcrumbs like `<!-- H1: … -->` / `<!-- H2: ทางเข้า … -->`
+leak the docx outline (and the old brand name) into production output.
+Use the numbered docx heading checklist and the `as="h2"`/`title=` props
+themselves as your in-editor markers instead of comment labels; the
+semantic tags already say what each block is. This applies to
+JS/frontmatter comments only in the sense that those *are* stripped —
+the hazard is specifically the HTML-comment syntax in the template body.
+
+**This isn't only about markup you write fresh — the shared components
+already carry old `<!-- … -->` labels** (decorative-layer notes like
+`<!-- แสงพื้นหลัง -->`, `<!-- Section Header -->`, column markers), and
+every one rendered on the page ships to output. When you do the Phase 3
+full-file retheme of a component, strip its HTML comments in the same
+pass. Scope this to the components the live page actually renders, built
+*recursively* (an import of an import — e.g. `LoginRtpSection` →
+`ContentBoxTwo` — still renders), and to the active navbar/footer that
+`MainLayout.astro` points at (grep its `Navbar*`/`Footer*` imports) —
+**not** the inventory siblings that aren't wired in. Find them with
+`grep -rn '<!--' src/components src/layouts` then filter to the rendered
+set. Verify in Phase 5 with `grep -c '<!--' dist/index.html` (expect 0).
+Applied on 2026-07-15 for HENGJUD365: cleaned `ContentBox`,
+`ContentBoxSevenThree`, `Announcement6`, `ProviderGrid`,
+`ReviewCardSumo2` (the 5 rendered components that had comments) and left
+`Navbar`/`Footer`/`NavbarStyle*`/`LatestWinnersPremium`/old
+`ReviewCardSumo` untouched as inventory.
+
 ## Phase 3 — Retheme every component index.astro touches
 
 Identify the old brand's dominant Tailwind color family (grep the
@@ -352,9 +414,55 @@ rewrite (cleaner than dozens of tiny edits) that:
 - replaces the old brand name in visible text, `alt=`, and any
   hardcoded fallback text (logo fallback headings, footer copyright)
 
-Also grep the whole `src/` tree for the old brand name after this pass
-— report (don't silently fix) any hits in pages/components outside
-`index.astro`'s scope, since those are likely a separate ask.
+Also grep the whole `src/` tree for the old brand name after this pass.
+Hits inside **inventory components** that `index.astro` doesn't render
+(unused `Navbar*`/`Footer*`/`Announcement*`/`Faq*` siblings, etc.) are
+expected drift — leave them. But hits inside the **other real pages**
+(`src/pages/*.astro`) are **in scope and must be fixed in the same
+rebrand — see the Phase 4.5 sweep below.** Don't defer them as "a
+separate ask"; a half-rebranded site where `/promotion` or `/login`
+still shows the previous brand is a bug the user will bounce back.
+
+## Phase 4.5 — Rebrand EVERY other page, not just `index.astro`
+
+`index.astro` is the biggest page but it is **not** the only one. After
+it builds clean, sweep **every** `src/pages/*.astro` and bring each onto
+the new brand — this is mandatory, not optional. For each page:
+
+1. **Brand name** in `<title>`, `description`, `<h1>`/`ContentBox`
+   titles, schema.org `name`/`url`, `alt=` text, and any hardcoded
+   logo/brand-identity string (some standalone pages like `login.astro`/
+   `register.astro` are full custom HTML with a `.brand-identity` div and
+   their own `<style>` block — they don't use `MainLayout`, so they need
+   the brand + hue swap done inline, not inherited).
+2. **Hue swap** to the new palette — and note the standalone pages often
+   theme via **raw hex / `rgba()` in a `<style>` block** (e.g. a CSS var
+   misnamed `--brand-red: #2563eb` that's actually the old blue), which a
+   tailwind-class grep (`blue-[0-9]`) misses. Grep each page for the old
+   brand's hex and `rgba()` glow values too, not just utility classes.
+3. **Chrome consistency — make every page's `Announcement*`/navbar/footer
+   match `index.astro`.** Pages that share `MainLayout` inherit the
+   navbar/footer/hero automatically (you already repointed those in
+   Phase 3), but each page imports its **own `Announcement*`** in its
+   frontmatter — grep `src/pages/*.astro` for `Announcement` and switch
+   every casino/main page to the **same variant `index.astro` uses**
+   (e.g. `Announcement6` → `AnnouncementCyber`), so the ticker style +
+   message are uniform sitewide. If `index` passes an explicit `message`
+   prop, the other pages calling `<Announcement />` bare will fall back
+   to that variant's **default** message — make sure that default (which
+   you set in Phase 2/3) is the current brand's copy so bare calls match.
+4. **Stale-asset check per page** (Phase 4 applies here too — e.g.
+   `promotion.astro` hardcodes `slide1-4` imports; confirm the extensions
+   exist).
+5. **The one sanctioned exception: intentionally-themed sub-sections.**
+   Lottery/`หวย` pages (`แนวทาง.astro`, `ตรวจหวย.astro`) run their own
+   `Huay` theme (red/gold) + `AnnouncementHuay` on purpose — do **not**
+   force them onto the casino brand's hue or `AnnouncementCyber`. Still
+   verify they carry **zero** old-brand-name references; only the theme
+   is exempt, not the brand name. Note this decision in the workspec.
+
+Verify in Phase 5 by grepping **all** of `dist/` (not just
+`dist/index.html`) for the old brand name → must be 0 across every page.
 
 **Components can be nested — don't stop at grepping `index.astro`'s own
 JSX.** Some sections get extracted into their own wrapper component
@@ -393,6 +501,24 @@ src>` in Phase 5, not just that the build succeeds. Fix by explicitly
 preferring `.webp` and/or the specific file the user referenced as
 "ref", with the naive alphabetical pick only as a last-resort fallback.
 
+**The `banner1` = hero convention (reconcile the glob pick with it).**
+The upload tool (`tools/rebrand-uploader`) and Phase 1/2 fix the hero as
+**`banner1`**, with `banner2`, `banner3`, … reserved as article-
+illustration images. So when you retheme `MainLayout.astro`, its
+preferred-banner pick **must target `banner1`** (`path.endsWith("banner1.")`
+across the glob'd extensions, or the user's explicit "ref"), and must
+*not* inherit the previous brand's hardcoded banner number. A live file
+has shipped hardcoding `banner3.png` as the preferred hero (that was one
+brand's specific choice); left as-is, once a new brand also uploads a
+`banner3` *article* image, the glob would grab that article image as the
+hero. When you rewrite `MainLayout.astro` in Phase 3, repoint the
+`preferredBannerPath` line to `banner1` — don't carry the old number
+forward. Two halves of this trap now differ in how they're handled:
+the **stale-extension** half is largely prevented at source (the uploader
+normalizes to one extension per name and deletes same-base siblings), but
+the **wrong-number** half is not — it's on you to point the hero pick at
+`banner1` every rebrand.
+
 ## Phase 5 — Verify (always do this, it's where bugs surface)
 
 1. `npm run build` — must complete with 0 pages failing. A clean build
@@ -409,6 +535,10 @@ preferring `.webp` and/or the specific file the user referenced as
      Phase 4 glob trap didn't resurface
    - grep for `undefined`, `NaN`, `[object Object]` as a cheap check
      for broken prop plumbing
+   - `grep -c '<!--' dist/index.html` should be 0 — Astro ships HTML
+     comments to output, so any `<!-- H2: … -->` section labels left in
+     a page leak the docx outline (and often the old brand name) into
+     production; remove them at the source (see Phase 2)
    - if any `*FloatingBadge` component is in play, re-check its
      vertical clearance (see the Phase 2 note) with the page's *actual*
      title text at a narrow/mobile width — a long title that wraps to

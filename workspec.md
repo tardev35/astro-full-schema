@@ -902,3 +902,6 @@ NavbarStyle family, Footer family** โดย:
 
 ### แก้เพิ่ม (2026-07-16): เอา ProviderGrid ("ค่ายเกมยอดนิยม MAFIA168") ออกจาก index
 ผู้ใช้สั่งถอด section ค่ายเกมยอดนิยมออกจากหน้าแรก — ลบ import + `<ProviderGrid />` ใน `index.astro`; ตัวไฟล์ `ProviderGrid.astro` คงไว้เป็น inventory (รีธีมเขียวแล้ว); build ผ่าน 9 หน้า, dist ไม่มี "ค่ายเกมยอดนิยม" เหลือ, h2 บน index เหลือ 8 (5 docx + Winners/Ranking/Review)
+
+### แก้เพิ่ม (2026-07-16): นำ LoginRtpSection + ProviderGrid กลับเข้า index
+หลัง deploy แล้ว ผู้ใช้สั่งนำ 2 section ที่ถอดออกไปกลับมา — คืน import + `<LoginRtpSection />` และ `<ProviderGrid />` ใน `index.astro` ตำแหน่งเดิม (ระหว่าง ContentBoxSevenThreeNeumorphism กับ GameRankingBoard); build ผ่าน 9 หน้า, grep dist เจอเนื้อหา RTP + Pragmatic Play ครบทั้งสอง section

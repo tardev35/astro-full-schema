@@ -899,3 +899,6 @@ NavbarStyle family, Footer family** โดย:
 
 ### แก้เพิ่ม (2026-07-16): เอา LoginRtpSection ออกจาก index
 ผู้ใช้สั่งถอด section ล็อคอิน (login widget + RTP table) ออกจากหน้าแรก — ลบ import + `<LoginRtpSection />` ใน `index.astro` (จุดเดียวที่ render); ตัวไฟล์ `LoginRtpSection.astro` + `ContentBoxTwo.astro` คงไว้เป็น inventory (รีธีมเขียว MAFIA168 แล้ว พร้อมใช้); build ผ่าน 9 หน้า, grep dist ไม่มี "ยินดีต้อนรับกลับ"/LoginRtp เหลือ
+
+### แก้เพิ่ม (2026-07-16): เอา ProviderGrid ("ค่ายเกมยอดนิยม MAFIA168") ออกจาก index
+ผู้ใช้สั่งถอด section ค่ายเกมยอดนิยมออกจากหน้าแรก — ลบ import + `<ProviderGrid />` ใน `index.astro`; ตัวไฟล์ `ProviderGrid.astro` คงไว้เป็น inventory (รีธีมเขียวแล้ว); build ผ่าน 9 หน้า, dist ไม่มี "ค่ายเกมยอดนิยม" เหลือ, h2 บน index เหลือ 8 (5 docx + Winners/Ranking/Review)

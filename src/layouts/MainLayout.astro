@@ -2,8 +2,8 @@
 import { Image } from "astro:assets";
 import Bg from "../assets/bg.png";
 import "../styles/global.css";
-import NavbarPremium from "../components/NavbarPremium.astro";
-import Footer from "../components/FooterPremium.astro";
+import NavbarStyle6 from "../components/NavbarStyle6.astro";
+import Footer from "../components/FooterStyle3.astro";
 
 const bannerImages = import.meta.glob<{ default: ImageMetadata }>("../assets/banner*.{png,webp,jpg,jpeg}", { eager: true });
 const bannerPaths = Object.keys(bannerImages);
@@ -13,8 +13,8 @@ const mainBannerPath = preferredBannerPath ?? webpBannerPath ?? bannerPaths[0];
 const mainBanner = mainBannerPath ? bannerImages[mainBannerPath].default : null;
 
 const {
-  title = "999LORD รีวิวเว็บสล็อต | ทางเข้าเว็บตรง สล็อตทุกค่าย ระบบออโต้",
-  description = "999LORD รีวิวเว็บสล็อต ภาพรวม จุดเด่น โครงสร้างเว็บไซต์ ฟีเจอร์ที่ให้บริการ รวมค่ายสล็อต ระบบอัตโนมัติ ช่องทางเข้า มาตรฐานด้านความปลอดภัย ข้อมูลก่อนสมัคร",
+  title = "คู่มือ MAFIA168 กติกาเกม วิธีเล่น โปรโมชั่น การสมัคร",
+  description = "คู่มือการใช้งานเว็บ MAFIA168 กติกาการเล่นเกม โปรโมชั่น วิธีฝากถอน ขั้นตอนการสมัคร คำแนะนำอื่นๆ ติดต่อไลน์",
   robots = "index, follow",
   ImageOg = "/slide3.webp",
 } = Astro.props;
@@ -22,7 +22,7 @@ const {
 const currentPath = Astro.url.pathname;
 const canonicalURL = new URL(currentPath, Astro.site);
 const ogImageURL = new URL(ImageOg, Astro.site);
-const ogSiteName = "999LORD";
+const ogSiteName = "MAFIA168";
 ---
 
 <html lang="th">
@@ -42,7 +42,7 @@ const ogSiteName = "999LORD";
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="shortcut icon" href="/favicon.ico" />
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-    <meta name="apple-mobile-web-app-title" content="999lord" />
+    <meta name="apple-mobile-web-app-title" content="mafia168" />
     <link rel="manifest" href="/site.webmanifest" />
 
     <meta property="og:type" content="website" />
@@ -74,7 +74,6 @@ const ogSiteName = "999LORD";
         background-color: #ffffff;
         font-weight: 400;
         font-family: "Kanit", sans-serif !important;
-        /* color: white; */
       }
     </style>
   </head>
@@ -92,12 +91,12 @@ const ogSiteName = "999LORD";
       decoding="sync"
     />
 
-    <NavbarPremium />
+    <NavbarStyle6 />
 
     <div class="mb-2.5 flex w-full items-center justify-center">
       <Image
         src={mainBanner!}
-        alt="999LORD banner"
+        alt="MAFIA168 banner"
         loading="eager"
         fetchpriority="high"
         widths={[412, 768, 1900]}

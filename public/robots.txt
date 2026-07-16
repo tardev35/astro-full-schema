@@ -13,5 +13,5 @@ Disallow: /
 User-agent: Anthropic-ai
 Disallow: /
 
-Sitemap: https://www.999lord-review.com/sitemap-0.xml
+Sitemap: https://www.mafia168-guide.com/sitemap-0.xml
 

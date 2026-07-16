@@ -1,6 +1,6 @@
 ---
 name: rebrand-site
-description: Use when the user wants to launch/redesign a new brand on this Astro slot-site template — swapping in a new name, a docx content brief, and reference images (logo/banner/slides) in src/assets, while reusing the existing component library. Triggers on requests like "เว็บใหม่ชื่อ...", "redesign ตาม ref รูปที่แนบมา", "ตรวจสอบ SmoothCarousel/Promotion", or any ask to retheme index.astro from a new brand's assets + docx without deleting existing components.
+description: Use when the user wants to launch/redesign a new brand on this Astro slot-site template — swapping in a new name, a docx content brief, and reference images (logo/banner/slides) in src/assets, while reusing the existing component library. Triggers on requests like "เว็บใหม่ชื่อ...", "redesign ตาม ref รูปที่แนบมา", "ตรวจสอบ SmoothCarousel/Promotion", or any ask to retheme index.astro from a new brand's assets + docx without deleting existing components. A full rebrand runs as the 2-agent parallel workflow below BY DEFAULT (this repo's owner has standing approval for it) — you do not need the user to say "ขนาน"/"parallel" each time. Only fall back to fully sequential when the user explicitly asks for it (e.g. "ทีละสเต็ป", "sequential", "อย่าแตก agent") or when the task is a Phase 7 single-component follow-up, where parallelizing isn't worth it.
 ---
 
 # Rebrand this Astro site to a new brand
@@ -14,6 +14,89 @@ skipping a component `index.astro` already imports.
 
 Work through these phases in order. Don't skip the verification phase —
 every past run of this skill has caught at least one real bug there.
+
+**Build cadence: run `npm run build` exactly ONCE, in Phase 5 — not
+between edits.** A full `astro build` is the single most expensive step
+in this workflow, and rebuilding after each component/page wastes most
+of the wall-clock time a rebrand takes. Do all the editing across
+Phases 2–4.5 first, then build once at the start of Phase 5 and run
+every `dist/`-based grep check against that one build. The only time
+you build again is if Phase 5 surfaces a bug and you fix it — then one
+more build to confirm. Any instruction in an earlier phase that says
+"verify with `npm run build` then grep `dist/…`" means *defer that grep
+to the Phase 5 build*, not kick off a build then and there.
+
+## Optional: run the rebrand as 2 parallel subagents
+
+**Default for full rebrands.** Run a full rebrand this way *by default* —
+the repo owner has given standing approval, so you do **not** need the
+user to type "ขนาน"/"parallel" each time (though those cues still apply).
+Fall back to fully sequential only when the user explicitly asks
+("ทีละสเต็ป", "sequential", "อย่าแตก agent") or when the task is a Phase 7
+single-component follow-up (parallelizing one component isn't worth the
+spawn cost — do those yourself). This mode changes *who* runs Phases
+2–4.5 and in what order — **not what those phases do**. Every rule in
+Phases 1–7 still applies in full to each subagent; nothing here relaxes
+them.
+
+The split is **by non-overlapping files, never by "type of work."** Two
+subagents must never edit the same file — so the shared "chrome" that
+renders on *every* page has to be finished *before* the fan-out, by you,
+not by either subagent.
+
+**Step P0 — you (orchestrator) do Phase 1 + the variant-selection part
+of Phase 2 yourself, up front.** Extract the docx, read the images, pick
+each family's variant (Navbar / Footer / Announcement / LatestWinners /
+ContentBox-mix per the Phase 2 rotation rule), and write brand name +
+palette (old→new hex + Tailwind hue) + chosen variants + the numbered
+docx-heading checklist into **one** scratchpad "brand spec" file. Both
+subagents read that single file — they must **not** re-extract the docx
+or re-pick variants (that would risk two agents choosing differently).
+
+**Step P1 — you retheme the SHARED chrome sequentially, before fan-out,
+then commit it as the baseline both agents build on.** Compute the shared
+set *each run* (don't trust a stale list — variant rotation changes which
+navbar/footer is active): the active `MainLayout.astro` + the single
+`Navbar*`/`Footer*` it imports + `Navfoot.astro`, **plus any component
+imported by ≥2 files under `src/pages/`** (grep the page-level imports to
+find them; as of the 999LORD brand that extra set is `ContentBox.astro`
+and `Announcement4.astro`). Retheme all of these per Phase 3. This is the
+collision zone; getting it done first is what makes the two agents
+disjoint.
+
+**Step P2 — fan out exactly two subagents (`Agent` tool), zero file
+overlap:**
+- **Agent A — Landing.** Owns `src/pages/index.astro` and every component
+  *only* index renders — built **recursively** (e.g. `LoginRtpSection` →
+  `ContentBoxTwo`), MINUS every file in the P1 shared set. Runs Phase 2
+  (content mapping) + Phase 3 + Phase 4 (stale-asset fixes) for those
+  files.
+- **Agent B — Sub-pages.** Owns every *other* `src/pages/*.astro` and the
+  components *only* those pages render (e.g. `AnnouncementHuay`,
+  `ContentBoxHuay`), MINUS the P1 shared set. Runs Phase 4.5 for those
+  pages (including the `Huay`-theme exception).
+
+Each subagent's brief MUST state, explicitly: (1) the exact file list it
+owns; (2) a **"do NOT touch"** list = the P1 shared-chrome files + the
+other agent's files; (3) the Phase-2 rule that unused component variants
+are inventory and must never be deleted; (4) "read the brand-spec
+scratchpad file for name/palette/variants; do not re-extract the docx or
+re-choose variants"; (5) **"do NOT run `npm run build`"** — the single
+build stays with you in Phase 5, per the build-cadence rule above. A
+subagent that builds mid-flight both wastes the most expensive step and
+can't see the other agent's not-yet-merged edits anyway.
+
+**Step P3 — you merge + verify.** After both agents report back, run
+Phase 5 (the one build), Phase 6 (workspec), and any Phase 7 follow-ups
+yourself. If verification shows a shared-chrome component needs a further
+change, make it **yourself** in this step — never send a subagent back
+into the shared set after fan-out.
+
+**Fallback — when the split can't be made clean:** if a component you
+need to retheme is shared across both zones (so neither agent can own it
+safely), pull it into the P1 shared step and retheme it there instead of
+splitting it. Fewer files in the parallel zone is always safer than a
+collision; when in doubt, widen P1 and shrink the fan-out.
 
 ## Phase 1 — Gather brand inputs
 
@@ -255,9 +338,9 @@ heading:
   would leak into the `<h2>` (Tailwind's `html` sets `line-height: 1.5`,
   so the heading currently renders at 1.5). Neutralize the leak by
   adding `leading-normal` (= 1.5, a genuine no-op) to every heading that
-  is a flex-sibling of the hoisted slot. Verify with `npm run build`
-  then grep `dist/index.html` that the `<article>` now carries the text
-  classes and the wrapper `<div>` is gone.
+  is a flex-sibling of the hoisted slot. Confirm in the Phase 5 build
+  (don't build now) by grepping `dist/index.html` that the `<article>`
+  now carries the text classes and the wrapper `<div>` is gone.
 - The single-child count must stay the same for `gap-N` to behave: this
   works because the *consumer* already wraps slot content in one element
   (`<div slot="right"><p>…</p></div>`). Don't flatten a case where the
@@ -425,9 +508,11 @@ still shows the previous brand is a bug the user will bounce back.
 
 ## Phase 4.5 — Rebrand EVERY other page, not just `index.astro`
 
-`index.astro` is the biggest page but it is **not** the only one. After
-it builds clean, sweep **every** `src/pages/*.astro` and bring each onto
-the new brand — this is mandatory, not optional. For each page:
+`index.astro` is the biggest page but it is **not** the only one. Once
+its edits are done, sweep **every** `src/pages/*.astro` and bring each
+onto the new brand — this is mandatory, not optional. (Don't build
+between finishing `index.astro` and starting this sweep; the single
+Phase 5 build covers all pages at once.) For each page:
 
 1. **Brand name** in `<title>`, `description`, `<h1>`/`ContentBox`
    titles, schema.org `name`/`url`, `alt=` text, and any hardcoded
@@ -521,8 +606,11 @@ the **wrong-number** half is not — it's on you to point the hero pick at
 
 ## Phase 5 — Verify (always do this, it's where bugs surface)
 
-1. `npm run build` — must complete with 0 pages failing. A clean build
-   only proves the code compiles, not that content/images are correct.
+1. `npm run build` — this is the **one** build for the whole rebrand (all
+   editing from Phases 2–4.5 is already done), and it must complete with
+   0 pages failing. A clean build only proves the code compiles, not that
+   content/images are correct. Only build again if a check below turns up
+   a bug you then fix.
 2. Start `npm run dev`, `curl` the built pages, and grep the rendered
    HTML:
    - old brand name must not appear anywhere in the response body

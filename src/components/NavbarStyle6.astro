@@ -16,58 +16,58 @@ const isActive = (path: string) => {
 <header class="sticky top-0 z-50 w-full font-sans shadow-lg">
   <div class="pointer-events-none absolute top-0 left-0 z-50 hidden h-0 w-full items-start justify-center lg:flex">
     <div
-      class="pointer-events-auto flex h-[65px] w-[120px] items-center justify-center rounded-b-3xl border-x border-b border-red-500 bg-gradient-to-b from-[#8B0000] to-[#4A0000] shadow-[0_5px_15px_rgba(220,38,38,0.4)]">
+      class="pointer-events-auto flex h-[65px] w-[120px] items-center justify-center rounded-b-3xl border-x border-b border-green-500 bg-gradient-to-b from-[#166534] to-[#052e16] shadow-[0_5px_15px_rgba(34,197,94,0.4)]">
       <a href="/" class="drop-shadow-[0_0_8px_rgba(255,255,255,0.2)] transition-transform hover:scale-110">
-        <Picture src={mainLogo!} alt="KIKI49 Notch Logo" loading="eager" fetchpriority="high" class="h-[35px] w-auto" formats={["avif", "webp"]} fallbackFormat="webp" />
+        <Picture src={mainLogo!} alt="MAFIA168 Notch Logo" loading="eager" fetchpriority="high" class="h-[35px] w-auto" formats={["avif", "webp"]} fallbackFormat="webp" />
       </a>
     </div>
   </div>
 
   <aside
-    class="fixed top-1/2 left-3 z-40 hidden h-[450px] w-[90px] -translate-y-1/2 flex-col items-center justify-center rounded-2xl border border-red-900/50 bg-[#4A0000]/95 p-2 shadow-[5px_0_20px_rgba(0,0,0,0.6)] backdrop-blur-md lg:flex">
+    class="fixed top-1/2 left-3 z-40 hidden h-[450px] w-[90px] -translate-y-1/2 flex-col items-center justify-center rounded-2xl border border-green-900/50 bg-[#052e16]/95 p-2 shadow-[5px_0_20px_rgba(0,0,0,0.6)] backdrop-blur-md lg:flex">
     <div class="relative flex h-full w-full flex-col gap-2 overflow-hidden rounded-xl">
-      <a href="/" class={`group relative w-full h-full flex flex-col items-center justify-center rounded-lg transition-all ${isActive("/") ? "bg-[#8B0000]" : "hover:bg-[#8B0000]/70"}`}>
+      <a href="/" class={`group relative w-full h-full flex flex-col items-center justify-center rounded-lg transition-all ${isActive("/") ? "bg-[#166534]" : "hover:bg-[#166534]/70"}`}>
         <span class="mb-1 text-3xl drop-shadow-md transition-transform group-hover:scale-110">🏠</span>
         <span class={`text-xs font-bold transition-colors ${isActive("/") ? "text-white" : "text-gray-300 group-hover:text-white"}`}>หน้าแรก</span>
-        <div class={`absolute left-0 top-0 h-full w-[3px] bg-red-500 transition-transform duration-300 origin-top ${isActive("/") ? "scale-y-100" : "scale-y-0 group-hover:scale-y-100"}`}></div>
+        <div class={`absolute left-0 top-0 h-full w-[3px] bg-green-500 transition-transform duration-300 origin-top ${isActive("/") ? "scale-y-100" : "scale-y-0 group-hover:scale-y-100"}`}></div>
       </a>
 
       <a
         href="/promotion"
-        class={`group relative w-full h-full flex flex-col items-center justify-center rounded-lg transition-all ${isActive("/promotion") ? "bg-[#8B0000]" : "hover:bg-[#8B0000]/70"}`}>
+        class={`group relative w-full h-full flex flex-col items-center justify-center rounded-lg transition-all ${isActive("/promotion") ? "bg-[#166534]" : "hover:bg-[#166534]/70"}`}>
         <span class="mb-1 text-3xl drop-shadow-md transition-transform group-hover:scale-110">🎁</span>
         <span class={`text-xs font-bold transition-colors ${isActive("/promotion") ? "text-white" : "text-gray-300 group-hover:text-white"}`}>โปรโมชั่น</span>
-        <div class={`absolute left-0 top-0 h-full w-[3px] bg-red-500 transition-transform duration-300 origin-top ${isActive("/promotion") ? "scale-y-100" : "scale-y-0 group-hover:scale-y-100"}`}>
+        <div class={`absolute left-0 top-0 h-full w-[3px] bg-green-500 transition-transform duration-300 origin-top ${isActive("/promotion") ? "scale-y-100" : "scale-y-0 group-hover:scale-y-100"}`}>
         </div>
       </a>
 
       <a
         href="/ทดลองเล่น"
-        class={`group relative w-full h-full flex flex-col items-center justify-center rounded-lg transition-all ${isActive("/ทดลองเล่น") ? "bg-[#8B0000]" : "hover:bg-[#8B0000]/70"}`}>
+        class={`group relative w-full h-full flex flex-col items-center justify-center rounded-lg transition-all ${isActive("/ทดลองเล่น") ? "bg-[#166534]" : "hover:bg-[#166534]/70"}`}>
         <span class="mb-1 text-3xl drop-shadow-md transition-transform group-hover:scale-110">🎰</span>
         <span class={`text-xs font-bold transition-colors ${isActive("/ทดลองเล่น") ? "text-white" : "text-gray-300 group-hover:text-white"}`}>ทดลองเล่น</span>
-        <div class={`absolute left-0 top-0 h-full w-[3px] bg-red-500 transition-transform duration-300 origin-top ${isActive("/ทดลองเล่น") ? "scale-y-100" : "scale-y-0 group-hover:scale-y-100"}`}>
+        <div class={`absolute left-0 top-0 h-full w-[3px] bg-green-500 transition-transform duration-300 origin-top ${isActive("/ทดลองเล่น") ? "scale-y-100" : "scale-y-0 group-hover:scale-y-100"}`}>
         </div>
       </a>
 
-      <a href="/ทางเข้า" class={`group relative w-full h-full flex flex-col items-center justify-center rounded-lg transition-all ${isActive("/ทางเข้า") ? "bg-[#8B0000]" : "hover:bg-[#8B0000]/70"}`}>
+      <a href="/ทางเข้า" class={`group relative w-full h-full flex flex-col items-center justify-center rounded-lg transition-all ${isActive("/ทางเข้า") ? "bg-[#166534]" : "hover:bg-[#166534]/70"}`}>
         <span class="mb-1 text-3xl drop-shadow-md transition-transform group-hover:scale-110">🌐</span>
         <span class={`text-xs font-bold transition-colors ${isActive("/ทางเข้า") ? "text-white" : "text-gray-300 group-hover:text-white"}`}>ทางเข้า</span>
-        <div class={`absolute left-0 top-0 h-full w-[3px] bg-red-500 transition-transform duration-300 origin-top ${isActive("/ทางเข้า") ? "scale-y-100" : "scale-y-0 group-hover:scale-y-100"}`}></div>
+        <div class={`absolute left-0 top-0 h-full w-[3px] bg-green-500 transition-transform duration-300 origin-top ${isActive("/ทางเข้า") ? "scale-y-100" : "scale-y-0 group-hover:scale-y-100"}`}></div>
       </a>
 
       <a
         href="/contact-us"
-        class={`group relative w-full h-full flex flex-col items-center justify-center rounded-lg transition-all ${isActive("/contact-us") ? "bg-[#8B0000]" : "hover:bg-[#8B0000]/70"}`}>
+        class={`group relative w-full h-full flex flex-col items-center justify-center rounded-lg transition-all ${isActive("/contact-us") ? "bg-[#166534]" : "hover:bg-[#166534]/70"}`}>
         <span class="mb-1 text-3xl drop-shadow-md transition-transform group-hover:scale-110">📞</span>
         <span class={`text-xs font-bold transition-colors ${isActive("/contact-us") ? "text-white" : "text-gray-300 group-hover:text-white"}`}>ติดต่อเรา</span>
-        <div class={`absolute left-0 top-0 h-full w-[3px] bg-red-500 transition-transform duration-300 origin-top ${isActive("/contact-us") ? "scale-y-100" : "scale-y-0 group-hover:scale-y-100"}`}>
+        <div class={`absolute left-0 top-0 h-full w-[3px] bg-green-500 transition-transform duration-300 origin-top ${isActive("/contact-us") ? "scale-y-100" : "scale-y-0 group-hover:scale-y-100"}`}>
         </div>
       </a>
     </div>
   </aside>
 
-  <nav class="relative z-40 flex h-[60px] items-center justify-between border-b border-red-700/50 bg-[#4A0000] px-3 shadow-xl lg:hidden">
+  <nav class="relative z-40 flex h-[60px] items-center justify-between border-b border-green-700/50 bg-[#052e16] px-3 shadow-xl lg:hidden">
     <button id="hamburger-btn" class="flex flex-col items-center justify-center space-y-1.5 p-2" aria-label="Menu">
       <span class="hamburger-line h-0.5 w-6 origin-center bg-white transition-all duration-300"></span>
       <span class="hamburger-line h-0.5 w-6 bg-white transition-all duration-300"></span>
@@ -75,10 +75,10 @@ const isActive = (path: string) => {
     </button>
 
     <a href="/" class="flex-shrink-0 transition-transform hover:scale-105">
-      <Picture src={mainLogo!} alt="KIKI49 Mobile Logo" loading="eager" fetchpriority="high" class="h-[30px] w-auto drop-shadow-md" formats={["avif", "webp"]} fallbackFormat="webp" />
+      <Picture src={mainLogo!} alt="MAFIA168 Mobile Logo" loading="eager" fetchpriority="high" class="h-[30px] w-auto drop-shadow-md" formats={["avif", "webp"]} fallbackFormat="webp" />
     </a>
 
-    <a href="/login" class="flex h-[32px] items-center justify-center rounded border border-white/20 bg-white px-4 text-xs font-bold text-[#8B0000] shadow transition-colors hover:bg-gray-100">
+    <a href="/login" class="flex h-[32px] items-center justify-center rounded border border-white/20 bg-white px-4 text-xs font-bold text-[#166534] shadow transition-colors hover:bg-gray-100">
       เข้าสู่ระบบ
     </a>
   </nav>
@@ -87,41 +87,41 @@ const isActive = (path: string) => {
 
   <div
     id="mobile-sidebar"
-    class="fixed top-0 left-0 z-50 h-screen w-[260px] -translate-x-full transform overflow-y-auto border-r border-red-700/50 bg-[#4A0000] shadow-[10px_0_30px_rgba(0,0,0,0.8)] transition-transform duration-300 ease-out lg:hidden">
+    class="fixed top-0 left-0 z-50 h-screen w-[260px] -translate-x-full transform overflow-y-auto border-r border-green-700/50 bg-[#052e16] shadow-[10px_0_30px_rgba(0,0,0,0.8)] transition-transform duration-300 ease-out lg:hidden">
     <div class="flex flex-col space-y-2.5 px-4 pt-16 pb-8">
       <a
         href="/"
-        class={`sidebar-item flex items-center px-4 py-3 rounded-lg border transition-all ${isActive("/") ? "bg-[#8B0000] border-red-500 text-white shadow-inner" : "bg-white/5 border-transparent text-gray-300 hover:bg-white/10 hover:text-white"}`}>
+        class={`sidebar-item flex items-center px-4 py-3 rounded-lg border transition-all ${isActive("/") ? "bg-[#166534] border-green-500 text-white shadow-inner" : "bg-white/5 border-transparent text-gray-300 hover:bg-white/10 hover:text-white"}`}>
         <span class="mr-3 text-xl">🏠</span>
         <span class="text-sm font-bold">หน้าแรก</span>
       </a>
       <a
         href="/promotion"
-        class={`sidebar-item flex items-center px-4 py-3 rounded-lg border transition-all ${isActive("/promotion") ? "bg-[#8B0000] border-red-500 text-white shadow-inner" : "bg-white/5 border-transparent text-gray-300 hover:bg-white/10 hover:text-white"}`}>
+        class={`sidebar-item flex items-center px-4 py-3 rounded-lg border transition-all ${isActive("/promotion") ? "bg-[#166534] border-green-500 text-white shadow-inner" : "bg-white/5 border-transparent text-gray-300 hover:bg-white/10 hover:text-white"}`}>
         <span class="mr-3 text-xl">🎁</span>
         <span class="text-sm font-bold">โปรโมชั่น</span>
       </a>
       <a
         href="/ทดลองเล่น"
-        class={`sidebar-item flex items-center px-4 py-3 rounded-lg border transition-all ${isActive("/ทดลองเล่น") ? "bg-[#8B0000] border-red-500 text-white shadow-inner" : "bg-white/5 border-transparent text-gray-300 hover:bg-white/10 hover:text-white"}`}>
+        class={`sidebar-item flex items-center px-4 py-3 rounded-lg border transition-all ${isActive("/ทดลองเล่น") ? "bg-[#166534] border-green-500 text-white shadow-inner" : "bg-white/5 border-transparent text-gray-300 hover:bg-white/10 hover:text-white"}`}>
         <span class="mr-3 text-xl">🎰</span>
         <span class="text-sm font-bold">ทดลองเล่น</span>
       </a>
       <a
         href="/ทางเข้า"
-        class={`sidebar-item flex items-center px-4 py-3 rounded-lg border transition-all ${isActive("/ทางเข้า") ? "bg-[#8B0000] border-red-500 text-white shadow-inner" : "bg-white/5 border-transparent text-gray-300 hover:bg-white/10 hover:text-white"}`}>
+        class={`sidebar-item flex items-center px-4 py-3 rounded-lg border transition-all ${isActive("/ทางเข้า") ? "bg-[#166534] border-green-500 text-white shadow-inner" : "bg-white/5 border-transparent text-gray-300 hover:bg-white/10 hover:text-white"}`}>
         <span class="mr-3 text-xl">🌐</span>
         <span class="text-sm font-bold">ทางเข้า</span>
       </a>
       <a
         href="/contact-us"
-        class={`sidebar-item flex items-center px-4 py-3 rounded-lg border transition-all ${isActive("/contact-us") ? "bg-[#8B0000] border-red-500 text-white shadow-inner" : "bg-white/5 border-transparent text-gray-300 hover:bg-white/10 hover:text-white"}`}>
+        class={`sidebar-item flex items-center px-4 py-3 rounded-lg border transition-all ${isActive("/contact-us") ? "bg-[#166534] border-green-500 text-white shadow-inner" : "bg-white/5 border-transparent text-gray-300 hover:bg-white/10 hover:text-white"}`}>
         <span class="mr-3 text-xl">📞</span>
         <span class="text-sm font-bold">ติดต่อเรา</span>
       </a>
 
-      <div class="mt-5 flex flex-col gap-2 border-t border-red-800/50 pt-5">
-        <a href="/register" class="sidebar-item flex justify-center rounded border border-red-500 bg-red-600 py-3 text-sm font-bold text-white shadow-md transition-colors hover:bg-red-500">
+      <div class="mt-5 flex flex-col gap-2 border-t border-green-800/50 pt-5">
+        <a href="/register" class="sidebar-item flex justify-center rounded border border-green-500 bg-green-600 py-3 text-sm font-bold text-white shadow-md transition-colors hover:bg-green-500">
           🔥 สมัครสมาชิกใหม่
         </a>
       </div>
@@ -129,12 +129,12 @@ const isActive = (path: string) => {
   </div>
 
   <div class="fixed top-4 right-6 z-50 hidden items-center gap-3 lg:flex">
-    <a href="/login" class="group flex items-center gap-1.5 rounded border border-white/20 bg-white px-6 py-2 text-sm font-bold text-[#8B0000] shadow-md transition-all hover:bg-gray-100">
+    <a href="/login" class="group flex items-center gap-1.5 rounded border border-white/20 bg-white px-6 py-2 text-sm font-bold text-[#166534] shadow-md transition-all hover:bg-gray-100">
       🔒 เข้าสู่ระบบ
     </a>
     <a
       href="/register"
-      class="group flex items-center gap-1.5 rounded border border-red-500 bg-red-600 px-6 py-2 text-sm font-bold text-white shadow-[0_0_15px_rgba(220,38,38,0.3)] transition-all hover:scale-105 hover:bg-red-500">
+      class="group flex items-center gap-1.5 rounded border border-green-500 bg-green-600 px-6 py-2 text-sm font-bold text-white shadow-[0_0_15px_rgba(34,197,94,0.3)] transition-all hover:scale-105 hover:bg-green-500">
       👤 สมัครสมาชิก
     </a>
   </div>

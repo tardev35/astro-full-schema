@@ -1,16 +1,15 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
 import ContentBox from "../components/ContentBox.astro";
-import ContentBoxPremium from "../components/ContentBoxPremium.astro";
-import ContentBoxCyberCut from "../components/ContentBoxCyberCut.astro";
-import ContentBoxNeumorphism from "../components/ContentBoxNeumorphism.astro";
-import ContentBoxSevenThree from "../components/ContentBoxSevenThree.astro";
-import ContentBoxFloatingBadge from "../components/ContentBoxFloatingBadge.astro";
+import ContentBoxSpecial from "../components/ContentBoxSpecial.astro";
+import ContentBoxSevenThreeNeumorphism from "../components/ContentBoxSevenThreeNeumorphism.astro";
+import ContentBoxTwoNeumorphism from "../components/ContentBoxTwoNeumorphism.astro";
+import ContentBoxTwoCyberCut from "../components/ContentBoxTwoCyberCut.astro";
 import LoginRtpSection from "../components/LoginRtpSection.astro";
-import Announcement from "../components/Announcement4.astro";
+import Announcement from "../components/Announcement3.astro";
 import ProviderGrid from "../components/ProviderGrid.astro";
 import GameRankingBoard from "../components/GameRankingBoard.astro";
-import LatestWinners from "../components/LatestWinnersPremium.astro";
+import LatestWinners from "../components/LatestWinners3.astro";
 import SmoothCarousel from "../components/SmoothCarousel.astro";
 import ReviewCardSumo from "../components/ReviewCardSumo2.astro";
 import Navfoot from "../components/Navfoot.astro";
@@ -21,79 +20,71 @@ const logoUrl = homePage + "/logo.webp";
 const webPageSchema = {
   "@context": "https://schema.org",
   "@type": "WebPage",
-  name: "999LORD รีวิวเว็บสล็อต | ทางเข้าเว็บตรง สล็อตทุกค่าย ระบบออโต้",
-  description: "999LORD รีวิวเว็บสล็อต ภาพรวม จุดเด่น โครงสร้างเว็บไซต์ ฟีเจอร์ที่ให้บริการ รวมค่ายสล็อต ระบบอัตโนมัติ ช่องทางเข้า มาตรฐานด้านความปลอดภัย ข้อมูลก่อนสมัคร",
+  name: "คู่มือ MAFIA168 กติกาเกม วิธีเล่น โปรโมชั่น การสมัคร",
+  description: "คู่มือการใช้งานเว็บ MAFIA168 กติกาการเล่นเกม โปรโมชั่น วิธีฝากถอน ขั้นตอนการสมัคร คำแนะนำอื่นๆ ติดต่อไลน์",
   url: currentPath,
 };
 const webSiteSchema = {
   "@context": "https://schema.org",
   "@type": "WebSite",
-  name: "999LORD",
-  alternateName: ["999LORD", "999LORD รีวิวเว็บสล็อต"],
-  url: "https://www.999lord-review.com/",
+  name: "MAFIA168",
+  alternateName: ["MAFIA168", "MAFIA168 คู่มือการใช้งานเว็บ"],
+  url: "https://www.mafia168-guide.com/",
 };
 const orgSchema = {
   "@context": "https://schema.org",
   "@type": "Organization",
-  name: "999LORD",
+  name: "MAFIA168",
   logo: logoUrl,
   url: homePage,
 };
 const allSchemas = [webPageSchema, orgSchema, webSiteSchema];
 
 import { Picture } from "astro:assets";
-import imgStructure from "../assets/slide1.png";
-import imgAuto from "../assets/slide4.png";
+import imgPromotion from "../assets/slide2.png";
+import imgGameGuide from "../assets/slide1.png";
 ---
 
 <MainLayout
-  title="999LORD รีวิวเว็บสล็อต | ทางเข้าเว็บตรง สล็อตทุกค่าย ระบบออโต้"
-  description="999LORD รีวิวเว็บสล็อต ภาพรวม จุดเด่น โครงสร้างเว็บไซต์ ฟีเจอร์ที่ให้บริการ รวมค่ายสล็อต ระบบอัตโนมัติ ช่องทางเข้า มาตรฐานด้านความปลอดภัย ข้อมูลก่อนสมัคร">
+  title="คู่มือ MAFIA168 กติกาเกม วิธีเล่น โปรโมชั่น การสมัคร"
+  description="คู่มือการใช้งานเว็บ MAFIA168 กติกาการเล่นเกม โปรโมชั่น วิธีฝากถอน ขั้นตอนการสมัคร คำแนะนำอื่นๆ ติดต่อไลน์">
   <script type="application/ld+json" set:html={JSON.stringify(allSchemas)} />
 
-  <Announcement message="🦅 999LORD รีวิวเว็บสล็อตเว็บตรง สล็อตทุกค่าย ระบบออโต้ ฝาก-ถอนอัตโนมัติ รวดเร็ว ปลอดภัย มาตรฐาน SSL ทางเข้าอัปเดตล่าสุด www.999lord-review.com" />
+  <Announcement message="📢 MAFIA168 คู่มือการใช้งานเว็บ โปรโมชั่น วิธีฝากถอน ขั้นตอนสมัครสมาชิก กติกาเกมอัปเดตใหม่ทุกวัน แอดมินดูแล 24 ชม. www.mafia168-guide.com" />
 
   <div class="mx-auto w-full max-w-5xl px-4 py-8 text-center">
-    <p class="bg-gradient-to-b from-blue-200 to-blue-500 bg-clip-text text-4xl leading-tight font-black text-transparent drop-shadow-sm md:text-5xl">
-      999<span class="bg-gradient-to-b from-red-300 to-red-600 bg-clip-text text-transparent">LORD</span>
+    <p class="bg-gradient-to-b from-gray-100 to-gray-400 bg-clip-text text-4xl leading-tight font-black text-transparent drop-shadow-sm md:text-5xl">
+      MAFIA<span class="bg-gradient-to-b from-lime-300 to-green-600 bg-clip-text text-transparent">168</span>
       <br />
     </p>
   </div>
 
-  <ContentBox title="999LORD รีวิวเว็บสล็อต พร้อมข้อมูลเว็บตรง ทางเข้า และระบบออโต้">
+  <ContentBoxSpecial title="คู่มือการใช้งานเว็บ MAFIA168 คำแนะนำที่ควรอ่าน">
     <p class="leading-relaxed">
-      <strong class="text-cyan-300">999LORD</strong> เป็นเว็บไซต์สล็อตที่เริ่มมีผู้ค้นหาและถูกพูดถึงมากขึ้นในช่วงที่ผ่านมา หลายคนจึงอยากรู้ว่าเว็บไซต์นี้มีจุดเด่นอะไร ใช้งานเป็นอย่างไร
-      และมีระบบต่าง ๆ ที่ตอบโจทย์ผู้เล่นหรือไม่ เนื้อหานี้จะพาไป รีวิวเว็บสล็อต ตั้งแต่ภาพรวมของเว็บไซต์ ฟีเจอร์ที่น่าสนใจ ข้อมูลเว็บตรง ค่ายเกมที่รองรับ ทางเข้า สำหรับการใช้งาน ไปจนถึง ระบบออโต้
-      ที่ใช้จัดการขั้นตอนสมัครสมาชิก ฝากเงิน และถอนเงิน เพื่อให้เห็นภาพของเว็บไซต์ 999LORD ได้ชัดเจนมากขึ้น
+      สำหรับสมาชิกใหม่ที่เพิ่งเริ่มใช้งาน <strong class="text-lime-300">MAFIA168</strong> หรือผู้เล่นที่ต้องการศึกษาข้อมูลเพิ่มเติมเกี่ยวกับระบบต่าง ๆ ภายในเว็บไซต์
+      หน้านี้ได้รวบรวมข้อมูลสำคัญเอาไว้ครบถ้วน ไม่ว่าจะเป็นโปรโมชั่น วิธีฝากถอน ขั้นตอนการสมัครสมาชิก กติกาการเล่นเกมเบื้องต้น รวมถึงช่องทางการติดต่อทีมงาน
+      เพื่อช่วยให้สมาชิกสามารถใช้งานเว็บไซต์ได้อย่างสะดวกและเข้าใจระบบมากยิ่งขึ้น
     </p>
 
     <div class="mt-8 flex flex-wrap justify-center gap-6">
       <a
         href="/login"
-        class="group relative flex items-center justify-center rounded-full border border-blue-500/50 bg-[#050d16]/80 px-10 py-3.5 font-black text-cyan-300 backdrop-blur-sm transition-all duration-300 hover:scale-105 hover:bg-blue-900/60 hover:shadow-[0_0_15px_rgba(37,99,235,0.4)]">
+        class="group relative flex items-center justify-center rounded-full border border-green-500/50 bg-[#03120a]/80 px-10 py-3.5 font-black text-lime-300 backdrop-blur-sm transition-all duration-300 hover:scale-105 hover:bg-green-900/60 hover:shadow-[0_0_15px_rgba(34,197,94,0.4)]">
         เข้าสู่ระบบ
       </a>
 
       <a
         href="/register"
-        class="group relative flex items-center justify-center rounded-full bg-gradient-to-r from-red-500 via-red-500 to-red-600 px-10 py-3.5 font-black text-white shadow-[0_5px_20px_rgba(239,68,68,0.4)] transition-all duration-300 hover:-translate-y-1 hover:scale-105 hover:shadow-[0_8px_25px_rgba(239,68,68,0.6)]">
+        class="group relative flex items-center justify-center rounded-full bg-gradient-to-r from-green-400 via-green-500 to-green-600 px-10 py-3.5 font-black text-white shadow-[0_5px_20px_rgba(34,197,94,0.4)] transition-all duration-300 hover:-translate-y-1 hover:scale-105 hover:shadow-[0_8px_25px_rgba(34,197,94,0.6)]">
         สมัครสมาชิก
       </a>
     </div>
-  </ContentBox>
+  </ContentBoxSpecial>
 
-  <ContentBoxPremium as="h2" title="ภาพรวม เว็บไซต์ 999LORD ที่ถูกพูดถึงในกลุ่มผู้เล่นสล็อตออนไลน์">
-    <p class="leading-relaxed">
-      ภาพรวมของ 999LORD สะท้อนให้เห็นว่าเว็บไซต์เลือกนำเสนอเกมสล็อตเป็นบริการหลัก ควบคู่กับเกมคาสิโนประเภทอื่นภายใต้แพลตฟอร์มเดียว โครงสร้างของเว็บไซต์แบ่งหมวดหมู่เกมอย่างชัดเจน รองรับการเชื่อมต่อกับ
-      <strong class="text-cyan-300">สล็อตทุกค่าย</strong> และใช้ ระบบออโต้ จัดการธุรกรรมภายในเว็บไซต์ ขณะที่ ทางเข้าเว็บตรง ถูกจัดไว้เป็นช่องทางหลักสำหรับเข้าสู่บริการทั้งหมด
-      จึงทำให้เว็บไซต์ถูกหยิบยกขึ้นมาพูดถึงบ่อยครั้งเมื่อมีการรีวิวเว็บสล็อตในช่วงที่ผ่านมา
-    </p>
-  </ContentBoxPremium>
-
-  <ContentBoxSevenThree titleright="รีวิว 999LORD จากการสำรวจโครงสร้างเว็บไซต์และฟีเจอร์ที่ให้บริการ">
+  <ContentBoxSevenThreeNeumorphism titleright="แนะนำโปรโมชั่น MAFIA168 ที่น่าสนใจ">
     <div slot="left" class="flex h-full flex-col justify-center">
       <Picture
-        src={imgStructure}
+        src={imgPromotion}
         loading="lazy"
         fetchpriority="low"
         widths={[200, 400, 600, 800]}
@@ -102,108 +93,141 @@ import imgAuto from "../assets/slide4.png";
         formats={["avif", "webp"]}
         fallbackFormat="webp"
         quality={80}
-        alt="999LORD โครงสร้างเว็บไซต์ Auto Wallet ระบบสมาชิก ประวัติธุรกรรม แจ้งเตือน ค้นหาเกม"
-        class="mx-auto h-auto w-full rounded-2xl border-2 border-blue-400/30 shadow-[0_10px_30px_rgba(37,99,235,0.3)]"
+        alt="MAFIA168 โปรโมชั่น แนะนำเพื่อนรับ 0.8% เล่นเสียมีคืนรับ 0.3%"
+        class="mx-auto h-auto w-full rounded-2xl border-2 border-green-400/30 shadow-[0_10px_30px_rgba(34,197,94,0.3)]"
       />
     </div>
     <div slot="right">
       <p class="leading-relaxed">
-        เมื่อเข้าสู่ <strong class="text-cyan-300">999LORD</strong> จะเห็นว่าโครงสร้างเว็บไซต์ถูกแบ่งออกเป็นหมวดหมู่ที่ชัดเจน ตั้งแต่หน้าเกม ศูนย์ระบบสมาชิก โปรโมชั่น และเมนูจัดการบัญชี ช่วยให้ค้นหาบริการต่าง
-        ๆ ได้สะดวก ภายในเว็บไซต์ยังเชื่อมต่อ ระบบออโต้ และ Auto Wallet สำหรับจัดการการฝากถอน พร้อมแสดง ประวัติธุรกรรม ให้ตรวจสอบย้อนหลังได้ ขณะเดียวกันยังมี ระบบแจ้งเตือน สำหรับข้อมูลสำคัญ การค้นหาเกม
-        และการบันทึกเกมโปรด (Favorite) เพื่อกลับมาเล่นได้รวดเร็ว อีกทั้งยังรองรับมือถือ และมีตัวเลือกเปลี่ยนภาษา เพื่อให้การใช้งานเหมาะกับผู้เล่นในแต่ละภูมิภาคมากขึ้น
+        <strong class="text-lime-300">MAFIA168</strong> มีการจัดโปรโมชั่นสำหรับสมาชิกอยู่เป็นประจำ เพื่อเพิ่มความคุ้มค่าในการใช้งาน
+        โดยรายละเอียดและเงื่อนไขอาจมีการเปลี่ยนแปลงตามช่วงเวลา สมาชิกสามารถติดตามข้อมูลล่าสุดได้จากหน้าเว็บไซต์หรือสอบถามทีมงานโดยตรง
       </p>
     </div>
-  </ContentBoxSevenThree>
+  </ContentBoxSevenThreeNeumorphism>
 
-  <ContentBoxCyberCut as="h2" title="ฟีเจอร์และระบบที่เป็นจุดเด่น เมื่อเทียบกับเว็บไซต์ในกลุ่มเดียวกัน">
-    <p class="leading-relaxed">
-      หลายเว็บไซต์ยังแยกเมนูสมาชิก การเงิน และประวัติธุรกรรมออกจากกัน ทำให้ต้องสลับหลายหน้าก่อนจะดำเนินการแต่ละขั้นตอน ภายในเว็บไซต์นี้จึงรวม ระบบสมาชิก, Auto Wallet, ประวัติธุรกรรม
-      และเมนูจัดการบัญชีไว้ในศูนย์เดียว ลดการค้นหาเมนูที่ซ้ำซ้อนและตรวจสอบข้อมูลได้จากหน้าเดียว
-    </p>
-  </ContentBoxCyberCut>
-
-  <ContentBoxNeumorphism as="h2" title="รวมค่ายสล็อตที่พบภายใน 999LORD พร้อมรายละเอียดของผู้พัฒนาเกมแต่ละราย">
-    <p class="leading-relaxed">
-      เว็บไซต์สล็อตหลายแห่งมักเชื่อมต่อกับผู้พัฒนาเกมเพียงบางค่าย ทำให้ผู้เล่นต้องสลับไปใช้งานหลายเว็บไซต์หากต้องการเล่นเกมที่หลากหลาย ภายใน 999LORD มีการรวบรวมเกมสล็อตจากผู้พัฒนาเกมหลายรายไว้ในแพลตฟอร์มเดียว
-      ไม่ว่าจะเป็น PG Soft, Pragmatic Play, JILI, Habanero, CQ9 และค่ายเกมอื่น ๆ แต่ละค่ายมีเอกลักษณ์แตกต่างกัน ทั้งรูปแบบกราฟิก ระบบโบนัส ความผันผวน (Volatility) และฟีเจอร์ภายในเกม
-      ทำให้ผู้เล่นสามารถเลือกแนวเกมที่เหมาะกับสไตล์การเล่นของตนเอง
-    </p>
-  </ContentBoxNeumorphism>
-
-  <ProviderGrid />
-  <GameRankingBoard />
-
-  <ContentBoxSevenThree titleright="ระบบอัตโนมัติ สล็อตเว็บนี้ ทำงานอย่างไร ตั้งแต่สมัครสมาชิกจนถึงฝากถอน">
-    <div slot="left" class="flex h-full flex-col justify-center">
-      <Picture
-        src={imgAuto}
-        loading="lazy"
-        fetchpriority="low"
-        widths={[200, 400, 600, 800]}
-        sizes="(max-width: 768px) 100vw, 30vw"
-        decoding="async"
-        formats={["avif", "webp"]}
-        fallbackFormat="webp"
-        quality={80}
-        alt="999LORD ระบบอัตโนมัติ Auto System Auto Wallet ฝาก ถอน อัตโนมัติ 24 ชม."
-        class="mx-auto h-auto w-full rounded-2xl border-2 border-blue-400/30 shadow-[0_10px_30px_rgba(37,99,235,0.3)]"
-      />
+  <ContentBoxTwoNeumorphism titleleft="โปรโมชั่น แนะนำเพื่อนรับ 0.8%" titleright="โปรโมชั่น เล่นเสียมีคืนรับ 0.3%">
+    <div slot="left" class="flex flex-col gap-4">
+      <p class="leading-relaxed">สมาชิกที่ต้องการสร้างรายได้เพิ่มเติมสามารถเข้าร่วมโปรแกรมแนะนำเพื่อนได้</p>
+      <ul class="flex flex-col gap-3">
+        <li class="flex items-start gap-3"><span class="mt-1 text-lime-400">◆</span> รับค่าคอมมิชชัน 0.8% ตามเงื่อนไขของระบบ</li>
+        <li class="flex items-start gap-3"><span class="mt-1 text-lime-400">◆</span> สามารถแนะนำเพื่อนได้หลายคน</li>
+        <li class="flex items-start gap-3"><span class="mt-1 text-lime-400">◆</span> ระบบคำนวณยอดให้อัตโนมัติ</li>
+        <li class="flex items-start gap-3"><span class="mt-1 text-lime-400">◆</span> ตรวจสอบข้อมูลผ่านบัญชีสมาชิกได้ตลอดเวลา</li>
+      </ul>
+      <p class="leading-relaxed">เหมาะสำหรับผู้ที่ต้องการแบ่งปันเว็บไซต์ให้เพื่อนหรือคนรู้จัก</p>
     </div>
-    <div slot="right">
-      <p class="leading-relaxed">
-        เว็บไซต์สล็อตบางแห่งยังต้องยืนยันข้อมูลหรือรอเจ้าหน้าที่ตรวจสอบในแต่ละขั้นตอน ส่งผลให้การสมัครสมาชิก การฝากเงิน หรือการถอนเงินใช้เวลานานกว่าที่ควร ภายในเว็บไซต์นี้มีการเชื่อมต่อ
-        <strong class="text-cyan-300">ระบบอัตโนมัติ (Auto System)</strong> เข้ากับการจัดการสมาชิกและ Auto Wallet ตั้งแต่การเปิดบัญชี การบันทึกข้อมูลผู้ใช้ ไปจนถึงการตรวจสอบยอดฝากและคำขอถอน
-        ทำให้แต่ละขั้นตอนเชื่อมต่อกัน
-      </p>
+    <div slot="right" class="flex flex-col gap-4">
+      <p class="leading-relaxed">อีกหนึ่งโปรโมชั่นที่ได้รับความสนใจจากสมาชิกจำนวนมาก</p>
+      <ul class="flex flex-col gap-3">
+        <li class="flex items-start gap-3"><span class="mt-1 text-lime-400">◆</span> รับเครดิตคืน 0.3% จากยอดที่เข้าเงื่อนไข</li>
+        <li class="flex items-start gap-3"><span class="mt-1 text-lime-400">◆</span> ระบบคำนวณให้อัตโนมัติ</li>
+        <li class="flex items-start gap-3"><span class="mt-1 text-lime-400">◆</span> สามารถนำเครดิตที่ได้รับไปใช้งานต่อได้</li>
+        <li class="flex items-start gap-3"><span class="mt-1 text-lime-400">◆</span> ช่วยเพิ่มความคุ้มค่าในการเล่นเกม</li>
+      </ul>
+      <p class="leading-relaxed">ติดตามเงื่อนไขล่าสุดได้จากทีมงานหรือหน้าโปรโมชั่น</p>
     </div>
-  </ContentBoxSevenThree>
+  </ContentBoxTwoNeumorphism>
+
+  <ContentBoxTwoCyberCut title="วิธีฝากถอนเงินกับ MAFIA168 ทั้งแบบธนาคารและวอเลท" titleleft="วิธีฝากเงิน" titleright="วิธีถอนเงิน">
+    <p class="leading-relaxed">
+      <strong class="text-lime-300">MAFIA168</strong> รองรับการทำธุรกรรมทั้งผ่านบัญชีธนาคารและทรูมันนี่วอเลท เพื่อให้สมาชิกเลือกใช้งานได้ตามความสะดวก
+      โดยระบบได้รับการออกแบบให้ใช้งานง่ายและสามารถดำเนินการได้ด้วยตนเอง
+    </p>
+    <div slot="left">
+      <ol class="flex flex-col gap-3">
+        <li class="flex items-start gap-3"><span class="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-green-500/20 text-xs font-black text-lime-400">1</span> เข้าสู่ระบบสมาชิก</li>
+        <li class="flex items-start gap-3"><span class="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-green-500/20 text-xs font-black text-lime-400">2</span> เลือกเมนูฝากเงิน</li>
+        <li class="flex items-start gap-3"><span class="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-green-500/20 text-xs font-black text-lime-400">3</span> เลือกช่องทางที่ต้องการใช้งาน</li>
+        <li class="flex items-start gap-3"><span class="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-green-500/20 text-xs font-black text-lime-400">4</span> กรอกจำนวนเงินตามต้องการ</li>
+        <li class="flex items-start gap-3"><span class="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-green-500/20 text-xs font-black text-lime-400">5</span> ยืนยันรายการและรอระบบดำเนินการ</li>
+      </ol>
+    </div>
+    <div slot="right" class="flex flex-col gap-4">
+      <ol class="flex flex-col gap-3">
+        <li class="flex items-start gap-3"><span class="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-green-500/20 text-xs font-black text-lime-400">1</span> เข้าสู่ระบบสมาชิก</li>
+        <li class="flex items-start gap-3"><span class="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-green-500/20 text-xs font-black text-lime-400">2</span> เลือกเมนูถอนเงิน</li>
+        <li class="flex items-start gap-3"><span class="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-green-500/20 text-xs font-black text-lime-400">3</span> ระบุจำนวนเงินที่ต้องการถอน</li>
+        <li class="flex items-start gap-3"><span class="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-green-500/20 text-xs font-black text-lime-400">4</span> ตรวจสอบข้อมูลให้ถูกต้อง</li>
+        <li class="flex items-start gap-3"><span class="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-green-500/20 text-xs font-black text-lime-400">5</span> กดยืนยันรายการผ่านระบบ</li>
+      </ol>
+      <p class="leading-relaxed">ก่อนทำรายการทุกครั้งควรตรวจสอบข้อมูลบัญชีให้ถูกต้อง เพื่อช่วยลดความผิดพลาดในการทำธุรกรรม</p>
+    </div>
+  </ContentBoxTwoCyberCut>
 
   <LatestWinners />
 
-  <ContentBoxFloatingBadge as="h2" title="ช่องทางเข้าสู่ 999LORD และวิธีตรวจสอบเว็บไซต์ก่อนเข้าใช้งาน">
-    <p class="leading-relaxed">
-      เว็บไซต์สล็อตที่ได้รับความนิยมมักมีหลายโดเมนและหลายลิงก์ที่อ้างว่าเป็นเว็บไซต์หลัก ทำให้ผู้ใช้งานพบปัญหาเข้าสู่เว็บไซต์ผิด หรือพบหน้าที่เลียนแบบจนไม่สามารถใช้งานได้ตามปกติ ก่อนเข้าใช้งานจึงควรตรวจสอบ
-      ชื่อโดเมน, การเชื่อมต่อ HTTPS, เครื่องหมาย SSL และข้อมูลหน้าเว็บไซต์ให้ตรงกับช่องทางที่ใช้งานอยู่ รวมถึงหลีกเลี่ยงการเข้าสู่ระบบผ่านลิงก์ที่ไม่ทราบแหล่งที่มา
-    </p>
-  </ContentBoxFloatingBadge>
+  <ContentBox as="h2" title="ขั้นตอนการสมัครสมาชิก MAFIA168">
+    <p class="leading-relaxed">สมาชิกใหม่สามารถสมัครใช้งานได้ง่ายตามขั้นตอนดังต่อไปนี้</p>
 
-  <ContentBox as="h2" title="มาตรฐานด้านความปลอดภัยของ 999LORD และระบบที่ช่วยปกป้องข้อมูลผู้ใช้งาน">
-    <p class="leading-relaxed">
-      เว็บไซต์สล็อตหลายแห่งให้ความสำคัญกับการปกป้องข้อมูลสมาชิก เนื่องจากมีการใช้งานข้อมูลบัญชีและธุรกรรมทางการเงินภายในระบบ ก่อนเข้าใช้งานจึงควรตรวจสอบว่าหน้าเว็บไซต์มีการเชื่อมต่อผ่าน HTTPS มี SSL
-      Certificate และแสดงข้อมูลการเข้ารหัสการรับส่งข้อมูลอย่างถูกต้อง นอกจากนี้ยังควรสังเกตการยืนยันตัวตนก่อนเข้าสู่ระบบ
-    </p>
+    <div class="mx-auto mt-8 grid max-w-4xl grid-cols-1 gap-6 text-left md:grid-cols-3">
+      <div class="rounded-2xl border border-green-500/30 bg-[#03120a]/70 p-6">
+        <span class="mb-4 flex h-10 w-10 items-center justify-center rounded-full bg-gradient-to-br from-green-400 to-green-600 text-base font-black text-white shadow-[0_0_10px_rgba(34,197,94,0.5)]">1</span>
+        <p class="leading-relaxed text-gray-300"><strong class="text-lime-300">ขั้นตอนที่ 1</strong> กดปุ่มสมัครสมาชิก</p>
+      </div>
+      <div class="rounded-2xl border border-green-500/30 bg-[#03120a]/70 p-6">
+        <span class="mb-4 flex h-10 w-10 items-center justify-center rounded-full bg-gradient-to-br from-green-400 to-green-600 text-base font-black text-white shadow-[0_0_10px_rgba(34,197,94,0.5)]">2</span>
+        <p class="leading-relaxed text-gray-300"><strong class="text-lime-300">ขั้นตอนที่ 2</strong> กรอกข้อมูลตามแบบฟอร์มที่ระบบกำหนด</p>
+      </div>
+      <div class="rounded-2xl border border-green-500/30 bg-[#03120a]/70 p-6">
+        <span class="mb-4 flex h-10 w-10 items-center justify-center rounded-full bg-gradient-to-br from-green-400 to-green-600 text-base font-black text-white shadow-[0_0_10px_rgba(34,197,94,0.5)]">3</span>
+        <p class="leading-relaxed text-gray-300"><strong class="text-lime-300">ขั้นตอนที่ 3</strong> กดยืนยันการสมัครและเข้าสู่ระบบ</p>
+      </div>
+    </div>
+
+    <p class="mt-8 leading-relaxed">หลังจากสมัครเรียบร้อย สามารถเข้าใช้งานระบบต่าง ๆ ภายในเว็บไซต์ได้ทันทีผ่านมือถือหรือคอมพิวเตอร์</p>
   </ContentBox>
 
-  <ReviewCardSumo />
-  <SmoothCarousel />
+  <ContentBoxSevenThreeNeumorphism titleright="คู่มือการเล่นเกม กติกาเกมต่างๆ อัปเดตใหม่ทุกวัน">
+    <div slot="left" class="flex h-full flex-col justify-center">
+      <Picture
+        src={imgGameGuide}
+        loading="lazy"
+        fetchpriority="low"
+        widths={[200, 400, 600, 800]}
+        sizes="(max-width: 768px) 100vw, 30vw"
+        decoding="async"
+        formats={["avif", "webp"]}
+        fallbackFormat="webp"
+        quality={80}
+        alt="MAFIA168 คู่มือการเล่นเกม กติกาเกมต่างๆ อัปเดตใหม่ทุกวัน"
+        class="mx-auto h-auto w-full rounded-2xl border-2 border-green-400/30 shadow-[0_10px_30px_rgba(34,197,94,0.3)]"
+      />
+    </div>
+    <div slot="right" class="flex flex-col gap-4">
+      <p class="leading-relaxed">
+        ภายในเว็บไซต์มีเกมหลากหลายประเภท ซึ่งแต่ละเกมอาจมีรูปแบบการเล่นและกติกาที่แตกต่างกัน สมาชิกควรศึกษารายละเอียดของเกมก่อนเริ่มใช้งานทุกครั้ง
+        เพื่อให้เข้าใจวิธีการเล่นและฟีเจอร์ต่าง ๆ ได้มากขึ้น
+      </p>
+      <p class="text-base font-black tracking-wide text-lime-300">ข้อมูลที่ควรศึกษา</p>
+      <ul class="flex flex-col gap-3">
+        <li class="flex items-start gap-3"><span class="mt-1 text-lime-400">◆</span> วิธีการเล่นเบื้องต้น</li>
+        <li class="flex items-start gap-3"><span class="mt-1 text-lime-400">◆</span> กติกาของแต่ละเกม</li>
+        <li class="flex items-start gap-3"><span class="mt-1 text-lime-400">◆</span> รูปแบบการคำนวณผลรางวัล</li>
+        <li class="flex items-start gap-3"><span class="mt-1 text-lime-400">◆</span> ฟีเจอร์โบนัสภายในเกม</li>
+        <li class="flex items-start gap-3"><span class="mt-1 text-lime-400">◆</span> เทคนิคและคำแนะนำสำหรับผู้เล่นใหม่</li>
+        <li class="flex items-start gap-3"><span class="mt-1 text-lime-400">◆</span> ข้อมูลอัปเดตเกมใหม่ประจำวัน</li>
+      </ul>
+      <p class="leading-relaxed">การศึกษาข้อมูลก่อนเล่นจะช่วยให้ใช้งานเกมได้อย่างมั่นใจและเข้าใจระบบมากยิ่งขึ้น</p>
+    </div>
+  </ContentBoxSevenThreeNeumorphism>
 
-  <ContentBox as="h2" title="ขั้นตอนการสมัครสมาชิก 999LORD พร้อมการเตรียมข้อมูลก่อนเริ่มใช้งาน">
-    <p class="leading-relaxed">
-      ก่อนเริ่มสมัครสมาชิกกับ <strong class="text-cyan-300">999LORD</strong> ควรเตรียมข้อมูลพื้นฐานให้พร้อม เพื่อให้การสมัครผ่านระบบอัตโนมัติดำเนินไปได้อย่างต่อเนื่อง โดยแบ่งเป็นสิ่งที่ควรเตรียม
-      และลำดับขั้นตอนการสมัคร ดังนี้
-    </p>
+  <LoginRtpSection />
+  <ProviderGrid />
+  <GameRankingBoard />
 
-    <div class="mx-auto mt-8 grid max-w-4xl grid-cols-1 gap-6 text-left md:grid-cols-2">
-      <div class="rounded-2xl border border-blue-500/30 bg-[#050d16]/70 p-6">
-        <p class="mb-4 text-lg font-black tracking-wide text-cyan-300">สิ่งที่ควรเตรียม</p>
-        <ul class="flex flex-col gap-3 text-gray-300">
-          <li class="flex items-start gap-3"><span class="mt-1 text-red-400">◆</span> หมายเลขโทรศัพท์</li>
-          <li class="flex items-start gap-3"><span class="mt-1 text-red-400">◆</span> บัญชีธนาคารที่ใช้ทำธุรกรรม</li>
-          <li class="flex items-start gap-3"><span class="mt-1 text-red-400">◆</span> รหัสผ่านที่ต้องการใช้งาน</li>
-        </ul>
-      </div>
+  <ContentBox as="h2" title="แนะนำช่องทางการติดต่อไลน์ แอดมินบริการ 24 ชม.">
+    <p class="leading-relaxed">หากสมาชิกต้องการสอบถามข้อมูลเพิ่มเติม หรือพบปัญหาในการใช้งาน สามารถติดต่อทีมงานผ่านช่องทางไลน์ได้ตลอดเวลา</p>
 
-      <div class="rounded-2xl border border-blue-500/30 bg-[#050d16]/70 p-6">
-        <p class="mb-4 text-lg font-black tracking-wide text-cyan-300">ขั้นตอนการสมัคร</p>
-        <ol class="flex flex-col gap-3 text-gray-300">
-          <li class="flex items-start gap-3"><span class="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-red-500/20 text-xs font-black text-red-400">1</span> เข้าสู่หน้าสมัครสมาชิก</li>
-          <li class="flex items-start gap-3"><span class="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-red-500/20 text-xs font-black text-red-400">2</span> กรอกข้อมูลตามแบบฟอร์ม</li>
-          <li class="flex items-start gap-3"><span class="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-red-500/20 text-xs font-black text-red-400">3</span> ตรวจสอบข้อมูลก่อนยืนยัน</li>
-          <li class="flex items-start gap-3"><span class="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-red-500/20 text-xs font-black text-red-400">4</span> เข้าสู่ระบบสมาชิก</li>
-          <li class="flex items-start gap-3"><span class="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-red-500/20 text-xs font-black text-red-400">5</span> ฝากเงินผ่านระบบอัตโนมัติ</li>
-          <li class="flex items-start gap-3"><span class="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-red-500/20 text-xs font-black text-red-400">6</span> เลือกเกมและเริ่มใช้งาน</li>
-        </ol>
-      </div>
+    <div class="mx-auto mt-8 max-w-2xl rounded-2xl border border-green-500/30 bg-[#03120a]/70 p-6 text-left">
+      <p class="mb-4 text-lg font-black tracking-wide text-lime-300">ช่องทางที่สามารถสอบถามได้</p>
+      <ul class="flex flex-col gap-3 text-gray-300">
+        <li class="flex items-start gap-3"><span class="mt-1 text-lime-400">◆</span> สอบถามข้อมูลการสมัครสมาชิก</li>
+        <li class="flex items-start gap-3"><span class="mt-1 text-lime-400">◆</span> ขอคำแนะนำเกี่ยวกับการใช้งาน</li>
+        <li class="flex items-start gap-3"><span class="mt-1 text-lime-400">◆</span> สอบถามรายละเอียดโปรโมชั่น</li>
+        <li class="flex items-start gap-3"><span class="mt-1 text-lime-400">◆</span> แจ้งปัญหาการฝากถอน</li>
+        <li class="flex items-start gap-3"><span class="mt-1 text-lime-400">◆</span> แจ้งปัญหาการเข้าสู่ระบบ</li>
+        <li class="flex items-start gap-3"><span class="mt-1 text-lime-400">◆</span> ติดตามข่าวสารและข้อมูลอัปเดตต่าง ๆ</li>
+      </ul>
     </div>
 
     <div class="mt-8 flex justify-center">
@@ -214,9 +238,14 @@ import imgAuto from "../assets/slide4.png";
         <span class="mr-2 text-xl">LINE</span> ติดต่อแอดมิน
       </a>
     </div>
+
+    <p class="mt-8 leading-relaxed">
+      ทีมงาน <strong class="text-lime-300">MAFIA168</strong> พร้อมให้บริการและให้ข้อมูลแก่สมาชิกตลอด 24 ชั่วโมง เพื่อช่วยให้การใช้งานเว็บไซต์เป็นไปอย่างสะดวกมากที่สุด
+    </p>
   </ContentBox>
 
-  <LoginRtpSection />
+  <ReviewCardSumo />
+  <SmoothCarousel />
 
   <Navfoot />
 </MainLayout>

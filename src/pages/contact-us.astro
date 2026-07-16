@@ -2,7 +2,7 @@
 import MainLayout from "../layouts/MainLayout.astro";
 import ContentBox from "../components/ContentBox.astro";
 import Navfoot from "../components/Navfoot.astro";
-import Announcement from "../components/Announcement4.astro";
+import Announcement from "../components/Announcement3.astro";
 
 import { Picture } from "astro:assets";
 import imgLine from "../assets/contact-line.webp";
@@ -14,12 +14,12 @@ const logoUrl = homePage + "/logo.webp";
 const contactPageSchema = {
   "@context": "https://schema.org",
   "@type": "ContactPage",
-  name: "ติดต่อ 999LORD",
-  description: "ติดต่อทีมงาน 999LORD ดูแลตลอด 24 ชม. ผ่าน LINE Official",
+  name: "ติดต่อ MAFIA168",
+  description: "ติดต่อทีมงาน MAFIA168 ดูแลตลอด 24 ชม. ผ่าน LINE Official",
   url: currentPath,
   mainEntity: {
     "@type": "Organization",
-    name: "999LORD",
+    name: "MAFIA168",
     logo: logoUrl,
     url: homePage,
     contactPoint: [
@@ -37,14 +37,14 @@ const contactPageSchema = {
 ---
 
 <script type="application/ld+json" set:html={JSON.stringify(contactPageSchema)} />
-<MainLayout title="ติดต่อ 999LORD" description="ติดต่อทีมงาน 999LORD ดูแลตลอด 24 ชม. ผ่าน LINE Official">
+<MainLayout title="ติดต่อ MAFIA168" description="ติดต่อทีมงาน MAFIA168 ดูแลตลอด 24 ชม. ผ่าน LINE Official">
   <Announcement />
 
   <ContentBox>
-    <h1 class="mb-8 text-3xl text-cyan-300">ติดต่อ 999LORD ทีมงานดูแลตลอด 24 ชม.</h1>
+    <h1 class="mb-8 text-3xl text-lime-300">ติดต่อ MAFIA168 ทีมงานดูแลตลอด 24 ชม.</h1>
     <Picture
       src={imgLine}
-      alt="999LORD ติดต่อทีมงานผ่าน LINE"
+      alt="MAFIA168 ติดต่อทีมงานผ่าน LINE"
       loading="lazy"
       fetchpriority="low"
       widths={[200, 400, 600]}
@@ -67,7 +67,7 @@ const contactPageSchema = {
       <a
         href="/login"
         aria-label="เข้าเล่นเกม"
-        class="flex items-center justify-center rounded-lg border border-red-600 bg-gradient-to-b from-red-400 to-red-600 px-8 py-3 font-extrabold text-white shadow-[0_0_15px_rgba(239,68,68,0.4)] transition-transform hover:scale-105">
+        class="flex items-center justify-center rounded-lg border border-lime-600 bg-gradient-to-b from-lime-400 to-lime-600 px-8 py-3 font-extrabold text-white shadow-[0_0_15px_rgba(132,204,22,0.4)] transition-transform hover:scale-105">
         เข้าเล่นเกม
       </a>
 

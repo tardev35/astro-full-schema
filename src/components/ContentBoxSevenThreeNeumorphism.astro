@@ -4,7 +4,7 @@ const { titleleft, titleright } = Astro.props;
 
 <section class="mx-auto mb-8 w-full max-w-7xl px-4 font-sans">
   <div
-    class="w-full rounded-[25px] bg-[#141414] p-8 shadow-[10px_10px_20px_#080808,-10px_-10px_20px_#202020] transition-all duration-300 hover:shadow-[15px_15px_30px_#050505,-15px_-15px_30px_#2a2a2a]">
+    class="w-full rounded-[25px] bg-[#0d1811] p-8 shadow-[10px_10px_20px_#060c08,-10px_-10px_20px_#14241a] transition-all duration-300 hover:shadow-[15px_15px_30px_#040805,-15px_-15px_30px_#1a2f22]">
     <div class="grid grid-cols-1 gap-8 md:grid-cols-[3fr_7fr]">
       <article class="flex flex-col gap-4">
         {titleleft && <h2 class="text-2xl font-black text-white/90">{titleleft}</h2>}
@@ -13,7 +13,7 @@ const { titleleft, titleright } = Astro.props;
         </div>
       </article>
 
-      <article class="flex flex-col gap-4 md:border-l md:border-white/5 md:pl-8">
+      <article class="flex flex-col gap-4 md:border-l md:border-lime-400/10 md:pl-8">
         {titleright && <h2 class="text-2xl font-black text-white/90">{titleright}</h2>}
         <div class="text-sm leading-relaxed text-gray-400">
           <slot name="right" />

@@ -19,7 +19,7 @@ const reviews = [
     name: "บอสมังกรทอง VIP",
     role: "นักเล่นระดับ VIP",
     stars: 5,
-    content: "ลองเทสมาแล้วหลายเว็บ สุดท้ายจบที่ 999LORD ครับ! สล็อตแตกง่ายมาก ฟรีสปินเข้าบ่อยจัด RTP สูงกว่าเว็บไทยทั่วไป แอดมินบริการดีตอบไว 24 ชม. เงินเข้าปุ๊บปั๊บ เอาไปเลย 5 ดาวเต็มๆ ไม่ผิดหวังแน่นอนครับ!",
+    content: "ลองเทสมาแล้วหลายเว็บ สุดท้ายจบที่ MAFIA168 ครับ! สล็อตแตกง่ายมาก ฟรีสปินเข้าบ่อยจัด RTP สูงกว่าเว็บไทยทั่วไป แอดมินบริการดีตอบไว 24 ชม. เงินเข้าปุ๊บปั๊บ เอาไปเลย 5 ดาวเต็มๆ ไม่ผิดหวังแน่นอนครับ!",
     avatar: "👑",
   },
 ];
@@ -28,41 +28,41 @@ const reviews = [
 <section class="mx-auto mb-12 w-full max-w-[1400px] px-4 font-sans relative z-10">
 
   <div class="mb-8 flex w-full flex-col items-center justify-center gap-2 text-center">
-    <h2 class="flex items-center gap-2 text-2xl font-black uppercase tracking-widest text-transparent bg-clip-text bg-gradient-to-r from-cyan-300 via-gray-200 to-gray-400 drop-shadow-[0_2px_10px_rgba(255,255,255,0.2)]">
-      <span class="text-2xl not-italic">🎰</span> เสียงตอบรับจาก <span class="text-red-400">ผู้ใช้งานจริง</span>
+    <h2 class="flex items-center gap-2 text-2xl font-black uppercase tracking-widest text-transparent bg-clip-text bg-gradient-to-r from-lime-300 via-gray-200 to-gray-400 drop-shadow-[0_2px_10px_rgba(255,255,255,0.2)]">
+      <span class="text-2xl not-italic">🎰</span> เสียงตอบรับจาก <span class="text-lime-400">ผู้ใช้งานจริง</span>
     </h2>
-    <div class="h-[4px] w-24 rounded-full bg-gradient-to-r from-transparent via-red-500 to-transparent mt-2"></div>
+    <div class="h-[4px] w-24 rounded-full bg-gradient-to-r from-transparent via-green-500 to-transparent mt-2"></div>
   </div>
 
   <div class="grid grid-cols-1 gap-6 md:grid-cols-3">
     {reviews.map((review) => (
-      <article class="group relative flex flex-col overflow-hidden rounded-2xl border border-white/10 bg-[#050d16]/80 shadow-[0_8px_24px_rgba(0,0,0,0.6)] backdrop-blur-xl transition-all duration-300 hover:-translate-y-1.5 hover:border-blue-400/40 hover:shadow-[0_18px_35px_rgba(37,99,235,0.25)]">
-        <div class="h-1 w-full shrink-0 bg-gradient-to-r from-blue-400 via-blue-500 to-red-400"></div>
+      <article class="group relative flex flex-col overflow-hidden rounded-2xl border border-white/10 bg-[#03120a]/80 shadow-[0_8px_24px_rgba(0,0,0,0.6)] backdrop-blur-xl transition-all duration-300 hover:-translate-y-1.5 hover:border-green-400/40 hover:shadow-[0_18px_35px_rgba(34,197,94,0.25)]">
+        <div class="h-1 w-full shrink-0 bg-gradient-to-r from-green-400 via-green-500 to-lime-400"></div>
 
         <div class="relative flex flex-1 flex-col gap-4 p-6">
           <div class="flex items-start justify-between gap-3">
             <div class="flex items-center gap-3">
-              <div class="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-gradient-to-br from-blue-600 to-black text-lg shadow-inner ring-2 ring-blue-400/30">
+              <div class="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-gradient-to-br from-green-600 to-black text-lg shadow-inner ring-2 ring-green-400/30">
                 {review.avatar}
               </div>
               <div class="flex flex-col gap-0.5">
                 <div class="flex items-center gap-1.5">
-                  <h3 class="text-sm font-black text-white transition-colors group-hover:text-cyan-300">{review.name}</h3>
+                  <p class="text-sm font-black text-white transition-colors group-hover:text-lime-300">{review.name}</p>
                   {review.verified && (
-                    <span class="flex h-3.5 w-3.5 items-center justify-center rounded-full bg-blue-400 text-[8px] font-black text-[#050d16]" title="ยืนยันตัวตนแล้ว">✓</span>
+                    <span class="flex h-3.5 w-3.5 items-center justify-center rounded-full bg-lime-400 text-[8px] font-black text-[#03120a]" title="ยืนยันตัวตนแล้ว">✓</span>
                   )}
                 </div>
-                <span class="text-[10px] font-bold tracking-wider text-blue-400/70 uppercase">{review.role}</span>
+                <span class="text-[10px] font-bold tracking-wider text-green-400/70 uppercase">{review.role}</span>
               </div>
             </div>
 
-            <span class="flex shrink-0 items-center gap-1 rounded-full border border-red-300/40 bg-red-400/10 px-2.5 py-1 text-[11px] font-black text-red-400">
+            <span class="flex shrink-0 items-center gap-1 rounded-full border border-lime-300/40 bg-lime-400/10 px-2.5 py-1 text-[11px] font-black text-lime-400">
               ★ {review.stars.toFixed(1)}
             </span>
           </div>
 
           <p class="relative flex-1 text-sm leading-relaxed text-gray-300 italic">
-            <span class="pointer-events-none absolute -top-3 -left-1 font-serif text-5xl leading-none text-blue-500/10 select-none">"</span>
+            <span class="pointer-events-none absolute -top-3 -left-1 font-serif text-5xl leading-none text-green-500/10 select-none">"</span>
             <span class="relative z-10">{review.content}</span>
           </p>
         </div>

@@ -859,3 +859,40 @@ NavbarStyle family, Footer family** โดย:
 **ยกเว้น (inventory คงไว้):** `แนวทาง.astro`, `ตรวจหวย.astro` = หวย Var99 ธีม Huay (แดง/ทอง) + `AnnouncementHuay` — คงเนื้อหา/ชื่อ Var99/ธีมไว้; แชร์ `MainLayout` จึง inherit nav/footer/hero + meta default (og_site_name/description) ของแบรนด์ casino ปัจจุบัน (= 999LORD ตอนนี้ เหมือนที่เคย inherit FUNBEYOND) — เป็น drift ที่มีมาก่อน ไม่ใช่บั๊ก ไม่แตะ; ยืนยันไม่มีชื่อ casino เก่า (FUNBEYOND/HENGJUD) หลงเหลือ = 0
 
 **การทดสอบ (Phase 5):** `npm run build` ผ่านสะอาด (9 หน้า); `grep -rlE "FUNBEYOND|funbeyond|HENGJUD|QQ882|TEENOI|MARANG|เฮงทุกสปิน" dist/` = **0 ทุกหน้า**; purple/yellow/violet/fuchsia ใน class attr = **0** ทุกหน้า casino (ที่เหลือใน `<style>` bundle = inventory/ไม่ render = noise ที่คาดไว้); `<!--` ใน dist = 0; undefined/NaN/[object Object] = 0; hero=banner1; slide1+slide4 = SevenThree, slide2+slide3 = carousel (ใช้ครบ 4); URL 999lord-review.com ใน schema/canonical/og/sitemap, ไม่มี funbeyond; H1=1 + 8 docx H2 เรียงถูกลำดับครบ; FloatingBadge badge = `w-[92%] max-w-2xl` ไม่มี overflow
+
+## รีแบรนด์: 999LORD → MAFIA168 (2026-07-16)
+
+**เป้าหมาย:** เปิดตัวแบรนด์ MAFIA168 (คู่มือการใช้งานเว็บ) จาก asset drop 2026-07-16 21:17 (logo.webp, banner1.png, bg.png, slide1-4.png, content.docx) + user ให้ **real URL = mafia168-guide.com** ชัดเจน — ทำแบบ 2-agent ขนานตาม SKILL (P0 spec → P1 shared chrome → P2 fan-out A/B → P3 merge+verify) มีเหตุแทรก: Agent A โดน API error กลางทาง + user เน็ตหลุด — resume agent เดิมสำเร็จ ไฟล์ไม่ชนกัน (Write ของ orchestrator ถูก reject เพราะ agent เขียน index.astro ไปก่อนพอดี)
+
+**Palette:** น้ำเงิน/แดง (999LORD) → **เขียวนีออน/ไลม์ + เงินเมทัลลิก + ทอง accent** (ตามโลโก้/แบนเนอร์ MAFIA168): `blue-*`→`green-*`, `cyan-300`→`lime-300`, `red-*` identity→`green/lime`, `#050d16`→`#03120a`, `#0b1633`→`#06170d`, `rgba(37,99,235)`→`rgba(34,197,94)`, `rgba(239,68,68)`→`rgba(132,204,22)`; คงไว้: LINE `#00B900`, สีธนาคาร (รวม `text-purple-500` ของ SCB ใน FooterStyle3), ทอง `#fef08a/#eab308` ใน LatestWinners3/ปุ่ม CTA footer
+
+**docx = H1(1) + H2(5) + H3(4 จริง: โปรฯ 0.8%/0.3%, วิธีฝาก/ถอน)** — แบรนด์แรกที่ docx มี H3 hierarchy จริง จึงคง h3 เฉพาะ 4 ตัวนี้ และ normalize card-name h3 ของ widget (ProviderGrid/GameRanking/Review/LoginRtp) เป็น `<p>` ทั้งหมด (ต่างจากแนวทาง 999LORD ที่คง widget h3 ไว้)
+
+**Mapping (docx order เป๊ะ):**
+1. H1 คู่มือการใช้งาน → `ContentBoxSpecial` (as h1) + ปุ่ม login/register
+2. H2 โปรโมชั่น → `ContentBoxSevenThreeNeumorphism` + **slide2** (คืนยอดเสีย) [SevenThree #1] → H3×2 → `ContentBoxTwoNeumorphism` (คอลัมน์ h2→h3)
+3. H2 ฝากถอน → `ContentBoxTwoCyberCut` (เพิ่ม main-title h2 + intro slot ในไฟล์; คอลัมน์ h2→h3; ขั้นตอนเป็น ol) → `LatestWinners3`
+4. H2 สมัครสมาชิก → `ContentBox` (plain, step cards เป็น p ไม่ใช่ heading) + CTA /register
+5. H2 คู่มือการเล่นเกม → `ContentBoxSevenThreeNeumorphism` + **slide1** (รูปคู่มือ) [SevenThree #2] + bullet 6 ข้อ → `ProviderGrid` + `GameRankingBoard`
+6. H2 ติดต่อไลน์ → `ContentBox` (plain) + bullet 6 ข้อ + ปุ่ม LINE → `ReviewCardSumo2` + `SmoothCarousel` + `LoginRtpSection` + `Navfoot`
+
+**การแมปรูป:** banner1=hero (MainLayout ล็อก banner1 อยู่แล้ว); slide2=SevenThree#1; slide1=SevenThree#2; slide3/slide4 ไม่ใช้ใน SevenThree (ตั้งใจ — โผล่เฉพาะใน SmoothCarousel widget ที่ import slide1-4 ครบ); **banner2.png (2026-07-15) / banner3.png (2026-07-12) เก่ากว่า drop = ของแบรนด์ก่อน ข้ามทั้งคู่ ไม่มีรูปประกอบ inline**
+
+**Variant rotation (before → after) — ห้ามแบรนด์ถัดไปใช้ตัว "after" ซ้ำ:**
+- Navbar: `NavbarPremium` → **`NavbarStyle6`** (notch logo + left rail sidebar; เดิมเป็น KIKI49 แดงเข้ม → เขียว)
+- Footer: `FooterPremium` → **`FooterStyle3`** (CTA card ลอย + quick links + payment grid; เดิม HYDRA888 แดง → เขียว; h2/h3 ในไฟล์ normalize เป็น p ทั้งหมด)
+- Announcement: `Announcement4` → **`Announcement3`** (megaphone ticker; ทอง→เขียว/ไลม์; default message = MAFIA168 + URL)
+- LatestWinners: `LatestWinnersPremium` → **`LatestWinners3`** (cyan→เขียว/ไลม์ ทั้ง JSX และ JS template string; ไม่มีชื่อแบรนด์ hardcode)
+- ContentBox mix: (999LORD=plain+Premium+SevenThree×2+CyberCut+Neumorphism+FloatingBadge) → **MAFIA168=Special(H1)+SevenThreeNeumorphism×2+TwoNeumorphism+TwoCyberCut+plain×2** — เลิกใช้ Premium/CyberCut/FloatingBadge เดี่ยว, นำด้วย Two-column family + Neumorphism shape ที่ 999LORD ไม่ได้ใช้
+
+**URL (3 จุด → `https://www.mafia168-guide.com`):** `astro.config.mjs` site, `public/robots.txt` Sitemap, `src/pages/index.astro` webSiteSchema.url (string literal) — user ให้ URL จริงมากับคำสั่ง จึงแก้ครบตามกฎ (ใส่ www ตาม convention เดิมของ repo)
+
+**ไฟล์ที่แก้ — P1 shared chrome (orchestrator, commit แยกเป็น baseline):** `MainLayout.astro` (import Style6/Style3, meta/OG/apple-title/default title-desc = MAFIA168), `NavbarStyle6`, `FooterStyle3`, `Navfoot`, `ContentBox`, `Announcement3`, `astro.config.mjs`, `public/robots.txt`
+**ไฟล์ที่แก้ — Agent A (index + 11 components):** `index.astro` (เขียนใหม่ทั้งหน้า + schema 3 ก้อน), `ContentBoxSpecial` (เพิ่ม title/as prop), `ContentBoxTwoNeumorphism`, `ContentBoxTwoCyberCut` (เพิ่ม main title + intro slot), `ContentBoxSevenThreeNeumorphism`, `ContentBoxTwo` (คอลัมน์ h2→p widget), `LoginRtpSection` (999LORD×2→MAFIA168, h3→p), `ProviderGrid` (h2 brand + h3 card→p + class ใน filter script), `GameRankingBoard` (h3→p), `LatestWinners3`, `ReviewCardSumo2` (รีวิว 999LORD→MAFIA168, h3→p), `SmoothCarousel` (alt + slide1-4.png ตรง extension)
+**ไฟล์ที่แก้ — Agent B (หน้าอื่น 6 หน้า):** `promotion` (Announcement3, h1/alt×4/gradient hex ใน style, ปุ่ม→เขียว), `contact-us` (Announcement3, ContactPage schema, ปุ่ม→lime), `ทดลองเล่น`/`ทางเข้า` (Announcement3, title/ปุ่ม→เขียว/ไลม์), `login`/`register` (standalone: `.brand-identity`, CSS var `--brand-red:#ef4444`→`--brand-lime:#a3e635`, `--brand-blue:#3b82f6`→`--brand-green:#22c55e`, rgba ทุกจุด; ไม่แตะ targetUrl affiliate)
+
+**Announcement ทั้งไซต์ตรงกัน:** ทุกหน้า casino ใช้ `Announcement3`; index ส่ง message = default ของ Announcement3 → หน้าอื่นเรียกเปล่าได้ข้อความ MAFIA168 ชุดเดียวกัน
+
+**ยกเว้น (ตั้งใจไม่แตะ):** `แนวทาง.astro`, `ตรวจหวย.astro` + `AnnouncementHuay`/`ContentBoxHuay` = หวย Var99 ธีม Huay (แดง/ทอง) — grep ไม่มีชื่อ casino เก่า = ไม่แก้แม้แต่บรรทัดเดียว; inventory variants เก่า (Announcement4, NavbarPremium, FooterPremium, LatestWinnersPremium, ContentBoxPremium/CyberCut/FloatingBadge ฯลฯ) ยังเป็นสี/ชื่อ 999LORD = expected drift ไม่ลบ; **contact-us contactPoint ชี้ `tinyurl.com/linepigpg` ขณะ `/line` redirect ใน config เป็น `tinyurl.com/suhng`** — drift เก่าที่มีมาก่อน user ไม่ได้ให้ลิงก์ LINE ใหม่ จึงไม่เดาแก้ (ฝากไว้ให้เจ้าของตัดสิน)
+
+**การทดสอบ (Phase 5 — build เดียว):** `npm run build` ผ่านสะอาด 9 หน้า; grep dist ทุกหน้า: ชื่อแบรนด์เก่า (999LORD/HENGJUD/FUNBEYOND/QQ882/MARANG/KIKI49/HYDRA888) = **0**; old hue ใน class attr = **0 ทุกหน้า casino** (ตรวจหวย/แนวทาง มี red/gold = ธีม Huay ตั้งใจ; `text-purple-500` = SCB); `<!--` = 0 ทุกหน้า; undefined/NaN/[object Object] = 0; hero = banner1.avif; banner2/3 ไม่โผล่ใน dist เลย; h1=1, h2 = 5 docx เรียงถูกลำดับ + 4 widget (Winners/Provider/Ranking/Review), h3 = 4 ตัวจาก docx เท่านั้น; whitespace-nowrap เหลือ 2 จุดที่ตั้งใจ (ticker Announcement3 + ปุ่มสั้น footer) ไม่ใช้ FloatingBadge รอบนี้จึงไม่มี badge-overflow ให้เช็ก; URL mafia168-guide.com ครบใน schema/canonical/og/sitemap

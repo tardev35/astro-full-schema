@@ -1,43 +1,179 @@
-# Astro Starter Kit: Minimal
+# คู่มือเริ่มต้นใช้งาน (Onboarding)
 
-```sh
-npm create astro@latest -- --template minimal
+เว็บ Astro template กลางสำหรับทำเว็บแบรนด์สล็อต/คาสิโนหลายเจ้า
+"เปิดตัวแบรนด์ใหม่" = เอาโครงหน้าเดิมมาเปลี่ยนชื่อ สี และเนื้อหาใหม่
+โดยสั่งงานผ่าน **Claude Code** เป็นหลัก
+
+> 📌 เอกสารนี้คือจุดเริ่มต้นสำหรับ **คนใหม่ทุกคน** อ่านให้จบก่อนเริ่มงานจริง
+
+---
+
+## อ่านส่วนไหน?
+
+| คุณคือ | อ่านหัวข้อ |
+|---|---|
+| **สายคอนเทนต์ / การตลาด** | 1 ติดตั้ง → 2 เปิดดูเว็บ → 3 รีแบรนด์ → 4 git → 5 deploy → 6 ปัญหาบ่อย → 7 กฎเหล็ก |
+| **สาย Dev** | อ่านทั้งหมด + ไฟล์ `CLAUDE.md` และ `.claude/skills/rebrand-site/SKILL.md` |
+
+ทุกคนต้องมี **Git เป็นของตัวเอง** ไว้บันทึก/แก้ไขหน้าเว็บ (มีสอนในหัวข้อ 4)
+
+---
+
+## 1. ติดตั้งครั้งเดียว (ทำครั้งแรกครั้งเดียวต่อเครื่อง)
+
+ต้องมี 2 โปรแกรมนี้ก่อน (ทีมจะสอนตอนเทรน):
+
+1. **Node.js** — ดาวน์โหลดจาก https://nodejs.org (เลือกตัว LTS) แล้วกด Next ไปเรื่อย ๆ
+2. **Git** — ดาวน์โหลดจาก https://git-scm.com
+
+จากนั้นดึงโปรเจกต์ลงเครื่อง (copy วางทีละบรรทัด):
+
+```powershell
+git clone https://github.com/tardev35/astro-full-schema.git
+cd astro-full-schema
+npm install
 ```
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+`npm install` รันครั้งเดียวพอ (นาน 1–2 นาที รอจนขึ้นบรรทัดว่างกลับมา)
 
-## 🚀 Project Structure
+---
 
-Inside of your Astro project, you'll see the following folders and files:
+## 2. เปิดหน้าเว็บดูในเครื่อง (dev server)
 
-```text
-/
-├── public/
-├── src/
-│   └── pages/
-│       └── index.astro
-└── package.json
+```powershell
+npm run dev
 ```
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+แล้วเปิดเบราว์เซอร์ไปที่ **http://localhost:8888**
+หน้าเว็บจะอัปเดตทันทีทุกครั้งที่ไฟล์ถูกแก้ (ไม่ต้องรีเฟรชเอง)
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+หยุด server ด้วยการกด **Ctrl + C** ในหน้าต่างคำสั่ง
 
-Any static assets, like images, can be placed in the `public/` directory.
+---
 
-## 🧞 Commands
+## 3. งานรีแบรนด์ผ่าน Claude Code (หัวใจของงาน)
 
-All commands are run from the root of the project, from a terminal:
+### 3.1 เตรียมของ 3 อย่าง
+- **ชื่อแบรนด์ใหม่** (เช่น `MAFIA168`)
+- **ไฟล์เนื้อหา** `.docx` (brief เนื้อหาของแบรนด์)
+- **รูปภาพ** — โลโก้ / แบนเนอร์ / สไลด์
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+### 3.2 อัปโหลดรูปด้วยเครื่องมือช่วย (กันรูปเพี้ยน)
+เปิดหน้าต่างคำสั่งอีกอันแล้วรัน:
 
-## 👀 Want to learn more?
+```powershell
+npm run rebrand:upload
+```
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+เปิดเบราว์เซอร์ไปที่ **http://localhost:4000** แล้วลากรูปเข้าไปตามช่อง
+(เครื่องมือนี้จะตั้งชื่อไฟล์/นามสกุลให้ถูกอัตโนมัติ — **ควรใช้เสมอ** แทนการก๊อปไฟล์เข้า `src/assets` เอง)
+
+หลักการตั้งชื่อรูป:
+- `banner1` = รูปหลัก (hero) บนสุดของเว็บ
+- `banner2`, `banner3`, `banner4` = รูปประกอบบทความ
+- `slide1`–`slide4` = รูปในสไลด์/ส่วนเนื้อหา
+
+### 3.3 สั่ง Claude Code
+พิมพ์สั่งเป็นภาษาไทยได้เลย ตัวอย่าง:
+
+```
+เว็บใหม่ชื่อ MAFIA168 รีแบรนด์ตาม docx และรูปที่วางไว้ใน src/assets ให้หน่อย
+```
+
+Claude จะทำตามขั้นตอนมาตรฐานในไฟล์ skill ให้เอง (เปลี่ยนชื่อ/สี/เนื้อหา
+ทุกหน้า + ตรวจงาน) — **คุณไม่ต้องจำขั้นตอนเทคนิค** แค่บอกว่าต้องการอะไร
+
+> ⚠️ ถ้ามี **URL จริง** ของแบรนด์ ให้บอก Claude ไปด้วยในประโยคเดียว เช่น
+> `...ชื่อ MAFIA168 url จริงคือ www.mafia168-guide.com` — ไม่งั้น Claude จะ
+> **ไม่เดา** โดเมนให้ (ตั้งใจกันพลาด)
+
+### 3.4 ตรวจงาน
+บอก Claude ว่า `ตรวจงานให้หน่อย` หรือดูเองที่ http://localhost:8888
+เช็กว่า: ชื่อแบรนด์ถูก, สีถูก, รูปขึ้นครบ, ไม่มีชื่อแบรนด์เก่าหลงเหลือ
+
+---
+
+## 4. บันทึกงานขึ้น GitHub (Git) — copy วางได้เลย
+
+ทำ **หลังรีแบรนด์เสร็จ** เพื่อเก็บงานไว้และให้ทีมเห็นตรงกัน
+พิมพ์ทีละบรรทัด (บรรทัดที่ 2 เปลี่ยนข้อความในเครื่องหมายคำพูดเป็นสิ่งที่ทำ):
+
+```powershell
+git add .
+git commit -m "rebrand MAFIA168"
+git push
+```
+
+- `git add .` = หยิบไฟล์ที่แก้ทั้งหมด
+- `git commit -m "..."` = บันทึกเป็นเวอร์ชัน พร้อมข้อความอธิบายสั้น ๆ
+- `git push` = ส่งขึ้น GitHub
+
+> 💡 **ถ้า `git push` แล้วขึ้น error `no upstream branch`** (มักเจอครั้งแรกของ branch ใหม่)
+> ให้ใช้บรรทัดนี้แทน **ครั้งเดียว** จากนั้นครั้งต่อไปพิมพ์ `git push` เฉย ๆ ได้เลย:
+> ```powershell
+> git push -u origin main
+> ```
+> (นี่คือสาเหตุที่ commit เคย "ค้าง" ไม่ขึ้น GitHub ทั้งที่ commit สำเร็จแล้ว — ตัว commit ไม่หาย แค่ยังไม่ถูกส่งขึ้น)
+
+---
+
+## 5. เอาเว็บขึ้นจริง (Deploy)
+
+เมื่องานพร้อมขึ้น production ใช้คำสั่งเดียว (ใส่โดเมนของแบรนด์นั้น):
+
+```powershell
+.\deploy.ps1 -Domain mafia168-guide.com
+```
+
+สคริปต์จะทำให้อัตโนมัติ: **build → บีบอัด → ยิงขึ้น server → ล้าง cache**
+พอขึ้น `DEPLOYMENT COMPLETE!` = เว็บออนไลน์แล้ว
+
+> 🔑 **ทุกคน deploy เองได้** ระหว่างทางสคริปต์จะถาม **password ของ server**
+> (ขอ password จากทีม/แอดมิน) พิมพ์ password แล้วกด Enter เพื่อไปต่อ — จะถูก
+> ถามทุกครั้งที่ deploy ถือเป็นเรื่องปกติ
+>
+> ⚠️ **ระวังพิมพ์ชื่อโดเมนให้ถูก** — ใส่โดเมนของแบรนด์ที่กำลังทำเท่านั้น
+> ถ้าใส่ผิด จะไปทับเว็บของอีกแบรนด์บน server ดูให้ชัวร์ก่อนกด Enter
+
+---
+
+## 6. เจอปัญหาบ่อย ๆ (Troubleshooting)
+
+| อาการ | วิธีแก้ |
+|---|---|
+| `git push` ขึ้น `no upstream branch` | ใช้ `git push -u origin main` ครั้งเดียว (ดูข้อ 4) |
+| commit แล้วแต่ GitHub ไม่อัปเดต | ยังไม่ได้ `git push` — commit อยู่แค่ในเครื่อง สั่ง push เพิ่ม |
+| `npm run dev` เปิดไม่ขึ้น / error | ลองปิดหน้าต่างเดิมก่อน แล้วรันใหม่ ถ้ายังไม่หาย รัน `npm install` อีกครั้ง |
+| build ไม่ผ่าน (`deploy` หยุดกลางคัน) | โค้ดมีปัญหา — บอก Claude ว่า `build ไม่ผ่าน ช่วยดูให้หน่อย` |
+| รูปไม่ขึ้น / รูปเป็นของแบรนด์เก่า | อัปโหลดรูปใหม่ผ่าน `npm run rebrand:upload` (ข้อ 3.2) แล้วบอก Claude ให้ตรวจรูปซ้ำ |
+
+ปัญหาที่แก้เองไม่ได้ → ถาม Claude Code เป็นภาษาไทยตรง ๆ หรือแจ้งทีม dev
+
+---
+
+## 7. กฎเหล็ก (ห้ามทำ)
+
+1. **ห้ามลบ component ที่ไม่ได้ใช้ใน `src/components/`** — พวก `NavbarStyle*`,
+   `ContentBox*`, `Footer*` เวอร์ชันที่ดูเหมือนไม่ได้ใช้ คือ "คลัง" ไว้ทำแบรนด์
+   หน้า ไม่ใช่ขยะ
+2. **ห้ามเดา URL/โดเมนเอง** — ใส่เฉพาะ URL จริงที่ได้รับมาเท่านั้น
+3. **ห้ามแก้ไฟล์คนอื่นพร้อมกัน** — ถ้าหลายคนทำงานคนละแบรนด์ ตกลงกันก่อน
+   ว่าใครถือ repo ตอนไหน (กัน commit ชนกัน)
+4. **ยืนยันงานเสร็จ = build ผ่าน + เปิดดูหน้าเว็บจริงด้วยตา** เสมอ ไม่ใช่แค่
+   Claude บอกว่าเสร็จ
+
+---
+
+## คำสั่งที่ใช้บ่อย (สรุป)
+
+```powershell
+npm install                     # ติดตั้ง (ครั้งแรกครั้งเดียว)
+npm run dev                     # เปิดดูเว็บที่ localhost:8888
+npm run rebrand:upload          # อัปโหลดรูปแบรนด์ที่ localhost:4000
+npm run build                   # build ตรวจว่าโค้ดสมบูรณ์
+git add . ; git commit -m "..." ; git push   # บันทึกขึ้น GitHub
+.\deploy.ps1 -Domain <โดเมน>    # เอาเว็บขึ้นจริง
+```
+
+รายละเอียดเชิงลึกสำหรับ dev อยู่ใน `CLAUDE.md` และ
+`.claude/skills/rebrand-site/SKILL.md`

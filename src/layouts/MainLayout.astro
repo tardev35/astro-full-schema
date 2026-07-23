@@ -1,6 +1,5 @@
 ---
 import { Image } from "astro:assets";
-import Bg from "../assets/bg.png";
 import "../styles/global.css";
 import NavbarStyle6 from "../components/NavbarStyle11.astro";
 import Footer from "../components/FooterPremiumSumo.astro";
@@ -61,7 +60,7 @@ const ogSiteName = "SUMOHENG";
         background-attachment: fixed;
         background-repeat: no-repeat;
         margin: 0;
-        background-color: #ffffff;
+        background-color: #0c0808;
         font-weight: 400;
         font-family: "Kanit", sans-serif !important;
         /* color: white; */
@@ -70,18 +69,6 @@ const ogSiteName = "SUMOHENG";
   </head>
 
   <body class="relative flex min-h-screen w-full flex-col">
-    <Image
-      src={Bg}
-      alt="Website Background"
-      loading="eager"
-      widths={[412, 768, 1024, 1900]}
-      sizes="100vw"
-      format="avif"
-      class="fixed inset-0 -z-50 h-full w-full object-cover"
-      quality="low"
-      decoding="sync"
-    />
-
     <NavbarStyle6 />
 
     <div class="mb-2.5 flex w-full items-center justify-center">

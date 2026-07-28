@@ -19,7 +19,7 @@
 | ของ | ค่า |
 |---|---|
 | โค้ดต้นทาง | `gitlab.com/tardev-group/astro-full-schema` branch `rebrand-ufayes-cf` |
-| repo ใหม่ของทีม | `gitlab.com/tardev-group/<ชื่อ-repo-ใหม่>` |
+| repo ที่คุณทำงาน | `gitlab.com/tardev-group/astro-<ชื่อคุณ>` (คนละอันต่อคน) |
 | branch ที่ทำงาน | `main` |
 | หน้าเว็บ dev | http://localhost:8888 |
 | หน้า uploader | http://localhost:4000 |
@@ -45,29 +45,51 @@
 
 ---
 
-# ภาค A — สร้าง repo ใหม่แล้วยกโค้ดขึ้น (ทำครั้งเดียว โดยคนที่ถือ repo)
+# ภาค A — เปิด repo ให้เพื่อน (คนที่ถือต้นแบบทำ)
 
-ข้ามภาคนี้ไปเลยถ้ามีคนทำให้แล้ว — dev ที่มารับเครื่องเริ่มที่ **ภาค B**
+> **dev ที่มารับเครื่อง ข้ามภาคนี้ทั้งภาค ไปเริ่มที่ [ภาค B](#ภาค-b--ตั้งเครื่อง-dev-ทำทุกเครื่อง)**
+> ทุกอย่างในภาคนี้เจ้าของต้นแบบทำให้เสร็จก่อนส่งมอบแล้ว
 
-### A1. สร้าง project เปล่าใน GitLab
+## โครงที่ใช้อยู่
+
+```
+astro-full-schema / rebrand-ufayes-cf     ← ต้นแบบ มีคนเดียวที่แตะ
+        │
+        ├──> astro-bas    (บาส)
+        ├──> astro-tud    (ตุ๊ด)
+        └──> astro-aoy    (อ้อย)
+```
+
+**หนึ่งคน หนึ่ง repo** ทุก repo ปลายทางมี `main` เป็นสำเนาของต้นแบบ แล้วเจ้าตัวแตก branch
+ของตัวเองทำงานบนนั้น
+
+**เพื่อนไม่ต้องมีสิทธิ์เข้าถึง `astro-full-schema` เลยแม้แต่ครั้งเดียว** เขาเห็นแค่ repo
+ของตัวเอง — ขั้นตอนที่พลาดง่ายทั้งหมดอยู่ฝั่งคุณ ทำครั้งเดียวต่อคน
+
+> **ทำไมยังต้องมีต้นแบบ ในเมื่อทุกคนมี repo ของตัวเอง** — เพราะมันเป็นที่เดียวที่รวมงาน
+> จากทุกคนแล้วส่งกลับให้ทุกคนได้ ถ้าไม่มีจุดรวม สิ่งที่ตุ๊ดแก้จะไม่มีทางไปถึงอ้อยเลย
+
+---
+
+## A1. สร้าง project เปล่าใน GitLab
 
 GitLab → **New project** → **Create blank project**
 
 | ช่อง | ค่า |
 |---|---|
-| Project name | ชื่อที่ทีมเข้าใจ เช่น `astro-rebrand-system` |
-| Project URL | เลือก group `tardev-group` |
+| Project name | `astro-<ชื่อคน>` เช่น `astro-tud` |
+| Project URL | group `tardev-group` |
 | Visibility | **Private** |
-| Initialize repository with a README | **ไม่ต้องติ๊ก** ⚠️ ติ๊กแล้วจะชนกับโค้ดที่กำลังจะ push |
+| Initialize repository with a README | **ห้ามติ๊ก** ⚠️ ติ๊กแล้ว repo จะไม่ว่าง แล้วจะชนกับที่กำลังจะ push |
 
-> ถ้า group จริงชื่อ `tar-group` ไม่ใช่ `tardev-group` ให้เปลี่ยนตามของจริง
-> — เช็กชื่อที่ถูกได้จาก `git remote -v` ในเครื่องที่มีโค้ดอยู่แล้ว
+จากนั้น **Manage → Members → Invite members** เชิญเจ้าตัวเข้ามา ให้สิทธิ์ **Developer**
+(push branch ตัวเองได้ แต่แตะ `main` ที่ถูก protect ไม่ได้ — ซึ่งเป็นสิ่งที่เราต้องการพอดี)
 
-### A2. ยก `rebrand-ufayes-cf` ขึ้นเป็น `main` ของ repo ใหม่
+## A2. ยกโค้ดขึ้น repo นั้น — 2 คำสั่ง
 
-ทำจาก**โฟลเดอร์ต้นแบบ** — โฟลเดอร์ที่มีโค้ด `astro-full-schema` อยู่ในเครื่องคุณ
+ทำจาก**โฟลเดอร์ต้นแบบ** คือโฟลเดอร์ `astro-full-schema` ในเครื่องคุณ
 
-**ยังไม่มีโฟลเดอร์นั้นเลย?** ดึงลงมาก่อนด้วย `git clone` — **มันสร้างโฟลเดอร์ให้เอง
+**ยังไม่มีโฟลเดอร์นั้น?** ดึงลงมาก่อนด้วย `git clone` — **มันสร้างโฟลเดอร์ให้เอง
 ไม่ต้องไปสร้างโฟลเดอร์เปล่ารอไว้** ทำครั้งเดียวจบ:
 
 ```powershell
@@ -90,15 +112,21 @@ git switch rebrand-ufayes-cf
 git pull
 ```
 
-**จากนั้นยกขึ้น repo ใหม่ — 2 คำสั่ง:**
+**แล้วยกขึ้น repo ของเพื่อน:**
 
 ```powershell
-# 1) ตั้งชื่อเล่นให้ repo ใหม่ (ชื่ออะไรก็ได้ อยู่แค่ในเครื่องคุณ GitLab ไม่รู้จัก)
-git remote add newrepo git@gitlab.com:tardev-group/<ชื่อ-repo-ใหม่>.git
+# 1) ตั้งชื่อเล่นให้ repo ของเขา — ทำครั้งเดียวต่อคน
+git remote add tud git@gitlab.com:tardev-group/astro-tud.git
 
 # 2) ส่งขึ้นไปโดยใช้ชื่อ main บนนั้น
-git push newrepo rebrand-ufayes-cf:main
+git push tud rebrand-ufayes-cf:main
 ```
+
+จบ — เพื่อน clone ได้เลย
+
+> **`tud` เป็นชื่อเล่นที่คุณตั้งเอง** อยู่แค่ในไฟล์ `.git/config` ของโฟลเดอร์นี้
+> GitLab ไม่รู้จักชื่อนี้ ส่วนที่เป็นของจริงคือ URL ตั้งชื่อให้รู้ว่าใครเป็นใคร
+> (`tud`, `aoy`, `bas`) ดีกว่าชื่อกลางๆ อย่าง `newrepo` เพราะพอมี 5 คนจะจำไม่ได้
 
 > 🚨 **`:main` ท้ายคำสั่งคือหัวใจ ห้ามตกหล่น** แปลว่า "เอา branch ในเครื่องชื่อนี้
 > ขึ้นไปใช้ชื่อ `main` บน remote" — ชื่อสองฝั่งไม่จำเป็นต้องตรงกัน
@@ -111,32 +139,71 @@ git push newrepo rebrand-ufayes-cf:main
 > **และอย่าใส่ `-u`** ในโฟลเดอร์ต้นแบบ มันจะล็อกให้ `git push` เฉยๆ วิ่งไป repo นั้นที่เดียว
 > ทั้งที่โฟลเดอร์นี้ผูกหลาย repo — สั่งชื่อ remote ตรงๆ ทุกครั้งปลอดภัยกว่า
 
-> **ทำไมเปลี่ยนชื่อเป็น `main`** — ใน repo ใหม่ โค้ดชุดนี้*คือ*ตัวหลัก ไม่ใช่ branch ทดลอง
-> การคง `rebrand-ufayes-cf` ไว้เป็นแกนจะทำให้คนใหม่เข้าใจผิดว่านี่คืองานของแบรนด์ UFAYES
+> **ทำไมเปลี่ยนชื่อเป็น `main`** — ใน repo ของเขา โค้ดชุดนี้*คือ*ตัวหลัก ไม่ใช่ branch ทดลอง
+> การคง `rebrand-ufayes-cf` ไว้เป็นแกนจะทำให้เขาเข้าใจผิดว่านี่คืองานของแบรนด์ UFAYES
 > — ทั้งที่มันคือระบบกลาง
 
-### A2.1 อัปเดต repo ของทีมรอบถัดไป
+## A3. ส่งอะไรให้เพื่อน
 
-เวลามีของใหม่ในต้นแบบ ยิงคำสั่งเดิมซ้ำได้เลย ไม่ต้องตั้ง remote ใหม่:
+ส่ง 2 บรรทัดนี้พอ:
+
+```
+git clone git@gitlab.com:tardev-group/astro-tud.git
+```
+> แล้วอ่าน `SETUP-REBRAND-SYSTEM.md` ในโฟลเดอร์ เริ่มที่ **ภาค B** (ข้ามภาค A)
+
+เขาจะได้ `main` เป็น default, `git push` เฉยๆ ใช้ได้ทันที ไม่ต้อง `switch` ไม่ต้องรู้จัก
+คำว่า `rebrand-ufayes-cf` ด้วยซ้ำ
+
+**⚠️ อย่าส่งคำสั่งของภาค A ให้เพื่อนรัน** — คำสั่งอย่าง `git push tud rebrand-ufayes-cf:main`
+ใช้ได้เฉพาะโฟลเดอร์ต้นแบบ เพราะเครื่องเขาไม่มีทั้ง remote ชื่อ `tud` และ branch ชื่อ
+`rebrand-ufayes-cf` จะขึ้น `src refspec ... does not match any` **เคยพลาดมาแล้ว**
+
+| | โฟลเดอร์ต้นแบบ (คุณ) | เครื่องเพื่อน |
+|---|---|---|
+| remote | `origin` = astro-full-schema, `tud`/`aoy`/`bas` = ของแต่ละคน | `origin` = repo ตัวเองอันเดียว |
+| branch | `rebrand-ufayes-cf` | `main` |
+| ทิศทาง | ส่งออก | รับเข้า + push branch ตัวเอง |
+
+## A4. เวลาต้นแบบมีของใหม่ → กระจายออก
 
 ```powershell
-git push newrepo rebrand-ufayes-cf:main
+git push bas rebrand-ufayes-cf:main
+git push tud rebrand-ufayes-cf:main
+git push aoy rebrand-ufayes-cf:main
 ```
+
+`git remote add` ทำครั้งเดียวตอนเปิด repo ครั้งต่อๆ ไปเหลือแค่บรรทัด `push`
+เพื่อนแต่ละคนแค่ `git switch main` แล้ว `git pull`
 
 **กติกาข้อเดียวที่ทำให้คำสั่งนี้ปลอดภัยตลอด:**
 
-> `main` ของทุก repo ปลายทางคือ**กระจกเงาของต้นแบบ ห้ามใครคอมมิตลงไปตรงๆ**
+> **`main` ของทุก repo ปลายทางคือกระจกเงาของต้นแบบ ห้ามคอมมิตลงไปตรงๆ**
 > ทุกคนต้องแตก branch ของตัวเองเสมอ
 
 ถ้ามีคนเผลอคอมมิตลง `main` จริง คำสั่งข้างบนจะ**ถูกปฏิเสธ ไม่ทับงานเขา** — นั่นคือ
 branch protection ทำหน้าที่ถูกแล้ว **อย่าแก้ด้วย `--force`** ให้ไปคุยกับเจ้าตัวก่อน
 
-### A3. เชิญทีมเข้า project
+## A5. เวลางานของเพื่อนดี อยากเก็บเข้าต้นแบบ
 
-**Project → Manage → Members → Invite members**
-ให้สิทธิ์ **Developer** (พอสำหรับ push branch ของตัวเอง แต่แตะ `main` ไม่ได้ถ้าตั้ง protect ไว้)
+```powershell
+# ในโฟลเดอร์ต้นแบบ
+git fetch tud
+git switch rebrand-ufayes-cf
+git merge tud/ชื่อ-branch-ของเขา     # แก้ conflict ถ้ามี
+git push origin rebrand-ufayes-cf     # เข้าต้นแบบก่อน
+```
 
----
+แล้วค่อยกระจายออกทุกคนตาม **A4** — จากนั้นลบ branch ของเขาทิ้งได้
+
+```powershell
+git push tud --delete ชื่อ-branch-ของเขา
+```
+
+> **ถามตัวเองก่อนรับเข้า: อันนี้ควรมีผลกับทุกคนจริงไหม** งานบางอย่างเป็นการแก้ให้เข้ากับ
+> เครื่องตัวเอง เช่นเปลี่ยนพอร์ตเพราะพอร์ตเดิมชนกับโปรแกรมอื่น — แบบนั้นให้เก็บไว้ใน
+> repo ของเขาเอง อย่าลากทุกคนไปด้วย
+
 
 # ภาค B — ตั้งเครื่อง dev (ทำทุกเครื่อง)
 
@@ -198,11 +265,19 @@ ssh -T git@gitlab.com
 
 ## B4. โคลนโค้ด
 
+ใช้ URL ของ **repo ตัวเอง** ที่ได้รับมา (เช่น `astro-tud`) — ไม่ใช่ `astro-full-schema`
+
 ```powershell
-cd C:\Users\<ชื่อผู้ใช้>\Desktop
-git clone git@gitlab.com:tardev-group/<ชื่อ-repo-ใหม่>.git
-cd <ชื่อ-repo-ใหม่>
+cd $HOME\Desktop
+git clone git@gitlab.com:tardev-group/astro-<ชื่อคุณ>.git
+cd astro-<ชื่อคุณ>
 ```
+
+`clone` สร้างโฟลเดอร์ให้เอง ไม่ต้องสร้างรอไว้ก่อน
+
+> **ไม่ต้อง `git switch` อะไรทั้งนั้น** — repo ของคุณมี `main` เป็น branch หลักอยู่แล้ว
+> และ `git push` เฉยๆ ใช้ได้ตั้งแต่วินาทีแรก ถ้าเห็นคู่มือเก่าบอกให้สลับไป
+> `rebrand-ufayes-cf` แปลว่าอ่านผิดไฟล์
 
 ## B5. ติดตั้ง dependencies
 
@@ -340,9 +415,9 @@ git config --global user.email "อีเมล GitLab"
 ssh -T git@gitlab.com
 
 # --- ตั้ง repo ---
-cd C:\Users\<ชื่อผู้ใช้>\Desktop
-git clone git@gitlab.com:tardev-group/<ชื่อ-repo-ใหม่>.git
-cd <ชื่อ-repo-ใหม่>
+cd $HOME\Desktop
+git clone git@gitlab.com:tardev-group/astro-<ชื่อคุณ>.git
+cd astro-<ชื่อคุณ>
 npm install
 npx wrangler login       # ข้ามได้ถ้าไม่ deploy จากเครื่องนี้
 npx wrangler whoami

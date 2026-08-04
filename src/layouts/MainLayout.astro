@@ -6,8 +6,8 @@ import ogImage from "../assets/slide1.png";
 import "../styles/global.css";
 import { BRAND_NAME, BRAND_TEXT, brandProfile, fontStack, iconVersion, usesGoogleFonts } from "../lib/brandProfile";
 import { canonicalFor } from "../lib/schema";
-import Navbar from "../components/NavbarCyber.astro";
-import Footer from "../components/FooterCyber.astro";
+import Navbar from "../components/NavbarStyle4Black.astro";
+import Footer from "../components/FooterStyle2.astro";
 
 // Only banner1 is ever rendered, so only banner1 is imported.
 //
@@ -35,8 +35,8 @@ const mainBannerPath = bannerPaths.find((path) => path.endsWith(".webp")) ?? ban
 const mainBanner = bannerImages[mainBannerPath].default;
 
 const {
-  title = "WINSIAM88 รีวิวเว็บหลัก คาสิโน 13 ค่าย มาตราฐานสากล ฝากถอนออโต้",
-  description = "รีวิว WINSIAM88 เว็บหลักรวมสล็อต คาสิโน กีฬา และเกมกว่า 13 ค่าย ใช้กระเป๋าเดียว ฝากถอนออโต้ พร้อมตรวจโปรโมชั่น ระบบสมาชิก และทางเข้าก่อนใช้งาน ครบจากจุดเดียว",
+  title = "YOK789 สล็อตเว็บตรง คาสิโน หวย กีฬา จ่ายจริง คืนยอดเสีย 8%",
+  description = "รีวิว YOK789 สล็อตเว็บตรง รวมคาสิโน หวย และกีฬาไว้ในบัญชีเดียว เช็กค่ายเกม ระบบฝากถอนออโต้ เงื่อนไขคืนยอดเสีย 8% โปรโมชั่น ทางเข้า และมือถือก่อนใช้งานจริงครบ",
   robots = "index, follow",
 } = Astro.props;
 
@@ -143,7 +143,7 @@ const profile = brandProfile(Astro.site);
 
           {block === "appmeta" && (
             <Fragment>
-              {profile.showAppTitle && <meta name="apple-mobile-web-app-title" content="winsiam88" />}
+              {profile.showAppTitle && <meta name="apple-mobile-web-app-title" content="yok789" />}
               <link rel="manifest" href="/site.webmanifest" />
             </Fragment>
           )}
@@ -185,7 +185,7 @@ const profile = brandProfile(Astro.site);
         background-attachment: fixed;
         background-repeat: no-repeat;
         margin: 0;
-        background-color: #0a1207;
+        background-color: #050d07;
         font-weight: 400;
         font-family: var(--font-sans) !important;
       }
@@ -227,7 +227,7 @@ const profile = brandProfile(Astro.site);
           benefit here, since the image is already fetchpriority="high". */}
       <Image
         src={mainBanner}
-        alt="แบนเนอร์ WINSIAM88 เว็บพนันระดับพรีเมียม ฝากออโต้ด้วยระบบทันสมัย รวมสล็อต คาสิโนสด บาคาร่า และเกมยอดนิยมในเว็บเดียว สมัครง่าย ระบบเสถียร ฝากถอนอัตโนมัติ ดูแลตลอด 24 ชั่วโมง"
+        alt="แบนเนอร์ YOK789 รีวิวสล็อตเว็บตรง คาสิโน หวย กีฬา จ่ายจริง พร้อมป้ายคืนยอดเสีย 8% แถบข้อมูล 40+ ค่ายเกม 4,000+ เกม ฝากถอนออโต้ และปุ่มสมัครสมาชิก บนพื้นหลังวงล้อรูเล็ต ลูกเต๋า และชิปคาสิโนโทนเขียวมรกต"
         loading="eager"
         fetchpriority="high"
         widths={[412, 640, 828, 1024, 1280, 1600, 1900]}

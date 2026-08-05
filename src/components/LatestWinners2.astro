@@ -25,19 +25,21 @@ const initialRows = Array.from({ length: 4 }, (_, i) => ({
   pending: brandFlag(Astro.site, `card-pending-${i}`),
 }));
 
-const PENDING_CLASS = "text-[#ff4fd8] bg-[#231045] border border-[#ff4fd8]/40 animate-pulse";
-const DONE_CLASS = "text-[#1a0330] bg-gradient-to-r from-[#ffe94d] via-[#ffd400] to-[#b8860a] border border-[#ffd400]/40 font-black shadow-md";
+const PENDING_CLASS = "text-[#f8dc9a] bg-[#5e0f06] border border-[#a81f1a]/60 animate-pulse";
+const DONE_CLASS = "text-[#140604] bg-gradient-to-r from-[#f8dc9a] via-[#e9b949] to-[#9c724a] border border-[#e9b949]/40 font-black shadow-md";
 ---
 
 <div class="mx-auto w-full max-w-[1300px] p-4 font-sans">
   <section
-    aria-label="รายการถอนเงินล่าสุดของสมาชิก OKG777"
-    class="relative overflow-hidden rounded-[30px] border-2 border-[#ffd400]/25 bg-[#170733]/92 px-4 py-8 shadow-[0_10px_30px_rgba(255,212,0,0.18)] backdrop-blur-md md:p-10">
-    <div aria-hidden="true" class="pointer-events-none absolute -top-10 left-1/2 h-32 w-64 -translate-x-1/2 rounded-full bg-[#ff4fd8]/25 blur-[50px]"></div>
+    aria-label="รายการถอนเงินล่าสุดของสมาชิก YIMSIAM889"
+    class="relative overflow-hidden rounded-[30px] border-2 border-[#e9b949]/25 bg-[#1e0a06]/92 px-4 py-8 shadow-[0_10px_30px_rgba(233,185,73,0.18)] backdrop-blur-md md:p-10">
+    <div aria-hidden="true" class="pointer-events-none absolute -top-10 left-1/2 h-32 w-64 -translate-x-1/2 rounded-full bg-[#a81f1a]/35 blur-[50px]"></div>
 
     <div class="relative z-10 mb-8 flex items-center justify-center gap-3">
       <span aria-hidden="true" class="text-2xl">🏆</span>
-      <p class="bg-gradient-to-r from-[#ffe94d] via-[#ffd400] to-[#ff4fd8] bg-clip-text text-xl font-black tracking-wide text-transparent md:text-3xl">รายการถอนเงินล่าสุดของสมาชิก OKG777</p>
+      <p class="bg-gradient-to-r from-[#f8dc9a] via-[#e9b949] to-[#a81f1a] bg-clip-text text-xl font-black tracking-wide text-transparent md:text-3xl">
+        รายการถอนเงินล่าสุดของสมาชิก YIMSIAM889
+      </p>
       <span aria-hidden="true" class="text-2xl">🏆</span>
     </div>
 
@@ -54,7 +56,7 @@ const DONE_CLASS = "text-[#1a0330] bg-gradient-to-r from-[#ffe94d] via-[#ffd400]
       {
         initialRows.map((row) => (
           <div data-winner-row class="winner-card transition-all duration-500 ease-out">
-            <div class="flex flex-col rounded-[20px] border border-[#33195c] bg-[#0d0320]/95 p-5 shadow-sm transition-all hover:border-[#ffd400]/50 hover:bg-[#231045]/95">
+            <div class="flex flex-col rounded-[20px] border border-[#9c724a]/35 bg-[#140604]/95 p-5 shadow-sm transition-all hover:border-[#e9b949]/50 hover:bg-[#2e130c]/95">
               <div class="mb-4 flex items-start justify-between">
                 <div data-winner-bank class={`flex h-10 w-10 items-center justify-center rounded-full border border-white/10 shadow-inner ${row.bank.color}`}>
                   <img data-winner-icon src={row.bank.icon} alt="" width="24" height="24" loading="lazy" decoding="async" class="h-6 w-6 object-contain" />
@@ -70,11 +72,11 @@ const DONE_CLASS = "text-[#1a0330] bg-gradient-to-r from-[#ffe94d] via-[#ffd400]
                 </div>
               </div>
               <div>
-                <div class="text-sm text-[#b9a8d8]">
-                  ยูสเซอร์: <span data-winner-user class="font-bold text-[#ece2fb]">{row.user}</span>
+                <div class="text-sm text-[#f2ddc4]/70">
+                  ยูสเซอร์: <span data-winner-user class="font-bold text-[#f2ddc4]">{row.user}</span>
                 </div>
-                <div class="mt-1 text-2xl font-black text-[#ffd400]">
-                  <span data-winner-amount>{row.amount}</span> <span class="text-xs text-[#b9a8d8]">THB</span>
+                <div class="mt-1 text-2xl font-black text-[#e9b949]">
+                  <span data-winner-amount>{row.amount}</span> <span class="text-xs text-[#f2ddc4]/70">THB</span>
                 </div>
               </div>
             </div>
@@ -83,8 +85,8 @@ const DONE_CLASS = "text-[#1a0330] bg-gradient-to-r from-[#ffe94d] via-[#ffd400]
       }
     </div>
 
-    <p class="relative z-10 mt-6 text-center text-[11px] tracking-wide text-[#b9a8d8]">
-      ระบบฝากถอนอัตโนมัติรองรับการใช้งานตลอดวัน ตรวจสถานะรายการและประวัติธุรกรรมได้จากหน้าบัญชี หากรายการยังประมวลผลอยู่ไม่ควรกดซ้ำทันที
+    <p class="relative z-10 mt-6 text-center text-[11px] tracking-wide text-[#f2ddc4]/70">
+      ระบบฝากถอนอัตโนมัติของ YIMSIAM889 รองรับการทำรายการตลอดวัน ตรวจสถานะและประวัติธุรกรรมได้จากหน้าบัญชี หากรายการยังประมวลผลอยู่ไม่ควรกดซ้ำทันที
     </p>
 
     <script type="application/json" data-winners-banks set:html={JSON.stringify(bankPool)} />

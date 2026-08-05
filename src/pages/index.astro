@@ -1,51 +1,69 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
-import Announcement from "../components/Announcement.astro";
+import Announcement3 from "../components/Announcement3.astro";
 import ContentBox from "../components/ContentBox.astro";
-import ContentBoxPremium from "../components/ContentBoxPremium.astro";
-import ContentBoxNeumorphism from "../components/ContentBoxNeumorphism.astro";
-import ContentBoxTwoPremium from "../components/ContentBoxTwoPremium.astro";
-import ContentBoxSpecial from "../components/ContentBoxSpecial.astro";
-import ContentBoxSevenThreePremium from "../components/ContentBoxSevenThreePremium.astro";
-import ContentBoxSevenThreeNeumorphism from "../components/ContentBoxSevenThreeNeumorphism.astro";
+import ContentBoxCyberCut from "../components/ContentBoxCyberCut.astro";
+import ContentBoxFloatingBadge from "../components/ContentBoxFloatingBadge.astro";
+import ContentBoxTwoCyberCut from "../components/ContentBoxTwoCyberCut.astro";
+import ContentBoxSevenThreeCyberCut from "../components/ContentBoxSevenThreeCyberCut.astro";
+import ContentBoxSevenThreeFloatingBadge from "../components/ContentBoxSevenThreeFloatingBadge.astro";
 import LoginRtpSection from "../components/LoginRtpSection.astro";
 import ProviderGrid from "../components/ProviderGrid.astro";
 import GameRankingBoard from "../components/GameRankingBoard.astro";
 import ReviewCardSumo2 from "../components/ReviewCardSumo2.astro";
-import LatestWinnersPremium from "../components/LatestWinnersPremium.astro";
+import LatestWinners2 from "../components/LatestWinners2.astro";
 import SmoothCarousel from "../components/SmoothCarousel.astro";
-import Faq from "../components/Faq.astro";
+import Faq2 from "../components/Faq2.astro";
 import Navfoot from "../components/Navfoot.astro";
 
 import { Picture } from "astro:assets";
 import { pageGraph } from "../lib/schema";
-import imgSupport from "../assets/slide1.png";
-import imgPayout from "../assets/slide2.png";
+import imgIntro from "../assets/banner2.png";
+import imgPgSoft from "../assets/banner4.png";
+import imgJoker from "../assets/banner3.png";
+import imgFair from "../assets/slide4.png";
+import imgAuto from "../assets/slide1.png";
 
-const pageTitle = "YIMSIAM88 | สล็อตเว็บตรงไทยแท้ โบนัสแรงแตกบ่อย จ่ายเต็มไม่มีหัก";
+const pageTitle = "YIMSIAM889 สล็อตสยาม เว็บตรงแตกดีจริง ยิ้มรับโปรสมาชิกใหม่";
 
-const pageDescription = "YIMSIAM88 เว็บสล็อตเว็บตรงไทยแท้ จัดเต็มทั้งโบนัส ความลื่น ความเร็ว จ่ายจริงไม่มีหัก รองรับทุกช่องทาง ไม่มีกั๊ก เล่นง่ายแบบคนไทยเข้าใจคนไทย ฝากถอนออโต้ 24 ชม.";
+const pageDescription =
+  "YIMSIAM889 สล็อตสยาม ความบันเทิงฉบับไทยแท้ เว็บตรงแตกดีจริง มาตรฐานสากล ยิ้มรับโปรสมาชิกใหม่ ธุรกรรมว่องไวด้วยระบบอัตโนมัติ ทางเข้าปลอดภัย รองรับมือถือทุกระบบ";
+
+const introAlt =
+  "แบนเนอร์ YIMSIAM889 ตัวอักษรทองขอบแดงคำว่า YIMSIAM อยู่ด้านบน ใต้ชื่อเขียนว่า YIMSIAM เว็บสล็อตอันดับ 1 ตรงกลางเป็นหมีสีน้ำตาลยิ้มกอดเหรียญทองเรืองแสง ฉากหลังเป็นวัดไทยหลังคาแดงทอง เจดีย์ทอง พลุ ทองแท่ง และวงล้อสล็อตที่มีอักษรไทย";
+
+const pgSoftAlt =
+  "ภาพประกอบค่ายเกม PG SOFT ตัวอักษรนีออนสีฟ้าม่วงคำว่า PG SOFT อยู่กลางภาพ ใต้ชื่อเขียนว่า POCKET GAMES SOFT และ DIFFERENCE MAKES THE DIFFERENCE ล้อมรอบด้วยตัวละครการ์ตูนสามมิติสี่ตัวและหุ่นยนต์น้อย บนพื้นหลังสีน้ำเงินเข้มลายวงจรดิจิทัล";
+
+const jokerAlt =
+  "ภาพประกอบค่ายเกม Joker Gaming ตัวอักษรทองคำว่า JOKER และตัวอักษรแดงคำว่า GAMING มีมงกุฎทองอยู่ด้านบน ใต้ชื่อเขียนว่า YOUR ULTIMATE GAMING DESTINATION และ ONLINE CASINO & SLOTS ด้านขวาเป็นตัวตลกโจ๊กเกอร์ชุดม่วงเขียวถือไพ่โพดำและจอยเกม ด้านหลังเป็นวงล้อสล็อตเลข 777 ลูกเต๋าและเหรียญ";
+
+const fairAlt =
+  "แบนเนอร์ YIMSIAM889 ข้อความสีทองขอบแดงว่า เว็บตรงแตกดีจริง และข้อความสีขาวว่า มาตรฐานสากล มุมซ้ายบนเป็นโลโก้หน้าจั่ววัดไทยสีทองพร้อมคำว่า Yimsiam889 ด้านขวาเป็นพรีเซนเตอร์หญิงในชุดราตรีเลื่อมทองถือไพ่คลี่เป็นพัด รอบตัวมีเหรียญทอง ชิปคาสิโนและไพ่ลอยอยู่บนพื้นหลังลาวาและเปลวไฟ";
+
+const autoAlt =
+  "แบนเนอร์ YIMSIAM889 ข้อความสีทองขอบแดงว่า ธุรกรรมว่องไว และข้อความสีขาวว่า ระบบอัตโนมัติ มุมซ้ายบนเป็นโลโก้หน้าจั่ววัดไทยสีทองพร้อมคำว่า Yimsiam889 ด้านขวาเป็นพรีเซนเตอร์หญิงในชุดราตรีเลื่อมทองยกนิ้วชี้ขึ้น รอบตัวมีเหรียญทอง ชิปคาสิโนและไพ่ลอยอยู่บนพื้นหลังลาวาและเปลวไฟ";
 
 const faqs = [
   {
-    q: "YIMSIAM88 เป็นสล็อตเว็บตรงไทยแท้จริงไหม ต่างจากเว็บอื่นตรงไหน",
-    a: "เราเป็นสล็อตเว็บตรงไทยแท้ครับ ออกแบบมาเพื่อคนไทยโดยเฉพาะ หน้าเว็บเป็นเมนูภาษาไทยตัวใหญ่ชัดเจน จัดหมวดหมู่เกมให้หาง่ายเหมือนเดินเข้าเซเว่น อยากเล่นเกมไหน ค่ายอะไร จิ้มปุ๊บเจอเลย ทีมงานหลังบ้านของเราก็คนไทยแท้ๆ คุยกันรู้เรื่อง เข้าใจมุก เข้าใจปัญหา ไม่ต้องมานั่งคุยกับบอทหรือคนต่างชาติที่ใช้ Google Translate ตอบ และที่สำคัญคือมีความจริงใจแบบลูกผู้ชายครับ ที่นี่เราดูแลกันแบบพี่แบบน้อง สบายใจหายห่วงไปได้เลย",
+    q: "YIMSIAM889 เป็นเว็บสล็อตสยามแบบไหน ให้บริการเกมลิขสิทธิ์แท้หรือไม่",
+    a: "YIMSIAM889 คือเว็บสล็อตสยามที่ให้บริการเกมลิขสิทธิ์แท้ เน้นระบบโปร่งใส เล่นลื่น และให้ประสบการณ์แบบไทยแท้ขอรับ เรายึดถือคติบริการด้วยใจ ยิ้มแย้มแจ่มใสแบบไทยแท้ จึงคัดสรรเฉพาะเกมที่ถูกจริตพี่น้องชาวไทย เล่นง่าย กติกาไม่ซับซ้อนซ่อนเงื่อน คำว่าสล็อตสยามไม่ได้หมายถึงแค่ชื่อ แต่สะท้อนแนวคิดการให้บริการที่สุภาพ ไม่เร่ง ไม่กดดัน และให้เกียรติผู้เล่นทุกคน เหมาะกับท่านที่อยากเล่นในบรรยากาศที่ไม่วุ่นวาย แต่ยังได้ระบบที่ชัดเจนและเชื่อถือได้",
   },
   {
-    q: "โบนัสแรงแตกบ่อยของ YIMSIAM88 คือแตกจริงไหม ระบบเกมแฟร์หรือเปล่า",
-    a: "เพราะเกมของเราใช้ระบบ RNG มาตรฐานโลกครับ การแตกของโบนัสจึงเป็นไปตามธรรมชาติที่สุด บทจะแตกก็แตกจนร้องขอชีวิต บทจะเข้าฟรีสปินก็ไหลยาวเป็นหางว่าว คำว่าโบนัสแรงของเราคือแรงตามดวงและจังหวะเกมจริงๆ ไม่มีการปรับ % ให้เกลือเพื่อกินตังค์ท่าน และไม่มีการกั๊กช่วงเวลาว่าต้องมาปั่นตอนไหนถึงจะเข้า เล่นได้คือได้ เล่นเสียคือเสียตามเกมแฟร์ๆ วัดกันที่ดวงและฝีมือล้วนๆ นี่แหละครับรสชาติของการเดิมพันที่แท้จริง",
+    q: "YIMSIAM889 เป็นเว็บตรงไม่ผ่านเอเย่นต์จริงหรือไม่",
+    a: "จริงขอรับ YIMSIAM889 ให้บริการในรูปแบบเว็บตรง เชื่อมต่อเกมจากค่ายผู้พัฒนาโดยตรง ไม่ผ่านเอเย่นต์หรือนายหน้าค้าความใดๆ ทั้งสิ้น การรับสัญญาณเกมตรงจากค่ายแม่ทำให้ระบบเกมมีความเสถียรและยุติธรรมที่สุด ไม่มีคนกลางมาคั่นระหว่างท่านกับค่ายเกม เรื่องความซื่อสัตย์สุจริตนั้นเป็นสมบัติของผู้ดี กระผมจึงกล้ายืนยันนั่งยันว่าที่นี่โปร่งใสและตรวจสอบได้ทุกขั้นตอน",
   },
   {
-    q: "ถอนเงินกับ YIMSIAM88 จ่ายเต็มไม่มีหักจริงหรือเปล่า",
-    a: "จ่ายเต็มไม่มีหักครับ! นี่คือคำมั่นสัญญาของเรา ไม่ว่าจะยอดหลักร้อยหรือแจ็คพอตหลักล้าน เราโอนให้ครบทุกบาททุกสตางค์ ไม่มีหักค่าธรรมเนียมหรือค่าดำเนินการใดๆ ทั้งสิ้น ระบบออโต้ของเราก็ไวดั่งใจนึก กดถอนปุ๊บเงินเด้งเข้าบัญชีปั๊บภายในไม่กี่วินาที ไม่ต้องนั่งส่งสลิปแล้วรอแอดมินตอบแชทข้ามวันให้เสียอารมณ์ เงินที่ท่านหามาด้วยน้ำพักน้ำแรงและความเก่ง ก็สมควรได้รับกลับไปเต็มกระเป๋าครับ",
+    q: "เว็บตรงแตกดีจริงของ YIMSIAM889 หมายความว่าอย่างไร ระบบเกมแฟร์แค่ไหน",
+    a: "ระบบเกมของ YIMSIAM889 ทำงานตามค่า RTP มาตรฐานสากล การแตกของเกมขึ้นอยู่กับจังหวะและการเล่นจริงขอรับ คำว่าเว็บตรงแตกดีจริงของเราจึงไม่ได้กล่าวเกินจริงแต่อย่างใด เพราะเมื่อระบบมันตรงไปตรงมา อัตราการชนะก็เป็นไปตามที่ค่ายกำหนด ไม่มีใครมาแอบปรับหลังบ้านให้ท่านหงุดหงิดหัวใจ ไม่มีการกั๊กช่วงเวลาว่าต้องมาหมุนตอนไหนถึงจะเข้า วัดกันที่ดวงและฝีมือล้วนๆ ดวงดีก็รับทรัพย์กันไปถ้วนหน้า",
   },
   {
-    q: "ฝากถอนของ YIMSIAM88 มีขั้นต่ำไหม รองรับ True Money Wallet หรือเปล่า",
-    a: "ไม่มีขั้นต่ำครับผม ฝาก 1 บาทก็เล่นได้ อยากถอนกี่บาทก็ถอนได้ ไม่มีการตั้งเงื่อนไขและไม่บังคับทำกิจกรรมให้ยุ่งยาก ระบบเงินของเรารองรับทุกช่องทางรวมถึง True Money Wallet ด้วย เติมผ่านวอเล็ทก็จบได้ในไม่กี่วินาที เพราะเรารู้ว่าคนไทยมีสไตล์การเล่นของตัวเอง จะสายประหยัด สายซื้อฟรีสปิน หรือสายขำๆ คั่นเวลา ก็สนุกได้เหมือนกัน อยากเล่นแบบไหนจัดได้เลยครับ เราเปิดไฟเขียวให้หมด",
+    q: "โปรสมาชิกใหม่ของ YIMSIAM889 รับอย่างไร ยุ่งยากหรือไม่",
+    a: "YIMSIAM889 มีโปรสมาชิกใหม่เพื่อช่วยให้ผู้เล่นเริ่มต้นได้ง่ายและสนุกมากขึ้นขอรับ สำหรับท่านที่เพิ่งก้าวเข้ามาเป็นส่วนหนึ่งของครอบครัวเรา ทางเราจัดเตรียมของขวัญต้อนรับชุดใหญ่ไว้ให้ยิ้มกันแบบแก้มปริ ทั้งโบนัสเพิ่มทุนและสิทธิพิเศษต่างๆ ที่จัดสรรมาอย่างเหมาะสม เพื่อให้ท่านมีกระสุนในการเริ่มเล่นมากขึ้น ไม่ต้องกังวลเรื่องทุนรอน ขั้นตอนก็ไม่ยุ่งยาก สมัครปุ๊บ รับสิทธิ์ปั๊บ ง่ายดายเพียงลัดนิ้วมือเดียว",
   },
   {
-    q: "สมัครสมาชิก YIMSIAM88 ยุ่งยากไหม ต้องส่งบัตรประชาชนหรือเปล่า",
-    a: "ไม่ยุ่งยากครับ ในยุคที่เว็บเล็กหลายเว็บชอบขอข้อมูลส่วนตัวจนเกินความจำเป็น YIMSIAM88 เลือกเดินทางแบบไทยแท้ ใจกว้าง ไม่ล้ำเส้น เราขอข้อมูลเท่าที่จำเป็นเพื่อยืนยันตัวตนเท่านั้น ไม่ต้องส่งบัตรประชาชน ไม่ต้องถ่ายหน้า และไม่ล้ำเส้นความเป็นส่วนตัวของท่าน ข้อมูลทุกอย่างเข้ารหัสตามมาตรฐานเว็บใหญ่ สมัครง่ายๆ ไวๆ แล้วเข้าเล่นได้เลยในไม่กี่วินาทีครับ",
+    q: "ทางเข้า YIMSIAM889 รองรับอุปกรณ์อะไรบ้าง ฝากถอนต้องส่งสลิปหรือไม่",
+    a: "ทางเข้า YIMSIAM889 รองรับมือถือ iOS, Android รวมถึงคอมพิวเตอร์และแท็บเล็ต ใช้งานได้ทุกที่ขอรับ หน้าเว็บออกแบบมาให้อ่านง่าย สบายตา เมนูภาษาไทยชัดเจน ไม่ต้องแปลไทยเป็นไทยอีกรอบ ส่วนเรื่องธุรกรรมนั้นเป็นระบบอัตโนมัติเต็มรูปแบบ ท่านทำรายการได้ด้วยตัวเองผ่านแอปพลิเคชันธนาคารชั้นนำหรือทรูวอลเลท โดยไม่ต้องส่งสลิปให้แอดมินดูให้เสียเวลา ฝากปุ๊บเงินเข้าปั๊บ ถอนปุ๊บเงินโอนเข้าบัญชีทันที",
   },
 ];
 
@@ -59,102 +77,151 @@ const graph = pageGraph(Astro, {
 <MainLayout title={pageTitle} description={pageDescription}>
   <script type="application/ld+json" set:html={graph} />
 
-  <Announcement />
+  <Announcement3 />
 
-  <ContentBoxPremium as="h1" title="YIMSIAM88 สล็อตเว็บตรงไทยแท้ โบนัสแรงแตกบ่อย จ่ายเต็มไม่มีหัก">
-    <p class="text-left text-base leading-relaxed text-[#f7e6d4]">
-      <strong class="text-[#ffd98a]">YIMSIAM88</strong> (ยิ้มสยาม88) คือสล็อตเว็บตรงไทยแท้ ที่ตั้งใจทำให้มัน “ไทยแท้แบบมีมาตรฐาน” ครับ ทั้งระบบการเงินที่คล่องมือ เกมแท้ที่เล่นลื่นไม่มีสะดุด และโบนัสที่เข้าตามแบบฉบับเว็บตรงจริงๆ
-      ไม่ใช่เว็บที่พูดไว้สวยหรูแล้วพอถึงเวลาจริงกลับทำไม่ได้
-    </p>
-    <p class="mt-3 text-left text-base leading-relaxed text-[#f7e6d4]">
-      YIMSIAM88 มีระบบเกมที่แฟร์ๆ โบนัสแรงแตกบ่อย จัดเต็มทั้งโบนัสแบบไม่มีกั๊ก จะปั่นหลักสิบหรือหวดหลักพันก็มีสิทธิ์ลุ้นรางวัลใหญ่เท่าเทียมกัน และที่สำคัญที่สุด
-      พี่สยามขอยืนยันด้วยเกียรติลูกผู้ชายเลยว่า เมื่อท่านชนะ เราพร้อมจ่ายเต็มไม่มีหัก จะยอดหลักล้านเราก็โอนให้ครบทุกบาททุกสตางค์
-    </p>
-  </ContentBoxPremium>
+  <ContentBoxCyberCut as="h1" title="YIMSIAM889 สล็อตสยาม เว็บตรงแตกดีจริง ยิ้มรับโปรสมาชิกใหม่">
+    <div>
+      <p class="text-left text-base leading-relaxed text-[#f2ddc4]">
+        <strong class="text-[#f8dc9a]">YIMSIAM889</strong> สล็อตสยาม เว็บตรงที่เน้นระบบโปร่งใส เล่นลื่น แตกดีจริงตามจังหวะเกม ยิ้มรับโปรสมาชิกใหม่ สมัครง่าย ใช้งานสะดวก รองรับมือถือครบทุกระบบ
+      </p>
+      <p class="mt-3 text-left text-base leading-relaxed text-[#f2ddc4]">
+        เรียนเชิญท่านนักเสี่ยงโชคสู่ YIMSIAM889 (ยิ้มสยาม889) ที่มีความเป็นไทยแท้ๆ เว็บตรงแตกดีจริง ระบบมั่นคง ปลอดภัย อาณาจักรแห่งความบันเทิงที่พร้อมจะมอบรอยยิ้มพิมพ์ใจให้กับทุกท่าน
+        ยิ้มรับโปรสมาชิกใหม่ ที่เราจัดเตรียมไว้ให้อย่างสมเกียรติ เชิญทัศนาและร่วมสนุกกันได้เลยขอรับ!
+      </p>
+    </div>
+  </ContentBoxCyberCut>
 
-  <ContentBoxNeumorphism as="h2" title="YIMSIAM88 สล็อตเว็บตรงไทยแท้ เล่นง่ายแบบคนไทยเข้าใจคนไทย">
-    <p class="text-left text-base leading-relaxed text-[#f7e6d4]">
-      YIMSIAM88 เราทำเว็บไซต์แบรนด์ของเรา ออกแบบทุกอย่างมาเพื่อพี่น้องชาวไทยโดยเฉพาะครับ หน้าเว็บของเราเป็นเมนูภาษาไทยตัวใหญ่ชัดเจน จัดหมวดหมู่เกมให้หาง่ายเหมือนเดินเข้าเซเว่น อยากเล่นเกมไหน ค่ายอะไร
-      จิ้มปุ๊บเจอเลย ไม่ต้องเลื่อนวนหาจนหมดอารมณ์ก่อนจะได้ปั่นสักตา
-    </p>
-    <p class="mt-3 text-left text-base leading-relaxed text-[#f7e6d4]">
-      แถมทีมงานหลังบ้านของเราก็คนไทยแท้ๆ คุยกันรู้เรื่อง เข้าใจมุก เข้าใจปัญหา ไม่ต้องมานั่งคุยกับบอทหรือคนต่างชาติที่ใช้ Google Translate ตอบจนปวดหัว เราดูแลกันแบบพี่แบบน้อง สบายใจหายห่วงได้เลยครับ
-    </p>
-  </ContentBoxNeumorphism>
+  <ContentBoxFloatingBadge as="h2" title="รู้จัก YIMSIAM889 สล็อตสยาม ความบันเทิงฉบับไทยแท้ ยิ้มได้ทุกการหมุน">
+    <div>
+      <p class="text-left text-base leading-relaxed text-[#f2ddc4]">
+        YIMSIAM889 ผู้ให้บริการสล็อตออนไลน์ ที่ยึดถือคติ “บริการด้วยใจ ยิ้มแย้มแจ่มใสแบบไทยแท้” เราคือศูนย์รวมเกม สล็อตสยาม ที่คัดสรรมาแล้วว่าถูกจริตพี่น้องชาวไทย เล่นง่าย
+        กติกาไม่ซับซ้อนซ่อนเงื่อน
+      </p>
+      <p class="mt-3 text-left text-base leading-relaxed text-[#f2ddc4]">
+        YIMSIAM889 เป็นเว็บสล็อตที่ตั้งใจผสมความเป็นกันเองแบบคนไทย เข้ากับมาตรฐานของเว็บตรงที่เน้นระบบเป็นหลัก คำว่า “สล็อตสยาม” ไม่ได้หมายถึงแค่ชื่อ
+        แต่สะท้อนแนวคิดการให้บริการที่สุภาพ ไม่เร่ง ไม่กดดัน และให้เกียรติผู้เล่นทุกคน เว็บนี้เหมาะกับคนที่อยากเล่นเกมสล็อตในบรรยากาศที่ไม่วุ่นวาย แต่ยังคงได้ระบบที่ชัดเจนและเชื่อถือได้
+      </p>
+      <Picture
+        src={imgIntro}
+        alt={introAlt}
+        loading="lazy"
+        fetchpriority="low"
+        widths={[400, 672, 1024]}
+        sizes="(max-width: 768px) 100vw, 672px"
+        decoding="async"
+        formats={["avif", "webp"]}
+        fallbackFormat="webp"
+        quality={80}
+        class="mx-auto mt-6 h-auto w-full max-w-2xl rounded-2xl border border-[#e9b949]/30 shadow-[0_10px_30px_rgba(168,31,26,0.24)]"
+      />
+    </div>
+  </ContentBoxFloatingBadge>
 
   <GameRankingBoard />
 
-  <ContentBox as="h2" title="YIMSIAM88 โบนัสแรงแตกบ่อย เป็นธรรมชาติ">
-    <p class="text-left text-base leading-relaxed text-[#f7e6d4]">
-      เกมสล็อตที่ YIMSIAM88 ทุกเกม รันด้วยระบบ RNG มาตรฐานโลก ทำให้การทำโบนัสแตกบ่อยเป็นไปอย่าง “เป็นธรรมชาติ” ที่สุดครับ บทจะแตกก็แตกจนร้องขอชีวิต บทจะเข้าฟรีสปินก็ไหลยาวเป็นหางว่าว
-      ไม่มีใครต้องมานั่งเฝ้าจังหวะให้เสียเวลา
-    </p>
-    <p class="mt-3 text-left text-base leading-relaxed text-[#f7e6d4]">
-      คำว่าโบนัสแรงของเรา คือแรงตามดวงและจังหวะเกมจริงๆ ไม่มีการกั๊กช่วงเวลา ไม่มีการปรับ % ให้เกลือเพื่อกินตังค์ท่าน เล่นได้คือได้ เล่นเสียคือเสียตามเกมแฟร์ๆ นี่แหละครับรสชาติของการเดิมพันที่แท้จริง
-      วัดกันที่ดวงและฝีมือล้วนๆ
+  <ContentBoxSevenThreeCyberCut titleright="การันตีความแฟร์ YIMSIAM889 เว็บตรงแตกดีจริง มาตรฐานสากล">
+    <Picture
+      slot="left"
+      src={imgFair}
+      alt={fairAlt}
+      loading="lazy"
+      fetchpriority="low"
+      widths={[200, 400, 600]}
+      sizes="(max-width: 768px) 100vw, 30vw"
+      decoding="async"
+      formats={["avif", "webp"]}
+      fallbackFormat="webp"
+      quality={80}
+      class="mx-auto h-auto w-full rounded-2xl border border-[#e9b949]/30 shadow-[0_10px_30px_rgba(168,31,26,0.24)]"
+    />
+    <div slot="right">
+      <p class="text-left text-base leading-relaxed text-[#f2ddc4]">
+        เรื่องความซื่อสัตย์สุจริตนั้นเป็นสมบัติของผู้ดีขอรับ YIMSIAM889 ให้บริการในรูปแบบของเว็บตรง ไม่ผ่านเอเย่นต์หรือนายหน้าค้าความใดๆ ทั้งสิ้น เราเชื่อมต่อสัญญาณเกมโดยตรงจากค่ายแม่
+        ทำให้ระบบเกมมีความเสถียรและยุติธรรมที่สุด
+      </p>
+      <p class="mt-3 text-left text-base leading-relaxed text-[#f2ddc4]">
+        เว็บตรงแตกดีจริง ของเรานั้นไม่ได้กล่าวเกินจริงแต่อย่างใด เพราะเมื่อระบบมันตรงไปตรงมา อัตราการชนะ (RTP) ก็จะเป็นไปตามมาตรฐานสากล ไม่มีใครมาแอบปรับหลังบ้านให้ท่านหงุดหงิดหัวใจ
+        วัดกันที่ดวงและฝีมือล้วนๆ ดวงดีก็รับทรัพย์กันไปถ้วนหน้า กระผมกล้ายืนยันนั่งยันเลยว่า ที่นี่ยุติธรรม โปร่งใส ตรวจสอบได้ทุกขั้นตอนขอรับ
+      </p>
+    </div>
+  </ContentBoxSevenThreeCyberCut>
+
+  <ContentBox as="h3" title="PG SOFT ขวัญใจมหาชน แตกง่ายได้มาตรฐาน">
+    <div>
+      <p class="text-left text-base leading-relaxed text-[#f2ddc4]">
+        หากเอ่ยถึงค่ายเกมที่งดงามประหนึ่งงานศิลปะ ต้องยกให้ PG SOFT เขาเลยขอรับ ค่ายนี้ขึ้นชื่อลือชาเรื่องกราฟิก 3D ที่วิจิตรบรรจง ทันสมัย และที่สำคัญคือระบบเกมที่ “แตกง่าย” จนเป็นที่กล่าวขาน
+        YIMSIAM889 เชื่อมต่อตรงกับค่าย pg ให้ท่านได้เพลิดเพลินกันแบบลิขสิทธิ์แท้ มั่นใจได้เลยว่าทุกการหมุนวงล้อ คือความยุติธรรมตามมาตรฐานสากล ไม่มีหมกเม็ดให้ท่านต้องระคายเคืองใจแน่นอนขอรับ
+      </p>
+      <Picture
+        src={imgPgSoft}
+        alt={pgSoftAlt}
+        loading="lazy"
+        fetchpriority="low"
+        widths={[400, 672, 1024]}
+        sizes="(max-width: 768px) 100vw, 672px"
+        decoding="async"
+        formats={["avif", "webp"]}
+        fallbackFormat="webp"
+        quality={80}
+        class="mx-auto mt-6 h-auto w-full max-w-2xl rounded-2xl border border-[#e9b949]/30 shadow-[0_10px_30px_rgba(168,31,26,0.24)]"
+      />
+    </div>
+  </ContentBox>
+
+  <ContentBox as="h3" title="Joker Gaming ตำนานสล็อตยุคคลาสสิก">
+    <div>
+      <p class="text-left text-base leading-relaxed text-[#f2ddc4]">
+        ท่านที่หลงใหลในรสชาติความเก๋าและความขลัง Joker Gaming คือคำตอบที่ตรงใจที่สุดขอรับ อมตะนิรันดร์กาล สำหรับค่ายเกมนี้ เปรียบเสมือนเพื่อนเก่าที่รู้ใจ
+        โดยเฉพาะเกมสล็อตโรม่าอันเลื่องชื่อที่ยังคงแจกรางวัลหนักอย่างสม่ำเสมอ เป็นความคลาสสิกที่เล่นง่าย ไม่ซับซ้อน แต่ผลตอบแทนนั้นช่างหอมหวาน
+        กระผมเรียนเชิญท่านมาร่วมรำลึกความหลังและกอบโกยกำไรจากตำนานบทนี้กันเถิดขอรับ
+      </p>
+      <Picture
+        src={imgJoker}
+        alt={jokerAlt}
+        loading="lazy"
+        fetchpriority="low"
+        widths={[400, 672, 1024]}
+        sizes="(max-width: 768px) 100vw, 672px"
+        decoding="async"
+        formats={["avif", "webp"]}
+        fallbackFormat="webp"
+        quality={80}
+        class="mx-auto mt-6 h-auto w-full max-w-2xl rounded-2xl border border-[#e9b949]/30 shadow-[0_10px_30px_rgba(168,31,26,0.24)]"
+      />
+    </div>
+  </ContentBox>
+
+  <ContentBox as="h3" title="Pragmatic Play (PP) ฟีเจอร์เด็ดดวง จ่ายหนักไม่มีกั๊ก">
+    <p class="text-left text-base leading-relaxed text-[#f2ddc4]">
+      หากท่านปรารถนาความตื่นเต้นในระดับสากล Pragmatic Play หรือที่เรียกกันติดปากว่า PP นั้นไม่ทำให้ผิดหวังขอรับ ค่ายนี้โดดเด่นเรื่องฟีเจอร์ที่แพรวพราว มีลูกเล่นให้ลุ้นระทึกตลอดเวลา
+      และมีอัตราการจ่ายที่หนักหน่วงสมน้ำสมเนื้อ เป็นค่ายใหญ่ระดับโลกที่กระผมภูมิใจนำเสนอ เพื่อให้ท่านได้สัมผัสประสบการณ์ระดับเฟิร์สคลาสที่นี่ที่เดียวขอรับ
     </p>
   </ContentBox>
 
   <ProviderGrid />
 
-  <ContentBoxSevenThreePremium titleright="จ่ายเต็มไม่มีหัก ฝากถอนไวดั่งใจนึก ระบบออโต้">
-    <Picture
-      slot="left"
-      src={imgPayout}
-      loading="lazy"
-      fetchpriority="low"
-      widths={[200, 400, 600]}
-      sizes="(max-width: 768px) 100vw, 30vw"
-      decoding="async"
-      formats={["avif", "webp"]}
-      fallbackFormat="webp"
-      quality={80}
-      alt="แบนเนอร์ YIMSIAM88 ตัวอักษร YIMSIAM88 เป็นเปลวไฟสีทอง มีโลโก้หน้าจั่ววัดไทยสีทองอยู่ด้านบน ใต้ชื่อเขียนว่า แตก10ล้าน จ่ายเต็มไม่มีหัก ด้านข้างมีพรีเซนเตอร์หญิงในชุดราตรีสีแดงทองชี้ไปที่ไพ่ที่คลี่เป็นพัด รอบภาพมีเหรียญทองและชิปคาสิโนบนพื้นหลังลาวาและเปลวไฟ"
-      class="mx-auto h-auto w-full rounded-2xl border border-[#f6c475]/30 shadow-[0_10px_30px_rgba(255,122,24,0.22)]"
-    />
-    <div slot="right">
-      <p class="text-left text-base leading-relaxed text-[#f7e6d4]">
-        สมัยนี้ยุคไหนแล้วครับ ให้มานั่งส่งสลิปแล้วรอแอดมินตอบแชทข้ามวัน มันไม่ทันกิน! ระบบออโต้ของ YIMSIAM88 พัฒนามาให้ไวดั่งใจนึก กดถอนปุ๊บ เงินเด้งเข้าบัญชีปั๊บภายในไม่กี่วินาที
-        เร็วกว่าต้มมาม่าสุกอีกครับ
-      </p>
-      <p class="mt-3 text-left text-base leading-relaxed text-[#f7e6d4]">
-        และที่สำคัญที่สุดคือคำมั่นสัญญาของลูกผู้ชาย “จ่ายเต็มไม่มีหัก” ไม่ว่าท่านจะถอนหลักร้อย หรือแจ็คพอตแตกหลักล้าน เราโอนให้เต็มเม็ดเต็มหน่วย บาทเดียวก็ไม่หักเป็นค่าธรรมเนียม หรือค่าดำเนินการใดๆ
-        ทั้งสิ้น เงินท่านหามาด้วยน้ำพักน้ำแรงและความเก่ง ก็สมควรได้รับกลับไปเต็มกระเป๋าครับ
-      </p>
-    </div>
-  </ContentBoxSevenThreePremium>
-
-  <LatestWinnersPremium />
-
-  <ContentBoxTwoPremium as="h2" title="ระบบเงินรองรับทุกช่องทาง เติมผ่านวอเล็ทก็ได้ ไม่มีขั้นต่ำจริง">
-    <p slot="left" class="text-left text-base leading-relaxed text-[#f7e6d4]">
-      อยากฝาก 1 บาท? ได้ครับ อยากถอนกี่บาท? ได้เหมือนกัน ไม่มีการตั้งเงื่อนไข ไม่มีขั้นต่ำของจริง และไม่บังคับทำกิจกรรมให้ยุ่งยากใจ ระบบเงินของ YIMSIAM88 รองรับทุกช่องทาง เติมผ่านวอเล็ทก็ได้
-      จบในไม่กี่วินาทีเหมือนกัน
+  <ContentBoxTwoCyberCut
+    as="h2"
+    title="เปิดเรือนต้อนรับ ยิ้มรับโปรสมาชิกใหม่ คุ้มค่าตั้งแต่ก้าวแรก"
+    titleleft="ของขวัญต้อนรับชุดใหญ่"
+    titleright="สมัครปุ๊บ รับสิทธิ์ปั๊บ">
+    <p slot="left" class="text-left text-base leading-relaxed text-[#f2ddc4]">
+      สำหรับท่านที่เพิ่งก้าวเข้ามาเป็นส่วนหนึ่งของครอบครัวเรา YIMSIAM889 ได้จัดเตรียมของขวัญต้อนรับชุดใหญ่ ให้ท่านได้ ยิ้มรับโปรสมาชิกใหม่ กันแบบแก้มปริ
+      การต้อนรับแขกบ้านแขกเมืองเป็นธรรมเนียมไทยแท้ขอรับ ไม่ว่าจะเป็นโบนัสเพิ่มทุน หรือสิทธิพิเศษต่างๆ กระผมจัดสรรมาให้อย่างเหมาะสม
     </p>
-    <p slot="right" class="text-left text-base leading-relaxed text-[#f7e6d4]">
-      คุณอยากเล่นแบบไหน เล่นยังไง YIMSIAM88 เปิดไฟเขียวให้หมดครับ เพราะเรารู้ว่าคนไทยมีสไตล์การเล่นของตัวเอง จะสายประหยัดค่อยๆ เก็บ สายซื้อฟรีสปินรัวๆ หรือสายขำๆ คั่นเวลาก่อนนอน
-      ก็สนุกได้เหมือนกันทั้งนั้น
+    <p slot="right" class="text-left text-base leading-relaxed text-[#f2ddc4]">
+      เพื่อให้ท่านมี “กระสุน” ในการเริ่มเล่นที่มากขึ้น ถือเป็นน้ำใจเล็กๆ น้อยๆ จากทางเรา เพื่อให้ท่านเริ่มต้นความสนุกได้อย่างมั่นใจ ไม่ต้องกังวลเรื่องทุนรอน สมัครปุ๊บ รับสิทธิ์ปั๊บ
+      ง่ายดายเพียงลัดนิ้วมือเดียว
     </p>
-  </ContentBoxTwoPremium>
+  </ContentBoxTwoCyberCut>
 
   <SmoothCarousel />
 
-  <ContentBoxSpecial as="h2" title="สมัครสมาชิกง่าย YIMSIAM88 ไม่ขอข้อมูลเยอะ ไม่เรื่องมาก">
-    <p slot="left" class="text-left text-base leading-relaxed text-[#f7e6d4]">
-      ในยุคที่เว็บเล็กหลายเว็บชอบขอข้อมูลส่วนตัวจนเกินความจำเป็น YIMSIAM88 เลือกเดินทางแบบ “ไทยแท้ ใจกว้าง ไม่ล้ำเส้น” ครับ เราขอข้อมูลเท่าที่จำเป็นจริงๆ ไม่ต้องส่งบัตร ไม่ต้องถ่ายหน้า
-      ไม่ต้องกรอกอะไรยาวเป็นใบสมัครงาน
-    </p>
-    <p slot="right" class="text-left text-base leading-relaxed text-[#f7e6d4]">
-      ระบบเข้ารหัสข้อมูลตามมาตรฐานเว็บใหญ่ ข้อมูลของท่านจึงอยู่กับเราอย่างปลอดภัย สมัครง่ายๆ ไวๆ แล้วเข้าเล่นได้เลยในไม่กี่วินาที ไม่ต้องรออนุมัติข้ามวันให้ใจหายใจคว่ำครับ
-    </p>
-  </ContentBoxSpecial>
-
-  <LoginRtpSection />
-
-  <ContentBoxSevenThreeNeumorphism titleright="บริการด้วยรอยยิ้ม ทีมงานคนไทย YIMSIAM88 คุยง่าย ไม่ใช้บอทตอบ">
+  <ContentBoxSevenThreeFloatingBadge title="ธุรกรรมว่องไว ฝากถอนผ่าน ระบบอัตโนมัติ ปลอดภัยหายห่วง">
     <Picture
       slot="left"
-      src={imgSupport}
+      src={imgAuto}
+      alt={autoAlt}
       loading="lazy"
       fetchpriority="low"
       widths={[200, 400, 600]}
@@ -163,36 +230,51 @@ const graph = pageGraph(Astro, {
       formats={["avif", "webp"]}
       fallbackFormat="webp"
       quality={80}
-      alt="แบนเนอร์ YIMSIAM88 ตัวอักษร YIMSIAM88 เป็นเปลวไฟสีทอง มีโลโก้หน้าจั่ววัดไทยสีทองอยู่ด้านบน ใต้ชื่อเขียนว่า แชทได้24ชม ตอบไว ไม่ใช้บอท ด้านข้างมีพรีเซนเตอร์หญิงในชุดราตรีสีดำแดงถือไพ่อยู่ในมือ รอบภาพมีเหรียญทองและไพ่กระจายบนพื้นหลังลาวาและเปลวไฟ"
-      class="mx-auto h-auto w-full rounded-2xl border border-[#f6c475]/30 shadow-[0_10px_30px_rgba(255,122,24,0.22)]"
+      class="mx-auto h-auto w-full rounded-2xl border border-[#e9b949]/30 shadow-[0_10px_30px_rgba(168,31,26,0.24)]"
     />
     <div slot="right">
-      <p class="text-left text-base leading-relaxed text-[#f7e6d4]">
-        เคยไหมครับ? มีปัญหาแล้วเจอแต่บอทตอบคำถามวนไปวนมา น่าหงุดหงิดชะมัด! แต่ที่ YIMSIAM88 เราใช้ “คนจริง” ล้วนๆ ครับ ทีมงานซัพพอร์ตของเราคือคนไทยที่ผ่านการอบรมมาอย่างดี พูดจาสุภาพ ขี้เล่น
-        และพร้อมช่วยเหลือดุจญาติมิตร
+      <p class="text-left text-base leading-relaxed text-[#f2ddc4]">
+        ระบบฝาก-ถอนของ YIMSIAM889 ได้นำเทคโนโลยีสมัยใหม่เข้ามาช่วยอำนวยความสะดวก เป็นระบบอัตโนมัติ (Auto) ที่ทำงานรวดเร็วปานกามนิตหนุ่ม เรื่องเงินๆ ทองๆ ต้องรอบคอบ
+        แต่ก็ต้องรวดเร็วด้วยเช่นกันขอรับ
       </p>
-      <h3 class="mt-5 text-xl leading-normal font-black text-[#ffd98a]">มีปัญหาทักมา พร้อมเคลียร์ให้ตลอด 24 ชม.</h3>
-      <p class="mt-3 text-left text-base leading-relaxed text-[#f7e6d4]">
-        ไม่ว่าจะตี 2 หรือเที่ยงวัน หากเกิดปัญหาติดขัด ทักไลน์หาเราได้เลย เราแสตนด์บายตลอด 24 ชั่วโมง ไม่มีวันหยุดราชการ เพราะความสบายใจของคุณ คือหน้าที่ของเราครับ
+      <p class="mt-3 text-left text-base leading-relaxed text-[#f2ddc4]">
+        ท่านสามารถทำรายการได้ด้วยตัวเองผ่านแอปพลิเคชันธนาคารชั้นนำ หรือทรูวอลเลท โดยไม่ต้องส่งสลิปให้แอดมินดูให้เสียเวลา ฝากปุ๊บเงินเข้าปั๊บ ถอนปุ๊บเงินโอนเข้าบัญชีทันที ถูกต้อง แม่นยำ
+        และปลอดภัยสูงสุด ให้ท่านสบายใจได้เลยว่า ทุกบาททุกสตางค์ของท่านจะถูกดูแลเป็นอย่างดีขอรับ
       </p>
     </div>
-  </ContentBoxSevenThreeNeumorphism>
+  </ContentBoxSevenThreeFloatingBadge>
+
+  <LatestWinners2 />
+
+  <ContentBoxCyberCut as="h2" title="ทางเข้า YIMSIAM889 เล่นสะดวกสบาย รองรับทุกอุปกรณ์ อยู่ที่ไหนก็สนุกได้">
+    <div>
+      <p class="text-left text-base leading-relaxed text-[#f2ddc4]">
+        ในยุคสมัยนี้ ความสะดวกสบายเป็นอีกปัจจัย ที่ต้องนำมาคิดพัฒนาเว็บไซต์สล็อตออนไลน์ ไม่ว่าท่านจะนอนเล่นเอกเขนกอยู่บนเรือน เดินทางไกล หรือพักผ่อนหย่อนใจที่ไหน ก็สามารถเข้าถึง
+        ทางเข้า YIMSIAM889 ได้ง่ายๆ ผ่านโทรศัพท์มือถือทุกรุ่น ทั้ง iOS และ Android รวมถึงคอมพิวเตอร์และแท็บเล็ต
+      </p>
+      <p class="mt-3 text-left text-base leading-relaxed text-[#f2ddc4]">
+        หน้าเว็บไซต์ของเราออกแบบมาให้อ่านง่าย สบายตา เมนูภาษาไทยชัดเจน ไม่ต้องแปลไทยเป็นไทยอีกรอบ เล่นได้ลื่นไหลไม่มีสะดุด ให้ท่านพกพาความสนุกและความรวยติดตัวไปได้ทุกที่ทุกเวลาขอรับ
+      </p>
+    </div>
+  </ContentBoxCyberCut>
+
+  <LoginRtpSection />
 
   <div class="relative z-10 mx-auto mb-10 flex flex-nowrap justify-center gap-3 px-4 sm:gap-6">
     <a
       href="/login"
-      class="group relative flex flex-1 items-center justify-center rounded-full bg-gradient-to-r from-[#ffd98a] via-[#ff7a18] to-[#8d2b09] px-4 py-3 text-sm font-black whitespace-nowrap text-[#160604] shadow-[0_10px_30px_rgba(255,122,24,0.26)] transition-all duration-300 hover:-translate-y-1 hover:scale-105 hover:shadow-[0_15px_40px_rgba(255,122,24,0.4)] sm:flex-none sm:px-10 sm:py-3.5 sm:text-base">
+      class="group relative flex flex-1 items-center justify-center rounded-full bg-gradient-to-r from-[#f8dc9a] via-[#e9b949] to-[#a81f1a] px-4 py-3 text-sm font-black whitespace-nowrap text-[#140604] shadow-[0_10px_30px_rgba(168,31,26,0.3)] transition-all duration-300 hover:-translate-y-1 hover:scale-105 hover:shadow-[0_15px_40px_rgba(233,185,73,0.4)] sm:flex-none sm:px-10 sm:py-3.5 sm:text-base">
       เข้าสู่ระบบ
     </a>
 
     <a
       href="/register"
-      class="group relative flex flex-1 items-center justify-center rounded-full border border-[#f6c475]/70 bg-[#24100a]/85 px-4 py-3 text-sm font-black whitespace-nowrap text-[#ffd98a] backdrop-blur-sm transition-all duration-300 hover:scale-105 hover:border-[#ff7a18] hover:bg-[#3a1a0e]/85 hover:shadow-[0_15px_40px_rgba(246,196,117,0.35)] sm:flex-none sm:px-10 sm:py-3.5 sm:text-base">
+      class="group relative flex flex-1 items-center justify-center rounded-full border border-[#e9b949]/70 bg-[#1e0a06]/85 px-4 py-3 text-sm font-black whitespace-nowrap text-[#f8dc9a] backdrop-blur-sm transition-all duration-300 hover:scale-105 hover:border-[#e9b949] hover:bg-[#2e130c]/85 hover:shadow-[0_15px_40px_rgba(233,185,73,0.35)] sm:flex-none sm:px-10 sm:py-3.5 sm:text-base">
       สมัครสมาชิก
     </a>
   </div>
 
-  <Faq title="คำถามที่พบบ่อยเกี่ยวกับ YIMSIAM88" faqs={faqs} />
+  <Faq2 title="คำถามที่พบบ่อยเกี่ยวกับ YIMSIAM889" faqs={faqs} />
 
   <ReviewCardSumo2 />
 

@@ -1,8 +1,8 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
-import ContentBox from "../components/ContentBoxPremium.astro";
+import ContentBox from "../components/ContentBoxCyberCut.astro";
 import Navfoot from "../components/Navfoot.astro";
-import Announcement from "../components/Announcement.astro";
+import Announcement from "../components/Announcement3.astro";
 
 import { Picture } from "astro:assets";
 
@@ -13,62 +13,69 @@ import pro4 from "../assets/slide4.png";
 import { pageGraph } from "../lib/schema";
 
 const pageDescription =
-  "รวมข้อเสนอของ YIMSIAM88 สล็อตเว็บตรงไทยแท้ โบนัสแรงแตกบ่อยตามระบบ RNG มาตรฐานโลก จ่ายเต็มไม่มีหัก ฝากถอนออโต้ไม่มีขั้นต่ำ เติมผ่านวอเล็ทก็ได้ ตลอด 24 ชม.";
+  "รวมโปรโมชั่น YIMSIAM889 สล็อตสยาม เว็บตรงแตกดีจริง ยิ้มรับโปรสมาชิกใหม่ตั้งแต่ก้าวแรก ฝากถอนผ่านระบบอัตโนมัติรวดเร็ว รองรับธนาคารชั้นนำและทรูวอลเลท ตลอด 24 ชม.";
 
 const graph = pageGraph(Astro, {
-  name: "โปรโมชั่น YIMSIAM88 โบนัสแรงแตกบ่อย จ่ายเต็มไม่มีหัก",
+  name: "โปรโมชั่น YIMSIAM889 ยิ้มรับโปรสมาชิกใหม่ คุ้มค่าตั้งแต่ก้าวแรก",
   description: pageDescription,
   breadcrumb: [
     { name: "หน้าแรก", path: "/" },
     { name: "โปรโมชั่น", path: "/promotion" },
   ],
-  primaryImagePath: pro1.src,
+  primaryImagePath: pro3.src,
 });
 ---
 
-<MainLayout title="โปรโมชั่น - YIMSIAM88" description={pageDescription}>
+<MainLayout title="โปรโมชั่น - YIMSIAM889" description={pageDescription}>
   <script type="application/ld+json" set:html={graph} />
 
   <Announcement />
 
-  <ContentBox title="โปรโมชั่น YIMSIAM88" as="h1">
-    <h2 class="mb-4 text-2xl leading-normal font-bold text-[#f6c475]">โบนัสแรงแตกบ่อย เป็นธรรมชาติ แล้วจ่ายเต็มไม่มีหัก</h2>
+  <ContentBox title="โปรโมชั่น YIMSIAM889" as="h1">
+    <h2 class="mb-4 text-2xl leading-normal font-bold text-[#e9b949]">ยิ้มรับโปรสมาชิกใหม่ คุ้มค่าตั้งแต่ก้าวแรก</h2>
 
-    <p class="mb-5 text-left text-base leading-relaxed text-[#f7e6d4]">
-      สิ่งที่ <strong class="text-[#ffd98a]">YIMSIAM88</strong> เอามาเสนอพี่น้องชาวไทย ไม่ใช่ตัวเลขบนแบนเนอร์ครับ แต่เป็นเกมที่แฟร์จริง ทุกเกมของเรารันด้วยระบบ RNG มาตรฐานโลก
-      โบนัสจึงแตกแบบเป็นธรรมชาติที่สุด บทจะแตกก็แตกจนร้องขอชีวิต บทจะเข้าฟรีสปินก็ไหลยาวเป็นหางว่าว เราไม่กั๊กช่วงเวลา ไม่ปรับเปอร์เซ็นต์ให้เกลือเพื่อกินตังค์ท่าน
-      จะปั่นหลักสิบหรือหวดหลักพัน สิทธิ์ลุ้นรางวัลใหญ่ก็เท่ากันหมด เล่นได้คือได้ เล่นเสียคือเสียตามจังหวะเกมล้วน ๆ นี่แหละครับรสชาติของการเดิมพันที่แท้จริง วัดกันที่ดวงกับฝีมือ
-      ไม่ใช่วัดกันที่เว็บว่าจะปล่อยให้ใครแตกวันไหน
+    <p class="mb-5 text-left text-base leading-relaxed text-[#f2ddc4]">
+      สำหรับท่านที่เพิ่งก้าวเข้ามาเป็นส่วนหนึ่งของครอบครัว <strong class="text-[#f8dc9a]">YIMSIAM889</strong> กระผมได้จัดเตรียมของขวัญต้อนรับชุดใหญ่เอาไว้ให้แล้วขอรับ
+      การต้อนรับแขกบ้านแขกเมืองด้วยรอยยิ้มเป็นธรรมเนียมไทยแท้ที่เรายึดถือ ไม่ว่าจะเป็นโบนัสเพิ่มทุนก้อนแรก หรือสิทธิพิเศษเล็กๆ น้อยๆ ระหว่างทาง
+      ล้วนจัดสรรมาให้อย่างเหมาะสม เพื่อให้ท่านมี “กระสุน” ในการเริ่มต้นที่มากขึ้น ไม่ต้องกังวลเรื่องทุนรอนตั้งแต่ก้าวแรก
     </p>
 
-    <p class="mb-8 text-left text-base leading-relaxed text-[#f7e6d4]">
-      แล้วพอถึงตาท่านชนะ พี่สยามขอยืนยันด้วยเกียรติลูกผู้ชายว่าเรา <strong class="text-[#ffd98a]">จ่ายเต็มไม่มีหัก</strong> ครับ ถอนหลักร้อยก็โอนครบ แจ็คพอตแตกหลักล้านก็โอนครบทุกบาททุกสตางค์
-      ไม่มีหักค่าธรรมเนียม ไม่มีค่าดำเนินการ ไม่มีบรรทัดเล็ก ๆ ใต้ตัวเลขที่รอกินส่วนต่างของท่าน เงินที่ท่านหามาด้วยน้ำพักน้ำแรงและความเก่ง ก็สมควรได้กลับไปเต็มกระเป๋าครับ
+    <p class="mb-8 text-left text-base leading-relaxed text-[#f2ddc4]">
+      เงื่อนไขของเราเขียนไว้อ่านง่าย ไม่มีบรรทัดเล็กๆ ซ่อนไว้ให้ท่านต้องมานั่งเพ่งทีหลัง สมัครปุ๊บรับสิทธิ์ปั๊บ ง่ายดายเพียงลัดนิ้วมือเดียว
+      และหากตรงไหนยังสงสัย ทักมาสอบถามทีมงานได้ทุกเมื่อ เราตอบเองด้วยคนไทย ไม่ใช้บอทวนคำถามให้ท่านหงุดหงิดใจขอรับ
     </p>
 
-    <h2 class="mt-10 mb-4 text-2xl leading-normal font-bold text-[#f6c475]">ฝากถอนออโต้ไวดั่งใจนึก ไม่มีขั้นต่ำ สมัครง่ายไม่เรื่องมาก</h2>
+    <h2 class="mt-10 mb-4 text-2xl leading-normal font-bold text-[#e9b949]">เว็บตรงแตกดีจริง วัดกันที่ดวงและฝีมือล้วนๆ</h2>
 
-    <p class="mb-5 text-left text-base leading-relaxed text-[#f7e6d4]">
-      สมัยนี้จะให้นั่งส่งสลิปแล้วรอแอดมินตอบแชตข้ามวันมันไม่ทันกินครับ ระบบออโต้ของเราจึงพัฒนามาให้ไวดั่งใจนึก กดฝากปุ๊บเครดิตเข้าปั๊บ กดถอนปุ๊บเงินเด้งเข้าบัญชีภายในไม่กี่วินาที
-      เร็วกว่าต้มมาม่าสุกอีกครับ เรื่องขั้นต่ำยิ่งง่าย อยากฝาก 1 บาทก็เล่นได้ อยากถอนกี่บาทก็ถอนได้ ไม่มีเงื่อนไขมัดมือ ไม่บังคับทำกิจกรรมก่อนถอน
-      และรองรับทุกช่องทางที่คนไทยใช้จริง รวมถึง True Money Wallet ด้วย จะสายประหยัด สายซื้อฟรีสปิน หรือสายขำ ๆ คั่นเวลา YIMSIAM88 ก็เปิดไฟเขียวให้หมดครับ
+    <p class="mb-8 text-left text-base leading-relaxed text-[#f2ddc4]">
+      <strong class="text-[#f8dc9a]">YIMSIAM889</strong> ให้บริการในรูปแบบของเว็บตรง ไม่ผ่านเอเย่นต์หรือนายหน้าค้าความใดๆ ทั้งสิ้น เราเชื่อมต่อสัญญาณเกมโดยตรงจากค่ายแม่
+      ระบบเกมจึงเสถียรและยุติธรรมที่สุด คำว่า <strong class="text-[#f8dc9a]">เว็บตรงแตกดีจริง</strong> ของเราไม่ได้กล่าวเกินจริงแต่อย่างใด เพราะเมื่อระบบมันตรงไปตรงมา
+      อัตราการชนะ (RTP) ก็เป็นไปตามมาตรฐานสากล ไม่มีใครมาแอบปรับหลังบ้านให้ท่านระคายเคืองใจ บทจะแตกก็แตก บทจะเข้าฟรีสปินก็ไหลยาว
+      วัดกันที่ดวงและฝีมือล้วนๆ ตรวจสอบได้ทุกขั้นตอนขอรับ
     </p>
 
-    <p class="mb-8 text-left text-base leading-relaxed text-[#f7e6d4]">
-      ส่วนตอนสมัคร เราขอข้อมูลเท่าที่จำเป็นเพื่อยืนยันตัวตนเท่านั้น ไม่ต้องส่งบัตรประชาชน ไม่ต้องถ่ายหน้า ระบบเข้ารหัสข้อมูลตามมาตรฐานเว็บใหญ่ กรอกไม่กี่ช่องก็เข้าเล่นได้เลย
-      และถ้าติดขัดตรงไหน ทักไลน์มาได้ตลอดครับ ทีมงานซัพพอร์ตของเราเป็นคนไทยแท้ ๆ ตอบเอง ไม่ใช้บอทวนคำถาม แสตนด์บายให้ตลอด 24 ชั่วโมง ไม่มีวันหยุดราชการ
-      เพราะความสบายใจของท่าน คือหน้าที่ของเราครับ
+    <h2 class="mt-10 mb-4 text-2xl leading-normal font-bold text-[#e9b949]">ธุรกรรมว่องไว ฝากถอนผ่านระบบอัตโนมัติ ปลอดภัยหายห่วง</h2>
+
+    <p class="mb-5 text-left text-base leading-relaxed text-[#f2ddc4]">
+      สมัยนี้จะให้นั่งส่งสลิปแล้วรอแอดมินตอบแชตข้ามวันมันไม่ทันการณ์ขอรับ ระบบฝาก-ถอนของเราจึงเป็นระบบอัตโนมัติ (Auto) ที่ทำงานรวดเร็วปานกามนิตหนุ่ม
+      ท่านทำรายการได้ด้วยตัวเองผ่านแอปพลิเคชันธนาคารชั้นนำ หรือจะใช้ทรูมันนี่วอลเล็ทก็ได้เช่นกัน ฝากปุ๊บเครดิตเข้าปั๊บ ถอนปุ๊บเงินเด้งเข้าบัญชีทันที
+      ไม่ต้องส่งสลิปให้ใครดูให้เสียเวลา
+    </p>
+
+    <p class="mb-8 text-left text-base leading-relaxed text-[#f2ddc4]">
+      เรื่องเงินๆ ทองๆ ต้องรอบคอบ แต่ก็ต้องรวดเร็วด้วยเช่นกัน ทุกรายการจึงถูกต้อง แม่นยำ และเข้ารหัสตามมาตรฐานความปลอดภัยขั้นสูง
+      ท่านสบายใจได้เลยว่าทุกบาททุกสตางค์จะถูกดูแลเป็นอย่างดี และทีมงานของเราแสตนด์บายให้ตลอด 24 ชั่วโมง ไม่มีวันหยุดราชการขอรับ
     </p>
 
     <div class="grid w-full grid-cols-1 gap-6 sm:grid-cols-2">
       <Picture
         src={pro1}
-        alt="แบนเนอร์ YIMSIAM88 ตัวอักษรทองบนเปลวไฟ พร้อมข้อความ แชทได้24ชม ตอบไว ไม่ใช้บอท เหนือชื่อแบรนด์เป็นโลโก้หน้าบันทรงไทยสีทอง ด้านขวาเป็นพรีเซ็นเตอร์หญิงชุดราตรีดำแดงถือไพ่คลี่เป็นพัด รอบภาพมีเหรียญทอง ชิปคาสิโน และไพ่ปลิวบนพื้นหลังลาวา"
+        alt="ภาพโปรโมชั่น YIMSIAM889 ข้อความทองขอบแดง ธุรกรรมว่องไว ระบบอัตโนมัติ มุมซ้ายบนเป็นโลโก้หน้าบันทรงไทยสีทอง ด้านขวาเป็นพรีเซ็นเตอร์หญิงชุดราตรีเลื่อมทองชี้นิ้วมาที่ข้อความ รอบภาพมีเส้นแสงทองโค้ง เหรียญทอง ชิปคาสิโน และไพ่ปลิวเหนือธารลาวา"
         loading="lazy"
         fetchpriority="low"
         widths={[200, 400, 600, 800]}
         sizes="(max-width: 768px) 100vw, 50vw"
-        class="mx-auto h-auto w-full rounded-xl border border-[#f6c475]/25 object-contain shadow-[0_10px_30px_rgba(255,122,24,0.18)] transition-transform duration-300 hover:-translate-y-1 hover:border-[#ff7a18]/50 hover:shadow-[0_15px_40px_rgba(255,122,24,0.30)]"
+        class="mx-auto h-auto w-full rounded-xl border border-[#e9b949]/25 object-contain shadow-[0_10px_30px_rgba(168,31,26,0.18)] transition-transform duration-300 hover:-translate-y-1 hover:border-[#a81f1a]/50 hover:shadow-[0_15px_40px_rgba(168,31,26,0.30)]"
         decoding="async"
         formats={["avif", "webp"]}
         fallbackFormat="webp"
@@ -77,12 +84,12 @@ const graph = pageGraph(Astro, {
 
       <Picture
         src={pro2}
-        alt="แบนเนอร์ YIMSIAM88 ตัวอักษรทอง พร้อมข้อความ แตก10ล้าน จ่ายเต็มไม่มีหัก ด้านบนเป็นโลโก้หน้าบันทรงไทยสีทอง ทางซ้ายเป็นพรีเซ็นเตอร์หญิงชุดราตรีแดงทองยืนชี้มาที่ข้อความ มุมล่างขวาเป็นไพ่โพดำเรียง 10 J Q K A สีดำขลิบทอง ล้อมด้วยเหรียญทองและชิปคาสิโนบนพื้นหลังเปลวเพลิง"
+        alt="ภาพโปรโมชั่น YIMSIAM889 ข้อความทองขนาดใหญ่ ทางเข้า YIMSIAM889 รองรับทุกอุปกรณ์ ด้านบนกลางภาพเป็นโลโก้หน้าบันทรงไทยสีทอง ทางซ้ายเป็นพรีเซ็นเตอร์หญิงชุดราตรีเลื่อมทองถือไพ่คลี่เป็นพัด พื้นหลังเป็นธารลาวา เส้นแสงทอง เหรียญทอง และชิปคาสิโน"
         loading="lazy"
         fetchpriority="low"
         widths={[200, 400, 600, 800]}
         sizes="(max-width: 768px) 100vw, 50vw"
-        class="mx-auto h-auto w-full rounded-xl border border-[#f6c475]/25 object-contain shadow-[0_10px_30px_rgba(255,122,24,0.18)] transition-transform duration-300 hover:-translate-y-1 hover:border-[#ff7a18]/50 hover:shadow-[0_15px_40px_rgba(255,122,24,0.30)]"
+        class="mx-auto h-auto w-full rounded-xl border border-[#e9b949]/25 object-contain shadow-[0_10px_30px_rgba(168,31,26,0.18)] transition-transform duration-300 hover:-translate-y-1 hover:border-[#a81f1a]/50 hover:shadow-[0_15px_40px_rgba(168,31,26,0.30)]"
         decoding="async"
         formats={["avif", "webp"]}
         fallbackFormat="webp"
@@ -91,12 +98,12 @@ const graph = pageGraph(Astro, {
 
       <Picture
         src={pro3}
-        alt="แบนเนอร์ YIMSIAM88 ตัวอักษรทอง พร้อมข้อความ เติมผ่านวอเล็ทก็ได้ ไม่มีขั้นต่ำ กลางภาพเป็นโลโก้หน้าบันทรงไทยสีทอง ด้านขวาเป็นพรีเซ็นเตอร์หญิงชุดกี่เพ้าสีแดงถือไพ่คลี่เป็นพัด ด้านล่างมีไพ่ 10 J Q K A ลูกเต๋า ชิปคาสิโน และเหรียญทองบนพื้นหลังลาวาและเปลวไฟ"
+        alt="ภาพโปรโมชั่น YIMSIAM889 ข้อความทอง ยิ้มรับโปรสมาชิกใหม่ คุ้มค่าตั้งแต่ก้าวแรก มุมซ้ายบนเป็นโลโก้หน้าบันทรงไทยสีทอง กลางภาพเป็นพรีเซ็นเตอร์หญิงชุดราตรีเลื่อมทองคอวีกำลังยิ้ม รอบภาพมีเหรียญทองลอย ชิปคาสิโน ไพ่ และธารลาวาเรืองแสงสีแดงส้ม"
         loading="lazy"
         fetchpriority="low"
         widths={[200, 400, 600, 800]}
         sizes="(max-width: 768px) 100vw, 50vw"
-        class="mx-auto h-auto w-full rounded-xl border border-[#f6c475]/25 object-contain shadow-[0_10px_30px_rgba(255,122,24,0.18)] transition-transform duration-300 hover:-translate-y-1 hover:border-[#ff7a18]/50 hover:shadow-[0_15px_40px_rgba(255,122,24,0.30)]"
+        class="mx-auto h-auto w-full rounded-xl border border-[#e9b949]/25 object-contain shadow-[0_10px_30px_rgba(168,31,26,0.18)] transition-transform duration-300 hover:-translate-y-1 hover:border-[#a81f1a]/50 hover:shadow-[0_15px_40px_rgba(168,31,26,0.30)]"
         decoding="async"
         formats={["avif", "webp"]}
         fallbackFormat="webp"
@@ -105,12 +112,12 @@ const graph = pageGraph(Astro, {
 
       <Picture
         src={pro4}
-        alt="แบนเนอร์ YIMSIAM88 ตัวอักษรทอง พร้อมข้อความ โบนัสแรงแตกบ่อย ไม่ล็อคยูส ทางซ้ายเป็นพรีเซ็นเตอร์หญิงชุดราตรีแดงปักลายทองยืนเท้าสะเอว มุมขวาบนเป็นโลโก้หน้าบันทรงไทยสีทอง รอบภาพมีเหรียญทอง ชิปคาสิโน และไพ่ บนพื้นหลังธารลาวาและเปลวเพลิง"
+        alt="ภาพโปรโมชั่น YIMSIAM889 ข้อความทอง เว็บตรงแตกดีจริง มาตรฐานสากล มุมซ้ายบนเป็นโลโก้หน้าบันทรงไทยสีทอง ด้านขวาเป็นพรีเซ็นเตอร์หญิงชุดราตรีเลื่อมทองถือไพ่คลี่เป็นพัด รอบภาพมีเหรียญทองลอย ชิปคาสิโน และเส้นแสงทองพาดผ่านธารลาวา"
         loading="lazy"
         fetchpriority="low"
         widths={[200, 400, 600, 800]}
         sizes="(max-width: 768px) 100vw, 50vw"
-        class="mx-auto h-auto w-full rounded-xl border border-[#f6c475]/25 object-contain shadow-[0_10px_30px_rgba(255,122,24,0.18)] transition-transform duration-300 hover:-translate-y-1 hover:border-[#ff7a18]/50 hover:shadow-[0_15px_40px_rgba(255,122,24,0.30)]"
+        class="mx-auto h-auto w-full rounded-xl border border-[#e9b949]/25 object-contain shadow-[0_10px_30px_rgba(168,31,26,0.18)] transition-transform duration-300 hover:-translate-y-1 hover:border-[#a81f1a]/50 hover:shadow-[0_15px_40px_rgba(168,31,26,0.30)]"
         decoding="async"
         formats={["avif", "webp"]}
         fallbackFormat="webp"
@@ -121,8 +128,8 @@ const graph = pageGraph(Astro, {
     <div class="mt-12 flex justify-center pb-4">
       <a
         href="/register"
-        class="flex items-center justify-center rounded-lg border border-[#f6c475]/60 bg-gradient-to-r from-[#ffd98a] via-[#ff7a18] to-[#8d2b09] px-10 py-3.5 text-lg font-black text-[#160604] shadow-[0_10px_30px_rgba(255,122,24,0.18)] transition-transform hover:scale-105 hover:shadow-[0_15px_40px_rgba(255,122,24,0.30)]">
-        สมัครสมาชิก YIMSIAM88
+        class="flex items-center justify-center rounded-lg border border-[#e9b949]/60 bg-gradient-to-r from-[#f8dc9a] via-[#e9b949] to-[#a81f1a] px-10 py-3.5 text-lg font-black text-[#140604] shadow-[0_10px_30px_rgba(168,31,26,0.18)] transition-transform hover:scale-105 hover:shadow-[0_15px_40px_rgba(168,31,26,0.30)]">
+        สมัครสมาชิก YIMSIAM889
       </a>
     </div>
   </ContentBox>

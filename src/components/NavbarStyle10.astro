@@ -6,56 +6,64 @@ const imagePaths = Object.keys(images);
 const mainLogo = imagePaths.length > 0 ? images[imagePaths[0]].default : null;
 const currentPath = Astro.url.pathname;
 const isActive = (path: string) => isActivePath(currentPath, path);
+
+const links = [
+  { name: "หน้าแรก", path: "/", icon: "🏠" },
+  { name: "โปรโมชั่น", path: "/promotion", icon: "🎁" },
+  { name: "ทดลองเล่น", path: "/ทดลองเล่น", icon: "🎰" },
+  { name: "ทางเข้า", path: "/ทางเข้า", icon: "🌐" },
+  { name: "เกี่ยวกับเรา", path: "/about-us", icon: "📖" },
+  { name: "ติดต่อเรา", path: "/contact-us", icon: "📞" },
+];
 ---
 
-<div class="hidden w-full border-b border-amber-600/30 bg-gradient-to-r from-[#100b03] via-[#3a2703] to-[#100b03] px-4 py-1.5 font-sans text-xs font-bold text-amber-100/80 lg:block">
+<div class="hidden w-full border-b border-[#9c724a]/40 bg-gradient-to-r from-[#140604] via-[#3a1108] to-[#140604] px-4 py-1.5 font-sans text-xs font-bold text-[#f2ddc4]/85 lg:block">
   <div class="mx-auto flex max-w-7xl justify-between">
     <div class="flex gap-4">
-      <span class="flex items-center gap-1"><span aria-hidden="true" class="text-amber-400">👑</span> GSYBET เว็บเกมคาสิโนครบวงจร</span>
+      <span class="flex items-center gap-1"><span aria-hidden="true" class="text-[#e9b949]">👑</span> YIMSIAM889 สล็อตสยาม เว็บตรงแตกดีจริง</span>
       <span class="flex items-center gap-1 text-green-400"><span aria-hidden="true" class="text-green-500">✔</span> ฝาก-ถอน ออโต้ 24 ชม.</span>
     </div>
     <div class="flex gap-4">
-      <a href="/line" class="flex items-center gap-1 transition-colors hover:text-white">ติดต่อแอดมิน LINE: @GSYBET</a>
+      <a href="/line" class="flex items-center gap-1 transition-colors hover:text-[#f8dc9a]">ติดต่อแอดมิน LINE: @YIMSIAM889</a>
     </div>
   </div>
 </div>
 
 <header class="sticky top-2 z-50 mt-2 w-full px-2 font-sans md:px-4">
   <nav
-    class="relative mx-auto flex h-[75px] w-full max-w-7xl items-center justify-between rounded-[20px] border border-amber-500/40 bg-[#0a0703]/90 px-4 shadow-[0_10px_30px_rgba(234,179,8,0.15)] backdrop-blur-lg xl:px-8">
+    class="relative mx-auto flex h-[75px] w-full max-w-7xl items-center justify-between rounded-[20px] border border-[#e9b949]/45 bg-[#140604]/90 px-4 shadow-[0_10px_30px_rgba(233,185,73,0.16)] backdrop-blur-lg xl:px-8">
     <a href="/" class="z-50 flex-shrink-0 transition-transform hover:scale-105">
       {
         mainLogo ? (
           <Picture
             src={mainLogo}
-            alt="GSYBET Logo"
+            alt="โลโก้ YIMSIAM889 รูปหน้าจั่ววัดไทยสีทองประดับลายไทย มีตัวอักษร Yimsiam อยู่ด้านล่าง"
             loading="eager"
             fetchpriority="high"
-            class="h-[40px] w-auto drop-shadow-[0_0_10px_rgba(234,179,8,0.5)] xl:h-[45px]"
+            widths={[110, 220, 330]}
+            sizes="110px"
+            class="h-[40px] w-auto drop-shadow-[0_0_10px_rgba(233,185,73,0.5)] xl:h-[45px]"
             formats={["avif", "webp"]}
             fallbackFormat="webp"
           />
         ) : (
-          <span class="bg-gradient-to-b from-[#fef08a] to-[#ca8a04] bg-clip-text text-3xl font-black text-transparent drop-shadow-[0_0_8px_rgba(234,179,8,0.4)]">GSYBET</span>
+          <span class="bg-gradient-to-b from-[#f8dc9a] to-[#a81f1a] bg-clip-text text-3xl font-black text-transparent drop-shadow-[0_0_8px_rgba(233,185,73,0.4)]">YIMSIAM889</span>
         )
       }
     </a>
 
     <div class="hidden h-full items-center gap-6 lg:flex xl:gap-8">
       {
-        [
-          { name: "หน้าแรก", path: "/" },
-          { name: "โปรโมชั่น", path: "/promotion" },
-          { name: "ทดลองเล่น", path: "/ทดลองเล่น" },
-          { name: "ทางเข้า", path: "/ทางเข้า" },
-          { name: "ติดต่อเรา", path: "/contact-us" },
-        ].map((item) => (
+        links.map((item) => (
           <a
             href={item.path}
-            class={`group relative flex h-full items-center text-sm font-bold tracking-wide uppercase transition-colors xl:text-base ${isActive(item.path) ? "text-amber-400 drop-shadow-[0_0_8px_rgba(234,179,8,0.4)]" : "text-amber-50/80 hover:text-amber-400"}`}>
+            class={`group relative flex h-full items-center gap-1.5 text-sm font-bold tracking-wide uppercase transition-colors xl:text-base ${isActive(item.path) ? "text-[#e9b949] drop-shadow-[0_0_8px_rgba(233,185,73,0.4)]" : "text-[#f2ddc4]/80 hover:text-[#e9b949]"}`}>
+            <span aria-hidden="true" class="text-base leading-none">
+              {item.icon}
+            </span>
             <span>{item.name}</span>
             <div
-              class={`absolute bottom-[18px] left-0 h-[2px] w-full origin-center bg-amber-400 shadow-[0_0_8px_rgba(234,179,8,0.8)] transition-transform duration-300 ${isActive(item.path) ? "scale-x-100" : "scale-x-0 group-hover:scale-x-100"}`}
+              class={`absolute bottom-[18px] left-0 h-[2px] w-full origin-center bg-[#e9b949] shadow-[0_0_8px_rgba(233,185,73,0.8)] transition-transform duration-300 ${isActive(item.path) ? "scale-x-100" : "scale-x-0 group-hover:scale-x-100"}`}
             />
           </a>
         ))
@@ -65,39 +73,36 @@ const isActive = (path: string) => isActivePath(currentPath, path);
     <div class="z-50 flex items-center gap-3">
       <a
         href="/login"
-        class="hidden items-center justify-center rounded-full border border-amber-500/50 bg-[#2a1c04] px-6 py-2 text-sm font-bold text-amber-400 shadow-sm transition-all hover:bg-amber-500/20 lg:flex">
+        class="hidden items-center justify-center rounded-full border border-[#e9b949]/55 bg-[#2e130c] px-6 py-2 text-sm font-bold text-[#e9b949] shadow-sm transition-all hover:bg-[#e9b949]/20 lg:flex">
         เข้าสู่ระบบ
       </a>
       <a
         href="/register"
-        class="hidden items-center justify-center rounded-full bg-gradient-to-r from-yellow-300 via-amber-400 to-amber-600 px-6 py-2 text-sm font-black text-[#1a1204] shadow-[0_0_15px_rgba(234,179,8,0.4)] transition-all hover:scale-105 lg:flex">
+        class="hidden items-center justify-center rounded-full bg-gradient-to-r from-[#f8dc9a] via-[#e9b949] to-[#a81f1a] px-6 py-2 text-sm font-black text-[#170503] shadow-[0_0_15px_rgba(233,185,73,0.4)] transition-all hover:scale-105 lg:flex">
         สมัครสมาชิก
       </a>
 
       <button
         id="hamburger-btn"
-        class="relative flex h-[42px] w-[42px] flex-col items-center justify-center gap-[5px] rounded-full border border-amber-500/30 bg-gradient-to-b from-[#2a1c04] to-[#0a0703] shadow-sm lg:hidden"
-        aria-label="Menu">
-        <span class="line-1 h-[2px] w-5 origin-center rounded-full bg-amber-400 transition-all duration-300"></span>
-        <span class="line-2 h-[2px] w-5 origin-center rounded-full bg-amber-400 transition-all duration-300"></span>
-        <span class="line-3 h-[2px] w-5 origin-center rounded-full bg-amber-400 transition-all duration-300"></span>
+        class="relative flex h-[42px] w-[42px] flex-col items-center justify-center gap-[5px] rounded-full border border-[#e9b949]/35 bg-gradient-to-b from-[#2e130c] to-[#140604] shadow-sm lg:hidden"
+        aria-label="เปิดเมนู">
+        <span class="line-1 h-[2px] w-5 origin-center rounded-full bg-[#e9b949] transition-all duration-300"></span>
+        <span class="line-2 h-[2px] w-5 origin-center rounded-full bg-[#e9b949] transition-all duration-300"></span>
+        <span class="line-3 h-[2px] w-5 origin-center rounded-full bg-[#e9b949] transition-all duration-300"></span>
       </button>
     </div>
   </nav>
 
-  <div id="fullscreen-menu" class="pointer-events-none fixed inset-0 z-[40] flex flex-col items-center justify-center bg-[#0a0703]/98 opacity-0 backdrop-blur-xl transition-opacity duration-500">
+  <div id="fullscreen-menu" class="pointer-events-none fixed inset-0 z-[40] flex flex-col items-center justify-center bg-[#140604]/98 opacity-0 backdrop-blur-xl transition-opacity duration-500">
     <div class="flex w-full flex-col items-center space-y-5 px-6">
       {
-        [
-          { name: "หน้าแรก", path: "/" },
-          { name: "โปรโมชั่น", path: "/promotion" },
-          { name: "ทดลองเล่น", path: "/ทดลองเล่น" },
-          { name: "ทางเข้า", path: "/ทางเข้า" },
-          { name: "ติดต่อเรา", path: "/contact-us" },
-        ].map((item) => (
+        links.map((item) => (
           <a
             href={item.path}
-            class={`fs-item text-2xl font-black tracking-widest uppercase transition-all duration-300 ${isActive(item.path) ? "text-amber-400 drop-shadow-[0_0_10px_rgba(234,179,8,0.6)]" : "text-white/80 hover:text-white"}`}>
+            class={`fs-item flex items-center gap-3 text-2xl font-black tracking-widest uppercase transition-all duration-300 ${isActive(item.path) ? "text-[#e9b949] drop-shadow-[0_0_10px_rgba(233,185,73,0.6)]" : "text-[#f2ddc4]/85 hover:text-[#f8dc9a]"}`}>
+            <span aria-hidden="true" class="text-2xl leading-none">
+              {item.icon}
+            </span>
             {item.name}
           </a>
         ))
@@ -105,12 +110,12 @@ const isActive = (path: string) => isActivePath(currentPath, path);
       <div class="fs-item mt-4 flex w-full max-w-[280px] flex-col gap-4 pt-6">
         <a
           href="/register"
-          class="flex w-full items-center justify-center rounded-full bg-gradient-to-r from-yellow-300 to-amber-600 py-3.5 text-lg font-black text-[#1a1204] shadow-[0_0_20px_rgba(234,179,8,0.5)]">
+          class="flex w-full items-center justify-center rounded-full bg-gradient-to-r from-[#f8dc9a] to-[#a81f1a] py-3.5 text-lg font-black text-[#170503] shadow-[0_0_20px_rgba(233,185,73,0.5)]">
           สมัครสมาชิกใหม่
         </a>
         <a
           href="/login"
-          class="flex w-full items-center justify-center rounded-full border-2 border-amber-500/50 bg-[#2a1c04] py-3.5 text-lg font-bold text-amber-400 transition-colors hover:bg-amber-500/20">
+          class="flex w-full items-center justify-center rounded-full border-2 border-[#e9b949]/55 bg-[#2e130c] py-3.5 text-lg font-bold text-[#e9b949] transition-colors hover:bg-[#e9b949]/20">
           เข้าสู่ระบบ
         </a>
       </div>
@@ -119,11 +124,6 @@ const isActive = (path: string) => isActivePath(currentPath, path);
 </header>
 
 <style is:global>
-  nav,
-  header,
-  div {
-    font-family: var(--font-sans) !important;
-  }
   #hamburger-btn.active .line-1 {
     transform: translateY(7px) rotate(45deg);
   }
@@ -160,6 +160,16 @@ const isActive = (path: string) => isActivePath(currentPath, path);
   }
   .fs-item:nth-child(6) {
     transition-delay: 0.35s;
+  }
+  .fs-item:nth-child(7) {
+    transition-delay: 0.4s;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .fs-item {
+      transition: none;
+      transform: none;
+    }
   }
 </style>
 

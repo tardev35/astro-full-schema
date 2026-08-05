@@ -3,20 +3,6 @@ import { fontStack, usesGoogleFonts } from "../lib/brandProfile";
 
 const targetUrl = "https://tinyurl.com/yz22c2r4";
 
-// This page has its own <head> and does not import global.css, so it gets
-// neither the @theme fallback for --font-sans nor the self-hosted Kanit
-// @font-face. Both have to be supplied here or the page renders in the browser
-// default while the rest of the site does not — hence the @font-face rules in
-// the first <style> block below.
-//
-// Oswald is the only face left that needs a CDN: the two display headings use
-// it and it is not self-hosted.
-//
-// The old value asked Google for "Kanit:wght@300;400;600" even though the site
-// self-hosts Kanit: a third-party request for weights nothing here draws (300
-// and 600 are used zero times), and a query string byte-identical on every
-// Kanit brand in the portfolio — the shared signature BRAND_FONT exists to
-// break up.
 const fontHref = usesGoogleFonts
   ? "https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&family=Oswald:wght@700&display=swap"
   : "https://fonts.googleapis.com/css2?family=Oswald:wght@700&display=swap";
@@ -25,18 +11,13 @@ const fontHref = usesGoogleFonts
 <html lang="th" style={`--font-sans: ${fontStack};`}>
   <head>
     <meta charset="utf-8" />
-    <title>เข้าสู่ระบบ YIMSIAM88 | กำลังเชื่อมต่อไปหน้าล็อกอินอัตโนมัติ</title>
+    <title>เข้าสู่ระบบ YIMSIAM889 | กำลังเชื่อมต่อไปหน้าล็อกอินอัตโนมัติ</title>
     <meta
       name="description"
-      content="หน้าเชื่อมต่อเข้าสู่ระบบ YIMSIAM88 สล็อตเว็บตรงไทยแท้ ใช้เบอร์โทรศัพท์กับรหัส PIN 4 หลักเป็นข้อมูลหลัก ระบบกำลังพาไปยังหน้าล็อกอินของเว็บให้อัตโนมัติ"
+      content="หน้าเชื่อมต่อเข้าสู่ระบบ YIMSIAM889 สล็อตเว็บตรงไทยแท้ ใช้เบอร์โทรศัพท์กับรหัส PIN 4 หลักเป็นข้อมูลหลัก ระบบกำลังพาไปยังหน้าล็อกอินของเว็บให้อัตโนมัติ"
     />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    {/* This page exists only to forward; there is nothing here worth ranking,
-        and its source carries the affiliate URL — the one host every brand in
-        the group has in common. Keeping it out of the index means that link is
-        not sitting in a page Google has stored. Astro's own /line redirect page
-        ships noindex for the same reason. */}
     <meta name="robots" content="noindex, follow" />
 
     <meta http-equiv="refresh" content={`1.5;url=${targetUrl}`} />
@@ -46,10 +27,6 @@ const fontHref = usesGoogleFonts
     <link href={fontHref} rel="stylesheet" />
 
     <style>
-      /* Self-hosted Kanit. This page has its own <head> and does not import
-         global.css, so the @font-face rules there never reach it — which is why
-         it used to pull Kanit from Google instead. Only the weights this page
-         actually draws are declared. */
       @font-face {
         font-family: "Kanit";
         font-style: normal;
@@ -68,15 +45,15 @@ const fontHref = usesGoogleFonts
 
     <style>
       :root {
-        --page-bg: #160604;
-        --panel-bg: rgba(36, 16, 10, 0.94);
-        --brand-flame: #ff7a18;
-        --brand-flame-deep: #8d2b09;
-        --brand-flame-light: #ffa347;
-        --brand-gold: #f6c475;
-        --brand-gold-light: #ffd98a;
-        --text-body: #f7e6d4;
-        --text-muted: #c9a68a;
+        --page-bg: #140604;
+        --panel-bg: rgba(30, 10, 6, 0.94);
+        --brand-ember: #a81f1a;
+        --brand-ember-deep: #5e0f06;
+        --brand-copper: #9c724a;
+        --brand-gold: #e9b949;
+        --brand-gold-light: #f8dc9a;
+        --text-body: #f2ddc4;
+        --text-muted: #c09a72;
       }
 
       body {
@@ -85,8 +62,8 @@ const fontHref = usesGoogleFonts
         color: var(--text-body);
 
         background:
-          radial-gradient(circle at 50% 10%, rgba(255, 122, 24, 0.18) 0%, transparent 55%),
-          radial-gradient(circle at 50% 92%, rgba(255, 122, 24, 0.22) 0%, transparent 55%), var(--page-bg);
+          radial-gradient(circle at 50% 10%, rgba(168, 31, 26, 0.18) 0%, transparent 55%),
+          radial-gradient(circle at 50% 92%, rgba(168, 31, 26, 0.22) 0%, transparent 55%), var(--page-bg);
         display: flex;
         min-height: 100vh;
         flex-direction: column;
@@ -100,11 +77,11 @@ const fontHref = usesGoogleFonts
         max-width: 450px;
         padding: 3.5rem;
         background: var(--panel-bg);
-        border: 1px solid rgba(255, 122, 24, 0.4);
+        border: 1px solid rgba(233, 185, 73, 0.4);
         border-radius: 2rem;
         box-shadow:
-          0 1rem 3rem rgba(255, 122, 24, 0.18),
-          0 0 2rem rgba(255, 122, 24, 0.25);
+          0 1rem 3rem rgba(168, 31, 26, 0.18),
+          0 0 2rem rgba(233, 185, 73, 0.25);
         text-align: center;
         backdrop-filter: blur(10px);
       }
@@ -113,13 +90,13 @@ const fontHref = usesGoogleFonts
         font-family: "Oswald", sans-serif;
         font-size: 1.5rem;
         font-weight: 700;
-        background: linear-gradient(180deg, var(--brand-gold-light) 0%, var(--brand-gold) 45%, var(--brand-flame) 100%);
+        background: linear-gradient(180deg, var(--brand-gold-light) 0%, var(--brand-gold) 45%, var(--brand-ember) 100%);
         -webkit-background-clip: text;
         background-clip: text;
         color: transparent;
         letter-spacing: 0.3em;
         margin-bottom: 2rem;
-        filter: drop-shadow(0 1px 2px rgba(255, 122, 24, 0.35));
+        filter: drop-shadow(0 1px 2px rgba(168, 31, 26, 0.35));
       }
 
       .sophisticated-loader {
@@ -135,23 +112,23 @@ const fontHref = usesGoogleFonts
       .orb {
         width: 40px;
         height: 40px;
-        background: radial-gradient(circle, var(--brand-gold-light) 0%, var(--brand-flame-light) 45%, var(--brand-flame-deep) 100%);
+        background: radial-gradient(circle, var(--brand-gold-light) 0%, var(--brand-copper) 45%, var(--brand-ember-deep) 100%);
         border-radius: 50%;
-        box-shadow: 0 0 2rem rgba(255, 122, 24, 0.35);
+        box-shadow: 0 0 2rem rgba(233, 185, 73, 0.35);
         animation: pulse 2s ease-in-out infinite;
       }
 
       .ring {
         position: absolute;
         border-radius: 50%;
-        border: 3px solid rgba(255, 122, 24, 0.2);
+        border: 3px solid rgba(233, 185, 73, 0.2);
         animation: spin linear infinite;
       }
 
       .ring-1 {
         width: 100%;
         height: 100%;
-        border-top-color: var(--brand-flame-deep);
+        border-top-color: var(--brand-ember);
         animation-duration: 4s;
       }
 
@@ -175,11 +152,11 @@ const fontHref = usesGoogleFonts
         0%,
         100% {
           transform: scale(1);
-          box-shadow: 0 0 2rem rgba(255, 122, 24, 0.35);
+          box-shadow: 0 0 2rem rgba(233, 185, 73, 0.35);
         }
         50% {
           transform: scale(1.15);
-          box-shadow: 0 0 3rem rgba(255, 122, 24, 0.5);
+          box-shadow: 0 0 3rem rgba(233, 185, 73, 0.5);
         }
       }
 
@@ -190,7 +167,7 @@ const fontHref = usesGoogleFonts
         letter-spacing: 0.1em;
         text-transform: uppercase;
         color: var(--text-body);
-        text-shadow: 0 1px 1px rgba(255, 122, 24, 0.25);
+        text-shadow: 0 1px 1px rgba(168, 31, 26, 0.25);
         margin: 0;
       }
       .status-text .p {
@@ -203,7 +180,7 @@ const fontHref = usesGoogleFonts
   </head>
   <body>
     <div class="premium-loading-container">
-      <div class="brand-identity">YIMSIAM88</div>
+      <div class="brand-identity">YIMSIAM889</div>
 
       <div class="sophisticated-loader">
         <div class="orb"></div>
@@ -213,7 +190,7 @@ const fontHref = usesGoogleFonts
 
       <div class="status-text">
         <h1 class="h1">AUTHENTICATING SECURE ACCESS...</h1>
-        <p class="p">กำลังพาไปหน้าเข้าสู่ระบบ YIMSIAM88 ด้วยเบอร์โทรศัพท์ <span aria-hidden="true">🔒</span></p>
+        <p class="p">กำลังพาไปหน้าเข้าสู่ระบบ YIMSIAM889 ด้วยเบอร์โทรศัพท์ <span aria-hidden="true">🔒</span></p>
       </div>
     </div>
 

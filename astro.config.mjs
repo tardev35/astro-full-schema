@@ -33,7 +33,7 @@ export default defineConfig({
     "/line": "https://tinyurl.com/simfun8",
   },
 
-  site: "https://yimsiam88-homepage.net",
+  site: "https://yimsiam889-brand.com",
   integrations: [
     sitemap({
       // /login, /register and /line are forwarding pages that all ship

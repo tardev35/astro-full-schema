@@ -11,10 +11,10 @@ const fontHref = usesGoogleFonts
 <html lang="th" style={`--font-sans: ${fontStack};`}>
   <head>
     <meta charset="utf-8" />
-    <title>เข้าสู่ระบบ GODDUBAI | กำลังเชื่อมต่อไปหน้าล็อกอินอัตโนมัติ</title>
+    <title>เข้าสู่ระบบ GODKINGKONG | กำลังเชื่อมต่อไปหน้าล็อกอินอัตโนมัติ</title>
     <meta
       name="description"
-      content="หน้าเชื่อมต่อเข้าสู่ระบบ GODDUBAI สล็อตเว็บตรงระดับสุลต่าน ใช้เบอร์โทรศัพท์กับรหัส PIN 4 หลักเป็นข้อมูลหลัก ระบบกำลังพาไปยังหน้าล็อกอินของเว็บให้อัตโนมัติ"
+      content="หน้าเชื่อมต่อเข้าสู่ระบบ GODKINGKONG เว็บตรงเกมสล็อตแตกหนัก ใช้เบอร์โทรศัพท์กับรหัส PIN 4 หลักเป็นข้อมูลหลัก ระบบกำลังพาไปยังหน้าล็อกอินของเว็บให้อัตโนมัติ"
     />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
@@ -45,15 +45,15 @@ const fontHref = usesGoogleFonts
 
     <style>
       :root {
-        --page-bg: #0b1610;
-        --panel-bg: rgba(15, 29, 22, 0.94);
-        --brand-emerald: #0f8f57;
-        --brand-emerald-deep: #0a4a2e;
-        --brand-gold-deep: #a8611a;
-        --brand-gold: #e8a13c;
-        --brand-gold-light: #f7cf8a;
-        --text-body: #f1e6d3;
-        --text-muted: rgba(241, 230, 211, 0.7);
+        --page-bg: #050f09;
+        --panel-bg: rgba(10, 26, 16, 0.94);
+        --brand-green: #2fe35f;
+        --brand-green-light: #7bff9f;
+        --brand-green-deep: #0b6b34;
+        --brand-gold: #f0c43a;
+        --brand-gold-deep: #a87a12;
+        --text-body: #ddf3e2;
+        --text-muted: rgba(221, 243, 226, 0.7);
       }
 
       body {
@@ -62,8 +62,8 @@ const fontHref = usesGoogleFonts
         color: var(--text-body);
 
         background:
-          radial-gradient(circle at 50% 10%, rgba(232, 161, 60, 0.16) 0%, transparent 55%),
-          radial-gradient(circle at 50% 92%, rgba(15, 143, 87, 0.24) 0%, transparent 55%), var(--page-bg);
+          radial-gradient(circle at 50% 10%, rgba(47, 227, 95, 0.18) 0%, transparent 55%),
+          radial-gradient(circle at 50% 92%, rgba(240, 196, 58, 0.16) 0%, transparent 55%), var(--page-bg);
         display: flex;
         min-height: 100vh;
         flex-direction: column;
@@ -77,11 +77,11 @@ const fontHref = usesGoogleFonts
         max-width: 450px;
         padding: 3.5rem;
         background: var(--panel-bg);
-        border: 1px solid rgba(232, 161, 60, 0.4);
+        border: 1px solid rgba(47, 227, 95, 0.4);
         border-radius: 2rem;
         box-shadow:
-          0 1rem 3rem rgba(15, 143, 87, 0.22),
-          0 0 2rem rgba(232, 161, 60, 0.25);
+          0 1rem 3rem rgba(47, 227, 95, 0.22),
+          0 0 2rem rgba(240, 196, 58, 0.22);
         text-align: center;
         backdrop-filter: blur(10px);
       }
@@ -90,13 +90,13 @@ const fontHref = usesGoogleFonts
         font-family: "Oswald", sans-serif;
         font-size: 1.5rem;
         font-weight: 700;
-        background: linear-gradient(180deg, var(--brand-gold-light) 0%, var(--brand-gold) 45%, var(--brand-gold-deep) 100%);
+        background: linear-gradient(180deg, var(--brand-green-light) 0%, var(--brand-green) 45%, var(--brand-gold) 100%);
         -webkit-background-clip: text;
         background-clip: text;
         color: transparent;
         letter-spacing: 0.3em;
         margin-bottom: 2rem;
-        filter: drop-shadow(0 1px 2px rgba(232, 161, 60, 0.35));
+        filter: drop-shadow(0 1px 2px rgba(47, 227, 95, 0.35));
       }
 
       .sophisticated-loader {
@@ -112,23 +112,23 @@ const fontHref = usesGoogleFonts
       .orb {
         width: 40px;
         height: 40px;
-        background: radial-gradient(circle, var(--brand-gold-light) 0%, var(--brand-gold-deep) 45%, var(--brand-emerald-deep) 100%);
+        background: radial-gradient(circle, var(--brand-green-light) 0%, var(--brand-green) 45%, var(--brand-green-deep) 100%);
         border-radius: 50%;
-        box-shadow: 0 0 2rem rgba(232, 161, 60, 0.35);
+        box-shadow: 0 0 2rem rgba(47, 227, 95, 0.35);
         animation: pulse 2s ease-in-out infinite;
       }
 
       .ring {
         position: absolute;
         border-radius: 50%;
-        border: 3px solid rgba(232, 161, 60, 0.2);
+        border: 3px solid rgba(47, 227, 95, 0.2);
         animation: spin linear infinite;
       }
 
       .ring-1 {
         width: 100%;
         height: 100%;
-        border-top-color: var(--brand-emerald);
+        border-top-color: var(--brand-green);
         animation-duration: 4s;
       }
 
@@ -152,11 +152,11 @@ const fontHref = usesGoogleFonts
         0%,
         100% {
           transform: scale(1);
-          box-shadow: 0 0 2rem rgba(232, 161, 60, 0.35);
+          box-shadow: 0 0 2rem rgba(47, 227, 95, 0.35);
         }
         50% {
           transform: scale(1.15);
-          box-shadow: 0 0 3rem rgba(232, 161, 60, 0.5);
+          box-shadow: 0 0 3rem rgba(47, 227, 95, 0.5);
         }
       }
 
@@ -167,7 +167,7 @@ const fontHref = usesGoogleFonts
         letter-spacing: 0.1em;
         text-transform: uppercase;
         color: var(--text-body);
-        text-shadow: 0 1px 1px rgba(15, 143, 87, 0.28);
+        text-shadow: 0 1px 1px rgba(47, 227, 95, 0.28);
         margin: 0;
       }
       .status-text .p {
@@ -180,7 +180,7 @@ const fontHref = usesGoogleFonts
   </head>
   <body>
     <div class="premium-loading-container">
-      <div class="brand-identity">GODDUBAI</div>
+      <div class="brand-identity">GODKINGKONG</div>
 
       <div class="sophisticated-loader">
         <div class="orb"></div>
@@ -190,7 +190,7 @@ const fontHref = usesGoogleFonts
 
       <div class="status-text">
         <h1 class="h1">AUTHENTICATING SECURE ACCESS...</h1>
-        <p class="p">กำลังพาไปหน้าเข้าสู่ระบบ GODDUBAI ด้วยเบอร์โทรศัพท์ <span aria-hidden="true">🔒</span></p>
+        <p class="p">กำลังพาไปหน้าเข้าสู่ระบบ GODKINGKONG ด้วยเบอร์โทรศัพท์ <span aria-hidden="true">🔒</span></p>
       </div>
     </div>
 

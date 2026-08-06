@@ -6,8 +6,8 @@ import ogImage from "../assets/slide1.png";
 import "../styles/global.css";
 import { BRAND_NAME, BRAND_TEXT, brandProfile, fontStack, iconVersion, usesGoogleFonts } from "../lib/brandProfile";
 import { canonicalFor } from "../lib/schema";
-import Navbar from "../components/NavbarPremium.astro";
-import Footer from "../components/FooterPremium.astro";
+import Navbar from "../components/NavbarStyle3.astro";
+import Footer from "../components/FooterCyber.astro";
 
 // Only banner1 is ever rendered, so only banner1 is imported.
 //
@@ -56,8 +56,8 @@ const mobileBannerImg = mobileBanner
   : null;
 
 const {
-  title = "GODDUBAI สล็อตเว็บตรงระดับสุลต่าน ไม่มีขั้นต่ำ แตกหนัก อัตราจ่ายสูง",
-  description = "GODDUBAI สล็อตเว็บตรงระดับสุลต่าน แท้ 100% ที่รวยและแฟร์ที่สุด แตกหนัก อัตราจ่ายสูง ฝากถอนไม่มีขั้นต่ำ ระบบออโต้ รองรับทุกช่องทาง ปลอดภัยระดับ VIP สมัครฟรี",
+  title = "GODKINGKONG เว็บตรงเกมสล็อตแตกหนัก โบนัสแรง จ่ายจริงทุกยอด",
+  description = "GODKINGKONG เว็บตรงเกมสล็อตแตกหนัก รวมค่ายสล็อตแตกง่าย กล้าให้ โบนัสแรง จ่ายจริงทุกยอด รองรับวอเล็ทไม่มีขั้นต่ำ ฝากถอนออโต้ 3 วินาที สมัครง่ายเหมือนดีดนิ้ว",
   robots = "index, follow",
 } = Astro.props;
 
@@ -164,7 +164,7 @@ const profile = brandProfile(Astro.site);
 
           {block === "appmeta" && (
             <Fragment>
-              {profile.showAppTitle && <meta name="apple-mobile-web-app-title" content="goddubai" />}
+              {profile.showAppTitle && <meta name="apple-mobile-web-app-title" content="godkingkong" />}
               <link rel="manifest" href="/site.webmanifest" />
             </Fragment>
           )}
@@ -206,7 +206,7 @@ const profile = brandProfile(Astro.site);
         background-attachment: fixed;
         background-repeat: no-repeat;
         margin: 0;
-        background-color: #0b1610;
+        background-color: #050f09;
         font-weight: 400;
         font-family: var(--font-sans) !important;
       }
@@ -259,7 +259,7 @@ const profile = brandProfile(Astro.site);
         }
         <Image
           src={mainBanner}
-          alt="แบนเนอร์ GODDUBAI ตัวอักษรขนาดใหญ่สีเขียวมรกตขอบทองคำว่า GODDUBAI ใต้ชื่อเขียนว่า เว็บตรงไม่ผ่านเอเย่นต์ อัตราจ่ายสูง ด้านขวาเป็นพรีเซนเตอร์หญิงในชุดราตรีเลื่อมทอง รอบภาพมีเหรียญทอง ชิปคาสิโนและไพ่ปลิว ฉากหลังเป็นห้องโถงพระราชวังอาหรับสีครีมทองมีซุ้มประตูโค้ง"
+          alt="แบนเนอร์ GODKINGKONG ตัวอักษรขนาดใหญ่สีขาวขอบเขียวนีออนว่า GODKINGKONG ใต้ชื่อเขียนว่า เว็บตรงเจ้าป่า ใจป่า เว็บสล็อตแตกหนัก ระบบรวดเร็วขึ้น แตกง่ายขึ้น ด้านบนเป็นโลโก้กอริลลาสวมมงกุฎทอง สองข้างเป็นพรีเซนเตอร์หญิงในชุดดำปักลายทอง รอบภาพมีไพ่ ชิปคาสิโนและเหรียญทองปลิว ฉากหลังเป็นป่าลึกสีเขียวมีลำแสงเลเซอร์เขียวและทองพาดไขว้ผ่านซากปราสาทหิน"
           loading="eager"
           fetchpriority="high"
           widths={[412, 640, 828, 1024, 1280, 1600, 1900]}

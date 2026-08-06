@@ -1,8 +1,8 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
-import ContentBox from "../components/ContentBoxPremium.astro";
+import ContentBox from "../components/ContentBoxCyberCut.astro";
 import Navfoot from "../components/Navfoot.astro";
-import Announcement from "../components/AnnouncementPremium.astro";
+import Announcement from "../components/AnnouncementCyber.astro";
 
 import { Picture } from "astro:assets";
 
@@ -12,11 +12,13 @@ import pro3 from "../assets/slide3.png";
 import pro4 from "../assets/slide4.png";
 import { pageGraph } from "../lib/schema";
 
+const pageTitle = "โปรโมชั่น GODKINGKONG คืนยอดเล่นทุกวัน และโบนัสแนะนำเพื่อน";
+
 const pageDescription =
-  "รวมโปรโมชั่น GODDUBAI สล็อตเว็บตรงระดับสุลต่าน คืนยอดเล่นทุกวัน แนะนำเพื่อนรับโบนัส ฝากถอนไม่มีขั้นต่ำเริ่มต้น 1 บาท ระบบออโต้ 1-3 วินาที รองรับทรูวอลเล็ท";
+  "โปรโมชั่น GODKINGKONG เว็บตรงสล็อตแตกหนัก แนะนำเพื่อนรับโบนัส 0.8% คืนยอดเล่นทุกวัน 0.3% เกมแท้จากค่ายแม่ ไม่ปรับ RTP ฝากถอนออโต้ 3-5 วินาที วอเล็ทไม่มีขั้นต่ำ";
 
 const graph = pageGraph(Astro, {
-  name: "โปรโมชั่น GODDUBAI คืนยอดเล่นทุกวัน และโบนัสแนะนำเพื่อน",
+  name: pageTitle,
   description: pageDescription,
   breadcrumb: [
     { name: "หน้าแรก", path: "/" },
@@ -26,57 +28,57 @@ const graph = pageGraph(Astro, {
 });
 ---
 
-<MainLayout title="โปรโมชั่น - GODDUBAI" description={pageDescription}>
+<MainLayout title={pageTitle} description={pageDescription}>
   <script type="application/ld+json" set:html={graph} />
 
   <Announcement />
 
-  <ContentBox title="โปรโมชั่น GODDUBAI" as="h1">
-    <h2 class="mb-4 text-2xl leading-normal font-bold text-[#e8a13c]">คืนยอดเล่นทุกวัน และโบนัสแนะนำเพื่อน แจกแบบเว็บทุนหนา</h2>
+  <ContentBox title="โปรโมชั่น GODKINGKONG" as="h1">
+    <h2 class="mb-4 text-2xl leading-normal font-bold text-[#2fe35f]">คืนยอดเล่นทุกวัน 0.3% และแนะนำเพื่อนรับโบนัส 0.8%</h2>
 
-    <p class="mb-5 text-left text-base leading-relaxed text-[#f1e6d3]">
-      เจ้ามือบางเว็บต้องงัดลูกไม้ตุกติกออกมาใช้ เพราะเงินหมุนไม่ถึง แต่ <strong class="text-[#f7cf8a]">GODDUBAI</strong> ไม่จำเป็นต้องทำแบบนั้นเลย
-      ฐานทุนของเราหนาพอจะรองรับยอดถอนหลักล้านต่อวัน สายป่านที่ยาวเหยียดและสภาพคล่องที่สูงมากคือเหตุผลที่เรากล้าแจกโปรโมชั่นจริง
-      คืนยอดเล่นให้ทุกยอดตลอดทั้งวัน และเปิดโบนัสแนะนำเพื่อนให้คุณสร้างรายได้ต่อเนื่องโดยไม่ต้องรอรอบบิล
+    <p class="mb-5 text-left text-base leading-relaxed text-[#ddf3e2]">
+      เว็บที่เงินหมุนไม่ถึงต้องงัดลูกไม้ตุกติกออกมาใช้ตอนคนถอนพร้อมกัน แต่ <strong class="text-[#7bff9f]">GODKINGKONG</strong> ไม่ต้องเล่นเกมนั้น
+      เรามีทุนจดทะเบียนมหาศาลไว้รองรับยอดถอนของคุณโดยเฉพาะ จะเป็นสายปั่นทุนหลักสิบหรือวาฬกระเป๋าหนักที่ถอนวันละล้าน เราก็จ่ายจบครบทุกบาท
+      ไม่มีแบ่งจ่าย ไม่มีผ่อนส่ง นั่นคือเหตุผลเดียวที่เรากล้าคืนทุกยอดเล่นตลอดทั้งวันให้ 0.3% และเปิดโบนัสแนะนำเพื่อนที่ 0.8% แบบไม่กลัวเจ๊ง
     </p>
 
-    <p class="mb-8 text-left text-base leading-relaxed text-[#f1e6d3]">
-      เงื่อนไขทุกข้อเขียนไว้อ่านง่าย ไม่มีบรรทัดเล็ก ๆ ซ่อนเอาไว้ให้ต้องมานั่งเพ่งทีหลัง สมัครเสร็จรับสิทธิ์ได้ทันทีในไม่กี่วินาที
-      และหากตรงไหนยังสงสัย ทักถามทีมงานได้ตลอด 24 ชั่วโมง ความมั่นคงระดับนี้คือสิ่งที่คุณจะหาไม่ได้จากเว็บเล็ก ๆ ทั่วไป
+    <p class="mb-8 text-left text-base leading-relaxed text-[#ddf3e2]">
+      คอมมิชชั่นคืนยอดเล่นกดรับเองได้ที่หน้าเว็บ ไม่ต้องทักตาม ไม่ต้องรอแอดมินอนุมัติ เล่นถึงเงื่อนไขก็ถอนออกได้เลย
+      ส่วนสายแนะนำเพื่อนจะได้ส่วนแบ่งต่อเนื่องจากยอดของทีมตัวเอง ยิ่งอาณาจักรใหญ่ รายได้ยิ่งเดินเองทุกวันโดยไม่ต้องรอรอบบิล
+      เงื่อนไขทุกข้อเขียนไว้อ่านง่าย ไม่มีบรรทัดเล็ก ๆ ซ่อนไว้ให้ต้องมาเพ่งทีหลัง และถ้าตรงไหนยังสงสัย ทักถามทีมงานได้ตลอด 24 ชั่วโมง
     </p>
 
-    <h2 class="mt-10 mb-4 text-2xl leading-normal font-bold text-[#e8a13c]">เว็บตรงลิขสิทธิ์แท้ 100% อัตราจ่ายสูง ไม่ปรับเรทหลังบ้าน</h2>
+    <h2 class="mt-10 mb-4 text-2xl leading-normal font-bold text-[#2fe35f]">เกมแท้ส่งตรงจากค่ายแม่ ไม่ปรับ RTP ไม่ล็อกยูส</h2>
 
-    <p class="mb-8 text-left text-base leading-relaxed text-[#f1e6d3]">
-      <strong class="text-[#f7cf8a]">GODDUBAI</strong> นำเข้าระบบ API แท้ส่งตรงจากค่ายเกมยักษ์ใหญ่ทั่วโลก แสดงผลลัพธ์มาที่หน้าจอคุณโดยไม่ผ่านเอเย่นต์คนกลาง
-      ความเสถียรจึงเปรียบเหมือนถนนไฮเวย์ในดูไบที่เรียบกริบ ไม่มีสะดุด ไม่มีกระตุก ค่า
-      <strong class="text-[#f7cf8a]">RTP</strong> ของทุกเกมเป็นไปตามมาตรฐานสากล ไม่แต่ง ไม่ปรับ ไม่ลด
-      เราไม่มีการปรับแต่งค่าใด ๆ หลังบ้าน ทุกการสปินจึงขาวสะอาดและตรวจสอบได้จริง อัตราจ่ายไหลดีเหมือนเจอบ่อน้ำมันส่วนตัว
+    <p class="mb-8 text-left text-base leading-relaxed text-[#ddf3e2]">
+      เกมสล็อตทุกเกมของ <strong class="text-[#7bff9f]">GODKINGKONG</strong> ส่งตรงผ่าน API จากค่ายแม่ตัวจริง ไม่ใช่ของก๊อป ไม่ผ่านเอเย่นต์คนกลาง
+      เราไม่มีการดัดแปลงค่า <strong class="text-[#7bff9f]">RTP</strong> ใด ๆ ทั้งสิ้น สถิติการแตกจึงตรงตามต้นฉบับที่ค่ายผู้พัฒนาตั้งมา
+      ค่ายที่คัดมาก็เน้น ๆ ระดับ God Tier ทั้ง PG SOFT ที่ภาพสวยฟีเจอร์แน่น Pragmatic Play สำหรับสายซื้อฟรีสปินลุ้นตัวคูณโหด ๆ
+      และคู่คลาสสิกอย่าง Joker กับ SlotXO ที่แตกทีมีสะดุ้ง ทั้งหมดอยู่ในยูสเซอร์เดียว ไม่ต้องโยกเงินไปมาให้ปวดหัว
     </p>
 
-    <h2 class="mt-10 mb-4 text-2xl leading-normal font-bold text-[#e8a13c]">ฝากถอนไม่มีขั้นต่ำ ระบบออโต้ 1-3 วินาที รองรับทุกช่องทาง</h2>
+    <h2 class="mt-10 mb-4 text-2xl leading-normal font-bold text-[#2fe35f]">ฝากถอนออโต้ 3-5 วินาที รองรับวอเล็ทไม่มีขั้นต่ำ</h2>
 
-    <p class="mb-5 text-left text-base leading-relaxed text-[#f1e6d3]">
-      แม้ภาพลักษณ์ของเราจะดูหรูหรา แต่เราเปิดกว้างให้ทุกคนเข้าถึงได้โดยไม่แบ่งชนชั้น มีเงินติดบัญชีแค่ 1 บาทก็ฝากเข้ามาเริ่มเล่นได้
-      ถอนเท่าไหร่ก็ถอนได้เต็มจำนวน ไม่มีหัก ไม่มีค่าบริการ คุณบริหารเงินหน้าตักได้อย่างอิสระ อยากฝากเท่าไหร่ อยากถอนตอนไหน จัดการเองได้ 100%
-      โดยไม่มีเงื่อนไขผูกมัดให้ปวดหัว
+    <p class="mb-5 text-left text-base leading-relaxed text-[#ddf3e2]">
+      ผู้เล่นยุคนี้เลือกวอเล็ทมากกว่าธนาคาร เราจึงรองรับทั้ง True Wallet และ Mobile Banking พร้อมเพย์ ทุกช่องทางวิ่งเร็วเท่ากัน
+      ไม่มีช่องทางไหนถูกลดความสำคัญ และไม่มีขั้นต่ำผูกไว้ด้วย มีเงินติดวอเล็ทแค่ 1 บาทก็เข้ามาเป็นสมาชิกและรับสิทธิ์โปรโมชั่นได้เหมือนกันทุกคน
     </p>
 
-    <p class="mb-8 text-left text-base leading-relaxed text-[#f1e6d3]">
-      ชีวิตเศรษฐีนั้นเวลาเป็นเงินเป็นทอง ระบบฝากถอนของเราจึงใช้เทคโนโลยี Auto High-Speed เวอร์ชันล่าสุด ประมวลผลยอดเงินเฉลี่ยเพียง 1-3 วินาที
-      เร็วกว่ารถสปอร์ตออกตัว ไม่ว่าจะใช้บัญชีธนาคารชั้นนำหรือทรูมันนี่วอลเล็ท ระบบของเรารองรับครบถ้วน ทำรายการได้ตลอด 24 ชั่วโมง
-      โดยไม่ต้องส่งสลิปให้แอดมินดู เงินเข้าปุ๊บเล่นต่อได้ปั๊บ
+    <p class="mb-8 text-left text-base leading-relaxed text-[#ddf3e2]">
+      ทุกรายการฝากถอนทำงานแบบออโต้ฉับไว เงินเข้าออกไม่เกิน 3-5 วินาที ไม่ต้องส่งสลิป ไม่ต้องทักตามเงิน ไม่มีการดองยอดและไม่มีข้ออ้าง
+      สมัครก็ง่ายเหมือนดีดนิ้ว กรอกข้อมูลที่จำเป็นไม่กี่อย่าง ตั้งรหัส แล้วเลือกวิธีฝาก ไม่ต้องส่งบัตรประชาชน ไม่ต้องถ่ายรูปหน้า
+      เรายืนยันตามสไตล์เจ้าป่าว่าเล่นได้เท่าไหร่ จ่ายเท่านั้น ไม่ต่อ ไม่กั๊ก ไม่โม้
     </p>
 
     <div class="grid w-full grid-cols-1 gap-6 sm:grid-cols-2">
       <Picture
         src={pro1}
-        alt="แบนเนอร์พื้นไล่สีน้ำตาลทอง ข้อความ COMMISSION คืนทุกยอดเล่นตลอดทั้งวัน 0.3% เล่นถึง 50% ถอนได้เลย มุมภาพเป็นโลโก้ GOD DUBAI รูปเส้นขอบฟ้าตึกระฟ้า ด้านข้างเป็นพรีเซ็นเตอร์หญิงชุดราตรีสีทองแดง"
+        alt="แบนเนอร์โปรโมชั่นพื้นป่าเขียวนีออน ข้อความ แนะนำเพื่อน รับโบนัส 0.8% สร้างรายได้ 100,000 ต่อเดือน มุมซ้ายบนเป็นโลโก้ godking kong รูปหัวกอริลลาสวมมงกุฎทอง ด้านขวาเป็นพรีเซ็นเตอร์หญิงชุดเลื่อมสีทอง มีเหรียญทองลอยรอบภาพ"
         loading="lazy"
         fetchpriority="low"
         widths={[200, 400, 600, 800]}
         sizes="(max-width: 768px) 100vw, 50vw"
-        class="mx-auto h-auto w-full rounded-xl border border-[#e8a13c]/25 object-contain shadow-[0_10px_30px_rgba(232,161,60,0.14)] transition-transform duration-300 hover:-translate-y-1 hover:border-[#0f8f57]/60 hover:shadow-[0_15px_40px_rgba(15,143,87,0.28)]"
+        class="mx-auto h-auto w-full rounded-xl border border-[#2fe35f]/30 object-contain shadow-[0_10px_30px_rgba(47,227,95,0.18)] transition-transform duration-300 hover:-translate-y-1 hover:border-[#f0c43a]/60 hover:shadow-[0_15px_40px_rgba(240,196,58,0.28)]"
         decoding="async"
         formats={["avif", "webp"]}
         fallbackFormat="webp"
@@ -85,12 +87,12 @@ const graph = pageGraph(Astro, {
 
       <Picture
         src={pro2}
-        alt="แบนเนอร์ข้อความ แนะนำเพื่อน รับโบนัส 0.8% สร้างรายได้ 100,000 ต่อเดือน ด้านข้างเป็นพรีเซ็นเตอร์หญิงชุดสีโรสโกลด์ถือไพ่คลี่เป็นพัด พื้นหลังไล่สีทองประกาย"
+        alt="แบนเนอร์โปรโมชั่นพื้นป่าเขียวนีออน ข้อความ COMMISSION คืนทุกยอดเล่นตลอดทั้งวัน 0.3% เล่นถึง 50% ถอนได้เลย รับสิทธิ์ก่อน 23.59 น. ของทุกวัน ยิ่งเล่นเยอะยิ่งได้เยอะ ด้านซ้ายเป็นพรีเซ็นเตอร์หญิงถือไพ่คลี่เป็นพัด ถัดมาเป็นโลโก้ godking kong หัวกอริลลาสวมมงกุฎทอง"
         loading="lazy"
         fetchpriority="low"
         widths={[200, 400, 600, 800]}
         sizes="(max-width: 768px) 100vw, 50vw"
-        class="mx-auto h-auto w-full rounded-xl border border-[#e8a13c]/25 object-contain shadow-[0_10px_30px_rgba(232,161,60,0.14)] transition-transform duration-300 hover:-translate-y-1 hover:border-[#0f8f57]/60 hover:shadow-[0_15px_40px_rgba(15,143,87,0.28)]"
+        class="mx-auto h-auto w-full rounded-xl border border-[#2fe35f]/30 object-contain shadow-[0_10px_30px_rgba(47,227,95,0.18)] transition-transform duration-300 hover:-translate-y-1 hover:border-[#f0c43a]/60 hover:shadow-[0_15px_40px_rgba(240,196,58,0.28)]"
         decoding="async"
         formats={["avif", "webp"]}
         fallbackFormat="webp"
@@ -99,12 +101,12 @@ const graph = pageGraph(Astro, {
 
       <Picture
         src={pro3}
-        alt="แบนเนอร์ปุ่มเมนูสี่ปุ่มเรียงซ้อนกัน หวย บอล บาคาร่า และสล็อต พร้อมข้อความ ครบจบในที่เดียว เป็นตัวอักษรสีเขียวมรกต มุมขวาบนเป็นโลโก้ GOD DUBAI"
+        alt="แบนเนอร์อัตราจ่ายหวยพื้นป่าเขียวนีออน ข้อความ หวย อัตราจ่ายที่ดีที่สุด สามตัว บาทละ 1000 และ สองตัว บาทละ 100 ถูกตรง จ่ายจริง รับเงินรางวัลหลักล้าน พร้อมบรรทัด ครบจบเรื่องหวยในเว็บเดียว รัฐบาล ลาว ฮานอย หุ้น ยี่กี มุมขวาบนเป็นโลโก้ godking kong หัวกอริลลาสวมมงกุฎทอง"
         loading="lazy"
         fetchpriority="low"
         widths={[200, 400, 600, 800]}
         sizes="(max-width: 768px) 100vw, 50vw"
-        class="mx-auto h-auto w-full rounded-xl border border-[#e8a13c]/25 object-contain shadow-[0_10px_30px_rgba(232,161,60,0.14)] transition-transform duration-300 hover:-translate-y-1 hover:border-[#0f8f57]/60 hover:shadow-[0_15px_40px_rgba(15,143,87,0.28)]"
+        class="mx-auto h-auto w-full rounded-xl border border-[#2fe35f]/30 object-contain shadow-[0_10px_30px_rgba(47,227,95,0.18)] transition-transform duration-300 hover:-translate-y-1 hover:border-[#f0c43a]/60 hover:shadow-[0_15px_40px_rgba(240,196,58,0.28)]"
         decoding="async"
         formats={["avif", "webp"]}
         fallbackFormat="webp"
@@ -113,12 +115,12 @@ const graph = pageGraph(Astro, {
 
       <Picture
         src={pro4}
-        alt="แบนเนอร์พื้นสีครีมสลับทอง ข้อความ หวย อัตราจ่ายที่ดีที่สุด สามตัว บาทละ 1000 และ สองตัว บาทละ 100 ประดับด้วยลวดลายทองโดยรอบ"
+        alt="แบนเนอร์ปุ่มเมนูสี่ปุ่มเรียงซ้อนกัน หวย บอล บาคาร่า และสล็อต พร้อมข้อความ ครบจบในที่เดียว ตัวอักษรสีเขียวนีออน ใต้ภาพเป็นแถบรายการ บอล คาสิโน สล็อต ยิงปลา ไก่ชน มวย ไฮโล รูเล็ต ด้านขวาเป็นพรีเซ็นเตอร์หญิงถือไพ่ ถัดมาเป็นโลโก้ godking kong หัวกอริลลาสวมมงกุฎทอง"
         loading="lazy"
         fetchpriority="low"
         widths={[200, 400, 600, 800]}
         sizes="(max-width: 768px) 100vw, 50vw"
-        class="mx-auto h-auto w-full rounded-xl border border-[#e8a13c]/25 object-contain shadow-[0_10px_30px_rgba(232,161,60,0.14)] transition-transform duration-300 hover:-translate-y-1 hover:border-[#0f8f57]/60 hover:shadow-[0_15px_40px_rgba(15,143,87,0.28)]"
+        class="mx-auto h-auto w-full rounded-xl border border-[#2fe35f]/30 object-contain shadow-[0_10px_30px_rgba(47,227,95,0.18)] transition-transform duration-300 hover:-translate-y-1 hover:border-[#f0c43a]/60 hover:shadow-[0_15px_40px_rgba(240,196,58,0.28)]"
         decoding="async"
         formats={["avif", "webp"]}
         fallbackFormat="webp"
@@ -129,8 +131,8 @@ const graph = pageGraph(Astro, {
     <div class="mt-12 flex justify-center pb-4">
       <a
         href="/register"
-        class="flex items-center justify-center rounded-lg border border-[#e8a13c]/60 bg-gradient-to-r from-[#f7cf8a] via-[#e8a13c] to-[#a8611a] px-10 py-3.5 text-lg font-black text-[#091310] shadow-[0_10px_30px_rgba(232,161,60,0.18)] transition-transform hover:scale-105 hover:shadow-[0_15px_40px_rgba(232,161,60,0.32)]">
-        สมัครสมาชิก GODDUBAI
+        class="flex items-center justify-center rounded-lg border border-[#2fe35f]/60 bg-gradient-to-r from-[#7bff9f] via-[#2fe35f] to-[#0b6b34] px-10 py-3.5 text-lg font-black text-[#04170b] shadow-[0_10px_30px_rgba(47,227,95,0.20)] transition-transform hover:scale-105 hover:shadow-[0_15px_40px_rgba(47,227,95,0.34)]">
+        สมัครสมาชิก GODKINGKONG
       </a>
     </div>
   </ContentBox>

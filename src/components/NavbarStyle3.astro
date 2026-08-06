@@ -9,42 +9,46 @@ const mainLogo = imagePaths.length > 0 ? images[imagePaths[0]].default : null;
 const currentPath = Astro.url.pathname;
 
 const isActive = (path: string) => isActivePath(currentPath, path);
+
+const links = [
+  { name: "หน้าแรก", path: "/", icon: "🏠" },
+  { name: "โปรโมชั่น", path: "/promotion", icon: "🎁" },
+  { name: "ทดลองเล่น", path: "/ทดลองเล่น", icon: "🎰" },
+  { name: "ทางเข้า", path: "/ทางเข้า", icon: "🌿" },
+  { name: "เกี่ยวกับเรา", path: "/about-us", icon: "🦍" },
+  { name: "ติดต่อเรา", path: "/contact-us", icon: "💬" },
+];
 ---
 
-<!-- No filter (drop-shadow/blur) on this header: a filtered ancestor becomes the
-     containing block for its position:fixed descendants, which would clamp the
-     fullscreen mobile menu below to the header's own 70px box instead of the
-     viewport. The nav pill carries its own box-shadow, so nothing is lost. -->
 <header class="sticky top-4 z-50 w-full px-4 font-sans">
   <nav
-    class="mx-auto flex h-[70px] w-full max-w-7xl items-center justify-between rounded-full border border-amber-600/25 bg-[#fdfaf1]/95 px-6 shadow-[0_8px_24px_rgba(168,132,44,0.18)] backdrop-blur-md xl:px-8">
+    class="mx-auto flex h-[70px] w-full max-w-7xl items-center justify-between rounded-full border border-[#2fe35f]/35 bg-[#0a1a10]/95 px-6 shadow-[0_8px_24px_rgba(47,227,95,0.22)] backdrop-blur-md xl:px-8">
     <a href="/" class="z-50 flex-shrink-0 transition-transform hover:scale-105">
       <Picture
         src={mainLogo!}
-        alt="WINUP888 คาสิโนบนมือถือ"
+        alt="โลโก้ GODKINGKONG หัวกอริลลาสวมมงกุฎทองบนตัวอักษรสีทองคำว่า godking kong"
+        widths={[120, 240, 360]}
+        sizes="120px"
         loading="eager"
         fetchpriority="high"
-        class="h-[35px] w-auto drop-shadow-[0_2px_6px_rgba(168,132,44,0.35)] xl:h-[40px]"
+        class="h-[35px] w-auto drop-shadow-[0_2px_8px_rgba(47,227,95,0.45)] xl:h-[40px]"
         formats={["avif", "webp"]}
         fallbackFormat="webp"
       />
     </a>
 
-    <div class="hidden h-full items-center gap-6 lg:flex xl:gap-10">
+    <div class="hidden h-full items-center gap-6 lg:flex xl:gap-9">
       {
-        [
-          { name: "หน้าแรก", path: "/" },
-          { name: "โปรโมชั่น", path: "/promotion" },
-          { name: "ทดลองเล่น", path: "/ทดลองเล่น" },
-          { name: "ทางเข้า", path: "/ทางเข้า" },
-          { name: "ติดต่อเรา", path: "/contact-us" },
-        ].map((item) => (
+        links.map((item) => (
           <a
             href={item.path}
-            class={`group relative flex h-full items-center text-sm font-bold transition-colors xl:text-base ${isActive(item.path) ? "text-[#8a6410]" : "text-[#5c4b2a] hover:text-[#8a6410]"}`}>
+            class={`group relative flex h-full items-center gap-1.5 text-sm font-bold transition-colors xl:text-base ${isActive(item.path) ? "text-[#2fe35f]" : "text-[#ddf3e2] hover:text-[#7bff9f]"}`}>
+            <span aria-hidden="true" class="text-base">
+              {item.icon}
+            </span>
             <span>{item.name}</span>
             <div
-              class={`absolute bottom-[15px] left-0 h-[3px] w-full origin-left rounded-full bg-gradient-to-r from-[#e8cf8b] to-[#a97f2a] transition-transform duration-300 ${isActive(item.path) ? "scale-x-100" : "scale-x-0 group-hover:scale-x-100"}`}
+              class={`absolute bottom-[15px] left-0 h-[3px] w-full origin-left rounded-full bg-gradient-to-r from-[#2fe35f] to-[#f0c43a] transition-transform duration-300 ${isActive(item.path) ? "scale-x-100" : "scale-x-0 group-hover:scale-x-100"}`}
             />
           </a>
         ))
@@ -54,36 +58,33 @@ const isActive = (path: string) => isActivePath(currentPath, path);
     <div class="z-50 flex items-center gap-3">
       <a
         href="/login"
-        class="hidden items-center justify-center rounded-full border border-[#c9a227]/60 bg-[#fffdf7] px-5 py-2 text-sm font-bold text-[#8a6410] transition-all hover:bg-[#faf4e6] lg:flex">
-        เข้าสู่ระบบ
+        class="hidden items-center justify-center gap-1.5 rounded-full border border-[#2fe35f]/60 bg-[#0c1f13] px-5 py-2 text-sm font-bold text-[#7bff9f] transition-all hover:bg-[#0d4a26] lg:flex">
+        <span aria-hidden="true">🔒</span> เข้าสู่ระบบ
       </a>
       <a
         href="/register"
-        class="hidden items-center justify-center rounded-full bg-gradient-to-r from-[#f4dfa3] via-[#d9b45c] to-[#a97f2a] px-6 py-2 text-sm font-extrabold text-[#231a06] shadow-[0_4px_14px_rgba(168,132,44,0.35)] transition-all hover:scale-105 lg:flex">
-        สมัครสมาชิก
+        class="hidden items-center justify-center gap-1.5 rounded-full bg-gradient-to-r from-[#7bff9f] via-[#2fe35f] to-[#0b6b34] px-6 py-2 text-sm font-extrabold text-[#04170b] shadow-[0_4px_14px_rgba(47,227,95,0.4)] transition-all hover:scale-105 lg:flex">
+        <span aria-hidden="true">👑</span> สมัครสมาชิก
       </a>
 
-      <button id="hamburger-btn" class="relative flex h-[40px] w-[40px] flex-col items-end justify-center gap-[6px] p-2 lg:hidden" aria-label="Menu">
-        <span class="line-1 h-[2px] w-6 origin-center rounded-full bg-[#a97f2a] shadow-sm transition-all duration-300"></span>
-        <span class="line-2 h-[2px] w-4 origin-center rounded-full bg-[#a97f2a] shadow-sm transition-all duration-300"></span>
+      <button id="hamburger-btn" class="relative flex h-[40px] w-[40px] flex-col items-end justify-center gap-[6px] p-2 lg:hidden" aria-label="เปิดเมนู">
+        <span class="line-1 h-[2px] w-6 origin-center rounded-full bg-[#2fe35f] shadow-sm transition-all duration-300"></span>
+        <span class="line-2 h-[2px] w-4 origin-center rounded-full bg-[#f0c43a] shadow-sm transition-all duration-300"></span>
       </button>
     </div>
   </nav>
 
-  <div id="fullscreen-menu" class="pointer-events-none fixed inset-0 z-[60] flex flex-col items-center justify-center bg-[#fbf6e9]/98 opacity-0 backdrop-blur-2xl transition-opacity duration-500">
-    <div class="flex w-full flex-col items-center space-y-6 px-6">
+  <div id="fullscreen-menu" class="pointer-events-none fixed inset-0 z-[60] flex flex-col items-center justify-center bg-[#050f09]/98 opacity-0 backdrop-blur-2xl transition-opacity duration-500">
+    <div class="flex w-full flex-col items-center space-y-5 px-6">
       {
-        [
-          { name: "หน้าแรก", path: "/" },
-          { name: "โปรโมชั่น", path: "/promotion" },
-          { name: "ทดลองเล่น", path: "/ทดลองเล่น" },
-          { name: "ทางเข้า", path: "/ทางเข้า" },
-          { name: "ติดต่อเรา", path: "/contact-us" },
-        ].map((item) => (
+        links.map((item) => (
           <a
             href={item.path}
-            class={`fs-item text-3xl font-black tracking-widest uppercase transition-all duration-300 ${isActive(item.path) ? "text-[#8a6410]" : "text-[#3a2e18] hover:text-[#8a6410]"}`}>
-            {item.name}
+            class={`fs-item flex items-center gap-3 text-2xl font-black tracking-widest uppercase transition-all duration-300 ${isActive(item.path) ? "text-[#2fe35f]" : "text-[#ddf3e2] hover:text-[#7bff9f]"}`}>
+            <span aria-hidden="true" class="text-2xl">
+              {item.icon}
+            </span>
+            <span>{item.name}</span>
           </a>
         ))
       }
@@ -91,13 +92,13 @@ const isActive = (path: string) => isActivePath(currentPath, path);
       <div class="fs-item mt-4 flex w-full max-w-[250px] flex-col gap-4 pt-8">
         <a
           href="/register"
-          class="flex w-full items-center justify-center rounded-full bg-gradient-to-r from-[#f4dfa3] via-[#d9b45c] to-[#a97f2a] py-3.5 text-lg font-extrabold text-[#231a06] shadow-[0_6px_20px_rgba(168,132,44,0.35)]">
-          สมัครสมาชิก
+          class="flex w-full items-center justify-center gap-2 rounded-full bg-gradient-to-r from-[#7bff9f] via-[#2fe35f] to-[#0b6b34] py-3.5 text-lg font-extrabold text-[#04170b] shadow-[0_6px_20px_rgba(47,227,95,0.4)]">
+          <span aria-hidden="true">👑</span> สมัครสมาชิก
         </a>
         <a
           href="/login"
-          class="flex w-full items-center justify-center rounded-full border-2 border-[#c9a227]/60 bg-[#fffdf7] py-3.5 text-lg font-bold text-[#8a6410] transition-colors hover:bg-[#f4ecd8]">
-          เข้าสู่ระบบ
+          class="flex w-full items-center justify-center gap-2 rounded-full border-2 border-[#2fe35f]/60 bg-[#0c1f13] py-3.5 text-lg font-bold text-[#7bff9f] transition-colors hover:bg-[#0d4a26]">
+          <span aria-hidden="true">🔒</span> เข้าสู่ระบบ
         </a>
       </div>
     </div>
@@ -105,10 +106,6 @@ const isActive = (path: string) => isActivePath(currentPath, path);
 </header>
 
 <style is:global>
-  nav,
-  header {
-    font-family: var(--font-sans);
-  }
   #hamburger-btn.active .line-1 {
     transform: translateY(4px) rotate(45deg);
   }
@@ -142,7 +139,17 @@ const isActive = (path: string) => isActivePath(currentPath, path);
     transition-delay: 0.3s;
   }
   .fs-item:nth-child(6) {
+    transition-delay: 0.35s;
+  }
+  .fs-item:nth-child(7) {
     transition-delay: 0.4s;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .fs-item {
+      transition: none;
+      opacity: 1;
+      transform: none;
+    }
   }
 </style>
 

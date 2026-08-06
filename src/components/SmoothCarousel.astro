@@ -3,25 +3,15 @@ import { Picture } from "astro:assets";
 
 import slide1 from "../assets/slide1.png";
 import slide2 from "../assets/slide2.png";
-import slide3 from "../assets/slide3.png";
-import slide4 from "../assets/slide4.png";
 
 const images = [
   {
     src: slide1,
-    alt: "โปรโมชั่น GODDUBAI คำว่า COMMISSION สีขาว ใต้ลงมาเขียนว่า คืนทุกยอดเล่นตลอดทั้งวัน และตัวเลข 0.3% สีเขียวมรกตขนาดใหญ่บนแผ่นป้ายสีน้ำตาลทอง ถัดลงมาเขียนว่า เล่นถึง 50% ถอนได้เลย รับสิทธิ์ก่อน 23.59 น. ของทุกวัน และ ยิ่งเล่นเยอะ ยิ่งได้เยอะ มุมขวาบนเป็นโลโก้ GOD DUBAI รูปเส้นขอบฟ้าตึกดูไบสีดำบนดวงอาทิตย์สีส้ม ด้านซ้ายเป็นพรีเซนเตอร์หญิงผมสีเงินถือเหรียญทอง",
+    alt: "โปรโมชั่น GODKINGKONG ข้อความสีขาวว่า แนะนำเพื่อน รับโบนัส และตัวเลข 0.8% ขนาดใหญ่ขอบสีเขียวนีออนบนแผ่นป้ายสีดำ ใต้ลงมาเขียนว่า สร้างรายได้ 100,000 ต่อเดือน มุมซ้ายบนเป็นโลโก้ godking kong รูปหัวกอริลลาสวมมงกุฎทอง ด้านขวาเป็นพรีเซนเตอร์หญิงชุดเลื่อมสีทอง ฉากหลังเป็นป่าสีเขียวนีออนและเหรียญทองปลิว",
   },
   {
     src: slide2,
-    alt: "โปรโมชั่น GODDUBAI ข้อความสีขาวว่า แนะนำเพื่อนรับโบนัส และตัวเลข 0.8% สีเขียวมรกตขนาดใหญ่บนแผ่นป้ายสีน้ำตาลทอง ใต้ตัวเลขเขียนว่า สร้างรายได้ 100,000 ต่อเดือน มุมซ้ายบนเป็นโลโก้ GOD DUBAI รูปเส้นขอบฟ้าตึกดูไบสีดำบนดวงอาทิตย์สีส้ม ด้านขวาเป็นพรีเซนเตอร์หญิงผมบลอนด์ถือไพ่โพดำสี่ใบ",
-  },
-  {
-    src: slide3,
-    alt: "แบนเนอร์ GODDUBAI ป้ายสี่เหลี่ยมสีน้ำตาลทองเรียงลงมาด้านซ้ายเขียนว่า หวย บอล บาคาร่า สล็อต ด้านล่างเป็นข้อความสีเขียวมรกตว่า ครบจบในที่เดียว แถบล่างสุดไล่รายการ บอล คาสิโน สล็อต ยิงปลา ไก่ชน มวย ไฮโล รูเล็ต มุมขวาบนเป็นโลโก้ GOD DUBAI รูปเส้นขอบฟ้าตึกดูไบสีดำบนดวงอาทิตย์สีส้ม ตรงกลางเป็นพรีเซนเตอร์หญิงผมดำถือไพ่สองใบ",
-  },
-  {
-    src: slide4,
-    alt: "แบนเนอร์ GODDUBAI ข้อความสีเขียวมรกตว่า หวย และข้อความสีขาวว่า อัตราจ่ายที่ดีที่สุด บนแผ่นป้ายสีน้ำตาลทองเขียนว่า 3 ตัวบาทละ 1000 และ 2 ตัวบาทละ 100 ใต้ลงมาเขียนว่า ถูกตรง จ่ายจริง รับเงินรางวัลหลักล้าน และ ครบจบเรื่องหวยในเว็บเดียว รัฐบาล ลาว ฮานอย หุ้น ยี่กี มุมขวาบนเป็นโลโก้ GOD DUBAI รูปเส้นขอบฟ้าตึกดูไบสีดำบนดวงอาทิตย์สีส้ม ด้านซ้ายเป็นพรีเซนเตอร์หญิงผมบลอนด์",
+    alt: "โปรโมชั่น GODKINGKONG คำว่า COMMISSION สีขาว ใต้ลงมาเขียนว่า คืนทุกยอดเล่นตลอดทั้งวัน และตัวเลข 0.3% สีเขียวนีออนขนาดใหญ่บนแผ่นป้ายสีดำ ถัดลงมาเขียนว่า เล่นถึง 50% ถอนได้เลย รับสิทธิ์ก่อน 23.59 น. ของทุกวัน และ ยิ่งเล่นเยอะ ยิ่งได้เยอะ ด้านบนเป็นโลโก้ godking kong รูปหัวกอริลลาสวมมงกุฎทอง ด้านซ้ายเป็นพรีเซนเตอร์หญิงถือไพ่สี่ใบ ฉากหลังเป็นป่าสีเขียวนีออน",
   },
 ];
 
@@ -29,11 +19,11 @@ const COPIES = 3;
 const slides = Array.from({ length: COPIES }, () => images).flat();
 ---
 
-<div class="marquee mx-auto w-full max-w-[1301px] overflow-hidden px-4 py-5">
+<div class="marquee mx-auto w-full max-w-3xl overflow-hidden px-4 py-5">
   <input id="carousel-pause" type="checkbox" class="peer sr-only" />
   <label
     for="carousel-pause"
-    class="sr-only cursor-pointer peer-focus-visible:not-sr-only peer-focus-visible:mb-3 peer-focus-visible:inline-block peer-focus-visible:rounded-full peer-focus-visible:border peer-focus-visible:border-[#e8a13c]/60 peer-focus-visible:px-4 peer-focus-visible:py-2 peer-focus-visible:text-sm peer-focus-visible:font-bold peer-focus-visible:text-[#f7cf8a]">
+    class="sr-only cursor-pointer peer-focus-visible:not-sr-only peer-focus-visible:mb-3 peer-focus-visible:inline-block peer-focus-visible:rounded-full peer-focus-visible:border peer-focus-visible:border-[#2fe35f]/60 peer-focus-visible:px-4 peer-focus-visible:py-2 peer-focus-visible:text-sm peer-focus-visible:font-bold peer-focus-visible:text-[#7bff9f]">
     หยุด / เล่นสไลด์ภาพ
   </label>
 
@@ -46,14 +36,14 @@ const slides = Array.from({ length: COPIES }, () => images).flat();
             <Picture
               src={slide.src}
               alt={isDuplicate ? "" : slide.alt}
-              class="block w-full rounded-xl border border-[#e8a13c]/25 object-cover shadow-[0_10px_30px_rgba(15,143,87,0.22)]"
+              class="block w-full rounded-xl border border-[#2fe35f]/25 object-cover shadow-[0_10px_30px_rgba(47,227,95,0.18)]"
               width={slide.src.width}
               height={slide.src.height}
               loading="lazy"
               fetchpriority="low"
               decoding="async"
-              widths={[200, 400, 600]}
-              sizes="(max-width: 768px) 50vw, 33vw"
+              widths={[300, 360, 540, 720]}
+              sizes="(max-width: 767px) calc(100vw - 32px), 360px"
               formats={["avif", "webp"]}
               fallbackFormat="webp"
               quality={60}
@@ -68,22 +58,22 @@ const slides = Array.from({ length: COPIES }, () => images).flat();
 <style>
   .marquee {
     --gap: 12px;
-    --per-view: 2;
+    --per-view: 1;
     --shift: calc(-200% - 24px);
   }
 
   @media (min-width: 768px) {
     .marquee {
       --gap: 16px;
-      --per-view: 3;
-      --shift: calc(-133.3333% - 21.3333px);
+      --per-view: 2;
+      --shift: calc(-100% - 16px);
     }
   }
 
   .marquee-track {
     gap: var(--gap);
     width: 100%;
-    animation: carousel-scroll 32s linear infinite;
+    animation: carousel-scroll 24s linear infinite;
     will-change: transform;
   }
 

@@ -1,57 +1,57 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
-import AnnouncementPremium from "../components/AnnouncementPremium.astro";
-import ContentBoxPremium from "../components/ContentBoxPremium.astro";
-import ContentBoxNeumorphism from "../components/ContentBoxNeumorphism.astro";
-import ContentBoxSpecial from "../components/ContentBoxSpecial.astro";
-import ContentBoxTwoPremium from "../components/ContentBoxTwoPremium.astro";
-import ContentBoxSevenThreePremium from "../components/ContentBoxSevenThreePremium.astro";
-import ContentBoxSevenThreeNeumorphism from "../components/ContentBoxSevenThreeNeumorphism.astro";
+import AnnouncementCyber from "../components/AnnouncementCyber.astro";
+import ContentBoxCyberCut from "../components/ContentBoxCyberCut.astro";
+import ContentBox from "../components/ContentBox.astro";
+import ContentBoxFloatingBadge from "../components/ContentBoxFloatingBadge.astro";
+import ContentBoxTwoCyberCut from "../components/ContentBoxTwoCyberCut.astro";
+import ContentBoxSevenThreeCyberCut from "../components/ContentBoxSevenThreeCyberCut.astro";
+import ContentBoxSevenThreeFloatingBadge from "../components/ContentBoxSevenThreeFloatingBadge.astro";
 import LoginRtpSection from "../components/LoginRtpSection.astro";
 import ProviderGrid from "../components/ProviderGrid.astro";
 import GameRankingBoard from "../components/GameRankingBoard.astro";
 import ReviewCardSumo2 from "../components/ReviewCardSumo2.astro";
-import LatestWinners3 from "../components/LatestWinners3.astro";
+import LatestWinners4 from "../components/LatestWinners4.astro";
 import SmoothCarousel from "../components/SmoothCarousel.astro";
-import Faq3 from "../components/Faq3.astro";
+import Faq4 from "../components/Faq4.astro";
 import Navfoot from "../components/Navfoot.astro";
 
 import { Picture } from "astro:assets";
 import { pageGraph } from "../lib/schema";
-import imgCommission from "../assets/slide1.png";
-import imgAllInOne from "../assets/slide3.png";
+import imgReferral from "../assets/slide1.png";
+import imgCommission from "../assets/slide2.png";
 
-const pageTitle = "GODDUBAI สล็อตเว็บตรงระดับสุลต่าน ไม่มีขั้นต่ำ แตกหนัก อัตราจ่ายสูง";
+const pageTitle = "GODKINGKONG เว็บตรงเกมสล็อตแตกหนัก โบนัสแรง จ่ายจริงทุกยอด";
 
 const pageDescription =
-  "GODDUBAI สล็อตเว็บตรงระดับสุลต่าน แท้100% ที่รวยและแฟร์ที่สุด แตกหนัก อัตราจ่ายสูง ฝากถอนไม่มีขั้นต่ำ ระบบ Auto ไวใน 3 วินาที รองรับทุกช่องทาง ปลอดภัยระดับ VIP";
+  "GODKINGKONG เว็บตรงเกมสล็อตแตกหนัก รวมค่ายสล็อตแตกง่าย กล้าให้ โบนัสแรง จ่ายจริงทุกยอด รองรับวอเล็ทไม่มีขั้นต่ำ ฝากถอนออโต้ 3 วินาที สมัครง่ายเหมือนดีดนิ้ว";
+
+const referralAlt =
+  "โปรโมชั่น GODKINGKONG ข้อความสีขาวว่า แนะนำเพื่อน รับโบนัส และตัวเลข 0.8% ขนาดใหญ่ขอบสีเขียวนีออนบนแผ่นป้ายสีดำ ใต้ลงมาเขียนว่า สร้างรายได้ 100,000 ต่อเดือน มุมซ้ายบนเป็นโลโก้ godking kong รูปหัวกอริลลาสวมมงกุฎทอง ด้านขวาเป็นพรีเซนเตอร์หญิงชุดเลื่อมสีทอง ฉากหลังเป็นป่าสีเขียวนีออนและเหรียญทองปลิว";
 
 const commissionAlt =
-  "โปรโมชั่น GODDUBAI คำว่า COMMISSION สีขาว ใต้ลงมาเขียนว่า คืนทุกยอดเล่นตลอดทั้งวัน และตัวเลข 0.3% สีเขียวมรกตขนาดใหญ่บนแผ่นป้ายสีน้ำตาลทอง ถัดลงมาเขียนว่า เล่นถึง 50% ถอนได้เลย รับสิทธิ์ก่อน 23.59 น. ของทุกวัน และ ยิ่งเล่นเยอะ ยิ่งได้เยอะ มุมขวาบนเป็นโลโก้ GOD DUBAI รูปเส้นขอบฟ้าตึกดูไบสีดำบนดวงอาทิตย์สีส้ม ด้านซ้ายเป็นพรีเซนเตอร์หญิงผมสีเงินถือเหรียญทอง";
-
-const allInOneAlt =
-  "แบนเนอร์ GODDUBAI ป้ายสี่เหลี่ยมสีน้ำตาลทองเรียงลงมาด้านซ้ายเขียนว่า หวย บอล บาคาร่า สล็อต ด้านล่างเป็นข้อความสีเขียวมรกตว่า ครบจบในที่เดียว แถบล่างสุดไล่รายการ บอล คาสิโน สล็อต ยิงปลา ไก่ชน มวย ไฮโล รูเล็ต มุมขวาบนเป็นโลโก้ GOD DUBAI รูปเส้นขอบฟ้าตึกดูไบสีดำบนดวงอาทิตย์สีส้ม ตรงกลางเป็นพรีเซนเตอร์หญิงผมดำถือไพ่สองใบ";
+  "โปรโมชั่น GODKINGKONG คำว่า COMMISSION สีขาว ใต้ลงมาเขียนว่า คืนทุกยอดเล่นตลอดทั้งวัน และตัวเลข 0.3% สีเขียวนีออนขนาดใหญ่บนแผ่นป้ายสีดำ ถัดลงมาเขียนว่า เล่นถึง 50% ถอนได้เลย รับสิทธิ์ก่อน 23.59 น. ของทุกวัน และ ยิ่งเล่นเยอะ ยิ่งได้เยอะ ด้านบนเป็นโลโก้ godking kong รูปหัวกอริลลาสวมมงกุฎทอง ด้านซ้ายเป็นพรีเซนเตอร์หญิงถือไพ่สี่ใบ ฉากหลังเป็นป่าสีเขียวนีออน";
 
 const faqs = [
   {
-    q: "GODDUBAI เป็นเว็บสล็อตตรงลิขสิทธิ์แท้หรือไม่ มีเอเย่นต์คั่นกลางหรือเปล่า",
-    a: "ใช่ครับ GODDUBAI เป็นเว็บสล็อตตรงลิขสิทธิ์แท้ 100% เชื่อม API ตรงจากค่ายใหญ่ทั่วโลก ไม่มีเอเย่นต์ ไม่มีปรับเรทหลังบ้าน ทุกการสปินโปร่งใส ตรวจสอบได้",
+    q: "GODKINGKONG เป็นเว็บตรงลิขสิทธิ์แท้จริงไหม เกมส่งตรงจากค่ายแม่หรือเปล่า",
+    a: "เกมสล็อตทุกเกมที่นี่ส่งตรงผ่าน API จากค่ายแม่ (Official Server) เป็นลิขสิทธิ์แท้ ไม่ใช่ของก๊อป และไม่มีการดัดแปลงค่า RTP ใดๆ คุณจะได้รับความยุติธรรมแบบ 100% เหมือนบินไปนั่งกดตู้ที่ลาสเวกัส",
   },
   {
-    q: "ฝากถอนขั้นต่ำเท่าไหร่ ถอนแล้วถูกหักค่าบริการหรือไม่",
-    a: "เว็บนี้ฝากถอนไม่มีขั้นต่ำ 1 บาทก็ฝากได้ ถอนเท่าไหร่ก็ถอนได้เต็ม ไม่มีหัก ไม่มีค่าบริการ",
+    q: "ฝากถอนออโต้ของ GODKINGKONG ใช้เวลานานแค่ไหน ต้องทักตามเงินไหม",
+    a: "ทุกรายการฝากถอนเป็นแบบออโต้ฉับไว เงินเข้าออกไม่เกิน 3–5 วินาที ไม่ต้องทักตามเงิน ไม่ถือดองยอด ไม่มีข้ออ้าง เล่นได้เท่าไหร่ จ่ายเท่านั้น ไม่ต่อ ไม่กั๊ก ไม่โม้",
   },
   {
-    q: "ค่า RTP ของเกมที่ GODDUBAI ถูกปรับลดหรือไม่ อัตราจ่ายเป็นอย่างไร",
-    a: "ทุกเกมของ GODDUBAI ใช้ค่า RTP ตามมาตรฐานสากล ไม่แต่ง ไม่ปรับ ไม่ลด อัตราจ่ายสูง ไหลดีเหมือนเจอบ่อน้ำมันส่วนตัว แตกหนักแตกจริงทุกเกม",
+    q: "ถอนยอดใหญ่ทีเดียวได้เลยหรือต้องแบ่งจ่ายเป็นรอบ",
+    a: "เรามีทุนจดทะเบียนมหาศาลไว้รองรับยอดถอนโดยเฉพาะ ไม่ว่าจะเป็นสายปั่นทุนน้อยหรือวาฬกระเป๋าหนักที่ถอนวันละล้าน เราก็พร้อมจ่ายจบครบทุกบาท ไม่มีแบ่งจ่าย ไม่มีผ่อนส่ง",
   },
   {
-    q: "ระบบธุรกรรม Auto ของ GODDUBAI ใช้เวลานานแค่ไหน",
-    a: "ใช้ระบบ Auto High-Speed เวอร์ชันใหม่ ใช้เวลาประมวลผลเฉลี่ย 1–3 วินาทีทั้งฝากและถอน เร็วกว่ารถสปอร์ตออกตัว",
+    q: "มีค่ายสล็อตอะไรให้เล่นบ้าง ต้องโยกเงินระหว่างค่ายหรือไม่",
+    a: "คัดค่ายสล็อตแตกง่ายระดับ God Tier มาให้ ทั้ง PG SOFT ที่ภาพสวยฟีเจอร์แน่น Pragmatic Play สำหรับสายซื้อฟรีสปิน และค่ายเก๋าอย่าง Joker & SlotXO ครบจบในยูสเซอร์เดียว ไม่ต้องโยกเงินให้ปวดหัว",
   },
   {
-    q: "สมัครสมาชิก GODDUBAI ต้องใช้ข้อมูลอะไรบ้าง ปลอดภัยหรือไม่",
-    a: "ใช้เพียงข้อมูลพื้นฐานเท่าที่จำเป็น ไม่มีการขอข้อมูลเกินจำเป็น ไม่มีรบกวน ไม่มี SMS ขยะ หลังสมัครเสร็จพร้อมเข้าเล่นทันที",
+    q: "สมัครสมาชิก GODKINGKONG ต้องใช้เอกสารอะไรบ้าง รองรับวอเล็ทไหม",
+    a: "กรอกข้อมูลที่จำเป็นไม่กี่อย่าง ตั้งรหัส แล้วเลือกวิธีฝาก ไม่ต้องส่งบัตรประชาชน ไม่ต้องถ่ายรูปหน้า รองรับทั้ง True Wallet และ Mobile Banking พร้อมเพย์ ฝากถอนไม่มีขั้นต่ำ 1 บาทก็เริ่มได้",
   },
 ];
 
@@ -65,24 +65,57 @@ const graph = pageGraph(Astro, {
 <MainLayout title={pageTitle} description={pageDescription}>
   <script type="application/ld+json" set:html={graph} />
 
-  <AnnouncementPremium />
+  <AnnouncementCyber />
 
-  <ContentBoxPremium as="h1" title="GODDUBAI สล็อตเว็บตรงระดับสุลต่าน ไม่มีขั้นต่ำ แตกหนัก อัตราจ่ายสูง">
+  <SmoothCarousel />
+
+  <ContentBoxCyberCut as="h1" title="GODKINGKONG เว็บตรงเกมสล็อตแตกหนัก โบนัสแรง จ่ายจริงทุกยอด">
     <div>
-      <p class="text-left text-base leading-relaxed text-[#f1e6d3]">
-        <strong class="text-[#f7cf8a]">GODDUBAI</strong> สล็อตเว็บตรงระดับสุลต่าน ลิขสิทธิ์แท้ แตกหนัก อัตราจ่ายสูง ระบบเร็ว ไม่มีขั้นต่ำ รองรับวอเล็ท สมัครฟรี ปลอดภัย โปร่งใส
-        มั่นคงแบบเว็บใหญ่ดูไบแท้ๆ
+      <p class="text-left text-base leading-relaxed text-[#ddf3e2]">
+        <strong class="text-[#7bff9f]">GODKINGKONG</strong> เว็บตรงเกมสล็อตแตกหนัก เว็บใหม่ที่สะท้อนคุณภาพระดับเจ้าป่า ด้านเทคโนโลยีก็ไม่แพ้ใคร ใช้ระบบออโต้เสถียรแบบเว็บนอก
+        ฝากถอนเร็วเป็นอันดับต้น ๆ ของตลาด ไม่ล็อกยูส ไม่ปรับเรท และมาพร้อมเกมแท้ค่า RTP เต็มจำนวนถูกต้อง ตามเซิร์ฟเวอร์นอก
       </p>
-      <p class="mt-3 text-left text-base leading-relaxed text-[#f1e6d3]">
-        GODDUBAI ที่นี่เรายกระดับมาตรฐานวงการเดิมพันให้หรูหราและมั่งคั่งสมชื่อ เปรียบเสมือนคุณกำลังเดินเข้าสู่คาสิโนส่วนตัวระดับ VIP ระบบที่เสถียรที่สุด เพื่อให้คุณได้รับประสบการณ์
-        ผู้เล่นจะรู้สึกถึง “คุณภาพระดับพรีเมียม” ตั้งแต่วินาทีแรกที่เข้ามาสมัครแล้วเล่นสล็อตสักหนึ่งหน แล้วท่านจะเข้าใจ
+      <p class="mt-3 text-left text-base leading-relaxed text-[#ddf3e2]">
+        GODKINGKONG อาณาจักรใหม่ของคนชอบเล่นสล็อต โบนัสแรง แตกหนัก แจกแบบไม่กลัวเจ๊ง จ่ายจริงทุกยอด ตรงเวลา น่าเชื่อถือจริง ถ้าให้ลอง
       </p>
     </div>
-  </ContentBoxPremium>
+  </ContentBoxCyberCut>
 
-  <GameRankingBoard />
+  <ContentBoxSevenThreeFloatingBadge as="h2" title="ทำไม GODKINGKONG กล้าให้ โบนัสแรง ในสิ่งที่คนอื่นไม่กล้า">
+    <Picture
+      slot="left"
+      src={imgReferral}
+      alt={referralAlt}
+      loading="lazy"
+      fetchpriority="low"
+      widths={[200, 400, 600]}
+      sizes="(max-width: 768px) 100vw, 30vw"
+      decoding="async"
+      formats={["avif", "webp"]}
+      fallbackFormat="webp"
+      quality={80}
+      class="mx-auto h-auto w-full rounded-2xl border border-[#2fe35f]/30 shadow-[0_10px_30px_rgba(47,227,95,0.26)]"
+    />
+    <div slot="right">
+      <p class="text-left text-base leading-relaxed text-[#ddf3e2]">
+        การจะเลือก “เว็บสล็อตเป็นเจ้ามือ” ที่ไว้ใจได้สักรายมันยากยิ่งกว่างมเข็ม แต่เหตุผลที่คุณควรปักหลักที่นี่ GODKINGKONG เพราะเราคือ เว็บตรงเกมสล็อตแตกหนัก ที่ไม่ได้มีดีแค่คำโฆษณา
+      </p>
+      <p class="mt-3 text-left text-base leading-relaxed text-[#ddf3e2]">
+        <strong class="text-[#7bff9f]">ลิขสิทธิ์แท้ ไม่ใช่ของก๊อป</strong> — เกมสล็อตทุกเกมที่นี่ ส่งตรงผ่าน API จากค่ายแม่ (Official Server) ไม่มีการดัดแปลงค่า RTP ใดๆ
+        คุณจะได้รับความยุติธรรมแบบ 100% เหมือนบินไปนั่งกดตู้ที่ลาสเวกัส
+      </p>
+      <p class="mt-3 text-left text-base leading-relaxed text-[#ddf3e2]">
+        <strong class="text-[#7bff9f]">สถานะการเงินระดับ “คิงคอง”</strong> — เรามีทุนจดทะเบียนมหาศาลเพื่อรองรับยอดถอนของคุณ ไม่ว่าคุณจะเป็นสายปั่นทุนน้อย
+        หรือวาฬกระเป๋าหนักที่ถอนวันละล้าน เราก็พร้อมจ่ายจบ ครบทุกบาท ไม่มีแบ่งจ่าย ไม่มีผ่อนส่ง
+      </p>
+      <p class="mt-3 text-left text-base leading-relaxed text-[#ddf3e2]">
+        <strong class="text-[#7bff9f]">ความสดใหม่</strong> — ด้วยความที่เป็นเว็บใหม่ เทคโนโลยีของเราจึงล้ำหน้ากว่าเว็บเก่าๆ หลายปีแสง ทั้งความลื่นไหล กราฟิก
+        และฟีเจอร์เกมที่อัปเดตก่อนใครเพื่อน
+      </p>
+    </div>
+  </ContentBoxSevenThreeFloatingBadge>
 
-  <ContentBoxSevenThreePremium titleright="ทำไมต้อง GODDUBAI “เว็บเจ้ามือ” ที่รวยและแฟร์ที่สุด">
+  <ContentBoxSevenThreeCyberCut as="h3" titleright="GODKINGKONG ฝากถอนออโต้ไว จ่ายจริง ไม่ยื้อยอด ไม่งอแง">
     <Picture
       slot="left"
       src={imgCommission}
@@ -95,108 +128,86 @@ const graph = pageGraph(Astro, {
       formats={["avif", "webp"]}
       fallbackFormat="webp"
       quality={80}
-      class="mx-auto h-auto w-full rounded-2xl border border-[#e8a13c]/30 shadow-[0_10px_30px_rgba(232,161,60,0.24)]"
+      class="mx-auto h-auto w-full rounded-2xl border border-[#2fe35f]/30 shadow-[0_10px_30px_rgba(47,227,95,0.26)]"
     />
     <div slot="right">
-      <p class="text-left text-base leading-relaxed text-[#f1e6d3]">
-        “เจ้ามือบางเว็บต้องใช้ลูกไม้ตุกติก” มาโกงผู้เล่น เพราะเงินหมุนไม่ถึง แต่ GODDUBAI ไม่จำเป็นต้องทำแบบนั้นเลย ฐานทุนเราหนาเกินพอจะรองรับยอดถอนหลักล้านต่อวัน
-      </p>
-      <p class="mt-3 text-left text-base leading-relaxed text-[#f1e6d3]">
-        ความแตกต่างของเราคือ “สายป่าน” ที่ยาวเหยียดครับ เรามีสภาพคล่องทางการเงินสูงมาก ทำให้เรากล้าแจกโปรโมชั่น และกล้าจ่ายยอดถอนใหญ่ๆ โดยไม่ต้องรอรอบบิล
-        ความมั่นคงนี้แหละคือสิ่งที่คุณจะหาไม่ได้จากเว็บเล็กๆ ทั่วไป
+      <p class="text-left text-base leading-relaxed text-[#ddf3e2]">
+        ทุกรายการฝากถอน แบบออโต้ฉับไว เงินเข้าออกเร็ว ไม่เกิน 3–5 วินาที ไม่ต้องทักตามเงิน ไม่ถือดองยอด ไม่มีข้ออ้าง เรายืนยันตามสไตล์เจ้าป่า “เล่นได้เท่าไหร่ จ่ายเท่านั้น ไม่ต่อ ไม่กั๊ก
+        ไม่โม้”
       </p>
     </div>
-  </ContentBoxSevenThreePremium>
+  </ContentBoxSevenThreeCyberCut>
 
-  <SmoothCarousel />
-
-  <ContentBoxSevenThreeNeumorphism titleright="GODDUBAI สล็อตเว็บตรงระดับสุลต่าน มาตรฐานดูไบ ของแท้100%">
-    <Picture
-      slot="left"
-      src={imgAllInOne}
-      alt={allInOneAlt}
-      loading="lazy"
-      fetchpriority="low"
-      widths={[200, 400, 600]}
-      sizes="(max-width: 768px) 100vw, 30vw"
-      decoding="async"
-      formats={["avif", "webp"]}
-      fallbackFormat="webp"
-      quality={80}
-      class="mx-auto h-auto w-full rounded-2xl border border-[#e8a13c]/30 shadow-[0_10px_30px_rgba(232,161,60,0.24)]"
-    />
-    <div slot="right">
-      <p class="text-left text-base leading-relaxed text-[#f1e6d3]">
-        GODDUBAI ยึดมั่นในคุณภาพสูงสุด เรานำเข้าระบบ API แท้ (Direct API) จากค่ายเกมยักษ์ใหญ่ทั่วโลก ส่งตรงแสดงผลลัพธ์มาที่หน้าจอคุณโดยไม่ผ่านเอเย่นต์ ความเสถียรของ เว็บสล็อต
-        GODDUBAI ที่นี่จึงเปรียบเหมือนถนนไฮเวย์ในดูไบที่เรียบกริบ ไม่มีสะดุด ไม่มีกระตุก
+  <ContentBox as="h2" title="รวมค่ายสล็อตแตกง่าย คัดเนื้อๆ เน้นๆ ระดับ God Tier">
+    <div>
+      <p class="text-left text-base leading-relaxed text-[#ddf3e2]">
+        เราไม่ได้แค่ขนเกมมาถมให้เต็มเว็บ แต่ทีมงาน GODKINGKONG ให้บริการเกมสล็อตจากหลายค่ายอย่างถูกต้องลิขสิทธิ์เกมแท้ มีสถิติการแตกดีตรงตามต้นฉบับ โบนัสเข้าบ่อยที่สุด มาเสิร์ฟให้คุณถึงหน้าจอ
+        ไม่ว่าจะเป็น PG SOFT ค่ายเกมมหาชน ภาพสวย ฟีเจอร์แน่น แตกหนักสะใจ Pragmatic Play สายซื้อฟรีสปินต้องค่ายนี้ ลุ้นตัวคูณโหดๆ แบบไม่ต้องรอ
       </p>
-      <p class="mt-3 text-left text-base leading-relaxed text-[#f1e6d3]">
-        และที่สำคัญคือ “ความยุติธรรม” เราไม่มีการปรับแต่งค่าใดๆ หลังบ้าน เพื่อให้คุณมั่นใจได้ว่า ทุกการสปินคือโอกาสรับโชคใหญ่ที่ขาวสะอาดและตรวจสอบได้จริง
+      <p class="mt-3 text-left text-base leading-relaxed text-[#ddf3e2]">
+        หรือแม้แต่ ค่ายเกมสุดเก๋า Joker &amp; SlotXO ความคลาสสิกที่ยังคงขลัง แตกทีมีสะดุ้ง ไม่ว่าคุณจะชอบสไตล์ไหน เรามีให้ครบจบในยูสเซอร์เดียว ไม่ต้องโยกเงินให้ปวดหัว
       </p>
     </div>
-  </ContentBoxSevenThreeNeumorphism>
+  </ContentBox>
 
   <ProviderGrid />
 
-  <ContentBoxNeumorphism as="h2" title="GODDUBAI ฝากถอนไม่มีขั้นต่ำ เริ่มต้นแบบยาจก จบแบบเศรษฐี">
-    <div>
-      <p class="text-left text-base leading-relaxed text-[#f1e6d3]">
-        แม้ภาพลักษณ์เราจะดูหรูหรา แต่เราเปิดกว้างให้ทุกคนเข้าถึงได้ไม่แบ่งชนชั้น ที่ GODDUBAI เราให้คุณทำธุรกรรม ไม่มีขั้นต่ำ มีเงินติดบัญชีแค่ 1 บาท ก็สามารถฝากเข้ามา เพื่อเริ่มเล่นสล็อต
-        แตกดี แตกย่อย เพราะคำว่า “ดวง” ไม่ได้เลือกข้างคนรวยเสมอไป คนทุนน้อยก็มีสิทธิ์เป็นเศรษฐีได้ที่นี่
-      </p>
-      <p class="mt-3 text-left text-base leading-relaxed text-[#f1e6d3]">
-        คุณสามารถบริหารเงินหน้าตักได้อย่างอิสระ อยากฝากเท่าไหร่ อยากถอนตอนไหน จัดการได้เอง 100% ไม่มีเงื่อนไขผูกมัดให้ปวดหัว
-      </p>
-    </div>
-  </ContentBoxNeumorphism>
+  <GameRankingBoard />
 
-  <ContentBoxSpecial as="h2" title="ระบบธุรกรรม Auto ไวกว่าซูเปอร์คาร์ รองรับทุกช่องทาง">
-    <div slot="left">
-      <p class="text-left text-base leading-relaxed text-[#f1e6d3]">
-        ชีวิตเศรษฐี เวลาเป็นเงินเป็นทองครับ ระบบฝาก-ถอนของเราจึงต้องเร็วที่สุด เราใช้เทคโนโลยี ฝากถอน Auto High-Speed เวอร์ชันล่าสุด ที่ประมวลผลยอดเงินของคุณภายใน 3 วินาที
-        เร็วกว่ารถสปอร์ตออกตัวซะอีก
-      </p>
-    </div>
-    <div slot="right">
-      <p class="text-left text-base leading-relaxed text-[#f1e6d3]">
-        ไม่ว่าคุณจะใช้บัญชีธนาคารชั้นนำ หรือ True Money Wallet ระบบของเราก็รองรับครบถ้วน ทำรายการได้ตลอด 24 ชั่วโมง โดยไม่ต้องส่งสลิปให้แอดมินดู เงินเข้าปุ๊บ เล่นต่อได้ปั๊บ
-        ความต่อเนื่องคือหัวใจสำคัญของการทำกำไร และเราไม่ยอมให้คุณเสียจังหวะแน่นอน
-      </p>
-    </div>
-  </ContentBoxSpecial>
-
-  <LatestWinners3 />
-
-  <ContentBoxTwoPremium
+  <ContentBoxTwoCyberCut
     as="h2"
-    title="สมัคร GODDUBAI ง่ายมาก ใช้ข้อมูลน้อย ปลอดภัยระดับ VIP"
-    titleleft="กรอกแค่เท่าที่จำเป็น"
-    titleright="เข้ารหัสระดับแอปธนาคาร">
-    <p slot="left" class="text-left text-base leading-relaxed text-[#f1e6d3]">
-      ขั้นตอนสมัครถูกทำให้เรียบง่ายที่สุด กรอกข้อมูลแค่เท่าที่จำเป็น ไม่มีการขอข้อมูลแปลก ๆ หรือสิ่งที่ทำให้ผู้เล่นรู้สึกล้ำเส้น
+    title="รองรับวอเล็ทไม่มีขั้นต่ำ เร็วกว่า เสถียรกว่า ใช้ง่ายกว่า"
+    titleleft="ทุกช่องทางวิ่งเร็วเท่ากัน"
+    titleright="1 บาทก็เป็น VIP ของเว็บเรา">
+    <p class="text-left text-base leading-relaxed text-[#ddf3e2]">ผู้เล่นยุคใหม่เลือกวอเล็ทมากกว่าธนาคาร เราจึงรองรับทั้ง True Wallet หรือ Mobile Banking พร้อมเพย์</p>
+    <p slot="left" class="text-left text-base leading-relaxed text-[#ddf3e2]">ทุกช่องทางวิ่งเร็วเหมือนกัน ไม่มีช่องทางไหนถูกลดความสำคัญ อิสระทางการเงินเต็มที่ ฝากตอนไหน ถอนตอนไหน จัดการได้เอง</p>
+    <p slot="right" class="text-left text-base leading-relaxed text-[#ddf3e2]">
+      ฝากถอน วอเล็ทไม่มีขั้นต่ำ 1 บาทก็เป็นลูกค้า VIP ของเว็บเรา GODKINGKONG ได้เหมือนกัน ถ้าฝากอย่างต่อเนื่อง
     </p>
-    <p slot="right" class="text-left text-base leading-relaxed text-[#f1e6d3]">
-      ข้อมูลทุกอย่างเข้ารหัสตามมาตรฐานเดียวกับแอปธนาคาร ไม่มีการขายข้อมูล ไม่มี SMS ขยะ ไม่มีการรบกวนใดๆ สมัครเสร็จพร้อมเข้าเล่นทันทีภายในไม่ถึง 10 วินาที
-    </p>
-  </ContentBoxTwoPremium>
+  </ContentBoxTwoCyberCut>
+
+  <ContentBoxFloatingBadge as="h2" title="สมัคร GODKINGKONG ง่ายและรวดเร็วเหมือนดีดนิ้ว">
+    <div>
+      <p class="text-left text-base leading-relaxed text-[#ddf3e2]">
+        สมัครเป็นสมาชิก GODKINGKONG ง่ายแสนง่าย กรอกข้อมูลที่จำเป็นไม่กี่อย่าง ตั้งรหัส แล้วเลือกวิธีฝาก แค่นี้ก็เข้ามาเป็นส่วนหนึ่งของ อาณาจักรสล็อตคิงคองแห่งความสนุก ไม่ต้องส่งบัตรประชาชน
+        ไม่ต้องถ่ายรูปหน้า เว็บนี้สร้างมาเพื่อความรวดเร็วจริง ๆ
+      </p>
+    </div>
+  </ContentBoxFloatingBadge>
 
   <LoginRtpSection />
 
   <div class="relative z-10 mx-auto mb-10 flex flex-nowrap justify-center gap-3 px-4 sm:gap-6">
     <a
       href="/login"
-      class="group relative flex flex-1 items-center justify-center rounded-full bg-gradient-to-r from-[#f7cf8a] via-[#e8a13c] to-[#a8611a] px-4 py-3 text-sm font-black whitespace-nowrap text-[#091310] shadow-[0_10px_30px_rgba(232,161,60,0.3)] transition-all duration-300 hover:-translate-y-1 hover:scale-105 hover:shadow-[0_15px_40px_rgba(232,161,60,0.4)] sm:flex-none sm:px-10 sm:py-3.5 sm:text-base">
+      class="group relative flex flex-1 items-center justify-center rounded-full bg-gradient-to-r from-[#7bff9f] via-[#2fe35f] to-[#0b6b34] px-4 py-3 text-sm font-black whitespace-nowrap text-[#04170b] shadow-[0_10px_30px_rgba(47,227,95,0.30)] transition-all duration-300 hover:-translate-y-1 hover:scale-105 hover:shadow-[0_15px_40px_rgba(47,227,95,0.42)] sm:flex-none sm:px-10 sm:py-3.5 sm:text-base">
       เข้าสู่ระบบ
     </a>
 
     <a
       href="/register"
-      class="group relative flex flex-1 items-center justify-center rounded-full border border-[#e8a13c]/70 bg-[#0f1d16]/85 px-4 py-3 text-sm font-black whitespace-nowrap text-[#f7cf8a] backdrop-blur-sm transition-all duration-300 hover:scale-105 hover:border-[#e8a13c] hover:bg-[#12251b]/85 hover:shadow-[0_15px_40px_rgba(232,161,60,0.35)] sm:flex-none sm:px-10 sm:py-3.5 sm:text-base">
+      class="group relative flex flex-1 items-center justify-center rounded-full border border-[#f0c43a]/70 bg-[#0a1a10]/85 px-4 py-3 text-sm font-black whitespace-nowrap text-[#f0c43a] backdrop-blur-sm transition-all duration-300 hover:scale-105 hover:border-[#f0c43a] hover:bg-[#0c1f13]/85 hover:shadow-[0_15px_40px_rgba(240,196,58,0.35)] sm:flex-none sm:px-10 sm:py-3.5 sm:text-base">
       สมัครสมาชิก
     </a>
   </div>
 
-  <Faq3 title="คำถามที่พบบ่อยเกี่ยวกับ GODDUBAI" faqs={faqs} />
+  <ContentBox as="h2" title="เสียงคำรามจาก ผู้ชนะที่แท้จริง">
+    <div>
+      <p class="text-left text-base leading-relaxed text-[#ddf3e2]">
+        “GODKINGKONG คือที่สุดของเว็บสล็อตยุคนี้ครับ! แตกหนักสมชื่อราชาพงไพร ระบบฝากถอนไวเป็นสายฟ้าแลบ ไม่ต้องทนรอแอดมินตอบ แนะนำเลยครับสำหรับสายปั่นตัวจริง”
+      </p>
+      <p class="mt-3 text-left text-base leading-relaxed text-[#ddf3e2]">
+        “ตามหาเว็บที่ RTP ตรงสเปคมานาน จบที่นี่เลยครับ เล่นค่าย PG เข้าฟรีสปินรัวมาก ไม่มีล็อคยูส ถอนเงินหลักแสนก็เข้าบัญชีภายใน 3 วินาที ปลอดภัย 100% ครับ”
+      </p>
+      <p class="mt-3 text-left text-base leading-relaxed text-[#ddf3e2]">
+        “ทุนหลักสิบก็บวกหลักหมื่นได้ค่ะเว็บนี้! โปรโมชั่นเยอะมาก แถมระบบเสถียรสุดๆ เล่นในมือถือไม่สะดุดเลย หัก 1 ดาวเพราะอยากให้เพิ่มเกมยิงปลาค่ายใหม่ๆ อีกนิดค่ะ”
+      </p>
+    </div>
+  </ContentBox>
+
+  <LatestWinners4 />
+
+  <Faq4 title="คำถามที่พบบ่อยเกี่ยวกับ GODKINGKONG" faqs={faqs} />
 
   <ReviewCardSumo2 />
 

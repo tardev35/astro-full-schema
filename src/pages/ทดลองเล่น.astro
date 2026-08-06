@@ -2,7 +2,7 @@
 import MainLayout from "../layouts/MainLayout.astro";
 import ContentBox from "../components/ContentBox.astro";
 import Navfoot from "../components/Navfoot.astro";
-import Announcement3 from "../components/Announcement3.astro";
+import AnnouncementPremium from "../components/AnnouncementPremium.astro";
 
 import { Picture } from "astro:assets";
 import { itemList, pageGraph, schemaCtx } from "../lib/schema";
@@ -36,12 +36,12 @@ const demoGames = [
 
 const gameList = demoGames.map((game) => ({ name: game.name, imagePath: game.src.src }));
 
-const pageTitle = "ทดลองเล่นสล็อต YIMSIAM889 - ลองระบบเกมก่อนใช้เครดิตจริง";
+const pageTitle = "ทดลองเล่น - GODDUBAI";
 
-const pageHeading = "ทดลองเล่นสล็อต YIMSIAM889 เปิดดูระบบเกมก่อนลงเครดิตจริง";
+const pageHeading = "ทดลองเล่นสล็อต GODDUBAI เปิดดูระบบเกมก่อนลงเครดิตจริง";
 
 const pageDescription =
-  "ทดลองเล่นสล็อต YIMSIAM889 เว็บตรงไม่ผ่านเอเย่นต์ เปิดดูหน้าเกมจากค่าย PG SOFT Joker Gaming และ Pragmatic Play ก่อนใช้เครดิตจริง ดูเดิมพันต่อรอบและฟีเจอร์โบนัส";
+  "ทดลองเล่นสล็อต GODDUBAI เว็บตรงเชื่อม API แท้จากค่ายใหญ่ ไม่ผ่านเอเย่นต์ เปิดดูหน้าเกม ปุ่มปรับเดิมพัน และฟีเจอร์ฟรีสปินก่อนลงเครดิตจริง ฝากถอนไม่มีขั้นต่ำ";
 
 const ctx = schemaCtx(Astro);
 const graph = pageGraph(Astro, {
@@ -54,8 +54,8 @@ const graph = pageGraph(Astro, {
   ],
   extra: [
     itemList(ctx, {
-      name: "ทดลองเล่นเกมสล็อตของ YIMSIAM889",
-      alternateName: "YIMSIAM889 โหมดทดลองสล็อตหลายค่ายบนมือถือก่อนเล่นด้วยเงินจริง",
+      name: "ทดลองเล่นเกมสล็อตของ GODDUBAI",
+      alternateName: "GODDUBAI โหมดทดลองสล็อตหลายค่ายบนมือถือก่อนเล่นด้วยเงินจริง",
       itemType: "Game",
       items: gameList,
     }),
@@ -66,68 +66,89 @@ const graph = pageGraph(Astro, {
 <MainLayout title={pageTitle} description={pageDescription}>
   <script type="application/ld+json" set:html={graph} />
 
-  <Announcement3 />
+  <AnnouncementPremium />
 
-  <ContentBox title={pageHeading}>
-    <div>
-      <h2 class="mb-6 bg-gradient-to-r from-[#f8dc9a] via-[#e9b949] to-[#a81f1a] bg-clip-text text-2xl leading-normal font-bold text-transparent">โหมดทดลองของ YIMSIAM889 มีไว้ทำอะไร และควรพิจารณาอะไรก่อนเลือกเกม</h2>
+  <ContentBox as="h1" title={pageHeading}>
+    <p class="mb-4 text-left text-base leading-relaxed text-[#f1e6d3]">
+      GODDUBAI ให้บริการในรูปแบบเว็บตรง เรานำเข้าระบบ API แท้แบบ Direct API จากค่ายเกมยักษ์ใหญ่ทั่วโลก ส่งผลลัพธ์ตรงมาที่หน้าจอคุณโดยไม่ผ่านเอเย่นต์และไม่ผ่านคนกลางชั้นใด
+      หน้ารวมเกมจึงแบ่งตามค่ายและรูปแบบการเล่นไว้ชัดเจน ทั้ง PG Soft, JOKER, JILI, SlotXO, Skywind Group และ AFB Gaming อยู่ในเมนูภาษาไทยชุดเดียวกัน เปิดดูได้ทั้งบนมือถือและคอมพิวเตอร์
+    </p>
 
-      <p class="mb-8 text-left text-base leading-relaxed text-[#f2ddc4]">
-        YIMSIAM889 (ยิ้มสยาม889) ให้บริการในรูปแบบเว็บตรง ไม่ผ่านเอเย่นต์หรือนายหน้าใดทั้งสิ้น เราเชื่อมต่อสัญญาณเกมตรงจากค่ายแม่ หน้ารวมเกมจึงแบ่งตามค่ายและรูปแบบการเล่นไว้ชัดเจน ทั้ง PG SOFT, JOKER, JILI, SLOTXO, Skywind และ AFB Gaming อยู่ในเมนูภาษาไทยชุดเดียวกัน ไม่ต้องแปลไทยเป็นไทยอีกรอบขอรับ
-        หน้านี้จัดไว้ให้ท่านกดเปิดดูหน้าเกมก่อนว่าระบบหน้าตาเป็นอย่างไร ปุ่มปรับเดิมพันอยู่ตรงไหน ฟีเจอร์ฟรีสปินเรียกใช้อย่างไร และหนึ่งรอบกินเวลาเท่าไร โดยที่ยังไม่ต้องใส่เงินจริงและไม่มีการได้เสียเกิดขึ้นแม้แต่บาทเดียว
-        สิ่งที่ควรทัศนาจริงๆ คือเดิมพันเริ่มต้นต่อรอบ ความผันผวนของเกม และรูปแบบการจ่าย มากกว่าจะดูว่าเกมไหนกำลังเป็นที่กล่าวขานที่สุด เกมดังช่วยให้หารีวิวง่ายก็จริง แต่ไม่ได้ช่วยเจรจากับระบบสุ่มให้ท่านเป็นการส่วนตัวขอรับ
-      </p>
+    <p class="text-left text-base leading-relaxed text-[#f1e6d3]">
+      หน้านี้จัดไว้ให้คุณกดเปิดดูหน้าเกมก่อนว่าระบบหน้าตาเป็นอย่างไร ปุ่มปรับเดิมพันอยู่ตรงไหน ฟีเจอร์ฟรีสปินเรียกใช้อย่างไร และหนึ่งรอบกินเวลาเท่าไร
+      โดยที่ยังไม่ต้องใส่เงินจริงและไม่มีการได้เสียเกิดขึ้นแม้แต่บาทเดียว สิ่งที่ควรดูจริง ๆ คือเดิมพันเริ่มต้นต่อรอบ ความผันผวนของเกม และรูปแบบการจ่าย
+      มากกว่าจะดูว่าเกมไหนกำลังเป็นที่พูดถึงที่สุด เพราะเกมดังช่วยให้หารีวิวง่ายก็จริง แต่ไม่ได้ช่วยเจรจากับระบบสุ่มให้คุณเป็นการส่วนตัว
+    </p>
+  </ContentBox>
 
-      <div class="mb-5 grid grid-cols-2 gap-5 sm:grid-cols-2 md:grid-cols-4">
-        {
-          demoGames.map((game) => (
-            <div class="group/game relative mx-auto w-full max-w-[400px] overflow-hidden rounded-xl">
-              <Picture
-                src={game.src}
-                alt={game.alt}
-                loading="lazy"
-                fetchpriority="low"
-                widths={[200, 400, 600]}
-                sizes="(max-width: 768px) 100vw, 25vw"
-                class="block h-auto w-full object-cover shadow-[0_10px_30px_rgba(168,31,26,0.18)] transition-transform duration-300 group-hover/game:scale-105"
-                decoding="async"
-                formats={["avif", "webp"]}
-                fallbackFormat="webp"
-                quality={60}
-              />
-              <a
-                href="/register"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label={`สมัครสมาชิกเพื่อเล่น ${game.name} ที่ YIMSIAM889`}
-                class="absolute inset-0 flex items-center justify-center bg-[#140604]/75 opacity-0 transition-opacity duration-300 group-hover/game:opacity-100 focus-visible:opacity-100">
-                <span class="rounded-full border border-[#a81f1a]/60 bg-gradient-to-r from-[#f8dc9a] via-[#e9b949] to-[#5e0f06] px-6 py-2 font-bold text-[#140604] shadow-[0_10px_30px_rgba(168,31,26,0.30)] transition-transform hover:scale-110">เล่นเลย</span>
-              </a>
-            </div>
-          ))
-        }
-      </div>
+  <ContentBox as="h2" title="รวมเกมทดลองจากค่ายที่ GODDUBAI เชื่อมสัญญาณตรง">
+    <p class="mb-8 text-left text-base leading-relaxed text-[#f1e6d3]">
+      ทุกค่ายด้านล่างนี้คือค่ายที่เราเชื่อม API ตรงกับต้นทาง ไม่มีการปรับแต่งค่าใด ๆ หลังบ้าน และทุกเกมใช้ค่า RTP ตามมาตรฐานสากลที่ค่ายผู้พัฒนากำหนดมา
+      กดที่ภาพเพื่อเข้าสู่ขั้นตอนสมัครและเปิดเข้าเล่นเกมนั้นได้ทันที ใช้ข้อมูลเท่าที่จำเป็นและเสร็จภายในไม่ถึง 10 วินาที
+    </p>
 
-      <h2 class="mt-8 mb-6 bg-gradient-to-r from-[#f8dc9a] via-[#e9b949] to-[#a81f1a] bg-clip-text text-2xl leading-normal font-bold text-transparent">โหมดทดลองบอกอะไรได้ และบอกอะไรไม่ได้</h2>
-
-      <p class="mb-4 text-left text-base leading-relaxed text-[#f2ddc4]">
-        โหมดทดลองบอกได้ว่าเกมทำงานอย่างไร เมนูอยู่ตรงไหน ฟีเจอร์ซื้อฟรีสปินเรียกใช้อย่างไร และหนึ่งรอบใช้เวลาเท่าไร แต่เครดิตในโหมดนี้เป็นยอดสมมติ ถอนไม่ได้ และผลที่ออกมาก็ไม่ได้แปลว่าเล่นจริงแล้วจะออกในรูปแบบเดียวกัน
-        เกมของ YIMSIAM889 ทำงานตามค่า RTP มาตรฐานสากลที่ค่ายแม่กำหนดมา ไม่มีใครมาแอบปรับหลังบ้านให้ท่านหงุดหงิดหัวใจ ฉะนั้นต่อให้กดในโหมดทดลองแล้วจังหวะเข้ามือ ก็มิใช่หลักฐานว่าเกมนั้นกำลังอารมณ์ดีรอท่านอยู่ โหมดนี้มีไว้ศึกษาระบบ ไม่ใช่ไว้ดูดวงผ่านหน้าจอขอรับ
-      </p>
-
-      <p class="mb-4 text-left text-base leading-relaxed text-[#f2ddc4]">
-        อีกเรื่องที่ควรเผื่อใจไว้คือโหมดทดลองไม่ได้มีให้ครบทุกเกม จึงควรเปิดหน้ารายละเอียดของเกมดูเสียก่อนเลือก และยอดที่หมุนในโหมดทดลองไม่นับเป็นยอดเทิร์นของบัญชีหรือของโปรโมชั่นใดทั้งสิ้น
-        ถ้าเกมที่อยากลองยังไม่มีปุ่มทดลอง ให้ถือเสียว่าวันนี้ยังไม่ถูกจังหวะ มิใช่สัญญาณลับที่ระบบส่งมาให้ท่านคนเดียว และเวลาเทียบเกมกัน ให้ดูที่จำนวนไลน์ ตัวคูณ และเงื่อนไขการเข้าฟรีสปิน แล้วเอามาเทียบกับงบต่อรอบของตัวท่านเอง นั่นคือข้อมูลที่นำไปตัดสินใจได้จริง ไม่ใช่ความรู้สึกว่าเกมไหนหน้าตาใจดีกว่ากัน
-      </p>
-
-      <h2 class="mt-8 mb-6 bg-gradient-to-r from-[#f8dc9a] via-[#e9b949] to-[#a81f1a] bg-clip-text text-2xl leading-normal font-bold text-transparent">จากโหมดทดลองไปเล่นจริงกับ YIMSIAM889 ควรเตรียมอะไรบ้าง</h2>
-
-      <p class="mb-2 text-left text-base leading-relaxed text-[#f2ddc4]">
-        เมื่อท่านพร้อมขยับจากโหมดทดลองไปเล่นด้วยเงินจริง เรื่องที่ควรจัดแจงก่อนคือบัญชี งบต่อรอบ และลิงก์ที่ใช้เข้า ด้านบัญชี การสมัครกับเราเรียบง่ายเพียงลัดนิ้วมือเดียว แต่ชื่อบัญชีธนาคารต้องตรงกับผู้สมัครและเบอร์โทรต้องรับข้อความได้จริง เพราะระบบจะว่องไวเพียงใด ถ้ากรอกชื่อบัญชีคลาดเคลื่อนตั้งแต่แรกแล้วมาตามแก้ทีหลัง ความเร็วนั้นก็หายไปหมดสิ้น
-        ด้านงบ ท่านที่เพิ่งเข้ามาเป็นสมาชิกใหม่มีโบนัสต้อนรับจัดเตรียมไว้ให้ ถือเป็นน้ำใจเล็กๆ น้อยๆ ที่ช่วยให้มีกระสุนเริ่มต้นมากขึ้น ส่วนธุรกรรมนั้นเป็นระบบอัตโนมัติเต็มรูปแบบ ทำรายการเองได้ผ่านแอปพลิเคชันธนาคารชั้นนำหรือทรูวอลเลท ไม่ต้องส่งสลิปให้แอดมินตรวจให้เสียเวลา ฝากปุ๊บเงินเข้าปั๊บ ถอนปุ๊บโอนเข้าบัญชีทันที
-        สุดท้ายควรเข้าใช้งานผ่านทางเข้าจริงของ YIMSIAM889 ที่ตรวจชื่อเว็บไซต์แล้วและเชื่อมต่อแบบ HTTPS เท่านั้น ไม่ใช่ลิงก์ที่ส่งต่อกันมาในแชตพร้อมคำโฆษณาหวือหวา เพราะลิงก์แบบนั้นมักพาไปพบอะไรจริงอยู่ แต่ไม่ใช่ในทางที่เราหวังไว้ ทางเข้าของเรารองรับทั้งมือถือ iOS และ Android รวมถึงคอมพิวเตอร์และแท็บเล็ต อยู่ที่ไหนก็สนุกได้ขอรับ
-      </p>
+    <div class="mb-5 grid grid-cols-2 gap-5 sm:grid-cols-2 md:grid-cols-4">
+      {
+        demoGames.map((game) => (
+          <div class="group/game relative mx-auto w-full max-w-[400px] overflow-hidden rounded-xl">
+            <Picture
+              src={game.src}
+              alt={game.alt}
+              loading="lazy"
+              fetchpriority="low"
+              widths={[200, 400, 600]}
+              sizes="(max-width: 768px) 100vw, 25vw"
+              class="block h-auto w-full object-cover shadow-[0_10px_30px_rgba(15,143,87,0.18)] transition-transform duration-300 group-hover/game:scale-105"
+              decoding="async"
+              formats={["avif", "webp"]}
+              fallbackFormat="webp"
+              quality={60}
+            />
+            <a
+              href="/register"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label={`สมัครสมาชิกเพื่อเล่น ${game.name} ที่ GODDUBAI`}
+              class="absolute inset-0 flex items-center justify-center bg-[#0b1610]/75 opacity-0 transition-opacity duration-300 group-hover/game:opacity-100 focus-visible:opacity-100">
+              <span class="rounded-full border border-[#0f8f57]/60 bg-gradient-to-r from-[#f7cf8a] via-[#e8a13c] to-[#a8611a] px-6 py-2 font-bold text-[#091310] shadow-[0_10px_30px_rgba(232,161,60,0.30)] transition-transform hover:scale-110">เล่นเลย</span>
+            </a>
+          </div>
+        ))
+      }
     </div>
+  </ContentBox>
+
+  <ContentBox as="h2" title="โหมดทดลองบอกอะไรได้ และบอกอะไรไม่ได้">
+    <p class="mb-4 text-left text-base leading-relaxed text-[#f1e6d3]">
+      โหมดทดลองบอกได้ว่าเกมทำงานอย่างไร เมนูอยู่ตรงไหน ฟีเจอร์ซื้อฟรีสปินเรียกใช้อย่างไร และหนึ่งรอบใช้เวลาเท่าไร แต่เครดิตในโหมดนี้เป็นยอดสมมติ ถอนไม่ได้
+      และผลที่ออกมาก็ไม่ได้แปลว่าเล่นจริงแล้วจะออกในรูปแบบเดียวกัน เกมของ GODDUBAI ทำงานตามค่า RTP มาตรฐานสากลที่ค่ายผู้พัฒนากำหนดมา ไม่แต่ง ไม่ปรับ ไม่ลด
+      ฉะนั้นต่อให้กดในโหมดทดลองแล้วจังหวะเข้ามือ ก็ไม่ใช่หลักฐานว่าเกมนั้นกำลังรอคุณอยู่ โหมดนี้มีไว้ศึกษาระบบ ไม่ได้มีไว้ดูดวงผ่านหน้าจอ
+    </p>
+
+    <p class="text-left text-base leading-relaxed text-[#f1e6d3]">
+      อีกเรื่องที่ควรเผื่อใจไว้คือโหมดทดลองไม่ได้มีให้ครบทุกเกม จึงควรเปิดหน้ารายละเอียดของเกมดูเสียก่อนเลือก และยอดที่หมุนในโหมดทดลองไม่นับเป็นยอดเทิร์นของบัญชีหรือของโปรโมชั่นใดทั้งสิ้น
+      ถ้าเกมที่อยากลองยังไม่มีปุ่มทดลอง ให้ถือว่าวันนี้ยังไม่ถูกจังหวะ ไม่ใช่สัญญาณลับที่ระบบส่งมาให้คุณคนเดียว และเวลาเทียบเกมกัน ให้ดูที่จำนวนไลน์ ตัวคูณ และเงื่อนไขการเข้าฟรีสปิน
+      แล้วเอามาเทียบกับงบต่อรอบของตัวคุณเอง นั่นคือข้อมูลที่นำไปตัดสินใจได้จริง ไม่ใช่ความรู้สึกว่าเกมไหนหน้าตาใจดีกว่ากัน
+    </p>
+  </ContentBox>
+
+  <ContentBox as="h2" title="จากโหมดทดลองไปเล่นจริงกับ GODDUBAI ควรเตรียมอะไรบ้าง">
+    <p class="mb-4 text-left text-base leading-relaxed text-[#f1e6d3]">
+      เมื่อพร้อมขยับจากโหมดทดลองไปเล่นด้วยเงินจริง เรื่องที่ควรจัดการก่อนคือบัญชี งบต่อรอบ และลิงก์ที่ใช้เข้า ด้านบัญชี การสมัครกับเราเรียบง่ายมาก กรอกข้อมูลแค่เท่าที่จำเป็น
+      ไม่มีการขอข้อมูลแปลก ๆ แต่ชื่อบัญชีธนาคารต้องตรงกับผู้สมัครและเบอร์โทรต้องรับข้อความได้จริง เพราะระบบจะเร็วแค่ไหนก็ไม่มีประโยชน์ ถ้ากรอกชื่อบัญชีคลาดเคลื่อนตั้งแต่แรกแล้วต้องมาตามแก้ทีหลัง
+    </p>
+
+    <p class="mb-4 text-left text-base leading-relaxed text-[#f1e6d3]">
+      ด้านงบ ที่ GODDUBAI ทำธุรกรรมได้แบบไม่มีขั้นต่ำ มีเงินติดบัญชีแค่ 1 บาทก็ฝากเข้ามาเริ่มเล่นได้ ถอนเท่าไหร่ก็ถอนได้เต็มจำนวน ไม่มีหัก ไม่มีค่าบริการแอบแฝง
+      ส่วนธุรกรรมใช้ระบบ Auto High-Speed ที่ประมวลผลเฉลี่ยเพียง 1-3 วินาที ทั้งขาฝากและขาถอน ทำรายการเองได้ตลอด 24 ชั่วโมงผ่านบัญชีธนาคารชั้นนำหรือ True Money Wallet
+      โดยไม่ต้องส่งสลิปให้แอดมินตรวจ เงินเข้าปุ๊บเล่นต่อได้ปั๊บ
+    </p>
+
+    <p class="text-left text-base leading-relaxed text-[#f1e6d3]">
+      สุดท้ายควรเข้าใช้งานผ่านทางเข้าจริงของ GODDUBAI ที่ตรวจชื่อเว็บไซต์แล้วและเชื่อมต่อแบบ HTTPS เท่านั้น ไม่ใช่ลิงก์ที่ส่งต่อกันมาในแชตพร้อมคำโฆษณาหวือหวา
+      และไม่ควรส่งรหัสผ่านหรือรหัส OTP ให้บุคคลอื่นไม่ว่ากรณีใด ทีมงานตัวจริงไม่มีความจำเป็นต้องขอสองสิ่งนี้ ทางเข้าของเรารองรับทั้งมือถือ iOS และ Android รวมถึงคอมพิวเตอร์และแท็บเล็ต
+      เปิดเล่นได้ทุกที่โดยระบบยังลื่นไหลเหมือนกันทุกอุปกรณ์
+    </p>
   </ContentBox>
 
   <Navfoot />

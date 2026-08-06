@@ -6,8 +6,8 @@ import ogImage from "../assets/slide1.png";
 import "../styles/global.css";
 import { BRAND_NAME, BRAND_TEXT, brandProfile, fontStack, iconVersion, usesGoogleFonts } from "../lib/brandProfile";
 import { canonicalFor } from "../lib/schema";
-import Navbar from "../components/NavbarStyle10.astro";
-import Footer from "../components/FooterStyle3.astro";
+import Navbar from "../components/NavbarPremium.astro";
+import Footer from "../components/FooterPremium.astro";
 
 // Only banner1 is ever rendered, so only banner1 is imported.
 //
@@ -56,8 +56,8 @@ const mobileBannerImg = mobileBanner
   : null;
 
 const {
-  title = "YIMSIAM889 สล็อตสยาม เว็บตรงแตกดีจริง ยิ้มรับโปรสมาชิกใหม่",
-  description = "YIMSIAM889 สล็อตสยาม ความบันเทิงฉบับไทยแท้ เว็บตรงแตกดีจริง มาตรฐานสากล ยิ้มรับโปรสมาชิกใหม่ ธุรกรรมว่องไวด้วยระบบอัตโนมัติ ทางเข้าปลอดภัย รองรับมือถือทุกระบบ",
+  title = "GODDUBAI สล็อตเว็บตรงระดับสุลต่าน ไม่มีขั้นต่ำ แตกหนัก อัตราจ่ายสูง",
+  description = "GODDUBAI สล็อตเว็บตรงระดับสุลต่าน แท้ 100% ที่รวยและแฟร์ที่สุด แตกหนัก อัตราจ่ายสูง ฝากถอนไม่มีขั้นต่ำ ระบบออโต้ รองรับทุกช่องทาง ปลอดภัยระดับ VIP สมัครฟรี",
   robots = "index, follow",
 } = Astro.props;
 
@@ -164,7 +164,7 @@ const profile = brandProfile(Astro.site);
 
           {block === "appmeta" && (
             <Fragment>
-              {profile.showAppTitle && <meta name="apple-mobile-web-app-title" content="yimsiam889" />}
+              {profile.showAppTitle && <meta name="apple-mobile-web-app-title" content="goddubai" />}
               <link rel="manifest" href="/site.webmanifest" />
             </Fragment>
           )}
@@ -206,7 +206,7 @@ const profile = brandProfile(Astro.site);
         background-attachment: fixed;
         background-repeat: no-repeat;
         margin: 0;
-        background-color: #140604;
+        background-color: #0b1610;
         font-weight: 400;
         font-family: var(--font-sans) !important;
       }
@@ -259,7 +259,7 @@ const profile = brandProfile(Astro.site);
         }
         <Image
           src={mainBanner}
-          alt="แบนเนอร์ YIMSIAM889 ตัวอักษรทองขอบแดงขนาดใหญ่ มีโลโก้หน้าจั่ววัดไทยสีทองอยู่ด้านบน ใต้ชื่อเขียนว่า เว็บสล็อตชาวสยาม อันดับ 1 ที่บริการดีที่สุด สองข้างเป็นพรีเซนเตอร์หญิงในชุดราตรีสีแดงปักเลื่อมทองถือไพ่ รอบภาพมีเหรียญทอง ชิปคาสิโน และไพ่ปลิว บนพื้นหลังลาวาและเปลวไฟสีส้มแดง"
+          alt="แบนเนอร์ GODDUBAI ตัวอักษรขนาดใหญ่สีเขียวมรกตขอบทองคำว่า GODDUBAI ใต้ชื่อเขียนว่า เว็บตรงไม่ผ่านเอเย่นต์ อัตราจ่ายสูง ด้านขวาเป็นพรีเซนเตอร์หญิงในชุดราตรีเลื่อมทอง รอบภาพมีเหรียญทอง ชิปคาสิโนและไพ่ปลิว ฉากหลังเป็นห้องโถงพระราชวังอาหรับสีครีมทองมีซุ้มประตูโค้ง"
           loading="eager"
           fetchpriority="high"
           widths={[412, 640, 828, 1024, 1280, 1600, 1900]}

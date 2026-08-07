@@ -1,24 +1,25 @@
 ---
 export interface Props {
   title?: string;
+  as?: "h1" | "h2" | "h3" | "h4" | "h5" | "h6";
   titleleft?: string;
   titleright?: string;
 }
-const { title, titleleft, titleright } = Astro.props;
+const { title, as: HeadingTag = "h2", titleleft, titleright } = Astro.props;
 const rightHeading = titleright ?? title;
 ---
 
 <section class="relative z-10 mx-auto mb-8 w-full max-w-[1400px] px-4 font-sans">
   <div
-    class="w-full rounded-[25px] border border-[#0a4a2e]/70 bg-[#0f1d16] p-8 shadow-[10px_10px_20px_#091310,-10px_-10px_20px_#12251b] transition-all duration-300 hover:shadow-[15px_15px_30px_#091310,-15px_-15px_30px_#12251b]">
+    class="w-full rounded-[25px] border border-[#a20d12]/70 bg-[#170707] p-8 shadow-[10px_10px_20px_#050201,-10px_-10px_20px_#2c0c0a] transition-all duration-300 hover:shadow-[15px_15px_30px_#050201,-15px_-15px_30px_#2c0c0a]">
     <div class="grid grid-cols-1 gap-8 md:grid-cols-[3fr_7fr] md:items-center">
-      <article class="flex flex-col gap-4 text-left text-base leading-relaxed text-[#f1e6d3]">
-        {titleleft && <h2 class="text-2xl leading-normal font-black text-[#e8a13c]">{titleleft}</h2>}
+      <article class="flex flex-col gap-4 text-left text-base leading-relaxed text-[#f2dede]">
+        {titleleft && <HeadingTag class="text-2xl leading-normal font-black text-[#f5c542]">{titleleft}</HeadingTag>}
         <slot name="left" />
       </article>
 
-      <article class="flex flex-col gap-4 text-left text-base leading-relaxed text-[#f1e6d3] md:border-l md:border-[#0a4a2e] md:pl-8">
-        {rightHeading && <h2 class="text-2xl leading-normal font-black text-[#e8a13c]">{rightHeading}</h2>}
+      <article class="flex flex-col gap-4 text-left text-base leading-relaxed text-[#f2dede] md:border-l md:border-[#6e0709] md:pl-8">
+        {rightHeading && <HeadingTag class="text-2xl leading-normal font-black text-[#f5c542]">{rightHeading}</HeadingTag>}
         <slot name="right" />
       </article>
     </div>

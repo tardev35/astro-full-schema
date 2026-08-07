@@ -1,0 +1,203 @@
+---
+import { fontStack, usesGoogleFonts } from "../lib/brandProfile";
+
+const targetUrl = "https://yoalink.com/22hs";
+
+const fontHref = usesGoogleFonts
+  ? "https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&family=Oswald:wght@700&display=swap"
+  : "https://fonts.googleapis.com/css2?family=Oswald:wght@700&display=swap";
+---
+
+<html lang="th" style={`--font-sans: ${fontStack};`}>
+  <head>
+    <meta charset="utf-8" />
+    <title>สมัครสมาชิก GODKINGKONG | กำลังเชื่อมต่อไปหน้าสมัครอัตโนมัติ</title>
+    <meta
+      name="description"
+      content="หน้าเชื่อมต่อสมัครสมาชิก GODKINGKONG เว็บตรงเกมสล็อตแตกหนัก ขอข้อมูลเท่าที่จำเป็น ใช้เบอร์โทรศัพท์กับรหัส PIN เป็นข้อมูลหลัก ระบบกำลังพาไปยังหน้าสมัครของเว็บ"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <meta name="robots" content="noindex, follow" />
+
+    <meta http-equiv="refresh" content={`1.5;url=${targetUrl}`} />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href={fontHref} rel="stylesheet" />
+
+    <style>
+      @font-face {
+        font-family: "Kanit";
+        font-style: normal;
+        font-weight: 400;
+        font-display: swap;
+        src: url("/fonts/kanit-v17-latin_thai-regular.woff2") format("woff2");
+      }
+      @font-face {
+        font-family: "Kanit";
+        font-style: normal;
+        font-weight: 700;
+        font-display: swap;
+        src: url("/fonts/kanit-v17-latin_thai-700.woff2") format("woff2");
+      }
+    </style>
+
+    <style>
+      :root {
+        --page-bg: #050f09;
+        --panel-bg: rgba(10, 26, 16, 0.94);
+        --brand-green: #2fe35f;
+        --brand-green-light: #7bff9f;
+        --brand-green-deep: #0b6b34;
+        --brand-gold: #f0c43a;
+        --brand-gold-deep: #a87a12;
+        --text-body: #ddf3e2;
+        --text-muted: rgba(221, 243, 226, 0.7);
+      }
+
+      body {
+        margin: 0;
+        font-family: var(--font-sans);
+        color: var(--text-body);
+
+        background:
+          radial-gradient(circle at 50% 10%, rgba(47, 227, 95, 0.18) 0%, transparent 55%),
+          radial-gradient(circle at 50% 92%, rgba(240, 196, 58, 0.16) 0%, transparent 55%), var(--page-bg);
+        display: flex;
+        min-height: 100vh;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 2rem;
+      }
+
+      .premium-loading-container {
+        width: 90%;
+        max-width: 450px;
+        padding: 3.5rem;
+        background: var(--panel-bg);
+        border: 1px solid rgba(47, 227, 95, 0.4);
+        border-radius: 2rem;
+        box-shadow:
+          0 1rem 3rem rgba(47, 227, 95, 0.22),
+          0 0 2rem rgba(240, 196, 58, 0.22);
+        text-align: center;
+        backdrop-filter: blur(10px);
+      }
+
+      .brand-identity {
+        font-family: "Oswald", sans-serif;
+        font-size: 1.5rem;
+        font-weight: 700;
+        background: linear-gradient(180deg, var(--brand-green-light) 0%, var(--brand-green) 45%, var(--brand-gold) 100%);
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+        letter-spacing: 0.3em;
+        margin-bottom: 2rem;
+        filter: drop-shadow(0 1px 2px rgba(47, 227, 95, 0.35));
+      }
+
+      .sophisticated-loader {
+        position: relative;
+        width: 100px;
+        height: 100px;
+        margin: 0 auto 3.5rem auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .orb {
+        width: 40px;
+        height: 40px;
+        background: radial-gradient(circle, var(--brand-green-light) 0%, var(--brand-green) 45%, var(--brand-green-deep) 100%);
+        border-radius: 50%;
+        box-shadow: 0 0 2rem rgba(47, 227, 95, 0.35);
+        animation: pulse 2s ease-in-out infinite;
+      }
+
+      .ring {
+        position: absolute;
+        border-radius: 50%;
+        border: 3px solid rgba(47, 227, 95, 0.2);
+        animation: spin linear infinite;
+      }
+
+      .ring-1 {
+        width: 100%;
+        height: 100%;
+        border-top-color: var(--brand-green);
+        animation-duration: 4s;
+      }
+
+      .ring-2 {
+        width: 80%;
+        height: 80%;
+        border-bottom-color: var(--brand-gold);
+        animation-duration: 6s;
+        animation-direction: reverse;
+      }
+
+      @keyframes spin {
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+      @keyframes pulse {
+        0%,
+        100% {
+          transform: scale(1);
+          box-shadow: 0 0 2rem rgba(47, 227, 95, 0.35);
+        }
+        50% {
+          transform: scale(1.15);
+          box-shadow: 0 0 3rem rgba(47, 227, 95, 0.5);
+        }
+      }
+
+      .status-text .h1 {
+        font-family: "Oswald", sans-serif;
+        font-size: 1.25rem;
+        font-weight: 700;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        color: var(--text-body);
+        text-shadow: 0 1px 1px rgba(47, 227, 95, 0.28);
+        margin: 0;
+      }
+      .status-text .p {
+        font-size: 0.875rem;
+        color: var(--text-muted);
+        line-height: 1.6;
+        margin: 1rem 0 0 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="premium-loading-container">
+      <div class="brand-identity">GODKINGKONG</div>
+
+      <div class="sophisticated-loader">
+        <div class="orb"></div>
+        <div class="ring ring-1"></div>
+        <div class="ring ring-2"></div>
+      </div>
+
+      <div class="status-text">
+        <h1 class="h1">CREATING SECURE ACCOUNT SESSION...</h1>
+        <p class="p">กำลังพาไปหน้าสมัครสมาชิก GODKINGKONG ด้วยเบอร์โทรศัพท์ <span aria-hidden="true">🔒</span></p>
+      </div>
+    </div>
+
+    <script define:vars={{ targetUrl }}>
+      setTimeout(() => {
+        window.location.replace(targetUrl);
+      }, 3000);
+    </script>
+  </body>
+</html>

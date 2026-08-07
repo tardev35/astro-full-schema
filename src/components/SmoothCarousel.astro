@@ -7,11 +7,11 @@ import slide2 from "../assets/slide2.png";
 const images = [
   {
     src: slide1,
-    alt: "โปรโมชั่น GODKINGKONG ข้อความสีขาวว่า แนะนำเพื่อน รับโบนัส และตัวเลข 0.8% ขนาดใหญ่ขอบสีเขียวนีออนบนแผ่นป้ายสีดำ ใต้ลงมาเขียนว่า สร้างรายได้ 100,000 ต่อเดือน มุมซ้ายบนเป็นโลโก้ godking kong รูปหัวกอริลลาสวมมงกุฎทอง ด้านขวาเป็นพรีเซนเตอร์หญิงชุดเลื่อมสีทอง ฉากหลังเป็นป่าสีเขียวนีออนและเหรียญทองปลิว",
+    alt: "ภาพโปรโมชั่น WINNOW168 พื้นสีแดงและทอง เขียนว่า WINNOW168 เว็บตรงน้องใหม่ รวมสล็อต คาสิโน กีฬา ในบัญชีเดียว และ เล่นลื่นผ่านมือถือ พร้อมแถบข้อความ ฝากถอนออโต้ ใช้งานง่าย จ่ายไว ถัดลงมาเป็นไอคอนสี่ช่อง สล็อตค่ายดัง คาสิโนสดครบวงจร กีฬาเดิมพันมันส์ และ โบนัสจัดเต็มทุกสัปดาห์ ด้านข้างเป็นพรีเซนเตอร์หญิงถือชิปคาสิโนยืนคู่กับโทรศัพท์มือถือ",
   },
   {
     src: slide2,
-    alt: "โปรโมชั่น GODKINGKONG คำว่า COMMISSION สีขาว ใต้ลงมาเขียนว่า คืนทุกยอดเล่นตลอดทั้งวัน และตัวเลข 0.3% สีเขียวนีออนขนาดใหญ่บนแผ่นป้ายสีดำ ถัดลงมาเขียนว่า เล่นถึง 50% ถอนได้เลย รับสิทธิ์ก่อน 23.59 น. ของทุกวัน และ ยิ่งเล่นเยอะ ยิ่งได้เยอะ ด้านบนเป็นโลโก้ godking kong รูปหัวกอริลลาสวมมงกุฎทอง ด้านซ้ายเป็นพรีเซนเตอร์หญิงถือไพ่สี่ใบ ฉากหลังเป็นป่าสีเขียวนีออน",
+    alt: "ภาพโปรโมชั่น WINNOW168 พื้นสีแดงและทอง หัวเรื่องว่า เว็บตรงครบจบ!! สายเล่นอยากไว มาทางนี้ ใต้โลโก้ WINNOW168 เรียงข้อความสามบรรทัดว่า สล็อต คาสิโน กีฬา บัญชีเดียว เล่นได้ครบ และ เล่นผ่านมือถือ 24 ชม. ด้านข้างเป็นพรีเซนเตอร์หญิงชุดสีแดงยืนถือโทรศัพท์ที่เปิดหน้าเว็บไซต์อยู่",
   },
 ];
 
@@ -23,7 +23,7 @@ const slides = Array.from({ length: COPIES }, () => images).flat();
   <input id="carousel-pause" type="checkbox" class="peer sr-only" />
   <label
     for="carousel-pause"
-    class="sr-only cursor-pointer peer-focus-visible:not-sr-only peer-focus-visible:mb-3 peer-focus-visible:inline-block peer-focus-visible:rounded-full peer-focus-visible:border peer-focus-visible:border-[#2fe35f]/60 peer-focus-visible:px-4 peer-focus-visible:py-2 peer-focus-visible:text-sm peer-focus-visible:font-bold peer-focus-visible:text-[#7bff9f]">
+    class="sr-only cursor-pointer peer-focus-visible:not-sr-only peer-focus-visible:mb-3 peer-focus-visible:inline-block peer-focus-visible:rounded-full peer-focus-visible:border peer-focus-visible:border-[#f5c542]/60 peer-focus-visible:px-4 peer-focus-visible:py-2 peer-focus-visible:text-sm peer-focus-visible:font-bold peer-focus-visible:text-[#ffdf8a]">
     หยุด / เล่นสไลด์ภาพ
   </label>
 
@@ -36,7 +36,7 @@ const slides = Array.from({ length: COPIES }, () => images).flat();
             <Picture
               src={slide.src}
               alt={isDuplicate ? "" : slide.alt}
-              class="block w-full rounded-xl border border-[#2fe35f]/25 object-cover shadow-[0_10px_30px_rgba(47,227,95,0.18)]"
+              class="block w-full rounded-xl border border-[#f5c542]/25 object-cover shadow-[0_10px_30px_rgba(224,30,38,0.18)]"
               width={slide.src.width}
               height={slide.src.height}
               loading="lazy"

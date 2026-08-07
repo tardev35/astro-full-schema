@@ -8,37 +8,37 @@ const { title, as: HeadingTag = "h2" } = Astro.props;
 
 <section class="relative z-10 mx-auto mb-10 w-full max-w-[1400px] px-4 font-sans">
   <div
-    class="group relative isolate w-full overflow-hidden rounded-3xl border border-[#e8a13c]/25 bg-[#0b1610]/92 p-6 text-[#f1e6d3] shadow-[0_10px_30px_rgba(232,161,60,0.16)] backdrop-blur-xl transition-all duration-500 hover:border-[#e8a13c]/50 md:p-10">
+    class="group relative isolate w-full overflow-hidden rounded-3xl border border-[#f5c542]/25 bg-[#170707]/92 p-6 text-[#f2dede] shadow-[0_10px_30px_rgba(245,197,66,0.16)] backdrop-blur-xl transition-all duration-500 hover:border-[#f5c542]/50 md:p-10">
     <div
       aria-hidden="true"
-      class="pointer-events-none absolute top-0 left-1/2 -z-10 h-[2px] w-1/2 -translate-x-1/2 bg-gradient-to-r from-transparent via-[#e8a13c] to-transparent opacity-60 transition-opacity duration-500 group-hover:opacity-100">
+      class="pointer-events-none absolute top-0 left-1/2 -z-10 h-[2px] w-1/2 -translate-x-1/2 bg-gradient-to-r from-transparent via-[#f5c542] to-transparent opacity-60 transition-opacity duration-500 group-hover:opacity-100">
     </div>
 
     {
       title && (
-        <header class="mb-8 flex items-center gap-4 border-b border-[#e8a13c]/25 pb-4">
-          <div aria-hidden="true" class="h-8 w-1.5 shrink-0 rounded-full bg-gradient-to-b from-[#f7cf8a] to-[#0a4a2e] shadow-[0_0_10px_rgba(232,161,60,0.45)]" />
-          <HeadingTag class="bg-gradient-to-r from-[#f7cf8a] via-[#e8a13c] to-[#0f8f57] bg-clip-text text-2xl leading-normal font-black tracking-widest text-transparent uppercase">{title}</HeadingTag>
+        <header class="mb-8 flex items-center gap-4 border-b border-[#f5c542]/25 pb-4">
+          <div aria-hidden="true" class="h-8 w-1.5 shrink-0 rounded-full bg-gradient-to-b from-[#ffdf8a] to-[#a20d12] shadow-[0_0_10px_rgba(245,197,66,0.45)]" />
+          <HeadingTag class="bg-gradient-to-r from-[#ffdf8a] via-[#f5c542] to-[#e01e26] bg-clip-text text-2xl leading-normal font-black tracking-widest text-transparent uppercase">{title}</HeadingTag>
         </header>
       )
     }
 
     <div class="grid grid-cols-1 gap-6 lg:grid-cols-2 lg:gap-10">
       <article
-        class="relative flex gap-4 rounded-2xl border border-[#e8a13c]/20 bg-[#0f1d16]/95 p-6 text-left text-base leading-relaxed text-[#f1e6d3] transition-all duration-300 hover:-translate-y-2 hover:border-[#e8a13c]/50 hover:bg-[#12251b]/90 hover:shadow-[0_15px_40px_rgba(232,161,60,0.28)]">
+        class="relative flex gap-4 rounded-2xl border border-[#f5c542]/20 bg-[#210a08]/95 p-6 text-left text-base leading-relaxed text-[#f2dede] transition-all duration-300 hover:-translate-y-2 hover:border-[#f5c542]/50 hover:bg-[#2c0c0a]/90 hover:shadow-[0_15px_40px_rgba(245,197,66,0.28)]">
         <div
           aria-hidden="true"
-          class="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl border border-[#e8a13c]/30 bg-gradient-to-br from-[#f7cf8a] via-[#e8a13c] to-[#a8611a] text-2xl shadow-[0_5px_15px_rgba(232,161,60,0.28)]">
+          class="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl border border-[#f5c542]/30 bg-gradient-to-br from-[#ffdf8a] via-[#f5c542] to-[#8a5a12] text-2xl shadow-[0_5px_15px_rgba(245,197,66,0.28)]">
           ⚡
         </div>
         <slot name="left" />
       </article>
 
       <article
-        class="relative flex gap-4 rounded-2xl border border-[#e8a13c]/20 bg-[#0f1d16]/95 p-6 text-left text-base leading-relaxed text-[#f1e6d3] transition-all duration-300 hover:-translate-y-2 hover:border-[#e8a13c]/50 hover:bg-[#12251b]/90 hover:shadow-[0_15px_40px_rgba(232,161,60,0.28)]">
+        class="relative flex gap-4 rounded-2xl border border-[#f5c542]/20 bg-[#210a08]/95 p-6 text-left text-base leading-relaxed text-[#f2dede] transition-all duration-300 hover:-translate-y-2 hover:border-[#f5c542]/50 hover:bg-[#2c0c0a]/90 hover:shadow-[0_15px_40px_rgba(245,197,66,0.28)]">
         <div
           aria-hidden="true"
-          class="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl border border-[#0f8f57]/50 bg-gradient-to-br from-[#f7cf8a] via-[#0f8f57] to-[#0a4a2e] text-2xl shadow-[0_5px_15px_rgba(15,143,87,0.3)]">
+          class="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl border border-[#e01e26]/50 bg-gradient-to-br from-[#ff5a5f] via-[#e01e26] to-[#6e0709] text-2xl shadow-[0_5px_15px_rgba(224,30,38,0.3)]">
           🏦
         </div>
         <slot name="right" />

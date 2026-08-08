@@ -1,17 +1,17 @@
 ---
 import { Picture } from "astro:assets";
 
-import slide1 from "../assets/slide1.png";
 import slide2 from "../assets/slide2.png";
+import slide4 from "../assets/slide4.png";
 
 const images = [
   {
-    src: slide1,
-    alt: "ภาพโปรโมชั่น WINNOW168 พื้นสีแดงและทอง เขียนว่า WINNOW168 เว็บตรงน้องใหม่ รวมสล็อต คาสิโน กีฬา ในบัญชีเดียว และ เล่นลื่นผ่านมือถือ พร้อมแถบข้อความ ฝากถอนออโต้ ใช้งานง่าย จ่ายไว ถัดลงมาเป็นไอคอนสี่ช่อง สล็อตค่ายดัง คาสิโนสดครบวงจร กีฬาเดิมพันมันส์ และ โบนัสจัดเต็มทุกสัปดาห์ ด้านข้างเป็นพรีเซนเตอร์หญิงถือชิปคาสิโนยืนคู่กับโทรศัพท์มือถือ",
+    src: slide2,
+    alt: "ภาพโปรโมชั่น NORWAY89 พื้นดำลายทอง ตัวอักษรทองว่า NORWAY89 รีวิวเว็บตรง ถัดลงมาเขียนว่า รวมบาคาร่า สล็อต บอล หวย ในบัญชีเดียว ตามด้วยสองบรรทัดว่า ฝากถอนออโต้ ใช้งานง่าย ผ่านมือถือ และ เว็บตรงโทนหรู เน้นระบบเสถียรและเล่นลื่น ปิดท้ายด้วยกรอบข้อความ เข้าใช้งาน NORWAY89 ด้านขวาเป็นพรีเซนเตอร์หญิงชุดราตรีสีทองยืนคู่กับวงล้อรูเล็ตและไพ่",
   },
   {
-    src: slide2,
-    alt: "ภาพโปรโมชั่น WINNOW168 พื้นสีแดงและทอง หัวเรื่องว่า เว็บตรงครบจบ!! สายเล่นอยากไว มาทางนี้ ใต้โลโก้ WINNOW168 เรียงข้อความสามบรรทัดว่า สล็อต คาสิโน กีฬา บัญชีเดียว เล่นได้ครบ และ เล่นผ่านมือถือ 24 ชม. ด้านข้างเป็นพรีเซนเตอร์หญิงชุดสีแดงยืนถือโทรศัพท์ที่เปิดหน้าเว็บไซต์อยู่",
+    src: slide4,
+    alt: "ภาพโปรโมชั่น NORWAY89 พื้นดำลายทอง ข้อความใหญ่ว่า แนะนำเพื่อน รับค่าคอม 2.5% รับต่อเนื่องทุกวัน ใต้ลงมาเรียงสามหัวข้อว่า บทความแน่น อัปเดตทุกวัน รวมสล็อต บาคาร่า บอล หวย ในบัญชีเดียว และ ระบบออโต้ ฝากถอนรวดเร็ว แถบล่างเป็นไอคอนธนาคารพร้อมไลน์ไอดีของทีมงาน ด้านขวาเป็นพรีเซนเตอร์หญิงชุดราตรีสีเงินยืนคู่กับวงล้อรูเล็ต ชิปคาสิโน และไพ่",
   },
 ];
 
@@ -19,11 +19,11 @@ const COPIES = 3;
 const slides = Array.from({ length: COPIES }, () => images).flat();
 ---
 
-<div class="marquee mx-auto w-full max-w-3xl overflow-hidden px-4 py-5">
+<div class="marquee mx-auto w-full max-w-7xl overflow-hidden px-4 py-5">
   <input id="carousel-pause" type="checkbox" class="peer sr-only" />
   <label
     for="carousel-pause"
-    class="sr-only cursor-pointer peer-focus-visible:not-sr-only peer-focus-visible:mb-3 peer-focus-visible:inline-block peer-focus-visible:rounded-full peer-focus-visible:border peer-focus-visible:border-[#f5c542]/60 peer-focus-visible:px-4 peer-focus-visible:py-2 peer-focus-visible:text-sm peer-focus-visible:font-bold peer-focus-visible:text-[#ffdf8a]">
+    class="sr-only cursor-pointer peer-focus-visible:not-sr-only peer-focus-visible:mb-3 peer-focus-visible:inline-block peer-focus-visible:rounded-full peer-focus-visible:border peer-focus-visible:border-[#e0aa2e]/60 peer-focus-visible:px-4 peer-focus-visible:py-2 peer-focus-visible:text-sm peer-focus-visible:font-bold peer-focus-visible:text-[#f5d488]">
     หยุด / เล่นสไลด์ภาพ
   </label>
 
@@ -36,14 +36,14 @@ const slides = Array.from({ length: COPIES }, () => images).flat();
             <Picture
               src={slide.src}
               alt={isDuplicate ? "" : slide.alt}
-              class="block w-full rounded-xl border border-[#f5c542]/25 object-cover shadow-[0_10px_30px_rgba(224,30,38,0.18)]"
+              class="block w-full rounded-xl border border-[#e0aa2e]/25 object-cover shadow-[0_10px_30px_rgba(224,170,46,0.18)]"
               width={slide.src.width}
               height={slide.src.height}
               loading="lazy"
               fetchpriority="low"
               decoding="async"
-              widths={[300, 360, 540, 720]}
-              sizes="(max-width: 767px) calc(100vw - 32px), 360px"
+              widths={[300, 360, 420, 480, 540, 600]}
+              sizes="(max-width: 767px) calc(100vw - 32px), (max-width: 1279px) calc((100vw - 48px) / 2), 403px"
               formats={["avif", "webp"]}
               fallbackFormat="webp"
               quality={60}
@@ -67,6 +67,14 @@ const slides = Array.from({ length: COPIES }, () => images).flat();
       --gap: 16px;
       --per-view: 2;
       --shift: calc(-100% - 16px);
+    }
+  }
+
+  @media (min-width: 1280px) {
+    .marquee {
+      --gap: 20px;
+      --per-view: 3;
+      --shift: calc(-66.6667% - 13.3333px);
     }
   }
 

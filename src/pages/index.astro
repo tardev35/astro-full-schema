@@ -1,61 +1,60 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
-import Announcement2 from "../components/Announcement2.astro";
+import Announcement6 from "../components/Announcement6.astro";
+import SmoothCarousel from "../components/SmoothCarousel.astro";
 import ContentBox from "../components/ContentBox.astro";
-import ContentBoxPremium from "../components/ContentBoxPremium.astro";
-import ContentBoxNeumorphism from "../components/ContentBoxNeumorphism.astro";
-import ContentBoxSpecial from "../components/ContentBoxSpecial.astro";
-import ContentBoxTwoPremium from "../components/ContentBoxTwoPremium.astro";
-import ContentBoxSevenThreePremium from "../components/ContentBoxSevenThreePremium.astro";
-import ContentBoxSevenThreeNeumorphism from "../components/ContentBoxSevenThreeNeumorphism.astro";
-import LoginRtpSection from "../components/LoginRtpSection.astro";
+import ContentBoxCyberCut from "../components/ContentBoxCyberCut.astro";
+import ContentBoxFloatingBadge from "../components/ContentBoxFloatingBadge.astro";
+import ContentBoxTwoCyberCut from "../components/ContentBoxTwoCyberCut.astro";
+import ContentBoxTwoFloatingBadge from "../components/ContentBoxTwoFloatingBadge.astro";
+import ContentBoxSevenThreeCyberCut from "../components/ContentBoxSevenThreeCyberCut.astro";
+import ContentBoxSevenThreeFloatingBadge from "../components/ContentBoxSevenThreeFloatingBadge.astro";
 import ProviderGrid from "../components/ProviderGrid.astro";
 import GameRankingBoard from "../components/GameRankingBoard.astro";
+import LoginRtpSection from "../components/LoginRtpSection.astro";
+import LatestWinnersPremium from "../components/LatestWinnersPremium.astro";
+import Faq from "../components/Faq.astro";
 import ReviewCardSumo2 from "../components/ReviewCardSumo2.astro";
-import LatestWinnersCyber from "../components/LatestWinnersCyber.astro";
-import SmoothCarousel from "../components/SmoothCarousel.astro";
-import Faq3 from "../components/Faq3.astro";
 import Navfoot from "../components/Navfoot.astro";
 
 import { Picture } from "astro:assets";
 import { pageGraph } from "../lib/schema";
-import imgAllInOne from "../assets/slide2.png";
-import imgMobileTest from "../assets/slide1.png";
+import imgAllCategories from "../assets/slide1.png";
+import imgSportsLotto from "../assets/slide3.png";
 
-const pageTitle = "WINNOW168 บาคาร่าออนไลน์ สล็อตเว็บตรง เล่นง่ายผ่านมือถือ ไม่มีขั้นต่ำ";
+const pageTitle = "NORWAY89 เว็บตรง บาคาร่า สล็อต บอล หวย ฝากถอนออโต้ เล่นง่าย";
 
-const pageDescription =
-  "WINNOW168 เว็บตรงรวมบาคาร่า สล็อต คาสิโนสด และกีฬา เล่นผ่านมือถือได้ในบัญชีเดียว ฝากถอนออโต้ตลอด 24 ชั่วโมง พร้อมทางเข้า โปรโมชั่น และข้อมูลก่อนสมัครสมาชิก";
+const pageDescription = "NORWAY89 เว็บตรงรวมบาคาร่า สล็อต บอล และหวยไว้ในบัญชีเดียว พร้อมระบบฝากถอนออโต้ สมัครง่าย เล่นผ่านมือถือได้ทุกที่ รวมเครดิต โปรโมชั่น และทางเข้าไว้ครบ";
 
 const announcement =
-  "WINNOW168 รวมบาคาร่า สล็อต คาสิโนสด และกีฬาไว้ในบัญชีเดียว • เมนูแยกเกมตามประเภท สลับหมวดได้จากหน้าเดิมโดยไม่ต้องตั้งค่าบัญชีใหม่ • ฝากถอนออโต้ทำรายการและดูสถานะได้จากหน้าบัญชีตลอด 24 ชั่วโมง • โปรฝาก 100 รับ 150 สำหรับสมาชิกใหม่ตามช่วงกิจกรรม ควรดูเงื่อนไขในหน้ารายการก่อนใช้สิทธิ์";
+  "NORWAY89 เว็บตรงรวมบาคาร่า สล็อต บอล และหวยไว้ในบัญชีเดียว • เมนูเกมแบ่งชัดเป็นหมวด สลับจากบาคาร่าไปสล็อตหรือบอลได้จากหน้าเดิม • ฝากถอนออโต้ขั้นตอนสั้น ดูสถานะและประวัติรายการได้จากหน้าบัญชี • หน้าสมาชิกรวมเครดิต โปรโมชั่น และประวัติรายการไว้จุดเดียว • สมัครไม่กี่ขั้นตอนแล้วเข้าเลือกเกมได้ทันที";
 
-const allInOneAlt =
-  "ภาพโปรโมชั่น WINNOW168 พื้นสีแดงและทอง หัวเรื่องว่า เว็บตรงครบจบ!! สายเล่นอยากไว มาทางนี้ ใต้โลโก้ WINNOW168 เรียงข้อความสามบรรทัดว่า สล็อต คาสิโน กีฬา บัญชีเดียว เล่นได้ครบ และ เล่นผ่านมือถือ 24 ชม. ด้านข้างเป็นพรีเซนเตอร์หญิงชุดสีแดงยืนถือโทรศัพท์ที่เปิดหน้าเว็บไซต์อยู่";
+const allCategoriesAlt =
+  "ภาพโปรโมชั่น NORWAY89 พื้นดำลายทอง ตัวอักษรทองขนาดใหญ่ว่า NORWAY89 ใต้ลงมาเป็นแถบข้อความ เว็บตรงครบทุกหมวด และ บาคาร่า สล็อต บอล หวย ตามด้วยปุ่มไอคอนสองบรรทัดว่า ฝากถอนออโต้ และ เล่นผ่านมือถือ ปิดท้ายด้วยกรอบข้อความ ทางเข้าเว็บหลัก ด้านขวาเป็นพรีเซนเตอร์หญิงชุดดำยืนคู่กับวงล้อรูเล็ต ชิปคาสิโน และไพ่";
 
-const mobileTestAlt =
-  "ภาพโปรโมชั่น WINNOW168 พื้นสีแดงและทอง เขียนว่า WINNOW168 เว็บตรงน้องใหม่ รวมสล็อต คาสิโน กีฬา ในบัญชีเดียว และ เล่นลื่นผ่านมือถือ พร้อมแถบข้อความ ฝากถอนออโต้ ใช้งานง่าย จ่ายไว ถัดลงมาเป็นไอคอนสี่ช่อง สล็อตค่ายดัง คาสิโนสดครบวงจร กีฬาเดิมพันมันส์ และ โบนัสจัดเต็มทุกสัปดาห์ ด้านข้างเป็นพรีเซนเตอร์หญิงถือชิปคาสิโนยืนคู่กับโทรศัพท์มือถือ";
+const sportsLottoAlt =
+  "ภาพโปรโมชั่น NORWAY89 พื้นดำลายทอง ตัวอักษรทองว่า NORWAY89 ครบทั้งบาคาร่า สล็อต บอล หวย และบรรทัดรองว่า เว็บตรงใช้งานง่าย ฝากถอนออโต้ ตรงกลางเป็นภาพหน้าจอมือถือที่เปิดหน้าเว็บแสดงยอดเครดิตและเมนูหมวด บาคาร่า สล็อต ฟุตบอล แถบล่างเขียนว่า บัญชีเดียว เล่นได้ครบ พร้อมไอคอนธนาคารและไลน์ไอดีของทีมงาน ด้านขวาเป็นพรีเซนเตอร์หญิงยืนคู่กับวงล้อรูเล็ตและไพ่";
 
 const faqs = [
   {
-    q: "WINNOW168 รวมบาคาร่า สล็อต คาสิโน และกีฬาไว้ในบัญชีเดียวจริงไหม",
-    a: "สมาชิกใช้บัญชีเดียวเข้าถึงบาคาร่า สล็อต คาสิโนสด กีฬา และเกมประเภทอื่นได้ เครดิต โปรโมชั่น และประวัติรายการจึงรวมอยู่ในหน้าสมาชิกเดียวกัน อยากเล่นหมวดไหนก็เลือกต่อได้เลย ไม่ต้องตั้งค่าบัญชีใหม่ทุกครั้ง",
+    q: "NORWAY89 รวมบาคาร่า สล็อต บอล และหวยไว้ในบัญชีเดียวจริงไหม",
+    a: "เว็บระบุว่ารวมเกมหลักไว้ทั้งบาคาร่า สล็อต บอล และหวย สมาชิกจึงเลือกเล่นหลายแนวผ่านบัญชีเดียว โดยใช้เครดิตและข้อมูลสมาชิกชุดเดิมได้ทุกหมวด อยากเปลี่ยนแนวระหว่างวันก็สลับหมวดได้เลย ไม่ต้องตั้งค่าบัญชีใหม่ตามเกมที่เล่น",
   },
   {
-    q: "บาคาร่าและสล็อตของ WINNOW168 เล่นผ่านมือถือได้เลยหรือต้องโหลดโปรแกรม",
-    a: "เปิดเล่นผ่านเบราว์เซอร์มือถือได้โดยไม่ต้องเปิดคอมพิวเตอร์หรือโหลดโปรแกรมเพิ่ม เลือกโต๊ะ ดูวงเงิน และเข้าเดิมพันจากหน้าจอเดียว ส่วนความลื่นไหลยังขึ้นอยู่กับมือถือ เบราว์เซอร์ และสัญญาณอินเทอร์เน็ตของแต่ละคน",
+    q: "บาคาร่าและสล็อตของ NORWAY89 เล่นผ่านมือถือได้เลยหรือต้องโหลดโปรแกรม",
+    a: "หน้าเกมรองรับทั้งหน้าจอมือถือและคอมพิวเตอร์ เข้าสู่ระบบผ่านเบราว์เซอร์แล้วเลือกโต๊ะบาคาร่าหรือเกมสล็อตได้จากหน้าเดียว ส่วนความลื่นไหลยังขึ้นอยู่กับรุ่นมือถือ เบราว์เซอร์ และสัญญาณอินเทอร์เน็ตของแต่ละคน",
   },
   {
-    q: "ระบบฝากถอนออโต้ของ WINNOW168 ทำรายการได้ตลอด 24 ชั่วโมงหรือไม่",
-    a: "เว็บระบุว่าระบบฝากถอนอัตโนมัติรองรับการทำรายการตลอด 24 ชั่วโมง สมาชิกเติมเครดิต ถอนเงิน และดูสถานะรายการผ่านหน้าบัญชีได้โดยตรง จึงจัดการยอดได้ตามเวลาที่สะดวก ไม่ต้องรอเวลาเปิดทำการ",
+    q: "ระบบฝากถอนออโต้ของ NORWAY89 ใช้งานอย่างไร",
+    a: "เว็บระบุว่าการเติมเครดิตและถอนยอดทำได้เป็นขั้นตอนสั้นผ่านระบบออโต้ สมาชิกดูสถานะและประวัติรายการได้จากหน้าบัญชีโดยตรง จึงไม่ต้องคุยหลายขั้นตอนก่อนเข้าเล่น ทำรายการเสร็จก็กลับไปเลือกเกมต่อได้ทันที",
   },
   {
-    q: "คำว่าไม่มีขั้นต่ำของ WINNOW168 ครอบคลุมรายการประเภทใดบ้าง",
-    a: "เว็บใช้คำว่าไม่มีขั้นต่ำกับการเริ่มต้นด้วยยอดที่เข้าถึงง่าย แต่จะครอบคลุมยอดฝาก ยอดถอน หรือการเดิมพันหมวดใด สมาชิกควรดูเงื่อนไขในหน้ารายการอีกครั้ง เพราะแต่ละบริการอาจกำหนดไม่เหมือนกัน",
+    q: "สมัครสมาชิก NORWAY89 มีขั้นตอนอะไรบ้าง",
+    a: "การสมัครเน้นขั้นตอนที่เข้าใจง่าย กรอกข้อมูลสมาชิก ตั้งค่าบัญชี แล้วเข้าสู่หน้าหลักเพื่อเลือกบาคาร่า สล็อต บอล หรือหวยได้จากเมนูเดียว บัญชีเดียวกันนี้ยังใช้จัดการเครดิต โปรโมชั่น และประวัติรายการ จึงไม่ต้องตั้งค่าแยกตามเกม",
   },
   {
-    q: "โปรฝาก 100 รับ 150 และทางเข้า WINNOW168 ใช้งานอย่างไร",
-    a: "โปรฝาก 100 รับเครดิตรวม 150 เป็นข้อเสนอสำหรับสมาชิกใหม่ตามช่วงกิจกรรม ควรอ่านรายละเอียดในหน้าเดียวกันทั้งเกมที่ร่วมรายการ จำนวนรอบเดิมพัน และยอดถอนสูงสุด ส่วนทางเข้ารองรับโทรศัพท์ แท็บเล็ต และคอมพิวเตอร์ ใช้บัญชีเดิมล็อกอินได้ทุกอุปกรณ์",
+    q: "ทางเข้าและหน้าสมาชิกของ NORWAY89 ดูข้อมูลอะไรได้บ้าง",
+    a: "ทางเข้ารองรับมือถือ แท็บเล็ต และคอมพิวเตอร์ ใช้บัญชีเดิมเข้าสู่ระบบได้ทุกอุปกรณ์ ส่วนหน้าสมาชิกรวมยอดเครดิต โปรโมชั่น และประวัติการทำรายการไว้จุดเดียว จึงดูข้อมูลสำคัญได้จากหน้าเดียวโดยไม่ต้องเปิดหลายส่วนเพื่อไล่หายอดย้อนหลัง",
   },
 ];
 
@@ -69,188 +68,169 @@ const graph = pageGraph(Astro, {
 <MainLayout title={pageTitle} description={pageDescription}>
   <script type="application/ld+json" set:html={graph} />
 
-  <Announcement2 message={announcement} />
+  <Announcement6 message={announcement} />
 
   <SmoothCarousel />
 
-  <ContentBoxPremium as="h1" title="WINNOW168 เว็บตรงรวมบาคาร่า สล็อต คาสิโน กีฬา เล่นผ่านมือถือได้ในบัญชีเดียว">
+  <ContentBoxCyberCut as="h1" title="NORWAY89 เว็บตรงรวมบาคาร่า สล็อต บอล หวย ฝากถอนออโต้ เล่นครบในบัญชีเดียว">
     <div>
-      <p class="text-left text-base leading-relaxed text-[#f2dede]">
-        <strong class="text-[#ff5a5f]">WINNOW168</strong> รวมบาคาร่าออนไลน์ สล็อต คาสิโนสด กีฬา และเกมยอดนิยมไว้ในบัญชีเดียว อยากเปลี่ยนจากบาคาร่าไปสล็อต หรือพักจากเกมสล็อตไปดูกีฬา
-        หรือเล่นบาคาร่า บนคาสิโนไลพ์สดๆ ก็สลับหมวดได้จากหน้าเดิม เข้าเว็บเดียวแล้วเลือกเล่นตามอารมณ์ ไม่ต้องกดออกเข้าใหม่ให้เสียเวลา
+      <p class="text-left text-base leading-relaxed text-[#efe0c4]">
+        <strong class="text-[#e0aa2e]">NORWAY89</strong> รวมบาคาร่า สล็อต บอล หวย และเกมออนไลน์หลายสไตล์ไว้ในบัญชีเดียว เปิดเข้ามาแล้วเลือกหมวดที่ชอบได้เลย พร้อมระบบฝากถอนออโต้และหน้าสมาชิกที่รวมเครดิต
+        โปรโมชั่น และประวัติรายการไว้ครบ ใช้งานง่ายทั้งบนมือถือและคอมพิวเตอร์
       </p>
-      <p class="mt-3 text-left text-base leading-relaxed text-[#f2dede]">
-        จุดเด่นของ WINNOW168 คือหน้าเว็บที่รองรับมือถือ ระบบฝากถอนอัตโนมัติ และบริการตลอด 24 ชั่วโมง พร้อมตัวเลือกเกมหลายแนว เหมาะกับคนที่อยากได้เว็บเดียวครบ ใช้งานไม่ซับซ้อน
-        และไม่ต้องจำรหัสผ่านหลายชุดจนงงเอง
-      </p>
-    </div>
-  </ContentBoxPremium>
-
-  <ContentBoxSevenThreePremium as="h2" titleright="WINNOW168 รวมบาคาร่า สล็อต คาสิโน และกีฬาไว้ในบัญชีเดียวอย่างไร">
-    <Picture
-      slot="left"
-      src={imgAllInOne}
-      alt={allInOneAlt}
-      loading="lazy"
-      fetchpriority="low"
-      widths={[200, 400, 600]}
-      sizes="(max-width: 768px) 100vw, 30vw"
-      decoding="async"
-      formats={["avif", "webp"]}
-      fallbackFormat="webp"
-      quality={80}
-      class="mx-auto h-auto w-full rounded-2xl border border-[#f5c542]/30 shadow-[0_10px_30px_rgba(224,30,38,0.26)]"
-    />
-    <div slot="right">
-      <p class="text-left text-base leading-relaxed text-[#f2dede]">
-        WINNOW168 เปิดให้สมาชิกเข้าถึงบาคาร่า สล็อต คาสิโนสด กีฬา และเกมประเภทอื่นผ่านบัญชีเดียว เครดิต โปรโมชั่น และประวัติรายการจึงรวมอยู่ในหน้าสมาชิกเดียวกัน อยากเล่นหมวดไหนก็เลือกต่อได้เลย
-        ไม่ต้องตั้งค่าบัญชีใหม่ทุกครั้ง
-      </p>
-      <p class="mt-3 text-left text-base leading-relaxed text-[#f2dede]">
-        เมนูของ WINNOW168 แยกเกมตามประเภท ทำให้มองหาเกมได้ง่ายขึ้น คนที่ชอบสลับหลายแนวจึงใช้งานสะดวกกว่าเว็บที่เมนูแน่นจนต้องเลื่อนหากันเหมือนหาร้านในห้างวันหยุด
+      <p class="mt-3 text-left text-base leading-relaxed text-[#efe0c4]">
+        จุดเด่นของ NORWAY89 คือความครบแบบไม่ทำเรื่องยากๆซับซ้อนให้กลายเป็นเรื่องง่าย สมัครไม่กี่ขั้นตอน เมนูเกมแบ่งชัด และสลับจากบาคาร่าไปสล็อตหรือกีฬาได้ตามอารมณ์ เข้าเว็บมาเพื่อเล่นเกม
+        ไม่ได้เข้ามาสอบวิชาเดินหาเมนู
       </p>
     </div>
-  </ContentBoxSevenThreePremium>
-
-  <ContentBoxNeumorphism as="h2" title="รีวิว WINNOW168 จุดเด่นของเว็บตรงอยู่ที่เกมหรือระบบใช้งาน">
-    <div>
-      <p class="text-left text-base leading-relaxed text-[#f2dede]">
-        จากการดูภาพรวม WINNOW168 เด่นทั้งจำนวนหมวดเกมและวิธีจัดหน้าเว็บ บาคาร่าออนไลน์กับสล็อตเป็นหมวดหลัก ส่วนคาสิโนสด กีฬา และเกมเสริมช่วยให้มีตัวเลือกครบขึ้น เมนูสำคัญอย่างเข้าสู่ระบบ
-        โปรโมชั่น และหน้าสมาชิกเข้าถึงได้ไม่ยาก
-      </p>
-      <p class="mt-3 text-left text-base leading-relaxed text-[#f2dede]">
-        จุดที่ทำให้ WINNOW168 น่าใช้คือแต่ละส่วนเชื่อมต่อกันเป็นระบบ ตั้งแต่เลือกเกม ตรวจเครดิต ไปจนถึงดูประวัติรายการ ทุกอย่างอยู่ในทางเดินเดียวกัน หน้าเว็บจึงไม่พาเดินอ้อมเหมือนเปิดแผนที่แล้วโดนสั่งให้กลับรถสามรอบ
-      </p>
-    </div>
-  </ContentBoxNeumorphism>
-
-  <ContentBoxTwoPremium
-    as="h2"
-    title="บาคาร่าออนไลน์ WINNOW168 เล่นผ่านมือถือสะดวกแค่ไหน"
-    titleleft="เล่นจากเบราว์เซอร์มือถือ"
-    titleright="โต๊ะบาคาร่าแยกเป็นหมวด">
-    <p slot="left" class="text-left text-base leading-relaxed text-[#f2dede]">
-      บาคาร่าออนไลน์ WINNOW168 เปิดเล่นผ่านเบราว์เซอร์มือถือได้ สมาชิกเลือกโต๊ะ ดูวงเงิน และเข้าเดิมพันจากหน้าจอเดียว จึงเหมาะกับคนที่ต้องการเล่นผ่านโทรศัพท์โดยไม่ต้องเปิดคอมพิวเตอร์หรือโหลดโปรแกรมเพิ่ม
-    </p>
-    <p slot="right" class="text-left text-base leading-relaxed text-[#f2dede]">
-      โต๊ะบาคาร่าใน WINNOW168 ถูกจัดเป็นหมวด ทำให้เปรียบเทียบรูปแบบเกมและวงเงินได้ง่ายขึ้น หน้าจอมือถืออาจเล็กกว่าคอม แต่ถ้าปุ่มวางดีและตัวหนังสืออ่านง่าย มือถือเครื่องเดียวก็เอาอยู่
-    </p>
-  </ContentBoxTwoPremium>
-
-  <ContentBoxPremium as="h2" title="สล็อตเว็บตรง WINNOW168 รวมเกมใหม่และค่ายยอดนิยม ปี 2026">
-    <div>
-      <p class="text-left text-base leading-relaxed text-[#f2dede]">
-        สล็อต WINNOW168 มีทั้งเกมคลาสสิก เกมโบนัส และเกมใหม่ที่ออกแบบมาสำหรับมือถือ สมาชิกเลือกเกมตามค่าย ธีม ฟรีสปิน หรือตัวคูณที่ชอบได้จากหมวดสล็อตโดยตรง เหมาะทั้งคนมีเกมประจำและสายชอบลองเกมใหม่
-      </p>
-      <p class="mt-3 text-left text-base leading-relaxed text-[#f2dede]">
-        การแบ่งเกมตามค่ายและความนิยมช่วยให้ค้นหาได้เร็วขึ้น ไม่ต้องเปิดดูทีละเกมจนลืมว่าตั้งใจเข้ามาเล่นอะไร เกมเยอะถือเป็นข้อดี แต่จัดหมวดดีต่างหากที่ช่วยไม่ให้หน้ารวมเกมกลายเป็นโกดังดิจิทัล
-      </p>
-    </div>
-  </ContentBoxPremium>
-
-  <ProviderGrid />
-
-  <ContentBoxSevenThreeNeumorphism as="h2" titleright="ทดสอบ WINNOW168 บนมือถือ โหลดเกมและเปลี่ยนหมวดลื่นแค่ไหน">
-    <Picture
-      slot="left"
-      src={imgMobileTest}
-      alt={mobileTestAlt}
-      loading="lazy"
-      fetchpriority="low"
-      widths={[200, 400, 600]}
-      sizes="(max-width: 768px) 100vw, 30vw"
-      decoding="async"
-      formats={["avif", "webp"]}
-      fallbackFormat="webp"
-      quality={80}
-      class="mx-auto h-auto w-full rounded-2xl border border-[#f5c542]/30 shadow-[0_10px_30px_rgba(224,30,38,0.26)]"
-    />
-    <div slot="right">
-      <p class="text-left text-base leading-relaxed text-[#f2dede]">
-        เมื่อลองใช้งาน WINNOW168 บนมือถือ เส้นทางตั้งแต่ล็อกอิน เลือกหมวด และเปิดเกมทำได้จากหน้าเว็บเดียว การสลับระหว่างบาคาร่า สล็อต และกีฬาจึงไม่ต้องเปิดหลายแท็บจนหน้าจอเต็มไปหมด
-      </p>
-      <p class="mt-3 text-left text-base leading-relaxed text-[#f2dede]">
-        ความเร็วของ WINNOW168 ยังขึ้นอยู่กับมือถือ เบราว์เซอร์ และสัญญาณอินเทอร์เน็ต แต่หน้าเว็บที่ออกแบบให้รองรับจอเล็กช่วยให้ปุ่มไม่ล้นและเมนูไม่เล่นซ่อนหา ระบบควรพาเข้าเกมไว
-        ไม่ใช่ให้เริ่มภารกิจตามหาปุ่มก่อน
-      </p>
-    </div>
-  </ContentBoxSevenThreeNeumorphism>
-
-  <GameRankingBoard />
-
-  <ContentBoxSpecial as="h2" title="ระบบฝากถอนออโต้ของ WINNOW168 ทำรายการได้ตลอด 24 ชั่วโมงหรือไม่">
-    <p slot="left" class="text-left text-base leading-relaxed text-[#f2dede]">
-      WINNOW168 ชูระบบฝากถอนอัตโนมัติที่รองรับการทำรายการตลอด 24 ชั่วโมง สมาชิกสามารถเติมเครดิต ถอนเงิน และดูสถานะรายการผ่านหน้าบัญชีได้โดยตรง ช่วยให้จัดการยอดได้ตามเวลาที่สะดวก
-    </p>
-    <p slot="right" class="text-left text-base leading-relaxed text-[#f2dede]">
-      ระบบออโต้เหมาะกับคนที่มีเวลาว่างไม่เหมือนกัน บางคนเข้าช่วงกลางวัน บางคนเพิ่งว่างหลังเที่ยงคืน WINNOW168 จึงออกแบบขั้นตอนให้ทำรายการได้ตลอดวัน ไม่ต้องรอเวลาเปิดทำการเหมือนยืนรอร้านเปิดหน้าห้าง
-    </p>
-  </ContentBoxSpecial>
-
-  <ContentBox as="h2" title="WINNOW168 ไม่มีขั้นต่ำครอบคลุมรายการประเภทใด">
-    <div>
-      <p class="text-left text-base leading-relaxed text-[#f2dede]">
-        WINNOW168 ใช้คำว่าไม่มีขั้นต่ำเป็นจุดขายสำหรับการเริ่มต้นด้วยยอดที่เข้าถึงง่าย แต่สมาชิกควรดูในหน้ารายการว่าเงื่อนไขครอบคลุมยอดฝาก ยอดถอน หรือการเดิมพันหมวดใด เพราะแต่ละบริการอาจกำหนดไม่เหมือนกัน
-      </p>
-      <p class="mt-3 text-left text-base leading-relaxed text-[#f2dede]">
-        ข้อดีของยอดเริ่มต้นต่ำคือช่วยให้ทดลองหน้าเว็บและเลือกเกมที่ชอบได้โดยไม่ต้องใส่เงินก้อนใหญ่ตั้งแต่ครั้งแรก เริ่มน้อยไม่ได้แปลว่าสนุกน้อย แค่ช่วยให้กระเป๋ามีเวลาทำความรู้จักระบบก่อน
-      </p>
-    </div>
-  </ContentBox>
-
-  <ContentBoxPremium as="h2" title="ทางเข้า WINNOW168 และล็อกอินผ่านทุกอุปกรณ์ใช้งานอย่างไร">
-    <div>
-      <p class="text-left text-base leading-relaxed text-[#f2dede]">
-        ทางเข้า WINNOW168 รองรับโทรศัพท์ แท็บเล็ต และคอมพิวเตอร์ สมาชิกใช้บัญชีเดิมเพื่อเข้าสู่ระบบ ดูโปรโมชั่น เลือกเกม และตรวจประวัติรายการได้จากอุปกรณ์ที่อยู่ใกล้มือ
-      </p>
-      <p class="mt-3 text-left text-base leading-relaxed text-[#f2dede]">
-        การใช้บัญชีเดียวทำให้เปลี่ยนอุปกรณ์ได้ง่ายขึ้น วันนี้เปิดผ่านมือถือ พรุ่งนี้ใช้คอมก็เข้าเมนูเดิมได้ ไม่ต้องสร้างบัญชีใหม่ทุกเครื่อง เพราะชีวิตจริงก็มีรหัสให้จำมากพออยู่แล้ว
-      </p>
-    </div>
-  </ContentBoxPremium>
-
-  <LoginRtpSection />
+  </ContentBoxCyberCut>
 
   <div class="relative z-10 mx-auto mb-10 flex flex-nowrap justify-center gap-3 px-4 sm:gap-6">
     <a
       href="/login"
-      class="group relative flex flex-1 items-center justify-center rounded-full bg-gradient-to-r from-[#ff5a5f] via-[#e01e26] to-[#a20d12] px-4 py-3 text-sm font-black whitespace-nowrap text-[#1a0202] shadow-[0_10px_30px_rgba(224,30,38,0.30)] transition-all duration-300 hover:-translate-y-1 hover:scale-105 hover:shadow-[0_15px_40px_rgba(224,30,38,0.42)] sm:flex-none sm:px-10 sm:py-3.5 sm:text-base">
+      class="group relative flex flex-1 items-center justify-center rounded-full bg-gradient-to-r from-[#f5d488] via-[#e0aa2e] to-[#b87814] px-4 py-3 text-sm font-black whitespace-nowrap text-[#120b04] shadow-[0_10px_30px_rgba(224,170,46,0.30)] transition-all duration-300 hover:-translate-y-1 hover:scale-105 hover:shadow-[0_15px_40px_rgba(224,170,46,0.42)] sm:flex-none sm:px-10 sm:py-3.5 sm:text-base">
       เข้าสู่ระบบ
     </a>
 
     <a
       href="/register"
-      class="group relative flex flex-1 items-center justify-center rounded-full border border-[#f5c542]/70 bg-[#170707]/85 px-4 py-3 text-sm font-black whitespace-nowrap text-[#f5c542] backdrop-blur-sm transition-all duration-300 hover:scale-105 hover:border-[#f5c542] hover:bg-[#210a08]/85 hover:shadow-[0_15px_40px_rgba(245,197,66,0.35)] sm:flex-none sm:px-10 sm:py-3.5 sm:text-base">
+      class="group relative flex flex-1 items-center justify-center rounded-full border border-[#e0aa2e]/70 bg-[#160f07]/85 px-4 py-3 text-sm font-black whitespace-nowrap text-[#e0aa2e] backdrop-blur-sm transition-all duration-300 hover:scale-105 hover:border-[#e0aa2e] hover:bg-[#241809]/85 hover:shadow-[0_15px_40px_rgba(224,170,46,0.35)] sm:flex-none sm:px-10 sm:py-3.5 sm:text-base">
       สมัครสมาชิก
     </a>
   </div>
 
-  <ContentBoxNeumorphism as="h2" title="โปรโมชั่น WINNOW168 ฝาก 100 รับ 150 ใช้สิทธิ์อย่างไร">
-    <div>
-      <p class="text-left text-base leading-relaxed text-[#f2dede]">
-        โปรโมชั่น WINNOW168 ฝาก 100 รับเครดิตรวม 150 เป็นข้อเสนอสำหรับสมาชิกใหม่ตามช่วงกิจกรรม เครดิตที่เพิ่มเข้ามาช่วยให้มีงบเลือกเกมและลองใช้งานระบบได้มากกว่ายอดฝากเริ่มต้น
+  <ContentBoxSevenThreeCyberCut as="h2" titleright="NORWAY89 รวมบาคาร่า สล็อต บอล และหวยครบในบัญชีเดียว">
+    <Picture
+      slot="left"
+      src={imgAllCategories}
+      alt={allCategoriesAlt}
+      loading="lazy"
+      fetchpriority="low"
+      widths={[200, 400, 600]}
+      sizes="(max-width: 768px) 100vw, 30vw"
+      decoding="async"
+      formats={["avif", "webp"]}
+      fallbackFormat="webp"
+      quality={80}
+      class="mx-auto h-auto w-full rounded-2xl border border-[#e0aa2e]/30 shadow-[0_10px_30px_rgba(224,170,46,0.26)]"
+    />
+    <div slot="right">
+      <p class="text-left text-base leading-relaxed text-[#efe0c4]">
+        NORWAY89 รวมเกมหลักไว้ทั้งบาคาร่า สล็อต บอล และหวย สมาชิกจึงเลือกเล่นหลายแนวผ่านบัญชีเดียว พร้อมใช้เครดิตและข้อมูลสมาชิกชุดเดิมได้ทุกหมวด
       </p>
-      <p class="mt-3 text-left text-base leading-relaxed text-[#f2dede]">
-        สมาชิกควรอ่านรายละเอียดของโปรในหน้าเดียวกัน ทั้งเกมที่ร่วมรายการ จำนวนรอบเดิมพัน และยอดถอนสูงสุด เพราะโบนัสกับเงื่อนไขควรอยู่ด้วยกัน เหมือนสั่งชาไข่มุกแล้วต้องรู้ด้วยว่าเลือกระดับหวานเท่าไร
-        ไม่ใช่ดูแค่แก้วสวย
+      <p class="mt-3 text-left text-base leading-relaxed text-[#efe0c4]">
+        คนที่ชอบเปลี่ยนแนวระหว่างวันจึงเลือกได้อิสระ เช้าเช็กบอล เย็นเล่นสล็อต ค่ำไปบาคาร่าได้หมด ความชอบเปลี่ยนได้ ส่วนบัญชีไม่ต้องเปลี่ยนตามให้วุ่น
       </p>
     </div>
-  </ContentBoxNeumorphism>
+  </ContentBoxSevenThreeCyberCut>
 
-  <ContentBoxPremium as="h2" title="WINNOW168 เหมาะกับผู้ใช้ที่ชอบเกมเดิมพันรูปแบบใด">
+  <ContentBoxTwoCyberCut as="h2" title="บาคาร่า NORWAY89 เลือกโต๊ะง่าย เล่นได้ทั้งมือถือและคอม">
+    <p slot="left" class="text-left text-base leading-relaxed text-[#efe0c4]">
+      บาคาร่า NORWAY89 รวมโต๊ะคาสิโนออนไลน์ไว้เป็นหมวดชัด สมาชิกเลือกเกมและวงเงินที่เหมาะกับตัวเองก่อนเข้าเล่นได้ พร้อมรองรับทั้งหน้าจอมือถือและคอมพิวเตอร์
+    </p>
+    <p slot="right" class="text-left text-base leading-relaxed text-[#efe0c4]">
+      หน้าเกมเน้นเข้าถึงง่ายและเลือกโต๊ะได้เร็ว เหมาะทั้งคนมีโต๊ะประจำและคนชอบสลับรูปแบบ เล่นบาคาร่าอยู่แล้วก็ไม่ต้องเดินอ้อมผ่านสล็อตครึ่งเว็บกว่าจะเจอของที่หา
+    </p>
+  </ContentBoxTwoCyberCut>
+
+  <ContentBoxFloatingBadge as="h2" title="สล็อต NORWAY89 รวมเกมหลายสไตล์ เลือกเล่นได้ตามสายที่ชอบ">
     <div>
-      <p class="text-left text-base leading-relaxed text-[#f2dede]">
-        WINNOW168 เหมาะกับคนที่ชอบบาคาร่า สล็อต คาสิโน และกีฬา แต่ต้องการรวมทุกหมวดไว้ในบัญชีเดียว รวมถึงคนที่เล่นผ่านมือถือเป็นหลักและต้องการระบบฝากถอนอัตโนมัติที่ใช้งานได้ตลอดวัน
+      <p class="text-left text-base leading-relaxed text-[#efe0c4]">
+        สล็อต NORWAY89 มีเกมหลายธีมและหลายรูปแบบให้เลือก ตั้งแต่เกมเล่นง่ายไปจนถึงเกมที่มีฟรีสปิน โบนัส และฟีเจอร์พิเศษ สมาชิกเข้าเลือกจากหมวดสล็อตได้โดยตรง
       </p>
-      <p class="mt-3 text-left text-base leading-relaxed text-[#f2dede]">
-        ภาพรวมของ WINNOW168 เน้นความครบและการเข้าถึงง่าย เหมาะกับทั้งสายโต๊ะสด สายสล็อต และคนที่ชอบเปลี่ยนหมวดตามอารมณ์ เกมจะเปลี่ยนกี่รอบก็ได้ แต่หน้าเว็บไม่ควรทำให้เปลี่ยนอารมณ์เพราะเมนูใช้ยาก
+      <p class="mt-3 text-left text-base leading-relaxed text-[#efe0c4]">
+        การจัดเกมเป็นหมวดช่วยให้หาเกมที่ถูกใจได้เร็วขึ้น จะสายภาพสวย สายฟีเจอร์ หรือสายมีเกมประจำก็เลือกต่อได้ทันที เกมเยอะควรสร้างทางเลือก ไม่ใช่สร้างงานให้นิ้วโป้ง
       </p>
     </div>
-  </ContentBoxPremium>
+  </ContentBoxFloatingBadge>
 
-  <LatestWinnersCyber />
+  <ProviderGrid />
 
-  <Faq3 title="คำถามที่พบบ่อยเกี่ยวกับ WINNOW168" faqs={faqs} />
+  <ContentBoxSevenThreeFloatingBadge as="h2" title="บอลและหวย NORWAY89 เพิ่มทางเลือกให้เล่นได้มากกว่าเกมคาสิโน">
+    <Picture
+      slot="left"
+      src={imgSportsLotto}
+      alt={sportsLottoAlt}
+      loading="lazy"
+      fetchpriority="low"
+      widths={[200, 400, 600]}
+      sizes="(max-width: 768px) 100vw, 30vw"
+      decoding="async"
+      formats={["avif", "webp"]}
+      fallbackFormat="webp"
+      quality={80}
+      class="mx-auto h-auto w-full rounded-2xl border border-[#e0aa2e]/30 shadow-[0_10px_30px_rgba(224,170,46,0.26)]"
+    />
+    <div slot="right">
+      <p class="text-left text-base leading-relaxed text-[#efe0c4]">
+        NORWAY89 มีทั้งหมวดบอลและหวยสำหรับคนที่ไม่ได้เล่นเฉพาะคาสิโน สมาชิกสามารถดูรายการกีฬา เลือกตลาดที่สนใจ หรือเข้าเล่นหวยผ่านบัญชีเดียวกับบาคาร่าและสล็อต
+      </p>
+      <p class="mt-3 text-left text-base leading-relaxed text-[#efe0c4]">
+        จุดนี้ทำให้ NORWAY89 เหมาะกับคนชอบหลายแนว เพราะวันไหนไม่อยากหมุนสล็อตก็มีตัวเลือกอื่นรออยู่ เกมเปลี่ยนตามอารมณ์ได้ โดยหน้าเว็บยังคงเป็นบ้านหลังเดิม
+      </p>
+    </div>
+  </ContentBoxSevenThreeFloatingBadge>
+
+  <GameRankingBoard />
+
+  <ContentBox as="h2" title="ฝากถอนออโต้ NORWAY89 จัดการเครดิตได้สะดวกตลอดวัน">
+    <div>
+      <p class="text-left text-base leading-relaxed text-[#efe0c4]">
+        NORWAY89 ใช้ระบบฝากถอนออโต้ช่วยให้การเติมเครดิตและถอนยอดทำได้เป็นขั้นตอนสั้น สมาชิกสามารถดูสถานะและประวัติรายการจากหน้าบัญชีได้โดยตรง
+      </p>
+      <p class="mt-3 text-left text-base leading-relaxed text-[#efe0c4]">
+        ระบบออโต้ช่วยลดเวลารอและไม่ต้องคุยหลายขั้นตอนก่อนเข้าเล่น ทำรายการเสร็จก็กลับไปเลือกเกมต่อได้ ความตื่นเต้นควรอยู่ในเกม ไม่ใช่อยู่ตอนลุ้นว่ารายการจะเดินถึงไหน
+      </p>
+    </div>
+  </ContentBox>
+
+  <ContentBoxTwoFloatingBadge as="h2" title="สมัคร NORWAY89 ขั้นตอนไม่เยอะ พร้อมเข้าเลือกเกมได้ทันที">
+    <p slot="left" class="text-left text-base leading-relaxed text-[#efe0c4]">
+      การสมัคร NORWAY89 เน้นขั้นตอนที่เข้าใจง่าย กรอกข้อมูลสมาชิก ตั้งค่าบัญชี และเข้าสู่หน้าหลักเพื่อเลือกบาคาร่า สล็อต บอล หรือหวยได้จากเมนูเดียว
+    </p>
+    <p slot="right" class="text-left text-base leading-relaxed text-[#efe0c4]">
+      บัญชี NORWAY89 ยังใช้จัดการเครดิต โปรโมชั่น และประวัติรายการทั้งหมด จึงไม่ต้องตั้งค่าแยกตามเกม สมัครครั้งเดียวให้จบ เพราะชีวิตประจำวันมีฟอร์มให้กรอกเยอะพอแล้ว
+    </p>
+  </ContentBoxTwoFloatingBadge>
+
+  <LoginRtpSection />
+
+  <ContentBoxCyberCut as="h2" title="ทางเข้า NORWAY89 รองรับมือถือ เปิดเกมได้จากทุกที่">
+    <div>
+      <p class="text-left text-base leading-relaxed text-[#efe0c4]">
+        ทางเข้า NORWAY89 รองรับมือถือ แท็บเล็ต และคอมพิวเตอร์ สมาชิกเข้าสู่ระบบผ่านเบราว์เซอร์แล้วเลือกเกมหรือจัดการบัญชีได้ตามอุปกรณ์ที่ใช้อยู่
+      </p>
+      <p class="mt-3 text-left text-base leading-relaxed text-[#efe0c4]">
+        หน้าเว็บถูกออกแบบให้เมนูสำคัญเข้าถึงง่ายบนจอเล็ก ทั้งเข้าสู่ระบบ เกม โปรโมชั่น และฝากถอน มือถือมีพื้นที่น้อยอยู่แล้ว เมนูจึงไม่ควรเล่นซ่อนหาเพิ่มอีกหนึ่งเกม
+      </p>
+    </div>
+  </ContentBoxCyberCut>
+
+  <ContentBoxFloatingBadge as="h2" title="ระบบสมาชิก NORWAY89 รวมเครดิต โปรโมชั่น และประวัติไว้จุดเดียว">
+    <div>
+      <p class="text-left text-base leading-relaxed text-[#efe0c4]">
+        ระบบสมาชิก NORWAY89 รวมยอดเครดิต โปรโมชั่น และประวัติการทำรายการไว้ในบัญชีเดียว สมาชิกจึงดูข้อมูลสำคัญได้จากหน้าเดียวโดยไม่ต้องเปิดหลายส่วนเพื่อไล่หายอดย้อนหลัง
+      </p>
+      <p class="mt-3 text-left text-base leading-relaxed text-[#efe0c4]">
+        การรวมข้อมูลไว้เป็นชุดเดียวช่วยให้จัดการบัญชีง่ายขึ้น โดยเฉพาะคนที่เล่นหลายหมวดในวันเดียว ทุกอย่างอยู่เป็นที่เป็นทาง สมองจึงเอาไว้จำเรื่องสำคัญกว่า เช่น เมื่อคืนทีมไหนทำเราหัวร้อน
+      </p>
+    </div>
+  </ContentBoxFloatingBadge>
+
+  <LatestWinnersPremium />
+
+  <ContentBox as="h2" title="NORWAY89 เหมาะกับคนที่อยากได้หลายเกมในเว็บเดียว">
+    <div>
+      <p class="text-left text-base leading-relaxed text-[#efe0c4]">
+        NORWAY89 เหมาะกับคนที่ชอบบาคาร่า สล็อต บอล และหวย แต่ต้องการใช้งานทั้งหมดจากบัญชีเดียว พร้อมระบบฝากถอนออโต้และการเข้าเล่นผ่านมือถือที่สะดวก
+      </p>
+      <p class="mt-3 text-left text-base leading-relaxed text-[#efe0c4]">
+        ภาพรวมของ NORWAY89 เน้น เกมครบ ใช้งานง่าย และขั้นตอนไม่เยอะ จึงตอบโจทย์ทั้งสายคาสิโน สายสล็อต สายกีฬา และสายตัวเลข เลือกเกมตามสไตล์ได้เต็มที่ โดยไม่ต้องเปลี่ยนเว็บตามอารมณ์ทุกวัน
+      </p>
+    </div>
+  </ContentBox>
+
+  <Faq title="คำถามที่พบบ่อยเกี่ยวกับ NORWAY89" faqs={faqs} />
 
   <ReviewCardSumo2 />
 

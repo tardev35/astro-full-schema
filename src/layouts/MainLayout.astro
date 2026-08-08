@@ -6,8 +6,8 @@ import ogImage from "../assets/slide1.png";
 import "../styles/global.css";
 import { BRAND_NAME, BRAND_TEXT, brandProfile, fontStack, iconVersion, usesGoogleFonts } from "../lib/brandProfile";
 import { canonicalFor } from "../lib/schema";
-import Navbar from "../components/NavbarStyle6.astro";
-import Footer from "../components/FooterStyle3.astro";
+import Navbar from "../components/NavbarStyle5.astro";
+import Footer from "../components/Footer.astro";
 
 // Only banner1 is ever rendered, so only banner1 is imported.
 //
@@ -56,8 +56,8 @@ const mobileBannerImg = mobileBanner
   : null;
 
 const {
-  title = "WINNOW168 บาคาร่าออนไลน์ สล็อตเว็บตรง เล่นง่ายผ่านมือถือ ไม่มีขั้นต่ำ",
-  description = "WINNOW168 เว็บตรงรวมบาคาร่า สล็อต คาสิโนสด และกีฬา เล่นผ่านมือถือได้ในบัญชีเดียว ฝากถอนออโต้ตลอด 24 ชั่วโมง พร้อมทางเข้า โปรโมชั่น และข้อมูลก่อนสมัครสมาชิก",
+  title = "NORWAY89 เว็บตรง บาคาร่า สล็อต บอล หวย ฝากถอนออโต้ เล่นง่าย",
+  description = "NORWAY89 เว็บตรงรวมบาคาร่า สล็อต บอล และหวยไว้ในบัญชีเดียว พร้อมระบบฝากถอนออโต้ สมัครง่าย เล่นผ่านมือถือได้ทุกที่ รวมเครดิต โปรโมชั่น และทางเข้าไว้ครบ",
   robots = "index, follow",
 } = Astro.props;
 
@@ -164,7 +164,7 @@ const profile = brandProfile(Astro.site);
 
           {block === "appmeta" && (
             <Fragment>
-              {profile.showAppTitle && <meta name="apple-mobile-web-app-title" content="winnow168" />}
+              {profile.showAppTitle && <meta name="apple-mobile-web-app-title" content="norway89" />}
               <link rel="manifest" href="/site.webmanifest" />
             </Fragment>
           )}
@@ -206,7 +206,7 @@ const profile = brandProfile(Astro.site);
         background-attachment: fixed;
         background-repeat: no-repeat;
         margin: 0;
-        background-color: #0a0403;
+        background-color: #0a0704;
         font-weight: 400;
         font-family: var(--font-sans) !important;
       }
@@ -259,7 +259,7 @@ const profile = brandProfile(Astro.site);
         }
         <Image
           src={mainBanner}
-          alt="แบนเนอร์ WINNOW168 โลโก้ตัวอักษรสีแดงและทองว่า WINNOW168 ใต้ลงมาเขียนว่า เว็บตรงรวมบาคาร่า สล็อต คาสิโน กีฬา และ เล่นผ่านมือถือได้ในบัญชีเดียว ถัดลงมาเป็นไอคอนเหรียญและโล่กำกับข้อความ ฝากถอนออโต้ 24 ชั่วโมง กับ ไม่มีขั้นต่ำ ด้านล่างเป็นปุ่มสีแดงเขียนว่า ทางเข้า WINNOW168 ด้านขวาเป็นพรีเซนเตอร์หญิงในสูทสีแดงเข้มถือโทรศัพท์ที่เปิดหน้าเว็บ WINNOW168 มีกองเหรียญทอง ชิปคาสิโนและไพ่วางอยู่ ฉากหลังเป็นเมืองยามค่ำโทนแดงดำ"
+          alt="แบนเนอร์ NORWAY89 พื้นสีดำทอง ด้านซ้ายเป็นตราวงกลมสีทองสลักภาพเมืองและวงเวียนเขียนแบบ มีตัวอักษร NORWAY เหนือเลข 89 ตรงกลางเป็นข้อความตัวใหญ่ว่า NORWAY89 เว็บตรงรวมเกมฮิต ใต้ลงมาในกรอบเขียนว่า บาคาร่า สล็อต บอล หวย ครบในบัญชีเดียว และ ฝาก-ถอนออโต้ เล่นง่าย ผ่านมือถือ ตลอด 24 ชั่วโมง ถัดลงมาเป็นไอคอนห้าช่องกำกับข้อความ ระบบใช้งานไว สมัครง่าย รองรับมือถือ มั่นคง ปลอดภัย และ บริการ 24 ซม. ด้านขวาเป็นพรีเซนเตอร์หญิงชุดดำถือไพ่โพดำ มีชิปคาสิโน วงล้อรูเล็ต เหรียญทองและลูกเต๋าวางอยู่"
           loading="eager"
           fetchpriority="high"
           widths={[412, 640, 828, 1024, 1280, 1600, 1900]}

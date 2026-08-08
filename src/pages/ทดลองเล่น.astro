@@ -2,7 +2,7 @@
 import MainLayout from "../layouts/MainLayout.astro";
 import ContentBox from "../components/ContentBox.astro";
 import Navfoot from "../components/Navfoot.astro";
-import Announcement from "../components/Announcement2.astro";
+import Announcement from "../components/Announcement6.astro";
 
 import { Picture } from "astro:assets";
 import { itemList, pageGraph, schemaCtx } from "../lib/schema";
@@ -36,12 +36,12 @@ const demoGames = [
 
 const gameList = demoGames.map((game) => ({ name: game.name, imagePath: game.src.src }));
 
-const pageTitle = "ทดลองเล่นสล็อต WINNOW168 เปิดดูหน้าเกมก่อนเริ่มเล่นด้วยเครดิตจริง";
+const pageTitle = "ทดลองเล่นสล็อต NORWAY89 ฟรี | ลองเกมก่อนเล่นด้วยเครดิตจริง";
 
-const pageHeading = "ทดลองเล่นสล็อต WINNOW168 เปิดดูระบบเกมก่อนเริ่มเล่นด้วยเครดิตจริง";
+const pageHeading = "ทดลองเล่นสล็อต NORWAY89 ลองระบบเกมฟรีก่อนเริ่มเล่นด้วยเครดิตจริง";
 
 const pageDescription =
-  "ทดลองเล่นสล็อต WINNOW168 เปิดดูหน้าเกมและปุ่มปรับเดิมพันจากมือถือก่อนเริ่มเล่นจริง พร้อมรายชื่อค่ายที่เปิดให้ลอง และสิ่งที่ควรดูก่อนสมัครเข้าใช้งานจริง";
+  "ทดลองเล่นสล็อต NORWAY89 ฟรีด้วยเครดิตปลอม ลองฟีเจอร์ ฟรีสปิน และจังหวะเกมของแต่ละค่ายก่อนลงเงินจริง เปิดผ่านมือถือได้ทันที ไม่ต้องสมัครและไม่ต้องฝากก่อน";
 
 const ctx = schemaCtx(Astro);
 const graph = pageGraph(Astro, {
@@ -54,8 +54,8 @@ const graph = pageGraph(Astro, {
   ],
   extra: [
     itemList(ctx, {
-      name: "ทดลองเล่นเกมสล็อตของ WINNOW168",
-      alternateName: "WINNOW168 โหมดทดลองสล็อตหลายค่ายบนมือถือก่อนเล่นด้วยเครดิตจริง",
+      name: "ทดลองเล่นเกมสล็อตของ NORWAY89",
+      alternateName: "NORWAY89 โหมดทดลองสล็อตหลายค่ายบนมือถือก่อนเล่นด้วยเครดิตจริง",
       itemType: "Game",
       items: gameList,
     }),
@@ -69,23 +69,22 @@ const graph = pageGraph(Astro, {
   <Announcement />
 
   <ContentBox as="h1" title={pageHeading}>
-    <p class="mb-4 text-left text-base leading-relaxed text-[#f2dede]">
-      WINNOW168 เป็นเว็บตรงที่รวมบาคาร่าออนไลน์ สล็อต คาสิโนสด และกีฬาไว้ในบัญชีเดียว หมวดสล็อตถูกแยกตามค่ายและรูปแบบการเล่นไว้ในเมนูเดียวกัน
-      ทั้ง PG Soft, JOKER, JILI, SlotXO, Skywind Group และ AFB Gaming จึงมองหาเกมได้เร็วขึ้นโดยไม่ต้องเลื่อนหาทีละหน้า เปิดดูได้ทั้งบนมือถือและคอมพิวเตอร์
-      ผ่านเบราว์เซอร์ ไม่ต้องโหลดโปรแกรมเพิ่ม
+    <p class="mb-4 text-left text-base leading-relaxed text-[#efe0c4]">
+      NORWAY89 เป็นเว็บตรงที่รวมบาคาร่า สล็อต บอล และหวยไว้ในบัญชีเดียว หมวดสล็อตถูกแยกตามค่ายและรูปแบบการเล่นไว้ในเมนูเดียวกัน ทั้ง PG Soft, JOKER, JILI, SlotXO,
+      Skywind Group และ AFB Gaming จึงมองหาเกมได้เร็วขึ้นโดยไม่ต้องเลื่อนหาทีละหน้า เปิดดูได้ทั้งบนมือถือ แท็บเล็ต และคอมพิวเตอร์ผ่านเบราว์เซอร์ ไม่ต้องโหลดโปรแกรมเพิ่ม
     </p>
 
-    <p class="text-left text-base leading-relaxed text-[#f2dede]">
+    <p class="text-left text-base leading-relaxed text-[#efe0c4]">
       หน้านี้จัดไว้ให้กดเปิดดูหน้าเกมก่อนว่าระบบหน้าตาเป็นอย่างไร ปุ่มปรับเดิมพันอยู่ตรงไหน ฟีเจอร์ฟรีสปินเรียกใช้อย่างไร และหนึ่งรอบกินเวลาเท่าไร
       สิ่งที่ควรดูจริง ๆ คือเดิมพันเริ่มต้นต่อรอบ ความผันผวนของเกม และรูปแบบการจ่าย มากกว่าจะดูว่าเกมไหนกำลังเป็นที่พูดถึงที่สุด
       เพราะเกมดังช่วยให้หารีวิวง่ายก็จริง แต่ไม่ได้ช่วยเจรจากับระบบสุ่มให้คุณเป็นการส่วนตัว
     </p>
   </ContentBox>
 
-  <ContentBox as="h2" title="รวมค่ายเกมที่เปิดให้เลือกใน WINNOW168">
-    <p class="mb-8 text-left text-base leading-relaxed text-[#f2dede]">
-      หมวดสล็อตของ WINNOW168 มีทั้งเกมคลาสสิก เกมโบนัส และเกมใหม่ที่ออกแบบมาสำหรับมือถือ สมาชิกเลือกเกมตามค่าย ธีม ฟรีสปิน หรือตัวคูณที่ชอบได้จากหมวดสล็อตโดยตรง
-      การแบ่งเกมตามค่ายและความนิยมช่วยให้ค้นหาได้เร็วขึ้น ไม่ต้องเปิดดูทีละเกมจนลืมว่าตั้งใจเข้ามาเล่นอะไร กดที่ภาพเพื่อไปยังขั้นตอนสมัครและเข้าใช้งานหมวดนั้นได้ทันที
+  <ContentBox as="h2" title="รวมค่ายเกมที่เปิดให้เลือกใน NORWAY89">
+    <p class="mb-8 text-left text-base leading-relaxed text-[#efe0c4]">
+      หมวดสล็อตของ NORWAY89 มีเกมหลายธีมและหลายรูปแบบ ตั้งแต่เกมเล่นง่ายไปจนถึงเกมที่มีฟรีสปิน โบนัส และฟีเจอร์พิเศษ สมาชิกเลือกเกมตามค่าย ธีม หรือตัวคูณที่ชอบได้จากหมวดสล็อตโดยตรง
+      การจัดเกมเป็นหมวดช่วยให้หาเกมที่ถูกใจได้เร็วขึ้น ไม่ต้องเปิดดูทีละเกมจนลืมว่าตั้งใจเข้ามาเล่นอะไร กดที่ภาพเพื่อไปยังขั้นตอนสมัครและเข้าใช้งานหมวดนั้นได้ทันที
     </p>
 
     <div class="mb-5 grid grid-cols-2 gap-5 sm:grid-cols-2 md:grid-cols-4">
@@ -98,8 +97,8 @@ const graph = pageGraph(Astro, {
               loading="lazy"
               fetchpriority="low"
               widths={[200, 400, 600]}
-              sizes="(max-width: 768px) 100vw, 25vw"
-              class="block h-auto w-full object-cover shadow-[0_10px_30px_rgba(224,30,38,0.18)] transition-transform duration-300 group-hover/game:scale-105"
+              sizes="(max-width: 768px) 50vw, 25vw"
+              class="block h-auto w-full object-cover shadow-[0_10px_30px_rgba(224,170,46,0.18)] transition-transform duration-300 group-hover/game:scale-105"
               decoding="async"
               formats={["avif", "webp"]}
               fallbackFormat="webp"
@@ -109,9 +108,9 @@ const graph = pageGraph(Astro, {
               href="/register"
               target="_blank"
               rel="noopener noreferrer"
-              aria-label={`สมัครสมาชิกเพื่อเล่น ${game.name} ที่ WINNOW168`}
-              class="absolute inset-0 flex items-center justify-center bg-[#0a0403]/80 opacity-0 transition-opacity duration-300 group-hover/game:opacity-100 focus-visible:opacity-100">
-              <span class="rounded-full border border-[#e01e26]/60 bg-gradient-to-r from-[#ff5a5f] via-[#e01e26] to-[#a20d12] px-6 py-2 font-bold text-[#1a0202] shadow-[0_10px_30px_rgba(224,30,38,0.30)] transition-transform hover:scale-110">เล่นเลย</span>
+              aria-label={`สมัครสมาชิกเพื่อเล่น ${game.name} ที่ NORWAY89`}
+              class="absolute inset-0 flex items-center justify-center bg-[#0a0704]/80 opacity-0 transition-opacity duration-300 group-hover/game:opacity-100 focus-visible:opacity-100">
+              <span class="rounded-full border border-[#e0aa2e]/60 bg-gradient-to-r from-[#f5d488] via-[#e0aa2e] to-[#b87814] px-6 py-2 font-bold text-[#120b04] shadow-[0_10px_30px_rgba(224,170,46,0.30)] transition-transform hover:scale-110">เล่นเลย</span>
             </a>
           </div>
         ))
@@ -120,32 +119,32 @@ const graph = pageGraph(Astro, {
   </ContentBox>
 
   <ContentBox as="h2" title="โหมดทดลองบอกอะไรได้ และบอกอะไรไม่ได้">
-    <p class="mb-4 text-left text-base leading-relaxed text-[#f2dede]">
+    <p class="mb-4 text-left text-base leading-relaxed text-[#efe0c4]">
       โหมดทดลองบอกได้ว่าเกมทำงานอย่างไร เมนูอยู่ตรงไหน ฟีเจอร์ซื้อฟรีสปินเรียกใช้อย่างไร และหนึ่งรอบใช้เวลาเท่าไร แต่เครดิตในโหมดนี้เป็นยอดสมมติ ถอนไม่ได้
       และผลที่ออกมาก็ไม่ได้แปลว่าเล่นจริงแล้วจะออกในรูปแบบเดียวกัน ต่อให้กดในโหมดทดลองแล้วจังหวะเข้ามือ ก็ไม่ใช่หลักฐานว่าเกมนั้นกำลังรอคุณอยู่
       โหมดนี้มีไว้ศึกษาระบบ ไม่ได้มีไว้ดูดวงผ่านหน้าจอ
     </p>
 
-    <p class="text-left text-base leading-relaxed text-[#f2dede]">
+    <p class="text-left text-base leading-relaxed text-[#efe0c4]">
       อีกเรื่องที่ควรเผื่อใจไว้คือโหมดทดลองไม่ได้มีให้ครบทุกเกม จึงควรเปิดหน้ารายละเอียดของเกมดูเสียก่อนเลือก และยอดที่หมุนในโหมดทดลองไม่นับเป็นยอดเทิร์นของบัญชีหรือของโปรโมชั่นใดทั้งสิ้น
       ถ้าเกมที่อยากลองยังไม่มีปุ่มทดลอง ให้ถือว่าวันนี้ยังไม่ถูกจังหวะ ไม่ใช่สัญญาณลับที่ระบบส่งมาให้คุณคนเดียว และเวลาเทียบเกมกัน ให้ดูที่จำนวนไลน์ ตัวคูณ และเงื่อนไขการเข้าฟรีสปิน
       แล้วเอามาเทียบกับงบต่อรอบของตัวคุณเอง นั่นคือข้อมูลที่นำไปตัดสินใจได้จริง ไม่ใช่ความรู้สึกว่าเกมไหนหน้าตาใจดีกว่ากัน
     </p>
   </ContentBox>
 
-  <ContentBox as="h2" title="จากโหมดทดลองไปเล่นจริงกับ WINNOW168 ควรเตรียมอะไรบ้าง">
-    <p class="mb-4 text-left text-base leading-relaxed text-[#f2dede]">
-      เมื่อพร้อมขยับจากโหมดทดลองไปเล่นด้วยเครดิตจริง เรื่องที่ควรจัดการก่อนคือบัญชีสมาชิก งบต่อรอบ และทางเข้าที่ใช้ ด้านบัญชี WINNOW168 ใช้บัญชีเดียวครอบคลุมทั้งบาคาร่า สล็อต คาสิโนสด และกีฬา
+  <ContentBox as="h2" title="จากโหมดทดลองไปเล่นจริงกับ NORWAY89 ควรเตรียมอะไรบ้าง">
+    <p class="mb-4 text-left text-base leading-relaxed text-[#efe0c4]">
+      เมื่อพร้อมขยับจากโหมดทดลองไปเล่นด้วยเครดิตจริง เรื่องที่ควรจัดการก่อนคือบัญชีสมาชิก งบต่อรอบ และทางเข้าที่ใช้ ด้านบัญชี NORWAY89 ใช้บัญชีเดียวครอบคลุมทั้งบาคาร่า สล็อต บอล และหวย
       เครดิต โปรโมชั่น และประวัติรายการจึงรวมอยู่ในหน้าสมาชิกเดียวกัน อยากเปลี่ยนหมวดก็เลือกต่อได้เลย ไม่ต้องตั้งค่าบัญชีใหม่ทุกครั้ง
     </p>
 
-    <p class="mb-4 text-left text-base leading-relaxed text-[#f2dede]">
-      ด้านงบ เว็บชูคำว่าไม่มีขั้นต่ำเป็นจุดขายสำหรับการเริ่มต้นด้วยยอดที่เข้าถึงง่าย แต่ควรดูในหน้ารายการว่าเงื่อนไขครอบคลุมยอดฝาก ยอดถอน หรือการเดิมพันหมวดใด เพราะแต่ละบริการอาจกำหนดไม่เหมือนกัน
-      ส่วนการทำรายการใช้ระบบฝากถอนอัตโนมัติที่รองรับตลอด 24 ชั่วโมง เติมเครดิต ถอนเงิน และดูสถานะรายการได้จากหน้าบัญชีโดยตรง จึงจัดการยอดได้ตามเวลาที่สะดวก
+    <p class="mb-4 text-left text-base leading-relaxed text-[#efe0c4]">
+      ด้านงบ ควรตั้งยอดต่อรอบที่รับไหวไว้ตั้งแต่ก่อนกดหมุนรอบแรก และเปิดดูเงื่อนไขของโปรโมชั่นที่จะใช้ว่าครอบคลุมยอดฝาก ยอดถอน หรือการเดิมพันหมวดใด เพราะแต่ละรายการอาจกำหนดไม่เหมือนกัน
+      ส่วนการทำรายการใช้ระบบฝากถอนออโต้ที่ทำเป็นขั้นตอนสั้น เติมเครดิต ถอนยอด และดูสถานะรายการได้จากหน้าบัญชีโดยตรง จึงจัดการยอดได้สะดวกตลอดวันโดยไม่ต้องคุยหลายขั้นตอนก่อนเข้าเล่น
     </p>
 
-    <p class="text-left text-base leading-relaxed text-[#f2dede]">
-      ด้านทางเข้า WINNOW168 รองรับโทรศัพท์ แท็บเล็ต และคอมพิวเตอร์ ใช้บัญชีเดิมเข้าสู่ระบบได้จากอุปกรณ์ที่อยู่ใกล้มือ ความเร็วในการโหลดเกมและเปลี่ยนหมวดยังขึ้นอยู่กับมือถือ เบราว์เซอร์
+    <p class="text-left text-base leading-relaxed text-[#efe0c4]">
+      ด้านทางเข้า NORWAY89 รองรับโทรศัพท์ แท็บเล็ต และคอมพิวเตอร์ ใช้บัญชีเดิมเข้าสู่ระบบได้จากอุปกรณ์ที่อยู่ใกล้มือ ความเร็วในการโหลดเกมและเปลี่ยนหมวดยังขึ้นอยู่กับเครื่อง เบราว์เซอร์
       และสัญญาณอินเทอร์เน็ตของแต่ละคน จึงควรเผื่อไว้ว่าผลลัพธ์อาจไม่เท่ากันทุกเครื่อง และไม่ควรส่งรหัสผ่านหรือรหัส OTP ให้บุคคลอื่นไม่ว่ากรณีใด
     </p>
   </ContentBox>

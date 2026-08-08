@@ -2,14 +2,15 @@
 import MainLayout from "../layouts/MainLayout.astro";
 import ContentBox from "../components/ContentBox.astro";
 import Navfoot from "../components/Navfoot.astro";
-import Announcement from "../components/Announcement2.astro";
+import Announcement from "../components/Announcement6.astro";
+import CtaRedirect from "../components/CtaRedirect.astro";
 import { pageGraph } from "../lib/schema";
 
 const pageDescription =
-  "หน้าสมัครสมาชิก WINNOW168 เว็บตรงรวมบาคาร่า สล็อต คาสิโนสด และกีฬา กดปุ่มเดียวไปยังหน้าสมัครของเว็บหลัก ใช้บัญชีเดียวเล่นได้ครบทุกหมวด ฝากถอนออโต้ 24 ชั่วโมง";
+  "สมัครสมาชิก NORWAY89 ขั้นตอนไม่กี่นาที กรอกข้อมูลแล้วเข้าเลือกบาคาร่า สล็อต บอล หวยได้ทันที พร้อมระบบฝากถอนออโต้และหน้าสมาชิกที่รวมเครดิตกับโปรโมชั่นไว้ครบ";
 
 const graph = pageGraph(Astro, {
-  name: "สมัครสมาชิก WINNOW168 เว็บหลัก",
+  name: "สมัครสมาชิก NORWAY89 เว็บหลัก",
   description: pageDescription,
   breadcrumb: [
     { name: "หน้าแรก", path: "/" },
@@ -20,22 +21,25 @@ const graph = pageGraph(Astro, {
 const targetUrl = "https://yoalink.com/22hs";
 ---
 
-<MainLayout title="สมัครสมาชิก WINNOW168 | เปิดบัญชีเดียวเล่นได้ครบทุกหมวด" description={pageDescription}>
+<MainLayout title="สมัครสมาชิก NORWAY89 | บัญชีเดียวเล่นครบทุกหมวด" description={pageDescription}>
   <script type="application/ld+json" set:html={graph} />
 
   <Announcement />
 
-  <ContentBox title="สมัครสมาชิก WINNOW168" as="h1">
+  <ContentBox title="สมัครสมาชิก NORWAY89" as="h1">
     <div class="flex justify-center py-8">
       <a
         href={targetUrl}
         rel="nofollow sponsored"
+        data-cta-redirect
         aria-label="สมัครสมาชิก"
-        class="group relative mx-auto flex w-full max-w-[320px] items-center justify-center gap-3 overflow-hidden rounded-xl border border-[#e01e26]/60 bg-gradient-to-r from-[#ff5a5f] via-[#e01e26] to-[#a20d12] px-6 py-4 text-xl font-bold tracking-wide text-[#1a0202] shadow-[0_10px_30px_rgba(224,30,38,0.24)] transition-all duration-300 hover:scale-105 hover:shadow-[0_15px_40px_rgba(224,30,38,0.4)]">
+        class="group relative mx-auto flex w-full max-w-[320px] items-center justify-center gap-3 overflow-hidden rounded-xl border border-[#e0aa2e]/60 bg-gradient-to-b from-[#f5d488] via-[#e0aa2e] to-[#b87814] px-6 py-4 text-xl font-bold tracking-wide text-[#120b04] shadow-[0_10px_30px_rgba(224,170,46,0.24)] transition-all duration-300 hover:scale-105 hover:shadow-[0_15px_40px_rgba(224,170,46,0.4)]">
         สมัครสมาชิก
       </a>
     </div>
   </ContentBox>
 
   <Navfoot />
+
+  <CtaRedirect label="สมัครสมาชิก" />
 </MainLayout>

@@ -6,8 +6,8 @@ import ogImage from "../assets/slide1.png";
 import "../styles/global.css";
 import { BRAND_NAME, BRAND_TEXT, brandProfile, fontStack, iconVersion, usesGoogleFonts } from "../lib/brandProfile";
 import { canonicalFor } from "../lib/schema";
-import Navbar from "../components/NavbarStyle5.astro";
-import Footer from "../components/Footer.astro";
+import Navbar from "../components/NavbarStyle3.astro";
+import Footer from "../components/FooterStyle3.astro";
 
 // Only banner1 is ever rendered, so only banner1 is imported.
 //
@@ -56,8 +56,8 @@ const mobileBannerImg = mobileBanner
   : null;
 
 const {
-  title = "NORWAY89 เว็บตรง บาคาร่า สล็อต บอล หวย ฝากถอนออโต้ เล่นง่าย",
-  description = "NORWAY89 เว็บตรงรวมบาคาร่า สล็อต บอล และหวยไว้ในบัญชีเดียว พร้อมระบบฝากถอนออโต้ สมัครง่าย เล่นผ่านมือถือได้ทุกที่ รวมเครดิต โปรโมชั่น และทางเข้าไว้ครบ",
+  title = "KOH888 สล็อตเว็บตรง คาสิโน บาคาร่า บอล หวย เล่นครบผ่านมือถือ",
+  description = "KOH888 เว็บตรงรวมสล็อต คาสิโน บาคาร่า บอล และหวย ใช้งานผ่านมือถือในบัญชีเดียว พร้อมเกมใหม่ ฝากถอนออโต้ โปรโมชั่น สมัครง่าย และทางเข้าเว็บหลัก ครบจบในเว็บเดียว",
   robots = "index, follow",
 } = Astro.props;
 
@@ -164,7 +164,7 @@ const profile = brandProfile(Astro.site);
 
           {block === "appmeta" && (
             <Fragment>
-              {profile.showAppTitle && <meta name="apple-mobile-web-app-title" content="norway89" />}
+              {profile.showAppTitle && <meta name="apple-mobile-web-app-title" content="koh888" />}
               <link rel="manifest" href="/site.webmanifest" />
             </Fragment>
           )}
@@ -206,7 +206,7 @@ const profile = brandProfile(Astro.site);
         background-attachment: fixed;
         background-repeat: no-repeat;
         margin: 0;
-        background-color: #0a0704;
+        background-color: #0c0416;
         font-weight: 400;
         font-family: var(--font-sans) !important;
       }
@@ -259,7 +259,7 @@ const profile = brandProfile(Astro.site);
         }
         <Image
           src={mainBanner}
-          alt="แบนเนอร์ NORWAY89 พื้นสีดำทอง ด้านซ้ายเป็นตราวงกลมสีทองสลักภาพเมืองและวงเวียนเขียนแบบ มีตัวอักษร NORWAY เหนือเลข 89 ตรงกลางเป็นข้อความตัวใหญ่ว่า NORWAY89 เว็บตรงรวมเกมฮิต ใต้ลงมาในกรอบเขียนว่า บาคาร่า สล็อต บอล หวย ครบในบัญชีเดียว และ ฝาก-ถอนออโต้ เล่นง่าย ผ่านมือถือ ตลอด 24 ชั่วโมง ถัดลงมาเป็นไอคอนห้าช่องกำกับข้อความ ระบบใช้งานไว สมัครง่าย รองรับมือถือ มั่นคง ปลอดภัย และ บริการ 24 ซม. ด้านขวาเป็นพรีเซนเตอร์หญิงชุดดำถือไพ่โพดำ มีชิปคาสิโน วงล้อรูเล็ต เหรียญทองและลูกเต๋าวางอยู่"
+          alt="แบนเนอร์ KOH888 พื้นไล่สีขาวไปม่วง ด้านซ้ายเป็นโลโก้ทองรูปชิปคาสิโนสีดำมีมงกุฎและสัญลักษณ์โพดำ เขียนว่า KOH เหนือเลข 888 ถัดลงมาเป็นข้อความตัวใหญ่ว่า KOH888 เว็บตรงสายเกมครบหมวด ในแถบม่วงเขียนว่า รวมสล็อต คาสิโน บอล หวย และบรรทัดถัดมาว่า สมัครง่าย ใช้งานผ่านมือถือได้ลื่น ปิดท้ายด้วยไอคอนสามช่องกำกับข้อความ ระบบออโต้ รองรับมือถือ และ เข้าเล่นไว ด้านขวาเป็นพรีเซนเตอร์หญิงชุดดำ มีวงล้อรูเล็ต ไพ่โพดำ ลูกเต๋า เหรียญทอง และมือถือที่เปิดหน้าเว็บ KOH888"
           loading="eager"
           fetchpriority="high"
           widths={[412, 640, 828, 1024, 1280, 1600, 1900]}

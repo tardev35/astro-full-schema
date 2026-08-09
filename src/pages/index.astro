@@ -1,60 +1,61 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
-import Announcement6 from "../components/Announcement6.astro";
+import AnnouncementPremium from "../components/AnnouncementPremium.astro";
 import SmoothCarousel from "../components/SmoothCarousel.astro";
 import ContentBox from "../components/ContentBox.astro";
-import ContentBoxCyberCut from "../components/ContentBoxCyberCut.astro";
-import ContentBoxFloatingBadge from "../components/ContentBoxFloatingBadge.astro";
-import ContentBoxTwoCyberCut from "../components/ContentBoxTwoCyberCut.astro";
-import ContentBoxTwoFloatingBadge from "../components/ContentBoxTwoFloatingBadge.astro";
-import ContentBoxSevenThreeCyberCut from "../components/ContentBoxSevenThreeCyberCut.astro";
-import ContentBoxSevenThreeFloatingBadge from "../components/ContentBoxSevenThreeFloatingBadge.astro";
+import ContentBoxPremium from "../components/ContentBoxPremium.astro";
+import ContentBoxNeumorphism from "../components/ContentBoxNeumorphism.astro";
+import ContentBoxSpecial from "../components/ContentBoxSpecial.astro";
+import ContentBoxTwoPremium from "../components/ContentBoxTwoPremium.astro";
+import ContentBoxSevenThreePremium from "../components/ContentBoxSevenThreePremium.astro";
+import ContentBoxSevenThreeNeumorphism from "../components/ContentBoxSevenThreeNeumorphism.astro";
 import ProviderGrid from "../components/ProviderGrid.astro";
 import GameRankingBoard from "../components/GameRankingBoard.astro";
 import LoginRtpSection from "../components/LoginRtpSection.astro";
-import LatestWinnersPremium from "../components/LatestWinnersPremium.astro";
-import Faq from "../components/Faq.astro";
+import LatestWinnersCyber from "../components/LatestWinnersCyber.astro";
+import Faq2 from "../components/Faq2.astro";
 import ReviewCardSumo2 from "../components/ReviewCardSumo2.astro";
 import Navfoot from "../components/Navfoot.astro";
 
 import { Picture } from "astro:assets";
 import { pageGraph } from "../lib/schema";
-import imgAllCategories from "../assets/slide1.png";
-import imgSportsLotto from "../assets/slide3.png";
+import imgSportsLotto from "../assets/slide2.png";
+import imgPromotion from "../assets/slide3.png";
 
-const pageTitle = "NORWAY89 เว็บตรง บาคาร่า สล็อต บอล หวย ฝากถอนออโต้ เล่นง่าย";
+const pageTitle = "KOH888 สล็อตเว็บตรง คาสิโน บาคาร่า บอล หวย เล่นครบผ่านมือถือ";
 
-const pageDescription = "NORWAY89 เว็บตรงรวมบาคาร่า สล็อต บอล และหวยไว้ในบัญชีเดียว พร้อมระบบฝากถอนออโต้ สมัครง่าย เล่นผ่านมือถือได้ทุกที่ รวมเครดิต โปรโมชั่น และทางเข้าไว้ครบ";
+const pageDescription =
+  "KOH888 เว็บตรงรวมสล็อต คาสิโน บาคาร่า บอล และหวย ใช้งานผ่านมือถือในบัญชีเดียว พร้อมเกมใหม่ ฝากถอนออโต้ โปรโมชั่น สมัครง่าย และทางเข้าเว็บหลัก ครบจบในเว็บเดียว";
 
 const announcement =
-  "NORWAY89 เว็บตรงรวมบาคาร่า สล็อต บอล และหวยไว้ในบัญชีเดียว • เมนูเกมแบ่งชัดเป็นหมวด สลับจากบาคาร่าไปสล็อตหรือบอลได้จากหน้าเดิม • ฝากถอนออโต้ขั้นตอนสั้น ดูสถานะและประวัติรายการได้จากหน้าบัญชี • หน้าสมาชิกรวมเครดิต โปรโมชั่น และประวัติรายการไว้จุดเดียว • สมัครไม่กี่ขั้นตอนแล้วเข้าเลือกเกมได้ทันที";
-
-const allCategoriesAlt =
-  "ภาพโปรโมชั่น NORWAY89 พื้นดำลายทอง ตัวอักษรทองขนาดใหญ่ว่า NORWAY89 ใต้ลงมาเป็นแถบข้อความ เว็บตรงครบทุกหมวด และ บาคาร่า สล็อต บอล หวย ตามด้วยปุ่มไอคอนสองบรรทัดว่า ฝากถอนออโต้ และ เล่นผ่านมือถือ ปิดท้ายด้วยกรอบข้อความ ทางเข้าเว็บหลัก ด้านขวาเป็นพรีเซนเตอร์หญิงชุดดำยืนคู่กับวงล้อรูเล็ต ชิปคาสิโน และไพ่";
+  "KOH888 เว็บตรงรวมสล็อต คาสิโน บาคาร่า บอล และหวยไว้ในบัญชีเดียว • เมนูแบ่งเป็นหมวดชัด สลับจากสล็อตไปคาสิโนหรือบอลได้จากหน้าเดิม • ฝากถอนออโต้ขั้นตอนสั้น ดูยอดและประวัติรายการได้จากหน้าบัญชี • หน้าสมาชิกรวมเครดิต โปรโมชั่น และรายการทั้งหมดไว้จุดเดียว • สมัครไม่กี่ขั้นตอนแล้วเข้าเลือกเกมได้ทันที";
 
 const sportsLottoAlt =
-  "ภาพโปรโมชั่น NORWAY89 พื้นดำลายทอง ตัวอักษรทองว่า NORWAY89 ครบทั้งบาคาร่า สล็อต บอล หวย และบรรทัดรองว่า เว็บตรงใช้งานง่าย ฝากถอนออโต้ ตรงกลางเป็นภาพหน้าจอมือถือที่เปิดหน้าเว็บแสดงยอดเครดิตและเมนูหมวด บาคาร่า สล็อต ฟุตบอล แถบล่างเขียนว่า บัญชีเดียว เล่นได้ครบ พร้อมไอคอนธนาคารและไลน์ไอดีของทีมงาน ด้านขวาเป็นพรีเซนเตอร์หญิงยืนคู่กับวงล้อรูเล็ตและไพ่";
+  "ภาพโปรโมชั่น KOH888 พื้นม่วงเข้มมีริบบิ้นทองและเหรียญปลิว ด้านบนเป็นโลโก้ KOH888 ทองมีมงกุฎ ชิปคาสิโนโพดำและลูกเต๋า ถัดลงมาเป็นตัวอักษรทองขนาดใหญ่ว่า KOH888 ตามด้วยข้อความ หวยออนไลน์ เล่นง่าย และ วางโพยไว ผ่านมือถือ ใต้ลงมาเป็นแถบ ครบทั้ง สล็อต คาสิโน หวย กีฬา พร้อมไอคอนตู้สล็อต วงล้อคาสิโน ลูกหวย และลูกฟุตบอล ปิดท้ายด้วยสองกรอบข้อความว่า ระบบออโต้ ทำรายการไว แม่นยำ และ สมัครง่าย ไม่ยุ่งยาก ใช้แค่เบอร์ แถบล่างสุดเขียนว่า มั่นคง ปลอดภัย 100% เข้ารหัสมาตรฐานสากล และ บริการตลอด 24 ชม. ด้านขวาเป็นพรีเซนเตอร์หญิงชุดม่วงถือไพ่โพดำ ยืนคู่กับกองเหรียญทองและใบหวยรัฐบาล";
+
+const promotionAlt =
+  "ภาพโปรโมชั่น KOH888 พื้นม่วงเข้มมีชิปคาสิโนและเหรียญทองลอยอยู่รอบภาพ มุมบนซ้ายเป็นป้ายว่า สมัครง่าย ฝากถอนออโต้ ด้านหลังเป็นวงล้อรูเล็ตทองสองวง ตรงกลางเป็นตัวอักษรทองขนาดใหญ่ว่า KOH888 ใต้ลงมาเป็นแถบข้อความ ฝากแรกของวัน ตามด้วยบรรทัดใหญ่ว่า รับโบนัส 50% และปิดท้ายด้วยบรรทัด สล็อต คาสิโน หวย กีฬา ครบในบัญชีเดียว ด้านหน้าเป็นพรีเซนเตอร์หญิงชุดขาว";
 
 const faqs = [
   {
-    q: "NORWAY89 รวมบาคาร่า สล็อต บอล และหวยไว้ในบัญชีเดียวจริงไหม",
-    a: "เว็บระบุว่ารวมเกมหลักไว้ทั้งบาคาร่า สล็อต บอล และหวย สมาชิกจึงเลือกเล่นหลายแนวผ่านบัญชีเดียว โดยใช้เครดิตและข้อมูลสมาชิกชุดเดิมได้ทุกหมวด อยากเปลี่ยนแนวระหว่างวันก็สลับหมวดได้เลย ไม่ต้องตั้งค่าบัญชีใหม่ตามเกมที่เล่น",
+    q: "KOH888 รวมสล็อต คาสิโน บาคาร่า บอล และหวยไว้ในบัญชีเดียวจริงไหม",
+    a: "เว็บระบุว่าจัดสล็อต คาสิโน บาคาร่า บอล และหวยเป็นหมวดหลักภายในบัญชีสมาชิกเดียว สมาชิกจึงเลือกเกมได้ตามสไตล์โดยยังใช้ข้อมูลสมาชิกและเครดิตชุดเดิม ไม่ต้องเปิดหลายหน้าหรือสมัครแยกตามประเภทเกมที่อยากเล่น",
   },
   {
-    q: "บาคาร่าและสล็อตของ NORWAY89 เล่นผ่านมือถือได้เลยหรือต้องโหลดโปรแกรม",
-    a: "หน้าเกมรองรับทั้งหน้าจอมือถือและคอมพิวเตอร์ เข้าสู่ระบบผ่านเบราว์เซอร์แล้วเลือกโต๊ะบาคาร่าหรือเกมสล็อตได้จากหน้าเดียว ส่วนความลื่นไหลยังขึ้นอยู่กับรุ่นมือถือ เบราว์เซอร์ และสัญญาณอินเทอร์เน็ตของแต่ละคน",
+    q: "สล็อต KOH888 มีเกมใหม่และค่ายยอดนิยมให้เลือกแบบไหน",
+    a: "หมวดสล็อตรวมเกมหลายธีม ทั้งสายเล่นง่าย เกมโบนัส และเกมที่มีฟรีสปินหรือตัวคูณ สมาชิกเลือกจากหมวดสล็อตได้ตรง ๆ พร้อมดูเกมใหม่และเกมที่กำลังได้รับความนิยมจากหน้าเดียว จึงหาเกมประจำได้เร็วและลองของใหม่ได้ง่าย",
   },
   {
-    q: "ระบบฝากถอนออโต้ของ NORWAY89 ใช้งานอย่างไร",
-    a: "เว็บระบุว่าการเติมเครดิตและถอนยอดทำได้เป็นขั้นตอนสั้นผ่านระบบออโต้ สมาชิกดูสถานะและประวัติรายการได้จากหน้าบัญชีโดยตรง จึงไม่ต้องคุยหลายขั้นตอนก่อนเข้าเล่น ทำรายการเสร็จก็กลับไปเลือกเกมต่อได้ทันที",
+    q: "KOH888 เล่นผ่านมือถือได้เลยหรือต้องโหลดโปรแกรมเพิ่ม",
+    a: "เว็บรองรับการใช้งานผ่านเบราว์เซอร์มือถือ ตั้งแต่เข้าสู่ระบบ เลือกสล็อต คาสิโน บอล หวย ไปจนถึงจัดการหน้าสมาชิก จึงใช้งานจากโทรศัพท์ได้โดยไม่ต้องพึ่งหน้าจอคอมตลอดเวลา ส่วนความลื่นยังขึ้นกับรุ่นมือถือและสัญญาณเน็ต",
   },
   {
-    q: "สมัครสมาชิก NORWAY89 มีขั้นตอนอะไรบ้าง",
-    a: "การสมัครเน้นขั้นตอนที่เข้าใจง่าย กรอกข้อมูลสมาชิก ตั้งค่าบัญชี แล้วเข้าสู่หน้าหลักเพื่อเลือกบาคาร่า สล็อต บอล หรือหวยได้จากเมนูเดียว บัญชีเดียวกันนี้ยังใช้จัดการเครดิต โปรโมชั่น และประวัติรายการ จึงไม่ต้องตั้งค่าแยกตามเกม",
+    q: "ระบบฝากถอนออโต้ของ KOH888 ใช้งานอย่างไร",
+    a: "ระบบออโต้ช่วยให้สมาชิกจัดการเครดิตจากหน้าบัญชีได้เป็นขั้นตอนตรงไปตรงมา พร้อมดูยอดและรายการที่เกี่ยวข้องได้จากจุดเดียว จึงลดเวลาระหว่างเติมเครดิตกับเลือกเกม ทำรายการเสร็จก็กลับเข้าเกมต่อได้ทันที",
   },
   {
-    q: "ทางเข้าและหน้าสมาชิกของ NORWAY89 ดูข้อมูลอะไรได้บ้าง",
-    a: "ทางเข้ารองรับมือถือ แท็บเล็ต และคอมพิวเตอร์ ใช้บัญชีเดิมเข้าสู่ระบบได้ทุกอุปกรณ์ ส่วนหน้าสมาชิกรวมยอดเครดิต โปรโมชั่น และประวัติการทำรายการไว้จุดเดียว จึงดูข้อมูลสำคัญได้จากหน้าเดียวโดยไม่ต้องเปิดหลายส่วนเพื่อไล่หายอดย้อนหลัง",
+    q: "โปรโมชั่น KOH888 มีสิทธิ์อะไรให้สมาชิกเลือกบ้าง",
+    a: "โปรโมชั่นจัดไว้เป็นอีกหมวดสำหรับสมาชิก ทั้งกิจกรรมตามช่วงเวลา สิทธิ์สำหรับสมาชิกใหม่ และแคมเปญที่เปลี่ยนตามรอบ รายละเอียดของแต่ละโปรต่างกันทั้งยอดเริ่มต้น เกมที่ร่วม และเงื่อนไขรับสิทธิ์ จึงควรอ่านจากหน้าโปรนั้นโดยตรง",
   },
 ];
 
@@ -68,85 +69,71 @@ const graph = pageGraph(Astro, {
 <MainLayout title={pageTitle} description={pageDescription}>
   <script type="application/ld+json" set:html={graph} />
 
-  <Announcement6 message={announcement} />
+  <AnnouncementPremium message={announcement} />
 
-  <SmoothCarousel />
-
-  <ContentBoxCyberCut as="h1" title="NORWAY89 เว็บตรงรวมบาคาร่า สล็อต บอล หวย ฝากถอนออโต้ เล่นครบในบัญชีเดียว">
+  <ContentBoxPremium as="h1" title="KOH888 เว็บตรงรวมสล็อต คาสิโน บาคาร่า บอล หวย เล่นครบในบัญชีเดียว">
     <div>
-      <p class="text-left text-base leading-relaxed text-[#efe0c4]">
-        <strong class="text-[#e0aa2e]">NORWAY89</strong> รวมบาคาร่า สล็อต บอล หวย และเกมออนไลน์หลายสไตล์ไว้ในบัญชีเดียว เปิดเข้ามาแล้วเลือกหมวดที่ชอบได้เลย พร้อมระบบฝากถอนออโต้และหน้าสมาชิกที่รวมเครดิต
-        โปรโมชั่น และประวัติรายการไว้ครบ ใช้งานง่ายทั้งบนมือถือและคอมพิวเตอร์
+      <p class="text-left text-base leading-relaxed text-[#e9dcf6]">
+        <strong class="text-[#f5c542]">KOH888</strong> รวมสล็อต คาสิโน บาคาร่า บอล และหวยไว้ในบัญชีสมาชิกเดียว อยากหมุนสล็อต ต่อบาคาร่า หรือเปลี่ยนไปเชียร์บอลก็เลือกจากเมนูเดิมได้เลย
+        พร้อมระบบฝากถอนออโต้และหน้าเว็บที่รองรับมือถือ ใช้จริงแล้วไม่ต้องจำเมนูเยอะให้สมองทำโอที
       </p>
-      <p class="mt-3 text-left text-base leading-relaxed text-[#efe0c4]">
-        จุดเด่นของ NORWAY89 คือความครบแบบไม่ทำเรื่องยากๆซับซ้อนให้กลายเป็นเรื่องง่าย สมัครไม่กี่ขั้นตอน เมนูเกมแบ่งชัด และสลับจากบาคาร่าไปสล็อตหรือกีฬาได้ตามอารมณ์ เข้าเว็บมาเพื่อเล่นเกม
-        ไม่ได้เข้ามาสอบวิชาเดินหาเมนู
+      <p class="mt-3 text-left text-base leading-relaxed text-[#e9dcf6]">
+        จุดเด่นของ KOH888 คือการรวมเกมหลายสไตล์ไว้ในพื้นที่เดียว ทั้งสายเกมหมุน โต๊ะสด กีฬา และตัวเลข พร้อมหน้าสมาชิกสำหรับดูเครดิต โปรโมชั่น และรายการต่าง ๆ แบบเป็นหมวด
+        เข้าเว็บมาหาความสนุก ไม่ควรต้องเริ่มด้วยภารกิจตามหาปุ่มก่อน
       </p>
     </div>
-  </ContentBoxCyberCut>
+  </ContentBoxPremium>
 
   <div class="relative z-10 mx-auto mb-10 flex flex-nowrap justify-center gap-3 px-4 sm:gap-6">
     <a
       href="/login"
-      class="group relative flex flex-1 items-center justify-center rounded-full bg-gradient-to-r from-[#f5d488] via-[#e0aa2e] to-[#b87814] px-4 py-3 text-sm font-black whitespace-nowrap text-[#120b04] shadow-[0_10px_30px_rgba(224,170,46,0.30)] transition-all duration-300 hover:-translate-y-1 hover:scale-105 hover:shadow-[0_15px_40px_rgba(224,170,46,0.42)] sm:flex-none sm:px-10 sm:py-3.5 sm:text-base">
+      class="group relative flex flex-1 items-center justify-center rounded-full bg-gradient-to-r from-[#ffe9a3] via-[#f5c542] to-[#a9761a] px-4 py-3 text-sm font-black whitespace-nowrap text-[#1a0a2e] shadow-[0_10px_30px_rgba(245,197,66,0.30)] transition-all duration-300 hover:-translate-y-1 hover:scale-105 hover:shadow-[0_15px_40px_rgba(245,197,66,0.42)] sm:flex-none sm:px-10 sm:py-3.5 sm:text-base">
       เข้าสู่ระบบ
     </a>
 
     <a
       href="/register"
-      class="group relative flex flex-1 items-center justify-center rounded-full border border-[#e0aa2e]/70 bg-[#160f07]/85 px-4 py-3 text-sm font-black whitespace-nowrap text-[#e0aa2e] backdrop-blur-sm transition-all duration-300 hover:scale-105 hover:border-[#e0aa2e] hover:bg-[#241809]/85 hover:shadow-[0_15px_40px_rgba(224,170,46,0.35)] sm:flex-none sm:px-10 sm:py-3.5 sm:text-base">
+      class="group relative flex flex-1 items-center justify-center rounded-full border border-[#c77dff]/70 bg-[#25093f]/85 px-4 py-3 text-sm font-black whitespace-nowrap text-[#ffe9a3] backdrop-blur-sm transition-all duration-300 hover:scale-105 hover:border-[#c77dff] hover:bg-[#3b0a63]/85 hover:shadow-[0_15px_40px_rgba(139,54,217,0.40)] sm:flex-none sm:px-10 sm:py-3.5 sm:text-base">
       สมัครสมาชิก
     </a>
   </div>
 
-  <ContentBoxSevenThreeCyberCut as="h2" titleright="NORWAY89 รวมบาคาร่า สล็อต บอล และหวยครบในบัญชีเดียว">
-    <Picture
-      slot="left"
-      src={imgAllCategories}
-      alt={allCategoriesAlt}
-      loading="lazy"
-      fetchpriority="low"
-      widths={[200, 400, 600]}
-      sizes="(max-width: 768px) 100vw, 30vw"
-      decoding="async"
-      formats={["avif", "webp"]}
-      fallbackFormat="webp"
-      quality={80}
-      class="mx-auto h-auto w-full rounded-2xl border border-[#e0aa2e]/30 shadow-[0_10px_30px_rgba(224,170,46,0.26)]"
-    />
-    <div slot="right">
-      <p class="text-left text-base leading-relaxed text-[#efe0c4]">
-        NORWAY89 รวมเกมหลักไว้ทั้งบาคาร่า สล็อต บอล และหวย สมาชิกจึงเลือกเล่นหลายแนวผ่านบัญชีเดียว พร้อมใช้เครดิตและข้อมูลสมาชิกชุดเดิมได้ทุกหมวด
-      </p>
-      <p class="mt-3 text-left text-base leading-relaxed text-[#efe0c4]">
-        คนที่ชอบเปลี่ยนแนวระหว่างวันจึงเลือกได้อิสระ เช้าเช็กบอล เย็นเล่นสล็อต ค่ำไปบาคาร่าได้หมด ความชอบเปลี่ยนได้ ส่วนบัญชีไม่ต้องเปลี่ยนตามให้วุ่น
-      </p>
-    </div>
-  </ContentBoxSevenThreeCyberCut>
-
-  <ContentBoxTwoCyberCut as="h2" title="บาคาร่า NORWAY89 เลือกโต๊ะง่าย เล่นได้ทั้งมือถือและคอม">
-    <p slot="left" class="text-left text-base leading-relaxed text-[#efe0c4]">
-      บาคาร่า NORWAY89 รวมโต๊ะคาสิโนออนไลน์ไว้เป็นหมวดชัด สมาชิกเลือกเกมและวงเงินที่เหมาะกับตัวเองก่อนเข้าเล่นได้ พร้อมรองรับทั้งหน้าจอมือถือและคอมพิวเตอร์
-    </p>
-    <p slot="right" class="text-left text-base leading-relaxed text-[#efe0c4]">
-      หน้าเกมเน้นเข้าถึงง่ายและเลือกโต๊ะได้เร็ว เหมาะทั้งคนมีโต๊ะประจำและคนชอบสลับรูปแบบ เล่นบาคาร่าอยู่แล้วก็ไม่ต้องเดินอ้อมผ่านสล็อตครึ่งเว็บกว่าจะเจอของที่หา
-    </p>
-  </ContentBoxTwoCyberCut>
-
-  <ContentBoxFloatingBadge as="h2" title="สล็อต NORWAY89 รวมเกมหลายสไตล์ เลือกเล่นได้ตามสายที่ชอบ">
+  <ContentBox as="h2" title="KOH888 รวมสล็อต คาสิโน บาคาร่า บอล และหวยไว้ครบแค่ไหน">
     <div>
-      <p class="text-left text-base leading-relaxed text-[#efe0c4]">
-        สล็อต NORWAY89 มีเกมหลายธีมและหลายรูปแบบให้เลือก ตั้งแต่เกมเล่นง่ายไปจนถึงเกมที่มีฟรีสปิน โบนัส และฟีเจอร์พิเศษ สมาชิกเข้าเลือกจากหมวดสล็อตได้โดยตรง
+      <p class="text-left text-base leading-relaxed text-[#e9dcf6]">
+        KOH888 จัดสล็อต คาสิโน บาคาร่า บอล และหวยเป็นหมวดหลักภายในบัญชีเดียว ทำให้สมาชิกเลือกเกมได้ตามสไตล์โดยยังใช้ข้อมูลสมาชิกและเครดิตชุดเดิม ไม่ต้องเปิดหลายหน้าให้รกจอ
       </p>
-      <p class="mt-3 text-left text-base leading-relaxed text-[#efe0c4]">
-        การจัดเกมเป็นหมวดช่วยให้หาเกมที่ถูกใจได้เร็วขึ้น จะสายภาพสวย สายฟีเจอร์ หรือสายมีเกมประจำก็เลือกต่อได้ทันที เกมเยอะควรสร้างทางเลือก ไม่ใช่สร้างงานให้นิ้วโป้ง
+      <p class="mt-3 text-left text-base leading-relaxed text-[#e9dcf6]">
+        ความครบของ KOH888 จึงไม่ได้วัดแค่จำนวนเกม แต่รวมถึงการเข้าถึงแต่ละหมวดได้ง่าย วันนี้สายสล็อต พรุ่งนี้สายบอลก็เปลี่ยนได้ อารมณ์คนเปลี่ยนไวอยู่แล้ว หน้าเว็บไม่จำเป็นต้องสร้างเรื่องเพิ่ม
       </p>
     </div>
-  </ContentBoxFloatingBadge>
+  </ContentBox>
+
+  <ContentBoxNeumorphism as="h2" title="สล็อต KOH888 รวมเกมใหม่และค่ายยอดนิยมไว้แบบไหน">
+    <div>
+      <p class="text-left text-base leading-relaxed text-[#e9dcf6]">
+        สล็อต KOH888 มีเกมหลายธีมทั้งสายเล่นง่าย เกมโบนัส และเกมที่มีฟรีสปินหรือตัวคูณ สมาชิกเลือกจากหมวดสล็อตได้ตรง ๆ พร้อมดูเกมใหม่และเกมที่กำลังได้รับความนิยมจากหน้าเดียว
+      </p>
+      <p class="mt-3 text-left text-base leading-relaxed text-[#e9dcf6]">
+        การแยกเกมเป็นหมวดช่วยให้คนมีเกมประจำหาเจอเร็ว ส่วนสายชอบลองของใหม่ก็เลือกต่อได้ง่าย เกมเยอะเป็นเรื่องดี แต่ถ้าจัดไม่เป็นก็กลายเป็นโกดัง เพราะงั้น KOH888 เน้นให้เลือกง่ายมากกว่าโยนทุกอย่างมากองรวมกัน
+      </p>
+    </div>
+  </ContentBoxNeumorphism>
 
   <ProviderGrid />
 
-  <ContentBoxSevenThreeFloatingBadge as="h2" title="บอลและหวย NORWAY89 เพิ่มทางเลือกให้เล่นได้มากกว่าเกมคาสิโน">
+  <GameRankingBoard />
+
+  <ContentBoxTwoPremium as="h2" title="คาสิโนและบาคาร่า KOH888 เลือกเกมสดได้ง่ายจากเมนูเดียว">
+    <p slot="left" class="text-left text-base leading-relaxed text-[#e9dcf6]">
+      คาสิโน KOH888 รวมเกมโต๊ะและบาคาร่าไว้ในหมวดคาสิโนสด สมาชิกสามารถเลือกประเภทเกมและโต๊ะที่ต้องการจากหน้าเดียว ก่อนเข้าเล่นตามรูปแบบที่ตัวเองถนัด
+    </p>
+    <p slot="right" class="text-left text-base leading-relaxed text-[#e9dcf6]">
+      สำหรับคนที่เล่นบาคาร่าเป็นหลัก เมนูที่แยกชัดช่วยให้เข้าถึงโต๊ะได้เร็วขึ้น ไม่ต้องไถผ่านสล็อตเป็นร้อยเกมก่อนเจอของที่หา เว็บมีของครบก็ดี แต่พาไปถึงของที่ต้องการไวกว่า นั่นแหละใช้จริงแล้วรู้สึกต่าง
+    </p>
+  </ContentBoxTwoPremium>
+
+  <ContentBoxSevenThreePremium as="h2" titleright="บอลและหวย KOH888 เพิ่มทางเลือกให้เล่นได้มากกว่าสล็อต">
     <Picture
       slot="left"
       src={imgSportsLotto}
@@ -159,78 +146,101 @@ const graph = pageGraph(Astro, {
       formats={["avif", "webp"]}
       fallbackFormat="webp"
       quality={80}
-      class="mx-auto h-auto w-full rounded-2xl border border-[#e0aa2e]/30 shadow-[0_10px_30px_rgba(224,170,46,0.26)]"
+      class="mx-auto h-auto w-full rounded-2xl border border-[#8b36d9]/40 shadow-[0_10px_30px_rgba(139,54,217,0.30)]"
     />
     <div slot="right">
-      <p class="text-left text-base leading-relaxed text-[#efe0c4]">
-        NORWAY89 มีทั้งหมวดบอลและหวยสำหรับคนที่ไม่ได้เล่นเฉพาะคาสิโน สมาชิกสามารถดูรายการกีฬา เลือกตลาดที่สนใจ หรือเข้าเล่นหวยผ่านบัญชีเดียวกับบาคาร่าและสล็อต
+      <p class="text-left text-base leading-relaxed text-[#e9dcf6]">
+        KOH888 มีทั้งหมวดบอลและหวยเพิ่มจากสล็อตกับคาสิโน ทำให้สมาชิกที่ชอบหลายแนวเลือกเล่นได้จากบัญชีเดียว ไม่ว่าจะตามการแข่งขันกีฬา หรือลุ้นตัวเลขก็ยังอยู่ในระบบสมาชิกเดิม
       </p>
-      <p class="mt-3 text-left text-base leading-relaxed text-[#efe0c4]">
-        จุดนี้ทำให้ NORWAY89 เหมาะกับคนชอบหลายแนว เพราะวันไหนไม่อยากหมุนสล็อตก็มีตัวเลือกอื่นรออยู่ เกมเปลี่ยนตามอารมณ์ได้ โดยหน้าเว็บยังคงเป็นบ้านหลังเดิม
+      <p class="mt-3 text-left text-base leading-relaxed text-[#e9dcf6]">
+        จุดนี้เหมาะกับคนที่ไม่ได้มีเกมโปรดแค่ประเภทเดียว วันไหนไม่อินสล็อตก็ย้ายไปดูบอล วันไหนอยากลุ้นเลขก็เปิดหวยได้เลย ความชอบเปลี่ยนได้ตามวัน แต่ไม่ต้องเปลี่ยนเว็บตามทุกอารมณ์
       </p>
     </div>
-  </ContentBoxSevenThreeFloatingBadge>
+  </ContentBoxSevenThreePremium>
 
-  <GameRankingBoard />
+  <ContentBoxSpecial as="h2" title="KOH888 เล่นผ่านมือถือสะดวกแค่ไหนในปี 2026">
+    <p slot="left" class="text-left text-base leading-relaxed text-[#e9dcf6]">
+      KOH888 รองรับการใช้งานผ่านเบราว์เซอร์มือถือ ทั้งเข้าสู่ระบบ เลือกสล็อต คาสิโน บอล หวย และจัดการหน้าสมาชิก จึงใช้งานได้จากโทรศัพท์โดยไม่ต้องพึ่งหน้าจอคอมตลอดเวลา
+    </p>
+    <p slot="right" class="text-left text-base leading-relaxed text-[#e9dcf6]">
+      หน้าเว็บบนมือถือเน้นเมนูหลักที่กดง่ายและไม่อัดข้อมูลจนแน่นเกินจอ เหมาะกับคนที่หยิบมือถือขึ้นมาแล้วอยากเข้าเกมต่อได้เลย จอเล็กพอแล้ว ปุ่มไม่ควรเล็กตามจนต้องใช้สมาธิระดับผ่าตัด
+    </p>
+  </ContentBoxSpecial>
 
-  <ContentBox as="h2" title="ฝากถอนออโต้ NORWAY89 จัดการเครดิตได้สะดวกตลอดวัน">
+  <ContentBox as="h2" title="ฝากถอนออโต้ KOH888 จัดการเครดิตได้ตลอดวัน">
     <div>
-      <p class="text-left text-base leading-relaxed text-[#efe0c4]">
-        NORWAY89 ใช้ระบบฝากถอนออโต้ช่วยให้การเติมเครดิตและถอนยอดทำได้เป็นขั้นตอนสั้น สมาชิกสามารถดูสถานะและประวัติรายการจากหน้าบัญชีได้โดยตรง
+      <p class="text-left text-base leading-relaxed text-[#e9dcf6]">
+        ระบบฝากถอนออโต้ KOH888 ช่วยให้สมาชิกจัดการเครดิตจากหน้าบัญชีได้เป็นขั้นตอนตรงไปตรงมา พร้อมดูยอดและรายการที่เกี่ยวข้องได้จากจุดเดียว จึงลดเวลาระหว่างเติมเครดิตกับเลือกเกม
       </p>
-      <p class="mt-3 text-left text-base leading-relaxed text-[#efe0c4]">
-        ระบบออโต้ช่วยลดเวลารอและไม่ต้องคุยหลายขั้นตอนก่อนเข้าเล่น ทำรายการเสร็จก็กลับไปเลือกเกมต่อได้ ความตื่นเต้นควรอยู่ในเกม ไม่ใช่อยู่ตอนลุ้นว่ารายการจะเดินถึงไหน
+      <p class="mt-3 text-left text-base leading-relaxed text-[#e9dcf6]">
+        เมื่อระบบการเงินอยู่ในหน้าสมาชิกเดียว การใช้งานก็ไหลต่อเนื่องกว่าเดิม ทำรายการเสร็จแล้วกลับเข้าเกมได้ทันที เพราะเวลาที่ควรลุ้นคือในเกม ไม่ใช่นั่งลุ้นว่าหน้าธุรกรรมจะพาไปทางไหนต่อ
       </p>
     </div>
   </ContentBox>
 
-  <ContentBoxTwoFloatingBadge as="h2" title="สมัคร NORWAY89 ขั้นตอนไม่เยอะ พร้อมเข้าเลือกเกมได้ทันที">
-    <p slot="left" class="text-left text-base leading-relaxed text-[#efe0c4]">
-      การสมัคร NORWAY89 เน้นขั้นตอนที่เข้าใจง่าย กรอกข้อมูลสมาชิก ตั้งค่าบัญชี และเข้าสู่หน้าหลักเพื่อเลือกบาคาร่า สล็อต บอล หรือหวยได้จากเมนูเดียว
+  <LatestWinnersCyber />
+
+  <ContentBoxSevenThreeNeumorphism as="h2" titleright="โปรโมชั่น KOH888 มีสิทธิ์อะไรให้สมาชิกเลือกบ้าง">
+    <Picture
+      slot="left"
+      src={imgPromotion}
+      alt={promotionAlt}
+      loading="lazy"
+      fetchpriority="low"
+      widths={[200, 400, 600]}
+      sizes="(max-width: 768px) 100vw, 30vw"
+      decoding="async"
+      formats={["avif", "webp"]}
+      fallbackFormat="webp"
+      quality={80}
+      class="mx-auto h-auto w-full rounded-2xl border border-[#8b36d9]/40 shadow-[0_10px_30px_rgba(139,54,217,0.30)]"
+    />
+    <div slot="right">
+      <p class="text-left text-base leading-relaxed text-[#e9dcf6]">
+        โปรโมชั่น KOH888 จัดไว้เป็นอีกหมวดสำหรับสมาชิก ทั้งกิจกรรมตามช่วงเวลา สิทธิ์สำหรับสมาชิกใหม่ และแคมเปญที่เปลี่ยนตามรอบ สมาชิกจึงเลือกโปรให้เหมาะกับรูปแบบการเล่นของตัวเองได้
+      </p>
+      <p class="mt-3 text-left text-base leading-relaxed text-[#e9dcf6]">
+        รายละเอียดของแต่ละโปรโมชั่นจะต่างกันทั้งยอดเริ่มต้น เกมที่ร่วม และเงื่อนไขรับสิทธิ์ จึงควรอ่านจากหน้าโปรนั้นโดยตรง ป้ายโบนัสมีหน้าที่เรียกสายตา ส่วนรายละเอียดมีหน้าที่กันเราเข้าใจเกินจริง ทั้งคู่สำคัญพอกัน
+      </p>
+    </div>
+  </ContentBoxSevenThreeNeumorphism>
+
+  <SmoothCarousel />
+
+  <ContentBoxTwoPremium as="h2" title="สมัคร KOH888 ขั้นตอนไม่เยอะ พร้อมเข้าเลือกเกมได้ทันที">
+    <p slot="left" class="text-left text-base leading-relaxed text-[#e9dcf6]">
+      การสมัคร KOH888 ใช้ข้อมูลสมาชิกตามที่ระบบกำหนด เมื่อสร้างบัญชีเรียบร้อยก็เข้าสู่หน้าหลักเพื่อเลือกสล็อต คาสิโน บาคาร่า บอล หรือหวยได้จากเมนูเดียว
     </p>
-    <p slot="right" class="text-left text-base leading-relaxed text-[#efe0c4]">
-      บัญชี NORWAY89 ยังใช้จัดการเครดิต โปรโมชั่น และประวัติรายการทั้งหมด จึงไม่ต้องตั้งค่าแยกตามเกม สมัครครั้งเดียวให้จบ เพราะชีวิตประจำวันมีฟอร์มให้กรอกเยอะพอแล้ว
+    <p slot="right" class="text-left text-base leading-relaxed text-[#e9dcf6]">
+      บัญชี KOH888 ยังใช้ดูเครดิต โปรโมชั่น และประวัติรายการต่าง ๆ จึงตั้งค่าครั้งเดียวแล้วใช้ต่อได้ทุกหมวด ขั้นตอนสมัครควรสั้นพอให้จำได้ เพราะทุกวันนี้รหัสผ่านในชีวิตก็เยอะจนสมองแทบอยากขอลาพักร้อนอยู่แล้ว
     </p>
-  </ContentBoxTwoFloatingBadge>
+  </ContentBoxTwoPremium>
+
+  <ContentBoxPremium as="h2" title="ทางเข้า KOH888 เว็บหลัก เปิดผ่านมือถือและคอมได้สะดวก">
+    <div>
+      <p class="text-left text-base leading-relaxed text-[#e9dcf6]">
+        ทางเข้า KOH888 รองรับทั้งมือถือ แท็บเล็ต และคอมพิวเตอร์ สมาชิกสามารถเข้าสู่ระบบ เลือกเกม ดูโปรโมชั่น และจัดการบัญชีผ่านเบราว์เซอร์ของอุปกรณ์ที่ใช้อยู่ได้
+      </p>
+      <p class="mt-3 text-left text-base leading-relaxed text-[#e9dcf6]">
+        การใช้บัญชีเดิมบนหลายอุปกรณ์ช่วยให้เปลี่ยนหน้าจอได้ตามสถานการณ์ อยู่บ้านใช้คอม ออกข้างนอกใช้มือถือ เมนูและข้อมูลสมาชิกยังอยู่ในระบบเดียวกัน เปลี่ยนอุปกรณ์ได้ แต่ไม่ต้องเริ่มชีวิตใหม่ทุกครั้ง
+      </p>
+    </div>
+  </ContentBoxPremium>
 
   <LoginRtpSection />
 
-  <ContentBoxCyberCut as="h2" title="ทางเข้า NORWAY89 รองรับมือถือ เปิดเกมได้จากทุกที่">
+  <ContentBoxNeumorphism as="h2" title="KOH888 เหมาะกับคนที่ชอบเกมเดิมพันออนไลน์แบบไหน">
     <div>
-      <p class="text-left text-base leading-relaxed text-[#efe0c4]">
-        ทางเข้า NORWAY89 รองรับมือถือ แท็บเล็ต และคอมพิวเตอร์ สมาชิกเข้าสู่ระบบผ่านเบราว์เซอร์แล้วเลือกเกมหรือจัดการบัญชีได้ตามอุปกรณ์ที่ใช้อยู่
+      <p class="text-left text-base leading-relaxed text-[#e9dcf6]">
+        KOH888 เหมาะกับคนที่ชอบสล็อต คาสิโน บาคาร่า บอล และหวย แต่ต้องการรวมทุกหมวดไว้ในบัญชีเดียว รวมถึงคนที่ใช้มือถือเป็นหลักและอยากจัดการเครดิตกับโปรโมชั่นจากหน้าเดียว
       </p>
-      <p class="mt-3 text-left text-base leading-relaxed text-[#efe0c4]">
-        หน้าเว็บถูกออกแบบให้เมนูสำคัญเข้าถึงง่ายบนจอเล็ก ทั้งเข้าสู่ระบบ เกม โปรโมชั่น และฝากถอน มือถือมีพื้นที่น้อยอยู่แล้ว เมนูจึงไม่ควรเล่นซ่อนหาเพิ่มอีกหนึ่งเกม
+      <p class="mt-3 text-left text-base leading-relaxed text-[#e9dcf6]">
+        ภาพรวมของ KOH888 เน้น เกมครบ เลือกง่าย และใช้งานต่อเนื่อง จึงตอบโจทย์ทั้งสายเกมหมุน โต๊ะสด กีฬา และตัวเลข โดยเฉพาะคนที่ความชอบเปลี่ยนได้ทุกวัน แต่ไม่อยากเปลี่ยนเว็บตามจนจำไม่ถูกว่าเมื่อวานเข้าอันไหน
       </p>
     </div>
-  </ContentBoxCyberCut>
+  </ContentBoxNeumorphism>
 
-  <ContentBoxFloatingBadge as="h2" title="ระบบสมาชิก NORWAY89 รวมเครดิต โปรโมชั่น และประวัติไว้จุดเดียว">
-    <div>
-      <p class="text-left text-base leading-relaxed text-[#efe0c4]">
-        ระบบสมาชิก NORWAY89 รวมยอดเครดิต โปรโมชั่น และประวัติการทำรายการไว้ในบัญชีเดียว สมาชิกจึงดูข้อมูลสำคัญได้จากหน้าเดียวโดยไม่ต้องเปิดหลายส่วนเพื่อไล่หายอดย้อนหลัง
-      </p>
-      <p class="mt-3 text-left text-base leading-relaxed text-[#efe0c4]">
-        การรวมข้อมูลไว้เป็นชุดเดียวช่วยให้จัดการบัญชีง่ายขึ้น โดยเฉพาะคนที่เล่นหลายหมวดในวันเดียว ทุกอย่างอยู่เป็นที่เป็นทาง สมองจึงเอาไว้จำเรื่องสำคัญกว่า เช่น เมื่อคืนทีมไหนทำเราหัวร้อน
-      </p>
-    </div>
-  </ContentBoxFloatingBadge>
-
-  <LatestWinnersPremium />
-
-  <ContentBox as="h2" title="NORWAY89 เหมาะกับคนที่อยากได้หลายเกมในเว็บเดียว">
-    <div>
-      <p class="text-left text-base leading-relaxed text-[#efe0c4]">
-        NORWAY89 เหมาะกับคนที่ชอบบาคาร่า สล็อต บอล และหวย แต่ต้องการใช้งานทั้งหมดจากบัญชีเดียว พร้อมระบบฝากถอนออโต้และการเข้าเล่นผ่านมือถือที่สะดวก
-      </p>
-      <p class="mt-3 text-left text-base leading-relaxed text-[#efe0c4]">
-        ภาพรวมของ NORWAY89 เน้น เกมครบ ใช้งานง่าย และขั้นตอนไม่เยอะ จึงตอบโจทย์ทั้งสายคาสิโน สายสล็อต สายกีฬา และสายตัวเลข เลือกเกมตามสไตล์ได้เต็มที่ โดยไม่ต้องเปลี่ยนเว็บตามอารมณ์ทุกวัน
-      </p>
-    </div>
-  </ContentBox>
-
-  <Faq title="คำถามที่พบบ่อยเกี่ยวกับ NORWAY89" faqs={faqs} />
+  <Faq2 title="คำถามที่พบบ่อยเกี่ยวกับ KOH888" faqs={faqs} />
 
   <ReviewCardSumo2 />
 

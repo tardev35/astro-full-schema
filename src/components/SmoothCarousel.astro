@@ -1,17 +1,17 @@
 ---
 import { Picture } from "astro:assets";
 
-import slide2 from "../assets/slide2.png";
+import slide1 from "../assets/slide1.png";
 import slide4 from "../assets/slide4.png";
 
 const images = [
   {
-    src: slide2,
-    alt: "ภาพโปรโมชั่น NORWAY89 พื้นดำลายทอง ตัวอักษรทองว่า NORWAY89 รีวิวเว็บตรง ถัดลงมาเขียนว่า รวมบาคาร่า สล็อต บอล หวย ในบัญชีเดียว ตามด้วยสองบรรทัดว่า ฝากถอนออโต้ ใช้งานง่าย ผ่านมือถือ และ เว็บตรงโทนหรู เน้นระบบเสถียรและเล่นลื่น ปิดท้ายด้วยกรอบข้อความ เข้าใช้งาน NORWAY89 ด้านขวาเป็นพรีเซนเตอร์หญิงชุดราตรีสีทองยืนคู่กับวงล้อรูเล็ตและไพ่",
+    src: slide1,
+    alt: "ภาพโปรโมชั่น KOH888 พื้นม่วงเข้มมีเมืองกลางคืนและริบบิ้นทองปลิว ด้านบนเป็นโลโก้ KOH888 ทองนูนมีมงกุฎและชิปคาสิโน ถัดลงมาเป็นตัวอักษรทองขนาดใหญ่ว่า KOH888 ต่อด้วยแถบข้อความ สิทธิ์พิเศษวันเกิด และ รับเพิ่มสูงสุด 500 บาท ใต้ลงมาเป็นสองกรอบข้อความว่า เล่นผ่านเว็บหลัก ฝากถอนออโต้ และ รวดเร็ว ปลอดภัย มั่นใจ 100% ปิดท้ายด้วยบรรทัด ตรวจสอบเงื่อนไขก่อนรับสิทธิ์ และปุ่ม สมัครสมาชิก ด้านขวาเป็นพรีเซนเตอร์หญิงชุดม่วงถือบัตร KOH888 ยืนคู่กับกล่องของขวัญทอง ชิปคาสิโน และกองเหรียญ",
   },
   {
     src: slide4,
-    alt: "ภาพโปรโมชั่น NORWAY89 พื้นดำลายทอง ข้อความใหญ่ว่า แนะนำเพื่อน รับค่าคอม 2.5% รับต่อเนื่องทุกวัน ใต้ลงมาเรียงสามหัวข้อว่า บทความแน่น อัปเดตทุกวัน รวมสล็อต บาคาร่า บอล หวย ในบัญชีเดียว และ ระบบออโต้ ฝากถอนรวดเร็ว แถบล่างเป็นไอคอนธนาคารพร้อมไลน์ไอดีของทีมงาน ด้านขวาเป็นพรีเซนเตอร์หญิงชุดราตรีสีเงินยืนคู่กับวงล้อรูเล็ต ชิปคาสิโน และไพ่",
+    alt: "ภาพโปรโมชั่น KOH888 พื้นม่วงเข้มลายเหรียญทอง ข้อความใหญ่ว่า สมาชิกใหม่ KOH888 บรรทัดรองว่า เริ่มง่าย ผ่านเว็บตรง ตามด้วยกรอบไฟว่า ฝากเริ่มต้น 50 บาท ถัดลงมาเป็นแถบ รวมสล็อต คาสิโน หวย กีฬา พร้อมไอคอนตู้สล็อต วงล้อคาสิโน ลูกหวย และลูกฟุตบอล ปิดท้ายด้วยกรอบข้อความ ระบบออโต้ เล่นบนมือถือได้ คู่กับไอคอนมือถือ ด้านขวาเป็นพรีเซนเตอร์หญิงชุดชมพูยืนคู่กับไพ่ ลูกเต๋า และกองเหรียญทอง มุมบนขวาเป็นโลโก้ KOH888 ทองมีมงกุฎ",
   },
 ];
 
@@ -23,7 +23,7 @@ const slides = Array.from({ length: COPIES }, () => images).flat();
   <input id="carousel-pause" type="checkbox" class="peer sr-only" />
   <label
     for="carousel-pause"
-    class="sr-only cursor-pointer peer-focus-visible:not-sr-only peer-focus-visible:mb-3 peer-focus-visible:inline-block peer-focus-visible:rounded-full peer-focus-visible:border peer-focus-visible:border-[#e0aa2e]/60 peer-focus-visible:px-4 peer-focus-visible:py-2 peer-focus-visible:text-sm peer-focus-visible:font-bold peer-focus-visible:text-[#f5d488]">
+    class="sr-only cursor-pointer peer-focus-visible:not-sr-only peer-focus-visible:mb-3 peer-focus-visible:inline-block peer-focus-visible:rounded-full peer-focus-visible:border peer-focus-visible:border-[#f5c542]/60 peer-focus-visible:px-4 peer-focus-visible:py-2 peer-focus-visible:text-sm peer-focus-visible:font-bold peer-focus-visible:text-[#ffe9a3]">
     หยุด / เล่นสไลด์ภาพ
   </label>
 
@@ -36,7 +36,7 @@ const slides = Array.from({ length: COPIES }, () => images).flat();
             <Picture
               src={slide.src}
               alt={isDuplicate ? "" : slide.alt}
-              class="block w-full rounded-xl border border-[#e0aa2e]/25 object-cover shadow-[0_10px_30px_rgba(224,170,46,0.18)]"
+              class="block w-full rounded-xl border border-[#8b36d9]/40 object-cover shadow-[0_10px_30px_rgba(139,54,217,0.30)]"
               width={slide.src.width}
               height={slide.src.height}
               loading="lazy"

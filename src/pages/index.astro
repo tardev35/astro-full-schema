@@ -1,61 +1,60 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
-import AnnouncementPremium from "../components/AnnouncementPremium.astro";
-import SmoothCarousel from "../components/SmoothCarousel.astro";
+import Announcement5 from "../components/Announcement5.astro";
 import ContentBox from "../components/ContentBox.astro";
-import ContentBoxPremium from "../components/ContentBoxPremium.astro";
-import ContentBoxNeumorphism from "../components/ContentBoxNeumorphism.astro";
-import ContentBoxSpecial from "../components/ContentBoxSpecial.astro";
-import ContentBoxTwoPremium from "../components/ContentBoxTwoPremium.astro";
-import ContentBoxSevenThreePremium from "../components/ContentBoxSevenThreePremium.astro";
-import ContentBoxSevenThreeNeumorphism from "../components/ContentBoxSevenThreeNeumorphism.astro";
-import ProviderGrid from "../components/ProviderGrid.astro";
+import ContentBoxCyberCut from "../components/ContentBoxCyberCut.astro";
+import ContentBoxFloatingBadge from "../components/ContentBoxFloatingBadge.astro";
+import ContentBoxTwoCyberCut from "../components/ContentBoxTwoCyberCut.astro";
+import ContentBoxTwoFloatingBadge from "../components/ContentBoxTwoFloatingBadge.astro";
+import ContentBoxSevenThreeCyberCut from "../components/ContentBoxSevenThreeCyberCut.astro";
+import ContentBoxSevenThreeFloatingBadge from "../components/ContentBoxSevenThreeFloatingBadge.astro";
+import ProviderGridPremium from "../components/ProviderGridPremium.astro";
 import GameRankingBoard from "../components/GameRankingBoard.astro";
+import LatestWinners2 from "../components/LatestWinners2.astro";
+import SmoothCarousel from "../components/SmoothCarousel.astro";
 import LoginRtpSection from "../components/LoginRtpSection.astro";
-import LatestWinnersCyber from "../components/LatestWinnersCyber.astro";
-import Faq2 from "../components/Faq2.astro";
+import Faq4 from "../components/Faq4.astro";
 import ReviewCardSumo2 from "../components/ReviewCardSumo2.astro";
 import Navfoot from "../components/Navfoot.astro";
 
 import { Picture } from "astro:assets";
 import { pageGraph } from "../lib/schema";
-import imgSportsLotto from "../assets/slide2.png";
-import imgPromotion from "../assets/slide3.png";
+import imgAutoSystem from "../assets/slide2.png";
+import imgMemberSystem from "../assets/slide3.png";
 
-const pageTitle = "KOH888 สล็อตเว็บตรง คาสิโน บาคาร่า บอล หวย เล่นครบผ่านมือถือ";
+const pageTitle = "ANDAMAN168 ทางเข้าหลัก บาคาร่า สล็อต ฟุตบอล ระบบออโต้ 24 ชม.";
 
-const pageDescription =
-  "KOH888 เว็บตรงรวมสล็อต คาสิโน บาคาร่า บอล และหวย ใช้งานผ่านมือถือในบัญชีเดียว พร้อมเกมใหม่ ฝากถอนออโต้ โปรโมชั่น สมัครง่าย และทางเข้าเว็บหลัก ครบจบในเว็บเดียว";
+const pageDescription = "ANDAMAN168 รวมบาคาร่า สล็อต ฟุตบอล และคาสิโนไว้ในบัญชีสมาชิกเดียว พร้อมเกมใหม่ปี 2026 ระบบออโต้ฝากถอน 24 ชั่วโมง รวมเครดิต โปรโมชั่น และประวัติไว้จุดเดียว";
 
 const announcement =
-  "KOH888 เว็บตรงรวมสล็อต คาสิโน บาคาร่า บอล และหวยไว้ในบัญชีเดียว • เมนูแบ่งเป็นหมวดชัด สลับจากสล็อตไปคาสิโนหรือบอลได้จากหน้าเดิม • ฝากถอนออโต้ขั้นตอนสั้น ดูยอดและประวัติรายการได้จากหน้าบัญชี • หน้าสมาชิกรวมเครดิต โปรโมชั่น และรายการทั้งหมดไว้จุดเดียว • สมัครไม่กี่ขั้นตอนแล้วเข้าเลือกเกมได้ทันที";
+  "ANDAMAN168 รวมบาคาร่า สล็อต ฟุตบอล และคาสิโนไว้ในบัญชีสมาชิกเดียว • แต่ละหมวดแยกให้เห็นชัด เข้าเกมที่ต้องการได้โดยไม่ต้องไล่เปิดเมนูทีละชั้น • ระบบออโต้จัดการฝากถอนและเช็กยอดได้ตลอด 24 ชั่วโมง • หน้าสมาชิกรวมเครดิต โปรโมชั่น และประวัติรายการไว้จุดเดียว • สมัครผ่านมือถือไม่กี่ขั้นตอนแล้วเลือกเกมต่อได้ทันที";
 
-const sportsLottoAlt =
-  "ภาพโปรโมชั่น KOH888 พื้นม่วงเข้มมีริบบิ้นทองและเหรียญปลิว ด้านบนเป็นโลโก้ KOH888 ทองมีมงกุฎ ชิปคาสิโนโพดำและลูกเต๋า ถัดลงมาเป็นตัวอักษรทองขนาดใหญ่ว่า KOH888 ตามด้วยข้อความ หวยออนไลน์ เล่นง่าย และ วางโพยไว ผ่านมือถือ ใต้ลงมาเป็นแถบ ครบทั้ง สล็อต คาสิโน หวย กีฬา พร้อมไอคอนตู้สล็อต วงล้อคาสิโน ลูกหวย และลูกฟุตบอล ปิดท้ายด้วยสองกรอบข้อความว่า ระบบออโต้ ทำรายการไว แม่นยำ และ สมัครง่าย ไม่ยุ่งยาก ใช้แค่เบอร์ แถบล่างสุดเขียนว่า มั่นคง ปลอดภัย 100% เข้ารหัสมาตรฐานสากล และ บริการตลอด 24 ชม. ด้านขวาเป็นพรีเซนเตอร์หญิงชุดม่วงถือไพ่โพดำ ยืนคู่กับกองเหรียญทองและใบหวยรัฐบาล";
+const autoSystemAlt =
+  "ภาพโปรโมชั่น ANDAMAN168 พื้นทะเลอันดามันสีฟ้ามีเกาะหินและใบมะพร้าว มุมบนซ้ายเป็นโลโก้ ANDAMAN168 ตัวอักษรฟ้าวางบนดวงอาทิตย์ทอง ถัดลงมาเป็นตัวอักษรขนาดใหญ่ว่า ANDAMAN168 ตามด้วยบรรทัด บาคาร่า สล็อต ฟุตบอล และสองแถบข้อความว่า ระบบออโต้ 24 ชม. กับ สมัครสมาชิก ฝากถอนผ่านมือถือ ด้านล่างซ้ายเป็นวงล้อลุ้นรางวัลใหญ่ที่มีช่องรางวัลเงินสด ทองคำหนัก 1 บาท iPhone 15 Pro Max สร้อยคอทองคำ และอั่งเปาโบนัส ถัดมาเป็นภาพโทรศัพท์ สร้อยคอทองคำ และทองแท่ง ด้านขวาเป็นพรีเซนเตอร์หญิงชุดสีน้ำเงินยืนคู่กับไพ่โพดำ พร้อมป้ายว่า ทางเข้าหลัก เล่นง่าย แถบล่างสุดเขียนว่า รวมเกมครบในบัญชีเดียว มั่นคง ปลอดภัย ระบบเสถียร ไม่สะดุด และ บริการรวดเร็ว มืออาชีพ";
 
-const promotionAlt =
-  "ภาพโปรโมชั่น KOH888 พื้นม่วงเข้มมีชิปคาสิโนและเหรียญทองลอยอยู่รอบภาพ มุมบนซ้ายเป็นป้ายว่า สมัครง่าย ฝากถอนออโต้ ด้านหลังเป็นวงล้อรูเล็ตทองสองวง ตรงกลางเป็นตัวอักษรทองขนาดใหญ่ว่า KOH888 ใต้ลงมาเป็นแถบข้อความ ฝากแรกของวัน ตามด้วยบรรทัดใหญ่ว่า รับโบนัส 50% และปิดท้ายด้วยบรรทัด สล็อต คาสิโน หวย กีฬา ครบในบัญชีเดียว ด้านหน้าเป็นพรีเซนเตอร์หญิงชุดขาว";
+const memberSystemAlt =
+  "ภาพโปรโมชั่น ANDAMAN168 พื้นทะเลสีฟ้ามีเกาะและใบมะพร้าว มุมบนซ้ายเป็นโลโก้ ANDAMAN168 ตัวอักษรฟ้าวางบนดวงอาทิตย์ทอง ตรงกลางเป็นตัวอักษรทองขนาดใหญ่ว่า คืนยอดเสีย 10% ใต้ลงมาเป็นบรรทัด แนะนำเพื่อน รับค่าคอม 1% ตามด้วยสองแถบข้อความว่า ANDAMAN168 ทางเข้าหลัก ระบบออโต้ 24 ชม. และ บาคาร่า สล็อต ฟุตบอล เล่นผ่านมือถือ ด้านหลังเป็นวงล้อรูเล็ต ด้านหน้าเป็นพรีเซนเตอร์หญิงชุดทองยืนคู่กับกองเหรียญทอง ลูกเต๋า ไพ่ และชิปคาสิโน VIP";
 
 const faqs = [
   {
-    q: "KOH888 รวมสล็อต คาสิโน บาคาร่า บอล และหวยไว้ในบัญชีเดียวจริงไหม",
-    a: "เว็บระบุว่าจัดสล็อต คาสิโน บาคาร่า บอล และหวยเป็นหมวดหลักภายในบัญชีสมาชิกเดียว สมาชิกจึงเลือกเกมได้ตามสไตล์โดยยังใช้ข้อมูลสมาชิกและเครดิตชุดเดิม ไม่ต้องเปิดหลายหน้าหรือสมัครแยกตามประเภทเกมที่อยากเล่น",
+    q: "ANDAMAN168 รวมบาคาร่า สล็อต ฟุตบอล และคาสิโนไว้ในบัญชีเดียวจริงไหม",
+    a: "เว็บแบ่งบริการหลักเป็นบาคาร่า สล็อต ฟุตบอล และคาสิโน โดยทุกหมวดเข้าถึงได้จากบัญชีสมาชิกเดียว แต่ละหมวดถูกแยกให้เห็นชัด สมาชิกจึงเข้าเกมที่ต้องการได้โดยไม่ต้องไล่เปิดเมนูทีละชั้น และไม่ต้องสมัครแยกตามประเภทเกม",
   },
   {
-    q: "สล็อต KOH888 มีเกมใหม่และค่ายยอดนิยมให้เลือกแบบไหน",
-    a: "หมวดสล็อตรวมเกมหลายธีม ทั้งสายเล่นง่าย เกมโบนัส และเกมที่มีฟรีสปินหรือตัวคูณ สมาชิกเลือกจากหมวดสล็อตได้ตรง ๆ พร้อมดูเกมใหม่และเกมที่กำลังได้รับความนิยมจากหน้าเดียว จึงหาเกมประจำได้เร็วและลองของใหม่ได้ง่าย",
+    q: "เกมใหม่ปี 2026 ของ ANDAMAN168 เพิ่มตัวเลือกอะไรให้สมาชิกบ้าง",
+    a: "เกมใหม่ปี 2026 ช่วยเพิ่มตัวเลือกในหมวดสล็อตและคาสิโน ทำให้มีทั้งเกมที่คุ้นเคยและเกมรูปแบบใหม่ให้สลับเล่นตามสไตล์ที่ชอบ โดยยังเข้าถึงผ่านบัญชีสมาชิกชุดเดิม ส่วนคนที่มีเกมประจำก็ยังเลือกหมวดเดิมได้ง่ายเหมือนเดิม",
   },
   {
-    q: "KOH888 เล่นผ่านมือถือได้เลยหรือต้องโหลดโปรแกรมเพิ่ม",
-    a: "เว็บรองรับการใช้งานผ่านเบราว์เซอร์มือถือ ตั้งแต่เข้าสู่ระบบ เลือกสล็อต คาสิโน บอล หวย ไปจนถึงจัดการหน้าสมาชิก จึงใช้งานจากโทรศัพท์ได้โดยไม่ต้องพึ่งหน้าจอคอมตลอดเวลา ส่วนความลื่นยังขึ้นกับรุ่นมือถือและสัญญาณเน็ต",
+    q: "ระบบออโต้ ANDAMAN168 ฝากถอนและเช็กยอดได้ตลอด 24 ชั่วโมงหรือไม่",
+    a: "ระบบออโต้รองรับการจัดการฝากถอนและเครดิตผ่านหน้าสมาชิกตลอด 24 ชั่วโมง สมาชิกทำรายการและดูข้อมูลยอดของตัวเองได้จากระบบเดียว จะเข้าใช้งานช่วงกลางวันหรือดึกก็จัดการบัญชีต่อได้ตามเวลาที่สะดวก",
   },
   {
-    q: "ระบบฝากถอนออโต้ของ KOH888 ใช้งานอย่างไร",
-    a: "ระบบออโต้ช่วยให้สมาชิกจัดการเครดิตจากหน้าบัญชีได้เป็นขั้นตอนตรงไปตรงมา พร้อมดูยอดและรายการที่เกี่ยวข้องได้จากจุดเดียว จึงลดเวลาระหว่างเติมเครดิตกับเลือกเกม ทำรายการเสร็จก็กลับเข้าเกมต่อได้ทันที",
+    q: "สมัครสมาชิก ANDAMAN168 ผ่านมือถือต้องทำกี่ขั้นตอน",
+    a: "การสมัครเริ่มจากกรอกข้อมูลที่ระบบสมาชิกกำหนด ตั้งค่าบัญชี แล้วเข้าสู่หน้าหลักเพื่อใช้งานบริการต่าง ๆ ขั้นตอนถูกออกแบบให้ใช้บนมือถือได้สะดวก จึงไม่ต้องรอเปิดคอมเพื่อเริ่มสมัครหรือเข้าสู่ระบบ",
   },
   {
-    q: "โปรโมชั่น KOH888 มีสิทธิ์อะไรให้สมาชิกเลือกบ้าง",
-    a: "โปรโมชั่นจัดไว้เป็นอีกหมวดสำหรับสมาชิก ทั้งกิจกรรมตามช่วงเวลา สิทธิ์สำหรับสมาชิกใหม่ และแคมเปญที่เปลี่ยนตามรอบ รายละเอียดของแต่ละโปรต่างกันทั้งยอดเริ่มต้น เกมที่ร่วม และเงื่อนไขรับสิทธิ์ จึงควรอ่านจากหน้าโปรนั้นโดยตรง",
+    q: "ทางเข้า ANDAMAN168 เปิดผ่านมือถือและคอมได้พร้อมกันไหม",
+    a: "ทางเข้ารองรับการเปิดผ่านมือถือ แท็บเล็ต และคอมพิวเตอร์ สมาชิกใช้บัญชีเดิมเพื่อเข้าสู่ระบบ เลือกเกม จัดการเครดิต และดูข้อมูลสมาชิกได้ตามอุปกรณ์ที่ใช้อยู่ในขณะนั้น หน้าเว็บเปลี่ยนตามขนาดจอ แต่ข้อมูลยังอยู่ในระบบเดิม",
   },
 ];
 
@@ -69,75 +68,76 @@ const graph = pageGraph(Astro, {
 <MainLayout title={pageTitle} description={pageDescription}>
   <script type="application/ld+json" set:html={graph} />
 
-  <AnnouncementPremium message={announcement} />
+  <Announcement5 message={announcement} />
 
-  <ContentBoxPremium as="h1" title="KOH888 เว็บตรงรวมสล็อต คาสิโน บาคาร่า บอล หวย เล่นครบในบัญชีเดียว">
+  <ContentBoxCyberCut as="h1" title="ANDAMAN168 รวมคาสิโน เกมใหม่ และระบบสมาชิก เล่นผ่านมือถือได้ครบในบัญชีเดียว">
     <div>
-      <p class="text-left text-base leading-relaxed text-[#e9dcf6]">
-        <strong class="text-[#f5c542]">KOH888</strong> รวมสล็อต คาสิโน บาคาร่า บอล และหวยไว้ในบัญชีสมาชิกเดียว อยากหมุนสล็อต ต่อบาคาร่า หรือเปลี่ยนไปเชียร์บอลก็เลือกจากเมนูเดิมได้เลย
-        พร้อมระบบฝากถอนออโต้และหน้าเว็บที่รองรับมือถือ ใช้จริงแล้วไม่ต้องจำเมนูเยอะให้สมองทำโอที
+      <p class="text-left text-base leading-relaxed text-[#dbeefb]">
+        <strong class="text-[#fdb524]">ANDAMAN168</strong> รวมบาคาร่า สล็อต ฟุตบอล คาสิโน และเกมออนไลน์หลายแบบไว้ในบัญชีสมาชิกเดียว พร้อมระบบออโต้สำหรับจัดการฝากถอนและเครดิต สมาชิกจึงเลือกเกม ดูยอด จะเปิดผ่านมือถือหรือคอมก็ใช้งานต่อได้ตามอุปกรณ์ที่สะดวก
       </p>
-      <p class="mt-3 text-left text-base leading-relaxed text-[#e9dcf6]">
-        จุดเด่นของ KOH888 คือการรวมเกมหลายสไตล์ไว้ในพื้นที่เดียว ทั้งสายเกมหมุน โต๊ะสด กีฬา และตัวเลข พร้อมหน้าสมาชิกสำหรับดูเครดิต โปรโมชั่น และรายการต่าง ๆ แบบเป็นหมวด
-        เข้าเว็บมาหาความสนุก ไม่ควรต้องเริ่มด้วยภารกิจตามหาปุ่มก่อน
+      <p class="mt-3 text-left text-base leading-relaxed text-[#dbeefb]">
+        ตั้งแต่สมัคร ANDAMAN168 เข้าสู่ระบบ เลือกเกม ไปจนถึงจัดการยอดถูกวางให้เดินต่อกันได้ตรง ๆ เข้าเว็บมาเล่นเกมก็ควรได้เลือกเกมไว ไม่ใช่เปิดมาแล้วต้องเริ่มเกมแรกด้วยการหาเมนู
       </p>
     </div>
-  </ContentBoxPremium>
+  </ContentBoxCyberCut>
 
   <div class="relative z-10 mx-auto mb-10 flex flex-nowrap justify-center gap-3 px-4 sm:gap-6">
     <a
       href="/login"
-      class="group relative flex flex-1 items-center justify-center rounded-full bg-gradient-to-r from-[#ffe9a3] via-[#f5c542] to-[#a9761a] px-4 py-3 text-sm font-black whitespace-nowrap text-[#1a0a2e] shadow-[0_10px_30px_rgba(245,197,66,0.30)] transition-all duration-300 hover:-translate-y-1 hover:scale-105 hover:shadow-[0_15px_40px_rgba(245,197,66,0.42)] sm:flex-none sm:px-10 sm:py-3.5 sm:text-base">
+      class="group relative flex flex-1 items-center justify-center rounded-full bg-gradient-to-r from-[#ffe999] via-[#fdb524] to-[#b06f00] px-4 py-3 text-sm font-black whitespace-nowrap text-[#04182f] shadow-[0_10px_30px_rgba(253,181,36,0.30)] transition-all duration-300 hover:-translate-y-1 hover:scale-105 hover:shadow-[0_15px_40px_rgba(253,181,36,0.42)] sm:flex-none sm:px-10 sm:py-3.5 sm:text-base">
       เข้าสู่ระบบ
     </a>
 
     <a
       href="/register"
-      class="group relative flex flex-1 items-center justify-center rounded-full border border-[#c77dff]/70 bg-[#25093f]/85 px-4 py-3 text-sm font-black whitespace-nowrap text-[#ffe9a3] backdrop-blur-sm transition-all duration-300 hover:scale-105 hover:border-[#c77dff] hover:bg-[#3b0a63]/85 hover:shadow-[0_15px_40px_rgba(139,54,217,0.40)] sm:flex-none sm:px-10 sm:py-3.5 sm:text-base">
+      class="group relative flex flex-1 items-center justify-center rounded-full border border-[#7fe6ff]/70 bg-[#062a4f]/85 px-4 py-3 text-sm font-black whitespace-nowrap text-[#ffe999] backdrop-blur-sm transition-all duration-300 hover:scale-105 hover:border-[#7fe6ff] hover:bg-[#0a3a68]/85 hover:shadow-[0_15px_40px_rgba(33,212,242,0.40)] sm:flex-none sm:px-10 sm:py-3.5 sm:text-base">
       สมัครสมาชิก
     </a>
   </div>
 
-  <ContentBox as="h2" title="KOH888 รวมสล็อต คาสิโน บาคาร่า บอล และหวยไว้ครบแค่ไหน">
+  <ContentBox as="h2" title="ANDAMAN168 รวมบาคาร่า สล็อต ฟุตบอล และคาสิโนไว้ครบ">
     <div>
-      <p class="text-left text-base leading-relaxed text-[#e9dcf6]">
-        KOH888 จัดสล็อต คาสิโน บาคาร่า บอล และหวยเป็นหมวดหลักภายในบัญชีเดียว ทำให้สมาชิกเลือกเกมได้ตามสไตล์โดยยังใช้ข้อมูลสมาชิกและเครดิตชุดเดิม ไม่ต้องเปิดหลายหน้าให้รกจอ
+      <p class="text-left text-base leading-relaxed text-[#dbeefb]">
+        ANDAMAN168 แบ่งบริการหลักเป็นบาคาร่า สล็อต ฟุตบอล และคาสิโน ทำให้สมาชิกเลือกเล่นหลายแนวผ่านบัญชีเดียวได้สะดวก แต่ละหมวดถูกแยกให้เห็นชัด จึงเข้าเกมที่ต้องการได้โดยไม่ต้องไล่เปิดเมนูทีละชั้น
       </p>
-      <p class="mt-3 text-left text-base leading-relaxed text-[#e9dcf6]">
-        ความครบของ KOH888 จึงไม่ได้วัดแค่จำนวนเกม แต่รวมถึงการเข้าถึงแต่ละหมวดได้ง่าย วันนี้สายสล็อต พรุ่งนี้สายบอลก็เปลี่ยนได้ อารมณ์คนเปลี่ยนไวอยู่แล้ว หน้าเว็บไม่จำเป็นต้องสร้างเรื่องเพิ่ม
+      <p class="mt-3 text-left text-base leading-relaxed text-[#dbeefb]">
+        คนที่ชอบเปลี่ยนแนวระหว่างวันก็ใช้งานได้คล่องขึ้น ช่วงหนึ่งเล่นสล็อต อีกช่วงดูฟุตบอล หรืออยากเปลี่ยนไปคาสิโนก็เลือกต่อจากหน้าเดิมได้ ความชอบเปลี่ยนได้ทุกชั่วโมง
+        แต่หน้าเว็บไม่จำเป็นต้องเปลี่ยนตามจนคนใช้ตามไม่ทัน
       </p>
     </div>
   </ContentBox>
 
-  <ContentBoxNeumorphism as="h2" title="สล็อต KOH888 รวมเกมใหม่และค่ายยอดนิยมไว้แบบไหน">
+  <ProviderGridPremium />
+
+  <ContentBoxFloatingBadge as="h2" title="บาคาร่าและสล็อต ANDAMAN168 เลือกเกมใหม่ปี 2026 ได้แบบไหน">
     <div>
-      <p class="text-left text-base leading-relaxed text-[#e9dcf6]">
-        สล็อต KOH888 มีเกมหลายธีมทั้งสายเล่นง่าย เกมโบนัส และเกมที่มีฟรีสปินหรือตัวคูณ สมาชิกเลือกจากหมวดสล็อตได้ตรง ๆ พร้อมดูเกมใหม่และเกมที่กำลังได้รับความนิยมจากหน้าเดียว
+      <p class="text-left text-base leading-relaxed text-[#dbeefb]">
+        ANDAMAN168 รวมบาคาร่าและสล็อตเป็นสองหมวดเด่น โดยสล็อตมีพื้นที่สำหรับเกมใหม่และเกมหลายสไตล์ ส่วนบาคาร่าเน้นการเลือกโต๊ะและรูปแบบเกมคาสิโนที่ต้องการ สมาชิกจึงเริ่มจากประเภทที่ถนัดได้ทันที
       </p>
-      <p class="mt-3 text-left text-base leading-relaxed text-[#e9dcf6]">
-        การแยกเกมเป็นหมวดช่วยให้คนมีเกมประจำหาเจอเร็ว ส่วนสายชอบลองของใหม่ก็เลือกต่อได้ง่าย เกมเยอะเป็นเรื่องดี แต่ถ้าจัดไม่เป็นก็กลายเป็นโกดัง เพราะงั้น KOH888 เน้นให้เลือกง่ายมากกว่าโยนทุกอย่างมากองรวมกัน
+      <p class="mt-3 text-left text-base leading-relaxed text-[#dbeefb]">
+        เกมใหม่ปี 2026 ช่วยเพิ่มตัวเลือกให้คนที่ไม่อยากวนอยู่กับรายชื่อเดิม ส่วนคนที่มีเกมประจำก็ยังเลือกหมวดเดิมได้ง่าย มีของใหม่ไว้ลองเป็นเรื่องดี
+        แต่ของเก่าที่ชอบก็ไม่ควรถูกซ่อนเหมือนถุงเท้าข้างที่หายไปในเครื่องซักผ้า
       </p>
     </div>
-  </ContentBoxNeumorphism>
-
-  <ProviderGrid />
+  </ContentBoxFloatingBadge>
 
   <GameRankingBoard />
 
-  <ContentBoxTwoPremium as="h2" title="คาสิโนและบาคาร่า KOH888 เลือกเกมสดได้ง่ายจากเมนูเดียว">
-    <p slot="left" class="text-left text-base leading-relaxed text-[#e9dcf6]">
-      คาสิโน KOH888 รวมเกมโต๊ะและบาคาร่าไว้ในหมวดคาสิโนสด สมาชิกสามารถเลือกประเภทเกมและโต๊ะที่ต้องการจากหน้าเดียว ก่อนเข้าเล่นตามรูปแบบที่ตัวเองถนัด
+  <ContentBoxTwoCyberCut as="h2" title="ฟุตบอล ANDAMAN168 เลือกรายการและตลาดที่สนใจได้สะดวกอย่างไร">
+    <p slot="left" class="text-left text-base leading-relaxed text-[#dbeefb]">
+      ฟุตบอล ANDAMAN168 เป็นอีกหมวดสำหรับสมาชิกที่ชอบติดตามการแข่งขันกีฬา โดยสามารถเลือกดูรายการและตลาดที่เปิดให้เล่นจากบัญชีเดียวกับสล็อตและคาสิโน ทำให้ไม่ต้องสลับระบบเมื่อเปลี่ยนจากเกมคาสิโนมาดูกีฬา
     </p>
-    <p slot="right" class="text-left text-base leading-relaxed text-[#e9dcf6]">
-      สำหรับคนที่เล่นบาคาร่าเป็นหลัก เมนูที่แยกชัดช่วยให้เข้าถึงโต๊ะได้เร็วขึ้น ไม่ต้องไถผ่านสล็อตเป็นร้อยเกมก่อนเจอของที่หา เว็บมีของครบก็ดี แต่พาไปถึงของที่ต้องการไวกว่า นั่นแหละใช้จริงแล้วรู้สึกต่าง
+    <p slot="right" class="text-left text-base leading-relaxed text-[#dbeefb]">
+      การแยกฟุตบอลออกเป็นหมวดเฉพาะช่วยให้เข้าถึงรายการที่สนใจได้ง่ายขึ้น โดยเฉพาะวันที่มีหลายคู่แข่งขันพร้อมกัน สมาชิกจึงใช้เวลาเลือกคู่มากกว่าใช้เวลาเลื่อนหาเมนู เพราะวันบอลเยอะ ตารางก็แน่นพอแล้ว
+      หน้าเว็บไม่ต้องมาแน่นแข่งด้วย
     </p>
-  </ContentBoxTwoPremium>
+  </ContentBoxTwoCyberCut>
 
-  <ContentBoxSevenThreePremium as="h2" titleright="บอลและหวย KOH888 เพิ่มทางเลือกให้เล่นได้มากกว่าสล็อต">
+  <ContentBoxSevenThreeCyberCut as="h2" titleright="ระบบออโต้ ANDAMAN168 ฝากถอนและเช็กยอดได้ตลอด 24 ชั่วโมง">
     <Picture
       slot="left"
-      src={imgSportsLotto}
-      alt={sportsLottoAlt}
+      src={imgAutoSystem}
+      alt={autoSystemAlt}
       loading="lazy"
       fetchpriority="low"
       widths={[200, 400, 600]}
@@ -146,45 +146,39 @@ const graph = pageGraph(Astro, {
       formats={["avif", "webp"]}
       fallbackFormat="webp"
       quality={80}
-      class="mx-auto h-auto w-full rounded-2xl border border-[#8b36d9]/40 shadow-[0_10px_30px_rgba(139,54,217,0.30)]"
+      class="mx-auto h-auto w-full rounded-2xl border border-[#21d4f2]/40 shadow-[0_10px_30px_rgba(33,212,242,0.30)]"
     />
     <div slot="right">
-      <p class="text-left text-base leading-relaxed text-[#e9dcf6]">
-        KOH888 มีทั้งหมวดบอลและหวยเพิ่มจากสล็อตกับคาสิโน ทำให้สมาชิกที่ชอบหลายแนวเลือกเล่นได้จากบัญชีเดียว ไม่ว่าจะตามการแข่งขันกีฬา หรือลุ้นตัวเลขก็ยังอยู่ในระบบสมาชิกเดิม
+      <p class="text-left text-base leading-relaxed text-[#dbeefb]">
+        ระบบออโต้ ANDAMAN168 รองรับการจัดการฝากถอนและเครดิตผ่านหน้าสมาชิกตลอด 24 ชั่วโมง สมาชิกสามารถทำรายการและดูข้อมูลยอดของตัวเองได้จากระบบเดียว ช่วยให้ขั้นตอนก่อนเข้าเกมไม่ถูกแยกออกเป็นหลายส่วน
       </p>
-      <p class="mt-3 text-left text-base leading-relaxed text-[#e9dcf6]">
-        จุดนี้เหมาะกับคนที่ไม่ได้มีเกมโปรดแค่ประเภทเดียว วันไหนไม่อินสล็อตก็ย้ายไปดูบอล วันไหนอยากลุ้นเลขก็เปิดหวยได้เลย ความชอบเปลี่ยนได้ตามวัน แต่ไม่ต้องเปลี่ยนเว็บตามทุกอารมณ์
+      <p class="mt-3 text-left text-base leading-relaxed text-[#dbeefb]">
+        ข้อดีของระบบอัตโนมัติคือใช้งานตามเวลาที่สะดวกได้มากขึ้น ไม่ว่าจะเข้าใช้งานช่วงกลางวันหรือดึกก็ยังจัดการบัญชีต่อได้ เป้าหมายคือทำรายการให้เสร็จแล้วไปเลือกเกมต่อ
+        เพราะคงไม่มีใครอยากใช้เวลาว่างมานั่งเดาว่าปุ่มฝากอยู่ตรงไหน
       </p>
     </div>
-  </ContentBoxSevenThreePremium>
+  </ContentBoxSevenThreeCyberCut>
 
-  <ContentBoxSpecial as="h2" title="KOH888 เล่นผ่านมือถือสะดวกแค่ไหนในปี 2026">
-    <p slot="left" class="text-left text-base leading-relaxed text-[#e9dcf6]">
-      KOH888 รองรับการใช้งานผ่านเบราว์เซอร์มือถือ ทั้งเข้าสู่ระบบ เลือกสล็อต คาสิโน บอล หวย และจัดการหน้าสมาชิก จึงใช้งานได้จากโทรศัพท์โดยไม่ต้องพึ่งหน้าจอคอมตลอดเวลา
-    </p>
-    <p slot="right" class="text-left text-base leading-relaxed text-[#e9dcf6]">
-      หน้าเว็บบนมือถือเน้นเมนูหลักที่กดง่ายและไม่อัดข้อมูลจนแน่นเกินจอ เหมาะกับคนที่หยิบมือถือขึ้นมาแล้วอยากเข้าเกมต่อได้เลย จอเล็กพอแล้ว ปุ่มไม่ควรเล็กตามจนต้องใช้สมาธิระดับผ่าตัด
-    </p>
-  </ContentBoxSpecial>
+  <LatestWinners2 />
 
-  <ContentBox as="h2" title="ฝากถอนออโต้ KOH888 จัดการเครดิตได้ตลอดวัน">
+  <ContentBoxCyberCut as="h2" title="สมัครสมาชิก ANDAMAN168 เริ่มต้นผ่านมือถือได้กี่ขั้นตอน">
     <div>
-      <p class="text-left text-base leading-relaxed text-[#e9dcf6]">
-        ระบบฝากถอนออโต้ KOH888 ช่วยให้สมาชิกจัดการเครดิตจากหน้าบัญชีได้เป็นขั้นตอนตรงไปตรงมา พร้อมดูยอดและรายการที่เกี่ยวข้องได้จากจุดเดียว จึงลดเวลาระหว่างเติมเครดิตกับเลือกเกม
+      <p class="text-left text-base leading-relaxed text-[#dbeefb]">
+        การสมัคร ANDAMAN168 เริ่มจากกรอกข้อมูลที่ระบบสมาชิกกำหนด ตั้งค่าบัญชี และเข้าสู่หน้าหลักเพื่อใช้งานบริการต่าง ๆ หลังสร้างบัญชีแล้ว สมาชิกสามารถเข้าถึงบาคาร่า สล็อต ฟุตบอล คาสิโน
+        และเมนูการเงินจากบัญชีเดียว
       </p>
-      <p class="mt-3 text-left text-base leading-relaxed text-[#e9dcf6]">
-        เมื่อระบบการเงินอยู่ในหน้าสมาชิกเดียว การใช้งานก็ไหลต่อเนื่องกว่าเดิม ทำรายการเสร็จแล้วกลับเข้าเกมได้ทันที เพราะเวลาที่ควรลุ้นคือในเกม ไม่ใช่นั่งลุ้นว่าหน้าธุรกรรมจะพาไปทางไหนต่อ
+      <p class="mt-3 text-left text-base leading-relaxed text-[#dbeefb]">
+        ขั้นตอนถูกออกแบบให้ใช้บนมือถือได้สะดวก จึงไม่จำเป็นต้องรอเปิดคอมเพื่อเริ่มสมัครหรือเข้าสู่ระบบ กรอกข้อมูลให้ครบแล้วใช้งานต่อได้เลย ชีวิตออนไลน์มี OTP กับรหัสผ่านให้จำเยอะพอแล้ว
+        ขั้นตอนสมัครไม่ควรเพิ่มข้อสอบอีกชุด
       </p>
     </div>
-  </ContentBox>
+  </ContentBoxCyberCut>
 
-  <LatestWinnersCyber />
-
-  <ContentBoxSevenThreeNeumorphism as="h2" titleright="โปรโมชั่น KOH888 มีสิทธิ์อะไรให้สมาชิกเลือกบ้าง">
+  <ContentBoxSevenThreeFloatingBadge as="h2" title="ระบบสมาชิก ANDAMAN168 รวมเครดิต โปรโมชั่น และประวัติไว้จุดเดียว">
     <Picture
       slot="left"
-      src={imgPromotion}
-      alt={promotionAlt}
+      src={imgMemberSystem}
+      alt={memberSystemAlt}
       loading="lazy"
       fetchpriority="low"
       widths={[200, 400, 600]}
@@ -193,54 +187,55 @@ const graph = pageGraph(Astro, {
       formats={["avif", "webp"]}
       fallbackFormat="webp"
       quality={80}
-      class="mx-auto h-auto w-full rounded-2xl border border-[#8b36d9]/40 shadow-[0_10px_30px_rgba(139,54,217,0.30)]"
+      class="mx-auto h-auto w-full rounded-2xl border border-[#fdb524]/40 shadow-[0_10px_30px_rgba(253,181,36,0.26)]"
     />
     <div slot="right">
-      <p class="text-left text-base leading-relaxed text-[#e9dcf6]">
-        โปรโมชั่น KOH888 จัดไว้เป็นอีกหมวดสำหรับสมาชิก ทั้งกิจกรรมตามช่วงเวลา สิทธิ์สำหรับสมาชิกใหม่ และแคมเปญที่เปลี่ยนตามรอบ สมาชิกจึงเลือกโปรให้เหมาะกับรูปแบบการเล่นของตัวเองได้
+      <p class="text-left text-base leading-relaxed text-[#dbeefb]">
+        ระบบสมาชิก ANDAMAN168 รวมข้อมูลสำคัญอย่างเครดิต โปรโมชั่น และประวัติรายการไว้ในพื้นที่เดียว ทำให้สมาชิกดูยอดหรือย้อนดูรายการของตัวเองได้โดยไม่ต้องไล่เปิดหลายเมนูเพื่อหาข้อมูลชิ้นเดียว
       </p>
-      <p class="mt-3 text-left text-base leading-relaxed text-[#e9dcf6]">
-        รายละเอียดของแต่ละโปรโมชั่นจะต่างกันทั้งยอดเริ่มต้น เกมที่ร่วม และเงื่อนไขรับสิทธิ์ จึงควรอ่านจากหน้าโปรนั้นโดยตรง ป้ายโบนัสมีหน้าที่เรียกสายตา ส่วนรายละเอียดมีหน้าที่กันเราเข้าใจเกินจริง ทั้งคู่สำคัญพอกัน
+      <p class="mt-3 text-left text-base leading-relaxed text-[#dbeefb]">
+        การรวมข้อมูลไว้ในบัญชีเดียวช่วยให้จัดการการใช้งานเป็นระเบียบขึ้น โดยเฉพาะคนที่เล่นหลายหมวด เพราะไม่ว่าจะเข้าเกมสล็อต ฟุตบอล หรือคาสิโน ข้อมูลสมาชิกยังอยู่ในระบบเดิม
+        ทุกอย่างควรหาเจอง่ายกว่าหากุญแจรถตอนกำลังรีบออกจากบ้าน
       </p>
     </div>
-  </ContentBoxSevenThreeNeumorphism>
+  </ContentBoxSevenThreeFloatingBadge>
 
   <SmoothCarousel />
 
-  <ContentBoxTwoPremium as="h2" title="สมัคร KOH888 ขั้นตอนไม่เยอะ พร้อมเข้าเลือกเกมได้ทันที">
-    <p slot="left" class="text-left text-base leading-relaxed text-[#e9dcf6]">
-      การสมัคร KOH888 ใช้ข้อมูลสมาชิกตามที่ระบบกำหนด เมื่อสร้างบัญชีเรียบร้อยก็เข้าสู่หน้าหลักเพื่อเลือกสล็อต คาสิโน บาคาร่า บอล หรือหวยได้จากเมนูเดียว
+  <ContentBoxTwoFloatingBadge as="h2" title="ทางเข้า ANDAMAN168 เว็บหลัก ใช้บนมือถือและคอมได้อย่างไร">
+    <p slot="left" class="text-left text-base leading-relaxed text-[#dbeefb]">
+      ทางเข้า ANDAMAN168 รองรับการเปิดผ่านมือถือ แท็บเล็ต และคอมพิวเตอร์ สมาชิกใช้บัญชีเดิมเพื่อเข้าสู่ระบบ เลือกเกม จัดการเครดิต และดูข้อมูลสมาชิกได้ตามอุปกรณ์ที่ใช้อยู่ในขณะนั้น
     </p>
-    <p slot="right" class="text-left text-base leading-relaxed text-[#e9dcf6]">
-      บัญชี KOH888 ยังใช้ดูเครดิต โปรโมชั่น และประวัติรายการต่าง ๆ จึงตั้งค่าครั้งเดียวแล้วใช้ต่อได้ทุกหมวด ขั้นตอนสมัครควรสั้นพอให้จำได้ เพราะทุกวันนี้รหัสผ่านในชีวิตก็เยอะจนสมองแทบอยากขอลาพักร้อนอยู่แล้ว
+    <p slot="right" class="text-left text-base leading-relaxed text-[#dbeefb]">
+      การรองรับหลายหน้าจอช่วยให้ ANDAMAN168 ใช้งานต่อเนื่องได้มากขึ้น อยู่บ้านใช้คอม ออกข้างนอกใช้มือถือก็ยังเข้าบัญชีเดิมได้ หน้าเว็บจึงเปลี่ยนตามขนาดจอ แต่ข้อมูลไม่ควรเล่นมุกหายตัวตามไปด้วย
     </p>
-  </ContentBoxTwoPremium>
-
-  <ContentBoxPremium as="h2" title="ทางเข้า KOH888 เว็บหลัก เปิดผ่านมือถือและคอมได้สะดวก">
-    <div>
-      <p class="text-left text-base leading-relaxed text-[#e9dcf6]">
-        ทางเข้า KOH888 รองรับทั้งมือถือ แท็บเล็ต และคอมพิวเตอร์ สมาชิกสามารถเข้าสู่ระบบ เลือกเกม ดูโปรโมชั่น และจัดการบัญชีผ่านเบราว์เซอร์ของอุปกรณ์ที่ใช้อยู่ได้
-      </p>
-      <p class="mt-3 text-left text-base leading-relaxed text-[#e9dcf6]">
-        การใช้บัญชีเดิมบนหลายอุปกรณ์ช่วยให้เปลี่ยนหน้าจอได้ตามสถานการณ์ อยู่บ้านใช้คอม ออกข้างนอกใช้มือถือ เมนูและข้อมูลสมาชิกยังอยู่ในระบบเดียวกัน เปลี่ยนอุปกรณ์ได้ แต่ไม่ต้องเริ่มชีวิตใหม่ทุกครั้ง
-      </p>
-    </div>
-  </ContentBoxPremium>
+  </ContentBoxTwoFloatingBadge>
 
   <LoginRtpSection />
 
-  <ContentBoxNeumorphism as="h2" title="KOH888 เหมาะกับคนที่ชอบเกมเดิมพันออนไลน์แบบไหน">
+  <ContentBoxFloatingBadge as="h2" title="เกมใหม่ ANDAMAN168 ปี 2026 เพิ่มตัวเลือกอะไรให้สมาชิกบ้าง">
     <div>
-      <p class="text-left text-base leading-relaxed text-[#e9dcf6]">
-        KOH888 เหมาะกับคนที่ชอบสล็อต คาสิโน บาคาร่า บอล และหวย แต่ต้องการรวมทุกหมวดไว้ในบัญชีเดียว รวมถึงคนที่ใช้มือถือเป็นหลักและอยากจัดการเครดิตกับโปรโมชั่นจากหน้าเดียว
+      <p class="text-left text-base leading-relaxed text-[#dbeefb]">
+        เกมใหม่ ANDAMAN168 ปี 2026 ช่วยเพิ่มตัวเลือกในหมวดสล็อตและคาสิโน ทำให้สมาชิกมีทั้งเกมที่คุ้นเคยและเกมรูปแบบใหม่ให้สลับเล่นตามสไตล์ที่ชอบ โดยยังเข้าถึงผ่านบัญชีสมาชิกชุดเดิม
       </p>
-      <p class="mt-3 text-left text-base leading-relaxed text-[#e9dcf6]">
-        ภาพรวมของ KOH888 เน้น เกมครบ เลือกง่าย และใช้งานต่อเนื่อง จึงตอบโจทย์ทั้งสายเกมหมุน โต๊ะสด กีฬา และตัวเลข โดยเฉพาะคนที่ความชอบเปลี่ยนได้ทุกวัน แต่ไม่อยากเปลี่ยนเว็บตามจนจำไม่ถูกว่าเมื่อวานเข้าอันไหน
+      <p class="mt-3 text-left text-base leading-relaxed text-[#dbeefb]">
+        การอัปเดตเกมช่วยให้หน้าเลือกเกมไม่หยุดอยู่กับรายการเดิมตลอดปี แต่จำนวนเกมไม่ใช่เรื่องเดียวที่สำคัญ การจัดหมวดให้หาเจอเร็วก็สำคัญพอกัน เพราะถ้าเกมใหม่มาเป็นร้อยแต่หาไม่เจอ
+        สุดท้ายก็ใหม่อยู่คนเดียวเงียบ ๆ
       </p>
     </div>
-  </ContentBoxNeumorphism>
+  </ContentBoxFloatingBadge>
 
-  <Faq2 title="คำถามที่พบบ่อยเกี่ยวกับ KOH888" faqs={faqs} />
+  <ContentBoxTwoCyberCut as="h2" title="ANDAMAN168 เหมาะกับคนที่ชอบเล่นหลายเกมในบัญชีเดียวแบบไหน">
+    <p slot="left" class="text-left text-base leading-relaxed text-[#dbeefb]">
+      ANDAMAN168 เหมาะกับคนที่เล่นมากกว่าหนึ่งประเภท ทั้งบาคาร่า สล็อต ฟุตบอล และคาสิโน รวมถึงคนที่ใช้มือถือเป็นหลักและต้องการระบบสมาชิกกับฝากถอนออโต้ที่จัดการได้จากจุดเดียวตลอดวัน
+    </p>
+    <p slot="right" class="text-left text-base leading-relaxed text-[#dbeefb]">
+      จุดเด่นของ ANDAMAN168 คือการรวมเกม ระบบ และทางเข้าไว้ให้ใช้งานต่อเนื่อง คนที่ชอบเลือกเกมตามอารมณ์จึงไม่ต้องจำเส้นทางใหม่ทุกครั้ง อยากเริ่มใช้งานก็เลือกเกมที่ชอบ แล้วเข้าสู่ ANDAMAN168
+      ผ่านทางเข้าหลักได้ตลอด 24 ชั่วโมง
+    </p>
+  </ContentBoxTwoCyberCut>
+
+  <Faq4 title="คำถามที่พบบ่อยเกี่ยวกับ ANDAMAN168" faqs={faqs} />
 
   <ReviewCardSumo2 />
 

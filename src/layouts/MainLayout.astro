@@ -6,8 +6,8 @@ import ogImage from "../assets/slide1.png";
 import "../styles/global.css";
 import { BRAND_NAME, BRAND_TEXT, brandProfile, fontStack, iconVersion, usesGoogleFonts } from "../lib/brandProfile";
 import { canonicalFor } from "../lib/schema";
-import Navbar from "../components/NavbarStyle3.astro";
-import Footer from "../components/FooterStyle3.astro";
+import Navbar from "../components/NavbarStyle8.astro";
+import Footer from "../components/FooterCyber.astro";
 
 // Only banner1 is ever rendered, so only banner1 is imported.
 //
@@ -56,8 +56,8 @@ const mobileBannerImg = mobileBanner
   : null;
 
 const {
-  title = "KOH888 สล็อตเว็บตรง คาสิโน บาคาร่า บอล หวย เล่นครบผ่านมือถือ",
-  description = "KOH888 เว็บตรงรวมสล็อต คาสิโน บาคาร่า บอล และหวย ใช้งานผ่านมือถือในบัญชีเดียว พร้อมเกมใหม่ ฝากถอนออโต้ โปรโมชั่น สมัครง่าย และทางเข้าเว็บหลัก ครบจบในเว็บเดียว",
+  title = "ANDAMAN168 ทางเข้าหลัก บาคาร่า สล็อต ฟุตบอล ระบบออโต้ 24 ชม.",
+  description = "ANDAMAN168 รวมคาสิโน เกมใหม่ปี 2026 พร้อมระบบสมาชิก สมัครง่าย ฝากถอนอัตโนมัติ ใช้งานผ่านมือถือได้สะดวก พร้อมทางเข้าสำหรับสมาชิกตลอดวัน รวมบาคาร่า สล็อต ฟุตบอล",
   robots = "index, follow",
 } = Astro.props;
 
@@ -164,7 +164,7 @@ const profile = brandProfile(Astro.site);
 
           {block === "appmeta" && (
             <Fragment>
-              {profile.showAppTitle && <meta name="apple-mobile-web-app-title" content="koh888" />}
+              {profile.showAppTitle && <meta name="apple-mobile-web-app-title" content="andaman168" />}
               <link rel="manifest" href="/site.webmanifest" />
             </Fragment>
           )}
@@ -206,7 +206,7 @@ const profile = brandProfile(Astro.site);
         background-attachment: fixed;
         background-repeat: no-repeat;
         margin: 0;
-        background-color: #0c0416;
+        background-color: #04182f;
         font-weight: 400;
         font-family: var(--font-sans) !important;
       }
@@ -259,7 +259,7 @@ const profile = brandProfile(Astro.site);
         }
         <Image
           src={mainBanner}
-          alt="แบนเนอร์ KOH888 พื้นไล่สีขาวไปม่วง ด้านซ้ายเป็นโลโก้ทองรูปชิปคาสิโนสีดำมีมงกุฎและสัญลักษณ์โพดำ เขียนว่า KOH เหนือเลข 888 ถัดลงมาเป็นข้อความตัวใหญ่ว่า KOH888 เว็บตรงสายเกมครบหมวด ในแถบม่วงเขียนว่า รวมสล็อต คาสิโน บอล หวย และบรรทัดถัดมาว่า สมัครง่าย ใช้งานผ่านมือถือได้ลื่น ปิดท้ายด้วยไอคอนสามช่องกำกับข้อความ ระบบออโต้ รองรับมือถือ และ เข้าเล่นไว ด้านขวาเป็นพรีเซนเตอร์หญิงชุดดำ มีวงล้อรูเล็ต ไพ่โพดำ ลูกเต๋า เหรียญทอง และมือถือที่เปิดหน้าเว็บ KOH888"
+          alt="แบนเนอร์ ANDAMAN168 เป็นภาพหาดทะเลอันดามันน้ำสีฟ้าเทอร์ควอยซ์ มีต้นมะพร้าวสองข้างและพระอาทิตย์ทอแสงกลางภาพ ตรงกลางด้านบนเป็นโลโก้ ANDAMAN168 ตัวอักษรฟ้าน้ำทะเลบนดวงอาทิตย์สีทองมีคลื่นขาวขนาบ ถัดลงมาเป็นข้อความตัวใหญ่ว่า ANDAMAN168 ทางเข้าหลัก ในแถบน้ำเงินเขียนว่า บาคาร่า สล็อต ฟุตบอล ระบบออโต้ 24 ชม. พร้อมไอคอนไพ่และลูกฟุตบอล บรรทัดถัดมาว่า คาสิโนครบ สมัครสมาชิกง่าย เล่นผ่านมือถือ พร้อมไอคอนชิปคาสิโนและโทรศัพท์ ด้านขวาเป็นพรีเซนเตอร์หญิงชุดน้ำเงินถือไพ่โพแดงและโพดำ มีวงล้อรูเล็ตทอง ตู้สล็อตเลข 777 กองชิปคาสิโนและเหรียญทอง มุมขวาล่างเป็นปุ่มทองเขียนว่า เข้าเล่นได้ทุกวัน"
           loading="eager"
           fetchpriority="high"
           widths={[412, 640, 828, 1024, 1280, 1600, 1900]}

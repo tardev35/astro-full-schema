@@ -13,14 +13,16 @@ const isActive = (path: string) => isActivePath(currentPath, path);
 const links = [
   { name: "หน้าแรก", path: "/", icon: "🏠" },
   { name: "โปรโมชั่น", path: "/promotion", icon: "🎁" },
+  { name: "สมัครสมาชิก", path: "/register", icon: "📝" },
+  { name: "เข้าสู่ระบบ", path: "/login", icon: "🔑" },
   { name: "ทดลองเล่น", path: "/ทดลองเล่น", icon: "🎰" },
-  { name: "ทางเข้า", path: "/ทางเข้า", icon: "🌐" },
-  { name: "ติดต่อเรา", path: "/contact-us", icon: "📞" },
+  { name: "เกี่ยวกับเรา", path: "/about-us", icon: "🏝️" },
+  { name: "ติดต่อเรา", path: "/contact-us", icon: "💬" },
 ];
 ---
 
 <header class="sticky top-0 z-50 w-full font-sans">
-  <nav class="relative z-40 w-full bg-[#0a0714]/95 shadow-[0_4px_20px_rgba(0,0,0,0.6)] backdrop-blur-lg">
+  <nav class="relative z-40 w-full bg-[#031324]/95 shadow-[0_4px_20px_rgba(0,0,0,0.55)] backdrop-blur-lg">
     <div class="bg-theme-oklab absolute bottom-0 left-0 h-[2px] w-full opacity-80"></div>
 
     <div class="flex h-[65px] w-full items-center justify-between px-3 md:px-6 lg:h-[80px]">
@@ -30,30 +32,33 @@ const links = [
             mainLogo ? (
               <Picture
                 src={mainLogo}
-                alt="PAY69 โลโก้"
+                alt="โลโก้ ANDAMAN168 ตัวอักษร ANDAMAN สีฟ้าน้ำทะเลวางบนดวงอาทิตย์สีทอง ขนาบด้วยคลื่นขาวและต้นมะพร้าว ใต้ลงมาเป็นเลข 168 สีทองพร้อมเหรียญทอง"
+                widths={[140, 280, 420]}
+                sizes="140px"
                 loading="eager"
                 fetchpriority="high"
-                class="h-[35px] w-auto drop-shadow-[0_0_10px_rgba(212,162,74,0.45)] lg:h-[45px]"
+                class="h-[35px] w-auto drop-shadow-[0_0_10px_rgba(33,212,242,0.45)] lg:h-[45px]"
                 formats={["avif", "webp"]}
                 fallbackFormat="webp"
               />
             ) : (
-              <span class="bg-gradient-to-b from-[#f7e3bd] to-[#b8823a] bg-clip-text text-2xl font-black tracking-widest text-transparent">PAY69</span>
+              <span class="bg-gradient-to-b from-[#7fe6ff] to-[#0a9ceb] bg-clip-text text-2xl font-black tracking-widest text-transparent">ANDAMAN168</span>
             )
           }
         </a>
       </div>
 
-      <div class="hidden h-full items-center justify-center gap-8 lg:flex xl:gap-10">
+      <div class="hidden h-full items-center justify-center gap-6 lg:flex xl:gap-8">
         {
           links.map((link) => (
-            <a href={link.path} class="group relative flex h-full items-center text-sm font-bold transition-all xl:text-base">
-              <span class={`absolute left-0 -ml-3 text-amber-300 opacity-0 transition-all duration-300 group-hover:-ml-4 group-hover:opacity-100`}>[</span>
-              <span class={`transition-colors duration-300 ${isActive(link.path) ? "text-amber-300 drop-shadow-[0_0_8px_rgba(212,162,74,0.7)]" : "text-violet-100/80 group-hover:text-amber-200"}`}>
+            <a href={link.path} class="group relative flex h-full items-center gap-1.5 text-sm font-bold transition-all xl:text-base">
+              <span aria-hidden="true" class="text-base transition-transform duration-300 group-hover:-translate-y-0.5">
+                {link.icon}
+              </span>
+              <span class={`transition-colors duration-300 ${isActive(link.path) ? "text-[#ffe999] drop-shadow-[0_0_8px_rgba(253,181,36,0.7)]" : "text-[#dbeefb]/85 group-hover:text-[#7fe6ff]"}`}>
                 {link.name}
               </span>
-              <span class={`absolute right-0 -mr-3 text-amber-300 opacity-0 transition-all duration-300 group-hover:-mr-4 group-hover:opacity-100`}>]</span>
-              {isActive(link.path) && <div class="absolute bottom-0 left-0 h-[3px] w-full rounded-t-md bg-amber-300 shadow-[0_-2px_10px_rgba(212,162,74,0.9)]" />}
+              {isActive(link.path) && <div class="absolute bottom-0 left-0 h-[3px] w-full rounded-t-md bg-[#fdb524] shadow-[0_-2px_10px_rgba(253,181,36,0.9)]" />}
             </a>
           ))
         }
@@ -62,39 +67,39 @@ const links = [
       <div class="z-50 flex items-center gap-2 md:gap-4">
         <a
           href="/login"
-          class="hidden items-center justify-center rounded border border-violet-500/70 px-6 py-2 text-sm font-bold text-amber-200 transition-all hover:bg-violet-600/20 hover:shadow-[0_0_15px_rgba(124,58,237,0.4)] lg:flex">
-          เข้าสู่ระบบ
+          class="hidden items-center justify-center gap-1.5 rounded border border-[#21d4f2]/70 px-6 py-2 text-sm font-bold text-[#7fe6ff] transition-all hover:bg-[#0a3a68]/60 hover:shadow-[0_0_15px_rgba(33,212,242,0.4)] lg:flex">
+          <span aria-hidden="true">🔑</span> เข้าสู่ระบบ
         </a>
         <a
           href="/register"
-          class="bg-theme-oklab hidden items-center justify-center rounded px-6 py-2 text-sm font-extrabold text-[#1a1130] shadow-[0_0_20px_rgba(212,162,74,0.5)] transition-all hover:brightness-110 lg:flex">
-          สมัครสมาชิก
+          class="bg-theme-oklab hidden items-center justify-center gap-1.5 rounded px-6 py-2 text-sm font-extrabold text-[#04182f] shadow-[0_0_20px_rgba(33,212,242,0.5)] transition-all hover:brightness-110 lg:flex">
+          <span aria-hidden="true">🐚</span> สมัครสมาชิก
         </a>
 
         <div class="flex items-center gap-2 lg:hidden">
           <a
             href="/register"
-            class="bg-theme-oklab flex items-center justify-center rounded px-3 py-1.5 text-[11px] font-bold text-[#1a1130] shadow-[0_0_10px_rgba(212,162,74,0.5)] md:px-4 md:text-xs">
+            class="bg-theme-oklab flex items-center justify-center rounded px-3 py-1.5 text-[11px] font-bold text-[#04182f] shadow-[0_0_10px_rgba(33,212,242,0.5)] md:px-4 md:text-xs">
             สมัครสมาชิก
           </a>
-          <button id="hamburger-btn" class="flex flex-col items-center justify-center space-y-1.5 rounded border border-violet-500/40 bg-violet-600/10 p-1.5" aria-label="Menu">
-            <span class="hamburger-line h-[2px] w-5 origin-center rounded-full bg-amber-300 transition-all duration-300"></span>
-            <span class="hamburger-line h-[2px] w-5 rounded-full bg-amber-300 transition-all duration-300"></span>
-            <span class="hamburger-line h-[2px] w-5 origin-center rounded-full bg-amber-300 transition-all duration-300"></span>
+          <button id="hamburger-btn" class="flex flex-col items-center justify-center space-y-1.5 rounded border border-[#21d4f2]/45 bg-[#0a3a68]/40 p-1.5" aria-label="เปิดเมนู">
+            <span class="hamburger-line h-[2px] w-5 origin-center rounded-full bg-[#7fe6ff] transition-all duration-300"></span>
+            <span class="hamburger-line h-[2px] w-5 rounded-full bg-[#7fe6ff] transition-all duration-300"></span>
+            <span class="hamburger-line h-[2px] w-5 origin-center rounded-full bg-[#7fe6ff] transition-all duration-300"></span>
           </button>
         </div>
       </div>
     </div>
   </nav>
 
-  <div id="mobile-overlay" class="pointer-events-none fixed inset-0 z-40 bg-black/80 opacity-0 backdrop-blur-sm transition-opacity duration-300 lg:hidden"></div>
+  <div id="mobile-overlay" class="pointer-events-none fixed inset-0 z-40 bg-[#031324]/80 opacity-0 backdrop-blur-sm transition-opacity duration-300 lg:hidden"></div>
 
   <div
     id="mobile-sidebar"
-    class="fixed top-0 right-0 z-50 h-screen w-[260px] translate-x-full transform overflow-y-auto border-l border-violet-500/40 bg-[#0a0714] shadow-[-10px_0_30px_rgba(0,0,0,0.9)] transition-transform duration-400 ease-[cubic-bezier(0.3,1,0.3,1)] lg:hidden">
+    class="fixed top-0 right-0 z-50 h-screen w-[260px] translate-x-full transform overflow-y-auto border-l border-[#21d4f2]/40 bg-[#031324] shadow-[-10px_0_30px_rgba(0,0,0,0.85)] transition-transform duration-400 ease-[cubic-bezier(0.3,1,0.3,1)] lg:hidden">
     <div class="flex items-center justify-between border-b border-white/5 px-5 py-5">
-      <span class="text-sm font-extrabold tracking-wider text-white">MENU</span>
-      <button id="close-sidebar-btn" class="p-1 text-xl text-amber-300 hover:text-white">✕</button>
+      <span class="text-sm font-extrabold tracking-wider text-[#dbeefb]">เมนู</span>
+      <button id="close-sidebar-btn" class="p-1 text-xl text-[#7fe6ff] hover:text-white" aria-label="ปิดเมนู">✕</button>
     </div>
 
     <div class="flex flex-col space-y-2 px-4 pt-4 pb-8">
@@ -102,20 +107,20 @@ const links = [
         links.map((link) => (
           <a
             href={link.path}
-            class={`sidebar-item flex items-center rounded-lg border px-4 py-3.5 transition-all ${isActive(link.path) ? "border-violet-500/60 bg-violet-600/20 text-amber-300" : "border-transparent bg-white/5 text-violet-100/80 hover:bg-white/10"}`}>
+            class={`sidebar-item flex items-center rounded-lg border px-4 py-3.5 transition-all ${isActive(link.path) ? "border-[#21d4f2]/60 bg-[#0a3a68]/60 text-[#ffe999]" : "border-transparent bg-white/5 text-[#dbeefb]/85 hover:bg-white/10"}`}>
             <span aria-hidden="true" class="mr-3 text-xl">
-              {link.icon ?? "🔗"}
+              {link.icon}
             </span>
             <span class="text-sm font-bold">{link.name}</span>
           </a>
         ))
       }
 
-      <div class="mt-6 flex flex-col gap-3 border-t border-violet-500/40 pt-6">
+      <div class="mt-6 flex flex-col gap-3 border-t border-[#21d4f2]/40 pt-6">
         <a
           href="/login"
-          class="sidebar-item hover:bg-theme-oklab flex justify-center rounded-lg border border-amber-400/70 bg-transparent py-3.5 text-sm font-bold text-amber-200 transition-colors hover:border-transparent hover:text-[#1a1130]">
-          <span aria-hidden="true">🔒</span> เข้าสู่ระบบ
+          class="sidebar-item hover:bg-theme-oklab flex items-center justify-center gap-2 rounded-lg border border-[#fdb524]/70 bg-transparent py-3.5 text-sm font-bold text-[#ffe999] transition-colors hover:border-transparent hover:text-[#04182f]">
+          <span aria-hidden="true">🔑</span> เข้าสู่ระบบ
         </a>
       </div>
     </div>
@@ -124,10 +129,9 @@ const links = [
 
 <style is:global>
   .bg-theme-oklab {
-    background-image: linear-gradient(in oklab to right, #b8823a, #e0b877, #f7e3bd);
+    background-image: linear-gradient(in oklab to right, #0a9ceb, #21d4f2, #7fe6ff);
   }
 
-  /* อนิเมชั่น Hamburger เปลี่ยนเป็น X */
   #hamburger-btn.active .hamburger-line:nth-child(1) {
     transform: translateY(7px) rotate(45deg);
   }
@@ -138,7 +142,6 @@ const links = [
     transform: translateY(-7px) rotate(-45deg);
   }
 
-  /* อนิเมชั่นเด้งไล่ระดับของเมนูใน Sidebar */
   .sidebar-item {
     opacity: 0;
     transform: translateX(20px);
@@ -165,6 +168,19 @@ const links = [
   }
   .sidebar-item:nth-child(6) {
     transition-delay: 0.35s;
+  }
+  .sidebar-item:nth-child(7) {
+    transition-delay: 0.4s;
+  }
+  .sidebar-item:nth-child(8) {
+    transition-delay: 0.45s;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .sidebar-item {
+      transition: none;
+      opacity: 1;
+      transform: none;
+    }
   }
 </style>
 

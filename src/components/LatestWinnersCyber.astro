@@ -27,15 +27,15 @@ const initialRows = Array.from({ length: 5 }, (_, i) => ({
 
 <div class="mx-auto w-full max-w-[1300px] p-4">
   <section
-    aria-label="รายการฝาก-ถอนล่าสุดผ่านระบบออโต้ของ KOH888"
-    class="relative border-r-4 border-l-4 border-[#f5c542] bg-[#1a0a2e]/85 px-4 py-8 shadow-[0_0_30px_rgba(245,197,66,0.2)] md:p-10"
+    aria-label="รายการฝาก-ถอนล่าสุดผ่านระบบออโต้ของ GOAT888"
+    class="relative border-r-4 border-l-4 border-[#f5c451] bg-[#1a0414]/85 px-4 py-8 shadow-[0_0_30px_rgba(245,196,81,0.2)] md:p-10"
     style="clip-path: polygon(20px 0, calc(100% - 20px) 0, 100% 20px, 100% calc(100% - 20px), calc(100% - 20px) 100%, 20px 100%, 0 calc(100% - 20px), 0 20px);">
-    <div class="absolute top-0 left-0 h-[1px] w-full bg-gradient-to-r from-transparent via-[#f5c542] to-transparent"></div>
-    <div class="absolute bottom-0 left-0 h-[1px] w-full bg-gradient-to-r from-transparent via-[#c77dff] to-transparent"></div>
+    <div class="absolute top-0 left-0 h-[1px] w-full bg-gradient-to-r from-transparent via-[#f5c451] to-transparent"></div>
+    <div class="absolute bottom-0 left-0 h-[1px] w-full bg-gradient-to-r from-transparent via-[#ff3ddb] to-transparent"></div>
 
-    <div class="relative z-10 mb-8 flex items-center justify-between border-b border-[#f5c542]/30 pb-4">
-      <p class="text-xl font-black tracking-[0.2em] text-[#f5c542] drop-shadow-[0_0_8px_rgba(245,197,66,0.8)]">/// KOH888_AUTO_TRANSACTIONS</p>
-      <span class="animate-pulse border border-[#c77dff]/60 px-2 py-1 text-xs font-bold tracking-widest text-[#c77dff]">24 ชม.</span>
+    <div class="relative z-10 mb-8 flex items-center justify-between border-b border-[#f5c451]/30 pb-4">
+      <p class="text-xl font-black tracking-[0.2em] text-[#f5c451] drop-shadow-[0_0_8px_rgba(245,196,81,0.8)]">/// GOAT888_AUTO_TRANSACTIONS</p>
+      <span class="animate-pulse border border-[#ff3ddb]/60 px-2 py-1 text-xs font-bold tracking-widest text-[#ff3ddb]">24 ชม.</span>
     </div>
 
     <div
@@ -51,13 +51,13 @@ const initialRows = Array.from({ length: 5 }, (_, i) => ({
       {
         initialRows.map((row) => (
           <div data-winner-row class="winner-row origin-left transform transition-all duration-500 ease-out">
-            <div class="flex items-center justify-between border-l-2 border-[#c77dff] bg-gradient-to-r from-[#2a1147]/35 to-transparent p-3 backdrop-blur-sm transition-colors hover:bg-[#8b36d9]/35">
+            <div class="flex items-center justify-between border-l-2 border-[#ff3ddb] bg-gradient-to-r from-[#2b0722]/45 to-transparent p-3 backdrop-blur-sm transition-colors hover:bg-[#8f1080]/35">
               <div class="flex items-center gap-4">
                 <div data-winner-bank class={`flex h-8 w-8 items-center justify-center border border-white/10 bg-black/50 mix-blend-screen ${row.bank.color}`}>
                   <img data-winner-icon src={row.bank.icon} alt="" width="20" height="20" loading="lazy" decoding="async" class="h-5 w-5 object-contain grayscale" />
                 </div>
-                <div class="font-mono text-sm text-[#e9dcf6]">
-                  USR_ID: <span data-winner-user class="font-bold text-[#ffe9a3]">{row.user}</span>
+                <div class="font-mono text-sm text-[#f7e3f4]">
+                  USR_ID: <span data-winner-user class="font-bold text-[#ffe6a3]">{row.user}</span>
                 </div>
               </div>
               <div class="flex items-center gap-6">
@@ -68,8 +68,8 @@ const initialRows = Array.from({ length: 5 }, (_, i) => ({
                   class={`winner-status font-mono text-[10px] tracking-widest ${row.pending ? "is-pending" : "is-verified"}`}>
                   {row.pending ? "[กำลังทำรายการ]" : "[ทำรายการสำเร็จ]"}
                 </div>
-                <div class="font-mono text-xl font-black text-[#f5c542] drop-shadow-[0_0_8px_rgba(245,197,66,0.5)]">
-                  <span data-winner-amount>{row.amount}</span> <span class="text-xs text-[#c77dff]">THB</span>
+                <div class="font-mono text-xl font-black text-[#f5c451] drop-shadow-[0_0_8px_rgba(245,196,81,0.5)]">
+                  <span data-winner-amount>{row.amount}</span> <span class="text-xs text-[#ff3ddb]">THB</span>
                 </div>
               </div>
             </div>
@@ -78,8 +78,8 @@ const initialRows = Array.from({ length: 5 }, (_, i) => ({
       }
     </div>
 
-    <p class="relative z-10 mt-6 text-left text-[11px] leading-relaxed tracking-wide text-[#e9dcf6]/60">
-      รายการที่แสดงเป็นตัวอย่างการทำรายการผ่านระบบออโต้ของ KOH888 ซึ่งเว็บระบุว่าทำได้ตลอด 24 ชั่วโมง สถานะจริงของแต่ละรายการให้ดูจากหน้าบัญชีของสมาชิกเอง
+    <p class="relative z-10 mt-6 text-left text-[11px] leading-relaxed tracking-wide text-[#f7e3f4]/60">
+      รายการที่แสดงเป็นตัวอย่างการทำรายการผ่านระบบฝากถอนออโต้ของ GOAT888 ซึ่งสมาชิกทำผ่านบัญชีได้โดยตรง สถานะจริงของแต่ละรายการให้ดูจากหน้าบัญชีของสมาชิกเอง
     </p>
 
     <script type="application/json" data-winners-banks set:html={JSON.stringify(bankPool)} />
@@ -98,8 +98,8 @@ const initialRows = Array.from({ length: 5 }, (_, i) => ({
   }
 
   .winner-status.is-pending {
-    color: #ffe9a3;
-    border-color: #a9761a;
+    color: #ffe6a3;
+    border-color: #b07d1c;
   }
   .winner-status.is-verified {
     color: oklch(79.2% 0.209 151.711);

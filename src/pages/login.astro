@@ -2,15 +2,15 @@
 import MainLayout from "../layouts/MainLayout.astro";
 import ContentBox from "../components/ContentBox.astro";
 import Navfoot from "../components/Navfoot.astro";
-import Announcement from "../components/Announcement3.astro";
+import Announcement from "../components/Announcement5.astro";
 import CtaRedirect from "../components/CtaRedirect.astro";
 import { pageGraph } from "../lib/schema";
 
 const pageDescription =
-  "เข้าสู่ระบบ PIGAUTO หน้าล็อกอินเว็บหลัก กดปุ่มเดียวเข้าบัญชีเดิมเพื่อเล่นสล็อตเว็บตรงระบบออโต้ ตรวจเครดิต รับโปรโมชั่น และดูประวัติฝากถอนอัตโนมัติได้ทันที";
+  "เข้าสู่ระบบ GOAT888 หน้าล็อกอินเว็บหลัก กดปุ่มเดียวเข้าบัญชีเดิมเพื่อเล่นสล็อตเว็บตรงและคาสิโนสด เช็กเครดิต ดูโปรโมชั่น และประวัติฝากถอนออโต้ได้จากมือถือ";
 
 const graph = pageGraph(Astro, {
-  name: "เข้าสู่ระบบ PIGAUTO เว็บหลัก",
+  name: "เข้าสู่ระบบ GOAT888 เว็บหลัก",
   description: pageDescription,
   breadcrumb: [
     { name: "หน้าแรก", path: "/" },
@@ -21,19 +21,19 @@ const graph = pageGraph(Astro, {
 const targetUrl = "https://yoalink.com/22hs";
 ---
 
-<MainLayout title="เข้าสู่ระบบ PIGAUTO | ล็อกอินเว็บหลัก สล็อตระบบออโต้" description={pageDescription}>
+<MainLayout title="เข้าสู่ระบบ GOAT888 | ล็อกอินเว็บหลัก สล็อตและคาสิโน" description={pageDescription}>
   <script type="application/ld+json" set:html={graph} />
 
   <Announcement />
 
-  <ContentBox title="เข้าสู่ระบบ PIGAUTO" as="h1">
+  <ContentBox title="เข้าสู่ระบบ GOAT888" as="h1">
     <div class="flex justify-center py-8">
       <a
         href={targetUrl}
         rel="nofollow sponsored"
         data-cta-redirect
         aria-label="เข้าระบบเกม"
-        class="group relative mx-auto flex w-full max-w-[320px] items-center justify-center gap-3 overflow-hidden rounded-xl border border-[#d81f26]/70 bg-[#8c0f12] px-6 py-4 text-xl font-bold tracking-wide text-[#ffe9a8] shadow-[0_10px_30px_rgba(216,31,38,0.35)] transition-all duration-300 hover:scale-105 hover:border-[#f5c542] hover:bg-[#5b0404] hover:text-[#f5c542] hover:shadow-[0_15px_40px_rgba(245,197,66,0.42)]">
+        class="group relative mx-auto flex w-full max-w-[320px] items-center justify-center gap-3 overflow-hidden rounded-xl border border-[#f5c451]/60 bg-[#2b0722] px-6 py-4 text-xl font-bold tracking-wide text-[#ffe6a3] shadow-[0_10px_30px_rgba(255,61,219,0.35)] transition-all duration-300 hover:scale-105 hover:border-[#ff3ddb] hover:bg-[#4a0640] hover:text-[#ffa3ee] hover:shadow-[0_15px_40px_rgba(245,196,81,0.42)]">
         เข้าระบบเกม
       </a>
     </div>

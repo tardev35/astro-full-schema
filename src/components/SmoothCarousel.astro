@@ -1,17 +1,17 @@
 ---
 import { Picture } from "astro:assets";
 
-import slide1 from "../assets/slide1.png";
 import slide2 from "../assets/slide2.png";
+import slide3 from "../assets/slide3.png";
 
 const images = [
   {
-    src: slide1,
-    alt: "ภาพโปรโมชั่น PIGAUTO พื้นหลังสีแดงลายกิ่งดอกไม้จีน มีโคมไฟจีนสีแดงและเหรียญทองลอยอยู่รอบภาพ ด้านบนเป็นโลโก้หมูสีชมพูบนเฟืองสีเงินพร้อมตัวอักษร PIGAUTO ถัดลงมาเป็นตัวอักษรขาวขนาดใหญ่ว่า COMMISSION และบรรทัด คืนทุกยอดเล่นตลอดทั้งวัน ตรงกลางเป็นกล่องสีแดงที่มีตัวเลขทองขนาดใหญ่ว่า 0.3% ใต้ลงมาเขียนว่า เล่นถึง 50% ถอนได้เลย ตามด้วยข้อความ สามารถกดรับง่ายๆ ที่หน้าเว็บได้เลยค่ะ และ รับสิทธิ์ก่อน 23.59 น. ของทุกวัน แถบล่างสุดเป็นตัวอักษรทองว่า ยิ่งเล่นเยอะ ยิ่งได้เยอะ ด้านซ้ายบนเป็นพรีเซนเตอร์หญิงชุดสีแดงปักลายทอง",
+    src: slide3,
+    alt: "ภาพโปรโมชั่น GOAT888 พื้นหลังสีดำมีเหรียญทองลอยอยู่และแสงสีชมพูนีออน ด้านบนเป็นตัวอักษรว่า GOAT888 ถัดลงมาเป็นตัวอักษรขนาดใหญ่ว่า ฝากประจำทุกวัน รับ เครดิตฟรี เพิ่ม ใต้ลงมาเป็นการ์ดสี่ใบเขียนว่า สมัครง่าย เข้าสู่ระบบไว, เว็บตรง สล็อตแท้, สมาชิกใหม่ รับโปรได้ต่อเนื่อง และ โบนัสจัดเต็ม คุ้มทุกวัน ตรงกลางล่างเป็นหีบสมบัติสีทองเปิดอยู่พร้อมเหรียญทองและชิปคาสิโนที่มีเลข 888 แถบล่างสุดเขียนว่า ฝากถอนออโต้ และ เล่นผ่านมือถือได้ทุกวัน ด้านซ้ายเป็นพรีเซนเตอร์หญิงผมสีชมพูสวมชุดสีดำมันวาว",
   },
   {
     src: slide2,
-    alt: "ภาพโปรโมชั่น PIGAUTO พื้นหลังสีแดงลายกิ่งดอกไม้จีน มีโคมไฟจีนสีแดงและเหรียญทองลอยอยู่ ด้านบนซ้ายเป็นโลโก้หมูสีชมพูบนเฟืองสีเงินพร้อมตัวอักษร PIGAUTO ตรงกลางเป็นตัวอักษรขาวขนาดใหญ่ว่า แนะนำเพื่อน รับโบนัส ถัดลงมาเป็นกล่องสีแดงที่มีตัวเลขทองขนาดใหญ่ว่า 0.8% ใต้ลงมาเขียนว่า สร้างรายได้ 100,000/เดือน ด้านขวาเป็นพรีเซนเตอร์หญิงชุดสูทสีทองยืนอยู่หน้าฉากสีแดง",
+    alt: "ภาพโปรโมชั่น GOAT888 พื้นหลังสีดำมีเส้นแสงสีชมพูนีออนและแถบสีทอง ด้านบนซ้ายเป็นโลโก้รูปหัวแพะสีทองพร้อมตัวอักษรว่า GOAT888 ถัดลงมาเป็นตัวอักษรขนาดใหญ่ว่า ชวนเพื่อน ผ่านลิงก์ และ รับรายได้ต่อเนื่อง ใต้ลงมาเป็นแถบเขียนว่า แชร์ลิงก์ง่าย รับค่าคอมทุกสัปดาห์ ตามด้วยไอคอนสี่ขั้นตอนเขียนว่า คัดลอกลิงก์, แชร์ให้เพื่อน, เพื่อนสมัคร และ รับค่าคอมต่อเนื่อง แถบล่างสุดเขียนว่า สมัครง่าย ผ่านมือถือ ใช้งานสะดวก คู่กับกรอบที่มีตัวอักษรว่า WWW.GOAT888.COM ด้านขวาเป็นพรีเซนเตอร์หญิงชุดสีดำกำลังถือโทรศัพท์ที่มีโลโก้ GOAT888",
   },
 ];
 
@@ -23,7 +23,7 @@ const slides = Array.from({ length: COPIES }, () => images).flat();
   <input id="carousel-pause" type="checkbox" class="peer sr-only" />
   <label
     for="carousel-pause"
-    class="sr-only cursor-pointer peer-focus-visible:not-sr-only peer-focus-visible:mb-3 peer-focus-visible:inline-block peer-focus-visible:rounded-full peer-focus-visible:border peer-focus-visible:border-[#f5c542]/60 peer-focus-visible:px-4 peer-focus-visible:py-2 peer-focus-visible:text-sm peer-focus-visible:font-bold peer-focus-visible:text-[#ffe9a8]">
+    class="sr-only cursor-pointer peer-focus-visible:not-sr-only peer-focus-visible:mb-3 peer-focus-visible:inline-block peer-focus-visible:rounded-full peer-focus-visible:border peer-focus-visible:border-[#f5c451]/60 peer-focus-visible:px-4 peer-focus-visible:py-2 peer-focus-visible:text-sm peer-focus-visible:font-bold peer-focus-visible:text-[#ffe6a3]">
     หยุด / เล่นสไลด์ภาพ
   </label>
 
@@ -36,7 +36,7 @@ const slides = Array.from({ length: COPIES }, () => images).flat();
             <Picture
               src={slide.src}
               alt={isDuplicate ? "" : slide.alt}
-              class="block w-full rounded-xl border border-[#f5c542]/40 object-cover shadow-[0_10px_30px_rgba(216,31,38,0.30)]"
+              class="block w-full rounded-xl border border-[#f5c451]/40 object-cover shadow-[0_10px_30px_rgba(255,61,219,0.30)]"
               width={slide.src.width}
               height={slide.src.height}
               loading="lazy"

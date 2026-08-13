@@ -1,63 +1,59 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
-import Announcement3 from "../components/Announcement3.astro";
+import Announcement5 from "../components/Announcement5.astro";
 import ContentBox from "../components/ContentBox.astro";
-import ContentBoxPremium from "../components/ContentBoxPremium.astro";
-import ContentBoxNeumorphism from "../components/ContentBoxNeumorphism.astro";
-import ContentBoxSpecial from "../components/ContentBoxSpecial.astro";
-import ContentBoxTwoPremium from "../components/ContentBoxTwoPremium.astro";
-import ContentBoxSevenThreePremium from "../components/ContentBoxSevenThreePremium.astro";
+import ContentBoxFloatingBadge from "../components/ContentBoxFloatingBadge.astro";
+import ContentBoxTwoFloatingBadge from "../components/ContentBoxTwoFloatingBadge.astro";
+import ContentBoxTwoNeumorphism from "../components/ContentBoxTwoNeumorphism.astro";
+import ContentBoxSevenThree from "../components/ContentBoxSevenThree.astro";
 import ProviderGridPremium from "../components/ProviderGridPremium.astro";
 import GameRankingBoard from "../components/GameRankingBoard.astro";
-import LatestWinners4 from "../components/LatestWinners4.astro";
+import LatestWinnersCyber from "../components/LatestWinnersCyber.astro";
 import SmoothCarousel from "../components/SmoothCarousel.astro";
 import LoginRtpSection from "../components/LoginRtpSection.astro";
-import Faq3 from "../components/Faq3.astro";
+import Faq4 from "../components/Faq4.astro";
 import ReviewCardSumo2 from "../components/ReviewCardSumo2.astro";
 import Navfoot from "../components/Navfoot.astro";
 
 import { Picture } from "astro:assets";
 import { pageGraph } from "../lib/schema";
-import imgAutoSystem from "../assets/slide2.png";
-import imgNoMinimum from "../assets/slide1.png";
-import imgHighPayout from "../assets/banner2.png";
+import imgFreeCredit from "../assets/slide4.png";
+import imgCashback from "../assets/slide1.png";
 
-const pageTitle = "PIGAUTO ทางเข้าเว็บตรง สล็อตระบบออโต้ เร็ว นิ่ง ปลอดภัย";
+const pageTitle = "GOAT888 เข้าสู่ระบบง่าย เว็บตรงสล็อตแท้ สมาชิกใหม่ สมัครรับเครดิตฟรี";
 
-const pageDescription = "PIGAUTO ทางเข้าเว็บตรง สัมผัสเว็บแรงระดับพรีเมียม ปลอดภัย สล็อตระบบออโต้เร็ว ธุรกรรมในเสี้ยววินาที อัตราจ่ายสูง ไม่บังคับขั้นต่ำ รองรับ วอเลท";
+const pageDescription =
+  "GOAT888 รวมสล็อต คาสิโน ฝากถอนออโต้ และระบบสมาชิก รองรับมือถือ สมาชิกใหม่สมัครรับเครดิตฟรี พร้อมโปรโมชั่นและทางเข้าเว็บหลัก";
 
 const announcement =
-  "PIGAUTO ทางเข้าเว็บตรง เชื่อมต่อ API ตรงจากค่ายเกมแม่ ไร้ตัวกลาง • สล็อตระบบออโต้ ฝากถอนจบในเสี้ยววินาที ไม่ต้องแจ้งสลิปรอแอดมิน • คัดเฉพาะเกม High Performance ค่า RTP สูงตามมาตรฐานลิขสิทธิ์แท้ แตกง่าย อัตราจ่ายสูง • ไม่บังคับขั้นต่ำ จะเริ่มยอดเล็กเพื่อวอร์มระบบหรือเพิ่มน้ำหนักเมื่อจังหวะเข้ามือก็ทำได้ทันที • รองรับ วอเลท TrueMoney Wallet เติมเครดิตง่ายและปลอดภัย";
+  "GOAT888 รวมสล็อต คาสิโน ระบบสมาชิก และฝากถอนออโต้ไว้ในบัญชีเดียว • เว็บตรงสล็อตแท้ มีเกมหลายธีมและหลายค่ายให้เลือกจากบัญชีเดียว เมนูหาเจอเร็ว • คาสิโนเพิ่มเกมโต๊ะและเกมสดโดยใช้เครดิตชุดเดียวกับสล็อต • สมาชิกใหม่เช็กสิทธิ์เครดิตฟรีได้จากหน้าโปรโมชั่น อ่านเงื่อนไขเกมที่ร่วม เทิร์น และการถอนให้ครบก่อนกดรับ • ฝากถอนออโต้ทำรายการผ่านบัญชีได้โดยตรง ลดขั้นตอนก่อนกลับเข้าเกม • เข้าสู่ระบบผ่านมือถือด้วยบัญชีเดิม เปิดสล็อต คาสิโน โปรโมชั่น และข้อมูลบัญชีได้จากเบราว์เซอร์";
 
-const autoSystemAlt =
-  "ภาพโปรโมชั่น PIGAUTO พื้นหลังสีแดงลายกิ่งดอกไม้จีน มีโคมไฟจีนสีแดงและเหรียญทองลอยอยู่ ด้านบนซ้ายเป็นโลโก้หมูสีชมพูบนเฟืองสีเงินพร้อมตัวอักษร PIGAUTO ตรงกลางเป็นตัวอักษรขาวขนาดใหญ่ว่า แนะนำเพื่อน รับโบนัส ถัดลงมาเป็นกล่องสีแดงที่มีตัวเลขทองขนาดใหญ่ว่า 0.8% ใต้ลงมาเขียนว่า สร้างรายได้ 100,000/เดือน ด้านขวาเป็นพรีเซนเตอร์หญิงชุดสูทสีทองยืนอยู่หน้าฉากสีแดง";
+const freeCreditAlt =
+  "ภาพโปรโมชั่น GOAT888 พื้นหลังสีดำมีเส้นแสงสีชมพูนีออนและแถบสีทอง ด้านบนซ้ายเป็นโลโก้รูปหัวแพะสีทองพร้อมตัวอักษรว่า GOAT888 ถัดลงมาเป็นตัวอักษรขนาดใหญ่ว่า เข้าสู่ระบบง่าย และ เว็บตรงสล็อตแท้ ใต้ลงมาเป็นกรอบเส้นสีชมพูเขียนว่า สมาชิกใหม่ สมัครรับเครดิตฟรี มุมล่างซ้ายเป็นกล่องของขวัญสีดำทอง การ์ดสีดำเขียนว่า VIP ไพ่โพดำ และชิปคาสิโนสีดำทอง ถัดลงมาเป็นแถบไอคอนสามช่องเขียนว่า เล่นผ่านมือถือ ฝากถอนอัตโนมัติ และ ใช้งานง่าย ปิดท้ายด้วยปุ่มขอบสีทองเขียนว่า สมัครสมาชิก ด้านขวาเป็นพรีเซนเตอร์หญิงสวมชุดสายเดี่ยวสีดำ";
 
-const noMinimumAlt =
-  "ภาพโปรโมชั่น PIGAUTO พื้นหลังสีแดงลายกิ่งดอกไม้จีน มีโคมไฟจีนสีแดงและเหรียญทองลอยอยู่รอบภาพ ด้านบนเป็นโลโก้หมูสีชมพูบนเฟืองสีเงินพร้อมตัวอักษร PIGAUTO ถัดลงมาเป็นตัวอักษรขาวขนาดใหญ่ว่า COMMISSION และบรรทัด คืนทุกยอดเล่นตลอดทั้งวัน ตรงกลางเป็นกล่องสีแดงที่มีตัวเลขทองขนาดใหญ่ว่า 0.3% ใต้ลงมาเขียนว่า เล่นถึง 50% ถอนได้เลย ตามด้วยข้อความ สามารถกดรับง่ายๆ ที่หน้าเว็บได้เลยค่ะ และ รับสิทธิ์ก่อน 23.59 น. ของทุกวัน แถบล่างสุดเป็นตัวอักษรทองว่า ยิ่งเล่นเยอะ ยิ่งได้เยอะ ด้านซ้ายบนเป็นพรีเซนเตอร์หญิงชุดสีแดงปักลายทอง";
-
-const highPayoutAlt =
-  "ภาพประกอบ PIGAUTO เป็นฉากศาลเจ้าจีนหลังคาโค้ง มีเสามังกรทองสองข้างและโคมไฟจีนสีแดงแขวนเรียงกัน พื้นหลังสีแดงเข้มมีเหรียญจีนสีทองลอยอยู่ ตรงกลางเป็นป้ายนีออนกรอบสี่เหลี่ยมเขียนว่า PIGAUTO ด้วยตัวอักษรทองและแดง ใต้ลงมาเป็นตัวอักษรทองขนาดใหญ่ว่า PIGAUTO และบรรทัด แตกง่าย อัตราจ่ายสูง ด้านขวาเป็นผู้หญิงชุดฮั่นฝูสีแดงปักลายทอง สวมปิ่นปักผมทอง กำลังถือถาดที่มีทองแท่งและเหรียญทองวางอยู่เต็ม";
+const cashbackAlt =
+  "ภาพโปรโมชั่น GOAT888 พื้นหลังสีดำมีแถบทแยงสีทองและแสงสีชมพูนีออน ด้านบนเป็นตัวอักษรว่า GOAT888 พร้อมป้ายเล็กเขียนว่า เว็บตรงสล็อตแท้ ตรงกลางเป็นตัวอักษรขนาดใหญ่ว่า คืนยอดเสีย สูงสุด 5% คู่กับตราวงกลมสีทองเขียนว่า CASHBACK REBATE ใต้ลงมาเป็นแถบสามบรรทัดเขียนว่า เข้าสู่ระบบง่าย, รับเครดิตคืนทุกสัปดาห์ และ รีบเช็กสิทธิ์ก่อนเล่นรอบถัดไป แถบล่างสุดเป็นไอคอนสามช่องเขียนว่า ระบบปลอดภัยมาตรฐานสากล, บริการตลอด 24 ชั่วโมง และ ถอนเร็ว จ่ายจริง 100% ด้านขวาเป็นพรีเซนเตอร์หญิงสวมแจ็กเก็ตสีดำมันวาว มีตู้สล็อตที่มีคำว่า BIG WIN และกล่องของขวัญสีดำทองวางอยู่ด้านหน้า";
 
 const faqs = [
   {
-    q: "PIGAUTO เป็นเว็บตรงหรือไม่",
-    a: "เป็นเว็บตรง 100% ครับ เราเชื่อมต่อ API ตรงจากค่ายเกมแม่ (Direct Server) ไร้ตัวกลาง เปรียบเสมือนระบบส่งกำลังของ Supercar ที่ถ่ายทอดพลังงานได้เต็มที่ เสถียร และปลอดภัยสูงสุดครับ",
+    q: "GOAT888 มีเกมและค่ายอะไรให้เลือกเล่นบ้าง",
+    a: "GOAT888 จัดสล็อตเป็นหมวดหลัก มีเกมหลายธีมและหลายค่ายให้เลือกจากบัญชีเดียว ทั้งเกมคลาสสิก ฟรีสปิน โบนัส และฟีเจอร์หลายรูปแบบ ส่วนหมวดคาสิโนเพิ่มเกมโต๊ะและเกมสดสำหรับสมาชิกที่อยากเปลี่ยนบรรยากาศ โดยยังใช้บัญชีและเครดิตชุดเดียวกัน",
   },
   {
-    q: "ระบบฝากถอนออโต้เร็วแค่ไหน",
-    a: "เร็วทะลุขีดครับ ระบบธุรกรรมของเราใช้ AI ประมวลผล ฝากปุ๊บเครดิตเข้าเหมือน Turbo Boost ถอนปุ๊บเงินเด้งเข้าบัญชีในเสี้ยววินาที รองรับ High Traffic ได้สบายๆ ครับ",
+    q: "สมาชิกใหม่ GOAT888 สมัครรับเครดิตฟรีต้องดูอะไรบ้าง",
+    a: "สมาชิกใหม่เช็กเครดิตฟรีได้จากหน้าโปรโมชั่น โดยแต่ละสิทธิ์อาจต่างกันเรื่องเกมที่ร่วม ยอดเริ่มต้น เทิร์น หรือเงื่อนไขถอน จึงควรอ่านรายละเอียดของโปรที่สนใจให้ครบก่อนกดรับ",
   },
   {
-    q: "เกมสล็อตแตกง่ายจริงไหม",
-    a: "จริงครับ เราคัดเฉพาะเกม High Performance ที่มีค่า RTP สูงตามมาตรฐานลิขสิทธิ์แท้ เปรียบเหมือนรถเครื่องแรงจากโรงงานโดยไม่ต้องดัดแปลง ทำให้โบนัสแตกง่ายและยุติธรรมครับ",
+    q: "ฝากถอนออโต้ GOAT888 ใช้งานอย่างไร",
+    a: "ฝากถอนออโต้ช่วยให้สมาชิกทำรายการผ่านบัญชีได้โดยตรง พร้อมดูเครดิตและข้อมูลรายการจากระบบเดียว ลดขั้นตอนก่อนกลับเข้าเกม สถานะจริงของแต่ละรายการให้ดูจากหน้าบัญชีของสมาชิกเอง",
   },
   {
-    q: "มีขั้นต่ำในการฝากถอนหรือไม่",
-    a: "เราไม่บังคับขั้นต่ำครับ ท่านสามารถควบคุมจังหวะการเล่นได้อิสระ จะเริ่มยอดเล็กหรือใหญ่ก็ทำได้ทันที ระบบออโต้พร้อมตอบสนองทุกคำสั่งครับ",
+    q: "เข้าสู่ระบบ GOAT888 ผ่านมือถือได้ไหม",
+    a: "ได้ GOAT888 รองรับการเข้าสู่ระบบผ่านมือถือ สมาชิกเปิดสล็อต คาสิโน โปรโมชั่น ฝากถอน และข้อมูลบัญชีจากเบราว์เซอร์ได้ด้วยบัญชีเดิม เมนูหลักออกแบบให้เหมาะกับจอเล็กและใช้งานด้วยมือเดียวได้สะดวก",
   },
   {
-    q: "รองรับ TrueMoney Wallet ไหม?",
-    a: "รองรับครับ PIGAUTO ติดตั้งระบบรองรับ วอเลท เปรียบเสมือนเทคโนโลยีช่วยเหลือที่ทำให้ชีวิตง่ายขึ้น ตัดความยุ่งยาก เติมเครดิตได้ลื่นไหลและปลอดภัยครับ",
+    q: "ทางเข้า GOAT888 เว็บหลัก ควรเข้าจากช่องทางไหน",
+    a: "ทางเข้าเว็บหลักพาเข้าสู่หน้าล็อกอิน ระบบสมาชิก และเกมภายใต้แบรนด์เดียวกัน ช่วยลดความสับสนจากชื่อหรือโดเมนใกล้เคียงบนผลค้นหา เมื่อเข้าผ่านทางหลักแล้วสมาชิกใช้บัญชีเดิมต่อได้ทั้งมือถือและคอม",
   },
 ];
 
@@ -71,137 +67,170 @@ const graph = pageGraph(Astro, {
 <MainLayout title={pageTitle} description={pageDescription}>
   <script type="application/ld+json" set:html={graph} />
 
-  <Announcement3 message={announcement} />
+  <Announcement5 message={announcement} />
 
-  <ContentBoxPremium as="h1" title="PIGAUTO ทางเข้าเว็บตรง สล็อตระบบออโต้ เร็ว นิ่ง ปลอดภัย">
-    <p class="text-left text-base leading-relaxed text-[#f7e2e2]">
-      <strong class="text-[#f5c542]">PIGAUTO</strong> ทางเข้าเว็บตรง สล็อตระบบออโต้เร็ว เสถียร นิ่ง ปลอดภัย ระบบฝากถอนอัตโนมัติ ใช้งานลื่น รองรับทุกอุปกรณ์ เหมาะกับคนที่ต้องการความเร็วและความมั่นใจในการเล่น
-      PIGAUTO ให้บริการแค่เกมสล็อต PGSLOT และค่ายอื่นๆ ทางเข้าเว็บตรง ที่มอบสมรรถนะระดับท็อป ไม่เด้งไม่หลุด โหลดไวมาก การทำธุรกรรมที่เร็ว ไปจนถึงความเสถียรของระบบ ทุกส่วนทำงานประสานกันเหมือนกลไกที่จูนมาดี
-      เหมาะกับผู้เล่นที่ต้องการความเร็วแบบควบคุมได้ ไม่เร่ง ไม่สะดุด และปลอดภัยในทุกขั้นตอน
+  <ContentBox as="h1" title="GOAT888 รวมสล็อต คาสิโน ระบบสมาชิก และฝากถอนออโต้ไว้ในบัญชีเดียว">
+    <div class="flex flex-col gap-4">
+      <p class="text-left text-base leading-relaxed text-[#f7e3f4]">
+        <strong class="text-[#f5c451]">GOAT888</strong> รวมสล็อต คาสิโน โปรโมชั่น และการจัดการเครดิตไว้ในบัญชีเดียว สมาชิกเข้าสู่ระบบแล้วเลือกเกม ดูยอด หรือจัดการบัญชีต่อได้ทันที ทั้งบนมือถือและคอม
+      </p>
+      <p class="text-left text-base leading-relaxed text-[#f7e3f4]">
+        สมาชิกใหม่ยังเช็กสิทธิ์เครดิตฟรีได้จากหน้าโปรโมชั่น พร้อมระบบฝากถอนออโต้ที่ช่วยให้ขั้นตอนสั้นลง คำว่า “ฟรี” น่าสนใจ ส่วนเงื่อนไขก็ต้องอ่านให้ครบ จะได้ไม่เซอร์ไพรส์กันทีหลัง
+      </p>
+    </div>
+  </ContentBox>
+
+  <ContentBoxFloatingBadge as="h2" title="GOAT888 เว็บตรงสล็อตแท้ มีเกมและค่ายให้เลือกแบบไหน">
+    <div class="flex flex-col gap-4">
+      <p class="text-left text-base leading-relaxed text-[#f7e3f4]">
+        GOAT888 จัดสล็อตเป็นหมวดหลัก มีเกมหลายธีมและหลายค่ายให้เลือกจากบัญชีเดียว ทั้งสายมีเกมประจำและสายชอบลองเกมใหม่ก็หาแนวที่ชอบได้ง่าย
+      </p>
+      <p class="text-left text-base leading-relaxed text-[#f7e3f4]">เกมเยอะอย่างเดียวไม่พอ เมนูต้องหาเจอเร็วด้วย เพราะเข้าเว็บมาเล่นสล็อต ไม่ได้มาฝึกเลื่อนหน้าจอแบบมาราธอน</p>
+    </div>
+  </ContentBoxFloatingBadge>
+
+  <ProviderGridPremium />
+
+  <ContentBoxTwoFloatingBadge as="h2" title="สล็อต GOAT888 เลือกเกมง่ายแค่ไหนเมื่อมีหลายสไตล์ให้เล่น">
+    <p slot="left" class="text-left text-base leading-relaxed text-[#f7e3f4]">
+      สล็อต GOAT888 มีทั้งเกมคลาสสิก ฟรีสปิน โบนัส และฟีเจอร์หลายรูปแบบ สมาชิกเลือกตามสไตล์ที่ชอบ หรือเปิดดูเกมใหม่จากหมวดสล็อตได้โดยตรง
     </p>
-  </ContentBoxPremium>
+    <p slot="right" class="text-left text-base leading-relaxed text-[#f7e3f4]">
+      คนมีเกมโปรดก็เข้าเกมเดิมได้ไว ส่วนสายลองของใหม่มีตัวเลือกให้เปลี่ยนเรื่อย ๆ ตัวเลือกเยอะดี แต่อย่าเยอะจนเลือกเกมนานกว่าเล่นเกม
+    </p>
+  </ContentBoxTwoFloatingBadge>
+
+  <GameRankingBoard />
+
+  <ContentBox as="h2" title="คาสิโน GOAT888 เพิ่มทางเลือกอะไรนอกจากเกมสล็อต">
+    <div class="flex flex-col gap-4">
+      <p class="text-left text-base leading-relaxed text-[#f7e3f4]">
+        คาสิโน GOAT888 เพิ่มเกมโต๊ะและเกมสดสำหรับสมาชิกที่อยากเปลี่ยนบรรยากาศจากสล็อต โดยยังใช้บัญชีและเครดิตชุดเดียวกัน
+      </p>
+      <p class="text-left text-base leading-relaxed text-[#f7e3f4]">
+        วันนี้อยากหมุนก็เล่นสล็อต พรุ่งนี้อยากเล่นโต๊ะก็เปลี่ยนหมวดได้เลย ความชอบเปลี่ยนได้ แต่ไม่ต้องให้บัญชีเปลี่ยนตามจนจำรหัสกันไม่ไหว
+      </p>
+    </div>
+  </ContentBox>
+
+  <ContentBoxTwoNeumorphism titleleft="ระบบสมาชิก GOAT888 รวมเครดิต โปรโมชั่น และประวัติรายการไว้ตรงไหน">
+    <p slot="left" class="text-left text-base leading-relaxed text-[#f7e3f4]">
+      ระบบสมาชิก GOAT888 รวมเครดิต โปรโมชั่น และประวัติรายการไว้ในบัญชีเดียว สมาชิกจึงเช็กยอด ดูสิทธิ์ และจัดการข้อมูลได้จากหน้าเดียว
+    </p>
+    <p slot="right" class="text-left text-base leading-relaxed text-[#f7e3f4]">
+      คนที่ใช้หลายเกมหรือหลายโปรจะตามข้อมูลได้ง่ายขึ้น ทุกอย่างควรหาเจอเร็วกว่ากุญแจรถตอนรีบออกจากบ้าน อันนั้นหายทีมีหัวร้อนจริง
+    </p>
+  </ContentBoxTwoNeumorphism>
+
+  <ContentBoxSevenThree titleright="สมาชิกใหม่ GOAT888 สมัครรับเครดิตฟรีต้องดูเงื่อนไขอะไรบ้าง">
+    <Picture
+      slot="left"
+      src={imgFreeCredit}
+      alt={freeCreditAlt}
+      loading="lazy"
+      fetchpriority="low"
+      widths={[200, 400, 600]}
+      sizes="(max-width: 768px) 100vw, 30vw"
+      decoding="async"
+      formats={["avif", "webp"]}
+      fallbackFormat="webp"
+      quality={80}
+      class="mx-auto h-auto w-full rounded-2xl border border-[#f5c451]/40 shadow-[0_10px_30px_rgba(255,61,219,0.30)]"
+    />
+    <div slot="right" class="flex flex-col gap-4">
+      <p class="text-left text-base leading-relaxed text-[#f7e3f4]">
+        สมาชิกใหม่ GOAT888 สามารถเช็กเครดิตฟรีจากหน้าโปรโมชั่น โดยแต่ละสิทธิ์อาจต่างกันเรื่องเกมที่ร่วม ยอดเริ่มต้น เทิร์น หรือเงื่อนไขถอน
+      </p>
+      <p class="text-left text-base leading-relaxed text-[#f7e3f4]">เครดิตฟรีช่วยให้เริ่มต้นได้เบาขึ้น แต่ควรดูรายละเอียดก่อนกดรับ ตัวหนังสือ “ฟรี” มักใหญ่ ส่วนเงื่อนไขมักตัวเล็กกว่าเสมอ</p>
+    </div>
+  </ContentBoxSevenThree>
+
+  <ContentBoxFloatingBadge as="h2" title="ฝากถอนออโต้ GOAT888 ช่วยให้จัดการเครดิตสะดวกขึ้นอย่างไร">
+    <div class="flex flex-col gap-4">
+      <p class="text-left text-base leading-relaxed text-[#f7e3f4]">
+        ฝากถอนออโต้ GOAT888 ช่วยให้สมาชิกทำรายการผ่านบัญชีได้โดยตรง พร้อมดูเครดิตและข้อมูลรายการจากระบบเดียว ลดขั้นตอนก่อนกลับเข้าเกม
+      </p>
+      <p class="text-left text-base leading-relaxed text-[#f7e3f4]">
+        ระบบออโต้มีหน้าที่ทำเรื่องเงินให้สั้นและตรง ทำรายการเสร็จแล้วไปเล่นต่อได้ ไม่ใช่เปลี่ยนจากรอคนมาเป็นรอวงกลมหมุนบนหน้าจอ
+      </p>
+    </div>
+  </ContentBoxFloatingBadge>
+
+  <LatestWinnersCyber />
+
+  <ContentBoxTwoFloatingBadge as="h2" title="เข้าสู่ระบบ GOAT888 ผ่านมือถือแล้วใช้งานอะไรได้บ้าง">
+    <p slot="left" class="text-left text-base leading-relaxed text-[#f7e3f4]">
+      GOAT888 รองรับการเข้าสู่ระบบผ่านมือถือ สมาชิกเปิดสล็อต คาสิโน โปรโมชั่น ฝากถอน และข้อมูลบัญชีจากเบราว์เซอร์ได้ด้วยบัญชีเดิม
+    </p>
+    <p slot="right" class="text-left text-base leading-relaxed text-[#f7e3f4]">
+      เมนูหลักถูกออกแบบให้เหมาะกับจอเล็ก ใช้งานด้วยมือเดียวได้สะดวก มือถือเล็กพอแล้ว ปุ่มไม่จำเป็นต้องเล็กตามจนต้องเพ่งเหมือนอ่านฉลากยา
+    </p>
+  </ContentBoxTwoFloatingBadge>
+
+  <LoginRtpSection />
+
+  <ContentBox as="h2" title="ทางเข้า GOAT888 เว็บหลัก ควรเข้าจากช่องทางไหน">
+    <div class="flex flex-col gap-4">
+      <p class="text-left text-base leading-relaxed text-[#f7e3f4]">
+        ทางเข้า GOAT888 เว็บหลักพาเข้าสู่หน้าล็อกอิน ระบบสมาชิก และเกมภายใต้แบรนด์เดียวกัน ช่วยลดความสับสนจากชื่อหรือโดเมนใกล้เคียงบนผลค้นหา
+      </p>
+      <p class="text-left text-base leading-relaxed text-[#f7e3f4]">
+        เมื่อเข้าผ่านทางหลัก สมาชิกใช้บัญชีเดิมต่อได้ทั้งมือถือและคอม จำทางเข้าเดียวให้ถูก ง่ายกว่านั่งเดาว่าอันไหนคือ GOAT888 ตัวจริงทุกครั้ง
+      </p>
+    </div>
+  </ContentBox>
+
+  <ContentBoxSevenThree titleright="โปรโมชั่น GOAT888 มีอะไรให้สมาชิกใหม่เลือกนอกจากเครดิตฟรี">
+    <Picture
+      slot="left"
+      src={imgCashback}
+      alt={cashbackAlt}
+      loading="lazy"
+      fetchpriority="low"
+      widths={[200, 400, 600]}
+      sizes="(max-width: 768px) 100vw, 30vw"
+      decoding="async"
+      formats={["avif", "webp"]}
+      fallbackFormat="webp"
+      quality={80}
+      class="mx-auto h-auto w-full rounded-2xl border border-[#f5c451]/40 shadow-[0_10px_30px_rgba(245,196,81,0.26)]"
+    />
+    <div slot="right" class="flex flex-col gap-4">
+      <p class="text-left text-base leading-relaxed text-[#f7e3f4]">
+        โปรโมชั่น GOAT888 มีทั้งสิทธิ์สำหรับสมาชิกใหม่และกิจกรรมตามช่วงเวลา โดยรายละเอียดของแต่ละโปรจะแตกต่างกันตามเกมและเงื่อนไขที่กำหนด
+      </p>
+      <p class="text-left text-base leading-relaxed text-[#f7e3f4]">
+        สมาชิกจึงเลือกโปรให้ตรงกับรูปแบบการเล่นได้ ไม่จำเป็นต้องไล่รับทุกอันที่ตัวเลขใหญ่ เพราะโบนัสเยอะไม่ได้แปลว่าเหมาะกับทุกคนเสมอ
+      </p>
+    </div>
+  </ContentBoxSevenThree>
+
+  <SmoothCarousel />
+
+  <ContentBoxTwoNeumorphism titleleft="GOAT888 เหมาะกับคนที่อยากเล่นสล็อตและคาสิโนแบบไหน">
+    <p slot="left" class="text-left text-base leading-relaxed text-[#f7e3f4]">
+      GOAT888 เหมาะกับคนที่ต้องการสล็อต คาสิโน โปรโมชั่น ฝากถอนออโต้ และการใช้งานผ่านมือถือในบัญชีเดียว โดยไม่อยากจัดการหลายระบบพร้อมกัน
+    </p>
+    <p slot="right" class="text-left text-base leading-relaxed text-[#f7e3f4]">
+      สมาชิกใหม่สามารถเริ่มจากเลือกเกมและเช็กโปรที่สนใจก่อนสมัคร จากนั้นเข้าสู่ระบบ GOAT888 แล้วใช้งานทุกส่วนต่อจากบัญชีเดียว ง่ายกว่า และสมองได้พักเรื่องจำรหัสไปหนึ่งเรื่อง
+    </p>
+  </ContentBoxTwoNeumorphism>
 
   <div class="relative z-10 mx-auto mb-10 flex flex-nowrap justify-center gap-3 px-4 sm:gap-6">
     <a
       href="/register"
-      class="group relative flex flex-1 items-center justify-center rounded-full bg-gradient-to-r from-[#ffe9a8] via-[#f5c542] to-[#a9761a] px-4 py-3 text-sm font-black whitespace-nowrap text-[#1c0403] shadow-[0_10px_30px_rgba(245,197,66,0.30)] transition-all duration-300 hover:-translate-y-1 hover:scale-105 hover:shadow-[0_15px_40px_rgba(245,197,66,0.42)] sm:flex-none sm:px-10 sm:py-3.5 sm:text-base">
-      สมัครสมาชิก PIGAUTO
+      class="group relative flex flex-1 items-center justify-center rounded-full bg-gradient-to-r from-[#ffe6a3] via-[#f5c451] to-[#b07d1c] px-4 py-3 text-sm font-black whitespace-nowrap text-[#0a0208] shadow-[0_10px_30px_rgba(245,196,81,0.30)] transition-all duration-300 hover:-translate-y-1 hover:scale-105 hover:shadow-[0_15px_40px_rgba(245,196,81,0.42)] sm:flex-none sm:px-10 sm:py-3.5 sm:text-base">
+      สมัครสมาชิก GOAT888
     </a>
 
     <a
       href="/login"
-      class="group relative flex flex-1 items-center justify-center rounded-full border border-[#d81f26]/80 bg-[#2e0806]/85 px-4 py-3 text-sm font-black whitespace-nowrap text-[#ffe9a8] backdrop-blur-sm transition-all duration-300 hover:scale-105 hover:border-[#f5c542] hover:bg-[#4a0d0a]/85 hover:shadow-[0_15px_40px_rgba(216,31,38,0.42)] sm:flex-none sm:px-10 sm:py-3.5 sm:text-base">
+      class="group relative flex flex-1 items-center justify-center rounded-full border border-[#ff3ddb]/80 bg-[#1a0414]/85 px-4 py-3 text-sm font-black whitespace-nowrap text-[#ffe6a3] backdrop-blur-sm transition-all duration-300 hover:scale-105 hover:border-[#f5c451] hover:bg-[#2b0722]/85 hover:shadow-[0_15px_40px_rgba(255,61,219,0.42)] sm:flex-none sm:px-10 sm:py-3.5 sm:text-base">
       เข้าสู่ระบบ
     </a>
   </div>
 
-  <ContentBox as="h2" title="PIGAUTO ทางเข้าเว็บตรง ไร้ตัวกลาง สัมผัสเว็บแรงระดับพรีเมียม">
-    <p class="text-left text-base leading-relaxed text-[#f7e2e2]">
-      PIGAUTO เรานิยามคำว่า ทางเข้าเว็บตรง ในแบบฉบับของ Supercar คือการเชื่อมต่อระบบ API ตรงจากค่ายเกมแม่ (Direct Server)
-      เปรียบเสมือนระบบส่งกำลังที่ถ่ายทอดพลังงานจากเครื่องยนต์ลงสู่ล้อได้เต็มร้อยเปอร์เซ็นต์ โดยไม่มีการสูญเสียกำลัง ระหว่างทาง ไร้ตัวกลาง เอนเอเย่นต์หรือนายหน้าออกไป
-      เพื่อให้คุณได้สัมผัสกับมาตรฐานลิขสิทธิ์แท้ที่ “เสถียร” และ “คลีน” ที่สุด ทุกการตอบสนองจึงแม่นยำ ฉับไว มั่นใจได้เลยว่าทุกยอดเงินและทุกการเดิมพันของคุณ อยู่ภายใต้การดูแลของระบบหลัก (Main Server)
-      ที่มีความมั่นคงและปลอดภัยสูงสุด
-    </p>
-  </ContentBox>
-
-  <ProviderGridPremium />
-
-  <ContentBoxSevenThreePremium as="h2" title="สล็อตระบบออโต้ PIGAUTO เร็ว ทะลุขีด ธุรกรรมในเสี้ยววินาที">
-    <Picture
-      slot="left"
-      src={imgAutoSystem}
-      alt={autoSystemAlt}
-      loading="lazy"
-      fetchpriority="low"
-      widths={[200, 400, 600]}
-      sizes="(max-width: 768px) 100vw, 30vw"
-      decoding="async"
-      formats={["avif", "webp"]}
-      fallbackFormat="webp"
-      quality={80}
-      class="mx-auto h-auto w-full rounded-2xl border border-[#f5c542]/40 shadow-[0_10px_30px_rgba(216,31,38,0.30)]"
-    />
-    <p slot="right" class="text-left text-base leading-relaxed text-[#f7e2e2]">
-      หัวใจสำคัญของรถแข่งคือเครื่องยนต์ หัวใจของ PIGAUTO ก็คือระบบธุรกรรมครับ เราภูมิใจนำเสนอ สล็อตระบบออโต้เร็ว ที่ถูกพัฒนาขึ้นมาใหม่ล่าสุด ลืมการแจ้งสลิปที่ต้องรอแอดมินตอบไปได้เลย เพราะที่นี่เราใช้
-      AI ประมวลผลยอดเงินของคุณทันทีที่ทำรายการ ฝากเงินปุ๊บ เครดิตพุ่งเข้ากระเป๋าเกมปั๊บเหมือนกดปุ่ม Turbo Boost ถอนเงินปุ๊บ ยอดเด้งเข้าบัญชีทันที ไม่ต้องรอนานให้เครื่องเย็น
-      ระบบของเราออกแบบมาเพื่อรองรับ High Traffic หรือช่วงเวลาที่มีคนใช้งานพร้อมกันเยอะๆ ได้สบายๆ โดยไม่มีอาการหน่วงหรือค้าง ให้คุณบริหารจัดการกระแสเงินสดได้อย่างอิสระและรวดเร็วที่สุด
-    </p>
-  </ContentBoxSevenThreePremium>
-
-  <LatestWinners4 />
-
-  <ContentBoxNeumorphism as="h2" title="เร่งรอบความรวย PIGAUTO แตกง่าย อัตราจ่ายสูง">
-    <div>
-      <p class="text-left text-base leading-relaxed text-[#f7e2e2]">
-        เร่งรอบความรวย เฉพาะเกม “High Performance” ที่มีค่า RTP (Return to Player) สูงตามมาตรฐานลิขสิทธิ์แท้จากค่ายแม่ PIGAUTO เปรียบเสมือนรถสปอร์ตที่เครื่องแรงมาจากโรงงานโดยไม่ต้องดัดแปลง ทำให้
-        เกมสล็อต แตกง่าย และเข้าสู่รอบโบนัสได้อย่างเป็นธรรมชาติและยุติธรรมที่สุด เราไม่ต้องการให้คุณเสียเวลาวนรถเล่นนานๆ เกมที่เราเลือกมาให้บริการจึงมีความผันผวนที่เหมาะสม บทจะจ่ายก็จ่ายหนัก จ่ายไว
-        เหมือนรอบเครื่องที่พุ่งทะยาน ให้คุณทำกำไรได้ถึงใจในเวลาอันสั้น ใครที่ชอบความสะใจบนพื้นฐานของมาตรฐานสากล มาลองสัมผัสความแรงของโบนัสที่นี่
-      </p>
-      <Picture
-        src={imgHighPayout}
-        alt={highPayoutAlt}
-        loading="lazy"
-        fetchpriority="low"
-        widths={[400, 640, 1024]}
-        sizes="(max-width: 768px) 100vw, 672px"
-        decoding="async"
-        formats={["avif", "webp"]}
-        fallbackFormat="webp"
-        quality={80}
-        class="mx-auto mt-6 h-auto w-full max-w-2xl rounded-2xl border border-[#f5c542]/40 shadow-[0_10px_30px_rgba(216,31,38,0.30)]"
-      />
-    </div>
-  </ContentBoxNeumorphism>
-
-  <GameRankingBoard />
-
-  <LoginRtpSection />
-
-  <ContentBoxTwoPremium as="h2" title="PIGAUTO เว็บสล็อต ที่เหมือนช่วงล่างรถยนต์ดีๆ นิ่ง ปลอดภัย">
-    <p slot="left" class="text-left text-base leading-relaxed text-[#f7e2e2]">
-      ความเร็วที่ปราศจากการควบคุม คือหายนะครับ ที่ PIGAUTO เราให้ความสำคัญกับความปลอดภัยพอๆ กับความเร็ว ระบบ Server ของเราเปรียบเสมือนช่วงล่างที่ถูกเซตมาอย่างดี ให้ความ นิ่ง ปลอดภัย
-      เกาะถนนแน่นหนึบไม่ว่าคุณจะเล่นหนักแค่ไหน
-    </p>
-    <p slot="right" class="text-left text-base leading-relaxed text-[#f7e2e2]">
-      เราใช้เทคโนโลยีเข้ารหัสข้อมูลขั้นสูง เพื่อปกป้องข้อมูลส่วนตัวและบัญชีธนาคารของคุณ เสมือนมีโครงสร้างนิรภัย (Roll Cage) ห่อหุ้มไว้ มั่นใจได้เลยว่าทุกการเชื่อมต่อของคุณจะราบรื่น ไม่มีคำว่าเว็บล่ม
-      หรือเกมเด้งกลางคันให้เสียอารมณ์ เราเตรียมความพร้อมเพื่อให้คุณเหยียบมิดไมล์ (เล่นสล็อตแจ็คพอตแตกสิบล้าน) ได้อย่างสบายใจ
-    </p>
-  </ContentBoxTwoPremium>
-
-  <ContentBoxSevenThreePremium as="h2" title="ไม่บังคับขั้นต่ำ ให้คุณควบคุมจังหวะการเล่นสล็อตได้อิสระ">
-    <Picture
-      slot="left"
-      src={imgNoMinimum}
-      alt={noMinimumAlt}
-      loading="lazy"
-      fetchpriority="low"
-      widths={[200, 400, 600]}
-      sizes="(max-width: 768px) 100vw, 30vw"
-      decoding="async"
-      formats={["avif", "webp"]}
-      fallbackFormat="webp"
-      quality={80}
-      class="mx-auto h-auto w-full rounded-2xl border border-[#f5c542]/40 shadow-[0_10px_30px_rgba(245,197,66,0.26)]"
-    />
-    <p slot="right" class="text-left text-base leading-relaxed text-[#f7e2e2]">
-      PIGAUTO เปิดให้ฝากและถอนแบบไม่บังคับขั้นต่ำ คุณจะเริ่มจากยอดเล็กเพื่อวอร์มระบบ หรือเพิ่มน้ำหนักเมื่อจังหวะเข้ามือก็ทำได้ทันที ทุกการตัดสินใจอยู่ที่คุณ ไม่ต้องเร่ง ไม่ต้องฝืน
-      ระบบออโต้ทำหน้าที่แค่รองรับให้ทุกคำสั่งของคุณทำงานตรงไปตรงมา รวดเร็ว และเสถียร เหมือนการขับรถที่คุณเลือกเกียร์เอง เลือกความเร็วเอง และรู้สึกได้ว่าทุกอย่างอยู่ในการควบคุมตลอดเวลา
-    </p>
-  </ContentBoxSevenThreePremium>
-
-  <ContentBoxSpecial as="h2" title="PIGAUTO รองรับ วอเลท เทคโนโลยีที่ช่วยให้ชีวิตง่ายขึ้น">
-    <p slot="left" class="text-left text-base leading-relaxed text-[#f7e2e2]">
-      รถสปอร์ตที่ดีต้องไม่ได้มีแค่ความแรง แต่ต้องขับง่ายและสะดวกสบายด้วยเทคโนโลยีช่วยเหลือครับ เว็บสล็อตที่ดีก็เช่นกัน PIGAUTO อัปเกรดความลื่นไหล รองรับ วอเลท (TrueMoney Wallet) การมีช่องทางวอเลท
-      มันคือออปชันเสริมระดับพรีเมียมที่ช่วยตัดความยุ่งยากทิ้งไป
-    </p>
-    <p slot="right" class="text-left text-base leading-relaxed text-[#f7e2e2]">
-      ทำให้การเติมเครดิตเป็นเรื่องง่ายและปลอดภัย ไม่ต้องกังวลเรื่องแอปธนาคารล่มหรือปิดปรับปรุง เหมือนมีเทคโนโลยีคอยช่วยประคองให้ทุกการเข้าโค้ง (การทำธุรกรรม) ของคุณ ราบรื่น แม่นยำ และปลอดภัยที่สุด
-    </p>
-  </ContentBoxSpecial>
-
-  <SmoothCarousel />
-
-  <Faq3 title="คำถามที่พบบ่อย (FAQ)" faqs={faqs} />
+  <Faq4 title="คำถามที่พบบ่อยเกี่ยวกับ GOAT888" faqs={faqs} />
 
   <ReviewCardSumo2 />
 

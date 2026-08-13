@@ -1,59 +1,62 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
-import Announcement5 from "../components/Announcement5.astro";
+import AnnouncementCyber from "../components/AnnouncementCyber.astro";
 import ContentBox from "../components/ContentBox.astro";
-import ContentBoxFloatingBadge from "../components/ContentBoxFloatingBadge.astro";
-import ContentBoxTwoFloatingBadge from "../components/ContentBoxTwoFloatingBadge.astro";
-import ContentBoxTwoNeumorphism from "../components/ContentBoxTwoNeumorphism.astro";
-import ContentBoxSevenThree from "../components/ContentBoxSevenThree.astro";
-import ProviderGridPremium from "../components/ProviderGridPremium.astro";
+import ContentBoxPremium from "../components/ContentBoxPremium.astro";
+import ContentBoxCyberCut from "../components/ContentBoxCyberCut.astro";
+import ContentBoxTwoPremium from "../components/ContentBoxTwoPremium.astro";
+import ContentBoxTwoCyberCut from "../components/ContentBoxTwoCyberCut.astro";
+import ContentBoxSpecial from "../components/ContentBoxSpecial.astro";
+import ContentBoxSevenThreePremium from "../components/ContentBoxSevenThreePremium.astro";
+import ContentBoxSevenThreeCyberCut from "../components/ContentBoxSevenThreeCyberCut.astro";
+import ProviderGrid from "../components/ProviderGrid.astro";
 import GameRankingBoard from "../components/GameRankingBoard.astro";
-import LatestWinnersCyber from "../components/LatestWinnersCyber.astro";
+import LatestWinners3 from "../components/LatestWinners3.astro";
 import SmoothCarousel from "../components/SmoothCarousel.astro";
 import LoginRtpSection from "../components/LoginRtpSection.astro";
-import Faq4 from "../components/Faq4.astro";
+import Faq2 from "../components/Faq2.astro";
 import ReviewCardSumo2 from "../components/ReviewCardSumo2.astro";
 import Navfoot from "../components/Navfoot.astro";
 
 import { Picture } from "astro:assets";
 import { pageGraph } from "../lib/schema";
-import imgFreeCredit from "../assets/slide4.png";
-import imgCashback from "../assets/slide1.png";
+import imgBonus from "../assets/slide2.png";
+import imgWallet from "../assets/slide4.png";
 
-const pageTitle = "GOAT888 เข้าสู่ระบบง่าย เว็บตรงสล็อตแท้ สมาชิกใหม่ สมัครรับเครดิตฟรี";
+const pageTitle = "TEMMAX69 เว็บสล็อตมาใหม่ สมัครสมาชิกรับโบนัสง่าย คุ้มตั้งแต่บาทแรก";
 
 const pageDescription =
-  "GOAT888 รวมสล็อต คาสิโน ฝากถอนออโต้ และระบบสมาชิก รองรับมือถือ สมาชิกใหม่สมัครรับเครดิตฟรี พร้อมโปรโมชั่นและทางเข้าเว็บหลัก";
+  "TEMMAX69 รวมสล็อต เกมใหม่ ระบบสมาชิก ฝากถอนผ่าน True Wallet และมือถือ พร้อมโบนัสสมาชิกใหม่ ทางเข้าใช้งานง่าย รองรับการทำรายการตลอด 24 ชั่วโมง";
 
 const announcement =
-  "GOAT888 รวมสล็อต คาสิโน ระบบสมาชิก และฝากถอนออโต้ไว้ในบัญชีเดียว • เว็บตรงสล็อตแท้ มีเกมหลายธีมและหลายค่ายให้เลือกจากบัญชีเดียว เมนูหาเจอเร็ว • คาสิโนเพิ่มเกมโต๊ะและเกมสดโดยใช้เครดิตชุดเดียวกับสล็อต • สมาชิกใหม่เช็กสิทธิ์เครดิตฟรีได้จากหน้าโปรโมชั่น อ่านเงื่อนไขเกมที่ร่วม เทิร์น และการถอนให้ครบก่อนกดรับ • ฝากถอนออโต้ทำรายการผ่านบัญชีได้โดยตรง ลดขั้นตอนก่อนกลับเข้าเกม • เข้าสู่ระบบผ่านมือถือด้วยบัญชีเดิม เปิดสล็อต คาสิโน โปรโมชั่น และข้อมูลบัญชีได้จากเบราว์เซอร์";
+  "TEMMAX69 รวมสล็อต เกมใหม่ โบนัสสมาชิก และระบบวอเลทไว้ในบัญชีเดียว • เว็บสล็อตมาใหม่ มีทั้งเกมคลาสสิก เกมฟีเจอร์ และเกมใหม่ เลือกได้จากหมวดเดียวผ่านมือถือ • โบนัสสมาชิกใหม่เพิ่มสิทธิ์เริ่มต้นตามโปรโมชั่นที่เปิดอยู่ ตรวจเงื่อนไขก่อนเลือกรับได้ • True Wallet ช่วยให้จัดการฝากถอนผ่านมือถือ รายการเชื่อมกับบัญชีสมาชิกโดยตรง • ระบบออโต้รับรายการฝากถอนตลอด 24 ชั่วโมง เช็กเครดิตและสถานะได้จากหน้าสมาชิก • ทางเข้าเว็บหลักเชื่อมไปยังล็อกอิน เกม โปรโมชั่น และระบบสมาชิก รองรับทั้งมือถือและคอม";
 
-const freeCreditAlt =
-  "ภาพโปรโมชั่น GOAT888 พื้นหลังสีดำมีเส้นแสงสีชมพูนีออนและแถบสีทอง ด้านบนซ้ายเป็นโลโก้รูปหัวแพะสีทองพร้อมตัวอักษรว่า GOAT888 ถัดลงมาเป็นตัวอักษรขนาดใหญ่ว่า เข้าสู่ระบบง่าย และ เว็บตรงสล็อตแท้ ใต้ลงมาเป็นกรอบเส้นสีชมพูเขียนว่า สมาชิกใหม่ สมัครรับเครดิตฟรี มุมล่างซ้ายเป็นกล่องของขวัญสีดำทอง การ์ดสีดำเขียนว่า VIP ไพ่โพดำ และชิปคาสิโนสีดำทอง ถัดลงมาเป็นแถบไอคอนสามช่องเขียนว่า เล่นผ่านมือถือ ฝากถอนอัตโนมัติ และ ใช้งานง่าย ปิดท้ายด้วยปุ่มขอบสีทองเขียนว่า สมัครสมาชิก ด้านขวาเป็นพรีเซนเตอร์หญิงสวมชุดสายเดี่ยวสีดำ";
+const bonusAlt =
+  "ภาพโปรโมชั่น TEMMAX69 พื้นหลังสีม่วงนีออนมีประกายสีชมพูและเหรียญทองลอยอยู่ ด้านบนเป็นโลโก้มงกุฎพร้อมตัวอักษรว่า TEMMAX69 ถัดลงมาเป็นตัวอักษรขนาดใหญ่ว่า โปรสมาชิกใหม่ ฝากแรก 300 รับโบนัสทันที 100 ใต้ลงมาเป็นแถบเขียนว่า สมัครง่าย เล่นลื่น คุ้มตั้งแต่บาทแรก และแถบว่า เกมสล็อตมาใหม่ ระบบออโต้ เล่นได้ 24 ชม. ต่อด้วยป้ายสามช่องเขียนว่า รวดเร็ว ฝาก-ถอน ไวทันใจ, ปลอดภัย ระบบมาตรฐานระดับสากล และ ไม่มีขั้นต่ำ เล่นได้ทุกจำนวน แถบล่างสุดเขียนว่า รองรับวอลเล็ต พร้อมโลโก้ TrueMoney Wallet และ wallet by SCB ด้านขวาเป็นพรีเซนเตอร์หญิงสวมชุดสีม่วงกำลังแบมือรับเหรียญทอง";
 
-const cashbackAlt =
-  "ภาพโปรโมชั่น GOAT888 พื้นหลังสีดำมีแถบทแยงสีทองและแสงสีชมพูนีออน ด้านบนเป็นตัวอักษรว่า GOAT888 พร้อมป้ายเล็กเขียนว่า เว็บตรงสล็อตแท้ ตรงกลางเป็นตัวอักษรขนาดใหญ่ว่า คืนยอดเสีย สูงสุด 5% คู่กับตราวงกลมสีทองเขียนว่า CASHBACK REBATE ใต้ลงมาเป็นแถบสามบรรทัดเขียนว่า เข้าสู่ระบบง่าย, รับเครดิตคืนทุกสัปดาห์ และ รีบเช็กสิทธิ์ก่อนเล่นรอบถัดไป แถบล่างสุดเป็นไอคอนสามช่องเขียนว่า ระบบปลอดภัยมาตรฐานสากล, บริการตลอด 24 ชั่วโมง และ ถอนเร็ว จ่ายจริง 100% ด้านขวาเป็นพรีเซนเตอร์หญิงสวมแจ็กเก็ตสีดำมันวาว มีตู้สล็อตที่มีคำว่า BIG WIN และกล่องของขวัญสีดำทองวางอยู่ด้านหน้า";
+const walletAlt =
+  "ภาพโปรโมชั่น TEMMAX69 พื้นหลังสีม่วงนีออนมีเหรียญทองกองอยู่ทั้งสองข้าง ด้านบนซ้ายเป็นโลโก้ตัวอักษร T69 พร้อมชื่อ TEMMAX69 ตรงกลางเป็นภาพโทรศัพท์ที่เปิดแอป TrueMoney Wallet และการ์ดสีส้มขาวของทรูมันนี่วอลเล็ต มุมขวาบนเป็นตราโล่เขียนว่า รองรับ TrueMoney Wallet ด้านล่างเป็นตัวอักษรขนาดใหญ่ว่า TEMMAX69 ทรูวอลเล็ตรองรับ ฝากถอนง่าย 24 ชม. แถบล่างสุดเขียนว่า ระบบออโต้ สมัครง่าย และ เล่นได้ต่อเนื่อง ด้านซ้ายเป็นพรีเซนเตอร์หญิงสวมชุดสีม่วงถือการ์ด TEMMAX69";
 
 const faqs = [
   {
-    q: "GOAT888 มีเกมและค่ายอะไรให้เลือกเล่นบ้าง",
-    a: "GOAT888 จัดสล็อตเป็นหมวดหลัก มีเกมหลายธีมและหลายค่ายให้เลือกจากบัญชีเดียว ทั้งเกมคลาสสิก ฟรีสปิน โบนัส และฟีเจอร์หลายรูปแบบ ส่วนหมวดคาสิโนเพิ่มเกมโต๊ะและเกมสดสำหรับสมาชิกที่อยากเปลี่ยนบรรยากาศ โดยยังใช้บัญชีและเครดิตชุดเดียวกัน",
+    q: "TEMMAX69 เว็บสล็อตมาใหม่ มีเกมและหมวดไหนให้เลือกบ้าง",
+    a: "TEMMAX69 มีสล็อตหลายสไตล์ ทั้งเกมคลาสสิก เกมฟีเจอร์ และเกมใหม่ เลือกได้จากหมวดเดียวผ่านมือถือ โดยแยกสล็อตตามรูปแบบเกม ทำให้สายโบนัส ฟรีสปิน หรือคนที่มีเกมประจำเข้าถึงตัวเลือกที่ชอบได้เร็ว อยากเปลี่ยนเกมก็เปลี่ยนได้ทันทีจากบัญชีเดิม",
   },
   {
-    q: "สมาชิกใหม่ GOAT888 สมัครรับเครดิตฟรีต้องดูอะไรบ้าง",
-    a: "สมาชิกใหม่เช็กเครดิตฟรีได้จากหน้าโปรโมชั่น โดยแต่ละสิทธิ์อาจต่างกันเรื่องเกมที่ร่วม ยอดเริ่มต้น เทิร์น หรือเงื่อนไขถอน จึงควรอ่านรายละเอียดของโปรที่สนใจให้ครบก่อนกดรับ",
+    q: "โบนัสสมาชิกใหม่ TEMMAX69 ต้องดูอะไรก่อนเลือกรับ",
+    a: "โบนัสสมาชิกใหม่เพิ่มสิทธิ์เริ่มต้นตามโปรโมชั่นที่เปิดอยู่ โดยสมาชิกตรวจรายละเอียดก่อนเลือกรับได้ แต่ละโปรมีเงื่อนไขต่างกัน จึงควรเลือกให้ตรงกับสไตล์การเล่นของตัวเองมากกว่าไล่รับทุกอย่างที่ตัวเลขใหญ่ที่สุด",
   },
   {
-    q: "ฝากถอนออโต้ GOAT888 ใช้งานอย่างไร",
-    a: "ฝากถอนออโต้ช่วยให้สมาชิกทำรายการผ่านบัญชีได้โดยตรง พร้อมดูเครดิตและข้อมูลรายการจากระบบเดียว ลดขั้นตอนก่อนกลับเข้าเกม สถานะจริงของแต่ละรายการให้ดูจากหน้าบัญชีของสมาชิกเอง",
+    q: "สมัครสมาชิก TEMMAX69 ผ่านมือถือเริ่มต้นกี่ขั้นตอน",
+    a: "การสมัครทำผ่านมือถือได้ กรอกข้อมูล ตั้งค่าบัญชี และยืนยันตามระบบ จากนั้นเข้าสู่หน้าสมาชิกเพื่อเลือกเกมต่อได้เลย ขั้นตอนของ TEMMAX69 เน้นให้จบไว ไม่ต้องสลับไปมาหลายหน้าเพื่อเริ่มต้นใช้งาน",
   },
   {
-    q: "เข้าสู่ระบบ GOAT888 ผ่านมือถือได้ไหม",
-    a: "ได้ GOAT888 รองรับการเข้าสู่ระบบผ่านมือถือ สมาชิกเปิดสล็อต คาสิโน โปรโมชั่น ฝากถอน และข้อมูลบัญชีจากเบราว์เซอร์ได้ด้วยบัญชีเดิม เมนูหลักออกแบบให้เหมาะกับจอเล็กและใช้งานด้วยมือเดียวได้สะดวก",
+    q: "True Wallet และระบบออโต้ของ TEMMAX69 ใช้งานอย่างไร",
+    a: "True Wallet ช่วยให้สมาชิกจัดการฝากถอนผ่านมือถือ เหมาะกับคนที่ใช้วอเลทเป็นช่องทางหลักอยู่แล้ว ส่วนระบบออโต้รับรายการฝากถอนตลอดวัน สมาชิกตรวจเครดิตและสถานะผ่านบัญชีได้โดยไม่ต้องรอการจัดการแบบแมนนวล รายการทั้งหมดเชื่อมกับบัญชี TEMMAX69 โดยตรง",
   },
   {
-    q: "ทางเข้า GOAT888 เว็บหลัก ควรเข้าจากช่องทางไหน",
-    a: "ทางเข้าเว็บหลักพาเข้าสู่หน้าล็อกอิน ระบบสมาชิก และเกมภายใต้แบรนด์เดียวกัน ช่วยลดความสับสนจากชื่อหรือโดเมนใกล้เคียงบนผลค้นหา เมื่อเข้าผ่านทางหลักแล้วสมาชิกใช้บัญชีเดิมต่อได้ทั้งมือถือและคอม",
+    q: "ทางเข้า TEMMAX69 เว็บหลัก ใช้งานผ่านมือถือและคอมได้ไหม",
+    a: "ทางเข้าเว็บหลักเชื่อมไปยังล็อกอิน เกม โปรโมชั่น และระบบสมาชิก รองรับทั้งมือถือและคอมด้วยบัญชีเดียว การใช้ทางเข้าโดยตรงยังช่วยลดความสับสนจากชื่อเว็บที่ใกล้เคียงกันบนผลค้นหา",
   },
 ];
 
@@ -67,66 +70,46 @@ const graph = pageGraph(Astro, {
 <MainLayout title={pageTitle} description={pageDescription}>
   <script type="application/ld+json" set:html={graph} />
 
-  <Announcement5 message={announcement} />
+  <AnnouncementCyber message={announcement} />
 
-  <ContentBox as="h1" title="GOAT888 รวมสล็อต คาสิโน ระบบสมาชิก และฝากถอนออโต้ไว้ในบัญชีเดียว">
+  <ContentBoxPremium as="h1" title="TEMMAX69 รวมสล็อต เกมใหม่ โบนัสสมาชิก และระบบวอเลทไว้ในบัญชีเดียว">
     <div class="flex flex-col gap-4">
-      <p class="text-left text-base leading-relaxed text-[#f7e3f4]">
-        <strong class="text-[#f5c451]">GOAT888</strong> รวมสล็อต คาสิโน โปรโมชั่น และการจัดการเครดิตไว้ในบัญชีเดียว สมาชิกเข้าสู่ระบบแล้วเลือกเกม ดูยอด หรือจัดการบัญชีต่อได้ทันที ทั้งบนมือถือและคอม
+      <p class="text-left text-base leading-relaxed text-[#ece4ff]">
+        <strong class="text-[#22d3ee]">TEMMAX69</strong> รวมสล็อต โบนัส ระบบสมาชิก และการจัดการเครดิตไว้ในบัญชีเดียว รองรับมือถือ ใช้งานต่อเนื่องตั้งแต่สมัครจนถึงเลือกเกม
       </p>
-      <p class="text-left text-base leading-relaxed text-[#f7e3f4]">
-        สมาชิกใหม่ยังเช็กสิทธิ์เครดิตฟรีได้จากหน้าโปรโมชั่น พร้อมระบบฝากถอนออโต้ที่ช่วยให้ขั้นตอนสั้นลง คำว่า “ฟรี” น่าสนใจ ส่วนเงื่อนไขก็ต้องอ่านให้ครบ จะได้ไม่เซอร์ไพรส์กันทีหลัง
+      <p class="text-left text-base leading-relaxed text-[#ece4ff]">
+        True Wallet และระบบออโต้ช่วยให้ฝากถอนสะดวกขึ้น เพราะเงินอาจหาใหม่ได้ แต่เวลาที่เสียกับขั้นตอนเยอะ ๆ นั่นแพงกว่า
       </p>
+    </div>
+  </ContentBoxPremium>
+
+  <ContentBox as="h2" title="TEMMAX69 เว็บสล็อตมาใหม่ มีเกมและหมวดไหนให้เลือกบ้าง">
+    <div class="flex flex-col gap-4">
+      <p class="text-left text-base leading-relaxed text-[#ece4ff]">
+        TEMMAX69 มีสล็อตหลายสไตล์ ทั้งเกมคลาสสิก เกมฟีเจอร์ และเกมใหม่ เลือกได้จากหมวดเดียวผ่านมือถือ
+      </p>
+      <p class="text-left text-base leading-relaxed text-[#ece4ff]">เกมเยอะต้องหาเจอง่ายด้วย ระดับนี้ไม่ควรเสียเวลาเลื่อนหาเกมเหมือนกำลังเลือกสีรถคันที่สาม</p>
     </div>
   </ContentBox>
 
-  <ContentBoxFloatingBadge as="h2" title="GOAT888 เว็บตรงสล็อตแท้ มีเกมและค่ายให้เลือกแบบไหน">
-    <div class="flex flex-col gap-4">
-      <p class="text-left text-base leading-relaxed text-[#f7e3f4]">
-        GOAT888 จัดสล็อตเป็นหมวดหลัก มีเกมหลายธีมและหลายค่ายให้เลือกจากบัญชีเดียว ทั้งสายมีเกมประจำและสายชอบลองเกมใหม่ก็หาแนวที่ชอบได้ง่าย
-      </p>
-      <p class="text-left text-base leading-relaxed text-[#f7e3f4]">เกมเยอะอย่างเดียวไม่พอ เมนูต้องหาเจอเร็วด้วย เพราะเข้าเว็บมาเล่นสล็อต ไม่ได้มาฝึกเลื่อนหน้าจอแบบมาราธอน</p>
-    </div>
-  </ContentBoxFloatingBadge>
+  <ProviderGrid />
 
-  <ProviderGridPremium />
-
-  <ContentBoxTwoFloatingBadge as="h2" title="สล็อต GOAT888 เลือกเกมง่ายแค่ไหนเมื่อมีหลายสไตล์ให้เล่น">
-    <p slot="left" class="text-left text-base leading-relaxed text-[#f7e3f4]">
-      สล็อต GOAT888 มีทั้งเกมคลาสสิก ฟรีสปิน โบนัส และฟีเจอร์หลายรูปแบบ สมาชิกเลือกตามสไตล์ที่ชอบ หรือเปิดดูเกมใหม่จากหมวดสล็อตได้โดยตรง
+  <ContentBoxTwoPremium as="h2" title="สล็อต TEMMAX69 เลือกเกมใหม่และสไตล์ที่ชอบได้ง่ายแค่ไหน">
+    <p slot="left" class="text-left text-base leading-relaxed text-[#ece4ff]">
+      TEMMAX69 แยกสล็อตตามรูปแบบเกม ทำให้สายโบนัส ฟรีสปิน หรือคนมีเกมประจำเข้าถึงตัวเลือกที่ชอบได้เร็ว
     </p>
-    <p slot="right" class="text-left text-base leading-relaxed text-[#f7e3f4]">
-      คนมีเกมโปรดก็เข้าเกมเดิมได้ไว ส่วนสายลองของใหม่มีตัวเลือกให้เปลี่ยนเรื่อย ๆ ตัวเลือกเยอะดี แต่อย่าเยอะจนเลือกเกมนานกว่าเล่นเกม
+    <p slot="right" class="text-left text-base leading-relaxed text-[#ece4ff]">
+      อยากเปลี่ยนเกมก็เปลี่ยนได้ทันที ความหรูจริงไม่ใช่มีตัวเลือกเยอะ แต่คือมีเยอะแล้วไม่ต้องเสียเวลาหา
     </p>
-  </ContentBoxTwoFloatingBadge>
+  </ContentBoxTwoPremium>
 
   <GameRankingBoard />
 
-  <ContentBox as="h2" title="คาสิโน GOAT888 เพิ่มทางเลือกอะไรนอกจากเกมสล็อต">
-    <div class="flex flex-col gap-4">
-      <p class="text-left text-base leading-relaxed text-[#f7e3f4]">
-        คาสิโน GOAT888 เพิ่มเกมโต๊ะและเกมสดสำหรับสมาชิกที่อยากเปลี่ยนบรรยากาศจากสล็อต โดยยังใช้บัญชีและเครดิตชุดเดียวกัน
-      </p>
-      <p class="text-left text-base leading-relaxed text-[#f7e3f4]">
-        วันนี้อยากหมุนก็เล่นสล็อต พรุ่งนี้อยากเล่นโต๊ะก็เปลี่ยนหมวดได้เลย ความชอบเปลี่ยนได้ แต่ไม่ต้องให้บัญชีเปลี่ยนตามจนจำรหัสกันไม่ไหว
-      </p>
-    </div>
-  </ContentBox>
-
-  <ContentBoxTwoNeumorphism titleleft="ระบบสมาชิก GOAT888 รวมเครดิต โปรโมชั่น และประวัติรายการไว้ตรงไหน">
-    <p slot="left" class="text-left text-base leading-relaxed text-[#f7e3f4]">
-      ระบบสมาชิก GOAT888 รวมเครดิต โปรโมชั่น และประวัติรายการไว้ในบัญชีเดียว สมาชิกจึงเช็กยอด ดูสิทธิ์ และจัดการข้อมูลได้จากหน้าเดียว
-    </p>
-    <p slot="right" class="text-left text-base leading-relaxed text-[#f7e3f4]">
-      คนที่ใช้หลายเกมหรือหลายโปรจะตามข้อมูลได้ง่ายขึ้น ทุกอย่างควรหาเจอเร็วกว่ากุญแจรถตอนรีบออกจากบ้าน อันนั้นหายทีมีหัวร้อนจริง
-    </p>
-  </ContentBoxTwoNeumorphism>
-
-  <ContentBoxSevenThree titleright="สมาชิกใหม่ GOAT888 สมัครรับเครดิตฟรีต้องดูเงื่อนไขอะไรบ้าง">
+  <ContentBoxSevenThreePremium titleright="โบนัส TEMMAX69 สำหรับสมาชิกใหม่ คุ้มตั้งแต่เริ่มต้นอย่างไร">
     <Picture
       slot="left"
-      src={imgFreeCredit}
-      alt={freeCreditAlt}
+      src={imgBonus}
+      alt={bonusAlt}
       loading="lazy"
       fetchpriority="low"
       widths={[200, 400, 600]}
@@ -135,102 +118,122 @@ const graph = pageGraph(Astro, {
       formats={["avif", "webp"]}
       fallbackFormat="webp"
       quality={80}
-      class="mx-auto h-auto w-full rounded-2xl border border-[#f5c451]/40 shadow-[0_10px_30px_rgba(255,61,219,0.30)]"
+      class="mx-auto h-auto w-full rounded-2xl border border-[#22d3ee]/40 shadow-[0_10px_30px_rgba(168,85,247,0.30)]"
     />
     <div slot="right" class="flex flex-col gap-4">
-      <p class="text-left text-base leading-relaxed text-[#f7e3f4]">
-        สมาชิกใหม่ GOAT888 สามารถเช็กเครดิตฟรีจากหน้าโปรโมชั่น โดยแต่ละสิทธิ์อาจต่างกันเรื่องเกมที่ร่วม ยอดเริ่มต้น เทิร์น หรือเงื่อนไขถอน
+      <p class="text-left text-base leading-relaxed text-[#ece4ff]">
+        โบนัสสมาชิกใหม่เพิ่มสิทธิ์เริ่มต้นตามโปรโมชั่นที่เปิดอยู่ โดยสมาชิกตรวจรายละเอียดก่อนเลือกรับได้
       </p>
-      <p class="text-left text-base leading-relaxed text-[#f7e3f4]">เครดิตฟรีช่วยให้เริ่มต้นได้เบาขึ้น แต่ควรดูรายละเอียดก่อนกดรับ ตัวหนังสือ “ฟรี” มักใหญ่ ส่วนเงื่อนไขมักตัวเล็กกว่าเสมอ</p>
+      <p class="text-left text-base leading-relaxed text-[#ece4ff]">
+        ใน TEMMAX69 แต่ละโปรมีเงื่อนไขต่างกัน เลือกให้ตรงสไตล์ดีกว่าไล่รับทุกอย่าง คนมีคลาสเลือกของที่คุ้ม ไม่ใช่ของที่ตัวเลขใหญ่ที่สุด
+      </p>
     </div>
-  </ContentBoxSevenThree>
+  </ContentBoxSevenThreePremium>
 
-  <ContentBoxFloatingBadge as="h2" title="ฝากถอนออโต้ GOAT888 ช่วยให้จัดการเครดิตสะดวกขึ้นอย่างไร">
+  <ContentBoxCyberCut as="h2" title="สมัครสมาชิกผ่านมือถือ เริ่มต้นกี่ขั้นตอน">
     <div class="flex flex-col gap-4">
-      <p class="text-left text-base leading-relaxed text-[#f7e3f4]">
-        ฝากถอนออโต้ GOAT888 ช่วยให้สมาชิกทำรายการผ่านบัญชีได้โดยตรง พร้อมดูเครดิตและข้อมูลรายการจากระบบเดียว ลดขั้นตอนก่อนกลับเข้าเกม
+      <p class="text-left text-base leading-relaxed text-[#ece4ff]">
+        การสมัครทำผ่านมือถือได้ กรอกข้อมูล ตั้งค่าบัญชี และยืนยันตามระบบ จากนั้นเข้าสู่หน้าสมาชิกเพื่อเลือกเกมต่อได้เลย
       </p>
-      <p class="text-left text-base leading-relaxed text-[#f7e3f4]">
-        ระบบออโต้มีหน้าที่ทำเรื่องเงินให้สั้นและตรง ทำรายการเสร็จแล้วไปเล่นต่อได้ ไม่ใช่เปลี่ยนจากรอคนมาเป็นรอวงกลมหมุนบนหน้าจอ
+      <p class="text-left text-base leading-relaxed text-[#ece4ff]">
+        ขั้นตอนของ TEMMAX69 เน้นให้จบไว เพราะชีวิตมีเรื่องให้จัดการเยอะพอแล้ว การสมัครเว็บไม่ควรกลายเป็นงานประชุมอีกหนึ่งวาระ
       </p>
     </div>
-  </ContentBoxFloatingBadge>
+  </ContentBoxCyberCut>
 
-  <LatestWinnersCyber />
+  <ContentBoxSevenThreeCyberCut titleright="True Wallet TEMMAX69 ฝากถอนและเติมเครดิตสะดวกแค่ไหน">
+    <Picture
+      slot="left"
+      src={imgWallet}
+      alt={walletAlt}
+      loading="lazy"
+      fetchpriority="low"
+      widths={[200, 400, 600]}
+      sizes="(max-width: 768px) 100vw, 30vw"
+      decoding="async"
+      formats={["avif", "webp"]}
+      fallbackFormat="webp"
+      quality={80}
+      class="mx-auto h-auto w-full border border-[#22d3ee]/40 shadow-[0_10px_30px_rgba(34,211,238,0.26)]"
+    />
+    <div slot="right" class="flex flex-col gap-4">
+      <p class="text-left text-base leading-relaxed text-[#ece4ff]">
+        True Wallet ช่วยให้สมาชิกจัดการฝากถอนผ่านมือถือ เหมาะกับคนที่ใช้วอเลทเป็นช่องทางหลักอยู่แล้ว
+      </p>
+      <p class="text-left text-base leading-relaxed text-[#ece4ff]">
+        รายการเชื่อมกับบัญชี TEMMAX69 ทำให้ดูเครดิตและกลับเข้าเกมต่อได้จากระบบเดียว เงินเดินเร็ว เจ้าของเงินก็ควรเดินน้อย
+      </p>
+    </div>
+  </ContentBoxSevenThreeCyberCut>
 
-  <ContentBoxTwoFloatingBadge as="h2" title="เข้าสู่ระบบ GOAT888 ผ่านมือถือแล้วใช้งานอะไรได้บ้าง">
-    <p slot="left" class="text-left text-base leading-relaxed text-[#f7e3f4]">
-      GOAT888 รองรับการเข้าสู่ระบบผ่านมือถือ สมาชิกเปิดสล็อต คาสิโน โปรโมชั่น ฝากถอน และข้อมูลบัญชีจากเบราว์เซอร์ได้ด้วยบัญชีเดิม
+  <ContentBoxTwoCyberCut as="h2" title="ระบบออโต้ช่วยจัดการฝากถอนได้ตลอด 24 ชั่วโมงอย่างไร">
+    <p slot="left" class="text-left text-base leading-relaxed text-[#ece4ff]">
+      ระบบออโต้ช่วยรับรายการฝากถอนตลอดวัน สมาชิกตรวจเครดิตและสถานะผ่านบัญชีได้โดยไม่ต้องรอการจัดการแบบแมนนวล
     </p>
-    <p slot="right" class="text-left text-base leading-relaxed text-[#f7e3f4]">
-      เมนูหลักถูกออกแบบให้เหมาะกับจอเล็ก ใช้งานด้วยมือเดียวได้สะดวก มือถือเล็กพอแล้ว ปุ่มไม่จำเป็นต้องเล็กตามจนต้องเพ่งเหมือนอ่านฉลากยา
+    <p slot="right" class="text-left text-base leading-relaxed text-[#ece4ff]">
+      TEMMAX69 เชื่อมระบบการเงินกับหน้าสมาชิกโดยตรง ออโต้ที่ดีต้องช่วยประหยัดเวลา เพราะคนรวยชอบอะไรเร็ว ๆ ยกเว้นวันหยุด
     </p>
-  </ContentBoxTwoFloatingBadge>
+  </ContentBoxTwoCyberCut>
+
+  <LatestWinners3 />
+
+  <ContentBox as="h2" title="ระบบสมาชิก TEMMAX69 รวมเครดิต โบนัส และประวัติรายการไว้ตรงไหน">
+    <div class="flex flex-col gap-4">
+      <p class="text-left text-base leading-relaxed text-[#ece4ff]">
+        หน้าสมาชิกรวมเครดิต โบนัส และประวัติรายการไว้ในจุดเดียว ทำให้เช็กข้อมูลสำคัญได้โดยไม่ต้องเปิดหลายหน้า
+      </p>
+      <p class="text-left text-base leading-relaxed text-[#ece4ff]">ระบบ TEMMAX69 จึงเหมาะกับคนที่ใช้หลายเกมหรือหลายโปรโมชั่น ของสำคัญควรอยู่เป็นที่ เงินก็เหมือนกัน</p>
+    </div>
+  </ContentBox>
+
+  <ContentBoxTwoPremium as="h2" title="เข้าสู่ระบบผ่านมือถือแล้วใช้งานอะไรได้บ้าง">
+    <p slot="left" class="text-left text-base leading-relaxed text-[#ece4ff]">
+      หลังเข้าสู่ระบบ สมาชิกเลือกสล็อต ดูเครดิต เช็กโบนัส และจัดการบัญชีผ่านมือถือได้ด้วยยูสเดิม
+    </p>
+    <p slot="right" class="text-left text-base leading-relaxed text-[#ece4ff]">
+      TEMMAX69 วางเมนูหลักให้เหมาะกับจอมือถือ เปิดแล้วใช้งานต่อได้ทันที ความสะดวกที่ดีคือไม่ต้องใช้สองมือกับเรื่องที่มือเดียวควรจบ
+    </p>
+  </ContentBoxTwoPremium>
 
   <LoginRtpSection />
 
-  <ContentBox as="h2" title="ทางเข้า GOAT888 เว็บหลัก ควรเข้าจากช่องทางไหน">
+  <ContentBoxPremium as="h2" title="ทางเข้า TEMMAX69 เว็บหลัก ใช้งานผ่านมือถือและคอมอย่างไร">
     <div class="flex flex-col gap-4">
-      <p class="text-left text-base leading-relaxed text-[#f7e3f4]">
-        ทางเข้า GOAT888 เว็บหลักพาเข้าสู่หน้าล็อกอิน ระบบสมาชิก และเกมภายใต้แบรนด์เดียวกัน ช่วยลดความสับสนจากชื่อหรือโดเมนใกล้เคียงบนผลค้นหา
+      <p class="text-left text-base leading-relaxed text-[#ece4ff]">
+        ทางเข้าเว็บหลักเชื่อมไปยังล็อกอิน เกม โปรโมชั่น และระบบสมาชิก รองรับทั้งมือถือและคอมด้วยบัญชีเดียว
       </p>
-      <p class="text-left text-base leading-relaxed text-[#f7e3f4]">
-        เมื่อเข้าผ่านทางหลัก สมาชิกใช้บัญชีเดิมต่อได้ทั้งมือถือและคอม จำทางเข้าเดียวให้ถูก ง่ายกว่านั่งเดาว่าอันไหนคือ GOAT888 ตัวจริงทุกครั้ง
+      <p class="text-left text-base leading-relaxed text-[#ece4ff]">
+        การใช้ทางเข้า TEMMAX69 โดยตรงช่วยลดความสับสนจากชื่อเว็บใกล้เคียง เพราะเสียเงินยังพอเข้าใจ แต่เสียเวลาเข้าผิดเว็บนี่ไม่ค่อยสง่างาม
       </p>
     </div>
-  </ContentBox>
+  </ContentBoxPremium>
 
-  <ContentBoxSevenThree titleright="โปรโมชั่น GOAT888 มีอะไรให้สมาชิกใหม่เลือกนอกจากเครดิตฟรี">
-    <Picture
-      slot="left"
-      src={imgCashback}
-      alt={cashbackAlt}
-      loading="lazy"
-      fetchpriority="low"
-      widths={[200, 400, 600]}
-      sizes="(max-width: 768px) 100vw, 30vw"
-      decoding="async"
-      formats={["avif", "webp"]}
-      fallbackFormat="webp"
-      quality={80}
-      class="mx-auto h-auto w-full rounded-2xl border border-[#f5c451]/40 shadow-[0_10px_30px_rgba(245,196,81,0.26)]"
-    />
-    <div slot="right" class="flex flex-col gap-4">
-      <p class="text-left text-base leading-relaxed text-[#f7e3f4]">
-        โปรโมชั่น GOAT888 มีทั้งสิทธิ์สำหรับสมาชิกใหม่และกิจกรรมตามช่วงเวลา โดยรายละเอียดของแต่ละโปรจะแตกต่างกันตามเกมและเงื่อนไขที่กำหนด
-      </p>
-      <p class="text-left text-base leading-relaxed text-[#f7e3f4]">
-        สมาชิกจึงเลือกโปรให้ตรงกับรูปแบบการเล่นได้ ไม่จำเป็นต้องไล่รับทุกอันที่ตัวเลขใหญ่ เพราะโบนัสเยอะไม่ได้แปลว่าเหมาะกับทุกคนเสมอ
-      </p>
-    </div>
-  </ContentBoxSevenThree>
+  <ContentBoxSpecial title="TEMMAX69 เหมาะกับคนที่อยากเล่นสล็อตและจัดการเครดิตผ่าน Wallet แบบไหน">
+    <p slot="left" class="text-left text-base leading-relaxed text-[#ece4ff]">
+      TEMMAX69 เหมาะกับคนที่เล่นสล็อตผ่านมือถือ ใช้ Wallet เป็นประจำ และอยากจัดการเกม โบนัสกับเครดิตจากบัญชีเดียว
+    </p>
+    <p slot="right" class="text-left text-base leading-relaxed text-[#ece4ff]">
+      เลือกเกมที่ชอบ รับโปรที่เหมาะ แล้วจัดการฝากถอนจากมือถือได้เลย หลายเกมมีไว้เลือก หลายบัญชีมีไว้ปวดหัว
+    </p>
+  </ContentBoxSpecial>
 
   <SmoothCarousel />
-
-  <ContentBoxTwoNeumorphism titleleft="GOAT888 เหมาะกับคนที่อยากเล่นสล็อตและคาสิโนแบบไหน">
-    <p slot="left" class="text-left text-base leading-relaxed text-[#f7e3f4]">
-      GOAT888 เหมาะกับคนที่ต้องการสล็อต คาสิโน โปรโมชั่น ฝากถอนออโต้ และการใช้งานผ่านมือถือในบัญชีเดียว โดยไม่อยากจัดการหลายระบบพร้อมกัน
-    </p>
-    <p slot="right" class="text-left text-base leading-relaxed text-[#f7e3f4]">
-      สมาชิกใหม่สามารถเริ่มจากเลือกเกมและเช็กโปรที่สนใจก่อนสมัคร จากนั้นเข้าสู่ระบบ GOAT888 แล้วใช้งานทุกส่วนต่อจากบัญชีเดียว ง่ายกว่า และสมองได้พักเรื่องจำรหัสไปหนึ่งเรื่อง
-    </p>
-  </ContentBoxTwoNeumorphism>
 
   <div class="relative z-10 mx-auto mb-10 flex flex-nowrap justify-center gap-3 px-4 sm:gap-6">
     <a
       href="/register"
-      class="group relative flex flex-1 items-center justify-center rounded-full bg-gradient-to-r from-[#ffe6a3] via-[#f5c451] to-[#b07d1c] px-4 py-3 text-sm font-black whitespace-nowrap text-[#0a0208] shadow-[0_10px_30px_rgba(245,196,81,0.30)] transition-all duration-300 hover:-translate-y-1 hover:scale-105 hover:shadow-[0_15px_40px_rgba(245,196,81,0.42)] sm:flex-none sm:px-10 sm:py-3.5 sm:text-base">
-      สมัครสมาชิก GOAT888
+      class="group relative flex flex-1 items-center justify-center rounded-full bg-gradient-to-r from-[#67e8f9] via-[#22d3ee] to-[#0e7490] px-4 py-3 text-sm font-black whitespace-nowrap text-[#070218] shadow-[0_10px_30px_rgba(34,211,238,0.30)] transition-all duration-300 hover:-translate-y-1 hover:scale-105 hover:shadow-[0_15px_40px_rgba(34,211,238,0.42)] sm:flex-none sm:px-10 sm:py-3.5 sm:text-base">
+      สมัครสมาชิก TEMMAX69
     </a>
 
     <a
       href="/login"
-      class="group relative flex flex-1 items-center justify-center rounded-full border border-[#ff3ddb]/80 bg-[#1a0414]/85 px-4 py-3 text-sm font-black whitespace-nowrap text-[#ffe6a3] backdrop-blur-sm transition-all duration-300 hover:scale-105 hover:border-[#f5c451] hover:bg-[#2b0722]/85 hover:shadow-[0_15px_40px_rgba(255,61,219,0.42)] sm:flex-none sm:px-10 sm:py-3.5 sm:text-base">
+      class="group relative flex flex-1 items-center justify-center rounded-full border border-[#a855f7]/80 bg-[#160735]/85 px-4 py-3 text-sm font-black whitespace-nowrap text-[#67e8f9] backdrop-blur-sm transition-all duration-300 hover:scale-105 hover:border-[#22d3ee] hover:bg-[#2b0a5e]/85 hover:shadow-[0_15px_40px_rgba(168,85,247,0.42)] sm:flex-none sm:px-10 sm:py-3.5 sm:text-base">
       เข้าสู่ระบบ
     </a>
   </div>
 
-  <Faq4 title="คำถามที่พบบ่อยเกี่ยวกับ GOAT888" faqs={faqs} />
+  <Faq2 title="คำถามที่พบบ่อยเกี่ยวกับ TEMMAX69" faqs={faqs} />
 
   <ReviewCardSumo2 />
 

@@ -1,21 +1,21 @@
 ---
 const providers = [
-  { name: "สล็อต", desc: "หลายธีมทั้งสายเล่นง่าย เกมโบนัส และเกมที่มีฟรีสปินหรือตัวคูณ เลือกจากหมวดสล็อตได้ตรง ๆ", tag: "หมวดหลัก", icon: "🎰" },
+  { name: "สล็อต", desc: "หลายสไตล์ทั้งเกมคลาสสิก เกมฟีเจอร์ และเกมโบนัส เลือกจากหมวดสล็อตได้ตรง ๆ", tag: "หมวดหลัก", icon: "🎰" },
+  { name: "เกมใหม่", desc: "รวมเกมสล็อตที่เพิ่งเปิดให้เล่น สายลองของใหม่เปลี่ยนเกมได้ทันทีจากบัญชีเดิม", tag: "มาใหม่", icon: "✨" },
   { name: "คาสิโนสด", desc: "รวมเกมโต๊ะไว้ในหมวดคาสิโนสด เลือกประเภทเกมและโต๊ะที่ต้องการได้จากหน้าเดียว", tag: "หมวดหลัก", icon: "🎲" },
-  { name: "บาคาร่า", desc: "เมนูแยกชัดสำหรับคนที่เล่นบาคาร่าเป็นหลัก เข้าถึงโต๊ะได้เร็วโดยไม่ต้องไถผ่านสล็อต", tag: "เข้าถึงไว", icon: "🎴" },
-  { name: "บอล", desc: "ตามการแข่งขันกีฬาและเลือกตลาดที่สนใจได้ ยังอยู่ในระบบสมาชิกเดิมเหมือนหมวดอื่น", tag: "เพิ่มตัวเลือก", icon: "⚽" },
-  { name: "หวย", desc: "เปิดหมวดหวยลุ้นตัวเลขได้จากบัญชีเดียวกับสล็อตและคาสิโน ไม่ต้องแยกบัญชีตามเกม", tag: "เพิ่มตัวเลือก", icon: "🎫" },
+  { name: "โบนัสสมาชิกใหม่", desc: "เช็กสิทธิ์เริ่มต้นตามโปรโมชั่นที่เปิดอยู่ อ่านเงื่อนไขของแต่ละโปรก่อนเลือกรับได้", tag: "เริ่มต้นคุ้ม", icon: "🎁" },
+  { name: "True Wallet", desc: "จัดการฝากถอนผ่านวอเลทบนมือถือ รายการเชื่อมกับบัญชีสมาชิกให้ดูเครดิตได้จากที่เดียว", tag: "ช่องทางหลัก", icon: "👛" },
+  { name: "ระบบออโต้", desc: "รับรายการฝากถอนตลอดวัน ตรวจเครดิตและสถานะผ่านบัญชีได้โดยไม่ต้องรอแบบแมนนวล", tag: "24 ชั่วโมง", icon: "🔁" },
   { name: "เล่นผ่านมือถือ", desc: "เข้าสู่ระบบ เลือกเกม และจัดการหน้าสมาชิกผ่านเบราว์เซอร์มือถือได้โดยไม่ต้องพึ่งคอม", tag: "ทุกอุปกรณ์", icon: "📱" },
-  { name: "ฝากถอนออโต้", desc: "จัดการเครดิตจากหน้าบัญชีเป็นขั้นตอนตรงไปตรงมา ดูยอดและรายการที่เกี่ยวข้องได้จุดเดียว", tag: "ลดเวลารอ", icon: "🔁" },
 ];
 ---
 
-<section aria-label="หมวดเกมและบริการที่ KOH888 รวมไว้ในบัญชีเดียว" class="relative z-10 mx-auto mb-10 w-full max-w-[1400px] px-4 font-sans">
+<section aria-label="หมวดเกมและบริการที่ TEMMAX69 รวมไว้ในบัญชีเดียว" class="relative z-10 mx-auto mb-10 w-full max-w-[1400px] px-4 font-sans">
   <div class="mb-8 flex w-full flex-col items-center justify-center gap-2 text-center">
-    <p class="bg-gradient-to-r from-[#ffe9a3] via-[#f5c542] to-[#c77dff] bg-clip-text text-3xl font-black tracking-widest text-transparent uppercase">
-      หมวดเกมและบริการที่ <span class="text-[#f5c542]">KOH888</span> รวมไว้ในบัญชีเดียว
+    <p class="bg-gradient-to-r from-[#67e8f9] via-[#22d3ee] to-[#c084fc] bg-clip-text text-3xl font-black tracking-widest text-transparent uppercase">
+      หมวดเกมและบริการที่ <span class="text-[#22d3ee]">TEMMAX69</span> รวมไว้ในบัญชีเดียว
     </p>
-    <div class="mt-2 h-[4px] w-24 rounded-full bg-gradient-to-r from-transparent via-[#8b36d9] to-transparent"></div>
+    <div class="mt-2 h-[4px] w-24 rounded-full bg-gradient-to-r from-transparent via-[#a855f7] to-transparent"></div>
   </div>
 
   <div class="grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-4 lg:gap-5 xl:grid-cols-7">
@@ -23,20 +23,20 @@ const providers = [
       providers.map((provider) => (
         <a
           href="/register"
-          class="group relative flex flex-col items-center justify-center overflow-hidden rounded-2xl border border-[#8b36d9]/35 bg-[#1a0a2e]/92 p-5 shadow-[0_10px_30px_rgba(12,4,22,0.6)] backdrop-blur-md transition-all duration-300 hover:-translate-y-2 hover:border-[#f5c542]/55 hover:bg-[#2a1147]/95 hover:shadow-[0_15px_40px_rgba(139,54,217,0.38)]">
-          <div class="pointer-events-none absolute inset-0 bg-[#3b0a63]/45 opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
+          class="group relative flex flex-col items-center justify-center overflow-hidden rounded-2xl border border-[#a855f7]/35 bg-[#160735]/92 p-5 shadow-[0_10px_30px_rgba(7,2,24,0.6)] backdrop-blur-md transition-all duration-300 hover:-translate-y-2 hover:border-[#22d3ee]/55 hover:bg-[#2b0a5e]/95 hover:shadow-[0_15px_40px_rgba(168,85,247,0.38)]">
+          <div class="pointer-events-none absolute inset-0 bg-[#35107a]/45 opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
 
-          <div class="absolute top-2 right-2 z-10 rounded-full bg-gradient-to-r from-[#ffe9a3] via-[#f5c542] to-[#a9761a] px-2 py-0.5 text-[9px] font-black tracking-wide whitespace-nowrap text-[#1a0a2e] shadow-sm transition-transform duration-300 group-hover:scale-110">
+          <div class="absolute top-2 right-2 z-10 rounded-full bg-gradient-to-r from-[#67e8f9] via-[#22d3ee] to-[#0e7490] px-2 py-0.5 text-[9px] font-black tracking-wide whitespace-nowrap text-[#070218] shadow-sm transition-transform duration-300 group-hover:scale-110">
             {provider.tag}
           </div>
 
           <div aria-hidden="true" class="mb-3 text-4xl transition-transform duration-300 group-hover:scale-125 group-hover:rotate-3">
             {provider.icon}
           </div>
-          <p class="text-center text-sm font-black text-[#e9dcf6] transition-colors group-hover:text-[#ffe9a3]">{provider.name}</p>
-          <p class="mt-1 text-center text-[10px] text-[#e9dcf6]/70">{provider.desc}</p>
+          <p class="text-center text-sm font-black text-[#ece4ff] transition-colors group-hover:text-[#67e8f9]">{provider.name}</p>
+          <p class="mt-1 text-center text-[10px] text-[#ece4ff]/70">{provider.desc}</p>
 
-          <span class="relative z-10 mt-4 block w-full rounded-full border border-[#f5c542]/30 bg-[#0c0416] py-1.5 text-center text-[11px] font-bold text-[#f5c542] shadow-inner transition-colors duration-300 group-hover:border-[#f5c542]/60 group-hover:bg-gradient-to-r group-hover:from-[#ffe9a3] group-hover:via-[#f5c542] group-hover:to-[#a9761a] group-hover:text-[#1a0a2e]">
+          <span class="relative z-10 mt-4 block w-full rounded-full border border-[#22d3ee]/30 bg-[#070218] py-1.5 text-center text-[11px] font-bold text-[#22d3ee] shadow-inner transition-colors duration-300 group-hover:border-[#22d3ee]/60 group-hover:bg-gradient-to-r group-hover:from-[#67e8f9] group-hover:via-[#22d3ee] group-hover:to-[#0e7490] group-hover:text-[#070218]">
             เข้าดูหมวดนี้
           </span>
         </a>

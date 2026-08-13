@@ -35,6 +35,10 @@ npx prettier --write .       # จัด format (มี prettier-plugin-astro + 
   มี glob เจาะชื่อตัวที่สองคือ `banner1-mobile.{png,webp,jpg,jpeg}` — รูป hero แนวตั้งสำหรับจอมือถือ (เพิ่ม 2026-08-04) **ตัวนี้เป็น optional** ถ้ามีจะ render เป็น `<source media="(max-width: 767px)">` ใน `<picture>` เดียวกับ banner1 ถ้าไม่มีก็ไม่มี `<source>` เลย มือถือใช้ banner1 ตัวเดียวกับคอม
 
   ที่ต้องระวังคือ optional + ค้างบนดิสก์ = ช่องทางรั่วข้ามแบรนด์ที่คลาสสิกที่สุดของโค้ดเบสนี้ เพราะไม่มีใครเปิดดู viewport มือถือตอนตรวจงาน ตัวกันคือ **uploader จะลบ `banner1-mobile.*` ทิ้งอัตโนมัติทุกครั้งที่อัพ banner1 ใหม่โดยไม่ได้ใส่ตัวมือถือมาด้วย** — อายุของไฟล์มือถือผูกกับไฟล์เดสก์ท็อป ห้ามแก้ให้ไฟล์นี้อยู่รอดข้ามแบรนด์ได้เอง
+
+  glob เจาะชื่อตัวที่สามคือพื้นหลัง `bg.{png,webp,jpg,jpeg}` (เปลี่ยนจาก `import Bg from "../assets/bg.png"` เมื่อ 2026-08-13) โหมดมาจาก `src/assets/bg.json` ที่ uploader เขียน: `image` = render `<Image>` จากไฟล์, `color`/`gradient` = เป็น CSS ล้วน 0 ไบต์ ปัญหาของ static import คือมันเป็น emit เสมอ — PIGAUTO เป็นแบรนด์แรกที่เลือกโหมด `color` แล้ว `bg.png` ของ ANDAMAN168 (616 kB) ก็ยังขึ้น `dist/_astro/` ทั้งที่ไม่มีหน้าไหนอ้างถึง จน `verify-build.mjs` ตีตกทั้ง build
+
+  กติกาที่ตามมา: **โหมด `color`/`gradient` ต้องไม่มีไฟล์ `bg.*` ค้างใน `src/assets`** (ลบทิ้งตอนสเตจ asset) และถ้า `bg.json` เป็นโหมด `image` แต่ไม่มีไฟล์ MainLayout จะ throw ให้ build ล้มพร้อมข้อความ เหมือน banner1 — ตอนนี้ uploader ยังเก็บ `bg.png` ไว้บนดิสก์เสมอ ถ้าจะให้ครบวงจรต้องแก้ให้มันลบไฟล์ตอนผู้ใช้เลือกสี/เกรเดียนต์ด้วย
 - `src/assets/` มีไฟล์ที่ตายแล้วจากการรีแบรนด์ครั้งก่อนๆ ค้างอยู่โดยตั้งใจ (ไฟล์ `.png` เดิมของ banner/slide ที่ไม่มีโค้ดไหน import แล้ว) — อย่าคิดว่าทุกไฟล์ในโฟลเดอร์นี้ถูกใช้งานอยู่ ให้ grep หาการ import จริงก่อนตัดสินว่าไฟล์นั้นใช้งานอยู่หรือลบได้อย่างปลอดภัย
 - ไม่มี `src/content/` collections — เนื้อหาทั้งหมด hardcode อยู่ในแต่ละหน้า/component ไม่ได้มาจาก markdown/CMS
 - `astro.config.mjs`: build แบบ static, ตั้ง `inlineStylesheets: 'always'`, มี redirect `/line` ไปยัง tinyurl ภายนอก, เปิดใช้ sitemap integration, และมี `site:` เป็น URL ที่จะถูกอัปเดตทุกครั้งที่เปิดตัวแบรนด์ใหม่

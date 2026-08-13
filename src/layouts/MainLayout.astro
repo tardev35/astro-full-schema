@@ -1,13 +1,12 @@
 ---
 import { Image, getImage } from "astro:assets";
-import Bg from "../assets/bg.png";
 import bgConfig from "../assets/bg.json";
 import ogImage from "../assets/slide1.png";
 import "../styles/global.css";
 import { BRAND_NAME, BRAND_TEXT, brandProfile, fontStack, iconVersion, usesGoogleFonts } from "../lib/brandProfile";
 import { canonicalFor } from "../lib/schema";
-import Navbar from "../components/NavbarStyle8.astro";
-import Footer from "../components/FooterCyber.astro";
+import Navbar from "../components/NavbarStyle10.astro";
+import Footer from "../components/FooterPremium.astro";
 
 // Only banner1 is ever rendered, so only banner1 is imported.
 //
@@ -56,8 +55,8 @@ const mobileBannerImg = mobileBanner
   : null;
 
 const {
-  title = "ANDAMAN168 ทางเข้าหลัก บาคาร่า สล็อต ฟุตบอล ระบบออโต้ 24 ชม.",
-  description = "ANDAMAN168 รวมคาสิโน เกมใหม่ปี 2026 พร้อมระบบสมาชิก สมัครง่าย ฝากถอนอัตโนมัติ ใช้งานผ่านมือถือได้สะดวก พร้อมทางเข้าสำหรับสมาชิกตลอดวัน รวมบาคาร่า สล็อต ฟุตบอล",
+  title = "PIGAUTO ทางเข้าเว็บตรง สล็อตระบบออโต้ เร็ว นิ่ง ปลอดภัย",
+  description = "PIGAUTO ทางเข้าเว็บตรง สัมผัสเว็บแรงระดับพรีเมียม ปลอดภัย สล็อตระบบออโต้เร็ว ธุรกรรมในเสี้ยววินาที อัตราจ่ายสูง ไม่บังคับขั้นต่ำ รองรับ วอเลท",
   robots = "index, follow",
 } = Astro.props;
 
@@ -94,6 +93,14 @@ const ImageOg = ogRendered.src;
 // which fails the build with "Expected ) but found $$render".)
 const bgMode = (bgConfig as { mode?: string }).mode ?? "image";
 const bgCss = bgMode === "color" ? `background-color:${(bgConfig as { color?: string }).color};` : bgMode === "gradient" ? `background-image:${(bgConfig as { css?: string }).css};` : null;
+
+const bgImages = import.meta.glob<{ default: ImageMetadata }>("../assets/bg.{png,webp,jpg,jpeg}", { eager: true });
+const bgPaths = Object.keys(bgImages);
+const bgPath = bgPaths.find((path) => path.endsWith(".webp")) ?? bgPaths[0];
+if (!bgCss && !bgPath) {
+  throw new Error('MainLayout: bg.json asks for mode "image" but there is no src/assets/bg.{png,webp,jpg,jpeg}. Upload a background image, or switch the uploader\'s background card to a colour/gradient.');
+}
+const bgImage = bgPath ? bgImages[bgPath].default : null;
 
 // canonicalFor() is the same function every JSON-LD URL goes through, so the
 // canonical and the structured data cannot drift apart (see src/lib/schema.ts).
@@ -164,7 +171,7 @@ const profile = brandProfile(Astro.site);
 
           {block === "appmeta" && (
             <Fragment>
-              {profile.showAppTitle && <meta name="apple-mobile-web-app-title" content="andaman168" />}
+              {profile.showAppTitle && <meta name="apple-mobile-web-app-title" content="pigauto" />}
               <link rel="manifest" href="/site.webmanifest" />
             </Fragment>
           )}
@@ -206,7 +213,7 @@ const profile = brandProfile(Astro.site);
         background-attachment: fixed;
         background-repeat: no-repeat;
         margin: 0;
-        background-color: #04182f;
+        background-color: #470700;
         font-weight: 400;
         font-family: var(--font-sans) !important;
       }
@@ -215,11 +222,11 @@ const profile = brandProfile(Astro.site);
 
   <body class="relative flex min-h-screen w-full flex-col">
     {
-      bgCss ? (
+      bgCss || !bgImage ? (
         <div class="fixed inset-0 -z-50 h-full w-full bg-cover bg-center" style={bgCss} />
       ) : (
         <Image
-          src={Bg}
+          src={bgImage}
           alt=""
           loading="lazy"
           fetchpriority="low"
@@ -259,7 +266,7 @@ const profile = brandProfile(Astro.site);
         }
         <Image
           src={mainBanner}
-          alt="แบนเนอร์ ANDAMAN168 เป็นภาพหาดทะเลอันดามันน้ำสีฟ้าเทอร์ควอยซ์ มีต้นมะพร้าวสองข้างและพระอาทิตย์ทอแสงกลางภาพ ตรงกลางด้านบนเป็นโลโก้ ANDAMAN168 ตัวอักษรฟ้าน้ำทะเลบนดวงอาทิตย์สีทองมีคลื่นขาวขนาบ ถัดลงมาเป็นข้อความตัวใหญ่ว่า ANDAMAN168 ทางเข้าหลัก ในแถบน้ำเงินเขียนว่า บาคาร่า สล็อต ฟุตบอล ระบบออโต้ 24 ชม. พร้อมไอคอนไพ่และลูกฟุตบอล บรรทัดถัดมาว่า คาสิโนครบ สมัครสมาชิกง่าย เล่นผ่านมือถือ พร้อมไอคอนชิปคาสิโนและโทรศัพท์ ด้านขวาเป็นพรีเซนเตอร์หญิงชุดน้ำเงินถือไพ่โพแดงและโพดำ มีวงล้อรูเล็ตทอง ตู้สล็อตเลข 777 กองชิปคาสิโนและเหรียญทอง มุมขวาล่างเป็นปุ่มทองเขียนว่า เข้าเล่นได้ทุกวัน"
+          alt="แบนเนอร์ PIGAUTO เป็นภาพม่านผ้าไหมสีแดงเข้ม มีมังกรทองพันเสาอยู่ทั้งสองข้าง โคมไฟจีนสีแดงและเหรียญจีนทองลอยอยู่รอบภาพ ด้านซ้ายเป็นพรีเซนเตอร์หญิงชุดกี่เพ้าแดงปักลายทอง ทำมือเป็นรูปหัวใจ ข้าง ๆ มีไพ่โพดำและไพ่โพแดง ตรงกลางเป็นตัวอักษรทองขนาดใหญ่ว่า PIGAUTO ถัดลงมาเป็นข้อความสีขาวสองบรรทัดว่า สัมผัสเว็บแรงระดับพรีเมียม และ สล็อตระบบออโต้"
           loading="eager"
           fetchpriority="high"
           widths={[412, 640, 828, 1024, 1280, 1600, 1900]}

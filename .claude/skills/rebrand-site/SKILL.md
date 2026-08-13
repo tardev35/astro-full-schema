@@ -247,6 +247,20 @@ progress in the normal way — there is no separate channel to write to.
      of through the uploader, **you own that deletion** — check
      `src/assets/banner1-mobile.*` against this drop's mtime and remove it
      if it is older, exactly as you would a stale `banner3`.
+   - **`bg.*` follows `bg.json`, and colour/gradient mode means no `bg`
+     file may stay on disk.** The uploader writes `{"mode":"image"}`,
+     `{"mode":"color","color":"#rrggbb"}` or
+     `{"mode":"gradient","css":"…"}`; `MainLayout` renders an `<Image>`
+     only in image mode and a CSS-only layer otherwise. Its glob is pinned
+     to `bg.{png,webp,jpg,jpeg}` for the banner1 reason — a matched file is
+     imported, and an imported image is *emitted* whether or not anything
+     renders it. So a colour-mode brand that leaves the previous brand's
+     `bg.png` in `src/assets` ships it into `dist/_astro` unreferenced and
+     `verify-build.mjs` fails the whole build (PIGAUTO, 2026-08-13: 616 kB
+     of ANDAMAN168's ocean art). **Delete `src/assets/bg.*` whenever the
+     brief picks a colour or a gradient** — the uploader still keeps the
+     file, so this one is yours. Image mode with no file throws with a
+     message rather than falling back.
 3. Confirm the new brand name and check `astro.config.mjs` `site:` —
    it's often already been updated to the new domain before you're
    asked to do the content work.

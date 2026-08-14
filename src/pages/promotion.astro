@@ -2,20 +2,19 @@
 import MainLayout from "../layouts/MainLayout.astro";
 import ContentBox from "../components/ContentBoxCyberCut.astro";
 import Navfoot from "../components/Navfoot.astro";
-import Announcement from "../components/AnnouncementCyber.astro";
+import Announcement from "../components/Announcement3.astro";
 
 import { Picture } from "astro:assets";
 
-import pro1 from "../assets/slide1.png";
 import pro2 from "../assets/slide2.png";
 import pro3 from "../assets/slide3.png";
 import pro4 from "../assets/slide4.png";
 import { pageGraph } from "../lib/schema";
 
-const pageTitle = "โปรโมชั่น TEMMAX69";
+const pageTitle = "โปรโมชั่น 888NEO";
 
 const pageDescription =
-  "รวมภาพโปรโมชั่น TEMMAX69 ไว้ครบในหน้าเดียว ทั้งโบนัสสมาชิกใหม่ ฝากแรกรับโบนัสเพิ่ม และสิทธิ์สำหรับสมาชิก อ่านเงื่อนไขบนภาพให้ครบก่อนกดรับสิทธิ์ทุกครั้ง";
+  "รวมภาพโปรโมชั่นของ 888NEO ไว้ครบในหน้าเดียว ทั้งโบนัสสมาชิกใหม่ โบนัสฝากแรก และสิทธิ์สำหรับสมาชิกเก่า อ่านเงื่อนไขและเกมที่ร่วมรายการบนภาพก่อนกดรับสิทธิ์";
 
 const graph = pageGraph(Astro, {
   name: pageTitle,
@@ -24,7 +23,7 @@ const graph = pageGraph(Astro, {
     { name: "หน้าแรก", path: "/" },
     { name: "โปรโมชั่น", path: "/promotion" },
   ],
-  primaryImagePath: pro1.src,
+  primaryImagePath: pro2.src,
 });
 ---
 
@@ -33,36 +32,22 @@ const graph = pageGraph(Astro, {
 
   <Announcement />
 
-  <ContentBox title="โปรโมชั่น TEMMAX69" as="h1">
-    <p class="mb-8 text-left text-base leading-relaxed text-[#ece4ff]">
-      หน้านี้รวมภาพโปรโมชั่นที่ <strong class="text-[#22d3ee]">TEMMAX69</strong> เปิดให้สมาชิกเลือกใช้ ทั้งโบนัสสมาชิกใหม่ โบนัสฝากแรก และสิทธิ์ที่มาพร้อมระบบออโต้กับ True Wallet
+  <ContentBox title="โปรโมชั่น 888NEO" as="h1">
+    <p class="mb-8 text-left text-base leading-relaxed text-[#f3e3c6]">
+      หน้านี้รวมภาพโปรโมชั่นที่ <strong class="text-[#f5c542]">888NEO</strong> เปิดให้สมาชิกเลือกใช้ ทั้งสล็อต คาสิโนสด และสิทธิ์ที่มาพร้อมระบบออโต้
       แต่ละรายการมีเกมที่ร่วม ยอดเริ่มต้น และเงื่อนไขถอนไม่เท่ากัน จึงควรอ่านรายละเอียดบนภาพให้ครบก่อนกดรับสิทธิ์ทุกครั้ง
       เลือกโปรที่ตรงกับรูปแบบการเล่นได้แล้ว สมัครสมาชิกจากปุ่มด้านล่างเพื่อเริ่มใช้สิทธิ์ได้ทันที
     </p>
 
     <div class="grid w-full grid-cols-1 gap-6 sm:grid-cols-2">
       <Picture
-        src={pro1}
-        alt="ภาพโปรโมชั่น TEMMAX69 ข้อความใหญ่ว่า สมัครวันนี้ รับโบนัสฝากแรก 10 เปอร์เซ็นต์ เล่นง่าย ฝากไว คุ้มตั้งแต่บาทแรก มุมบนซ้ายเป็นโลโก้มงกุฎ TEMMAX69 กำกับว่า สล็อต คาสิโน ครบจบในที่เดียว แถบไอคอนด้านล่างเขียนว่า ระบบออโต้ ฝาก-ถอน อัตโนมัติ รองรับมือถือ เล่นได้ทุกที่ทุกเวลา และ เล่นได้ 24 ชม. ไม่มีวันหยุด พร้อมตรารับรอง มั่นคง ปลอดภัย 100 เปอร์เซ็นต์ และปุ่มสีม่วงเขียนว่า คลิก พื้นหลังสีม่วงนีออน มีพรีเซนเตอร์หญิงชุดม่วงถือไพ่เอซกับคิง ล้อมด้วยเหรียญทอง ตู้สล็อตเลข 777 และตัวการ์ตูนฉลามกับเพนกวิน"
-        loading="lazy"
-        fetchpriority="low"
-        widths={[200, 400, 600]}
-        sizes="(max-width: 768px) 100vw, 50vw"
-        class="mx-auto h-auto w-full rounded-xl border border-[#7c3aed]/70 object-contain shadow-[0_10px_30px_rgba(168,85,247,0.22)] transition-transform duration-300 hover:-translate-y-1 hover:border-[#22d3ee]/60 hover:shadow-[0_15px_40px_rgba(34,211,238,0.28)]"
-        decoding="async"
-        formats={["avif", "webp"]}
-        fallbackFormat="webp"
-        quality={80}
-      />
-
-      <Picture
         src={pro2}
-        alt="ภาพโปรโมชั่น TEMMAX69 โลโก้มงกุฎอยู่ด้านบน ข้อความใหญ่ว่า โปรสมาชิกใหม่ ฝากแรก 300 รับโบนัสทันที 100 ตามด้วยบรรทัด สมัครง่าย เล่นลื่น คุ้มตั้งแต่บาทแรก และ เกมสล็อตมาใหม่ ระบบออโต้ เล่นได้ 24 ชม. มีป้ายสามช่องเขียนว่า รวดเร็ว ฝาก-ถอน ไวทันใจ ปลอดภัย ระบบมาตรฐานระดับสากล และ ไม่มีขั้นต่ำ เล่นได้ทุกจำนวน แถบล่างเขียนว่า รองรับวอลเล็ต พร้อมโลโก้ทรูมันนี่วอลเล็ตและวอลเล็ตของ SCB พรีเซนเตอร์หญิงชุดม่วงยืนโรยเหรียญทองอยู่ด้านขวา"
+        alt="ภาพโปรโมชั่น 888NEO โลโก้ 888NEO อยู่ด้านบน ข้อความใหญ่ว่า เว็บสล็อต คาสิโนสด ระบบออโต้ เข้าเล่นผ่านมือถือง่ายๆ กลางภาพเป็นโทรศัพท์ที่เปิดหน้าล็อบบี้ 888NEO แสดงเครดิต 88,888.00 พร้อมแถวเกมให้เลือก ด้านล่างเขียนว่า ฝากถอนเร็ว 24 ชม. และ สมัครง่าย เล่นได้เลย มีพรีเซนเตอร์หญิงชุดเลื่อมสีแดงยืนอยู่ข้างกองเหรียญทอง"
         loading="lazy"
         fetchpriority="low"
         widths={[200, 400, 600]}
         sizes="(max-width: 768px) 100vw, 50vw"
-        class="mx-auto h-auto w-full rounded-xl border border-[#7c3aed]/70 object-contain shadow-[0_10px_30px_rgba(168,85,247,0.22)] transition-transform duration-300 hover:-translate-y-1 hover:border-[#22d3ee]/60 hover:shadow-[0_15px_40px_rgba(34,211,238,0.28)]"
+        class="mx-auto h-auto w-full rounded-xl border border-[#8c0f12]/70 object-contain shadow-[0_10px_30px_rgba(224,27,27,0.22)] transition-transform duration-300 hover:-translate-y-1 hover:border-[#f5c542]/60 hover:shadow-[0_15px_40px_rgba(245,197,66,0.28)]"
         decoding="async"
         formats={["avif", "webp"]}
         fallbackFormat="webp"
@@ -71,12 +56,12 @@ const graph = pageGraph(Astro, {
 
       <Picture
         src={pro3}
-        alt="ภาพโปรโมชั่น TEMMAX69 ข้อความใหญ่ว่า เว็บสล็อตมาใหม่ สมัครรับโบนัสง่าย คุ้มตั้งแต่บาทแรก ใต้ลงมาเขียนว่า ระบบใหม่ เกมใหม่ เล่นง่ายกว่าเดิม มุมบนซ้ายเป็นโลโก้ลูกเต๋าและไพ่โพดำที่มีชื่อ TEMMAX69 แถบไอคอนเขียนว่า รวดเร็ว ปลอดภัย และ รองรับวอลเล็ต ปิดท้ายด้วยบรรทัด เล่นได้ 24 ชม. ฝากถอนออโต้ สมัครง่าย พรีเซนเตอร์หญิงชุดซาตินสีม่วงยืนอยู่ด้านขวา ขนาบด้วยกองเหรียญทองบนพื้นหลังม่วงเรืองแสง"
+        alt="ภาพโปรโมชั่น 888NEO มีโลโก้ 888NEO ทั้งด้านบนและด้านล่าง ข้อความใหญ่ว่า สมัครง่าย เล่นผ่านมือถือ ตามด้วยบรรทัด เว็บสล็อต คาสิโนสด และ ระบบออโต้ ฝากถอนสะดวก กลางภาพมีชิปคาสิโนสามใบเขียนว่า รวมเกมสล็อต คาสิโนสด และ เข้าเล่นง่าย 24 ชม. ปิดท้ายด้วยปุ่มสีแดงเขียนว่า สมัครสมาชิก"
         loading="lazy"
         fetchpriority="low"
         widths={[200, 400, 600]}
         sizes="(max-width: 768px) 100vw, 50vw"
-        class="mx-auto h-auto w-full rounded-xl border border-[#7c3aed]/70 object-contain shadow-[0_10px_30px_rgba(168,85,247,0.22)] transition-transform duration-300 hover:-translate-y-1 hover:border-[#22d3ee]/60 hover:shadow-[0_15px_40px_rgba(34,211,238,0.28)]"
+        class="mx-auto h-auto w-full rounded-xl border border-[#8c0f12]/70 object-contain shadow-[0_10px_30px_rgba(224,27,27,0.22)] transition-transform duration-300 hover:-translate-y-1 hover:border-[#f5c542]/60 hover:shadow-[0_15px_40px_rgba(245,197,66,0.28)]"
         decoding="async"
         formats={["avif", "webp"]}
         fallbackFormat="webp"
@@ -85,12 +70,12 @@ const graph = pageGraph(Astro, {
 
       <Picture
         src={pro4}
-        alt="ภาพโปรโมชั่น TEMMAX69 ข้อความใหญ่ว่า TEMMAX69 ทรูวอลเล็ตรองรับ ฝากถอนง่าย 24 ชม. มุมบนซ้ายเป็นโลโก้ตัว T69 มุมบนขวาเป็นตราโล่เขียนว่า รองรับ TrueMoney Wallet กลางภาพมีโทรศัพท์เปิดแอปทรูมันนี่วอลเล็ตพร้อมเมนู เติมเงิน โอนเงิน จ่ายบิล และ สแกนจ่าย แถบล่างเขียนว่า ระบบออโต้ สมัครง่าย เล่นได้ต่อเนื่อง พรีเซนเตอร์หญิงชุดม่วงถือบัตรสมาชิก TEMMAX69 ยืนอยู่ท่ามกลางเหรียญทอง"
+        alt="ภาพโปรโมชั่น 888NEO ข้อความใหญ่ว่า 888NEO สล็อตเกมฮิต ตามด้วยบรรทัด คาสิโนสด ระบบออโต้ เล่นผ่านมือถือ กลางภาพเป็นโทรศัพท์ที่แสดงวงล้อสล็อตพร้อมยอด WIN 8,888.00 ล้อมด้วยป้ายเขียนว่า เริ่มต้น 1 บาท ฝากถอนเร็ว 24 ชม. และ สมัครง่าย เล่นได้ทันที ด้านล่างเป็นไหเหรียญทองล้นออกมา"
         loading="lazy"
         fetchpriority="low"
         widths={[200, 400, 600]}
         sizes="(max-width: 768px) 100vw, 50vw"
-        class="mx-auto h-auto w-full rounded-xl border border-[#7c3aed]/70 object-contain shadow-[0_10px_30px_rgba(168,85,247,0.22)] transition-transform duration-300 hover:-translate-y-1 hover:border-[#22d3ee]/60 hover:shadow-[0_15px_40px_rgba(34,211,238,0.28)]"
+        class="mx-auto h-auto w-full rounded-xl border border-[#8c0f12]/70 object-contain shadow-[0_10px_30px_rgba(224,27,27,0.22)] transition-transform duration-300 hover:-translate-y-1 hover:border-[#f5c542]/60 hover:shadow-[0_15px_40px_rgba(245,197,66,0.28)]"
         decoding="async"
         formats={["avif", "webp"]}
         fallbackFormat="webp"
@@ -101,8 +86,8 @@ const graph = pageGraph(Astro, {
     <div class="mt-12 flex justify-center pb-4">
       <a
         href="/register"
-        class="flex items-center justify-center rounded-lg border border-[#c084fc]/60 bg-gradient-to-r from-[#67e8f9] via-[#c084fc] to-[#a855f7] px-10 py-3.5 text-lg font-black text-[#070218] shadow-[0_10px_30px_rgba(168,85,247,0.28)] transition-transform hover:scale-105 hover:shadow-[0_15px_40px_rgba(34,211,238,0.4)]">
-        สมัครสมาชิก TEMMAX69
+        class="flex items-center justify-center rounded-lg border border-[#ff5a4d]/60 bg-gradient-to-r from-[#ffe9a8] via-[#f5c542] to-[#b8860b] px-10 py-3.5 text-lg font-black text-[#0b0503] shadow-[0_10px_30px_rgba(224,27,27,0.28)] transition-transform hover:scale-105 hover:shadow-[0_15px_40px_rgba(245,197,66,0.4)]">
+        สมัครสมาชิก 888NEO
       </a>
     </div>
   </ContentBox>

@@ -10,20 +10,20 @@ const { title, titleleft, titleright, as: HeadingTag = "h2" } = Astro.props;
 
 <section class="my-10 flex w-full justify-center px-4 font-sans">
   <div
-    class="relative isolate w-full max-w-7xl rounded-2xl border-2 border-[#ff3ddb]/30 bg-gradient-to-b from-[#1a0414]/95 to-[#0a0208]/95 p-8 pt-36 shadow-[0_10px_30px_rgba(255,61,219,0.22)] md:pt-32">
-    <div aria-hidden="true" class="pointer-events-none absolute -top-16 -right-10 -z-10 h-40 w-40 rounded-full bg-[#b07d1c]/45 blur-[60px]"></div>
-    <div aria-hidden="true" class="pointer-events-none absolute -bottom-16 -left-10 -z-10 h-40 w-40 rounded-full bg-[#ff3ddb]/25 blur-[60px]"></div>
+    class="relative isolate w-full max-w-7xl rounded-2xl border-2 border-[#e01b1b]/35 bg-gradient-to-b from-[#1c0a06]/95 to-[#0b0503]/95 p-8 pt-36 shadow-[0_10px_30px_rgba(224,27,27,0.22)] md:pt-32">
+    <div aria-hidden="true" class="pointer-events-none absolute -top-16 -right-10 -z-10 h-40 w-40 rounded-full bg-[#b8860b]/45 blur-[60px]"></div>
+    <div aria-hidden="true" class="pointer-events-none absolute -bottom-16 -left-10 -z-10 h-40 w-40 rounded-full bg-[#e01b1b]/30 blur-[60px]"></div>
 
     {
       title && (
-        <div class="absolute -top-6 left-1/2 flex w-[92%] max-w-2xl -translate-x-1/2 items-center justify-center gap-2 rounded-lg border-2 border-[#f5c451]/40 bg-[#2b0722] px-4 py-2.5 text-center shadow-[0_10px_30px_rgba(245,196,81,0.26)] sm:px-8">
-          <span aria-hidden="true" class="shrink-0 text-[#ffa3ee]">
+        <div class="absolute -top-6 left-1/2 flex w-[92%] max-w-2xl -translate-x-1/2 items-center justify-center gap-2 rounded-lg border-2 border-[#f5c542]/45 bg-[#2a1109] px-4 py-2.5 text-center shadow-[0_10px_30px_rgba(245,197,66,0.26)] sm:px-8">
+          <span aria-hidden="true" class="shrink-0 text-[#ff5a4d]">
             ✦
           </span>
-          <HeadingTag class="min-w-0 bg-gradient-to-r from-[#ffe6a3] via-[#f5c451] to-[#ffa3ee] bg-clip-text text-lg leading-normal font-black tracking-tight text-transparent uppercase sm:text-xl md:text-2xl">
+          <HeadingTag class="min-w-0 bg-gradient-to-r from-[#ffe9a8] via-[#f5c542] to-[#ff5a4d] bg-clip-text text-lg leading-normal font-black tracking-tight text-transparent uppercase sm:text-xl md:text-2xl">
             {title}
           </HeadingTag>
-          <span aria-hidden="true" class="shrink-0 text-[#ffa3ee]">
+          <span aria-hidden="true" class="shrink-0 text-[#ff5a4d]">
             ✦
           </span>
         </div>
@@ -31,13 +31,13 @@ const { title, titleleft, titleright, as: HeadingTag = "h2" } = Astro.props;
     }
 
     <div class="grid grid-cols-1 gap-10 md:grid-cols-2">
-      <article class="flex flex-col gap-4 text-left text-base leading-relaxed text-[#f7e3f4]">
-        {titleleft && <p class="text-2xl leading-normal font-bold text-[#ffa3ee]">{titleleft}</p>}
+      <article class="flex flex-col gap-4 text-left text-base leading-relaxed text-[#f3e3c6]">
+        {titleleft && <p class="text-2xl leading-normal font-bold text-[#ff5a4d]">{titleleft}</p>}
         <slot name="left" />
       </article>
 
-      <article class="flex flex-col gap-4 text-left text-base leading-relaxed text-[#f7e3f4] md:border-l md:border-[#8f1080]/80 md:pl-10">
-        {titleright && <p class="text-2xl leading-normal font-bold text-[#ffe6a3]">{titleright}</p>}
+      <article class="flex flex-col gap-4 text-left text-base leading-relaxed text-[#f3e3c6] md:border-l md:border-[#8c0f12]/80 md:pl-10">
+        {titleright && <p class="text-2xl leading-normal font-bold text-[#ffe9a8]">{titleright}</p>}
         <slot name="right" />
       </article>
     </div>

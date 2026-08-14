@@ -1,62 +1,62 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
-import AnnouncementCyber from "../components/AnnouncementCyber.astro";
+import Announcement3 from "../components/Announcement3.astro";
 import ContentBox from "../components/ContentBox.astro";
-import ContentBoxPremium from "../components/ContentBoxPremium.astro";
-import ContentBoxCyberCut from "../components/ContentBoxCyberCut.astro";
-import ContentBoxTwoPremium from "../components/ContentBoxTwoPremium.astro";
-import ContentBoxTwoCyberCut from "../components/ContentBoxTwoCyberCut.astro";
+import ContentBoxNeumorphism from "../components/ContentBoxNeumorphism.astro";
+import ContentBoxFloatingBadge from "../components/ContentBoxFloatingBadge.astro";
+import ContentBoxTwoNeumorphism from "../components/ContentBoxTwoNeumorphism.astro";
+import ContentBoxTwoFloatingBadge from "../components/ContentBoxTwoFloatingBadge.astro";
+import ContentBoxSevenThree from "../components/ContentBoxSevenThree.astro";
+import ContentBoxSevenThreeNeumorphism from "../components/ContentBoxSevenThreeNeumorphism.astro";
 import ContentBoxSpecial from "../components/ContentBoxSpecial.astro";
-import ContentBoxSevenThreePremium from "../components/ContentBoxSevenThreePremium.astro";
-import ContentBoxSevenThreeCyberCut from "../components/ContentBoxSevenThreeCyberCut.astro";
-import ProviderGrid from "../components/ProviderGrid.astro";
+import ProviderGridPremium from "../components/ProviderGridPremium.astro";
 import GameRankingBoard from "../components/GameRankingBoard.astro";
-import LatestWinners3 from "../components/LatestWinners3.astro";
+import LatestWinnersPremium from "../components/LatestWinnersPremium.astro";
 import SmoothCarousel from "../components/SmoothCarousel.astro";
 import LoginRtpSection from "../components/LoginRtpSection.astro";
-import Faq2 from "../components/Faq2.astro";
+import Faq3 from "../components/Faq3.astro";
 import ReviewCardSumo2 from "../components/ReviewCardSumo2.astro";
 import Navfoot from "../components/Navfoot.astro";
 
 import { Picture } from "astro:assets";
 import { pageGraph } from "../lib/schema";
-import imgBonus from "../assets/slide2.png";
-import imgWallet from "../assets/slide4.png";
+import imgLive from "../assets/slide3.png";
+import imgMember from "../assets/slide2.png";
 
-const pageTitle = "TEMMAX69 เว็บสล็อตมาใหม่ สมัครสมาชิกรับโบนัสง่าย คุ้มตั้งแต่บาทแรก";
+const pageTitle = "888NEO เว็บสล็อต คาสิโนสด ระบบออโต้ เข้าเล่นผ่านมือถือง่ายๆ";
 
 const pageDescription =
-  "TEMMAX69 รวมสล็อต เกมใหม่ ระบบสมาชิก ฝากถอนผ่าน True Wallet และมือถือ พร้อมโบนัสสมาชิกใหม่ ทางเข้าใช้งานง่าย รองรับการทำรายการตลอด 24 ชั่วโมง";
+  "888NEO รวมเกมสล็อต คาสิโนสด ระบบสมาชิก ฝากถอนออโต้ และทางเข้าเว็บหลัก รองรับมือถือ พร้อมจัดการเครดิตและประวัติรายการในบัญชีเดียว";
 
 const announcement =
-  "TEMMAX69 รวมสล็อต เกมใหม่ โบนัสสมาชิก และระบบวอเลทไว้ในบัญชีเดียว • เว็บสล็อตมาใหม่ มีทั้งเกมคลาสสิก เกมฟีเจอร์ และเกมใหม่ เลือกได้จากหมวดเดียวผ่านมือถือ • โบนัสสมาชิกใหม่เพิ่มสิทธิ์เริ่มต้นตามโปรโมชั่นที่เปิดอยู่ ตรวจเงื่อนไขก่อนเลือกรับได้ • True Wallet ช่วยให้จัดการฝากถอนผ่านมือถือ รายการเชื่อมกับบัญชีสมาชิกโดยตรง • ระบบออโต้รับรายการฝากถอนตลอด 24 ชั่วโมง เช็กเครดิตและสถานะได้จากหน้าสมาชิก • ทางเข้าเว็บหลักเชื่อมไปยังล็อกอิน เกม โปรโมชั่น และระบบสมาชิก รองรับทั้งมือถือและคอม";
+  "888NEO รวมสล็อต คาสิโนสด และระบบออโต้ไว้ในบัญชีเดียว เลือกเกมและจัดการบัญชีต่อได้จากมือถือ • สล็อตแยกตามรูปแบบและหมวดเกม ทั้งสายมีเกมประจำและคนชอบลองเกมใหม่หาตัวเลือกได้เร็วขึ้น • คาสิโนสดเพิ่มทางเลือกเกมโต๊ะแบบเรียลไทม์ ใช้งานต่อจากบัญชีสมาชิกเดิมได้ทันที • ระบบออโต้ช่วยให้ฝากถอนและตรวจเครดิตทำผ่านบัญชีสมาชิกได้โดยตรง ลดจังหวะรอการจัดการแบบแมนนวล • หน้าสมาชิกรวมเครดิต เกมที่ใช้งาน และข้อมูลรายการสำคัญไว้จุดเดียว • ทางเข้า 888NEO เว็บหลัก รองรับทั้งมือถือและคอมพิวเตอร์ด้วยข้อมูลสมาชิกเดิม";
 
-const bonusAlt =
-  "ภาพโปรโมชั่น TEMMAX69 พื้นหลังสีม่วงนีออนมีประกายสีชมพูและเหรียญทองลอยอยู่ ด้านบนเป็นโลโก้มงกุฎพร้อมตัวอักษรว่า TEMMAX69 ถัดลงมาเป็นตัวอักษรขนาดใหญ่ว่า โปรสมาชิกใหม่ ฝากแรก 300 รับโบนัสทันที 100 ใต้ลงมาเป็นแถบเขียนว่า สมัครง่าย เล่นลื่น คุ้มตั้งแต่บาทแรก และแถบว่า เกมสล็อตมาใหม่ ระบบออโต้ เล่นได้ 24 ชม. ต่อด้วยป้ายสามช่องเขียนว่า รวดเร็ว ฝาก-ถอน ไวทันใจ, ปลอดภัย ระบบมาตรฐานระดับสากล และ ไม่มีขั้นต่ำ เล่นได้ทุกจำนวน แถบล่างสุดเขียนว่า รองรับวอลเล็ต พร้อมโลโก้ TrueMoney Wallet และ wallet by SCB ด้านขวาเป็นพรีเซนเตอร์หญิงสวมชุดสีม่วงกำลังแบมือรับเหรียญทอง";
+const liveAlt =
+  "ภาพโปรโมชั่น 888NEO พื้นหลังโทนดำทองมีชิปคาสิโนและเหรียญทองกระจายอยู่ ด้านบนเป็นโลโก้ 888NEO พร้อมข้อความว่า สมัครง่าย เล่นผ่านมือถือ ตรงกลางเป็นตัวอักษรขนาดใหญ่ว่า เว็บสล็อต คาสิโนสด ถัดลงมาเขียนว่า ระบบออโต้ ฝากถอนสะดวก ใต้ลงมาเป็นป้ายสามช่องเขียนว่า รวมเกมสล็อต, คาสิโนสด และ เข้าเล่นง่าย 24 ชม. ด้านล่างเป็นโลโก้ 888NEO อีกครั้งคู่กับปุ่มสีแดงเขียนว่า สมัครสมาชิก";
 
-const walletAlt =
-  "ภาพโปรโมชั่น TEMMAX69 พื้นหลังสีม่วงนีออนมีเหรียญทองกองอยู่ทั้งสองข้าง ด้านบนซ้ายเป็นโลโก้ตัวอักษร T69 พร้อมชื่อ TEMMAX69 ตรงกลางเป็นภาพโทรศัพท์ที่เปิดแอป TrueMoney Wallet และการ์ดสีส้มขาวของทรูมันนี่วอลเล็ต มุมขวาบนเป็นตราโล่เขียนว่า รองรับ TrueMoney Wallet ด้านล่างเป็นตัวอักษรขนาดใหญ่ว่า TEMMAX69 ทรูวอลเล็ตรองรับ ฝากถอนง่าย 24 ชม. แถบล่างสุดเขียนว่า ระบบออโต้ สมัครง่าย และ เล่นได้ต่อเนื่อง ด้านซ้ายเป็นพรีเซนเตอร์หญิงสวมชุดสีม่วงถือการ์ด TEMMAX69";
+const memberAlt =
+  "ภาพโปรโมชั่น 888NEO พื้นหลังโทนดำทองมีเหรียญทองลอยอยู่ ด้านบนเป็นโลโก้ 888NEO พร้อมข้อความว่า เว็บสล็อต คาสิโนสด และ ระบบออโต้ เข้าเล่นผ่านมือถือง่ายๆ ตรงกลางเป็นภาพโทรศัพท์ที่เปิดหน้าล็อบบี้ของ 888NEO แสดงเครดิต 88,888.00 และรายการเกมเรียงเป็นแถว ด้านขวาเป็นพรีเซนเตอร์หญิงสวมชุดเลื่อมสีแดง แถบล่างเขียนว่า ฝากถอนเร็ว 24 ชม. และ สมัครง่าย เล่นได้เลย";
 
 const faqs = [
   {
-    q: "TEMMAX69 เว็บสล็อตมาใหม่ มีเกมและหมวดไหนให้เลือกบ้าง",
-    a: "TEMMAX69 มีสล็อตหลายสไตล์ ทั้งเกมคลาสสิก เกมฟีเจอร์ และเกมใหม่ เลือกได้จากหมวดเดียวผ่านมือถือ โดยแยกสล็อตตามรูปแบบเกม ทำให้สายโบนัส ฟรีสปิน หรือคนที่มีเกมประจำเข้าถึงตัวเลือกที่ชอบได้เร็ว อยากเปลี่ยนเกมก็เปลี่ยนได้ทันทีจากบัญชีเดิม",
+    q: "888NEO รวมเกมสล็อตและคาสิโนสดไว้ให้เลือกแบบไหน",
+    a: "888NEO รวมสล็อตหลายรูปแบบกับคาสิโนสดไว้ในแพลตฟอร์มเดียว สมาชิกจึงเลือกเกมหมุนหรือเปลี่ยนไปเล่นเกมโต๊ะได้ตามสไตล์โดยใช้บัญชีเดิม บางวันอยากสล็อต บางวันอยากคาสิโน ก็เลือกหมวดที่ถูกใจได้จากหน้าเดียว",
   },
   {
-    q: "โบนัสสมาชิกใหม่ TEMMAX69 ต้องดูอะไรก่อนเลือกรับ",
-    a: "โบนัสสมาชิกใหม่เพิ่มสิทธิ์เริ่มต้นตามโปรโมชั่นที่เปิดอยู่ โดยสมาชิกตรวจรายละเอียดก่อนเลือกรับได้ แต่ละโปรมีเงื่อนไขต่างกัน จึงควรเลือกให้ตรงกับสไตล์การเล่นของตัวเองมากกว่าไล่รับทุกอย่างที่ตัวเลขใหญ่ที่สุด",
+    q: "สล็อต 888NEO แยกหมวดเกมไว้อย่างไรบ้าง",
+    a: "888NEO แยกเกมสล็อตตามรูปแบบและหมวดเกม ช่วยให้ทั้งสายมีเกมประจำและคนชอบลองเกมใหม่ค้นหาตัวเลือกที่สนใจได้เร็วขึ้น ตัวเลือกเยอะควรเพิ่มความสนุก ไม่ใช่เพิ่มเวลาที่ต้องเลื่อนหาเกม",
   },
   {
-    q: "สมัครสมาชิก TEMMAX69 ผ่านมือถือเริ่มต้นกี่ขั้นตอน",
-    a: "การสมัครทำผ่านมือถือได้ กรอกข้อมูล ตั้งค่าบัญชี และยืนยันตามระบบ จากนั้นเข้าสู่หน้าสมาชิกเพื่อเลือกเกมต่อได้เลย ขั้นตอนของ TEMMAX69 เน้นให้จบไว ไม่ต้องสลับไปมาหลายหน้าเพื่อเริ่มต้นใช้งาน",
+    q: "ระบบออโต้ของ 888NEO ช่วยเรื่องฝากถอนอย่างไร",
+    a: "ระบบออโต้ช่วยให้ขั้นตอนฝากถอนและการตรวจสอบเครดิตทำผ่านบัญชีสมาชิกได้โดยตรง ลดจังหวะที่ต้องรอการจัดการแบบแมนนวล เมื่อเชื่อมกับระบบ 888NEO การทำรายการจึงต่อเนื่องกับหน้าเกมมากขึ้น",
   },
   {
-    q: "True Wallet และระบบออโต้ของ TEMMAX69 ใช้งานอย่างไร",
-    a: "True Wallet ช่วยให้สมาชิกจัดการฝากถอนผ่านมือถือ เหมาะกับคนที่ใช้วอเลทเป็นช่องทางหลักอยู่แล้ว ส่วนระบบออโต้รับรายการฝากถอนตลอดวัน สมาชิกตรวจเครดิตและสถานะผ่านบัญชีได้โดยไม่ต้องรอการจัดการแบบแมนนวล รายการทั้งหมดเชื่อมกับบัญชี TEMMAX69 โดยตรง",
+    q: "ระบบสมาชิก 888NEO ดูเครดิตและประวัติรายการได้ตรงไหน",
+    a: "หน้าสมาชิกเป็นจุดรวมเครดิต เกมที่ใช้งาน และข้อมูลรายการสำคัญ ช่วยให้สมาชิกตรวจสอบบัญชีโดยไม่ต้องเปิดหลายหน้าพร้อมกัน เหมาะกับคนที่สลับเล่นหลายหมวดในบัญชีเดียว",
   },
   {
-    q: "ทางเข้า TEMMAX69 เว็บหลัก ใช้งานผ่านมือถือและคอมได้ไหม",
-    a: "ทางเข้าเว็บหลักเชื่อมไปยังล็อกอิน เกม โปรโมชั่น และระบบสมาชิก รองรับทั้งมือถือและคอมด้วยบัญชีเดียว การใช้ทางเข้าโดยตรงยังช่วยลดความสับสนจากชื่อเว็บที่ใกล้เคียงกันบนผลค้นหา",
+    q: "ทางเข้า 888NEO เว็บหลัก ใช้งานผ่านมือถือและคอมได้ไหม",
+    a: "ทางเข้า 888NEO เว็บหลักเชื่อมสมาชิกไปยังหน้าล็อกอิน เกม และระบบบัญชี รองรับการใช้งานทั้งมือถือและคอมพิวเตอร์ด้วยข้อมูลสมาชิกเดิม การใช้ทางเข้าหลักยังช่วยลดความสับสนจากชื่อเว็บไซต์ใกล้เคียงบนผลค้นหา",
   },
 ];
 
@@ -70,46 +70,48 @@ const graph = pageGraph(Astro, {
 <MainLayout title={pageTitle} description={pageDescription}>
   <script type="application/ld+json" set:html={graph} />
 
-  <AnnouncementCyber message={announcement} />
+  <Announcement3 message={announcement} />
 
-  <ContentBoxPremium as="h1" title="TEMMAX69 รวมสล็อต เกมใหม่ โบนัสสมาชิก และระบบวอเลทไว้ในบัญชีเดียว">
+  <ContentBoxNeumorphism as="h1" title="888NEO รวมสล็อต คาสิโนสด และระบบออโต้ไว้ให้เล่นง่ายบนมือถือ">
     <div class="flex flex-col gap-4">
-      <p class="text-left text-base leading-relaxed text-[#ece4ff]">
-        <strong class="text-[#22d3ee]">TEMMAX69</strong> รวมสล็อต โบนัส ระบบสมาชิก และการจัดการเครดิตไว้ในบัญชีเดียว รองรับมือถือ ใช้งานต่อเนื่องตั้งแต่สมัครจนถึงเลือกเกม
+      <p class="text-left text-base leading-relaxed text-[#f3e3c6]">
+        <strong class="text-[#f5c542]">888NEO</strong> รวมเกมสล็อต คาสิโนสด ระบบสมาชิก และการจัดการเครดิตไว้ในบัญชีเดียว รองรับการใช้งานผ่านมือถือ ทำให้เลือกเกมและจัดการบัญชีต่อได้โดยไม่ต้องเปิดหลายระบบ
       </p>
-      <p class="text-left text-base leading-relaxed text-[#ece4ff]">
-        True Wallet และระบบออโต้ช่วยให้ฝากถอนสะดวกขึ้น เพราะเงินอาจหาใหม่ได้ แต่เวลาที่เสียกับขั้นตอนเยอะ ๆ นั่นแพงกว่า
+      <p class="text-left text-base leading-relaxed text-[#f3e3c6]">
+        ระบบออโต้ช่วยลดขั้นตอนเรื่องฝากถอน ส่วนหน้าเกมแบ่งตัวเลือกให้เข้าถึงง่าย ความสะดวกที่ดีควรทำให้เวลาไปอยู่กับเกม ไม่ใช่หมดไปกับการหาเมนู
       </p>
     </div>
-  </ContentBoxPremium>
+  </ContentBoxNeumorphism>
 
-  <ContentBox as="h2" title="TEMMAX69 เว็บสล็อตมาใหม่ มีเกมและหมวดไหนให้เลือกบ้าง">
+  <ContentBoxFloatingBadge as="h2" title="888NEO รวมเกมสล็อตและคาสิโนสดไว้ให้เลือกแบบไหน">
     <div class="flex flex-col gap-4">
-      <p class="text-left text-base leading-relaxed text-[#ece4ff]">
-        TEMMAX69 มีสล็อตหลายสไตล์ ทั้งเกมคลาสสิก เกมฟีเจอร์ และเกมใหม่ เลือกได้จากหมวดเดียวผ่านมือถือ
+      <p class="text-left text-base leading-relaxed text-[#f3e3c6]">
+        888NEO รวมสล็อตหลายรูปแบบกับคาสิโนสดไว้ในแพลตฟอร์มเดียว สมาชิกจึงเลือกเกมหมุนหรือเปลี่ยนไปเล่นเกมโต๊ะได้ตามสไตล์โดยใช้บัญชีเดิม
       </p>
-      <p class="text-left text-base leading-relaxed text-[#ece4ff]">เกมเยอะต้องหาเจอง่ายด้วย ระดับนี้ไม่ควรเสียเวลาเลื่อนหาเกมเหมือนกำลังเลือกสีรถคันที่สาม</p>
+      <p class="text-left text-base leading-relaxed text-[#f3e3c6]">
+        มีหลายหมวดไว้เลือกก็ดี เพราะบางวันอยากสล็อต บางวันอยากคาสิโน คนมีทางเลือกไม่จำเป็นต้องอธิบายเยอะ แค่เลือกสิ่งที่ถูกใจก็พอ
+      </p>
     </div>
-  </ContentBox>
+  </ContentBoxFloatingBadge>
 
-  <ProviderGrid />
+  <ProviderGridPremium />
 
-  <ContentBoxTwoPremium as="h2" title="สล็อต TEMMAX69 เลือกเกมใหม่และสไตล์ที่ชอบได้ง่ายแค่ไหน">
-    <p slot="left" class="text-left text-base leading-relaxed text-[#ece4ff]">
-      TEMMAX69 แยกสล็อตตามรูปแบบเกม ทำให้สายโบนัส ฟรีสปิน หรือคนมีเกมประจำเข้าถึงตัวเลือกที่ชอบได้เร็ว
+  <ContentBoxTwoNeumorphism as="h2" title="สล็อต 888NEO มีเกมหลายสไตล์ให้เลือกง่ายแค่ไหน">
+    <p slot="left" class="text-left text-base leading-relaxed text-[#f3e3c6]">
+      888NEO แยกเกมสล็อตตามรูปแบบและหมวดเกม ช่วยให้ทั้งสายมีเกมประจำและคนชอบลองเกมใหม่ค้นหาตัวเลือกที่สนใจได้เร็วขึ้น
     </p>
-    <p slot="right" class="text-left text-base leading-relaxed text-[#ece4ff]">
-      อยากเปลี่ยนเกมก็เปลี่ยนได้ทันที ความหรูจริงไม่ใช่มีตัวเลือกเยอะ แต่คือมีเยอะแล้วไม่ต้องเสียเวลาหา
+    <p slot="right" class="text-left text-base leading-relaxed text-[#f3e3c6]">
+      ตัวเลือกเยอะควรเพิ่มความสนุก ไม่ใช่เพิ่มงานให้นิ้วโป้ง เกมที่ชอบควรหาเจอเร็วกว่าร้านอาหารดี ๆ ตอนหิว
     </p>
-  </ContentBoxTwoPremium>
+  </ContentBoxTwoNeumorphism>
 
   <GameRankingBoard />
 
-  <ContentBoxSevenThreePremium titleright="โบนัส TEMMAX69 สำหรับสมาชิกใหม่ คุ้มตั้งแต่เริ่มต้นอย่างไร">
+  <ContentBoxSevenThree as="h2" titleright="คาสิโนสด 888NEO เปลี่ยนบรรยากาศจากสล็อตได้อย่างไร">
     <Picture
       slot="left"
-      src={imgBonus}
-      alt={bonusAlt}
+      src={imgLive}
+      alt={liveAlt}
       loading="lazy"
       fetchpriority="low"
       widths={[200, 400, 600]}
@@ -118,34 +120,32 @@ const graph = pageGraph(Astro, {
       formats={["avif", "webp"]}
       fallbackFormat="webp"
       quality={80}
-      class="mx-auto h-auto w-full rounded-2xl border border-[#22d3ee]/40 shadow-[0_10px_30px_rgba(168,85,247,0.30)]"
+      class="mx-auto h-auto w-full rounded-2xl border border-[#f5c542]/40 shadow-[0_10px_30px_rgba(224,27,27,0.30)]"
     />
     <div slot="right" class="flex flex-col gap-4">
-      <p class="text-left text-base leading-relaxed text-[#ece4ff]">
-        โบนัสสมาชิกใหม่เพิ่มสิทธิ์เริ่มต้นตามโปรโมชั่นที่เปิดอยู่ โดยสมาชิกตรวจรายละเอียดก่อนเลือกรับได้
+      <p class="text-left text-base leading-relaxed text-[#f3e3c6]">
+        คาสิโนสดเพิ่มทางเลือกสำหรับคนที่อยากเปลี่ยนจากเกมหมุนไปสัมผัสเกมแบบโต๊ะและบรรยากาศเรียลไทม์ โดยยังใช้งานต่อจากบัญชีสมาชิกเดิม
       </p>
-      <p class="text-left text-base leading-relaxed text-[#ece4ff]">
-        ใน TEMMAX69 แต่ละโปรมีเงื่อนไขต่างกัน เลือกให้ตรงสไตล์ดีกว่าไล่รับทุกอย่าง คนมีคลาสเลือกของที่คุ้ม ไม่ใช่ของที่ตัวเลขใหญ่ที่สุด
-      </p>
-    </div>
-  </ContentBoxSevenThreePremium>
-
-  <ContentBoxCyberCut as="h2" title="สมัครสมาชิกผ่านมือถือ เริ่มต้นกี่ขั้นตอน">
-    <div class="flex flex-col gap-4">
-      <p class="text-left text-base leading-relaxed text-[#ece4ff]">
-        การสมัครทำผ่านมือถือได้ กรอกข้อมูล ตั้งค่าบัญชี และยืนยันตามระบบ จากนั้นเข้าสู่หน้าสมาชิกเพื่อเลือกเกมต่อได้เลย
-      </p>
-      <p class="text-left text-base leading-relaxed text-[#ece4ff]">
-        ขั้นตอนของ TEMMAX69 เน้นให้จบไว เพราะชีวิตมีเรื่องให้จัดการเยอะพอแล้ว การสมัครเว็บไม่ควรกลายเป็นงานประชุมอีกหนึ่งวาระ
+      <p class="text-left text-base leading-relaxed text-[#f3e3c6]">
+        ภายใน 888NEO สมาชิกจึงเปลี่ยนหมวดได้ตามอารมณ์ วันนี้สล็อต พรุ่งนี้คาสิโนก็เรื่องปกติ รสนิยมเปลี่ยนได้โดยไม่ต้องเปลี่ยนบัญชีตาม
       </p>
     </div>
-  </ContentBoxCyberCut>
+  </ContentBoxSevenThree>
 
-  <ContentBoxSevenThreeCyberCut titleright="True Wallet TEMMAX69 ฝากถอนและเติมเครดิตสะดวกแค่ไหน">
+  <ContentBoxTwoFloatingBadge as="h2" title="ระบบออโต้ช่วยจัดการฝากถอนให้สั้นลงอย่างไร">
+    <p slot="left" class="text-left text-base leading-relaxed text-[#f3e3c6]">
+      ระบบออโต้ช่วยให้ขั้นตอนฝากถอนและการตรวจสอบเครดิตทำผ่านบัญชีสมาชิกได้โดยตรง ลดจังหวะที่ต้องรอการจัดการแบบแมนนวล
+    </p>
+    <p slot="right" class="text-left text-base leading-relaxed text-[#f3e3c6]">
+      เมื่อเชื่อมกับระบบ 888NEO การทำรายการจึงต่อเนื่องกับหน้าเกมมากขึ้น เงินมีหน้าที่เคลื่อนที่ ส่วนเจ้าของเงินไม่ควรต้องวิ่งตามหลายเมนู
+    </p>
+  </ContentBoxTwoFloatingBadge>
+
+  <ContentBoxSevenThreeNeumorphism as="h2" titleright="ระบบสมาชิก 888NEO รวมเครดิต เกม และประวัติรายการไว้ตรงไหน">
     <Picture
       slot="left"
-      src={imgWallet}
-      alt={walletAlt}
+      src={imgMember}
+      alt={memberAlt}
       loading="lazy"
       fetchpriority="low"
       widths={[200, 400, 600]}
@@ -154,86 +154,81 @@ const graph = pageGraph(Astro, {
       formats={["avif", "webp"]}
       fallbackFormat="webp"
       quality={80}
-      class="mx-auto h-auto w-full border border-[#22d3ee]/40 shadow-[0_10px_30px_rgba(34,211,238,0.26)]"
+      class="mx-auto h-auto w-full rounded-2xl border border-[#f5c542]/40 shadow-[0_10px_30px_rgba(245,197,66,0.26)]"
     />
     <div slot="right" class="flex flex-col gap-4">
-      <p class="text-left text-base leading-relaxed text-[#ece4ff]">
-        True Wallet ช่วยให้สมาชิกจัดการฝากถอนผ่านมือถือ เหมาะกับคนที่ใช้วอเลทเป็นช่องทางหลักอยู่แล้ว
+      <p class="text-left text-base leading-relaxed text-[#f3e3c6]">
+        หน้าสมาชิกเป็นจุดรวมเครดิต เกมที่ใช้งาน และข้อมูลรายการสำคัญ ช่วยให้สมาชิกตรวจสอบบัญชีโดยไม่ต้องเปิดหลายหน้าพร้อมกัน
       </p>
-      <p class="text-left text-base leading-relaxed text-[#ece4ff]">
-        รายการเชื่อมกับบัญชี TEMMAX69 ทำให้ดูเครดิตและกลับเข้าเกมต่อได้จากระบบเดียว เงินเดินเร็ว เจ้าของเงินก็ควรเดินน้อย
+      <p class="text-left text-base leading-relaxed text-[#f3e3c6]">
+        ระบบของ 888NEO จึงเหมาะกับคนที่สลับเล่นหลายหมวด เพราะของสำคัญควรจัดไว้เป็นที่ โดยเฉพาะเครดิต เรื่องนี้ไม่เหมาะกับเกมซ่อนหา
       </p>
     </div>
-  </ContentBoxSevenThreeCyberCut>
+  </ContentBoxSevenThreeNeumorphism>
 
-  <ContentBoxTwoCyberCut as="h2" title="ระบบออโต้ช่วยจัดการฝากถอนได้ตลอด 24 ชั่วโมงอย่างไร">
-    <p slot="left" class="text-left text-base leading-relaxed text-[#ece4ff]">
-      ระบบออโต้ช่วยรับรายการฝากถอนตลอดวัน สมาชิกตรวจเครดิตและสถานะผ่านบัญชีได้โดยไม่ต้องรอการจัดการแบบแมนนวล
-    </p>
-    <p slot="right" class="text-left text-base leading-relaxed text-[#ece4ff]">
-      TEMMAX69 เชื่อมระบบการเงินกับหน้าสมาชิกโดยตรง ออโต้ที่ดีต้องช่วยประหยัดเวลา เพราะคนรวยชอบอะไรเร็ว ๆ ยกเว้นวันหยุด
-    </p>
-  </ContentBoxTwoCyberCut>
+  <LatestWinnersPremium />
 
-  <LatestWinners3 />
-
-  <ContentBox as="h2" title="ระบบสมาชิก TEMMAX69 รวมเครดิต โบนัส และประวัติรายการไว้ตรงไหน">
+  <ContentBox as="h2" title="เข้าสู่ระบบผ่านมือถือแล้วใช้งานอะไรได้บ้าง">
     <div class="flex flex-col gap-4">
-      <p class="text-left text-base leading-relaxed text-[#ece4ff]">
-        หน้าสมาชิกรวมเครดิต โบนัส และประวัติรายการไว้ในจุดเดียว ทำให้เช็กข้อมูลสำคัญได้โดยไม่ต้องเปิดหลายหน้า
+      <p class="text-left text-base leading-relaxed text-[#f3e3c6]">
+        หลังเข้าสู่ระบบ สมาชิกสามารถเลือกสล็อต เปิดคาสิโนสด เช็กเครดิต และจัดการข้อมูลบัญชีผ่านมือถือได้ด้วยยูสเดิม
       </p>
-      <p class="text-left text-base leading-relaxed text-[#ece4ff]">ระบบ TEMMAX69 จึงเหมาะกับคนที่ใช้หลายเกมหรือหลายโปรโมชั่น ของสำคัญควรอยู่เป็นที่ เงินก็เหมือนกัน</p>
+      <p class="text-left text-base leading-relaxed text-[#f3e3c6]">
+        หน้าใช้งานของ 888NEO จึงเหมาะกับคนที่ต้องการเปิดแล้วไปต่อได้ทันที มือถือมีไว้ลดสัมภาระ ไม่ใช่สร้างขั้นตอนเพิ่มจนต้องหยิบโน้ตบุ๊กมาช่วย
+      </p>
     </div>
   </ContentBox>
 
-  <ContentBoxTwoPremium as="h2" title="เข้าสู่ระบบผ่านมือถือแล้วใช้งานอะไรได้บ้าง">
-    <p slot="left" class="text-left text-base leading-relaxed text-[#ece4ff]">
-      หลังเข้าสู่ระบบ สมาชิกเลือกสล็อต ดูเครดิต เช็กโบนัส และจัดการบัญชีผ่านมือถือได้ด้วยยูสเดิม
-    </p>
-    <p slot="right" class="text-left text-base leading-relaxed text-[#ece4ff]">
-      TEMMAX69 วางเมนูหลักให้เหมาะกับจอมือถือ เปิดแล้วใช้งานต่อได้ทันที ความสะดวกที่ดีคือไม่ต้องใช้สองมือกับเรื่องที่มือเดียวควรจบ
-    </p>
-  </ContentBoxTwoPremium>
-
   <LoginRtpSection />
 
-  <ContentBoxPremium as="h2" title="ทางเข้า TEMMAX69 เว็บหลัก ใช้งานผ่านมือถือและคอมอย่างไร">
+  <ContentBoxNeumorphism as="h2" title="ทางเข้า 888NEO เว็บหลัก รองรับมือถือและคอมอย่างไร">
     <div class="flex flex-col gap-4">
-      <p class="text-left text-base leading-relaxed text-[#ece4ff]">
-        ทางเข้าเว็บหลักเชื่อมไปยังล็อกอิน เกม โปรโมชั่น และระบบสมาชิก รองรับทั้งมือถือและคอมด้วยบัญชีเดียว
+      <p class="text-left text-base leading-relaxed text-[#f3e3c6]">
+        ทางเข้า 888NEO เว็บหลักเชื่อมสมาชิกไปยังหน้าล็อกอิน เกม และระบบบัญชี รองรับการใช้งานทั้งมือถือและคอมพิวเตอร์ด้วยข้อมูลสมาชิกเดิม
       </p>
-      <p class="text-left text-base leading-relaxed text-[#ece4ff]">
-        การใช้ทางเข้า TEMMAX69 โดยตรงช่วยลดความสับสนจากชื่อเว็บใกล้เคียง เพราะเสียเงินยังพอเข้าใจ แต่เสียเวลาเข้าผิดเว็บนี่ไม่ค่อยสง่างาม
+      <p class="text-left text-base leading-relaxed text-[#f3e3c6]">
+        การใช้ทางเข้าหลักยังช่วยลดความสับสนจากชื่อเว็บไซต์ใกล้เคียงบนผลค้นหา จำช่องทางที่ถูกไว้หนึ่งที่ ดูเรียบง่ายกว่าไล่เปิดทุกลิงก์แล้วค่อยเสี่ยงดวงว่าอันไหนใช่
       </p>
     </div>
-  </ContentBoxPremium>
+  </ContentBoxNeumorphism>
 
-  <ContentBoxSpecial title="TEMMAX69 เหมาะกับคนที่อยากเล่นสล็อตและจัดการเครดิตผ่าน Wallet แบบไหน">
-    <p slot="left" class="text-left text-base leading-relaxed text-[#ece4ff]">
-      TEMMAX69 เหมาะกับคนที่เล่นสล็อตผ่านมือถือ ใช้ Wallet เป็นประจำ และอยากจัดการเกม โบนัสกับเครดิตจากบัญชีเดียว
+  <ContentBoxSpecial as="h2" title="เล่นหลายเกมผ่านบัญชีเดียวสะดวกกว่าแบบไหน">
+    <p slot="left" class="text-left text-base leading-relaxed text-[#f3e3c6]">
+      บัญชีเดียวช่วยให้สมาชิกเปลี่ยนระหว่างสล็อตและคาสิโนสดได้ต่อเนื่อง พร้อมดูเครดิตและข้อมูลรายการจากระบบสมาชิกเดิม
     </p>
-    <p slot="right" class="text-left text-base leading-relaxed text-[#ece4ff]">
-      เลือกเกมที่ชอบ รับโปรที่เหมาะ แล้วจัดการฝากถอนจากมือถือได้เลย หลายเกมมีไว้เลือก หลายบัญชีมีไว้ปวดหัว
+    <p slot="right" class="text-left text-base leading-relaxed text-[#f3e3c6]">
+      ภายใน 888NEO จึงไม่ต้องจัดการบัญชีแยกตามประเภทเกม หลายเกมมีไว้สร้างทางเลือก ส่วนหลายรหัสผ่านส่วนใหญ่มีไว้สร้างปัญหา
     </p>
   </ContentBoxSpecial>
 
   <SmoothCarousel />
 
+  <ContentBoxFloatingBadge as="h2" title="888NEO เหมาะกับคนที่ชอบสล็อต คาสิโนสด และใช้งานผ่านมือถือแบบไหน">
+    <div class="flex flex-col gap-4">
+      <p class="text-left text-base leading-relaxed text-[#f3e3c6]">
+        888NEO เหมาะกับคนที่ชอบเปลี่ยนระหว่างสล็อตและคาสิโนสด พร้อมต้องการระบบออโต้และการใช้งานผ่านมือถือในบัญชีเดียว
+      </p>
+      <p class="text-left text-base leading-relaxed text-[#f3e3c6]">
+        สมาชิกสามารถเลือกเกมที่ตรงอารมณ์ จัดการเครดิต แล้วกลับเข้าเล่นต่อจากอุปกรณ์ที่สะดวกได้เลย ความหรูไม่จำเป็นต้องซับซ้อน บางครั้งแค่ทุกอย่างอยู่ถูกที่ก็พอ
+      </p>
+    </div>
+  </ContentBoxFloatingBadge>
+
   <div class="relative z-10 mx-auto mb-10 flex flex-nowrap justify-center gap-3 px-4 sm:gap-6">
     <a
       href="/register"
-      class="group relative flex flex-1 items-center justify-center rounded-full bg-gradient-to-r from-[#67e8f9] via-[#22d3ee] to-[#0e7490] px-4 py-3 text-sm font-black whitespace-nowrap text-[#070218] shadow-[0_10px_30px_rgba(34,211,238,0.30)] transition-all duration-300 hover:-translate-y-1 hover:scale-105 hover:shadow-[0_15px_40px_rgba(34,211,238,0.42)] sm:flex-none sm:px-10 sm:py-3.5 sm:text-base">
-      สมัครสมาชิก TEMMAX69
+      class="group relative flex flex-1 items-center justify-center rounded-full bg-gradient-to-r from-[#ffe9a8] via-[#f5c542] to-[#b8860b] px-4 py-3 text-sm font-black whitespace-nowrap text-[#0b0503] shadow-[0_10px_30px_rgba(245,197,66,0.30)] transition-all duration-300 hover:-translate-y-1 hover:scale-105 hover:shadow-[0_15px_40px_rgba(245,197,66,0.42)] sm:flex-none sm:px-10 sm:py-3.5 sm:text-base">
+      สมัครสมาชิก 888NEO
     </a>
 
     <a
       href="/login"
-      class="group relative flex flex-1 items-center justify-center rounded-full border border-[#a855f7]/80 bg-[#160735]/85 px-4 py-3 text-sm font-black whitespace-nowrap text-[#67e8f9] backdrop-blur-sm transition-all duration-300 hover:scale-105 hover:border-[#22d3ee] hover:bg-[#2b0a5e]/85 hover:shadow-[0_15px_40px_rgba(168,85,247,0.42)] sm:flex-none sm:px-10 sm:py-3.5 sm:text-base">
+      class="group relative flex flex-1 items-center justify-center rounded-full border border-[#e01b1b]/80 bg-[#1c0a06]/85 px-4 py-3 text-sm font-black whitespace-nowrap text-[#ffe9a8] backdrop-blur-sm transition-all duration-300 hover:scale-105 hover:border-[#f5c542] hover:bg-[#2a1109]/85 hover:shadow-[0_15px_40px_rgba(224,27,27,0.42)] sm:flex-none sm:px-10 sm:py-3.5 sm:text-base">
       เข้าสู่ระบบ
     </a>
   </div>
 
-  <Faq2 title="คำถามที่พบบ่อยเกี่ยวกับ TEMMAX69" faqs={faqs} />
+  <Faq3 title="คำถามที่พบบ่อยเกี่ยวกับ 888NEO" faqs={faqs} />
 
   <ReviewCardSumo2 />
 

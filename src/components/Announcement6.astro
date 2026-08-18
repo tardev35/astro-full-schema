@@ -4,46 +4,60 @@ const {
   // and a decorative glyph baked into a text prop cannot be marked aria-hidden
   // from here — it would be read out as "soccer ball" ahead of the sentence,
   // three times over, once per marquee copy.
-  message = "NORWAY89 เว็บตรงรวมบาคาร่า สล็อต บอล และหวยไว้ในบัญชีเดียว • เมนูแยกหมวดชัด สลับจากบาคาร่าไปสล็อตหรือกีฬาได้จากหน้าเดิม • ฝากถอนออโต้ ทำรายการและดูสถานะได้จากหน้าบัญชีตลอดวัน • หน้าสมาชิกรวมเครดิต โปรโมชั่น และประวัติรายการไว้จุดเดียว • สมัครไม่กี่ขั้นตอนแล้วเข้าเลือกเกมได้ทันที",
+  message = "POE888 เว็บสีฟ้า รวมหวยไทย หวยลาว และตลาดหวยออนไลน์ไว้ในบัญชีเดียว • เลือกเลข จัดโพย และตรวจผลผ่านมือถือได้จากหน้าจอเดียว • แต่ละตลาดมีรอบและเวลาปิดรับต่างกัน เช็กข้อมูลของงวดก่อนยืนยันโพยทุกครั้ง • ระบบสมาชิกรวมโพย เครดิต และประวัติรายการไว้ในพื้นที่เดียว • ฝากถอนและจัดการเครดิตผ่านหน้าบัญชี ตรวจสอบรายการย้อนหลังได้เอง • ทางเข้า POE888 ใช้งานได้ทั้งมือถือและคอมด้วยบัญชีเดิม",
 } = Astro.props;
+
+const SCROLL_PX_PER_SEC = 50;
+const PX_PER_CHAR = 6.2;
+const TRAILING_PX = 81;
+const scrollSeconds = Math.max(12, Math.round((message.length * PX_PER_CHAR + TRAILING_PX) / SCROLL_PX_PER_SEC));
 ---
 
 <div class="mx-auto max-w-[900px] p-2">
   <div
-    class="group relative flex h-[50px] items-center overflow-hidden rounded-full border border-[#dcb96b]/40 bg-gradient-to-b from-[#191712] via-[#0a0a09] to-[#191712] p-1 shadow-[0_5px_20px_rgba(220,185,107,0.18),inset_0_1px_1px_rgba(255,255,255,0.08)]">
-    <div class="pointer-events-none absolute -top-6 left-10 h-16 w-16 rounded-full bg-[#dcb96b]/20 blur-[30px]"></div>
-    <div class="pointer-events-none absolute right-16 -bottom-6 h-16 w-16 rounded-full bg-[#b9bcc4]/15 blur-[30px]"></div>
+    class="group relative flex h-[50px] items-center overflow-hidden rounded-full border border-[#ffd93d]/40 bg-gradient-to-b from-[#04173f] via-[#020a1e] to-[#04173f] p-1 shadow-[0_5px_20px_rgba(255,217,61,0.18),inset_0_1px_1px_rgba(255,255,255,0.08)]">
+    <div class="pointer-events-none absolute -top-6 left-10 h-16 w-16 rounded-full bg-[#ffd93d]/20 blur-[30px]"></div>
+    <div class="pointer-events-none absolute right-16 -bottom-6 h-16 w-16 rounded-full bg-[#a8d4ff]/15 blur-[30px]"></div>
 
     <div
-      class="relative z-10 flex h-full shrink-0 items-center gap-1.5 rounded-full border border-[#f2dca4]/40 bg-gradient-to-b from-[#f2dca4] via-[#dcb96b] to-[#ac893a] px-3.5 shadow-[inset_0_1px_1px_rgba(255,255,255,0.6)] md:px-4">
-      <span class="h-1.5 w-1.5 animate-pulse rounded-full bg-[#141210] shadow-[0_0_6px_rgba(20,18,16,0.8)]"></span>
-      <span class="text-xs font-black tracking-wider text-[#141210] uppercase md:text-sm"><span aria-hidden="true">🎰</span> NORWAY89</span>
+      class="relative z-10 flex h-full shrink-0 items-center gap-1.5 rounded-full border border-[#ffe98a]/40 bg-gradient-to-b from-[#ffe98a] via-[#ffd93d] to-[#cd994e] px-3.5 shadow-[inset_0_1px_1px_rgba(255,255,255,0.6)] md:px-4">
+      <span class="h-1.5 w-1.5 animate-pulse rounded-full bg-[#02143a] shadow-[0_0_6px_rgba(2,20,58,0.8)]"></span>
+      <span class="text-xs font-black tracking-wider text-[#02143a] uppercase md:text-sm"><span aria-hidden="true">🎫</span> POE888</span>
     </div>
 
-    <div class="relative z-10 flex-1 overflow-hidden px-4">
-      <div class="flex w-max animate-[scroll_18s_linear_infinite] gap-10 text-sm font-bold whitespace-nowrap text-[#f2dca4]/90">
+    <div class="marquee-window relative z-10 flex-1 overflow-hidden px-4">
+      <div class="marquee-track flex w-max gap-10 text-sm font-bold whitespace-nowrap text-[#ffe98a]/90" style={`animation-duration:${scrollSeconds}s`}>
         <span>{message}</span>
-        <span aria-hidden="true" class="text-[#b9bcc4]/80">✨</span>
-        {/* Copies 2 and 3 exist so the marquee has no visible seam. Only the
-            first is announced — otherwise a screen reader reads the whole
-            notice three times in a row. */}
+        <span aria-hidden="true" class="text-[#a8d4ff]/80">✨</span>
         <span aria-hidden="true">{message}</span>
-        <span aria-hidden="true" class="text-[#b9bcc4]/80">✨</span>
+        <span aria-hidden="true" class="text-[#a8d4ff]/80">✨</span>
         <span aria-hidden="true">{message}</span>
+        <span aria-hidden="true" class="text-[#a8d4ff]/80">✨</span>
       </div>
     </div>
 
-    <div class="pointer-events-none absolute inset-x-0 bottom-0 h-[2px] bg-gradient-to-r from-transparent via-[#dcb96b]/70 to-transparent opacity-70"></div>
+    <div class="pointer-events-none absolute inset-x-0 bottom-0 h-[2px] bg-gradient-to-r from-transparent via-[#ffd93d]/70 to-transparent opacity-70"></div>
   </div>
 </div>
 
 <style>
-  @keyframes scroll {
+  .marquee-track {
+    animation: announcement6-scroll 48s linear infinite;
+  }
+  .marquee-window:hover .marquee-track {
+    animation-play-state: paused;
+  }
+  @keyframes announcement6-scroll {
     from {
       transform: translateX(0);
     }
     to {
-      transform: translateX(calc(-33.33% - 13.33px));
+      transform: translateX(-33.3333%);
+    }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .marquee-track {
+      animation: none;
     }
   }
 </style>

@@ -15,14 +15,16 @@ const links = [
   { name: "โปรโมชั่น", path: "/promotion", icon: "🎁" },
   { name: "สมัครสมาชิก", path: "/register", icon: "📝" },
   { name: "เข้าสู่ระบบ", path: "/login", icon: "🔑" },
-  { name: "ทดลองเล่น", path: "/ทดลองเล่น", icon: "🎰" },
-  { name: "เกี่ยวกับเรา", path: "/about-us", icon: "🏝️" },
+  { name: "ตรวจหวย", path: "/ตรวจหวย", icon: "🔍" },
+  { name: "แนวทาง", path: "/แนวทาง", icon: "📊" },
+  { name: "ทดลองเล่น", path: "/ทดลองเล่น", icon: "🎲" },
+  { name: "เกี่ยวกับเรา", path: "/about-us", icon: "🐼" },
   { name: "ติดต่อเรา", path: "/contact-us", icon: "💬" },
 ];
 ---
 
 <header class="sticky top-0 z-50 w-full font-sans">
-  <nav class="relative z-40 w-full bg-[#031324]/95 shadow-[0_4px_20px_rgba(0,0,0,0.55)] backdrop-blur-lg">
+  <nav class="relative z-40 w-full bg-[#020a1e]/95 shadow-[0_4px_20px_rgba(0,0,0,0.55)] backdrop-blur-lg">
     <div class="bg-theme-oklab absolute bottom-0 left-0 h-[2px] w-full opacity-80"></div>
 
     <div class="flex h-[65px] w-full items-center justify-between px-3 md:px-6 lg:h-[80px]">
@@ -32,33 +34,33 @@ const links = [
             mainLogo ? (
               <Picture
                 src={mainLogo}
-                alt="โลโก้ ANDAMAN168 ตัวอักษร ANDAMAN สีฟ้าน้ำทะเลวางบนดวงอาทิตย์สีทอง ขนาบด้วยคลื่นขาวและต้นมะพร้าว ใต้ลงมาเป็นเลข 168 สีทองพร้อมเหรียญทอง"
+                alt="โลโก้ POE888 รูปหมีแพนด้าสีขาวดำอยู่ในตัวอักษร P สีขาว ต่อด้วยตัวอักษร OE สีขาวบนกรอบสี่เหลี่ยมสีน้ำเงินขอบทอง ด้านล่างเป็นแถบสีเหลืองเขียนว่า โป888 สีน้ำเงิน"
                 widths={[140, 280, 420]}
                 sizes="140px"
                 loading="eager"
                 fetchpriority="high"
-                class="h-[35px] w-auto drop-shadow-[0_0_10px_rgba(33,212,242,0.45)] lg:h-[45px]"
+                class="h-[35px] w-auto drop-shadow-[0_0_10px_rgba(46,139,255,0.45)] lg:h-[45px]"
                 formats={["avif", "webp"]}
                 fallbackFormat="webp"
               />
             ) : (
-              <span class="bg-gradient-to-b from-[#7fe6ff] to-[#0a9ceb] bg-clip-text text-2xl font-black tracking-widest text-transparent">ANDAMAN168</span>
+              <span class="bg-gradient-to-b from-[#ffe98a] to-[#ffd93d] bg-clip-text text-2xl font-black tracking-widest text-transparent">POE888</span>
             )
           }
         </a>
       </div>
 
-      <div class="hidden h-full items-center justify-center gap-6 lg:flex xl:gap-8">
+      <div class="hidden h-full items-center justify-center gap-4 lg:flex xl:gap-7">
         {
           links.map((link) => (
             <a href={link.path} class="group relative flex h-full items-center gap-1.5 text-sm font-bold transition-all xl:text-base">
               <span aria-hidden="true" class="text-base transition-transform duration-300 group-hover:-translate-y-0.5">
                 {link.icon}
               </span>
-              <span class={`transition-colors duration-300 ${isActive(link.path) ? "text-[#ffe999] drop-shadow-[0_0_8px_rgba(253,181,36,0.7)]" : "text-[#dbeefb]/85 group-hover:text-[#7fe6ff]"}`}>
+              <span class={`transition-colors duration-300 ${isActive(link.path) ? "text-[#ffe98a] drop-shadow-[0_0_8px_rgba(255,217,61,0.7)]" : "text-[#dbeafe]/85 group-hover:text-[#a8d4ff]"}`}>
                 {link.name}
               </span>
-              {isActive(link.path) && <div class="absolute bottom-0 left-0 h-[3px] w-full rounded-t-md bg-[#fdb524] shadow-[0_-2px_10px_rgba(253,181,36,0.9)]" />}
+              {isActive(link.path) && <div class="absolute bottom-0 left-0 h-[3px] w-full rounded-t-md bg-[#ffd93d] shadow-[0_-2px_10px_rgba(255,217,61,0.9)]" />}
             </a>
           ))
         }
@@ -67,39 +69,39 @@ const links = [
       <div class="z-50 flex items-center gap-2 md:gap-4">
         <a
           href="/login"
-          class="hidden items-center justify-center gap-1.5 rounded border border-[#21d4f2]/70 px-6 py-2 text-sm font-bold text-[#7fe6ff] transition-all hover:bg-[#0a3a68]/60 hover:shadow-[0_0_15px_rgba(33,212,242,0.4)] lg:flex">
+          class="hidden items-center justify-center gap-1.5 rounded border border-[#2e8bff]/70 px-6 py-2 text-sm font-bold text-[#a8d4ff] transition-all hover:bg-[#062459]/60 hover:shadow-[0_0_15px_rgba(46,139,255,0.4)] lg:flex">
           <span aria-hidden="true">🔑</span> เข้าสู่ระบบ
         </a>
         <a
           href="/register"
-          class="bg-theme-oklab hidden items-center justify-center gap-1.5 rounded px-6 py-2 text-sm font-extrabold text-[#04182f] shadow-[0_0_20px_rgba(33,212,242,0.5)] transition-all hover:brightness-110 lg:flex">
-          <span aria-hidden="true">🐚</span> สมัครสมาชิก
+          class="bg-theme-oklab hidden items-center justify-center gap-1.5 rounded px-6 py-2 text-sm font-extrabold text-[#02143a] shadow-[0_0_20px_rgba(46,139,255,0.5)] transition-all hover:brightness-110 lg:flex">
+          <span aria-hidden="true">🎫</span> สมัครสมาชิก
         </a>
 
         <div class="flex items-center gap-2 lg:hidden">
           <a
             href="/register"
-            class="bg-theme-oklab flex items-center justify-center rounded px-3 py-1.5 text-[11px] font-bold text-[#04182f] shadow-[0_0_10px_rgba(33,212,242,0.5)] md:px-4 md:text-xs">
+            class="bg-theme-oklab flex items-center justify-center rounded px-3 py-1.5 text-[11px] font-bold text-[#02143a] shadow-[0_0_10px_rgba(46,139,255,0.5)] md:px-4 md:text-xs">
             สมัครสมาชิก
           </a>
-          <button id="hamburger-btn" class="flex flex-col items-center justify-center space-y-1.5 rounded border border-[#21d4f2]/45 bg-[#0a3a68]/40 p-1.5" aria-label="เปิดเมนู">
-            <span class="hamburger-line h-[2px] w-5 origin-center rounded-full bg-[#7fe6ff] transition-all duration-300"></span>
-            <span class="hamburger-line h-[2px] w-5 rounded-full bg-[#7fe6ff] transition-all duration-300"></span>
-            <span class="hamburger-line h-[2px] w-5 origin-center rounded-full bg-[#7fe6ff] transition-all duration-300"></span>
+          <button id="hamburger-btn" class="flex flex-col items-center justify-center space-y-1.5 rounded border border-[#2e8bff]/45 bg-[#062459]/40 p-1.5" aria-label="เปิดเมนู">
+            <span class="hamburger-line h-[2px] w-5 origin-center rounded-full bg-[#a8d4ff] transition-all duration-300"></span>
+            <span class="hamburger-line h-[2px] w-5 rounded-full bg-[#a8d4ff] transition-all duration-300"></span>
+            <span class="hamburger-line h-[2px] w-5 origin-center rounded-full bg-[#a8d4ff] transition-all duration-300"></span>
           </button>
         </div>
       </div>
     </div>
   </nav>
 
-  <div id="mobile-overlay" class="pointer-events-none fixed inset-0 z-40 bg-[#031324]/80 opacity-0 backdrop-blur-sm transition-opacity duration-300 lg:hidden"></div>
+  <div id="mobile-overlay" class="pointer-events-none fixed inset-0 z-40 bg-[#020a1e]/80 opacity-0 backdrop-blur-sm transition-opacity duration-300 lg:hidden"></div>
 
   <div
     id="mobile-sidebar"
-    class="fixed top-0 right-0 z-50 h-screen w-[260px] translate-x-full transform overflow-y-auto border-l border-[#21d4f2]/40 bg-[#031324] shadow-[-10px_0_30px_rgba(0,0,0,0.85)] transition-transform duration-400 ease-[cubic-bezier(0.3,1,0.3,1)] lg:hidden">
+    class="fixed top-0 right-0 z-50 h-screen w-[260px] translate-x-full transform overflow-y-auto border-l border-[#2e8bff]/40 bg-[#020a1e] shadow-[-10px_0_30px_rgba(0,0,0,0.85)] transition-transform duration-400 ease-[cubic-bezier(0.3,1,0.3,1)] lg:hidden">
     <div class="flex items-center justify-between border-b border-white/5 px-5 py-5">
-      <span class="text-sm font-extrabold tracking-wider text-[#dbeefb]">เมนู</span>
-      <button id="close-sidebar-btn" class="p-1 text-xl text-[#7fe6ff] hover:text-white" aria-label="ปิดเมนู">✕</button>
+      <span class="text-sm font-extrabold tracking-wider text-[#dbeafe]">เมนู</span>
+      <button id="close-sidebar-btn" class="p-1 text-xl text-[#a8d4ff] hover:text-white" aria-label="ปิดเมนู">✕</button>
     </div>
 
     <div class="flex flex-col space-y-2 px-4 pt-4 pb-8">
@@ -107,7 +109,7 @@ const links = [
         links.map((link) => (
           <a
             href={link.path}
-            class={`sidebar-item flex items-center rounded-lg border px-4 py-3.5 transition-all ${isActive(link.path) ? "border-[#21d4f2]/60 bg-[#0a3a68]/60 text-[#ffe999]" : "border-transparent bg-white/5 text-[#dbeefb]/85 hover:bg-white/10"}`}>
+            class={`sidebar-item flex items-center rounded-lg border px-4 py-3.5 transition-all ${isActive(link.path) ? "border-[#2e8bff]/60 bg-[#062459]/60 text-[#ffe98a]" : "border-transparent bg-white/5 text-[#dbeafe]/85 hover:bg-white/10"}`}>
             <span aria-hidden="true" class="mr-3 text-xl">
               {link.icon}
             </span>
@@ -116,10 +118,10 @@ const links = [
         ))
       }
 
-      <div class="mt-6 flex flex-col gap-3 border-t border-[#21d4f2]/40 pt-6">
+      <div class="mt-6 flex flex-col gap-3 border-t border-[#2e8bff]/40 pt-6">
         <a
           href="/login"
-          class="sidebar-item hover:bg-theme-oklab flex items-center justify-center gap-2 rounded-lg border border-[#fdb524]/70 bg-transparent py-3.5 text-sm font-bold text-[#ffe999] transition-colors hover:border-transparent hover:text-[#04182f]">
+          class="sidebar-item hover:bg-theme-oklab flex items-center justify-center gap-2 rounded-lg border border-[#ffd93d]/70 bg-transparent py-3.5 text-sm font-bold text-[#ffe98a] transition-colors hover:border-transparent hover:text-[#02143a]">
           <span aria-hidden="true">🔑</span> เข้าสู่ระบบ
         </a>
       </div>
@@ -129,7 +131,7 @@ const links = [
 
 <style is:global>
   .bg-theme-oklab {
-    background-image: linear-gradient(in oklab to right, #0a9ceb, #21d4f2, #7fe6ff);
+    background-image: linear-gradient(in oklab to right, #0b4ea8, #2e8bff, #a8d4ff);
   }
 
   #hamburger-btn.active .hamburger-line:nth-child(1) {
@@ -174,6 +176,9 @@ const links = [
   }
   .sidebar-item:nth-child(8) {
     transition-delay: 0.45s;
+  }
+  .sidebar-item:nth-child(9) {
+    transition-delay: 0.5s;
   }
   @media (prefers-reduced-motion: reduce) {
     .sidebar-item {

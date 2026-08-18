@@ -1,71 +1,69 @@
 ---
 import ContentBoxTwo from "./ContentBoxTwo.astro";
 
-const menus = [
-  { icon: "🀄", name: "Mahjong Ways 2", detail: "เกมฟรีสปินตัวคูณสะสม สายมีเกมประจำเข้าเกมเดิมได้ไวจากหมวดสล็อต", tag: "RTP 96.95%" },
-  { icon: "🐘", name: "Ganesha Gold", detail: "ธีมคลาสสิกจังหวะกระชับ เหมาะกับคนที่อยากลองรอบสั้นก่อนเลือกเกมประจำ", tag: "RTP 96.75%" },
-  { icon: "🧧", name: "Caishen Wins", detail: "มีสัญลักษณ์ไวลด์แจกตัวคูณ เล่นต่อเนื่องได้ยาว ๆ ด้วยเครดิตชุดเดิม", tag: "RTP 96.72%" },
-  { icon: "🐱", name: "Lucky Neko", detail: "แถวขยายตัวคูณ เป็นหนึ่งในเกมที่สมาชิกสายชอบลองของใหม่เปิดดูบ่อย", tag: "RTP 96.73%" },
-  { icon: "🏺", name: "Treasures of Aztec", detail: "ฟีเจอร์โบนัสหลายรูปแบบ สำหรับคนที่ชอบลุ้นรอบใหญ่ในเกมเดียว", tag: "RTP 96.71%" },
-  { icon: "🍬", name: "Sweet Bonanza", detail: "เข้าถึงฟีเจอร์ฟรีสปินได้เร็ว ตัดเวลาหาเกมให้สั้นลงกว่าเดิม", tag: "RTP 96.51%" },
-  { icon: "🦌", name: "Ways of the Qilin", detail: "เกมไลน์จ่ายหลายทาง เปิดจากหมวดสล็อตได้โดยตรงทั้งมือถือและคอม", tag: "RTP 96.73%" },
+const rates = [
+  { icon: "🔢", name: "3 ตัวบน", detail: "แทงเลขสามตัวตรงตามลำดับรางวัลบนของงวดที่เลือกไว้ในโพย", tag: "บาทละ 950" },
+  { icon: "🔀", name: "3 ตัวโต๊ด", detail: "เลขสามตัวชุดเดิมแต่สลับตำแหน่งได้ ใช้เลขชุดเดียวกับที่จัดไว้ในโพย", tag: "บาทละ 150" },
+  { icon: "🔻", name: "3 ตัวล่าง", detail: "แทงเลขสามตัวกับรางวัลล่างของงวด เลือกพร้อมประเภทอื่นในโพยเดียวกันได้", tag: "บาทละ 200" },
+  { icon: "🔼", name: "2 ตัวบน", detail: "เลขสองตัวกับรางวัลบน เป็นประเภทที่สมาชิกเลือกใส่โพยบ่อยที่สุด", tag: "บาทละ 95" },
+  { icon: "🔽", name: "2 ตัวล่าง", detail: "เลขสองตัวกับรางวัลล่าง แทงคู่กับ 2 ตัวบนในรายการเดียวกันได้", tag: "บาทละ 95" },
 ];
 
-const chips = ["รวมสล็อตหลายค่าย", "คาสิโนสดบาคาร่า รูเล็ต", "กีฬาออนไลน์", "ฝากถอน Auto Wallet", "ระบบออโต้ 24 ชั่วโมง", "ประวัติรายการครบ", "เข้าสู่ระบบผ่านมือถือ"];
+const chips = ["หวยไทย", "หวยลาว", "หวยฮานอย", "หวยมาเลย์", "หวยยี่กี", "จัดโพยออนไลน์", "ตรวจผลผ่านมือถือ"];
 ---
 
-<ContentBoxTwo titleleft="เข้าสู่ระบบ ANKERSPIN" titleright="ตารางเกมสล็อตค่า RTP สูงที่ ANKERSPIN เปิดให้เล่น" label="เข้าสู่ระบบ ANKERSPIN และตารางเกมสล็อตค่า RTP สูง">
+<ContentBoxTwo titleleft="เข้าสู่ระบบ POE888" titleright="ตารางอัตราจ่ายหวยออนไลน์ที่ POE888 เปิดรับ" label="เข้าสู่ระบบ POE888 และตารางอัตราจ่ายหวยออนไลน์">
   <div slot="left" class="flex h-full flex-col gap-4">
-    <div class="relative overflow-hidden rounded-2xl border border-[#a4126b]/45 bg-[#1f0611]/92 p-6 shadow-[0_10px_30px_rgba(13,2,7,0.65)] backdrop-blur-md">
-      <div aria-hidden="true" class="pointer-events-none absolute -top-10 -right-10 h-32 w-32 rounded-full bg-[#a4126b]/45 blur-[50px]"></div>
+    <div class="relative overflow-hidden rounded-2xl border border-[#0b4ea8]/50 bg-[#04173f]/92 p-6 shadow-[0_10px_30px_rgba(2,10,30,0.65)] backdrop-blur-md">
+      <div aria-hidden="true" class="pointer-events-none absolute -top-10 -right-10 h-32 w-32 rounded-full bg-[#0b4ea8]/45 blur-[50px]"></div>
 
       <div class="relative z-10 mb-5 flex items-center gap-3">
         <span
           aria-hidden="true"
-          class="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl border border-[#ff2d8f]/40 bg-gradient-to-br from-[#ffa6d5] via-[#ff2d8f] to-[#c2185b] text-xl shadow-inner">
-          ⚓
+          class="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl border border-[#ffd93d]/40 bg-gradient-to-br from-[#ffe98a] via-[#ffd93d] to-[#cd994e] text-xl shadow-inner">
+          🎫
         </span>
         <div class="flex flex-col">
-          <p class="text-base font-black text-[#ff2d8f]">เข้าสู่ระบบแล้วเลือกบริการต่อได้ทันที</p>
-          <span class="text-[11px] text-[#f9dcec]/70">บัญชีเดียวใช้เลือกสล็อต เปิดคาสิโนสด ดูกีฬา เช็กเครดิต และตามประวัติรายการของ ANKERSPIN ได้จากหน้าเดียว</span>
+          <p class="text-base font-black text-[#5aa9ff]">เข้าสู่ระบบแล้วเลือกตลาดหวยต่อได้ทันที</p>
+          <span class="text-[11px] text-[#b9cdf0]">บัญชีเดียวใช้เลือกเลข จัดโพย ตรวจผลรางวัล เช็กเครดิต และย้อนดูประวัติรายการของ POE888 ได้จากหน้าเดียว</span>
         </div>
       </div>
 
       <div class="relative z-10 flex flex-col gap-3.5">
         <div class="relative">
-          <span aria-hidden="true" class="absolute top-3.5 left-4 text-[#ff2d8f]">👤</span>
+          <span aria-hidden="true" class="absolute top-3.5 left-4 text-[#5aa9ff]">👤</span>
           <input
             type="text"
             placeholder="เบอร์โทรศัพท์ / ยูสเซอร์เนม"
-            class="w-full rounded-xl border border-[#a4126b]/60 bg-[#2c0a1a]/95 py-3 pr-4 pl-12 text-[#f9dcec] transition-all outline-none placeholder:text-[#f9dcec]/50 focus:border-[#ff2d8f] focus:ring-1 focus:ring-[#ff2d8f]/50"
+            class="w-full rounded-xl border border-[#0b4ea8]/60 bg-[#062459]/95 py-3 pr-4 pl-12 text-[#dbeafe] transition-all outline-none placeholder:text-[#b9cdf0]/70 focus:border-[#2e8bff] focus:ring-1 focus:ring-[#2e8bff]/50"
           />
         </div>
         <div class="relative">
-          <span aria-hidden="true" class="absolute top-3.5 left-4 text-[#ff2d8f]">🔑</span>
+          <span aria-hidden="true" class="absolute top-3.5 left-4 text-[#5aa9ff]">🔑</span>
           <input
             type="password"
             placeholder="รหัส PIN 4 หลัก"
-            class="w-full rounded-xl border border-[#a4126b]/60 bg-[#2c0a1a]/95 py-3 pr-4 pl-12 text-[#f9dcec] transition-all outline-none placeholder:text-[#f9dcec]/50 focus:border-[#ff2d8f] focus:ring-1 focus:ring-[#ff2d8f]/50"
+            class="w-full rounded-xl border border-[#0b4ea8]/60 bg-[#062459]/95 py-3 pr-4 pl-12 text-[#dbeafe] transition-all outline-none placeholder:text-[#b9cdf0]/70 focus:border-[#2e8bff] focus:ring-1 focus:ring-[#2e8bff]/50"
           />
         </div>
 
         <div class="flex items-center justify-between px-1 text-xs">
-          <label class="flex items-center gap-2 text-[#f9dcec]/70">
-            <input type="checkbox" class="h-3.5 w-3.5 rounded border-[#a4126b]/60 bg-[#2c0a1a] accent-[#a4126b]" />
+          <label class="flex items-center gap-2 text-[#b9cdf0]">
+            <input type="checkbox" class="h-3.5 w-3.5 rounded border-[#0b4ea8]/60 bg-[#062459] accent-[#2e8bff]" />
             จดจำฉันไว้
           </label>
-          <a href="/login" class="text-[#f9dcec]/70 transition-colors hover:text-[#ffa6d5]">ลืมรหัส PIN?</a>
+          <a href="/login" class="text-[#b9cdf0] transition-colors hover:text-[#ffe98a]">ลืมรหัส PIN?</a>
         </div>
 
         <button
-          class="mt-1 w-full rounded-xl border border-[#ff2d8f]/40 bg-gradient-to-r from-[#ffa6d5] via-[#ff2d8f] to-[#c2185b] p-3.5 font-black text-[#0d0207] shadow-[0_10px_30px_rgba(255,45,143,0.30)] transition-all hover:scale-[1.02] hover:shadow-[0_15px_40px_rgba(255,45,143,0.40)]">
+          class="mt-1 w-full rounded-xl border border-[#ffd93d]/40 bg-gradient-to-r from-[#ffe98a] via-[#ffd93d] to-[#cd994e] p-3.5 font-black text-[#02143a] shadow-[0_10px_30px_rgba(255,217,61,0.30)] transition-all hover:scale-[1.02] hover:shadow-[0_15px_40px_rgba(255,217,61,0.40)]">
           เข้าสู่ระบบ
         </button>
 
-        <div class="flex items-center gap-3 py-1 text-[11px] text-[#f9dcec]/60">
-          <span class="h-px flex-1 bg-[#a4126b]/60"></span>
+        <div class="flex items-center gap-3 py-1 text-[11px] text-[#b9cdf0]">
+          <span class="h-px flex-1 bg-[#0b4ea8]/60"></span>
           หรือ
-          <span class="h-px flex-1 bg-[#a4126b]/60"></span>
+          <span class="h-px flex-1 bg-[#0b4ea8]/60"></span>
         </div>
 
         <a
@@ -76,21 +74,21 @@ const chips = ["รวมสล็อตหลายค่าย", "คาสิ
 
         <div class="mt-1 flex items-center justify-between px-1">
           <div class="flex gap-2">
-            <span class="rounded-full border border-[#ff2d8f]/30 bg-[#2c0a1a] px-2.5 py-1 text-[10px] font-bold text-[#ff2d8f]"><span aria-hidden="true">🔒</span> เข้ารหัสข้อมูล</span>
-            <span class="rounded-full border border-[#ff6bb5]/50 bg-[#2c0a1a]/80 px-2.5 py-1 text-[10px] font-bold text-[#ff6bb5]"><span aria-hidden="true">🕐</span> Auto Wallet</span>
+            <span class="rounded-full border border-[#2e8bff]/30 bg-[#062459] px-2.5 py-1 text-[10px] font-bold text-[#5aa9ff]"><span aria-hidden="true">🔒</span> เข้ารหัสข้อมูล</span>
+            <span class="rounded-full border border-[#ffd93d]/50 bg-[#062459]/80 px-2.5 py-1 text-[10px] font-bold text-[#ffd93d]"><span aria-hidden="true">🕐</span> ตรวจผลได้ทุกวัน</span>
           </div>
-          <a href="/register" class="text-xs font-bold text-[#f9dcec]/70 transition-colors hover:text-[#ffa6d5]">สมัครสมาชิกใหม่</a>
+          <a href="/register" class="text-xs font-bold text-[#b9cdf0] transition-colors hover:text-[#ffe98a]">สมัครสมาชิกใหม่</a>
         </div>
       </div>
     </div>
   </div>
 
   <div slot="right" class="h-full">
-    <div class="flex h-full flex-col rounded-2xl border border-[#a4126b]/45 bg-[#1f0611]/92 p-5 shadow-[0_10px_30px_rgba(13,2,7,0.65)] backdrop-blur-md">
+    <div class="flex h-full flex-col rounded-2xl border border-[#0b4ea8]/50 bg-[#04173f]/92 p-5 shadow-[0_10px_30px_rgba(2,10,30,0.65)] backdrop-blur-md">
       <div class="mb-5 flex items-center justify-between gap-3">
         <div>
-          <span class="text-xs font-bold tracking-wide text-[#f9dcec]/70">เกมสล็อตที่ ANKERSPIN เปิดให้เล่นจากหมวดสล็อต พร้อมค่า RTP ตามที่ค่ายเกมประกาศ</span>
-          <div class="bg-gradient-to-r from-[#ffa6d5] via-[#ff2d8f] to-[#ff6bb5] bg-clip-text text-3xl font-black text-transparent sm:text-4xl">สล็อต • คาสิโนสด • กีฬา</div>
+          <span class="text-xs font-bold tracking-wide text-[#b9cdf0]">อัตราจ่ายของแต่ละประเภทการแทงที่ POE888 แสดงไว้บนหน้าตลาดหวยออนไลน์</span>
+          <div class="bg-gradient-to-r from-[#ffe98a] via-[#ffd93d] to-[#cd994e] bg-clip-text text-2xl font-black text-transparent sm:text-3xl">หวยไทย • หวยลาว • ฮานอย • มาเลย์</div>
         </div>
         <span class="flex items-center gap-1.5 self-start rounded-full border border-green-500/40 bg-green-900/40 px-2.5 py-1">
           <span class="h-1.5 w-1.5 animate-pulse rounded-full bg-green-500 shadow-[0_0_8px_rgba(34,197,94,0.7)]"></span>
@@ -98,36 +96,36 @@ const chips = ["รวมสล็อตหลายค่าย", "คาสิ
         </span>
       </div>
 
-      <div class="mb-2 flex items-center justify-between text-[11px] font-bold tracking-widest text-[#f9dcec]/60 uppercase">
-        <span>เกมสล็อตลิขสิทธิ์แท้</span>
-        <span>ค่า RTP</span>
+      <div class="mb-2 flex items-center justify-between text-[11px] font-bold tracking-widest text-[#b9cdf0] uppercase">
+        <span>ประเภทการแทง</span>
+        <span>อัตราจ่าย</span>
       </div>
 
       <div class="flex flex-1 flex-col gap-2.5">
         {
-          menus.map((m) => (
-            <div class="rounded-xl border border-[#a4126b]/45 bg-[#2c0a1a]/95 px-3.5 py-2.5 transition-colors hover:border-[#ff2d8f]/50 hover:bg-[#3d0f24]">
+          rates.map((r) => (
+            <div class="rounded-xl border border-[#0b4ea8]/50 bg-[#062459]/95 px-3.5 py-2.5 transition-colors hover:border-[#ffd93d]/50 hover:bg-[#083066]">
               <div class="flex items-center justify-between gap-2 text-sm">
-                <span class="flex min-w-0 items-center gap-2 font-bold text-[#f9dcec]">
+                <span class="flex min-w-0 items-center gap-2 font-bold text-[#dbeafe]">
                   <span aria-hidden="true" class="w-5 shrink-0 text-center">
-                    {m.icon}
+                    {r.icon}
                   </span>{" "}
-                  <span class="truncate">{m.name}</span>
+                  <span class="truncate">{r.name}</span>
                 </span>
-                <span class="shrink-0 rounded-full border border-[#ff2d8f]/40 bg-[#1f0611] px-2.5 py-0.5 text-[10px] font-bold text-[#ff2d8f]">{m.tag}</span>
+                <span class="shrink-0 rounded-full border border-[#ffd93d]/45 bg-[#04173f] px-2.5 py-0.5 text-[10px] font-bold text-[#ffd93d]">{r.tag}</span>
               </div>
-              <div class="mt-1.5 text-[11px] tracking-wide text-[#f9dcec]/70">{m.detail}</div>
+              <div class="mt-1.5 text-[11px] tracking-wide text-[#b9cdf0]">{r.detail}</div>
             </div>
           ))
         }
       </div>
 
       <div class="mt-4 flex flex-wrap items-center justify-center gap-2">
-        {chips.map((c) => <span class="rounded-full border border-[#a4126b]/45 bg-[#2c0a1a] px-3 py-1 text-[10px] font-bold text-[#ff6bb5]">{c}</span>)}
+        {chips.map((c) => <span class="rounded-full border border-[#0b4ea8]/50 bg-[#062459] px-3 py-1 text-[10px] font-bold text-[#a8d4ff]">{c}</span>)}
       </div>
 
-      <div class="mt-3 text-center text-[10px] tracking-wide text-[#f9dcec]/60">
-        ค่า RTP ในตารางสรุปจากที่ค่ายเกมประกาศไว้ เป็นค่าเฉลี่ยระยะยาวไม่ใช่ผลของรอบใดรอบหนึ่ง เงื่อนไขจริงให้ยึดตามหน้าเกมของ ANKERSPIN หากติดขัดตรงไหนทักไลน์ทีมงานได้ตลอด 24 ชั่วโมง
+      <div class="mt-3 text-center text-[10px] tracking-wide text-[#b9cdf0]">
+        อัตราจ่ายในตารางสรุปจากที่หน้าเว็บแสดงไว้ อาจต่างกันตามตลาดและงวดที่เลือก เงื่อนไขจริงให้ยึดตามหน้าตลาดหวยของ POE888 ก่อนยืนยันโพยทุกครั้ง หากติดขัดตรงไหนทักไลน์ทีมงานได้ตลอด 24 ชั่วโมง
       </div>
     </div>
   </div>

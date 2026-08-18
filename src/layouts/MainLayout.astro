@@ -4,8 +4,8 @@ import bgConfig from "../assets/bg.json";
 import "../styles/global.css";
 import { BRAND_NAME, BRAND_TEXT, brandProfile, fontStack, iconVersion, usesGoogleFonts } from "../lib/brandProfile";
 import { canonicalFor } from "../lib/schema";
-import Navbar from "../components/NavbarStyle10.astro";
-import Footer from "../components/FooterPremium.astro";
+import Navbar from "../components/NavbarStyle8.astro";
+import Footer from "../components/FooterStyle2.astro";
 
 // Only banner1 is ever rendered, so only banner1 is imported.
 //
@@ -54,8 +54,8 @@ const mobileBannerImg = mobileBanner
   : null;
 
 const {
-  title = "ANKERSPIN เว็บตรงลิขสิทธิ์แท้ สล็อต คาสิโนสด ฝากถอน Auto Wallet",
-  description = "ANKERSPIN รวมสล็อต คาสิโนสด กีฬา ระบบสมาชิก และฝากถอน Auto Wallet รองรับมือถือ ใช้งานง่าย พร้อมทางเข้าเว็บหลักและระบบออโต้ตลอด 24 ชั่วโมง",
+  title = "POE888 หวยออนไลน์ แทงหวยไทยลาว เว็บสีฟ้า ตรวจผลไว ถอนง่าย",
+  description = "POE888 รวมหวยไทย หวยลาว และตลาดหวยออนไลน์ไว้ในเว็บสีฟ้า พร้อมระบบสมาชิก ตรวจผลผ่านมือถือ ฝากถอนสะดวก และทางเข้าใช้งานได้ตลอดวัน",
   robots = "index, follow",
 } = Astro.props;
 
@@ -177,7 +177,7 @@ const profile = brandProfile(Astro.site);
 
           {block === "appmeta" && (
             <Fragment>
-              {profile.showAppTitle && <meta name="apple-mobile-web-app-title" content="ankerspin" />}
+              {profile.showAppTitle && <meta name="apple-mobile-web-app-title" content="poe888" />}
               <link rel="manifest" href="/site.webmanifest" />
             </Fragment>
           )}
@@ -219,7 +219,7 @@ const profile = brandProfile(Astro.site);
         background-attachment: fixed;
         background-repeat: no-repeat;
         margin: 0;
-        background-color: #0d0207;
+        background-color: #020a1e;
         font-weight: 400;
         font-family: var(--font-sans) !important;
       }
@@ -272,7 +272,7 @@ const profile = brandProfile(Astro.site);
         }
         <Image
           src={mainBanner}
-          alt="แบนเนอร์ ANKERSPIN พื้นหลังสีดำมีแสงนีออนสีชมพูบานเย็นและประกายไฟกระจายอยู่ มุมซ้ายบนเป็นโลโก้ ANKERSPIN ตัวอักษร ANKER สีชมพูต่อกับ SPIN สีขาวเงินและมีรูปสมอเรือวางทับ ถัดลงมาเป็นตัวอักษรขนาดใหญ่สีชมพูว่า ANKERSPIN และบรรทัดรองสีขาวเงินว่า เว็บตรงลิขสิทธิ์แท้ ใต้ลงมาเป็นแถบขอบมนแบ่งสามช่องเขียนว่า สล็อต, คาสิโนสด และ กีฬา พร้อมไอคอนตู้สล็อต ดีลเลอร์ และลูกฟุตบอล ถัดลงมาเป็นไอคอนกระเป๋าเงินคู่กับข้อความว่า ฝากถอน Auto Wallet และบรรทัดล่างสุดว่า รองรับมือถือ ระบบออโต้ 24 ชั่วโมง ด้านขวาเป็นพรีเซนเตอร์หญิงผมยาวสวมชุดซาตินสีชมพู ยืนอยู่กับไพ่เอซสามใบ ลูกเต๋าใส และชิปคาสิโนลายหัวใจ ฉากหลังมีป้ายนีออนเลข 777"
+          alt="แบนเนอร์ POE888 พื้นหลังสีน้ำเงินเข้มมีเส้นแสงสีฟ้าและภาพเมืองยามค่ำ มุมซ้ายบนเป็นโลโก้ POE888 รูปหมีแพนด้าในกรอบสีน้ำเงินขอบทอง ใต้ตัวอักษร POE เป็นแถบสีเหลืองเขียนว่า โป888 ตรงกลางเป็นตัวอักษรขนาดใหญ่สีทองว่า POE888 คู่กับคำว่า หวยออนไลน์ สีขาว ถัดลงมาเป็นแถบสีน้ำเงินเขียนว่า แทงหวยไทยลาว เว็บสีฟ้า และบรรทัดถัดไปว่า ตรวจผลไว ถอนง่าย ด้านล่างเป็นแถบขอบมนสามช่องพร้อมไอคอนเขียนว่า โพยออนไลน์, ตรวจผลง่าย และ ใช้งานผ่านมือถือ ด้านซ้ายเป็นโทรศัพท์ที่เปิดหน้าแทงหวยของ POE888 พร้อมใบสลากและลูกบอลหวยเลข 2 8 9 ด้านขวาเป็นพรีเซนเตอร์หญิงสวมชุดสีน้ำเงินถือใบสลากและโทรศัพท์ที่มีโลโก้ POE888 ล้อมด้วยลูกบอลหวยเลข 13 กับ 7 และเหรียญทอง"
           loading="eager"
           fetchpriority="high"
           widths={[412, 640, 828, 1024, 1280, 1600, 1900]}

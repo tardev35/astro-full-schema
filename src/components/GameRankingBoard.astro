@@ -8,25 +8,25 @@ import img5 from "../assets/providers/game5.avif";
 import img6 from "../assets/providers/game6.avif";
 
 const games = [
-  { rank: 1, name: "สล็อต PG Soft", type: "ค่ายหลักในหมวดสล็อตของ ANKERSPIN มีเกมหลายสไตล์ให้เลือกต่อจากบัญชีเดียว", menus: ["ยอดนิยม", "หลายสไตล์"], players: 5124, img: img2 },
-  { rank: 2, name: "บาคาร่าคาสิโนสด", type: "เกมโต๊ะแบบเรียลไทม์ สำหรับคนที่อยากเปลี่ยนบรรยากาศจากเกมหมุน", menus: ["เกมสด", "เกมโต๊ะ"], players: 3842, img: img5 },
-  { rank: 3, name: "สล็อต JILI", type: "เกมไลน์จ่ายหลายทาง สายชอบลองของใหม่เปลี่ยนเกมได้เรื่อย ๆ จากหมวดสล็อตเดียว", menus: ["เกมใหม่", "เล่นล่าสุด"], players: 3517, img: img6 },
-  { rank: 4, name: "สล็อต Pragmatic Play", type: "เกมโบนัสจังหวะกระชับ อยู่ในหมวดสล็อตชุดเดียวกับค่ายอื่นที่เปิดให้เล่น", menus: ["เกมโบนัส", "รอบสั้น"], players: 2905, img: img3 },
-  { rank: 5, name: "รูเล็ตและเกมโต๊ะสด", type: "หมวดสำหรับคนที่สลับไปมาระหว่างสล็อตกับคาสิโน โดยใช้บัญชีและเครดิตชุดเดียวกัน", menus: ["เรียลไทม์", "สลับหมวดได้"], players: 2431, img: img4 },
-  { rank: 6, name: "สล็อต Joker Gaming และ Habanero", type: "เกมคลาสสิกที่สายมีเกมประจำหาเจอง่าย ใช้เครดิตชุดเดิมจากระบบสมาชิกได้ทันที", menus: ["เล่นประจำ", "รายการโปรด"], players: 2108, img: img1 },
+  { rank: 1, name: "สล็อต PG Soft", type: "หมวดเกมที่สมาชิก POE888 เปิดบ่อยที่สุดเวลาพักจากตลาดหวย ใช้เครดิตชุดเดิมได้เลย", menus: ["ยอดนิยม", "หลายสไตล์"], players: 5124, img: img2 },
+  { rank: 2, name: "บาคาร่าคาสิโนสด", type: "เกมโต๊ะแบบเรียลไทม์ สำหรับคนที่อยากเปลี่ยนบรรยากาศระหว่างรอผลรางวัลรอบถัดไป", menus: ["เกมสด", "เกมโต๊ะ"], players: 3842, img: img5 },
+  { rank: 3, name: "สล็อต JILI", type: "เกมไลน์จ่ายหลายทาง เข้าจากเมนูเดียวกับตลาดหวยโดยไม่ต้องออกจากบัญชีสมาชิก", menus: ["เกมใหม่", "เล่นล่าสุด"], players: 3517, img: img6 },
+  { rank: 4, name: "สล็อต Pragmatic Play", type: "เกมโบนัสจังหวะกระชับ เหมาะกับช่วงที่ตลาดหวยปิดรับและยังรอเวลาประกาศผล", menus: ["เกมโบนัส", "รอบสั้น"], players: 2905, img: img3 },
+  { rank: 5, name: "รูเล็ตและเกมโต๊ะสด", type: "หมวดสำหรับคนที่สลับไปมาระหว่างโพยหวยกับเกมสด โดยใช้บัญชีและเครดิตชุดเดียวกัน", menus: ["เรียลไทม์", "สลับหมวดได้"], players: 2431, img: img4 },
+  { rank: 6, name: "สล็อต Joker Gaming และ Habanero", type: "เกมคลาสสิกที่หาเจอง่าย ใช้เครดิตชุดเดิมจากระบบสมาชิก POE888 ได้ทันที", menus: ["เล่นประจำ", "รายการโปรด"], players: 2108, img: img1 },
 ];
 
 const medal = (rank: number) => (rank === 1 ? "🥇" : rank === 2 ? "🥈" : rank === 3 ? "🥉" : null);
 ---
 
-<section aria-label="เกมยอดนิยมของ ANKERSPIN" class="mx-auto w-full max-w-[1300px] px-4 py-8 font-sans">
+<section aria-label="หมวดเกมและกีฬาที่สมาชิก POE888 เลือกใช้นอกจากหวย" class="mx-auto w-full max-w-[1300px] px-4 py-8 font-sans">
   <div class="mb-8 flex w-full flex-col items-center justify-center gap-2 text-center">
     <span aria-hidden="true" class="text-2xl">🏆</span>
-    <p class="bg-gradient-to-r from-[#ffa6d5] via-[#ff2d8f] to-[#ff6bb5] bg-clip-text text-2xl font-black tracking-widest text-transparent uppercase">เกมที่สมาชิก ANKERSPIN เปิดเล่นกันมากที่สุด</p>
-    <p class="max-w-3xl text-base leading-relaxed text-[#f9dcec]/75">
-      ทุกเกมในตารางนี้ใช้บัญชีและเครดิตชุดเดียวกัน เปลี่ยนหมวดไปมาได้โดยไม่ต้องสลับบัญชี ลำดับความนิยมขยับตามคนที่เข้ามาเล่นในแต่ละช่วง ไม่ได้แปลว่าเกมไหนให้อัตราจ่ายดีกว่าเกมไหน
+    <p class="bg-gradient-to-r from-[#a8d4ff] via-[#2e8bff] to-[#5aa9ff] bg-clip-text text-2xl font-black tracking-widest text-transparent uppercase">หมวดเกมที่สมาชิก POE888 เปิดใช้นอกจากตลาดหวย</p>
+    <p class="max-w-3xl text-base leading-relaxed text-[#b9cdf0]">
+      หวยยังเป็นหมวดหลักของเว็บ ส่วนรายการในตารางนี้เป็นทางเลือกเพิ่มเติมที่ใช้บัญชีและเครดิตชุดเดียวกัน เปลี่ยนหมวดไปมาได้โดยไม่ต้องสลับบัญชี ลำดับความนิยมขยับตามคนที่เข้ามาใช้งานในแต่ละช่วง ไม่ได้แปลว่าเกมไหนให้อัตราจ่ายดีกว่าเกมไหน
     </p>
-    <div class="mt-2 h-[3px] w-24 rounded-full bg-gradient-to-r from-transparent via-[#a4126b] to-transparent"></div>
+    <div class="mt-2 h-[3px] w-24 rounded-full bg-gradient-to-r from-transparent via-[#ffd93d] to-transparent"></div>
   </div>
 
   <div class="flex flex-col gap-3">
@@ -37,12 +37,12 @@ const medal = (rank: number) => (rank === 1 ? "🥇" : rank === 2 ? "🥈" : ran
           <article
             class={`group relative flex items-center gap-3 overflow-hidden rounded-2xl border p-3 backdrop-blur-md transition-all duration-300 hover:-translate-y-0.5 sm:gap-5 sm:p-4 ${
               top
-                ? "border-[#ff2d8f]/55 bg-gradient-to-r from-[#2c0a1a]/95 via-[#1f0611]/92 to-[#1f0611]/92 shadow-[0_15px_40px_rgba(255,45,143,0.28)]"
-                : "border-[#a4126b]/40 bg-[#1f0611]/92 shadow-[0_10px_30px_rgba(13,2,7,0.55)] hover:border-[#ff2d8f]/55 hover:shadow-[0_15px_40px_rgba(164,18,107,0.35)]"
+                ? "border-[#ffd93d]/55 bg-gradient-to-r from-[#062459]/95 via-[#04173f]/92 to-[#04173f]/92 shadow-[0_15px_40px_rgba(255,217,61,0.24)]"
+                : "border-[#0b4ea8]/45 bg-[#04173f]/92 shadow-[0_10px_30px_rgba(2,10,30,0.55)] hover:border-[#2e8bff]/60 hover:shadow-[0_15px_40px_rgba(11,78,168,0.35)]"
             }`}>
             <div
               aria-hidden="true"
-              class="pointer-events-none absolute top-1/2 -left-10 h-24 w-24 -translate-y-1/2 rounded-full bg-[#a4126b]/45 blur-[40px] transition-all duration-500 group-hover:bg-[#ff2d8f]/25"
+              class="pointer-events-none absolute top-1/2 -left-10 h-24 w-24 -translate-y-1/2 rounded-full bg-[#0b4ea8]/45 blur-[40px] transition-all duration-500 group-hover:bg-[#2e8bff]/25"
             />
 
             <div class="relative z-10 flex w-8 shrink-0 flex-col items-center justify-center sm:w-12">
@@ -52,14 +52,14 @@ const medal = (rank: number) => (rank === 1 ? "🥇" : rank === 2 ? "🥈" : ran
                   <span class="sr-only">อันดับ {g.rank}</span>
                 </span>
               ) : (
-                <span class="text-xl font-black text-[#ff2d8f] sm:text-2xl">#{g.rank}</span>
+                <span class="text-xl font-black text-[#5aa9ff] sm:text-2xl">#{g.rank}</span>
               )}
             </div>
 
-            <div class={`relative z-10 h-14 w-14 shrink-0 overflow-hidden rounded-xl border sm:h-16 sm:w-16 ${top ? "border-[#ff2d8f]/55" : "border-[#a4126b]/40"}`}>
+            <div class={`relative z-10 h-14 w-14 shrink-0 overflow-hidden rounded-xl border sm:h-16 sm:w-16 ${top ? "border-[#ffd93d]/55" : "border-[#0b4ea8]/45"}`}>
               <Picture
                 src={g.img}
-                alt={`ภาพหน้าปกเกมของ ${g.name} บนกระดานเกมยอดนิยมของ ANKERSPIN`}
+                alt={`ภาพหน้าปกเกมของ ${g.name} บนกระดานหมวดเกมยอดนิยมของ POE888`}
                 formats={["avif", "webp"]}
                 fallbackFormat="webp"
                 loading="lazy"
@@ -73,22 +73,22 @@ const medal = (rank: number) => (rank === 1 ? "🥇" : rank === 2 ? "🥈" : ran
 
             <div class="relative z-10 min-w-0 flex-1">
               <div class="flex items-center gap-2">
-                <p class="truncate text-base font-black text-[#f9dcec] sm:text-lg">{g.name}</p>
+                <p class="truncate text-base font-black text-[#dbeafe] sm:text-lg">{g.name}</p>
                 {top && (
-                  <span class="hidden shrink-0 rounded-full border border-[#ff2d8f]/60 bg-[#2c0a1a] px-2 py-0.5 text-[9px] font-black tracking-wider text-[#ff2d8f] sm:inline">ยอดนิยมสูงสุด</span>
+                  <span class="hidden shrink-0 rounded-full border border-[#ffd93d]/60 bg-[#062459] px-2 py-0.5 text-[9px] font-black tracking-wider text-[#ffd93d] sm:inline">ยอดนิยมสูงสุด</span>
                 )}
               </div>
-              <p class="truncate text-[11px] text-[#f9dcec]/70 sm:text-xs">{g.type}</p>
+              <p class="truncate text-[11px] text-[#b9cdf0] sm:text-xs">{g.type}</p>
 
               <div class="mt-2 flex flex-wrap items-center gap-1.5">
                 {g.menus.map((m) => (
-                  <span class="rounded-full border border-[#a4126b]/45 bg-[#2c0a1a] px-2.5 py-0.5 text-[10px] font-bold text-[#ff6bb5]">{m}</span>
+                  <span class="rounded-full border border-[#0b4ea8]/50 bg-[#062459] px-2.5 py-0.5 text-[10px] font-bold text-[#a8d4ff]">{m}</span>
                 ))}
               </div>
             </div>
 
             <div class="relative z-10 hidden shrink-0 flex-col items-end gap-1 sm:flex">
-              <span class="flex items-center gap-1.5 text-[11px] text-[#f9dcec]/70">
+              <span class="flex items-center gap-1.5 text-[11px] text-[#b9cdf0]">
                 <span class="h-1.5 w-1.5 animate-pulse rounded-full bg-green-500 shadow-[0_0_6px_rgba(34,197,94,0.6)]" />
                 <span class="tabular-nums" data-players data-base={g.players}>
                   {g.players.toLocaleString("en-US")}
@@ -99,10 +99,10 @@ const medal = (rank: number) => (rank === 1 ? "🥇" : rank === 2 ? "🥈" : ran
                 href="/register"
                 class={`rounded-full px-4 py-1.5 text-xs font-black transition-transform hover:scale-105 ${
                   top
-                    ? "bg-gradient-to-r from-[#ffa6d5] via-[#ff2d8f] to-[#c2185b] text-[#0d0207] shadow-[0_10px_30px_rgba(255,45,143,0.30)]"
-                    : "border border-[#ff2d8f]/60 bg-[#2c0a1a] text-[#ff2d8f] hover:border-[#ff2d8f] hover:bg-[#3d0f24]"
+                    ? "bg-gradient-to-r from-[#ffe98a] via-[#ffd93d] to-[#cd994e] text-[#02143a] shadow-[0_10px_30px_rgba(255,217,61,0.30)]"
+                    : "border border-[#2e8bff]/60 bg-[#062459] text-[#5aa9ff] hover:border-[#5aa9ff] hover:bg-[#083066]"
                 }`}>
-                เข้าดูเกมนี้
+                เข้าดูหมวดนี้
               </a>
             </div>
           </article>

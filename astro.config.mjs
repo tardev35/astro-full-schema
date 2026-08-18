@@ -71,7 +71,7 @@ export default defineConfig({
     "/line": "https://tinyurl.com/suhng",
   },
 
-  site: "https://ankerspin-brand.com",
+  site: "https://poe888-lotto.com",
   integrations: [
     sitemap({
       // /login, /register and /line are forwarding pages that all ship

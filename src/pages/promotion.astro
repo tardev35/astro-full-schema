@@ -1,8 +1,8 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
-import ContentBox from "../components/ContentBoxCyberCut.astro";
+import ContentBox from "../components/ContentBoxFloatingBadge.astro";
 import Navfoot from "../components/Navfoot.astro";
-import Announcement from "../components/Announcement5.astro";
+import Announcement from "../components/Announcement6.astro";
 
 import { Picture } from "astro:assets";
 
@@ -12,12 +12,12 @@ import pro3 from "../assets/slide3.png";
 import pro4 from "../assets/slide4.png";
 import { pageGraph } from "../lib/schema";
 
-const pageTitle = "โปรโมชั่น ANKERSPIN รวมภาพโปรสล็อต คาสิโนสด และระบบ Auto Wallet";
+const pageTitle = "โปรโมชั่น POE888 รวมภาพโปรหวยออนไลน์ ไทย-ลาว และอัตราจ่ายเว็บสีฟ้า";
 
-const pageHeading = "โปรโมชั่น ANKERSPIN";
+const pageHeading = "โปรโมชั่น POE888";
 
 const pageDescription =
-  "รวมภาพโปรโมชั่นของ ANKERSPIN ไว้ครบในหน้าเดียว ทั้งสล็อต คาสิโนสด กีฬา และสิทธิ์ที่มาพร้อมระบบ Auto Wallet อ่านเงื่อนไขและเกมที่ร่วมรายการบนภาพก่อนกดรับสิทธิ์";
+  "รวมภาพโปรโมชั่นและอัตราจ่ายหวยออนไลน์ของ POE888 ไว้ในหน้าเดียว ทั้งหวยไทย หวยลาว ฮานอย และมาเลย์ อ่านเงื่อนไขกับตลาดที่ร่วมรายการบนภาพก่อนสมัครและยืนยันโพย";
 
 const graph = pageGraph(Astro, {
   name: pageTitle,
@@ -36,21 +36,21 @@ const graph = pageGraph(Astro, {
   <Announcement />
 
   <ContentBox title={pageHeading} as="h1">
-    <p class="mb-8 text-left text-base leading-relaxed text-[#f9dcec]">
-      หน้านี้รวมภาพโปรโมชั่นที่ <strong class="text-[#ff2d8f]">ANKERSPIN</strong> เปิดให้สมาชิกเลือกใช้ ทั้งสล็อต คาสิโนสด กีฬา และสิทธิ์ที่มาพร้อมระบบ Auto
-      Wallet แต่ละรายการมีเกมที่ร่วม ยอดเริ่มต้น และเงื่อนไขไม่เท่ากัน จึงควรอ่านรายละเอียดบนภาพให้ครบก่อนกดรับสิทธิ์ทุกครั้ง เลือกโปรที่ตรงกับรูปแบบการเล่นได้แล้ว
-      สมัครสมาชิกจากปุ่มด้านล่างเพื่อเริ่มใช้สิทธิ์ได้ทันที
+    <p class="mb-8 text-left text-base leading-relaxed text-[#dbeafe]">
+      หน้านี้รวมภาพโปรโมชั่นและอัตราจ่ายที่ <strong class="text-[#ffd93d]">POE888</strong> เปิดให้สมาชิกดูก่อนเลือกตลาด ทั้งหวยไทย หวยลาว หวยฮานอย และหวยมาเลย์
+      แต่ละรายการมีรอบ เวลาปิดรับ และเงื่อนไขไม่เท่ากัน จึงควรอ่านรายละเอียดบนภาพให้ครบก่อนยืนยันโพยทุกครั้ง เลือกตลาดที่ติดตามได้แล้วสมัครสมาชิกจากปุ่มด้านล่าง
+      เพื่อเริ่มเลือกเลขและจัดโพยในบัญชีเดียว
     </p>
 
     <div class="grid w-full grid-cols-1 gap-6 sm:grid-cols-2">
       <Picture
         src={pro1}
-        alt="ภาพโปรโมชั่น ANKERSPIN โลโก้ ANKERSPIN มีรูปสมอเรือคร่อมตัวอักษรอยู่ด้านบน ข้อความใหญ่สีชมพูนีออนว่า ฝากถอน Auto Wallet ตามด้วยแถบ ระบบออโต้ 24 ชั่วโมง และป้ายสามช่องเขียนว่า ไม่ต้องแจ้งสลิป ใช้งานง่าย โอนไว ด้านล่างเขียนว่า รองรับทรูวอลเล็ทและธนาคารหลัก พร้อมโลโก้ truemoney wallet K+ กรุงเทพ ไทยพาณิชย์ กรุงไทย กรุงศรี และอีกมากมาย ข้างขวาเป็นพรีเซนเตอร์หญิงชุดสีชมพูถือโทรศัพท์ที่แสดงเครื่องหมายถูกและคำว่า รายการสำเร็จ"
+        alt="ภาพโปรโมชั่น POE888 ด้านบนเป็นโลโก้แพนด้าในกรอบเหลืองคำว่า POE โป888 ตามด้วยข้อความใหญ่สีทองว่า POE888 หวยออนไลน์ แถบข้อความ แทงหวยไทย-ลาว ตรวจผลไว ถอนง่าย และ เว็บสีฟ้า ใช้งานง่าย จ่ายไว มีป้ายสามช่องเขียนว่า ดูผลเร็ว ซื้อสะดวก เล่นได้ทุกวัน ด้านล่างเรียงปุ่มธงสี่ตลาดคือ หวยไทย หวยลาว หวยฮานอย หวยมาเลย์ ข้างขวาเป็นพรีเซนเตอร์หญิงชุดน้ำเงินทองถือใบสลากหวยคลี่เป็นพัด มุมซ้ายล่างเป็นแพนด้ายกนิ้วโป้งข้างกองเหรียญทอง พื้นหลังสีน้ำเงินมีลูกบอลหวยตัวเลขลอยอยู่"
         loading="lazy"
         fetchpriority="low"
         widths={[200, 400, 600]}
         sizes="(max-width: 768px) 100vw, 50vw"
-        class="mx-auto h-auto w-full rounded-xl border border-[#8f0f52]/70 object-contain shadow-[0_10px_30px_rgba(164,18,107,0.22)] transition-transform duration-300 hover:-translate-y-1 hover:border-[#ff2d8f]/60 hover:shadow-[0_15px_40px_rgba(255,45,143,0.28)]"
+        class="mx-auto h-auto w-full rounded-xl border border-[#052c69]/70 object-contain shadow-[0_10px_30px_rgba(11,78,168,0.22)] transition-transform duration-300 hover:-translate-y-1 hover:border-[#2e8bff]/60 hover:shadow-[0_15px_40px_rgba(46,139,255,0.28)]"
         decoding="async"
         formats={["avif", "webp"]}
         fallbackFormat="webp"
@@ -59,12 +59,12 @@ const graph = pageGraph(Astro, {
 
       <Picture
         src={pro2}
-        alt="ภาพโปรโมชั่น ANKERSPIN โลโก้ ANKER SPIN พร้อมสมอเรืออยู่ด้านบน ข้อความใหญ่ว่า เว็บตรงลิขสิทธิ์แท้ ตามด้วยแถบ สล็อต คาสิโนสด กีฬา และบรรทัด รวมไว้ในบัญชีเดียว ด้านล่างมีป้ายเขียนว่า ฝากถอน Auto Wallet บริการตลอด 24 ชั่วโมง และ สมัครสมาชิกผ่านมือถือ ใช้งานง่าย กลางภาพเป็นพรีเซนเตอร์หญิงสองคนในชุดสีชมพูถือไพ่ ล้อมด้วยไพ่ใบใหญ่และชิปคาสิโนสีชมพู"
+        alt="ภาพโปรโมชั่น POE888 ด้านบนเป็นโลโก้มงกุฎเหนือชื่อ POE888 ตามด้วยข้อความใหญ่สีทองว่า POE888 หวยออนไลน์ บรรทัด แทงหวยไทยลาว ตรวจผลไว ถอนง่าย และปุ่มตลาด หวยไทย หวยลาว หวยฮานอย หวยมาเลย์ มีป้ายเขียนว่า เว็บสีฟ้า และ อัตราจ่ายชัดเจน กลางภาพเป็นพรีเซนเตอร์หญิงชุดน้ำเงินทองชี้นิ้วขึ้น ข้างซ้ายมีกล่องเขียนว่า 3 ตัวบน สูงสุด 1,200 และ 2 ตัวบน สูงสุด 120 ข้างขวาเป็นตารางอัตราจ่ายว่า 3 ตัวบน บาทละ 950 3 ตัวโต๊ด บาทละ 150 3 ตัวล่าง บาทละ 200 2 ตัวบน บาทละ 95 และ 2 ตัวล่าง บาทละ 95 แถบล่างเขียนว่า ระบบปลอดภัย ออกรางวัลไว ถอนง่ายจ่ายจริง พร้อมไลน์ @POE888"
         loading="lazy"
         fetchpriority="low"
         widths={[200, 400, 600]}
         sizes="(max-width: 768px) 100vw, 50vw"
-        class="mx-auto h-auto w-full rounded-xl border border-[#8f0f52]/70 object-contain shadow-[0_10px_30px_rgba(164,18,107,0.22)] transition-transform duration-300 hover:-translate-y-1 hover:border-[#ff2d8f]/60 hover:shadow-[0_15px_40px_rgba(255,45,143,0.28)]"
+        class="mx-auto h-auto w-full rounded-xl border border-[#052c69]/70 object-contain shadow-[0_10px_30px_rgba(11,78,168,0.22)] transition-transform duration-300 hover:-translate-y-1 hover:border-[#2e8bff]/60 hover:shadow-[0_15px_40px_rgba(46,139,255,0.28)]"
         decoding="async"
         formats={["avif", "webp"]}
         fallbackFormat="webp"
@@ -73,12 +73,12 @@ const graph = pageGraph(Astro, {
 
       <Picture
         src={pro3}
-        alt="ภาพโปรโมชั่น ANKERSPIN ชื่อ ANKERSPIN ใต้สมอเรือติดมงกุฎ ข้อความใหญ่ว่า เว็บตรงลิขสิทธิ์แท้ ตามด้วยบรรทัด สล็อต คาสิโนสด ฝากถอน Auto Wallet กลางภาพเป็นการ์ดสี่ช่องเขียนว่า รวมสล็อต หลายค่าย เล่นง่าย คาสิโนสด บาคาร่า รูเล็ต ครบ Auto Wallet ฝากถอน 24 ชม. และ สมัครผ่านมือถือ เริ่มเล่นได้ไว ปิดท้ายด้วยแถบเขียนว่า บัญชีเดียวครบทุกหมวด ข้างขวาเป็นพรีเซนเตอร์หญิงชุดสีชมพูถือชิปคาสิโน มีเหรียญทองและกล่องของขวัญ"
+        alt="ภาพโปรโมชั่น POE888 มุมซ้ายบนเป็นแพนด้าถือธนบัตรคู่กับป้ายชื่อ POE888 ตามด้วยข้อความใหญ่สีทองว่า POE888 หวยออนไลน์ แถบ แทงหวยไทยลาว และ เว็บสีฟ้า ตรวจผลไว ถอนง่าย ข้างขวาเรียงปุ่มตลาดพร้อมธงคือ หวยไทย หวยลาว ฮานอย หวยมาเลย์ กลางภาพเป็นพรีเซนเตอร์หญิงชุดน้ำเงินเหลืองถือใบสลากหวยคลี่เป็นพัด ด้านล่างมีกล่องสองช่องเขียนว่า 2 ตัว บาทละ 95 และ 3 ตัว บาทละ 950 พื้นหลังสีน้ำเงินมีลูกบอลหวยตัวเลขลอยอยู่"
         loading="lazy"
         fetchpriority="low"
         widths={[200, 400, 600]}
         sizes="(max-width: 768px) 100vw, 50vw"
-        class="mx-auto h-auto w-full rounded-xl border border-[#8f0f52]/70 object-contain shadow-[0_10px_30px_rgba(164,18,107,0.22)] transition-transform duration-300 hover:-translate-y-1 hover:border-[#ff2d8f]/60 hover:shadow-[0_15px_40px_rgba(255,45,143,0.28)]"
+        class="mx-auto h-auto w-full rounded-xl border border-[#052c69]/70 object-contain shadow-[0_10px_30px_rgba(11,78,168,0.22)] transition-transform duration-300 hover:-translate-y-1 hover:border-[#2e8bff]/60 hover:shadow-[0_15px_40px_rgba(46,139,255,0.28)]"
         decoding="async"
         formats={["avif", "webp"]}
         fallbackFormat="webp"
@@ -87,12 +87,12 @@ const graph = pageGraph(Astro, {
 
       <Picture
         src={pro4}
-        alt="ภาพโปรโมชั่น ANKERSPIN ข้อความใหญ่ว่า ANKERSPIN สล็อต ตามด้วยแถบ รวมเกมหลายค่าย เล่นง่ายผ่านมือถือ และเครื่องหมายถูกสองข้อว่า เว็บตรงลิขสิทธิ์แท้ และ ไม่มีขั้นต่ำ กลางภาพเป็นโทรศัพท์ที่เปิดล็อบบี้เกมสล็อตหลายเกม ข้างขวาเป็นวงล้อ 777 กับป้าย BIG WIN ด้านล่างเรียงโลโก้ค่ายเกม PG Pocket Games Soft JILI Pragmatic Play Habanero และ Joker Gaming มีพรีเซนเตอร์หญิงชุดเลื่อมสีชมพูอยู่ด้านหลัง"
+        alt="ภาพโปรโมชั่น POE888 ด้านบนเป็นโลโก้แพนด้าคู่กับชื่อ POE888 ตามด้วยข้อความใหญ่สีทองว่า POE888 หวยออนไลน์ แถบ แทงหวยไทย-ลาว ตรวจผลไว ถอนง่าย และ เว็บสีฟ้า ใช้งานง่าย จ่ายไว มีป้ายเขียนว่า ดูผลเร็ว ถอนสะดวก เล่นได้ทุกวัน ด้านล่างเรียงปุ่มธงสี่ตลาดคือ หวยไทย หวยลาว หวยฮานอย หวยมาเลย์ กลางภาพเป็นพรีเซนเตอร์หญิงชุดน้ำเงินเหลืองถือใบสลากหวยและโทรศัพท์ที่เปิดหน้าแอป POE888 พื้นหลังสีน้ำเงินมีลูกบอลหวยตัวเลขและเหรียญทองลอยอยู่"
         loading="lazy"
         fetchpriority="low"
         widths={[200, 400, 600]}
         sizes="(max-width: 768px) 100vw, 50vw"
-        class="mx-auto h-auto w-full rounded-xl border border-[#8f0f52]/70 object-contain shadow-[0_10px_30px_rgba(164,18,107,0.22)] transition-transform duration-300 hover:-translate-y-1 hover:border-[#ff2d8f]/60 hover:shadow-[0_15px_40px_rgba(255,45,143,0.28)]"
+        class="mx-auto h-auto w-full rounded-xl border border-[#052c69]/70 object-contain shadow-[0_10px_30px_rgba(11,78,168,0.22)] transition-transform duration-300 hover:-translate-y-1 hover:border-[#2e8bff]/60 hover:shadow-[0_15px_40px_rgba(46,139,255,0.28)]"
         decoding="async"
         formats={["avif", "webp"]}
         fallbackFormat="webp"
@@ -103,8 +103,8 @@ const graph = pageGraph(Astro, {
     <div class="mt-12 flex justify-center pb-4">
       <a
         href="/register"
-        class="flex items-center justify-center rounded-lg border border-[#ff6bb5]/60 bg-gradient-to-r from-[#ffa6d5] via-[#ff2d8f] to-[#c2185b] px-10 py-3.5 text-lg font-black text-[#0d0207] shadow-[0_10px_30px_rgba(164,18,107,0.28)] transition-transform hover:scale-105 hover:shadow-[0_15px_40px_rgba(255,45,143,0.4)]">
-        สมัครสมาชิก ANKERSPIN
+        class="flex items-center justify-center rounded-lg border border-[#ffe98a]/60 bg-gradient-to-r from-[#ffe98a] via-[#ffd93d] to-[#cd994e] px-10 py-3.5 text-lg font-black text-[#02143a] shadow-[0_10px_30px_rgba(11,78,168,0.28)] transition-transform hover:scale-105 hover:shadow-[0_15px_40px_rgba(255,217,61,0.4)]">
+        สมัครสมาชิก POE888
       </a>
     </div>
   </ContentBox>

@@ -1,62 +1,63 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
-import Announcement5 from "../components/Announcement5.astro";
+import Announcement6 from "../components/Announcement6.astro";
 import ContentBox from "../components/ContentBox.astro";
-import ContentBoxPremium from "../components/ContentBoxPremium.astro";
-import ContentBoxCyberCut from "../components/ContentBoxCyberCut.astro";
-import ContentBoxTwoPremium from "../components/ContentBoxTwoPremium.astro";
-import ContentBoxTwoCyberCut from "../components/ContentBoxTwoCyberCut.astro";
-import ContentBoxSevenThreePremium from "../components/ContentBoxSevenThreePremium.astro";
-import ContentBoxSevenThreeCyberCut from "../components/ContentBoxSevenThreeCyberCut.astro";
+import ContentBoxNeumorphism from "../components/ContentBoxNeumorphism.astro";
+import ContentBoxFloatingBadge from "../components/ContentBoxFloatingBadge.astro";
+import ContentBoxTwoNeumorphism from "../components/ContentBoxTwoNeumorphism.astro";
+import ContentBoxTwoFloatingBadge from "../components/ContentBoxTwoFloatingBadge.astro";
+import ContentBoxSevenThreeNeumorphism from "../components/ContentBoxSevenThreeNeumorphism.astro";
+import ContentBoxSevenThreeFloatingBadge from "../components/ContentBoxSevenThreeFloatingBadge.astro";
 import ContentBoxSpecial from "../components/ContentBoxSpecial.astro";
+import LottoGrid from "../components/LottoGrid.astro";
 import ProviderGrid from "../components/ProviderGrid.astro";
 import GameRankingBoard from "../components/GameRankingBoard.astro";
-import LatestWinnersCyber from "../components/LatestWinnersCyber.astro";
+import LatestWinners4 from "../components/LatestWinners4.astro";
 import SmoothCarousel from "../components/SmoothCarousel.astro";
 import LoginRtpSection from "../components/LoginRtpSection.astro";
-import Faq4 from "../components/Faq4.astro";
+import Faq2 from "../components/Faq2.astro";
 import ReviewCardSumo2 from "../components/ReviewCardSumo2.astro";
 import Navfoot from "../components/Navfoot.astro";
 
 import { Picture } from "astro:assets";
 import { pageGraph } from "../lib/schema";
-import imgSlot from "../assets/slide4.png";
-import imgWallet from "../assets/slide1.png";
+import imgMarket from "../assets/slide1.png";
+import imgMobile from "../assets/slide4.png";
 
-const pageTitle = "ANKERSPIN เว็บตรงลิขสิทธิ์แท้ สล็อต คาสิโนสด ฝากถอน Auto Wallet";
+const pageTitle = "POE888 หวยออนไลน์ แทงหวยไทยลาว เว็บสีฟ้า ตรวจผลไว ถอนง่าย";
 
 const pageDescription =
-  "ANKERSPIN รวมสล็อต คาสิโนสด กีฬา ระบบสมาชิก และฝากถอน Auto Wallet รองรับมือถือ ใช้งานง่าย พร้อมทางเข้าเว็บหลักและระบบออโต้ตลอด 24 ชั่วโมง";
+  "POE888 รวมหวยไทย หวยลาว และตลาดหวยออนไลน์ไว้ในเว็บสีฟ้า พร้อมระบบสมาชิก ตรวจผลผ่านมือถือ ฝากถอนสะดวก และทางเข้าใช้งานได้ตลอดวัน";
 
 const announcement =
-  "ANKERSPIN รวมสล็อต คาสิโนสด กีฬา ระบบสมาชิก และฝากถอน Auto Wallet ไว้ในบัญชีเดียว รองรับทั้งมือถือและคอม • เว็บตรงลิขสิทธิ์แท้ วางบริการหลักไว้ครบ เลือกความบันเทิงได้ตามสไตล์จากเมนูหลักบนมือถือ • สล็อตรวมเกมหลายค่ายหลายสไตล์ ตั้งแต่เกมคลาสสิก เกมโบนัส ไปจนถึงเกมที่มีฟีเจอร์แตกต่างกัน • คาสิโนสดมีบาคาร่า รูเล็ต และเกมโต๊ะ ใช้บัญชีสมาชิกชุดเดิมเข้าเล่นได้ทันที • กีฬาออนไลน์เลือกคู่แข่งขันและรายการที่สนใจได้จากหน้าเดียว • ฝากถอน Auto Wallet เชื่อมเครดิตกับบัญชีสมาชิกโดยตรง ระบบออโต้รับรายการตลอด 24 ชั่วโมง • สมัครสมาชิกผ่านมือถือได้ตั้งแต่กรอกข้อมูลไปจนยืนยันตามขั้นตอนของระบบ • หน้าสมาชิกรวมเครดิต โปรโมชั่น และประวัติรายการไว้ที่เดียว • ทางเข้าเว็บหลักใช้งานได้ทั้งมือถือและคอมด้วยข้อมูลสมาชิกเดิม";
+  "POE888 เว็บสีฟ้า รวมหวยไทย หวยลาว หวยฮานอย และหวยมาเลย์ไว้ในบัญชีเดียว รองรับทั้งมือถือและคอม • หวยไทยเลือกเลขและจัดรายการไว้ในโพยก่อนยืนยัน ตรวจเลขและยอดรวมได้จากหน้าจอเดียว • หวยลาวแยกตลาดและรอบตามช่วงที่เปิดรับ เช็กข้อมูลของรายการก่อนส่งโพยได้ทุกครั้ง • แต่ละตลาดมีรอบและเวลาปิดรับต่างกัน ควรเช็กข้อมูลของงวดก่อนยืนยันโพย • หลังผลออกนำผลหวยมาเทียบกับเลขที่บันทึกไว้ในโพยได้จากบัญชีเดิม • ระบบสมาชิกรวมโพย เครดิต และประวัติรายการไว้ในพื้นที่เดียว • ฝากถอนและจัดการเครดิตผ่านหน้าบัญชี ตรวจสอบยอดที่เกี่ยวข้องได้จากระบบเดียว • นอกจากหวยยังมีหมวดเกมและกีฬาเป็นตัวเลือกเพิ่มเติมด้วยบัญชีเดียวกัน • ทางเข้า POE888 เว็บสีฟ้าใช้งานได้ทั้งมือถือและคอมด้วยบัญชีเดิม";
 
-const slotAlt =
-  "ภาพโปรโมชั่น ANKERSPIN พื้นหลังโทนชมพูนีออนบนดำ มีเหรียญทองและชิปคาสิโนสีชมพูกระจายอยู่ ด้านบนเป็นโลโก้ ANKERSPIN พร้อมสมอเรือ ตรงกลางเป็นตัวอักษรขนาดใหญ่ว่า สล็อต ถัดลงมาเขียนว่า รวมเกมหลายค่าย และ เล่นง่ายผ่านมือถือ ด้านซ้ายเป็นเครื่องหมายถูกคู่กับข้อความว่า เว็บตรงลิขสิทธิ์แท้ และ ไม่มีขั้นต่ำ ตรงกลางเป็นภาพโทรศัพท์ที่เปิดหน้าล็อบบี้สล็อตของ ANKERSPIN เรียงเกมเป็นตาราง ด้านขวาเป็นวงล้อสล็อต 777 พร้อมป้ายว่า BIG WIN และพรีเซนเตอร์หญิงสวมชุดเลื่อมสีชมพู แถวล่างเป็นโลโก้ค่ายเกม PG Pocket Games Soft, JILI, PRAGMATIC PLAY, HABANERO และ JOKER GAMING";
+const marketAlt =
+  "ภาพโปรโมชั่น POE888 พื้นหลังโทนน้ำเงินสดใส มีลูกบอลหวยหมายเลข 9 3 8 5 4 และ 7 กับสลากลอตเตอรี่ลอยอยู่รอบภาพ ด้านบนเป็นโลโก้ POE888 รูปหมีแพนด้าในตัวอักษร P พร้อมข้อความว่า โป888 ตรงกลางเป็นตัวอักษรทองขนาดใหญ่ว่า POE888 คู่กับคำว่า หวยออนไลน์ ถัดลงมาเป็นป้ายเขียนว่า แทงหวยไทย-ลาว ตรวจผลไว ถอนง่าย และ เว็บสีฟ้า ใช้งานง่าย จ่ายไว ใต้ลงมาเป็นป้ายสามช่องพร้อมไอคอนเขียนว่า ดูผลเร็ว ซื้อสะดวก และ เล่นได้ทุกวัน ด้านขวาเป็นพรีเซนเตอร์หญิงสวมชุดสีน้ำเงินสลับทองสกรีนคำว่า POE888 ถือสลากลอตเตอรี่คลี่เป็นพัด ด้านซ้ายล่างเป็นมาสคอตแพนด้าถือเหรียญทองพร้อมป้ายชื่อ POE888 แถวล่างสุดเป็นปุ่มธงสี่ตลาดเขียนว่า หวยไทย หวยลาว หวยฮานอย และ หวยมาเลย์";
 
-const walletAlt =
-  "ภาพโปรโมชั่น ANKERSPIN พื้นหลังโทนชมพูนีออนมีชิปคาสิโนลายดอลลาร์ลอยอยู่ ด้านบนเป็นโลโก้ ANKERSPIN พร้อมสมอเรือและสายฟ้า ตรงกลางเป็นตัวอักษรขนาดใหญ่ว่า ฝากถอน คู่กับคำว่า Auto Wallet สีเงิน ถัดลงมาเป็นป้ายเขียนว่า ระบบออโต้ 24 ชั่วโมง พร้อมรูปนาฬิกา ใต้ลงมาเป็นป้ายสามช่องเขียนว่า ไม่ต้องแจ้งสลิป, ใช้งานง่าย และ โอนไว ถัดลงมาเขียนว่า รองรับทรูวอลเล็ตและธนาคารหลัก พร้อมโลโก้ truemoney wallet, K+, กรุงเทพ, ไทยพาณิชย์, กรุงไทย, กรุงศรี และข้อความว่า และอีกมากมาย ด้านขวาเป็นพรีเซนเตอร์หญิงสวมชุดสีชมพูถือโทรศัพท์ที่แสดงข้อความว่า รายการสำเร็จ SUCCESS";
+const mobileAlt =
+  "ภาพโปรโมชั่น POE888 พื้นหลังโทนน้ำเงิน มีลูกบอลหวยหมายเลข 9 10 1 11 และ 7 กับเหรียญทองกระจายอยู่ ด้านบนซ้ายเป็นโลโก้ POE888 รูปหมีแพนด้าในตัวอักษร P ตรงกลางเป็นตัวอักษรทองขนาดใหญ่ว่า POE888 คู่กับคำว่า หวยออนไลน์ ถัดลงมาเป็นป้ายเขียนว่า แทงหวยไทย-ลาว ตรวจผลไว ถอนง่าย และ เว็บสีฟ้า ใช้งานง่าย จ่ายไว ใต้ลงมาเป็นแถบเดียวพร้อมไอคอนเขียนว่า ดูผลเร็ว ถอนสะดวก และ เล่นได้ทุกวัน ด้านขวาเป็นพรีเซนเตอร์หญิงสวมชุดเชียร์สีน้ำเงินสลับเหลืองสกรีนคำว่า POE888 มือหนึ่งถือใบโพยหวยคลี่เป็นพัด อีกมือถือโทรศัพท์ที่เปิดหน้าแอป POE888 แสดงรายการตลาดหวย แถวล่างเป็นปุ่มธงสี่ตลาดวางบนเวทีสีฟ้าเขียนว่า หวยไทย หวยลาว หวยฮานอย และ หวยมาเลย์";
 
 const faqs = [
   {
-    q: "ANKERSPIN เว็บตรงลิขสิทธิ์แท้ มีเกมและบริการอะไรให้เลือกบ้าง",
-    a: "ANKERSPIN วางบริการหลักไว้ครบทั้งสล็อต คาสิโนสด และกีฬาออนไลน์ พร้อมระบบสมาชิกและฝากถอนอัตโนมัติ สมาชิกจึงเลือกความบันเทิงได้ตามสไตล์จากบัญชีเดียว แต่ละหมวดเข้าถึงได้จากเมนูหลักบนมือถือ ไม่ต้องเปิดหลายเว็บเพื่อเปลี่ยนเกม",
+    q: "POE888 หวยออนไลน์ มีตลาดไหนให้เลือกแทงบ้าง",
+    a: "POE888 วางหวยไทยและหวยลาวเป็นตลาดหลัก พร้อมพื้นที่สำหรับหวยออนไลน์ประเภทอื่นอย่างหวยฮานอยและหวยมาเลย์ ทำให้สมาชิกเลือกตลาดที่ติดตามและจัดโพยผ่านบัญชีเดียวได้ แต่ละตลาดมีรอบและเวลาปิดรับต่างกัน จึงควรเช็กข้อมูลของงวดก่อนยืนยันโพยทุกครั้ง",
   },
   {
-    q: "สล็อต ANKERSPIN รวมเกมหลายค่ายและหลายสไตล์ไว้แบบไหน",
-    a: "ANKERSPIN รวมเกมสล็อตหลายรูปแบบ ตั้งแต่เกมคลาสสิก เกมโบนัส ไปจนถึงเกมที่มีฟีเจอร์แตกต่างกัน การแบ่งเกมเป็นหมวดช่วยให้ค้นหาง่ายขึ้น เลือกแล้วเข้าเล่นต่อได้ทันที ทั้งสายมีเกมประจำและสายชอบลองของใหม่จึงมีตัวเลือกของตัวเอง",
+    q: "หวยไทยและหวยลาวของ POE888 เลือกเลขและจัดโพยอย่างไร",
+    a: "หวยไทย POE888 ให้สมาชิกเลือกเลขและจัดรายการที่ต้องการไว้ในโพยก่อนยืนยัน จึงตรวจเลขและยอดรวมอีกครั้งได้จากหน้าจอเดียว ส่วนหวยลาวแยกตลาดและรอบให้เลือกตามช่วงที่เปิดรับ พร้อมตรวจสอบข้อมูลของรายการก่อนส่งโพยผ่านมือถือได้เช่นกัน",
   },
   {
-    q: "คาสิโนสดและกีฬาออนไลน์ของ ANKERSPIN มีอะไรให้เลือก",
-    a: "คาสิโนสดเพิ่มทางเลือกอย่างบาคาร่า รูเล็ต และเกมโต๊ะ ส่วนหมวดกีฬาออนไลน์จัดการแข่งขันและรายการให้เลือกจากหน้าเดียว ทั้งสองหมวดใช้บัญชีสมาชิกชุดเดิม จึงเปลี่ยนจากดูบอลสดไปสล็อตหรือคาสิโนได้สะดวกโดยไม่ต้องมีหลายบัญชี",
+    q: "ตรวจผลหวยออนไลน์แล้วเช็กเลขที่แทงไว้ได้อย่างไร",
+    a: "หลังผลออก สมาชิกสามารถนำผลหวยมาเทียบกับเลขที่บันทึกไว้ในโพย เพื่อดูผลของแต่ละรายการโดยไม่ต้องจำตัวเลขทั้งหมดเอง POE888 เก็บประวัติโพยไว้กับบัญชี ทำให้ย้อนดูรายการก่อนหน้าได้ง่ายแม้จะส่งโพยไว้หลายงวดหลายตลาด",
   },
   {
-    q: "ฝากถอน Auto Wallet และระบบออโต้ของ ANKERSPIN ทำงานอย่างไร",
-    a: "Auto Wallet ช่วยให้การฝากถอนเชื่อมกับเครดิตในบัญชีสมาชิกโดยตรง ลดขั้นตอนก่อนเข้าเกมและตรวจสอบยอดได้จากระบบเดียว ระบบออโต้รองรับการส่งรายการตลอด 24 ชั่วโมง สมาชิกเช็กเครดิตและสถานะจากบัญชีของตัวเองได้โดยไม่ต้องรอขั้นตอนแบบแมนนวลทุกครั้ง",
+    q: "ระบบสมาชิกและการฝากถอนเครดิตของ POE888 อยู่ตรงไหน",
+    a: "ระบบสมาชิก POE888 รวมโพย เครดิต และประวัติรายการไว้ในพื้นที่เดียว สมาชิกจึงตรวจสอบได้ว่ามีรายการไหนส่งแล้วหรือเคยใช้งานตลาดใดบ้าง ส่วนการจัดการเครดิตทำผ่านหน้าบัญชีได้โดยตรง พร้อมตรวจสอบรายการฝากถอนและยอดที่เกี่ยวข้องจากระบบเดียว",
   },
   {
-    q: "ทางเข้าเว็บหลักและระบบสมาชิก ANKERSPIN ใช้งานผ่านมือถือกับคอมอย่างไร",
-    a: "ทางเข้าเว็บหลักรองรับทั้งมือถือและคอม สมาชิกใช้ข้อมูลบัญชีเดิมเพื่อเข้าสู่ระบบและเข้าถึงสล็อต คาสิโน กีฬา รวมถึงระบบ Auto Wallet ได้จากจุดเดียว หน้าสมาชิกยังรวมเครดิต โปรโมชั่น และประวัติรายการไว้ในพื้นที่เดียวให้ตรวจสอบได้ง่าย",
+    q: "ทางเข้า POE888 เว็บสีฟ้า ใช้งานผ่านมือถือและคอมอย่างไร",
+    a: "ทางเข้า POE888 เว็บสีฟ้ารองรับทั้งมือถือและคอม สมาชิกใช้บัญชีเดิมเพื่อเข้าถึงตลาดหวย โพย ผลรางวัล และข้อมูลส่วนตัวได้จากจุดเดียว การใช้ทางเข้าหลักยังช่วยลดความสับสนจากชื่อเว็บไซต์ที่คล้ายกันบนผลค้นหา และนอกจากหวยยังมีหมวดเกมกับกีฬาเป็นตัวเลือกเพิ่มเติม",
   },
 ];
 
@@ -70,37 +71,24 @@ const graph = pageGraph(Astro, {
 <MainLayout title={pageTitle} description={pageDescription}>
   <script type="application/ld+json" set:html={graph} />
 
-  <Announcement5 message={announcement} />
+  <Announcement6 message={announcement} />
 
-  <ContentBoxPremium as="h1" title="ANKERSPIN รวมสล็อต คาสิโนสด กีฬา และระบบ Auto Wallet ไว้ในบัญชีเดียว">
+  <ContentBoxNeumorphism as="h1" title="POE888 เว็บสีฟ้า รวมหวยออนไลน์ ไทยลาว ตรวจผลและจัดการโพยในบัญชีเดียว">
     <div class="flex flex-col gap-4">
-      <p class="text-left text-base leading-relaxed text-[#f9dcec]">
-        <strong class="text-[#ff2d8f]">ANKERSPIN</strong> รวมสล็อต คาสิโนสด กีฬา ระบบสมาชิก และการจัดการเครดิตไว้ในบัญชีเดียว รองรับมือถือและคอม ทำให้เลือกเกมหรือเปลี่ยนหมวดได้โดยไม่ต้องเริ่มใหม่หลายรอบ
+      <p class="text-left text-base leading-relaxed text-[#dbeafe]">
+        <strong class="text-[#ffd93d]">POE888</strong> เน้นหวยออนไลน์เป็นหมวดหลัก รวมการเลือกเลข จัดโพย ตรวจผล และดูประวัติรายการไว้ในบัญชีเดียว รองรับมือถือ เหมาะกับคนที่ติดตามทั้งหวยไทยและหวยลาวเป็นประจำ
       </p>
-      <p class="text-left text-base leading-relaxed text-[#f9dcec]">
-        ระบบ Auto Wallet ช่วยเชื่อมการฝากถอนเข้ากับบัญชีสมาชิกโดยตรง ใช้งานต่อได้ตลอดวัน เพราะเวลามีราคา เรื่องง่าย ๆ จึงไม่ควรใช้เวลาระดับประชุมผู้ถือหุ้น
+      <p class="text-left text-base leading-relaxed text-[#dbeafe]">
+        เว็บสีฟ้าจัดเมนูให้เข้าถึงตลาดหวยและข้อมูลสมาชิกได้จากจุดเดียว ลดการสลับหลายหน้า เพราะเรื่องตัวเลขซับซ้อนพอแล้ว หน้าเว็บไม่จำเป็นต้องมาช่วยเพิ่มโจทย์
       </p>
     </div>
-  </ContentBoxPremium>
+  </ContentBoxNeumorphism>
 
-  <ContentBoxCyberCut as="h2" title="ANKERSPIN เว็บตรงลิขสิทธิ์แท้ มีเกมและบริการอะไรให้เลือกบ้าง">
-    <div class="flex flex-col gap-4">
-      <p class="text-left text-base leading-relaxed text-[#f9dcec]">
-        ANKERSPIN วางบริการหลักไว้ครบทั้งสล็อต คาสิโนสด และกีฬาออนไลน์ พร้อมระบบสมาชิกและฝากถอนอัตโนมัติ สมาชิกจึงเลือกความบันเทิงได้ตามสไตล์จากบัญชีเดียว
-      </p>
-      <p class="text-left text-base leading-relaxed text-[#f9dcec]">
-        แต่ละหมวดเข้าถึงได้จากเมนูหลักบนมือถือ ไม่ต้องเปิดหลายเว็บเพื่อเปลี่ยนเกม ของเยอะเป็นเรื่องดี ถ้าจัดไว้เป็นที่ก็ยิ่งดูแพง
-      </p>
-    </div>
-  </ContentBoxCyberCut>
-
-  <ProviderGrid />
-
-  <ContentBoxSevenThreePremium as="h2" titleright="สล็อต ANKERSPIN รวมเกมหลายค่ายและหลายสไตล์ไว้แบบไหน">
+  <ContentBoxSevenThreeNeumorphism as="h2" titleright="POE888 หวยออนไลน์ มีตลาดไหนให้เลือกแทงบ้าง">
     <Picture
       slot="left"
-      src={imgSlot}
-      alt={slotAlt}
+      src={imgMarket}
+      alt={marketAlt}
       loading="lazy"
       fetchpriority="low"
       widths={[200, 400, 600]}
@@ -109,137 +97,152 @@ const graph = pageGraph(Astro, {
       formats={["avif", "webp"]}
       fallbackFormat="webp"
       quality={80}
-      class="mx-auto h-auto w-full rounded-2xl border border-[#ff2d8f]/40 shadow-[0_10px_30px_rgba(164,18,107,0.30)]"
+      class="mx-auto h-auto w-full rounded-2xl border border-[#2e8bff]/40 shadow-[0_10px_30px_rgba(11,78,168,0.30)]"
     />
     <div slot="right" class="flex flex-col gap-4">
-      <p class="text-left text-base leading-relaxed text-[#f9dcec]">
-        ANKERSPIN รวมเกมสล็อตหลายรูปแบบ ตั้งแต่เกมคลาสสิก เกมโบนัส ไปจนถึงเกมที่มีฟีเจอร์แตกต่างกัน ทำให้ทั้งสายมีเกมประจำและสายชอบลองของใหม่มีตัวเลือก
+      <p class="text-left text-base leading-relaxed text-[#dbeafe]">
+        POE888 วางหวยไทยและหวยลาวเป็นตลาดหลัก พร้อมพื้นที่สำหรับหวยออนไลน์ประเภทอื่น ทำให้สมาชิกเลือกตลาดที่ติดตามและจัดโพยผ่านบัญชีเดียวได้
       </p>
-      <p class="text-left text-base leading-relaxed text-[#f9dcec]">
-        การแบ่งเกมเป็นหมวดช่วยให้ค้นหาง่ายขึ้น เลือกแล้วเข้าเล่นต่อได้ทันที ตัวเลือกเยอะควรสร้างความสนุก ไม่ใช่สร้างโอทีให้นิ้วโป้ง
+      <p class="text-left text-base leading-relaxed text-[#dbeafe]">
+        แต่ละตลาดมีรอบและเวลาปิดรับต่างกัน จึงควรเช็กข้อมูลของงวดก่อนยืนยันโพย คนเล่นหลายตลาดมีได้ แต่โพยไหนส่งแล้วต้องรู้ว่าไปอยู่ตลาดไหน
       </p>
     </div>
-  </ContentBoxSevenThreePremium>
+  </ContentBoxSevenThreeNeumorphism>
 
-  <GameRankingBoard />
+  <LottoGrid />
 
-  <ContentBoxTwoPremium as="h2" title="คาสิโนสด ANKERSPIN มีบาคาร่า รูเล็ต และเกมโต๊ะอะไรให้เลือก">
-    <p slot="left" class="text-left text-base leading-relaxed text-[#f9dcec]">
-      คาสิโนสดเพิ่มทางเลือกอย่างบาคาร่า รูเล็ต และเกมโต๊ะสำหรับคนที่อยากเปลี่ยนบรรยากาศจากสล็อต โดยยังใช้บัญชีสมาชิกชุดเดิมในการเข้าเล่น
-    </p>
-    <p slot="right" class="text-left text-base leading-relaxed text-[#f9dcec]">
-      สมาชิกจึงสลับระหว่างสล็อตกับคาสิโนสดได้ตามอารมณ์ วันนี้ชอบไพ่ พรุ่งนี้ชอบวงล้อก็ไม่มีปัญหา รสนิยมเปลี่ยนได้โดยไม่ต้องเปลี่ยนยูสตาม
-    </p>
-  </ContentBoxTwoPremium>
-
-  <ContentBox as="h2" title="กีฬาออนไลน์เลือกคู่แข่งขันและรายการที่สนใจได้ง่ายแค่ไหน">
+  <ContentBoxFloatingBadge as="h2" title="หวยไทย POE888 เลือกเลขและจัดโพยออนไลน์ได้ง่ายแค่ไหน">
     <div class="flex flex-col gap-4">
-      <p class="text-left text-base leading-relaxed text-[#f9dcec]">
-        หมวดกีฬาออนไลน์จัดการแข่งขันและรายการให้เลือกจากหน้าเดียว ช่วยให้คนที่ติดตามฟุตบอลหรือกีฬาประเภทอื่นเข้าถึงคู่ที่สนใจได้ง่ายขึ้น
+      <p class="text-left text-base leading-relaxed text-[#dbeafe]">
+        หวยไทย POE888 ให้สมาชิกเลือกเลขและจัดรายการที่ต้องการไว้ในโพยก่อนยืนยัน ช่วยให้ตรวจเลขและยอดรวมอีกครั้งผ่านหน้าจอเดียว
       </p>
-      <p class="text-left text-base leading-relaxed text-[#f9dcec]">
-        ANKERSPIN เชื่อมหมวดกีฬาเข้ากับบัญชีสมาชิกเดียวกับเกมอื่น จึงเปลี่ยนจากดูบอลสดไปสล็อตหรือคาสิโนได้สะดวก หลายความชอบไม่จำเป็นต้องมีหลายบัญชี
+      <p class="text-left text-base leading-relaxed text-[#dbeafe]">
+        คนมีเลขหลายชุดจึงจัดการง่ายกว่าจดกระดาษหลายใบ เลขเด็ดมีไว้ลุ้น ส่วนโพยควรเรียบร้อยไว้ก่อน เดี๋ยวถูกแล้วหาไม่เจอจะเสียทรง
+      </p>
+    </div>
+  </ContentBoxFloatingBadge>
+
+  <ContentBoxTwoNeumorphism as="h2" title="หวยลาว POE888 มีรอบให้ติดตามและตรวจผลอย่างไร">
+    <p slot="left" class="text-left text-base leading-relaxed text-[#dbeafe]">
+      หวยลาว POE888 แยกตลาดและรอบให้สมาชิกเลือกตามช่วงที่เปิดรับ พร้อมตรวจสอบข้อมูลของรายการก่อนส่งโพยผ่านมือถือได้
+    </p>
+    <p slot="right" class="text-left text-base leading-relaxed text-[#dbeafe]">
+      หลังประกาศผลสามารถกลับมาเทียบกับรายการที่แทงไว้ได้จากบัญชีเดิม จบเป็นรอบ ๆ ชัดเจน ไม่ต้องเปิดสิบแท็บเพื่อจำว่าเลขชุดนี้ซื้อไว้ที่ไหน
+    </p>
+  </ContentBoxTwoNeumorphism>
+
+  <ContentBoxSevenThreeFloatingBadge as="h2" title="เลือกเลขและเช็กโพยผ่านมือถือสะดวกแค่ไหน">
+    <Picture
+      slot="left"
+      src={imgMobile}
+      alt={mobileAlt}
+      loading="lazy"
+      fetchpriority="low"
+      widths={[200, 400, 600]}
+      sizes="(max-width: 768px) 100vw, 30vw"
+      decoding="async"
+      formats={["avif", "webp"]}
+      fallbackFormat="webp"
+      quality={80}
+      class="mx-auto h-auto w-full rounded-2xl border border-[#ffd93d]/40 shadow-[0_10px_30px_rgba(255,217,61,0.26)]"
+    />
+    <div slot="right" class="flex flex-col gap-4">
+      <p class="text-left text-base leading-relaxed text-[#dbeafe]">
+        การเลือกเลขผ่านมือถือช่วยให้จัดโพย ตรวจรายการ และแก้ตัวเลขก่อนยืนยันได้จากหน้าจอเดียว เหมาะกับคนที่ติดตามหวยระหว่างวัน
+      </p>
+      <p class="text-left text-base leading-relaxed text-[#dbeafe]">
+        ระบบของ POE888 เชื่อมโพยเข้ากับบัญชีสมาชิก จึงย้อนกลับมาเช็กรายการได้สะดวก มือถือมีไว้ทำชีวิตให้เบา ไม่ใช่ให้ถือเครื่องคิดเลขกับสมุดเพิ่มอีกสองชิ้น
+      </p>
+    </div>
+  </ContentBoxSevenThreeFloatingBadge>
+
+  <ContentBox as="h2" title="ตรวจผลหวยออนไลน์แล้วเช็กเลขที่แทงไว้ได้อย่างไร">
+    <div class="flex flex-col gap-4">
+      <p class="text-left text-base leading-relaxed text-[#dbeafe]">
+        หลังผลออก สมาชิกสามารถนำผลหวยมาเทียบกับเลขที่บันทึกไว้ในโพย เพื่อดูผลของแต่ละรายการโดยไม่ต้องจำตัวเลขทั้งหมดเอง
+      </p>
+      <p class="text-left text-base leading-relaxed text-[#dbeafe]">
+        POE888 เก็บประวัติโพยไว้กับบัญชี ทำให้ย้อนดูรายการก่อนหน้าได้ง่าย เลขสองสามตัวอาจจำได้ แต่พอหลายโพย ความมั่นใจของสมองมักแพ้หลักฐาน
       </p>
     </div>
   </ContentBox>
 
-  <ContentBoxSevenThreeCyberCut as="h2" titleright="ฝากถอน Auto Wallet ช่วยให้จัดการเครดิตสะดวกขึ้นอย่างไร">
-    <Picture
-      slot="left"
-      src={imgWallet}
-      alt={walletAlt}
-      loading="lazy"
-      fetchpriority="low"
-      widths={[200, 400, 600]}
-      sizes="(max-width: 768px) 100vw, 30vw"
-      decoding="async"
-      formats={["avif", "webp"]}
-      fallbackFormat="webp"
-      quality={80}
-      class="mx-auto h-auto w-full rounded-2xl border border-[#ff6bb5]/40 shadow-[0_10px_30px_rgba(255,45,143,0.26)]"
-    />
-    <div slot="right" class="flex flex-col gap-4">
-      <p class="text-left text-base leading-relaxed text-[#f9dcec]">
-        Auto Wallet ช่วยให้การฝากถอนเชื่อมกับเครดิตในบัญชีสมาชิกโดยตรง ลดขั้นตอนก่อนเข้าเกมและทำให้ตรวจสอบยอดได้จากระบบเดียว
-      </p>
-      <p class="text-left text-base leading-relaxed text-[#f9dcec]">
-        ระบบของ ANKERSPIN จึงเหมาะกับคนที่ต้องการทำรายการแล้วไปต่อได้เร็ว เงินมีหน้าที่ทำงาน ส่วนเจ้าของเงินไม่ควรเสียเวลาเดินตามเมนู
-      </p>
-    </div>
-  </ContentBoxSevenThreeCyberCut>
+  <LatestWinners4 />
 
-  <ContentBoxTwoCyberCut as="h2" title="ระบบออโต้ ANKERSPIN รองรับการทำรายการตลอด 24 ชั่วโมงแบบไหน">
-    <p slot="left" class="text-left text-base leading-relaxed text-[#f9dcec]">
-      ระบบออโต้ ANKERSPIN รองรับการส่งรายการฝากถอนตลอด 24 ชั่วโมง สมาชิกสามารถเช็กเครดิตและสถานะจากบัญชีของตัวเองได้โดยไม่ต้องรอขั้นตอนแบบแมนนวลทุกครั้ง
+  <ContentBoxSpecial as="h2" title="ระบบสมาชิก POE888 รวมโพย เครดิต และประวัติรายการไว้ตรงไหน">
+    <p slot="left" class="text-left text-base leading-relaxed text-[#dbeafe]">
+      ระบบสมาชิก POE888 รวมโพย เครดิต และประวัติรายการไว้ในพื้นที่เดียว สมาชิกจึงตรวจสอบได้ว่ามีรายการไหนส่งแล้วหรือเคยใช้งานตลาดใดบ้าง
     </p>
-    <p slot="right" class="text-left text-base leading-relaxed text-[#f9dcec]">
-      เมื่อตัดขั้นตอนที่ไม่จำเป็นออก การใช้งานก็ไหลต่อจากฝากเงินไปเลือกเกมได้ง่ายขึ้น คนมีเวลาน้อยไม่ได้แปลว่ารีบ แค่รู้ว่าเวลาควรใช้กับอะไร
-    </p>
-  </ContentBoxTwoCyberCut>
-
-  <LatestWinnersCyber />
-
-  <ContentBoxSpecial as="h2" title="สมัครสมาชิกผ่านมือถือ เริ่มต้นใช้งานได้ง่ายกี่ขั้นตอน">
-    <p slot="left" class="text-left text-base leading-relaxed text-[#f9dcec]">
-      การสมัครสมาชิกทำผ่านมือถือได้ตั้งแต่กรอกข้อมูล ตั้งค่าบัญชี ไปจนถึงยืนยันตามขั้นตอนของระบบ หลังจากนั้นจึงเข้าสู่หน้าสมาชิกและเลือกบริการที่ต้องการได้
-    </p>
-    <p slot="right" class="text-left text-base leading-relaxed text-[#f9dcec]">
-      ขั้นตอนของ ANKERSPIN ถูกวางให้ใช้งานต่อบนอุปกรณ์เดิมได้สะดวก สมัครเสร็จแล้วไปต่อเลย ไม่ต้องทำเรื่องง่ายให้มีเอกสารหนาเท่าสัญญาซื้อคอนโด
+    <p slot="right" class="text-left text-base leading-relaxed text-[#dbeafe]">
+      การรวมข้อมูลช่วยให้คนเล่นหลายงวดจัดบัญชีตัวเองง่ายขึ้น ของสำคัญควรมีที่อยู่ชัด โดยเฉพาะโพยกับเงิน ไม่ควรใช้ระบบความจำล้วน ๆ
     </p>
   </ContentBoxSpecial>
 
-  <ContentBoxPremium as="h2" title="ระบบสมาชิก ANKERSPIN รวมเครดิต โปรโมชั่น และประวัติรายการไว้ตรงไหน">
-    <div class="flex flex-col gap-4">
-      <p class="text-left text-base leading-relaxed text-[#f9dcec]">
-        หน้าสมาชิกรวมข้อมูลเครดิต โปรโมชั่น และประวัติรายการไว้ในพื้นที่เดียว ทำให้ตรวจสอบบัญชีและสิทธิ์ที่ใช้อยู่ได้ง่ายขึ้น
-      </p>
-      <p class="text-left text-base leading-relaxed text-[#f9dcec]">
-        สมาชิกที่เล่นหลายหมวดจึงยังตามข้อมูลของตัวเองได้เป็นระเบียบ ของสำคัญควรอยู่ถูกที่ โดยเฉพาะเครดิต เรื่องนี้ไม่เหมาะกับการเล่นซ่อนหา
-      </p>
-    </div>
-  </ContentBoxPremium>
-
   <LoginRtpSection />
 
-  <ContentBoxCyberCut as="h2" title="ทางเข้าเว็บหลักและเข้าสู่ระบบ ใช้งานผ่านมือถือกับคอมอย่างไร">
-    <div class="flex flex-col gap-4">
-      <p class="text-left text-base leading-relaxed text-[#f9dcec]">
-        ทางเข้าเว็บหลักรองรับทั้งมือถือและคอม สมาชิกใช้ข้อมูลบัญชีเดิมเพื่อเข้าสู่ระบบและเข้าถึงสล็อต คาสิโน กีฬา รวมถึงระบบ Auto Wallet ได้จากจุดเดียว
-      </p>
-      <p class="text-left text-base leading-relaxed text-[#f9dcec]">
-        การใช้ช่องทางหลักของ ANKERSPIN ยังช่วยลดความสับสนจากชื่อหรือโดเมนใกล้เคียงบนผลค้นหา จำทางที่ถูกไว้หนึ่งครั้ง ดูมีระดับกว่ากดทุกลิงก์แล้วค่อยลุ้น
-      </p>
-    </div>
-  </ContentBoxCyberCut>
+  <ContentBoxTwoFloatingBadge as="h2" title="ฝากถอนและจัดการเครดิตผ่านบัญชีสมาชิกสะดวกอย่างไร">
+    <p slot="left" class="text-left text-base leading-relaxed text-[#dbeafe]">
+      สมาชิกสามารถจัดการเครดิตสำหรับการใช้งานผ่านหน้าบัญชี พร้อมตรวจสอบรายการฝากถอนและยอดที่เกี่ยวข้องจากระบบเดียว
+    </p>
+    <p slot="right" class="text-left text-base leading-relaxed text-[#dbeafe]">
+      POE888 จึงเชื่อมเรื่องการเงินกับโพยและประวัติสมาชิกไว้ด้วยกัน ขั้นตอนยิ่งสั้นยิ่งดี เพราะเงินควรเดินเป็นระบบ เจ้าของเงินไม่จำเป็นต้องเดินตาม
+    </p>
+  </ContentBoxTwoFloatingBadge>
 
-  <ContentBoxPremium as="h2" title="ANKERSPIN เหมาะกับคนที่ชอบเล่นหลายหมวดผ่านบัญชีเดียวแบบไหน">
+  <ContentBoxNeumorphism as="h2" title="ทางเข้า POE888 เว็บสีฟ้า ใช้งานผ่านมือถือและคอมอย่างไร">
     <div class="flex flex-col gap-4">
-      <p class="text-left text-base leading-relaxed text-[#f9dcec]">
-        ANKERSPIN เหมาะกับคนที่ชอบสลับระหว่างสล็อต คาสิโนสด และกีฬา พร้อมต้องการระบบฝากถอนอัตโนมัติและการใช้งานผ่านมือถือในบัญชีเดียว
+      <p class="text-left text-base leading-relaxed text-[#dbeafe]">
+        ทางเข้า POE888 เว็บสีฟ้ารองรับทั้งมือถือและคอม สมาชิกใช้บัญชีเดิมเพื่อเข้าถึงตลาดหวย โพย ผลรางวัล และข้อมูลส่วนตัวได้
       </p>
-      <p class="text-left text-base leading-relaxed text-[#f9dcec]">
-        เลือกเกมที่ชอบ จัดการเครดิต แล้วเปลี่ยนหมวดได้ตามอารมณ์โดยไม่ต้องจัดการหลายระบบ หลายเกมมีไว้เลือก แต่หลายบัญชีส่วนใหญ่มีไว้ปวดหัว
+      <p class="text-left text-base leading-relaxed text-[#dbeafe]">
+        การใช้ทางเข้าหลักยังช่วยลดความสับสนจากชื่อเว็บไซต์ที่คล้ายกันบนผลค้นหา จำช่องทางให้ถูกหนึ่งครั้ง ดูดีกว่าสุ่มลิงก์เหมือนกำลังเสี่ยงโชคก่อนเริ่มแทงหวย
       </p>
     </div>
-  </ContentBoxPremium>
+  </ContentBoxNeumorphism>
+
+  <ContentBox as="h2" title="POE888 มีสล็อตและกีฬาเป็นทางเลือกนอกจากหวยแบบไหน">
+    <div class="flex flex-col gap-4">
+      <p class="text-left text-base leading-relaxed text-[#dbeafe]">
+        นอกจากหวยออนไลน์ POE888 ยังมีหมวดเกมและกีฬาเป็นตัวเลือกเพิ่มเติมสำหรับสมาชิกที่ต้องการเปลี่ยนรูปแบบการใช้งานจากตลาดหวย
+      </p>
+      <p class="text-left text-base leading-relaxed text-[#dbeafe]">
+        ทุกหมวดยังเชื่อมกับบัญชีสมาชิกเดียวกัน ทำให้เปลี่ยนบริการได้สะดวก หวยเป็นพระเอกของเว็บ ส่วนหมวดอื่นก็เหมือนรถคันสำรอง—ไม่ได้ใช้ทุกวัน แต่มีไว้ก็อุ่นใจ
+      </p>
+    </div>
+  </ContentBox>
+
+  <ProviderGrid />
+
+  <GameRankingBoard />
+
+  <ContentBoxFloatingBadge as="h2" title="POE888 เหมาะกับคนที่ชอบแทงหวยหลายตลาดผ่านบัญชีเดียวอย่างไร">
+    <div class="flex flex-col gap-4">
+      <p class="text-left text-base leading-relaxed text-[#dbeafe]">
+        POE888 เหมาะกับคนที่ติดตามหวยไทย หวยลาว และต้องการเลือกเลข จัดโพย ตรวจผล รวมถึงดูประวัติรายการผ่านมือถือจากบัญชีเดียว
+      </p>
+      <p class="text-left text-base leading-relaxed text-[#dbeafe]">
+        คนที่เล่นหลายตลาดจึงไม่ต้องกระจายโพยไปหลายที่ เลือกตลาด เช็กเวลา ส่งรายการ แล้วกลับมาตรวจผลได้เป็นระบบ เลขจะกระจายได้ แต่ข้อมูลไม่ควรกระจายตาม
+      </p>
+    </div>
+  </ContentBoxFloatingBadge>
 
   <SmoothCarousel />
 
   <div class="relative z-10 mx-auto mb-10 flex flex-nowrap justify-center gap-3 px-4 sm:gap-6">
     <a
       href="/register"
-      class="group relative flex flex-1 items-center justify-center rounded-full bg-gradient-to-r from-[#ffa6d5] via-[#ff2d8f] to-[#c2185b] px-4 py-3 text-sm font-black whitespace-nowrap text-[#0d0207] shadow-[0_10px_30px_rgba(255,45,143,0.30)] transition-all duration-300 hover:-translate-y-1 hover:scale-105 hover:shadow-[0_15px_40px_rgba(255,45,143,0.42)] sm:flex-none sm:px-10 sm:py-3.5 sm:text-base">
-      สมัครสมาชิก ANKERSPIN
+      class="group relative flex flex-1 items-center justify-center rounded-full bg-gradient-to-r from-[#ffe98a] via-[#ffd93d] to-[#cd994e] px-4 py-3 text-sm font-black whitespace-nowrap text-[#02143a] shadow-[0_10px_30px_rgba(255,217,61,0.30)] transition-all duration-300 hover:-translate-y-1 hover:scale-105 hover:shadow-[0_15px_40px_rgba(255,217,61,0.42)] sm:flex-none sm:px-10 sm:py-3.5 sm:text-base">
+      สมัครสมาชิก POE888
     </a>
 
     <a
       href="/login"
-      class="group relative flex flex-1 items-center justify-center rounded-full border border-[#a4126b]/80 bg-[#1f0611]/85 px-4 py-3 text-sm font-black whitespace-nowrap text-[#ffa6d5] backdrop-blur-sm transition-all duration-300 hover:scale-105 hover:border-[#ff2d8f] hover:bg-[#2c0a1a]/85 hover:shadow-[0_15px_40px_rgba(164,18,107,0.42)] sm:flex-none sm:px-10 sm:py-3.5 sm:text-base">
+      class="group relative flex flex-1 items-center justify-center rounded-full border border-[#2e8bff]/80 bg-[#04173f]/85 px-4 py-3 text-sm font-black whitespace-nowrap text-[#a8d4ff] backdrop-blur-sm transition-all duration-300 hover:scale-105 hover:border-[#5aa9ff] hover:bg-[#062459]/85 hover:shadow-[0_15px_40px_rgba(46,139,255,0.42)] sm:flex-none sm:px-10 sm:py-3.5 sm:text-base">
       เข้าสู่ระบบ
     </a>
   </div>
 
-  <Faq4 title="คำถามที่พบบ่อยเกี่ยวกับ ANKERSPIN" faqs={faqs} />
+  <Faq2 title="คำถามที่พบบ่อยเกี่ยวกับ POE888" faqs={faqs} />
 
   <ReviewCardSumo2 />
 

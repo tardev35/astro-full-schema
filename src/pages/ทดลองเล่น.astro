@@ -2,7 +2,7 @@
 import MainLayout from "../layouts/MainLayout.astro";
 import ContentBox from "../components/ContentBox.astro";
 import Navfoot from "../components/Navfoot.astro";
-import Announcement from "../components/Announcement5.astro";
+import Announcement from "../components/Announcement6.astro";
 
 import { Picture } from "astro:assets";
 import { itemList, pageGraph, schemaCtx } from "../lib/schema";
@@ -36,12 +36,12 @@ const demoGames = [
 
 const gameList = demoGames.map((game) => ({ name: game.name, imagePath: game.src.src }));
 
-const pageTitle = "ทดลองเล่น ANKERSPIN เว็บตรงลิขสิทธิ์แท้ ลองเกมสล็อตหลายค่ายก่อนสมัคร";
+const pageTitle = "ทดลองเล่น POE888 เว็บสีฟ้า ลองเกมสล็อตหลายค่ายก่อนสมัครสมาชิก";
 
-const pageHeading = "ทดลองเล่นสล็อต ANKERSPIN ฟรี ลองระบบเกมหลายค่ายก่อนเริ่มเล่นด้วยเครดิตจริง";
+const pageHeading = "ทดลองเล่นสล็อต POE888 ฟรี ลองระบบเกมหลายค่ายก่อนเริ่มเล่นด้วยเครดิตจริง";
 
 const pageDescription =
-  "ทดลองเล่นสล็อต ANKERSPIN ฟรี ลองระบบเกมหลายค่ายก่อนใช้เครดิตจริง ดูเดิมพันต่อรอบและฟีเจอร์ฟรีสปิน แล้วค่อยสมัครสมาชิกและจัดการฝากถอนผ่านระบบ Auto Wallet";
+  "ทดลองเล่นสล็อต POE888 ฟรี ลองระบบเกมหลายค่ายก่อนใช้เครดิตจริง ดูเดิมพันต่อรอบและฟีเจอร์ฟรีสปิน แล้วค่อยสมัครสมาชิกเพื่อเล่นจริงและจัดการเครดิตผ่านมือถือ";
 
 const ctx = schemaCtx(Astro);
 const graph = pageGraph(Astro, {
@@ -54,8 +54,8 @@ const graph = pageGraph(Astro, {
   ],
   extra: [
     itemList(ctx, {
-      name: "ทดลองเล่นเกมสล็อตของ ANKERSPIN",
-      alternateName: "ANKERSPIN โหมดทดลองสล็อตหลายค่ายบนมือถือก่อนเล่นด้วยเครดิตจริง",
+      name: "ทดลองเล่นเกมสล็อตของ POE888",
+      alternateName: "POE888 โหมดทดลองสล็อตหลายค่ายบนมือถือก่อนเล่นด้วยเครดิตจริง",
       itemType: "Game",
       items: gameList,
     }),
@@ -69,29 +69,27 @@ const graph = pageGraph(Astro, {
   <Announcement />
 
   <ContentBox as="h1" title={pageHeading}>
-    <p class="mb-4 text-left text-base leading-relaxed text-[#f9dcec]">
-      <strong class="text-[#ff2d8f]">ANKERSPIN</strong> วางบริการหลักไว้ครบทั้งสล็อต คาสิโนสด และกีฬาออนไลน์ โดยรวมเกมสล็อตหลายรูปแบบไว้ให้เลือกจากบัญชีเดียว
-      ตั้งแต่เกมคลาสสิก เกมโบนัส ไปจนถึงเกมที่มีฟีเจอร์แตกต่างกัน หน้านี้จึงเปิดไว้ให้ลองระบบเกมก่อนเริ่มเล่นด้วยเครดิตจริง ทั้ง PG Soft, JOKER, JILI, SlotXO,
-      Skywind Group และ AFB Gaming ถูกแยกไว้ในหมวดเดียวกัน จึงเลือกเกมได้เร็วโดยไม่ต้องเลื่อนหาทีละหน้า เปิดผ่านเบราว์เซอร์ได้ทั้งบนมือถือ แท็บเล็ต และคอมพิวเตอร์
-      ไม่ต้องติดตั้งโปรแกรมเพิ่ม
+    <p class="mb-4 text-left text-base leading-relaxed text-[#dbeafe]">
+      <strong class="text-[#ffd93d]">POE888</strong> วางหวยออนไลน์ไว้เป็นหมวดหลัก ทั้งหวยไทย หวยลาว หวยฮานอย และหวยมาเลย์ พร้อมเปิดหมวดสล็อตไว้ให้เลือกเล่นจากบัญชีเดียวกัน
+      หน้านี้จึงเปิดไว้ให้ลองระบบเกมสล็อตก่อนเริ่มเล่นด้วยเครดิตจริง ทั้ง PG Soft, JOKER, JILI, SlotXO, Skywind Group และ AFB Gaming ถูกแยกไว้ในหมวดเดียวกัน
+      จึงเลือกเกมได้เร็วโดยไม่ต้องเลื่อนหาทีละหน้า เปิดผ่านเบราว์เซอร์ได้ทั้งบนมือถือ แท็บเล็ต และคอมพิวเตอร์ ไม่ต้องติดตั้งโปรแกรมเพิ่ม
     </p>
 
-    <p class="text-left text-base leading-relaxed text-[#f9dcec]">
+    <p class="text-left text-base leading-relaxed text-[#dbeafe]">
       สิ่งที่ควรดูตอนกดเปิดหน้าเกมคือเดิมพันเริ่มต้นต่อรอบ ปุ่มปรับเดิมพันอยู่ตรงไหน ฟีเจอร์ฟรีสปินเรียกใช้อย่างไร และหนึ่งรอบใช้เวลาเท่าไร
       มากกว่าจะดูว่าเกมไหนกำลังเป็นที่พูดถึงมากที่สุด เพราะเกมดังช่วยให้หารีวิวง่ายก็จริง แต่ไม่ได้ช่วยเจรจากับระบบสุ่มให้คุณเป็นการส่วนตัว
-      เมื่อจับจังหวะเกมได้ถูกใจแล้วจึงค่อยสมัครสมาชิกและเข้าสู่ระบบเพื่อเล่นด้วยเครดิตจริง โดยใช้บัญชีเดียวต่อได้ทั้งสล็อต คาสิโนสด กีฬา
-      และการฝากถอนผ่านระบบ Auto Wallet ที่ทำรายการผ่านมือถือได้โดยตรง
+      เมื่อจับจังหวะเกมได้ถูกใจแล้วจึงค่อยสมัครสมาชิกและเข้าสู่ระบบเพื่อเล่นด้วยเครดิตจริง โดยใช้บัญชีเดียวต่อได้ทั้งการแทงหวย เลือกเกมสล็อต
+      และการฝากถอนที่ทำรายการผ่านมือถือได้โดยตรง
     </p>
   </ContentBox>
 
-  <ContentBox as="h2" title="รวมค่ายเกมสล็อตที่เปิดให้เลือกใน ANKERSPIN">
-    <p class="mb-8 text-left text-base leading-relaxed text-[#f9dcec]">
-      หมวดสล็อตของ ANKERSPIN มีเกมหลายธีมและหลายรูปแบบ ตั้งแต่เกมคลาสสิกที่เล่นง่าย ไปจนถึงเกมที่มีฟรีสปิน โบนัส และตัวคูณ
+  <ContentBox as="h2" title="รวมค่ายเกมสล็อตที่เปิดให้เลือกใน POE888">
+    <p class="mb-8 text-left text-base leading-relaxed text-[#dbeafe]">
+      หมวดสล็อตของ POE888 มีเกมหลายธีมและหลายรูปแบบ ตั้งแต่เกมคลาสสิกที่เล่นง่าย ไปจนถึงเกมที่มีฟรีสปิน โบนัส และตัวคูณ
       พร้อมพื้นที่สำหรับเกมใหม่ที่ทยอยเพิ่มเข้ามาระหว่างปี การแบ่งเกมเป็นหมวดช่วยให้ค้นหาง่ายขึ้น คนที่มีเกมประจำอยู่แล้วเข้าเกมเดิมได้ไว
-      ส่วนสายลองของใหม่ก็เปลี่ยนค่ายไปเรื่อย ๆ ได้จากบัญชีเดียว ไม่ต้องตั้งค่าบัญชีใหม่ทุกครั้งที่เปลี่ยนค่าย ตัวเลือกเยอะควรสร้างความสนุก ไม่ใช่สร้างโอทีให้นิ้วโป้ง
+      ส่วนสายลองของใหม่ก็เปลี่ยนค่ายไปเรื่อย ๆ ได้จากบัญชีเดียว ไม่ต้องตั้งค่าบัญชีใหม่ทุกครั้งที่เปลี่ยนค่าย และยังสลับกลับไปหน้าจัดโพยหวยได้โดยไม่ต้องออกจากระบบ
       กดที่ภาพเพื่อไปยังขั้นตอนสมัครและเข้าใช้งานหมวดนั้นได้ทันที
     </p>
-
     <div class="mb-5 grid grid-cols-2 gap-5 sm:grid-cols-2 md:grid-cols-4">
       {
         demoGames.map((game) => (
@@ -103,7 +101,7 @@ const graph = pageGraph(Astro, {
               fetchpriority="low"
               widths={[200, 400, 600]}
               sizes="(max-width: 768px) 50vw, 25vw"
-              class="block h-auto w-full object-cover shadow-[0_10px_30px_rgba(164,18,107,0.24)] transition-transform duration-300 group-hover/game:scale-105"
+              class="block h-auto w-full object-cover shadow-[0_10px_30px_rgba(2,10,30,0.35)] transition-transform duration-300 group-hover/game:scale-105"
               decoding="async"
               formats={["avif", "webp"]}
               fallbackFormat="webp"
@@ -113,9 +111,9 @@ const graph = pageGraph(Astro, {
               href="/register"
               target="_blank"
               rel="noopener noreferrer"
-              aria-label={`สมัครสมาชิกเพื่อเล่น ${game.name} ที่ ANKERSPIN`}
-              class="absolute inset-0 flex items-center justify-center bg-[#0d0207]/85 opacity-0 transition-opacity duration-300 group-hover/game:opacity-100 focus-visible:opacity-100">
-              <span class="rounded-full border border-[#ff2d8f]/60 bg-gradient-to-r from-[#ffa6d5] via-[#ff2d8f] to-[#c2185b] px-6 py-2 font-bold text-[#0d0207] shadow-[0_10px_30px_rgba(255,45,143,0.32)] transition-transform hover:scale-110">เล่นเลย</span>
+              aria-label={`สมัครสมาชิกเพื่อเล่น ${game.name} ที่ POE888`}
+              class="absolute inset-0 flex items-center justify-center bg-[#02143a]/85 opacity-0 transition-opacity duration-300 group-hover/game:opacity-100 focus-visible:opacity-100">
+              <span class="rounded-full border border-[#ffd93d]/60 bg-gradient-to-r from-[#ffe98a] via-[#ffd93d] to-[#cd994e] px-6 py-2 font-bold text-[#02143a] shadow-[0_10px_30px_rgba(255,217,61,0.32)] transition-transform hover:scale-110">เล่นเลย</span>
             </a>
           </div>
         ))
@@ -124,13 +122,13 @@ const graph = pageGraph(Astro, {
   </ContentBox>
 
   <ContentBox as="h2" title="โหมดทดลองเล่นบอกอะไรได้ และบอกอะไรไม่ได้">
-    <p class="mb-4 text-left text-base leading-relaxed text-[#f9dcec]">
+    <p class="mb-4 text-left text-base leading-relaxed text-[#dbeafe]">
       โหมดทดลองบอกได้ว่าเกมทำงานอย่างไร เมนูอยู่ตรงไหน ฟีเจอร์ซื้อฟรีสปินเรียกใช้อย่างไร และหนึ่งรอบใช้เวลาเท่าไร แต่เครดิตในโหมดนี้เป็นยอดสมมติ ถอนไม่ได้
       และผลที่ออกมาก็ไม่ได้แปลว่าเล่นจริงแล้วจะออกในรูปแบบเดียวกัน ต่อให้กดในโหมดทดลองแล้วจังหวะเข้ามือ ก็ไม่ใช่หลักฐานว่าเกมนั้นกำลังรอคุณอยู่
       โหมดนี้มีไว้ศึกษาระบบ ไม่ได้มีไว้ดูดวงผ่านหน้าจอ
     </p>
 
-    <p class="text-left text-base leading-relaxed text-[#f9dcec]">
+    <p class="text-left text-base leading-relaxed text-[#dbeafe]">
       อีกเรื่องที่ควรเผื่อใจไว้คือโหมดทดลองไม่ได้มีให้ครบทุกเกม จึงควรเปิดหน้ารายละเอียดของเกมดูเสียก่อนเลือก
       และยอดที่หมุนในโหมดทดลองไม่นับเป็นยอดเทิร์นของบัญชีหรือของโปรโมชั่นใดทั้งสิ้น ถ้าเกมที่อยากลองยังไม่มีปุ่มทดลอง ให้ถือว่าวันนี้ยังไม่ถูกจังหวะ
       ไม่ใช่สัญญาณลับที่ระบบส่งมาให้คุณคนเดียว และเวลาเทียบเกมกัน ให้ดูที่จำนวนไลน์ ตัวคูณ และเงื่อนไขการเข้าฟรีสปิน แล้วเอามาเทียบกับงบต่อรอบของตัวคุณเอง
@@ -138,21 +136,21 @@ const graph = pageGraph(Astro, {
     </p>
   </ContentBox>
 
-  <ContentBox as="h2" title="จากโหมดทดลองไปเล่นจริงกับ ANKERSPIN ควรเตรียมอะไรบ้าง">
-    <p class="mb-4 text-left text-base leading-relaxed text-[#f9dcec]">
-      เมื่อพร้อมขยับจากโหมดทดลองไปเล่นด้วยเครดิตจริง เรื่องที่ควรจัดการก่อนคือบัญชีสมาชิก งบต่อรอบ และทางเข้าที่ใช้ ด้านบัญชี ANKERSPIN
-      ใช้บัญชีเดียวครอบคลุมทั้งสล็อต คาสิโนสด และกีฬาออนไลน์ หน้าสมาชิกจึงรวมเครดิต โปรโมชั่น และประวัติรายการไว้ในพื้นที่เดียว
-      อยากเปลี่ยนค่ายเกม สลับไปโต๊ะคาสิโนสด หรือไปดูคู่แข่งขันในหมวดกีฬาก็เลือกต่อได้เลย ไม่ต้องเปิดบัญชีที่สอง
+  <ContentBox as="h2" title="จากโหมดทดลองไปเล่นจริงกับ POE888 ควรเตรียมอะไรบ้าง">
+    <p class="mb-4 text-left text-base leading-relaxed text-[#dbeafe]">
+      เมื่อพร้อมขยับจากโหมดทดลองไปเล่นด้วยเครดิตจริง เรื่องที่ควรจัดการก่อนคือบัญชีสมาชิก งบต่อรอบ และทางเข้าที่ใช้ ด้านบัญชี POE888
+      ใช้บัญชีเดียวครอบคลุมทั้งหวยออนไลน์และหมวดสล็อต หน้าสมาชิกจึงรวมโพย เครดิต และประวัติรายการไว้ในพื้นที่เดียว
+      อยากเปลี่ยนค่ายเกม หรือย้อนกลับไปดูโพยงวดก่อนก็เลือกต่อได้เลย ไม่ต้องเปิดบัญชีที่สอง
     </p>
 
-    <p class="mb-4 text-left text-base leading-relaxed text-[#f9dcec]">
+    <p class="mb-4 text-left text-base leading-relaxed text-[#dbeafe]">
       ด้านงบ ควรตั้งยอดต่อรอบที่รับไหวไว้ตั้งแต่ก่อนกดหมุนรอบแรก และเปิดดูเงื่อนไขของโปรที่จะใช้ว่าครอบคลุมเกมใด ยอดเริ่มต้นเท่าไร เทิร์นเท่าไร
-      และถอนได้ในเงื่อนไขแบบไหน เพราะแต่ละรายการกำหนดไม่เหมือนกัน ส่วนการทำรายการใช้ระบบ Auto Wallet ที่เชื่อมการฝากถอนเข้ากับเครดิตในบัญชีสมาชิกโดยตรง
-      รองรับการส่งรายการตลอด 24 ชั่วโมง และเช็กยอดได้จากระบบเดียว ลดขั้นตอนก่อนกลับเข้าเกม
+      และถอนได้ในเงื่อนไขแบบไหน เพราะแต่ละรายการกำหนดไม่เหมือนกัน ส่วนการทำรายการฝากถอนเชื่อมกับเครดิตในบัญชีสมาชิกโดยตรง
+      ส่งรายการได้ตลอด 24 ชั่วโมง และตรวจสอบยอดย้อนหลังได้จากระบบเดียว ลดขั้นตอนก่อนกลับเข้าเกม
     </p>
 
-    <p class="text-left text-base leading-relaxed text-[#f9dcec]">
-      ด้านทางเข้า เว็บหลักของ ANKERSPIN รองรับการเข้าสู่ระบบผ่านมือถือ แท็บเล็ต และคอมพิวเตอร์ด้วยข้อมูลบัญชีเดิม เมนูหลักถูกจัดให้เหมาะกับจอเล็กและใช้งานด้วยมือเดียวได้สะดวก
+    <p class="text-left text-base leading-relaxed text-[#dbeafe]">
+      ด้านทางเข้า เว็บหลักของ POE888 รองรับการเข้าสู่ระบบผ่านมือถือ แท็บเล็ต และคอมพิวเตอร์ด้วยข้อมูลบัญชีเดิม เมนูหลักถูกจัดให้เหมาะกับจอเล็กและใช้งานด้วยมือเดียวได้สะดวก
       การใช้ช่องทางหลักยังช่วยลดความสับสนจากชื่อหรือโดเมนใกล้เคียงบนผลค้นหา ความเร็วในการโหลดเกมยังขึ้นอยู่กับเครื่อง เบราว์เซอร์ และสัญญาณอินเทอร์เน็ตของแต่ละคน
       จึงควรเผื่อไว้ว่าผลลัพธ์อาจไม่เท่ากันทุกเครื่อง และไม่ควรส่งรหัสผ่านหรือรหัส OTP ให้บุคคลอื่นไม่ว่ากรณีใด
     </p>

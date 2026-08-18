@@ -2,15 +2,14 @@
 import MainLayout from "../layouts/MainLayout.astro";
 import ContentBox from "../components/ContentBox.astro";
 import Navfoot from "../components/Navfoot.astro";
-import Announcement from "../components/Announcement5.astro";
+import Announcement from "../components/Announcement6.astro";
 import CtaRedirect from "../components/CtaRedirect.astro";
 import { pageGraph } from "../lib/schema";
 
-const pageDescription =
-  "หน้าสมัครสมาชิก ANKERSPIN เว็บหลัก มีปุ่มเดียวสำหรับกดไปยังหน้าเปิดบัญชีใหม่ผ่านมือถือ ใช้บัญชีเดียวเข้าเล่นสล็อต คาสิโนสด กีฬา และฝากถอนด้วยระบบ Auto Wallet";
+const pageDescription = "หน้าสมัครสมาชิก POE888 เว็บสีฟ้า มีปุ่มเดียวสำหรับเปิดบัญชีใหม่ผ่านมือถือ ใช้บัญชีเดียวแทงหวยไทย หวยลาว หวยฮานอย จัดโพย ตรวจผลรางวัล และจัดการเครดิตฝากถอน";
 
 const graph = pageGraph(Astro, {
-  name: "สมัครสมาชิก ANKERSPIN เว็บหลัก",
+  name: "สมัครสมาชิก POE888 เว็บสีฟ้า",
   description: pageDescription,
   breadcrumb: [
     { name: "หน้าแรก", path: "/" },
@@ -21,20 +20,20 @@ const graph = pageGraph(Astro, {
 const targetUrl = "https://yoalink.com/22hs";
 ---
 
-<MainLayout title="สมัครสมาชิก ANKERSPIN | ปุ่มเปิดบัญชีเว็บหลักผ่านมือถือ" description={pageDescription}>
+<MainLayout title="สมัครสมาชิก POE888 | ปุ่มเปิดบัญชีหวยออนไลน์ผ่านมือถือ" description={pageDescription}>
   <script type="application/ld+json" set:html={graph} />
 
   <Announcement />
 
-  <ContentBox title="สมัครสมาชิก ANKERSPIN" as="h1">
+  <ContentBox title="สมัครสมาชิก POE888" as="h1">
     <div class="flex justify-center py-8">
       <a
         href={targetUrl}
         rel="nofollow sponsored"
         data-cta-redirect
-        aria-label="สมัครสมาชิก"
-        class="group relative mx-auto flex w-full max-w-[320px] items-center justify-center gap-3 overflow-hidden rounded-xl border border-[#ff6bb5]/60 bg-gradient-to-b from-[#ff6bb5] via-[#ff2d8f] to-[#8f0f52] px-6 py-4 text-xl font-bold tracking-wide text-[#0d0207] shadow-[0_10px_30px_rgba(164,18,107,0.35)] transition-all duration-300 hover:scale-105 hover:shadow-[0_15px_40px_rgba(255,45,143,0.30)]">
-        สมัครสมาชิก
+        aria-label="สมัครสมาชิก POE888"
+        class="group relative mx-auto flex w-full max-w-[320px] items-center justify-center gap-3 overflow-hidden rounded-xl border border-[#ffd93d]/60 bg-gradient-to-b from-[#cfe6ff] via-[#5aa9ff] to-[#2e8bff] px-6 py-4 text-xl font-bold tracking-wide text-[#02143a] shadow-[0_10px_30px_rgba(11,78,168,0.35)] transition-all duration-300 hover:scale-105 hover:border-[#ffe98a] hover:shadow-[0_15px_40px_rgba(46,139,255,0.30)]">
+        สมัครสมาชิก POE888
       </a>
     </div>
   </ContentBox>

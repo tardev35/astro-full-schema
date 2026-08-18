@@ -1,0 +1,173 @@
+---
+import MainLayout from "../layouts/MainLayout.astro";
+import Announcement from "../components/AnnouncementHuay.astro";
+import ContentBoxHuay from "../components/ContentBoxHuay.astro";
+import Navfoot from "../components/Navfoot.astro";
+import { pageGraph } from "../lib/schema";
+
+const pageDescription = "ตรวจหวยออนไลน์กับ POE888 เว็บสีฟ้า ดูผลรางวัลล่าสุดของหวยไทย หวยลาว หวยฮานอย และหวยมาเลย์ เทียบเลขที่ส่งโพยไว้ได้ทันทีหลังประกาศผล พร้อมอัตราจ่ายและสถานะรางวัล";
+
+const graph = pageGraph(Astro, {
+  name: "ตรวจหวย POE888 ผลรางวัลล่าสุดทุกตลาด",
+  description: pageDescription,
+  breadcrumb: [
+    { name: "หน้าแรก", path: "/" },
+    { name: "ตรวจหวย", path: "/ตรวจหวย" },
+  ],
+});
+
+const markets = ["หวยไทย", "หวยลาว", "หวยฮานอย", "หวยมาเลย์"];
+
+const results = [
+  { market: "หวยไทย", three: "205690", twoTop: "90", twoBottom: "60", status: "จ่ายแล้ว" },
+  { market: "หวยลาว", three: "478", twoTop: "78", twoBottom: "03", status: "จ่ายแล้ว" },
+  { market: "หวยฮานอย", three: "842", twoTop: "42", twoBottom: "11", status: "จ่ายแล้ว" },
+  { market: "หวยมาเลย์", three: "319", twoTop: "19", twoBottom: "57", status: "จ่ายแล้ว" },
+];
+
+const rates = [
+  { type: "3 ตัวบน", pay: "บาทละ 950" },
+  { type: "3 ตัวโต๊ด", pay: "บาทละ 150" },
+  { type: "3 ตัวล่าง", pay: "บาทละ 200" },
+  { type: "2 ตัวบน", pay: "บาทละ 95" },
+  { type: "2 ตัวล่าง", pay: "บาทละ 95" },
+];
+---
+
+<MainLayout title="ตรวจหวย POE888 ผลรางวัลล่าสุด หวยไทย ลาว ฮานอย มาเลย์ เว็บสีฟ้า" description={pageDescription}>
+  <script type="application/ld+json" set:html={graph} />
+
+  <Announcement />
+
+  <section class="mx-auto my-8 w-full max-w-5xl px-4 font-sans">
+    <div class="relative overflow-hidden rounded-3xl border border-[#ffd93d]/35 bg-[#04173f]/90 p-8 shadow-[0_15px_40px_rgba(255,217,61,0.18)] backdrop-blur-xl md:p-12">
+      <div aria-hidden="true" class="pointer-events-none absolute -top-20 -left-20 h-64 w-64 rounded-full bg-[#2e8bff]/20 blur-[60px]"></div>
+
+      <div class="relative z-10 flex flex-col items-center justify-center text-center">
+        <span aria-hidden="true" class="mb-4 text-5xl drop-shadow-[0_0_15px_rgba(255,217,61,0.8)]">🏆</span>
+        <h1 class="mb-2 bg-gradient-to-r from-[#ffe98a] via-[#ffd93d] to-[#cd994e] bg-clip-text text-4xl font-black tracking-widest text-transparent uppercase">ตรวจหวย POE888</h1>
+        <p class="mb-8 text-[#b9cdf0]">เลือกตลาดหวยและกรอกตัวเลขที่ส่งโพยไว้ เพื่อเทียบกับผลรางวัลของงวดล่าสุด</p>
+
+        <div class="flex w-full max-w-2xl flex-col gap-4 md:flex-row">
+          <select
+            aria-label="เลือกตลาดหวยที่ต้องการตรวจผล"
+            class="h-14 w-full rounded-xl border border-[#2e8bff]/40 bg-[#062459] px-4 font-bold text-[#a8d4ff] transition-all outline-none focus:border-[#ffd93d] focus:ring-2 focus:ring-[#ffd93d]/30 md:w-1/3">
+            {markets.map((market) => <option>{market}</option>)}
+          </select>
+
+          <input
+            type="text"
+            id="lotto-input"
+            aria-label="กรอกตัวเลขที่ต้องการตรวจ"
+            placeholder="ระบุตัวเลขที่ต้องการตรวจ..."
+            maxlength="6"
+            class="h-14 w-full flex-1 rounded-xl border border-[#2e8bff]/40 bg-[#062459] px-6 text-center text-xl font-bold tracking-widest text-[#dbeafe] transition-all outline-none focus:border-[#ffd93d] focus:ring-2 focus:ring-[#ffd93d]/30 md:text-left"
+          />
+
+          <button
+            id="check-btn"
+            class="flex h-14 w-full items-center justify-center rounded-xl bg-gradient-to-r from-[#ffd93d] via-[#ffe98a] to-[#ffd93d] px-8 font-black text-[#02143a] shadow-[0_5px_15px_rgba(255,217,61,0.4)] transition-all hover:scale-105 hover:shadow-[0_8px_25px_rgba(255,217,61,0.6)] md:w-auto">
+            ตรวจหวย
+          </button>
+        </div>
+
+        <div id="result-box" class="mt-8 hidden w-full max-w-2xl flex-col items-center justify-center rounded-2xl border border-[#2e8bff]/50 bg-[#062459]/60 p-6 opacity-0 transition-all duration-500">
+          <p class="text-xl font-black text-[#ffd93d]">บันทึกเลขที่ต้องการตรวจแล้ว</p>
+          <p class="mt-2 text-lg text-[#dbeafe]">หมายเลข <span id="show-number" class="font-bold tracking-widest text-[#ffe98a]"></span> นำไปเทียบกับผลรางวัลของงวดล่าสุดได้จากตารางด้านล่าง</p>
+          <p class="mt-1 text-sm text-[#b9cdf0]">สถานะโพยและเครดิตรางวัลของแต่ละรายการจะแสดงอยู่ในบัญชีสมาชิก POE888 หลังระบบบันทึกผลของงวดนั้นครบแล้ว</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <ContentBoxHuay title="ผลรางวัลล่าสุดของหวยไทย ลาว ฮานอย และมาเลย์" as="h2">
+    <p class="text-left text-base leading-relaxed text-[#dbeafe]">
+      POE888 รวมผลรางวัลของทุกตลาดที่เปิดรับไว้ในหน้าเดียว เพื่อให้เทียบกับเลขที่ส่งโพยไว้ได้ทันทีหลังประกาศผล ตารางด้านล่างแสดงเลข 3 ตัวบน 2 ตัวบน และ 2 ตัวล่างของงวดล่าสุด
+      พร้อมสถานะการจ่ายรางวัลของแต่ละตลาด หากตลาดใดยังอยู่ระหว่างรอผล สถานะจะเปลี่ยนเองเมื่อระบบบันทึกผลของงวดนั้นครบแล้ว
+    </p>
+
+    <div class="mt-6 overflow-x-auto rounded-xl border border-[#2e8bff]/25 bg-[#020a1e]">
+      <table class="w-full min-w-[600px] text-left text-sm" aria-label="ผลรางวัลล่าสุดของแต่ละตลาดหวยบน POE888">
+        <thead class="bg-gradient-to-r from-[#062459] to-[#04173f]">
+          <tr class="text-[#ffd93d]">
+            <th class="p-4 font-bold">ตลาดหวย</th>
+            <th class="p-4 text-center font-bold">3 ตัวบน</th>
+            <th class="p-4 text-center font-bold">2 ตัวบน</th>
+            <th class="p-4 text-center font-bold">2 ตัวล่าง</th>
+            <th class="p-4 text-right font-bold">สถานะ</th>
+          </tr>
+        </thead>
+        <tbody class="divide-y divide-[#2e8bff]/15 text-[#dbeafe]">
+          {
+            results.map((row) => (
+              <tr class="transition-colors hover:bg-[#062459]/50">
+                <td class="p-4 font-bold text-[#a8d4ff]">{row.market}</td>
+                <td class="p-4 text-center text-xl font-black tracking-wider text-[#ffd93d]">{row.three}</td>
+                <td class="p-4 text-center font-bold">{row.twoTop}</td>
+                <td class="p-4 text-center font-bold">{row.twoBottom}</td>
+                <td class="p-4 text-right">
+                  <span class="rounded-full bg-emerald-900/50 px-3 py-1 text-[10px] font-bold text-emerald-300">{row.status}</span>
+                </td>
+              </tr>
+            ))
+          }
+        </tbody>
+      </table>
+    </div>
+  </ContentBoxHuay>
+
+  <ContentBoxHuay title="อัตราจ่ายของ POE888 และการเทียบโพยหลังผลออก" as="h2">
+    <p class="text-left text-base leading-relaxed text-[#dbeafe]">
+      ก่อนเทียบผล ควรรู้ก่อนว่าเลขที่ส่งไว้เป็นประเภทใด เพราะแต่ละประเภทคิดอัตราจ่ายไม่เท่ากัน POE888 ใช้อัตราจ่าย 3 ตัวบน บาทละ 950 สามตัวโต๊ด บาทละ 150 สามตัวล่าง บาทละ 200 ส่วน 2 ตัวบนและ 2 ตัวล่าง
+      บาทละ 95 ตัวเลขชุดเดียวกันจึงให้ผลต่างกันตามประเภทที่เลือกไว้ตอนจัดโพย
+    </p>
+
+    <ul class="mt-6 grid grid-cols-2 gap-3 md:grid-cols-5" aria-label="อัตราจ่ายหวยออนไลน์ของ POE888">
+      {
+        rates.map((rate) => (
+          <li class="rounded-2xl border border-[#ffd93d]/30 bg-[#062459]/60 p-4 text-center">
+            <p class="text-sm font-bold text-[#b9cdf0]">{rate.type}</p>
+            <p class="mt-1 text-xl font-black text-[#ffd93d]">{rate.pay}</p>
+          </li>
+        ))
+      }
+    </ul>
+
+    <p class="mt-6 text-left text-base leading-relaxed text-[#dbeafe]">
+      แต่ละตลาดประกาศผลคนละรอบและปิดรับคนละเวลา การเทียบผลจึงควรดูว่างวดที่กำลังตรวจเป็นรอบเดียวกับที่ส่งโพยไว้หรือไม่ สมาชิก POE888 ย้อนดูรายการเดิมได้จากประวัติในบัญชี ซึ่งเก็บทั้งเลข ประเภท
+      และยอดของแต่ละโพยไว้ให้แล้ว หากพบรายการที่สถานะยังไม่อัปเดตหลังประกาศผล ให้แจ้งทีมงานพร้อมเลขที่โพยเพื่อให้ตรวจสอบได้เร็วขึ้น
+    </p>
+  </ContentBoxHuay>
+
+  <Navfoot />
+</MainLayout>
+
+<script>
+  const checkBtn = document.getElementById("check-btn");
+  const input = document.getElementById("lotto-input") as HTMLInputElement;
+  const resultBox = document.getElementById("result-box");
+  const showNumber = document.getElementById("show-number");
+
+  checkBtn?.addEventListener("click", () => {
+    if (!input.value || input.value.length < 2) {
+      alert("กรุณากรอกตัวเลขอย่างน้อย 2 หลัก");
+      return;
+    }
+
+    checkBtn.innerHTML = "กำลังตรวจสอบ...";
+
+    setTimeout(() => {
+      checkBtn.innerHTML = "ตรวจหวย";
+      if (showNumber) showNumber.innerText = input.value;
+      if (resultBox) {
+        resultBox.classList.remove("hidden");
+        resultBox.classList.add("flex");
+
+        setTimeout(() => {
+          resultBox.classList.remove("opacity-0");
+          resultBox.classList.add("opacity-100");
+        }, 50);
+      }
+    }, 800);
+  });
+</script>

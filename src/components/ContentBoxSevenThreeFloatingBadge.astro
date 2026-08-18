@@ -10,14 +10,14 @@ const { title, titleleft, titleright, as: HeadingTag = "h2" } = Astro.props;
 
 <section class="my-10 flex w-full justify-center px-4 font-sans">
   <div
-    class="relative isolate w-full max-w-7xl rounded-2xl border-2 border-[#21d4f2]/30 bg-gradient-to-b from-[#062a4f]/95 to-[#031324]/95 p-8 pt-36 shadow-[0_10px_30px_rgba(33,212,242,0.20)] md:pt-32">
-    <div aria-hidden="true" class="pointer-events-none absolute -right-10 -bottom-16 -z-10 h-40 w-40 rounded-full bg-[#b06f00]/45 blur-[60px]"></div>
-    <div aria-hidden="true" class="pointer-events-none absolute -top-16 -left-10 -z-10 h-40 w-40 rounded-full bg-[#21d4f2]/25 blur-[60px]"></div>
+    class="relative isolate w-full max-w-7xl rounded-2xl border-2 border-[#2e8bff]/30 bg-gradient-to-b from-[#04173f]/95 to-[#020a1e]/95 p-8 pt-36 shadow-[0_10px_30px_rgba(46,139,255,0.20)] md:pt-32">
+    <div aria-hidden="true" class="pointer-events-none absolute -right-10 -bottom-16 -z-10 h-40 w-40 rounded-full bg-[#cd994e]/45 blur-[60px]"></div>
+    <div aria-hidden="true" class="pointer-events-none absolute -top-16 -left-10 -z-10 h-40 w-40 rounded-full bg-[#2e8bff]/25 blur-[60px]"></div>
 
     {
       title && (
-        <div class="absolute -top-6 left-1/2 w-[92%] max-w-2xl -translate-x-1/2 rounded-lg border-2 border-[#fdb524]/40 bg-[#04182f] px-4 py-2.5 text-center shadow-[0_10px_30px_rgba(253,181,36,0.26)] sm:px-8">
-          <HeadingTag class="bg-gradient-to-r from-[#ffe999] via-[#fdb524] to-[#7fe6ff] bg-clip-text text-lg leading-normal font-black tracking-tight text-transparent uppercase sm:text-xl md:text-2xl">
+        <div class="absolute -top-6 left-1/2 w-[92%] max-w-2xl -translate-x-1/2 rounded-lg border-2 border-[#ffd93d]/40 bg-[#02143a] px-4 py-2.5 text-center shadow-[0_10px_30px_rgba(255,217,61,0.26)] sm:px-8">
+          <HeadingTag class="bg-gradient-to-r from-[#ffe98a] via-[#ffd93d] to-[#a8d4ff] bg-clip-text text-lg leading-normal font-black tracking-tight text-transparent uppercase sm:text-xl md:text-2xl">
             {title}
           </HeadingTag>
         </div>
@@ -25,13 +25,13 @@ const { title, titleleft, titleright, as: HeadingTag = "h2" } = Astro.props;
     }
 
     <div class="grid grid-cols-1 gap-10 md:grid-cols-[3fr_7fr] md:items-center">
-      <article class="flex flex-col gap-4 text-left text-base leading-relaxed text-[#dbeefb]">
-        {titleleft && <p class="text-2xl leading-normal font-bold text-[#7fe6ff]">{titleleft}</p>}
+      <article class="flex flex-col gap-4 text-left text-base leading-relaxed text-[#dbeafe]">
+        {titleleft && <p class="text-2xl leading-normal font-bold text-[#a8d4ff]">{titleleft}</p>}
         <slot name="left" />
       </article>
 
-      <article class="flex flex-col gap-4 text-left text-base leading-relaxed text-[#dbeefb] md:border-l md:border-[#0a3a68]/80 md:pl-10">
-        {titleright && <p class="text-2xl leading-normal font-bold text-[#ffe999]">{titleright}</p>}
+      <article class="flex flex-col gap-4 text-left text-base leading-relaxed text-[#dbeafe] md:border-l md:border-[#062459]/80 md:pl-10">
+        {titleright && <p class="text-2xl leading-normal font-bold text-[#ffe98a]">{titleright}</p>}
         <slot name="right" />
       </article>
     </div>

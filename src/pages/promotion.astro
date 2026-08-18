@@ -2,19 +2,22 @@
 import MainLayout from "../layouts/MainLayout.astro";
 import ContentBox from "../components/ContentBoxCyberCut.astro";
 import Navfoot from "../components/Navfoot.astro";
-import Announcement from "../components/Announcement3.astro";
+import Announcement from "../components/Announcement5.astro";
 
 import { Picture } from "astro:assets";
 
+import pro1 from "../assets/slide1.png";
 import pro2 from "../assets/slide2.png";
 import pro3 from "../assets/slide3.png";
 import pro4 from "../assets/slide4.png";
 import { pageGraph } from "../lib/schema";
 
-const pageTitle = "โปรโมชั่น 888NEO";
+const pageTitle = "โปรโมชั่น ANKERSPIN รวมภาพโปรสล็อต คาสิโนสด และระบบ Auto Wallet";
+
+const pageHeading = "โปรโมชั่น ANKERSPIN";
 
 const pageDescription =
-  "รวมภาพโปรโมชั่นของ 888NEO ไว้ครบในหน้าเดียว ทั้งโบนัสสมาชิกใหม่ โบนัสฝากแรก และสิทธิ์สำหรับสมาชิกเก่า อ่านเงื่อนไขและเกมที่ร่วมรายการบนภาพก่อนกดรับสิทธิ์";
+  "รวมภาพโปรโมชั่นของ ANKERSPIN ไว้ครบในหน้าเดียว ทั้งสล็อต คาสิโนสด กีฬา และสิทธิ์ที่มาพร้อมระบบ Auto Wallet อ่านเงื่อนไขและเกมที่ร่วมรายการบนภาพก่อนกดรับสิทธิ์";
 
 const graph = pageGraph(Astro, {
   name: pageTitle,
@@ -23,7 +26,7 @@ const graph = pageGraph(Astro, {
     { name: "หน้าแรก", path: "/" },
     { name: "โปรโมชั่น", path: "/promotion" },
   ],
-  primaryImagePath: pro2.src,
+  primaryImagePath: pro1.src,
 });
 ---
 
@@ -32,22 +35,36 @@ const graph = pageGraph(Astro, {
 
   <Announcement />
 
-  <ContentBox title="โปรโมชั่น 888NEO" as="h1">
-    <p class="mb-8 text-left text-base leading-relaxed text-[#f3e3c6]">
-      หน้านี้รวมภาพโปรโมชั่นที่ <strong class="text-[#f5c542]">888NEO</strong> เปิดให้สมาชิกเลือกใช้ ทั้งสล็อต คาสิโนสด และสิทธิ์ที่มาพร้อมระบบออโต้
-      แต่ละรายการมีเกมที่ร่วม ยอดเริ่มต้น และเงื่อนไขถอนไม่เท่ากัน จึงควรอ่านรายละเอียดบนภาพให้ครบก่อนกดรับสิทธิ์ทุกครั้ง
-      เลือกโปรที่ตรงกับรูปแบบการเล่นได้แล้ว สมัครสมาชิกจากปุ่มด้านล่างเพื่อเริ่มใช้สิทธิ์ได้ทันที
+  <ContentBox title={pageHeading} as="h1">
+    <p class="mb-8 text-left text-base leading-relaxed text-[#f9dcec]">
+      หน้านี้รวมภาพโปรโมชั่นที่ <strong class="text-[#ff2d8f]">ANKERSPIN</strong> เปิดให้สมาชิกเลือกใช้ ทั้งสล็อต คาสิโนสด กีฬา และสิทธิ์ที่มาพร้อมระบบ Auto
+      Wallet แต่ละรายการมีเกมที่ร่วม ยอดเริ่มต้น และเงื่อนไขไม่เท่ากัน จึงควรอ่านรายละเอียดบนภาพให้ครบก่อนกดรับสิทธิ์ทุกครั้ง เลือกโปรที่ตรงกับรูปแบบการเล่นได้แล้ว
+      สมัครสมาชิกจากปุ่มด้านล่างเพื่อเริ่มใช้สิทธิ์ได้ทันที
     </p>
 
     <div class="grid w-full grid-cols-1 gap-6 sm:grid-cols-2">
       <Picture
-        src={pro2}
-        alt="ภาพโปรโมชั่น 888NEO โลโก้ 888NEO อยู่ด้านบน ข้อความใหญ่ว่า เว็บสล็อต คาสิโนสด ระบบออโต้ เข้าเล่นผ่านมือถือง่ายๆ กลางภาพเป็นโทรศัพท์ที่เปิดหน้าล็อบบี้ 888NEO แสดงเครดิต 88,888.00 พร้อมแถวเกมให้เลือก ด้านล่างเขียนว่า ฝากถอนเร็ว 24 ชม. และ สมัครง่าย เล่นได้เลย มีพรีเซนเตอร์หญิงชุดเลื่อมสีแดงยืนอยู่ข้างกองเหรียญทอง"
+        src={pro1}
+        alt="ภาพโปรโมชั่น ANKERSPIN โลโก้ ANKERSPIN มีรูปสมอเรือคร่อมตัวอักษรอยู่ด้านบน ข้อความใหญ่สีชมพูนีออนว่า ฝากถอน Auto Wallet ตามด้วยแถบ ระบบออโต้ 24 ชั่วโมง และป้ายสามช่องเขียนว่า ไม่ต้องแจ้งสลิป ใช้งานง่าย โอนไว ด้านล่างเขียนว่า รองรับทรูวอลเล็ทและธนาคารหลัก พร้อมโลโก้ truemoney wallet K+ กรุงเทพ ไทยพาณิชย์ กรุงไทย กรุงศรี และอีกมากมาย ข้างขวาเป็นพรีเซนเตอร์หญิงชุดสีชมพูถือโทรศัพท์ที่แสดงเครื่องหมายถูกและคำว่า รายการสำเร็จ"
         loading="lazy"
         fetchpriority="low"
         widths={[200, 400, 600]}
         sizes="(max-width: 768px) 100vw, 50vw"
-        class="mx-auto h-auto w-full rounded-xl border border-[#8c0f12]/70 object-contain shadow-[0_10px_30px_rgba(224,27,27,0.22)] transition-transform duration-300 hover:-translate-y-1 hover:border-[#f5c542]/60 hover:shadow-[0_15px_40px_rgba(245,197,66,0.28)]"
+        class="mx-auto h-auto w-full rounded-xl border border-[#8f0f52]/70 object-contain shadow-[0_10px_30px_rgba(164,18,107,0.22)] transition-transform duration-300 hover:-translate-y-1 hover:border-[#ff2d8f]/60 hover:shadow-[0_15px_40px_rgba(255,45,143,0.28)]"
+        decoding="async"
+        formats={["avif", "webp"]}
+        fallbackFormat="webp"
+        quality={80}
+      />
+
+      <Picture
+        src={pro2}
+        alt="ภาพโปรโมชั่น ANKERSPIN โลโก้ ANKER SPIN พร้อมสมอเรืออยู่ด้านบน ข้อความใหญ่ว่า เว็บตรงลิขสิทธิ์แท้ ตามด้วยแถบ สล็อต คาสิโนสด กีฬา และบรรทัด รวมไว้ในบัญชีเดียว ด้านล่างมีป้ายเขียนว่า ฝากถอน Auto Wallet บริการตลอด 24 ชั่วโมง และ สมัครสมาชิกผ่านมือถือ ใช้งานง่าย กลางภาพเป็นพรีเซนเตอร์หญิงสองคนในชุดสีชมพูถือไพ่ ล้อมด้วยไพ่ใบใหญ่และชิปคาสิโนสีชมพู"
+        loading="lazy"
+        fetchpriority="low"
+        widths={[200, 400, 600]}
+        sizes="(max-width: 768px) 100vw, 50vw"
+        class="mx-auto h-auto w-full rounded-xl border border-[#8f0f52]/70 object-contain shadow-[0_10px_30px_rgba(164,18,107,0.22)] transition-transform duration-300 hover:-translate-y-1 hover:border-[#ff2d8f]/60 hover:shadow-[0_15px_40px_rgba(255,45,143,0.28)]"
         decoding="async"
         formats={["avif", "webp"]}
         fallbackFormat="webp"
@@ -56,12 +73,12 @@ const graph = pageGraph(Astro, {
 
       <Picture
         src={pro3}
-        alt="ภาพโปรโมชั่น 888NEO มีโลโก้ 888NEO ทั้งด้านบนและด้านล่าง ข้อความใหญ่ว่า สมัครง่าย เล่นผ่านมือถือ ตามด้วยบรรทัด เว็บสล็อต คาสิโนสด และ ระบบออโต้ ฝากถอนสะดวก กลางภาพมีชิปคาสิโนสามใบเขียนว่า รวมเกมสล็อต คาสิโนสด และ เข้าเล่นง่าย 24 ชม. ปิดท้ายด้วยปุ่มสีแดงเขียนว่า สมัครสมาชิก"
+        alt="ภาพโปรโมชั่น ANKERSPIN ชื่อ ANKERSPIN ใต้สมอเรือติดมงกุฎ ข้อความใหญ่ว่า เว็บตรงลิขสิทธิ์แท้ ตามด้วยบรรทัด สล็อต คาสิโนสด ฝากถอน Auto Wallet กลางภาพเป็นการ์ดสี่ช่องเขียนว่า รวมสล็อต หลายค่าย เล่นง่าย คาสิโนสด บาคาร่า รูเล็ต ครบ Auto Wallet ฝากถอน 24 ชม. และ สมัครผ่านมือถือ เริ่มเล่นได้ไว ปิดท้ายด้วยแถบเขียนว่า บัญชีเดียวครบทุกหมวด ข้างขวาเป็นพรีเซนเตอร์หญิงชุดสีชมพูถือชิปคาสิโน มีเหรียญทองและกล่องของขวัญ"
         loading="lazy"
         fetchpriority="low"
         widths={[200, 400, 600]}
         sizes="(max-width: 768px) 100vw, 50vw"
-        class="mx-auto h-auto w-full rounded-xl border border-[#8c0f12]/70 object-contain shadow-[0_10px_30px_rgba(224,27,27,0.22)] transition-transform duration-300 hover:-translate-y-1 hover:border-[#f5c542]/60 hover:shadow-[0_15px_40px_rgba(245,197,66,0.28)]"
+        class="mx-auto h-auto w-full rounded-xl border border-[#8f0f52]/70 object-contain shadow-[0_10px_30px_rgba(164,18,107,0.22)] transition-transform duration-300 hover:-translate-y-1 hover:border-[#ff2d8f]/60 hover:shadow-[0_15px_40px_rgba(255,45,143,0.28)]"
         decoding="async"
         formats={["avif", "webp"]}
         fallbackFormat="webp"
@@ -70,12 +87,12 @@ const graph = pageGraph(Astro, {
 
       <Picture
         src={pro4}
-        alt="ภาพโปรโมชั่น 888NEO ข้อความใหญ่ว่า 888NEO สล็อตเกมฮิต ตามด้วยบรรทัด คาสิโนสด ระบบออโต้ เล่นผ่านมือถือ กลางภาพเป็นโทรศัพท์ที่แสดงวงล้อสล็อตพร้อมยอด WIN 8,888.00 ล้อมด้วยป้ายเขียนว่า เริ่มต้น 1 บาท ฝากถอนเร็ว 24 ชม. และ สมัครง่าย เล่นได้ทันที ด้านล่างเป็นไหเหรียญทองล้นออกมา"
+        alt="ภาพโปรโมชั่น ANKERSPIN ข้อความใหญ่ว่า ANKERSPIN สล็อต ตามด้วยแถบ รวมเกมหลายค่าย เล่นง่ายผ่านมือถือ และเครื่องหมายถูกสองข้อว่า เว็บตรงลิขสิทธิ์แท้ และ ไม่มีขั้นต่ำ กลางภาพเป็นโทรศัพท์ที่เปิดล็อบบี้เกมสล็อตหลายเกม ข้างขวาเป็นวงล้อ 777 กับป้าย BIG WIN ด้านล่างเรียงโลโก้ค่ายเกม PG Pocket Games Soft JILI Pragmatic Play Habanero และ Joker Gaming มีพรีเซนเตอร์หญิงชุดเลื่อมสีชมพูอยู่ด้านหลัง"
         loading="lazy"
         fetchpriority="low"
         widths={[200, 400, 600]}
         sizes="(max-width: 768px) 100vw, 50vw"
-        class="mx-auto h-auto w-full rounded-xl border border-[#8c0f12]/70 object-contain shadow-[0_10px_30px_rgba(224,27,27,0.22)] transition-transform duration-300 hover:-translate-y-1 hover:border-[#f5c542]/60 hover:shadow-[0_15px_40px_rgba(245,197,66,0.28)]"
+        class="mx-auto h-auto w-full rounded-xl border border-[#8f0f52]/70 object-contain shadow-[0_10px_30px_rgba(164,18,107,0.22)] transition-transform duration-300 hover:-translate-y-1 hover:border-[#ff2d8f]/60 hover:shadow-[0_15px_40px_rgba(255,45,143,0.28)]"
         decoding="async"
         formats={["avif", "webp"]}
         fallbackFormat="webp"
@@ -86,8 +103,8 @@ const graph = pageGraph(Astro, {
     <div class="mt-12 flex justify-center pb-4">
       <a
         href="/register"
-        class="flex items-center justify-center rounded-lg border border-[#ff5a4d]/60 bg-gradient-to-r from-[#ffe9a8] via-[#f5c542] to-[#b8860b] px-10 py-3.5 text-lg font-black text-[#0b0503] shadow-[0_10px_30px_rgba(224,27,27,0.28)] transition-transform hover:scale-105 hover:shadow-[0_15px_40px_rgba(245,197,66,0.4)]">
-        สมัครสมาชิก 888NEO
+        class="flex items-center justify-center rounded-lg border border-[#ff6bb5]/60 bg-gradient-to-r from-[#ffa6d5] via-[#ff2d8f] to-[#c2185b] px-10 py-3.5 text-lg font-black text-[#0d0207] shadow-[0_10px_30px_rgba(164,18,107,0.28)] transition-transform hover:scale-105 hover:shadow-[0_15px_40px_rgba(255,45,143,0.4)]">
+        สมัครสมาชิก ANKERSPIN
       </a>
     </div>
   </ContentBox>

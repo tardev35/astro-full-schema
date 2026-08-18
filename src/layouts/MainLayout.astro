@@ -4,8 +4,8 @@ import bgConfig from "../assets/bg.json";
 import "../styles/global.css";
 import { BRAND_NAME, BRAND_TEXT, brandProfile, fontStack, iconVersion, usesGoogleFonts } from "../lib/brandProfile";
 import { canonicalFor } from "../lib/schema";
-import Navbar from "../components/NavbarStyle7.astro";
-import Footer from "../components/FooterStyle3.astro";
+import Navbar from "../components/NavbarStyle10.astro";
+import Footer from "../components/FooterPremium.astro";
 
 // Only banner1 is ever rendered, so only banner1 is imported.
 //
@@ -54,8 +54,8 @@ const mobileBannerImg = mobileBanner
   : null;
 
 const {
-  title = "888NEO เว็บสล็อต คาสิโนสด ระบบออโต้ เข้าเล่นผ่านมือถือง่ายๆ",
-  description = "888NEO รวมเกมสล็อต คาสิโนสด ระบบสมาชิก ฝากถอนออโต้ และทางเข้าเว็บหลัก รองรับมือถือ พร้อมจัดการเครดิตและประวัติรายการในบัญชีเดียว",
+  title = "ANKERSPIN เว็บตรงลิขสิทธิ์แท้ สล็อต คาสิโนสด ฝากถอน Auto Wallet",
+  description = "ANKERSPIN รวมสล็อต คาสิโนสด กีฬา ระบบสมาชิก และฝากถอน Auto Wallet รองรับมือถือ ใช้งานง่าย พร้อมทางเข้าเว็บหลักและระบบออโต้ตลอด 24 ชั่วโมง",
   robots = "index, follow",
 } = Astro.props;
 
@@ -177,7 +177,7 @@ const profile = brandProfile(Astro.site);
 
           {block === "appmeta" && (
             <Fragment>
-              {profile.showAppTitle && <meta name="apple-mobile-web-app-title" content="888neo" />}
+              {profile.showAppTitle && <meta name="apple-mobile-web-app-title" content="ankerspin" />}
               <link rel="manifest" href="/site.webmanifest" />
             </Fragment>
           )}
@@ -219,7 +219,7 @@ const profile = brandProfile(Astro.site);
         background-attachment: fixed;
         background-repeat: no-repeat;
         margin: 0;
-        background-color: #0b0503;
+        background-color: #0d0207;
         font-weight: 400;
         font-family: var(--font-sans) !important;
       }
@@ -272,7 +272,7 @@ const profile = brandProfile(Astro.site);
         }
         <Image
           src={mainBanner}
-          alt="แบนเนอร์ 888NEO พื้นหลังสีดำมีชิปคาสิโน ไพ่โพดำ และเส้นแสงทองพาดอยู่ ตรงกลางด้านบนเป็นโลโก้เลข 888 สีทองต่อกับตัวอักษร NEO สีแดง ถัดลงมาเป็นตัวอักษรขนาดใหญ่สีทองว่า เว็บสล็อต คาสิโนสด และบรรทัดรองว่า ระบบออโต้ เข้าเล่นผ่านมือถือง่ายๆ ใต้ลงมาเป็นไอคอนวงกลมสี่วงเขียนว่า รวมเกมสล็อต, คาสิโนสด, ฝากถอนอัตโนมัติ และ บัญชีเดียวใช้งานง่าย ปิดท้ายด้วยปุ่มสีแดงขอบทองเขียนว่า สมัครสมาชิก ด้านขวาเป็นพรีเซนเตอร์หญิงผมยาวสวมชุดสีดำแต่งทอง ยืนอยู่หน้าวงล้อรูเล็ตและไพ่เอซ"
+          alt="แบนเนอร์ ANKERSPIN พื้นหลังสีดำมีแสงนีออนสีชมพูบานเย็นและประกายไฟกระจายอยู่ มุมซ้ายบนเป็นโลโก้ ANKERSPIN ตัวอักษร ANKER สีชมพูต่อกับ SPIN สีขาวเงินและมีรูปสมอเรือวางทับ ถัดลงมาเป็นตัวอักษรขนาดใหญ่สีชมพูว่า ANKERSPIN และบรรทัดรองสีขาวเงินว่า เว็บตรงลิขสิทธิ์แท้ ใต้ลงมาเป็นแถบขอบมนแบ่งสามช่องเขียนว่า สล็อต, คาสิโนสด และ กีฬา พร้อมไอคอนตู้สล็อต ดีลเลอร์ และลูกฟุตบอล ถัดลงมาเป็นไอคอนกระเป๋าเงินคู่กับข้อความว่า ฝากถอน Auto Wallet และบรรทัดล่างสุดว่า รองรับมือถือ ระบบออโต้ 24 ชั่วโมง ด้านขวาเป็นพรีเซนเตอร์หญิงผมยาวสวมชุดซาตินสีชมพู ยืนอยู่กับไพ่เอซสามใบ ลูกเต๋าใส และชิปคาสิโนลายหัวใจ ฉากหลังมีป้ายนีออนเลข 777"
           loading="eager"
           fetchpriority="high"
           widths={[412, 640, 828, 1024, 1280, 1600, 1900]}

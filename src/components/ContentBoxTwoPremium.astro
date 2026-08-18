@@ -10,24 +10,24 @@ const { title, as: HeadingTag = "h2", titleleft, titleright } = Astro.props;
 
 <section class="relative z-10 mx-auto mb-8 w-full max-w-7xl px-4 font-sans">
   <div
-    class="group relative isolate w-full overflow-hidden rounded-3xl border border-[#22d3ee]/30 bg-[#160735]/92 p-8 text-[#ece4ff] shadow-[0_10px_30px_rgba(7,2,24,0.85)] backdrop-blur-xl transition-all duration-500 hover:border-[#22d3ee]/55 hover:shadow-[0_15px_40px_rgba(34,211,238,0.24)] md:p-10">
-    <div aria-hidden="true" class="pointer-events-none absolute inset-0 -z-10 bg-gradient-to-br from-[#4c1d95]/45 to-transparent opacity-70"></div>
+    class="group relative isolate w-full overflow-hidden rounded-3xl border border-[#ff6bb5]/30 bg-[#2c0a1a]/92 p-8 text-[#f9dcec] shadow-[0_10px_30px_rgba(13,2,7,0.85)] backdrop-blur-xl transition-all duration-500 hover:border-[#ff6bb5]/55 hover:shadow-[0_15px_40px_rgba(255,107,181,0.24)] md:p-10">
+    <div aria-hidden="true" class="pointer-events-none absolute inset-0 -z-10 bg-gradient-to-br from-[#8f0f52]/45 to-transparent opacity-70"></div>
 
     {
       title && (
-        <header class="mb-8 flex items-center gap-4 border-b border-[#22d3ee]/30 pb-4">
-          <span aria-hidden="true" class="h-8 w-1.5 shrink-0 rounded-full bg-gradient-to-b from-[#67e8f9] via-[#22d3ee] to-[#4c1d95] shadow-[0_0_10px_rgba(34,211,238,0.5)]" />
-          <HeadingTag class="bg-gradient-to-r from-[#67e8f9] via-[#22d3ee] to-[#c084fc] bg-clip-text text-2xl leading-normal font-black tracking-widest text-transparent uppercase">{title}</HeadingTag>
+        <header class="mb-8 flex items-center gap-4 border-b border-[#ff6bb5]/30 pb-4">
+          <span aria-hidden="true" class="h-8 w-1.5 shrink-0 rounded-full bg-gradient-to-b from-[#ffa6d5] via-[#ff6bb5] to-[#8f0f52] shadow-[0_0_10px_rgba(255,107,181,0.5)]" />
+          <HeadingTag class="bg-gradient-to-r from-[#ffa6d5] via-[#ff2d8f] to-[#ff6bb5] bg-clip-text text-2xl leading-normal font-black tracking-widest text-transparent uppercase">{title}</HeadingTag>
         </header>
       )
     }
 
     <div class="grid grid-cols-1 gap-10 md:grid-cols-2">
-      <article class="flex flex-col gap-4 text-left text-base leading-relaxed text-[#ece4ff]">
+      <article class="flex flex-col gap-4 text-left text-base leading-relaxed text-[#f9dcec]">
         {
           titleleft && (
-            <p class="flex items-center gap-3 border-b border-[#22d3ee]/30 pb-3 text-xl leading-normal font-black tracking-widest text-[#67e8f9] uppercase">
-              <span aria-hidden="true" class="h-6 w-1.5 shrink-0 rounded-full bg-gradient-to-b from-[#67e8f9] via-[#22d3ee] to-[#4c1d95] shadow-[0_0_10px_rgba(34,211,238,0.45)]" />
+            <p class="flex items-center gap-3 border-b border-[#ff6bb5]/30 pb-3 text-xl leading-normal font-black tracking-widest text-[#ffa6d5] uppercase">
+              <span aria-hidden="true" class="h-6 w-1.5 shrink-0 rounded-full bg-gradient-to-b from-[#ffa6d5] via-[#ff6bb5] to-[#8f0f52] shadow-[0_0_10px_rgba(255,107,181,0.45)]" />
               {titleleft}
             </p>
           )
@@ -35,11 +35,11 @@ const { title, as: HeadingTag = "h2", titleleft, titleright } = Astro.props;
         <slot name="left" />
       </article>
 
-      <article class="flex flex-col gap-4 text-left text-base leading-relaxed text-[#ece4ff] md:border-l md:border-[#4c1d95] md:pl-10">
+      <article class="flex flex-col gap-4 text-left text-base leading-relaxed text-[#f9dcec] md:border-l md:border-[#8f0f52] md:pl-10">
         {
           titleright && (
-            <p class="flex items-center gap-3 border-b border-[#22d3ee]/30 pb-3 text-xl leading-normal font-black tracking-widest text-[#67e8f9] uppercase">
-              <span aria-hidden="true" class="h-6 w-1.5 shrink-0 rounded-full bg-gradient-to-b from-[#67e8f9] via-[#22d3ee] to-[#4c1d95] shadow-[0_0_10px_rgba(34,211,238,0.45)]" />
+            <p class="flex items-center gap-3 border-b border-[#ff6bb5]/30 pb-3 text-xl leading-normal font-black tracking-widest text-[#ffa6d5] uppercase">
+              <span aria-hidden="true" class="h-6 w-1.5 shrink-0 rounded-full bg-gradient-to-b from-[#ffa6d5] via-[#ff6bb5] to-[#8f0f52] shadow-[0_0_10px_rgba(255,107,181,0.45)]" />
               {titleright}
             </p>
           )

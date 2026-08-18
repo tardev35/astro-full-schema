@@ -7,12 +7,12 @@ const imagePaths = Object.keys(images);
 const mainLogo = imagePaths.length > 0 ? images[imagePaths[0]].default : null;
 
 const logoAlt =
-  "โลโก้ TEMMAX69 เป็นวงกลมเรืองแสงสีฟ้าคราม ข้างในมีไพ่สี่ใบและลูกเต๋าสีดำสามลูกวางซ้อนบนรูปโพดำ ด้านล่างเป็นแถบตัวอักษรสีขาวขอบฟ้าว่า TEMMAX69 และบรรทัดเล็กว่า TEMMAX69LOGIN.COM";
+  "โลโก้ ANKERSPIN ตัวอักษร ANKER สีชมพูบานเย็นไล่เฉดขอบขาว ต่อด้วยคำว่า SPIN สีขาวเงิน มีรูปสมอเรือสีชมพูวางทับอยู่ด้านบนตัวอักษร พร้อมเส้นแสงสีชมพูเรืองรอบตัวโลโก้";
 ---
 
 <footer
-  class="relative mt-16 w-full overflow-hidden rounded-t-[3rem] border-t border-[#22d3ee]/40 bg-[#070218] pt-16 pb-8 font-sans text-[#ece4ff] shadow-[0_-15px_40px_rgba(168,85,247,0.26)]">
-  <div class="pointer-events-none absolute inset-x-0 -top-20 mx-auto h-[250px] w-full max-w-4xl rounded-full bg-[#a855f7]/20 blur-[100px]"></div>
+  class="relative mt-16 w-full overflow-hidden rounded-t-[3rem] border-t border-[#ff6bb5]/40 bg-[#0d0207] pt-16 pb-8 font-sans text-[#f9dcec] shadow-[0_-15px_40px_rgba(255,45,143,0.26)]">
+  <div class="pointer-events-none absolute inset-x-0 -top-20 mx-auto h-[250px] w-full max-w-4xl rounded-full bg-[#ff2d8f]/20 blur-[100px]"></div>
 
   <div class="relative z-10 mx-auto w-full max-w-[1200px] px-6">
     <div class="mb-12 grid grid-cols-1 gap-12 md:grid-cols-12">
@@ -25,44 +25,44 @@ const logoAlt =
                 alt={logoAlt}
                 widths={[130, 260, 390]}
                 sizes="130px"
-                class="h-[65px] w-auto drop-shadow-[0_5px_15px_rgba(34,211,238,0.35)]"
+                class="h-[65px] w-auto drop-shadow-[0_5px_15px_rgba(255,107,181,0.35)]"
                 formats={["avif", "webp"]}
                 fallbackFormat="webp"
               />
             ) : (
-              <span class="bg-gradient-to-r from-[#c9b8f5] to-[#0e7490] bg-clip-text text-4xl font-black tracking-widest text-transparent">
-                TEM<span class="bg-gradient-to-r from-[#67e8f9] to-[#22d3ee] bg-clip-text text-transparent">MAX69</span>
+              <span class="bg-gradient-to-r from-[#ff2d8f] to-[#c2185b] bg-clip-text text-4xl font-black tracking-widest text-transparent">
+                ANKER<span class="bg-gradient-to-r from-[#eae4f0] to-[#ffa6d5] bg-clip-text text-transparent">SPIN</span>
               </span>
             )
           }
         </a>
-        <p class="border-l-2 border-[#22d3ee]/50 pl-4 text-sm leading-relaxed text-[#ece4ff]/65">
-          TEMMAX69 เว็บสล็อตมาใหม่ รวมสล็อต เกมใหม่ โบนัสสมาชิก และการจัดการเครดิตไว้ในบัญชีเดียว รองรับ True Wallet และระบบออโต้ตลอด 24 ชั่วโมง เข้าใช้งานผ่านมือถือได้ทันทีตั้งแต่สมัครจนถึงเลือกเกม
+        <p class="border-l-2 border-[#ff6bb5]/50 pl-4 text-sm leading-relaxed text-[#f9dcec]/65">
+          ANKERSPIN เว็บตรงลิขสิทธิ์แท้ รวมสล็อต คาสิโนสด กีฬา ระบบสมาชิก และการจัดการเครดิตไว้ในบัญชีเดียว รองรับฝากถอน Auto Wallet และระบบออโต้ตลอด 24 ชั่วโมง ใช้งานผ่านมือถือได้ตั้งแต่สมัครจนถึงเลือกเกม
         </p>
         <div class="mt-4 flex gap-3">
-          <span class="rounded-full border border-[#22d3ee]/30 bg-[#a855f7]/25 px-4 py-1 text-xs font-medium text-[#67e8f9] backdrop-blur-sm">รองรับวอลเล็ต</span>
-          <span class="rounded-full border border-[#c084fc]/30 bg-[#a855f7]/25 px-4 py-1 text-xs font-medium text-[#c9b8f5] backdrop-blur-sm">ออโต้ 24 ชม.</span>
+          <span class="rounded-full border border-[#ff6bb5]/30 bg-[#ff2d8f]/25 px-4 py-1 text-xs font-medium text-[#ffa6d5] backdrop-blur-sm">Auto Wallet</span>
+          <span class="rounded-full border border-[#ffa6d5]/30 bg-[#ff2d8f]/25 px-4 py-1 text-xs font-medium text-[#ffc4e2] backdrop-blur-sm">ออโต้ 24 ชม.</span>
         </div>
       </div>
 
       <nav class="flex flex-col gap-4 md:col-span-3 lg:pl-8">
         <p class="text-lg font-black tracking-widest text-white uppercase drop-shadow-sm">เมนูลัด</p>
-        <div class="h-[1px] w-12 bg-[#22d3ee]"></div>
-        <ul class="flex flex-col gap-3 text-sm font-medium text-[#ece4ff]/65">
-          <li><a href="/" class="transition-colors hover:text-[#67e8f9]">หน้าหลัก</a></li>
-          <li><a href="/promotion" class="transition-colors hover:text-[#67e8f9]">โปรโมชั่น</a></li>
-          <li><a href="/register" class="transition-colors hover:text-[#67e8f9]">สมัครสมาชิก</a></li>
-          <li><a href="/login" class="transition-colors hover:text-[#67e8f9]">เข้าสู่ระบบ</a></li>
-          <li><a href="/ทางเข้า" class="transition-colors hover:text-[#67e8f9]">ทางเข้า</a></li>
-          <li><a href="/ทดลองเล่น" class="transition-colors hover:text-[#67e8f9]">ทดลองเล่น</a></li>
-          <li><a href="/about-us" class="transition-colors hover:text-[#67e8f9]">เกี่ยวกับเรา</a></li>
-          <li><a href="/contact-us" class="transition-colors hover:text-[#67e8f9]">ติดต่อเรา</a></li>
+        <div class="h-[1px] w-12 bg-[#ff6bb5]"></div>
+        <ul class="flex flex-col gap-3 text-sm font-medium text-[#f9dcec]/65">
+          <li><a href="/" class="transition-colors hover:text-[#ffa6d5]">หน้าหลัก</a></li>
+          <li><a href="/promotion" class="transition-colors hover:text-[#ffa6d5]">โปรโมชั่น</a></li>
+          <li><a href="/register" class="transition-colors hover:text-[#ffa6d5]">สมัครสมาชิก</a></li>
+          <li><a href="/login" class="transition-colors hover:text-[#ffa6d5]">เข้าสู่ระบบ</a></li>
+          <li><a href="/ทางเข้า" class="transition-colors hover:text-[#ffa6d5]">ทางเข้า</a></li>
+          <li><a href="/ทดลองเล่น" class="transition-colors hover:text-[#ffa6d5]">ทดลองเล่น</a></li>
+          <li><a href="/about-us" class="transition-colors hover:text-[#ffa6d5]">เกี่ยวกับเรา</a></li>
+          <li><a href="/contact-us" class="transition-colors hover:text-[#ffa6d5]">ติดต่อเรา</a></li>
         </ul>
       </nav>
 
       <div class="flex flex-col gap-5 md:col-span-4">
         <p class="text-lg font-black tracking-widest text-white uppercase drop-shadow-sm">ฝ่ายดูแลสมาชิก</p>
-        <div class="h-[1px] w-12 bg-[#22d3ee]"></div>
+        <div class="h-[1px] w-12 bg-[#ff6bb5]"></div>
 
         <a
           href="/line"
@@ -90,16 +90,16 @@ const logoAlt =
           )
         }
 
-        <div class="mt-4 text-xs font-medium tracking-widest text-[#67e8f9]/55 uppercase">ช่องทางฝากถอนที่รองรับ</div>
+        <div class="mt-4 text-xs font-medium tracking-widest text-[#ffa6d5]/55 uppercase">ช่องทางฝากถอนที่รองรับ</div>
         <BankStrip size={30} />
       </div>
     </div>
 
-    <div class="flex flex-col items-center justify-between border-t border-[#0e7490]/40 pt-8 text-xs font-medium tracking-wide text-[#ece4ff]/45 md:flex-row">
-      <p>COPYRIGHT &copy; {new Date().getFullYear()} TEMMAX69. ALL RIGHTS RESERVED.</p>
+    <div class="flex flex-col items-center justify-between border-t border-[#a4126b]/40 pt-8 text-xs font-medium tracking-wide text-[#f9dcec]/45 md:flex-row">
+      <p>COPYRIGHT &copy; {new Date().getFullYear()} ANKERSPIN. ALL RIGHTS RESERVED.</p>
       <div class="mt-4 flex gap-4 md:mt-0">
-        <a href="/terms/" class="transition-colors hover:text-[#67e8f9]">TERMS &amp; CONDITIONS</a>
-        <a href="/privacy/" class="transition-colors hover:text-[#67e8f9]">PRIVACY POLICY</a>
+        <a href="/terms/" class="transition-colors hover:text-[#ffa6d5]">TERMS &amp; CONDITIONS</a>
+        <a href="/privacy/" class="transition-colors hover:text-[#ffa6d5]">PRIVACY POLICY</a>
       </div>
     </div>
   </div>

@@ -2,15 +2,15 @@
 import MainLayout from "../layouts/MainLayout.astro";
 import ContentBox from "../components/ContentBox.astro";
 import Navfoot from "../components/Navfoot.astro";
-import Announcement from "../components/Announcement3.astro";
+import Announcement from "../components/Announcement5.astro";
 import CtaRedirect from "../components/CtaRedirect.astro";
 import { pageGraph } from "../lib/schema";
 
 const pageDescription =
-  "เข้าสู่ระบบ 888NEO หน้าล็อกอินเว็บหลัก กดปุ่มเดียวไปยังหน้าเข้าสู่ระบบด้วยบัญชีเดิม เลือกเกมสล็อต เปิดคาสิโนสด เช็กเครดิต และดูประวัติรายการฝากถอนผ่านมือถือ";
+  "หน้าเข้าสู่ระบบ ANKERSPIN เว็บหลัก มีปุ่มเดียวสำหรับกดไปยังหน้าล็อกอินด้วยบัญชีเดิม เพื่อเข้าเล่นสล็อต คาสิโนสด กีฬา เช็กเครดิต และดูประวัติฝากถอนผ่านมือถือ";
 
 const graph = pageGraph(Astro, {
-  name: "เข้าสู่ระบบ 888NEO เว็บหลัก",
+  name: "เข้าสู่ระบบ ANKERSPIN เว็บหลัก",
   description: pageDescription,
   breadcrumb: [
     { name: "หน้าแรก", path: "/" },
@@ -21,19 +21,19 @@ const graph = pageGraph(Astro, {
 const targetUrl = "https://yoalink.com/22hs";
 ---
 
-<MainLayout title="เข้าสู่ระบบ 888NEO | ล็อกอินเว็บหลัก สล็อตและคาสิโนสด" description={pageDescription}>
+<MainLayout title="เข้าสู่ระบบ ANKERSPIN | ปุ่มล็อกอินเว็บหลัก สล็อตและคาสิโนสด" description={pageDescription}>
   <script type="application/ld+json" set:html={graph} />
 
   <Announcement />
 
-  <ContentBox title="เข้าสู่ระบบ 888NEO" as="h1">
+  <ContentBox title="เข้าสู่ระบบ ANKERSPIN" as="h1">
     <div class="flex justify-center py-8">
       <a
         href={targetUrl}
         rel="nofollow sponsored"
         data-cta-redirect
         aria-label="เข้าระบบเกม"
-        class="group relative mx-auto flex w-full max-w-[320px] items-center justify-center gap-3 overflow-hidden rounded-xl border border-[#f5c542]/60 bg-[#1c0a06] px-6 py-4 text-xl font-bold tracking-wide text-[#ffe9a8] shadow-[0_10px_30px_rgba(224,27,27,0.35)] transition-all duration-300 hover:scale-105 hover:border-[#e01b1b] hover:bg-[#2a1109] hover:text-[#ff5a4d] hover:shadow-[0_15px_40px_rgba(245,197,66,0.30)]">
+        class="group relative mx-auto flex w-full max-w-[320px] items-center justify-center gap-3 overflow-hidden rounded-xl border border-[#ff2d8f]/60 bg-[#1f0611] px-6 py-4 text-xl font-bold tracking-wide text-[#ffa6d5] shadow-[0_10px_30px_rgba(164,18,107,0.35)] transition-all duration-300 hover:scale-105 hover:border-[#a4126b] hover:bg-[#2c0a1a] hover:text-[#ff6bb5] hover:shadow-[0_15px_40px_rgba(255,45,143,0.30)]">
         เข้าระบบเกม
       </a>
     </div>

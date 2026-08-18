@@ -2,15 +2,15 @@
 import MainLayout from "../layouts/MainLayout.astro";
 import ContentBox from "../components/ContentBox.astro";
 import Navfoot from "../components/Navfoot.astro";
-import Announcement from "../components/Announcement3.astro";
+import Announcement from "../components/Announcement5.astro";
 import CtaRedirect from "../components/CtaRedirect.astro";
 import { pageGraph } from "../lib/schema";
 
 const pageDescription =
-  "สมัครสมาชิก 888NEO หน้าสมัครเว็บหลัก กดปุ่มเดียวไปยังหน้าเปิดบัญชีผ่านมือถือ ใช้บัญชีเดียวเล่นสล็อตและคาสิโนสด พร้อมระบบออโต้สำหรับฝากถอนและตรวจสอบเครดิต";
+  "หน้าสมัครสมาชิก ANKERSPIN เว็บหลัก มีปุ่มเดียวสำหรับกดไปยังหน้าเปิดบัญชีใหม่ผ่านมือถือ ใช้บัญชีเดียวเข้าเล่นสล็อต คาสิโนสด กีฬา และฝากถอนด้วยระบบ Auto Wallet";
 
 const graph = pageGraph(Astro, {
-  name: "สมัครสมาชิก 888NEO เว็บหลัก",
+  name: "สมัครสมาชิก ANKERSPIN เว็บหลัก",
   description: pageDescription,
   breadcrumb: [
     { name: "หน้าแรก", path: "/" },
@@ -21,19 +21,19 @@ const graph = pageGraph(Astro, {
 const targetUrl = "https://yoalink.com/22hs";
 ---
 
-<MainLayout title="สมัครสมาชิก 888NEO | เปิดบัญชีเว็บสล็อตและคาสิโนสด" description={pageDescription}>
+<MainLayout title="สมัครสมาชิก ANKERSPIN | ปุ่มเปิดบัญชีเว็บหลักผ่านมือถือ" description={pageDescription}>
   <script type="application/ld+json" set:html={graph} />
 
   <Announcement />
 
-  <ContentBox title="สมัครสมาชิก 888NEO" as="h1">
+  <ContentBox title="สมัครสมาชิก ANKERSPIN" as="h1">
     <div class="flex justify-center py-8">
       <a
         href={targetUrl}
         rel="nofollow sponsored"
         data-cta-redirect
         aria-label="สมัครสมาชิก"
-        class="group relative mx-auto flex w-full max-w-[320px] items-center justify-center gap-3 overflow-hidden rounded-xl border border-[#ff5a4d]/60 bg-gradient-to-b from-[#ff5a4d] via-[#e01b1b] to-[#8c0f12] px-6 py-4 text-xl font-bold tracking-wide text-[#0b0503] shadow-[0_10px_30px_rgba(224,27,27,0.35)] transition-all duration-300 hover:scale-105 hover:shadow-[0_15px_40px_rgba(245,197,66,0.30)]">
+        class="group relative mx-auto flex w-full max-w-[320px] items-center justify-center gap-3 overflow-hidden rounded-xl border border-[#ff6bb5]/60 bg-gradient-to-b from-[#ff6bb5] via-[#ff2d8f] to-[#8f0f52] px-6 py-4 text-xl font-bold tracking-wide text-[#0d0207] shadow-[0_10px_30px_rgba(164,18,107,0.35)] transition-all duration-300 hover:scale-105 hover:shadow-[0_15px_40px_rgba(255,45,143,0.30)]">
         สมัครสมาชิก
       </a>
     </div>

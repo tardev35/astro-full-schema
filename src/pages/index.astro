@@ -1,62 +1,62 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
-import Announcement3 from "../components/Announcement3.astro";
+import Announcement5 from "../components/Announcement5.astro";
 import ContentBox from "../components/ContentBox.astro";
-import ContentBoxNeumorphism from "../components/ContentBoxNeumorphism.astro";
-import ContentBoxFloatingBadge from "../components/ContentBoxFloatingBadge.astro";
-import ContentBoxTwoNeumorphism from "../components/ContentBoxTwoNeumorphism.astro";
-import ContentBoxTwoFloatingBadge from "../components/ContentBoxTwoFloatingBadge.astro";
-import ContentBoxSevenThree from "../components/ContentBoxSevenThree.astro";
-import ContentBoxSevenThreeNeumorphism from "../components/ContentBoxSevenThreeNeumorphism.astro";
+import ContentBoxPremium from "../components/ContentBoxPremium.astro";
+import ContentBoxCyberCut from "../components/ContentBoxCyberCut.astro";
+import ContentBoxTwoPremium from "../components/ContentBoxTwoPremium.astro";
+import ContentBoxTwoCyberCut from "../components/ContentBoxTwoCyberCut.astro";
+import ContentBoxSevenThreePremium from "../components/ContentBoxSevenThreePremium.astro";
+import ContentBoxSevenThreeCyberCut from "../components/ContentBoxSevenThreeCyberCut.astro";
 import ContentBoxSpecial from "../components/ContentBoxSpecial.astro";
-import ProviderGridPremium from "../components/ProviderGridPremium.astro";
+import ProviderGrid from "../components/ProviderGrid.astro";
 import GameRankingBoard from "../components/GameRankingBoard.astro";
-import LatestWinnersPremium from "../components/LatestWinnersPremium.astro";
+import LatestWinnersCyber from "../components/LatestWinnersCyber.astro";
 import SmoothCarousel from "../components/SmoothCarousel.astro";
 import LoginRtpSection from "../components/LoginRtpSection.astro";
-import Faq3 from "../components/Faq3.astro";
+import Faq4 from "../components/Faq4.astro";
 import ReviewCardSumo2 from "../components/ReviewCardSumo2.astro";
 import Navfoot from "../components/Navfoot.astro";
 
 import { Picture } from "astro:assets";
 import { pageGraph } from "../lib/schema";
-import imgLive from "../assets/slide3.png";
-import imgMember from "../assets/slide2.png";
+import imgSlot from "../assets/slide4.png";
+import imgWallet from "../assets/slide1.png";
 
-const pageTitle = "888NEO เว็บสล็อต คาสิโนสด ระบบออโต้ เข้าเล่นผ่านมือถือง่ายๆ";
+const pageTitle = "ANKERSPIN เว็บตรงลิขสิทธิ์แท้ สล็อต คาสิโนสด ฝากถอน Auto Wallet";
 
 const pageDescription =
-  "888NEO รวมเกมสล็อต คาสิโนสด ระบบสมาชิก ฝากถอนออโต้ และทางเข้าเว็บหลัก รองรับมือถือ พร้อมจัดการเครดิตและประวัติรายการในบัญชีเดียว";
+  "ANKERSPIN รวมสล็อต คาสิโนสด กีฬา ระบบสมาชิก และฝากถอน Auto Wallet รองรับมือถือ ใช้งานง่าย พร้อมทางเข้าเว็บหลักและระบบออโต้ตลอด 24 ชั่วโมง";
 
 const announcement =
-  "888NEO รวมสล็อต คาสิโนสด และระบบออโต้ไว้ในบัญชีเดียว เลือกเกมและจัดการบัญชีต่อได้จากมือถือ • สล็อตแยกตามรูปแบบและหมวดเกม ทั้งสายมีเกมประจำและคนชอบลองเกมใหม่หาตัวเลือกได้เร็วขึ้น • คาสิโนสดเพิ่มทางเลือกเกมโต๊ะแบบเรียลไทม์ ใช้งานต่อจากบัญชีสมาชิกเดิมได้ทันที • ระบบออโต้ช่วยให้ฝากถอนและตรวจเครดิตทำผ่านบัญชีสมาชิกได้โดยตรง ลดจังหวะรอการจัดการแบบแมนนวล • หน้าสมาชิกรวมเครดิต เกมที่ใช้งาน และข้อมูลรายการสำคัญไว้จุดเดียว • ทางเข้า 888NEO เว็บหลัก รองรับทั้งมือถือและคอมพิวเตอร์ด้วยข้อมูลสมาชิกเดิม";
+  "ANKERSPIN รวมสล็อต คาสิโนสด กีฬา ระบบสมาชิก และฝากถอน Auto Wallet ไว้ในบัญชีเดียว รองรับทั้งมือถือและคอม • เว็บตรงลิขสิทธิ์แท้ วางบริการหลักไว้ครบ เลือกความบันเทิงได้ตามสไตล์จากเมนูหลักบนมือถือ • สล็อตรวมเกมหลายค่ายหลายสไตล์ ตั้งแต่เกมคลาสสิก เกมโบนัส ไปจนถึงเกมที่มีฟีเจอร์แตกต่างกัน • คาสิโนสดมีบาคาร่า รูเล็ต และเกมโต๊ะ ใช้บัญชีสมาชิกชุดเดิมเข้าเล่นได้ทันที • กีฬาออนไลน์เลือกคู่แข่งขันและรายการที่สนใจได้จากหน้าเดียว • ฝากถอน Auto Wallet เชื่อมเครดิตกับบัญชีสมาชิกโดยตรง ระบบออโต้รับรายการตลอด 24 ชั่วโมง • สมัครสมาชิกผ่านมือถือได้ตั้งแต่กรอกข้อมูลไปจนยืนยันตามขั้นตอนของระบบ • หน้าสมาชิกรวมเครดิต โปรโมชั่น และประวัติรายการไว้ที่เดียว • ทางเข้าเว็บหลักใช้งานได้ทั้งมือถือและคอมด้วยข้อมูลสมาชิกเดิม";
 
-const liveAlt =
-  "ภาพโปรโมชั่น 888NEO พื้นหลังโทนดำทองมีชิปคาสิโนและเหรียญทองกระจายอยู่ ด้านบนเป็นโลโก้ 888NEO พร้อมข้อความว่า สมัครง่าย เล่นผ่านมือถือ ตรงกลางเป็นตัวอักษรขนาดใหญ่ว่า เว็บสล็อต คาสิโนสด ถัดลงมาเขียนว่า ระบบออโต้ ฝากถอนสะดวก ใต้ลงมาเป็นป้ายสามช่องเขียนว่า รวมเกมสล็อต, คาสิโนสด และ เข้าเล่นง่าย 24 ชม. ด้านล่างเป็นโลโก้ 888NEO อีกครั้งคู่กับปุ่มสีแดงเขียนว่า สมัครสมาชิก";
+const slotAlt =
+  "ภาพโปรโมชั่น ANKERSPIN พื้นหลังโทนชมพูนีออนบนดำ มีเหรียญทองและชิปคาสิโนสีชมพูกระจายอยู่ ด้านบนเป็นโลโก้ ANKERSPIN พร้อมสมอเรือ ตรงกลางเป็นตัวอักษรขนาดใหญ่ว่า สล็อต ถัดลงมาเขียนว่า รวมเกมหลายค่าย และ เล่นง่ายผ่านมือถือ ด้านซ้ายเป็นเครื่องหมายถูกคู่กับข้อความว่า เว็บตรงลิขสิทธิ์แท้ และ ไม่มีขั้นต่ำ ตรงกลางเป็นภาพโทรศัพท์ที่เปิดหน้าล็อบบี้สล็อตของ ANKERSPIN เรียงเกมเป็นตาราง ด้านขวาเป็นวงล้อสล็อต 777 พร้อมป้ายว่า BIG WIN และพรีเซนเตอร์หญิงสวมชุดเลื่อมสีชมพู แถวล่างเป็นโลโก้ค่ายเกม PG Pocket Games Soft, JILI, PRAGMATIC PLAY, HABANERO และ JOKER GAMING";
 
-const memberAlt =
-  "ภาพโปรโมชั่น 888NEO พื้นหลังโทนดำทองมีเหรียญทองลอยอยู่ ด้านบนเป็นโลโก้ 888NEO พร้อมข้อความว่า เว็บสล็อต คาสิโนสด และ ระบบออโต้ เข้าเล่นผ่านมือถือง่ายๆ ตรงกลางเป็นภาพโทรศัพท์ที่เปิดหน้าล็อบบี้ของ 888NEO แสดงเครดิต 88,888.00 และรายการเกมเรียงเป็นแถว ด้านขวาเป็นพรีเซนเตอร์หญิงสวมชุดเลื่อมสีแดง แถบล่างเขียนว่า ฝากถอนเร็ว 24 ชม. และ สมัครง่าย เล่นได้เลย";
+const walletAlt =
+  "ภาพโปรโมชั่น ANKERSPIN พื้นหลังโทนชมพูนีออนมีชิปคาสิโนลายดอลลาร์ลอยอยู่ ด้านบนเป็นโลโก้ ANKERSPIN พร้อมสมอเรือและสายฟ้า ตรงกลางเป็นตัวอักษรขนาดใหญ่ว่า ฝากถอน คู่กับคำว่า Auto Wallet สีเงิน ถัดลงมาเป็นป้ายเขียนว่า ระบบออโต้ 24 ชั่วโมง พร้อมรูปนาฬิกา ใต้ลงมาเป็นป้ายสามช่องเขียนว่า ไม่ต้องแจ้งสลิป, ใช้งานง่าย และ โอนไว ถัดลงมาเขียนว่า รองรับทรูวอลเล็ตและธนาคารหลัก พร้อมโลโก้ truemoney wallet, K+, กรุงเทพ, ไทยพาณิชย์, กรุงไทย, กรุงศรี และข้อความว่า และอีกมากมาย ด้านขวาเป็นพรีเซนเตอร์หญิงสวมชุดสีชมพูถือโทรศัพท์ที่แสดงข้อความว่า รายการสำเร็จ SUCCESS";
 
 const faqs = [
   {
-    q: "888NEO รวมเกมสล็อตและคาสิโนสดไว้ให้เลือกแบบไหน",
-    a: "888NEO รวมสล็อตหลายรูปแบบกับคาสิโนสดไว้ในแพลตฟอร์มเดียว สมาชิกจึงเลือกเกมหมุนหรือเปลี่ยนไปเล่นเกมโต๊ะได้ตามสไตล์โดยใช้บัญชีเดิม บางวันอยากสล็อต บางวันอยากคาสิโน ก็เลือกหมวดที่ถูกใจได้จากหน้าเดียว",
+    q: "ANKERSPIN เว็บตรงลิขสิทธิ์แท้ มีเกมและบริการอะไรให้เลือกบ้าง",
+    a: "ANKERSPIN วางบริการหลักไว้ครบทั้งสล็อต คาสิโนสด และกีฬาออนไลน์ พร้อมระบบสมาชิกและฝากถอนอัตโนมัติ สมาชิกจึงเลือกความบันเทิงได้ตามสไตล์จากบัญชีเดียว แต่ละหมวดเข้าถึงได้จากเมนูหลักบนมือถือ ไม่ต้องเปิดหลายเว็บเพื่อเปลี่ยนเกม",
   },
   {
-    q: "สล็อต 888NEO แยกหมวดเกมไว้อย่างไรบ้าง",
-    a: "888NEO แยกเกมสล็อตตามรูปแบบและหมวดเกม ช่วยให้ทั้งสายมีเกมประจำและคนชอบลองเกมใหม่ค้นหาตัวเลือกที่สนใจได้เร็วขึ้น ตัวเลือกเยอะควรเพิ่มความสนุก ไม่ใช่เพิ่มเวลาที่ต้องเลื่อนหาเกม",
+    q: "สล็อต ANKERSPIN รวมเกมหลายค่ายและหลายสไตล์ไว้แบบไหน",
+    a: "ANKERSPIN รวมเกมสล็อตหลายรูปแบบ ตั้งแต่เกมคลาสสิก เกมโบนัส ไปจนถึงเกมที่มีฟีเจอร์แตกต่างกัน การแบ่งเกมเป็นหมวดช่วยให้ค้นหาง่ายขึ้น เลือกแล้วเข้าเล่นต่อได้ทันที ทั้งสายมีเกมประจำและสายชอบลองของใหม่จึงมีตัวเลือกของตัวเอง",
   },
   {
-    q: "ระบบออโต้ของ 888NEO ช่วยเรื่องฝากถอนอย่างไร",
-    a: "ระบบออโต้ช่วยให้ขั้นตอนฝากถอนและการตรวจสอบเครดิตทำผ่านบัญชีสมาชิกได้โดยตรง ลดจังหวะที่ต้องรอการจัดการแบบแมนนวล เมื่อเชื่อมกับระบบ 888NEO การทำรายการจึงต่อเนื่องกับหน้าเกมมากขึ้น",
+    q: "คาสิโนสดและกีฬาออนไลน์ของ ANKERSPIN มีอะไรให้เลือก",
+    a: "คาสิโนสดเพิ่มทางเลือกอย่างบาคาร่า รูเล็ต และเกมโต๊ะ ส่วนหมวดกีฬาออนไลน์จัดการแข่งขันและรายการให้เลือกจากหน้าเดียว ทั้งสองหมวดใช้บัญชีสมาชิกชุดเดิม จึงเปลี่ยนจากดูบอลสดไปสล็อตหรือคาสิโนได้สะดวกโดยไม่ต้องมีหลายบัญชี",
   },
   {
-    q: "ระบบสมาชิก 888NEO ดูเครดิตและประวัติรายการได้ตรงไหน",
-    a: "หน้าสมาชิกเป็นจุดรวมเครดิต เกมที่ใช้งาน และข้อมูลรายการสำคัญ ช่วยให้สมาชิกตรวจสอบบัญชีโดยไม่ต้องเปิดหลายหน้าพร้อมกัน เหมาะกับคนที่สลับเล่นหลายหมวดในบัญชีเดียว",
+    q: "ฝากถอน Auto Wallet และระบบออโต้ของ ANKERSPIN ทำงานอย่างไร",
+    a: "Auto Wallet ช่วยให้การฝากถอนเชื่อมกับเครดิตในบัญชีสมาชิกโดยตรง ลดขั้นตอนก่อนเข้าเกมและตรวจสอบยอดได้จากระบบเดียว ระบบออโต้รองรับการส่งรายการตลอด 24 ชั่วโมง สมาชิกเช็กเครดิตและสถานะจากบัญชีของตัวเองได้โดยไม่ต้องรอขั้นตอนแบบแมนนวลทุกครั้ง",
   },
   {
-    q: "ทางเข้า 888NEO เว็บหลัก ใช้งานผ่านมือถือและคอมได้ไหม",
-    a: "ทางเข้า 888NEO เว็บหลักเชื่อมสมาชิกไปยังหน้าล็อกอิน เกม และระบบบัญชี รองรับการใช้งานทั้งมือถือและคอมพิวเตอร์ด้วยข้อมูลสมาชิกเดิม การใช้ทางเข้าหลักยังช่วยลดความสับสนจากชื่อเว็บไซต์ใกล้เคียงบนผลค้นหา",
+    q: "ทางเข้าเว็บหลักและระบบสมาชิก ANKERSPIN ใช้งานผ่านมือถือกับคอมอย่างไร",
+    a: "ทางเข้าเว็บหลักรองรับทั้งมือถือและคอม สมาชิกใช้ข้อมูลบัญชีเดิมเพื่อเข้าสู่ระบบและเข้าถึงสล็อต คาสิโน กีฬา รวมถึงระบบ Auto Wallet ได้จากจุดเดียว หน้าสมาชิกยังรวมเครดิต โปรโมชั่น และประวัติรายการไว้ในพื้นที่เดียวให้ตรวจสอบได้ง่าย",
   },
 ];
 
@@ -70,165 +70,176 @@ const graph = pageGraph(Astro, {
 <MainLayout title={pageTitle} description={pageDescription}>
   <script type="application/ld+json" set:html={graph} />
 
-  <Announcement3 message={announcement} />
+  <Announcement5 message={announcement} />
 
-  <ContentBoxNeumorphism as="h1" title="888NEO รวมสล็อต คาสิโนสด และระบบออโต้ไว้ให้เล่นง่ายบนมือถือ">
+  <ContentBoxPremium as="h1" title="ANKERSPIN รวมสล็อต คาสิโนสด กีฬา และระบบ Auto Wallet ไว้ในบัญชีเดียว">
     <div class="flex flex-col gap-4">
-      <p class="text-left text-base leading-relaxed text-[#f3e3c6]">
-        <strong class="text-[#f5c542]">888NEO</strong> รวมเกมสล็อต คาสิโนสด ระบบสมาชิก และการจัดการเครดิตไว้ในบัญชีเดียว รองรับการใช้งานผ่านมือถือ ทำให้เลือกเกมและจัดการบัญชีต่อได้โดยไม่ต้องเปิดหลายระบบ
+      <p class="text-left text-base leading-relaxed text-[#f9dcec]">
+        <strong class="text-[#ff2d8f]">ANKERSPIN</strong> รวมสล็อต คาสิโนสด กีฬา ระบบสมาชิก และการจัดการเครดิตไว้ในบัญชีเดียว รองรับมือถือและคอม ทำให้เลือกเกมหรือเปลี่ยนหมวดได้โดยไม่ต้องเริ่มใหม่หลายรอบ
       </p>
-      <p class="text-left text-base leading-relaxed text-[#f3e3c6]">
-        ระบบออโต้ช่วยลดขั้นตอนเรื่องฝากถอน ส่วนหน้าเกมแบ่งตัวเลือกให้เข้าถึงง่าย ความสะดวกที่ดีควรทำให้เวลาไปอยู่กับเกม ไม่ใช่หมดไปกับการหาเมนู
+      <p class="text-left text-base leading-relaxed text-[#f9dcec]">
+        ระบบ Auto Wallet ช่วยเชื่อมการฝากถอนเข้ากับบัญชีสมาชิกโดยตรง ใช้งานต่อได้ตลอดวัน เพราะเวลามีราคา เรื่องง่าย ๆ จึงไม่ควรใช้เวลาระดับประชุมผู้ถือหุ้น
       </p>
     </div>
-  </ContentBoxNeumorphism>
+  </ContentBoxPremium>
 
-  <ContentBoxFloatingBadge as="h2" title="888NEO รวมเกมสล็อตและคาสิโนสดไว้ให้เลือกแบบไหน">
+  <ContentBoxCyberCut as="h2" title="ANKERSPIN เว็บตรงลิขสิทธิ์แท้ มีเกมและบริการอะไรให้เลือกบ้าง">
     <div class="flex flex-col gap-4">
-      <p class="text-left text-base leading-relaxed text-[#f3e3c6]">
-        888NEO รวมสล็อตหลายรูปแบบกับคาสิโนสดไว้ในแพลตฟอร์มเดียว สมาชิกจึงเลือกเกมหมุนหรือเปลี่ยนไปเล่นเกมโต๊ะได้ตามสไตล์โดยใช้บัญชีเดิม
+      <p class="text-left text-base leading-relaxed text-[#f9dcec]">
+        ANKERSPIN วางบริการหลักไว้ครบทั้งสล็อต คาสิโนสด และกีฬาออนไลน์ พร้อมระบบสมาชิกและฝากถอนอัตโนมัติ สมาชิกจึงเลือกความบันเทิงได้ตามสไตล์จากบัญชีเดียว
       </p>
-      <p class="text-left text-base leading-relaxed text-[#f3e3c6]">
-        มีหลายหมวดไว้เลือกก็ดี เพราะบางวันอยากสล็อต บางวันอยากคาสิโน คนมีทางเลือกไม่จำเป็นต้องอธิบายเยอะ แค่เลือกสิ่งที่ถูกใจก็พอ
+      <p class="text-left text-base leading-relaxed text-[#f9dcec]">
+        แต่ละหมวดเข้าถึงได้จากเมนูหลักบนมือถือ ไม่ต้องเปิดหลายเว็บเพื่อเปลี่ยนเกม ของเยอะเป็นเรื่องดี ถ้าจัดไว้เป็นที่ก็ยิ่งดูแพง
       </p>
     </div>
-  </ContentBoxFloatingBadge>
+  </ContentBoxCyberCut>
 
-  <ProviderGridPremium />
+  <ProviderGrid />
 
-  <ContentBoxTwoNeumorphism as="h2" title="สล็อต 888NEO มีเกมหลายสไตล์ให้เลือกง่ายแค่ไหน">
-    <p slot="left" class="text-left text-base leading-relaxed text-[#f3e3c6]">
-      888NEO แยกเกมสล็อตตามรูปแบบและหมวดเกม ช่วยให้ทั้งสายมีเกมประจำและคนชอบลองเกมใหม่ค้นหาตัวเลือกที่สนใจได้เร็วขึ้น
-    </p>
-    <p slot="right" class="text-left text-base leading-relaxed text-[#f3e3c6]">
-      ตัวเลือกเยอะควรเพิ่มความสนุก ไม่ใช่เพิ่มงานให้นิ้วโป้ง เกมที่ชอบควรหาเจอเร็วกว่าร้านอาหารดี ๆ ตอนหิว
-    </p>
-  </ContentBoxTwoNeumorphism>
+  <ContentBoxSevenThreePremium as="h2" titleright="สล็อต ANKERSPIN รวมเกมหลายค่ายและหลายสไตล์ไว้แบบไหน">
+    <Picture
+      slot="left"
+      src={imgSlot}
+      alt={slotAlt}
+      loading="lazy"
+      fetchpriority="low"
+      widths={[200, 400, 600]}
+      sizes="(max-width: 768px) 100vw, 30vw"
+      decoding="async"
+      formats={["avif", "webp"]}
+      fallbackFormat="webp"
+      quality={80}
+      class="mx-auto h-auto w-full rounded-2xl border border-[#ff2d8f]/40 shadow-[0_10px_30px_rgba(164,18,107,0.30)]"
+    />
+    <div slot="right" class="flex flex-col gap-4">
+      <p class="text-left text-base leading-relaxed text-[#f9dcec]">
+        ANKERSPIN รวมเกมสล็อตหลายรูปแบบ ตั้งแต่เกมคลาสสิก เกมโบนัส ไปจนถึงเกมที่มีฟีเจอร์แตกต่างกัน ทำให้ทั้งสายมีเกมประจำและสายชอบลองของใหม่มีตัวเลือก
+      </p>
+      <p class="text-left text-base leading-relaxed text-[#f9dcec]">
+        การแบ่งเกมเป็นหมวดช่วยให้ค้นหาง่ายขึ้น เลือกแล้วเข้าเล่นต่อได้ทันที ตัวเลือกเยอะควรสร้างความสนุก ไม่ใช่สร้างโอทีให้นิ้วโป้ง
+      </p>
+    </div>
+  </ContentBoxSevenThreePremium>
 
   <GameRankingBoard />
 
-  <ContentBoxSevenThree as="h2" titleright="คาสิโนสด 888NEO เปลี่ยนบรรยากาศจากสล็อตได้อย่างไร">
-    <Picture
-      slot="left"
-      src={imgLive}
-      alt={liveAlt}
-      loading="lazy"
-      fetchpriority="low"
-      widths={[200, 400, 600]}
-      sizes="(max-width: 768px) 100vw, 30vw"
-      decoding="async"
-      formats={["avif", "webp"]}
-      fallbackFormat="webp"
-      quality={80}
-      class="mx-auto h-auto w-full rounded-2xl border border-[#f5c542]/40 shadow-[0_10px_30px_rgba(224,27,27,0.30)]"
-    />
-    <div slot="right" class="flex flex-col gap-4">
-      <p class="text-left text-base leading-relaxed text-[#f3e3c6]">
-        คาสิโนสดเพิ่มทางเลือกสำหรับคนที่อยากเปลี่ยนจากเกมหมุนไปสัมผัสเกมแบบโต๊ะและบรรยากาศเรียลไทม์ โดยยังใช้งานต่อจากบัญชีสมาชิกเดิม
-      </p>
-      <p class="text-left text-base leading-relaxed text-[#f3e3c6]">
-        ภายใน 888NEO สมาชิกจึงเปลี่ยนหมวดได้ตามอารมณ์ วันนี้สล็อต พรุ่งนี้คาสิโนก็เรื่องปกติ รสนิยมเปลี่ยนได้โดยไม่ต้องเปลี่ยนบัญชีตาม
-      </p>
-    </div>
-  </ContentBoxSevenThree>
-
-  <ContentBoxTwoFloatingBadge as="h2" title="ระบบออโต้ช่วยจัดการฝากถอนให้สั้นลงอย่างไร">
-    <p slot="left" class="text-left text-base leading-relaxed text-[#f3e3c6]">
-      ระบบออโต้ช่วยให้ขั้นตอนฝากถอนและการตรวจสอบเครดิตทำผ่านบัญชีสมาชิกได้โดยตรง ลดจังหวะที่ต้องรอการจัดการแบบแมนนวล
+  <ContentBoxTwoPremium as="h2" title="คาสิโนสด ANKERSPIN มีบาคาร่า รูเล็ต และเกมโต๊ะอะไรให้เลือก">
+    <p slot="left" class="text-left text-base leading-relaxed text-[#f9dcec]">
+      คาสิโนสดเพิ่มทางเลือกอย่างบาคาร่า รูเล็ต และเกมโต๊ะสำหรับคนที่อยากเปลี่ยนบรรยากาศจากสล็อต โดยยังใช้บัญชีสมาชิกชุดเดิมในการเข้าเล่น
     </p>
-    <p slot="right" class="text-left text-base leading-relaxed text-[#f3e3c6]">
-      เมื่อเชื่อมกับระบบ 888NEO การทำรายการจึงต่อเนื่องกับหน้าเกมมากขึ้น เงินมีหน้าที่เคลื่อนที่ ส่วนเจ้าของเงินไม่ควรต้องวิ่งตามหลายเมนู
+    <p slot="right" class="text-left text-base leading-relaxed text-[#f9dcec]">
+      สมาชิกจึงสลับระหว่างสล็อตกับคาสิโนสดได้ตามอารมณ์ วันนี้ชอบไพ่ พรุ่งนี้ชอบวงล้อก็ไม่มีปัญหา รสนิยมเปลี่ยนได้โดยไม่ต้องเปลี่ยนยูสตาม
     </p>
-  </ContentBoxTwoFloatingBadge>
+  </ContentBoxTwoPremium>
 
-  <ContentBoxSevenThreeNeumorphism as="h2" titleright="ระบบสมาชิก 888NEO รวมเครดิต เกม และประวัติรายการไว้ตรงไหน">
-    <Picture
-      slot="left"
-      src={imgMember}
-      alt={memberAlt}
-      loading="lazy"
-      fetchpriority="low"
-      widths={[200, 400, 600]}
-      sizes="(max-width: 768px) 100vw, 30vw"
-      decoding="async"
-      formats={["avif", "webp"]}
-      fallbackFormat="webp"
-      quality={80}
-      class="mx-auto h-auto w-full rounded-2xl border border-[#f5c542]/40 shadow-[0_10px_30px_rgba(245,197,66,0.26)]"
-    />
-    <div slot="right" class="flex flex-col gap-4">
-      <p class="text-left text-base leading-relaxed text-[#f3e3c6]">
-        หน้าสมาชิกเป็นจุดรวมเครดิต เกมที่ใช้งาน และข้อมูลรายการสำคัญ ช่วยให้สมาชิกตรวจสอบบัญชีโดยไม่ต้องเปิดหลายหน้าพร้อมกัน
-      </p>
-      <p class="text-left text-base leading-relaxed text-[#f3e3c6]">
-        ระบบของ 888NEO จึงเหมาะกับคนที่สลับเล่นหลายหมวด เพราะของสำคัญควรจัดไว้เป็นที่ โดยเฉพาะเครดิต เรื่องนี้ไม่เหมาะกับเกมซ่อนหา
-      </p>
-    </div>
-  </ContentBoxSevenThreeNeumorphism>
-
-  <LatestWinnersPremium />
-
-  <ContentBox as="h2" title="เข้าสู่ระบบผ่านมือถือแล้วใช้งานอะไรได้บ้าง">
+  <ContentBox as="h2" title="กีฬาออนไลน์เลือกคู่แข่งขันและรายการที่สนใจได้ง่ายแค่ไหน">
     <div class="flex flex-col gap-4">
-      <p class="text-left text-base leading-relaxed text-[#f3e3c6]">
-        หลังเข้าสู่ระบบ สมาชิกสามารถเลือกสล็อต เปิดคาสิโนสด เช็กเครดิต และจัดการข้อมูลบัญชีผ่านมือถือได้ด้วยยูสเดิม
+      <p class="text-left text-base leading-relaxed text-[#f9dcec]">
+        หมวดกีฬาออนไลน์จัดการแข่งขันและรายการให้เลือกจากหน้าเดียว ช่วยให้คนที่ติดตามฟุตบอลหรือกีฬาประเภทอื่นเข้าถึงคู่ที่สนใจได้ง่ายขึ้น
       </p>
-      <p class="text-left text-base leading-relaxed text-[#f3e3c6]">
-        หน้าใช้งานของ 888NEO จึงเหมาะกับคนที่ต้องการเปิดแล้วไปต่อได้ทันที มือถือมีไว้ลดสัมภาระ ไม่ใช่สร้างขั้นตอนเพิ่มจนต้องหยิบโน้ตบุ๊กมาช่วย
+      <p class="text-left text-base leading-relaxed text-[#f9dcec]">
+        ANKERSPIN เชื่อมหมวดกีฬาเข้ากับบัญชีสมาชิกเดียวกับเกมอื่น จึงเปลี่ยนจากดูบอลสดไปสล็อตหรือคาสิโนได้สะดวก หลายความชอบไม่จำเป็นต้องมีหลายบัญชี
       </p>
     </div>
   </ContentBox>
 
-  <LoginRtpSection />
-
-  <ContentBoxNeumorphism as="h2" title="ทางเข้า 888NEO เว็บหลัก รองรับมือถือและคอมอย่างไร">
-    <div class="flex flex-col gap-4">
-      <p class="text-left text-base leading-relaxed text-[#f3e3c6]">
-        ทางเข้า 888NEO เว็บหลักเชื่อมสมาชิกไปยังหน้าล็อกอิน เกม และระบบบัญชี รองรับการใช้งานทั้งมือถือและคอมพิวเตอร์ด้วยข้อมูลสมาชิกเดิม
+  <ContentBoxSevenThreeCyberCut as="h2" titleright="ฝากถอน Auto Wallet ช่วยให้จัดการเครดิตสะดวกขึ้นอย่างไร">
+    <Picture
+      slot="left"
+      src={imgWallet}
+      alt={walletAlt}
+      loading="lazy"
+      fetchpriority="low"
+      widths={[200, 400, 600]}
+      sizes="(max-width: 768px) 100vw, 30vw"
+      decoding="async"
+      formats={["avif", "webp"]}
+      fallbackFormat="webp"
+      quality={80}
+      class="mx-auto h-auto w-full rounded-2xl border border-[#ff6bb5]/40 shadow-[0_10px_30px_rgba(255,45,143,0.26)]"
+    />
+    <div slot="right" class="flex flex-col gap-4">
+      <p class="text-left text-base leading-relaxed text-[#f9dcec]">
+        Auto Wallet ช่วยให้การฝากถอนเชื่อมกับเครดิตในบัญชีสมาชิกโดยตรง ลดขั้นตอนก่อนเข้าเกมและทำให้ตรวจสอบยอดได้จากระบบเดียว
       </p>
-      <p class="text-left text-base leading-relaxed text-[#f3e3c6]">
-        การใช้ทางเข้าหลักยังช่วยลดความสับสนจากชื่อเว็บไซต์ใกล้เคียงบนผลค้นหา จำช่องทางที่ถูกไว้หนึ่งที่ ดูเรียบง่ายกว่าไล่เปิดทุกลิงก์แล้วค่อยเสี่ยงดวงว่าอันไหนใช่
+      <p class="text-left text-base leading-relaxed text-[#f9dcec]">
+        ระบบของ ANKERSPIN จึงเหมาะกับคนที่ต้องการทำรายการแล้วไปต่อได้เร็ว เงินมีหน้าที่ทำงาน ส่วนเจ้าของเงินไม่ควรเสียเวลาเดินตามเมนู
       </p>
     </div>
-  </ContentBoxNeumorphism>
+  </ContentBoxSevenThreeCyberCut>
 
-  <ContentBoxSpecial as="h2" title="เล่นหลายเกมผ่านบัญชีเดียวสะดวกกว่าแบบไหน">
-    <p slot="left" class="text-left text-base leading-relaxed text-[#f3e3c6]">
-      บัญชีเดียวช่วยให้สมาชิกเปลี่ยนระหว่างสล็อตและคาสิโนสดได้ต่อเนื่อง พร้อมดูเครดิตและข้อมูลรายการจากระบบสมาชิกเดิม
+  <ContentBoxTwoCyberCut as="h2" title="ระบบออโต้ ANKERSPIN รองรับการทำรายการตลอด 24 ชั่วโมงแบบไหน">
+    <p slot="left" class="text-left text-base leading-relaxed text-[#f9dcec]">
+      ระบบออโต้ ANKERSPIN รองรับการส่งรายการฝากถอนตลอด 24 ชั่วโมง สมาชิกสามารถเช็กเครดิตและสถานะจากบัญชีของตัวเองได้โดยไม่ต้องรอขั้นตอนแบบแมนนวลทุกครั้ง
     </p>
-    <p slot="right" class="text-left text-base leading-relaxed text-[#f3e3c6]">
-      ภายใน 888NEO จึงไม่ต้องจัดการบัญชีแยกตามประเภทเกม หลายเกมมีไว้สร้างทางเลือก ส่วนหลายรหัสผ่านส่วนใหญ่มีไว้สร้างปัญหา
+    <p slot="right" class="text-left text-base leading-relaxed text-[#f9dcec]">
+      เมื่อตัดขั้นตอนที่ไม่จำเป็นออก การใช้งานก็ไหลต่อจากฝากเงินไปเลือกเกมได้ง่ายขึ้น คนมีเวลาน้อยไม่ได้แปลว่ารีบ แค่รู้ว่าเวลาควรใช้กับอะไร
+    </p>
+  </ContentBoxTwoCyberCut>
+
+  <LatestWinnersCyber />
+
+  <ContentBoxSpecial as="h2" title="สมัครสมาชิกผ่านมือถือ เริ่มต้นใช้งานได้ง่ายกี่ขั้นตอน">
+    <p slot="left" class="text-left text-base leading-relaxed text-[#f9dcec]">
+      การสมัครสมาชิกทำผ่านมือถือได้ตั้งแต่กรอกข้อมูล ตั้งค่าบัญชี ไปจนถึงยืนยันตามขั้นตอนของระบบ หลังจากนั้นจึงเข้าสู่หน้าสมาชิกและเลือกบริการที่ต้องการได้
+    </p>
+    <p slot="right" class="text-left text-base leading-relaxed text-[#f9dcec]">
+      ขั้นตอนของ ANKERSPIN ถูกวางให้ใช้งานต่อบนอุปกรณ์เดิมได้สะดวก สมัครเสร็จแล้วไปต่อเลย ไม่ต้องทำเรื่องง่ายให้มีเอกสารหนาเท่าสัญญาซื้อคอนโด
     </p>
   </ContentBoxSpecial>
 
-  <SmoothCarousel />
-
-  <ContentBoxFloatingBadge as="h2" title="888NEO เหมาะกับคนที่ชอบสล็อต คาสิโนสด และใช้งานผ่านมือถือแบบไหน">
+  <ContentBoxPremium as="h2" title="ระบบสมาชิก ANKERSPIN รวมเครดิต โปรโมชั่น และประวัติรายการไว้ตรงไหน">
     <div class="flex flex-col gap-4">
-      <p class="text-left text-base leading-relaxed text-[#f3e3c6]">
-        888NEO เหมาะกับคนที่ชอบเปลี่ยนระหว่างสล็อตและคาสิโนสด พร้อมต้องการระบบออโต้และการใช้งานผ่านมือถือในบัญชีเดียว
+      <p class="text-left text-base leading-relaxed text-[#f9dcec]">
+        หน้าสมาชิกรวมข้อมูลเครดิต โปรโมชั่น และประวัติรายการไว้ในพื้นที่เดียว ทำให้ตรวจสอบบัญชีและสิทธิ์ที่ใช้อยู่ได้ง่ายขึ้น
       </p>
-      <p class="text-left text-base leading-relaxed text-[#f3e3c6]">
-        สมาชิกสามารถเลือกเกมที่ตรงอารมณ์ จัดการเครดิต แล้วกลับเข้าเล่นต่อจากอุปกรณ์ที่สะดวกได้เลย ความหรูไม่จำเป็นต้องซับซ้อน บางครั้งแค่ทุกอย่างอยู่ถูกที่ก็พอ
+      <p class="text-left text-base leading-relaxed text-[#f9dcec]">
+        สมาชิกที่เล่นหลายหมวดจึงยังตามข้อมูลของตัวเองได้เป็นระเบียบ ของสำคัญควรอยู่ถูกที่ โดยเฉพาะเครดิต เรื่องนี้ไม่เหมาะกับการเล่นซ่อนหา
       </p>
     </div>
-  </ContentBoxFloatingBadge>
+  </ContentBoxPremium>
+
+  <LoginRtpSection />
+
+  <ContentBoxCyberCut as="h2" title="ทางเข้าเว็บหลักและเข้าสู่ระบบ ใช้งานผ่านมือถือกับคอมอย่างไร">
+    <div class="flex flex-col gap-4">
+      <p class="text-left text-base leading-relaxed text-[#f9dcec]">
+        ทางเข้าเว็บหลักรองรับทั้งมือถือและคอม สมาชิกใช้ข้อมูลบัญชีเดิมเพื่อเข้าสู่ระบบและเข้าถึงสล็อต คาสิโน กีฬา รวมถึงระบบ Auto Wallet ได้จากจุดเดียว
+      </p>
+      <p class="text-left text-base leading-relaxed text-[#f9dcec]">
+        การใช้ช่องทางหลักของ ANKERSPIN ยังช่วยลดความสับสนจากชื่อหรือโดเมนใกล้เคียงบนผลค้นหา จำทางที่ถูกไว้หนึ่งครั้ง ดูมีระดับกว่ากดทุกลิงก์แล้วค่อยลุ้น
+      </p>
+    </div>
+  </ContentBoxCyberCut>
+
+  <ContentBoxPremium as="h2" title="ANKERSPIN เหมาะกับคนที่ชอบเล่นหลายหมวดผ่านบัญชีเดียวแบบไหน">
+    <div class="flex flex-col gap-4">
+      <p class="text-left text-base leading-relaxed text-[#f9dcec]">
+        ANKERSPIN เหมาะกับคนที่ชอบสลับระหว่างสล็อต คาสิโนสด และกีฬา พร้อมต้องการระบบฝากถอนอัตโนมัติและการใช้งานผ่านมือถือในบัญชีเดียว
+      </p>
+      <p class="text-left text-base leading-relaxed text-[#f9dcec]">
+        เลือกเกมที่ชอบ จัดการเครดิต แล้วเปลี่ยนหมวดได้ตามอารมณ์โดยไม่ต้องจัดการหลายระบบ หลายเกมมีไว้เลือก แต่หลายบัญชีส่วนใหญ่มีไว้ปวดหัว
+      </p>
+    </div>
+  </ContentBoxPremium>
+
+  <SmoothCarousel />
 
   <div class="relative z-10 mx-auto mb-10 flex flex-nowrap justify-center gap-3 px-4 sm:gap-6">
     <a
       href="/register"
-      class="group relative flex flex-1 items-center justify-center rounded-full bg-gradient-to-r from-[#ffe9a8] via-[#f5c542] to-[#b8860b] px-4 py-3 text-sm font-black whitespace-nowrap text-[#0b0503] shadow-[0_10px_30px_rgba(245,197,66,0.30)] transition-all duration-300 hover:-translate-y-1 hover:scale-105 hover:shadow-[0_15px_40px_rgba(245,197,66,0.42)] sm:flex-none sm:px-10 sm:py-3.5 sm:text-base">
-      สมัครสมาชิก 888NEO
+      class="group relative flex flex-1 items-center justify-center rounded-full bg-gradient-to-r from-[#ffa6d5] via-[#ff2d8f] to-[#c2185b] px-4 py-3 text-sm font-black whitespace-nowrap text-[#0d0207] shadow-[0_10px_30px_rgba(255,45,143,0.30)] transition-all duration-300 hover:-translate-y-1 hover:scale-105 hover:shadow-[0_15px_40px_rgba(255,45,143,0.42)] sm:flex-none sm:px-10 sm:py-3.5 sm:text-base">
+      สมัครสมาชิก ANKERSPIN
     </a>
 
     <a
       href="/login"
-      class="group relative flex flex-1 items-center justify-center rounded-full border border-[#e01b1b]/80 bg-[#1c0a06]/85 px-4 py-3 text-sm font-black whitespace-nowrap text-[#ffe9a8] backdrop-blur-sm transition-all duration-300 hover:scale-105 hover:border-[#f5c542] hover:bg-[#2a1109]/85 hover:shadow-[0_15px_40px_rgba(224,27,27,0.42)] sm:flex-none sm:px-10 sm:py-3.5 sm:text-base">
+      class="group relative flex flex-1 items-center justify-center rounded-full border border-[#a4126b]/80 bg-[#1f0611]/85 px-4 py-3 text-sm font-black whitespace-nowrap text-[#ffa6d5] backdrop-blur-sm transition-all duration-300 hover:scale-105 hover:border-[#ff2d8f] hover:bg-[#2c0a1a]/85 hover:shadow-[0_15px_40px_rgba(164,18,107,0.42)] sm:flex-none sm:px-10 sm:py-3.5 sm:text-base">
       เข้าสู่ระบบ
     </a>
   </div>
 
-  <Faq3 title="คำถามที่พบบ่อยเกี่ยวกับ 888NEO" faqs={faqs} />
+  <Faq4 title="คำถามที่พบบ่อยเกี่ยวกับ ANKERSPIN" faqs={faqs} />
 
   <ReviewCardSumo2 />
 

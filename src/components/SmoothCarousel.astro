@@ -1,17 +1,17 @@
 ---
 import { Picture } from "astro:assets";
 
+import slide2 from "../assets/slide2.png";
 import slide3 from "../assets/slide3.png";
-import slide4 from "../assets/slide4.png";
 
 const images = [
   {
-    src: slide3,
-    alt: "ภาพโปรโมชั่น 888NEO พื้นหลังโทนดำทองมีชิปคาสิโนและเหรียญทอง ด้านบนเป็นโลโก้ 888NEO และข้อความว่า สมัครง่าย เล่นผ่านมือถือ ตรงกลางเป็นตัวอักษรขนาดใหญ่ว่า เว็บสล็อต คาสิโนสด ถัดลงมาเขียนว่า ระบบออโต้ ฝากถอนสะดวก ใต้ลงมาเป็นป้ายสามช่องเขียนว่า รวมเกมสล็อต, คาสิโนสด และ เข้าเล่นง่าย 24 ชม. ด้านล่างเป็นโลโก้ 888NEO อีกครั้งคู่กับปุ่มสีแดงเขียนว่า สมัครสมาชิก",
+    src: slide2,
+    alt: "ภาพโปรโมชั่น ANKERSPIN พื้นหลังโทนชมพูนีออนบนดำ มีไพ่โพดำและชิปคาสิโนพิมพ์โลโก้ ANKERSPIN กระจายอยู่ ด้านบนเป็นโลโก้ ANKER SPIN พร้อมสมอเรือ ตรงกลางเป็นตัวอักษรขนาดใหญ่ว่า เว็บตรงลิขสิทธิ์แท้ ถัดลงมาเขียนว่า สล็อต คาสิโนสด กีฬา และ รวมไว้ในบัญชีเดียว ตรงกลางเป็นพรีเซนเตอร์หญิงสองคนสวมชุดสีชมพูถือไพ่ ด้านล่างเป็นป้ายเขียนว่า ฝากถอน Auto Wallet, บริการตลอด 24 ชั่วโมง และ สมัครสมาชิกผ่านมือถือ ใช้งานง่าย",
   },
   {
-    src: slide4,
-    alt: "ภาพโปรโมชั่น 888NEO พื้นหลังโทนดำทองมีไหทองคำและเหรียญทองกองอยู่ ด้านบนเป็นตัวอักษรว่า 888NEO สล็อตเกมฮิต ถัดลงมาเขียนว่า คาสิโนสด ระบบออโต้ เล่นผ่านมือถือ ตรงกลางเป็นภาพโทรศัพท์ที่เปิดวงล้อสล็อตพร้อมข้อความว่า WIN 8,888.00 รอบข้างเป็นป้ายเขียนว่า เริ่มต้น 1 บาท, ฝากถอนเร็ว 24 ชม. และ สมัครง่าย เล่นได้ทันที",
+    src: slide3,
+    alt: "ภาพโปรโมชั่น ANKERSPIN พื้นหลังโทนชมพูนีออนมีเหรียญทองและชิปกระจายอยู่ ด้านบนเป็นโลโก้ ANKERSPIN พร้อมสมอเรือ ตรงกลางเป็นตัวอักษรขนาดใหญ่ว่า เว็บตรงลิขสิทธิ์แท้ ถัดลงมาเขียนว่า สล็อต คาสิโนสด ฝากถอน Auto Wallet ใต้ลงมาเป็นป้ายสี่ช่องเขียนว่า รวมสล็อต หลายค่าย เล่นง่าย, คาสิโนสด บาคาร่า รูเล็ต ครบ, Auto Wallet ฝากถอน 24 ชม. และ สมัครผ่านมือถือ เริ่มเล่นได้ไว ด้านขวาเป็นพรีเซนเตอร์หญิงสวมชุดสีชมพูถือชิปคาสิโน ด้านล่างเป็นป้ายเขียนว่า บัญชีเดียวครบทุกหมวด",
   },
 ];
 
@@ -23,7 +23,7 @@ const slides = Array.from({ length: COPIES }, () => images).flat();
   <input id="carousel-pause" type="checkbox" class="peer sr-only" />
   <label
     for="carousel-pause"
-    class="sr-only cursor-pointer peer-focus-visible:not-sr-only peer-focus-visible:mb-3 peer-focus-visible:inline-block peer-focus-visible:rounded-full peer-focus-visible:border peer-focus-visible:border-[#f5c542]/60 peer-focus-visible:px-4 peer-focus-visible:py-2 peer-focus-visible:text-sm peer-focus-visible:font-bold peer-focus-visible:text-[#ffe9a8]">
+    class="sr-only cursor-pointer peer-focus-visible:not-sr-only peer-focus-visible:mb-3 peer-focus-visible:inline-block peer-focus-visible:rounded-full peer-focus-visible:border peer-focus-visible:border-[#ff2d8f]/60 peer-focus-visible:px-4 peer-focus-visible:py-2 peer-focus-visible:text-sm peer-focus-visible:font-bold peer-focus-visible:text-[#ffa6d5]">
     หยุด / เล่นสไลด์ภาพ
   </label>
 
@@ -36,7 +36,7 @@ const slides = Array.from({ length: COPIES }, () => images).flat();
             <Picture
               src={slide.src}
               alt={isDuplicate ? "" : slide.alt}
-              class="block w-full rounded-xl border border-[#f5c542]/40 object-cover shadow-[0_10px_30px_rgba(224,27,27,0.30)]"
+              class="block w-full rounded-xl border border-[#ff2d8f]/40 object-cover shadow-[0_10px_30px_rgba(164,18,107,0.30)]"
               width={slide.src.width}
               height={slide.src.height}
               loading="lazy"

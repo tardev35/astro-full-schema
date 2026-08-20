@@ -4,8 +4,8 @@ import bgConfig from "../assets/bg.json";
 import "../styles/global.css";
 import { BRAND_NAME, BRAND_TEXT, brandProfile, fontStack, iconVersion, usesGoogleFonts } from "../lib/brandProfile";
 import { canonicalFor } from "../lib/schema";
-import Navbar from "../components/NavbarStyle8.astro";
-import Footer from "../components/FooterStyle2.astro";
+import Navbar from "../components/NavbarStyle6.astro";
+import Footer from "../components/FooterStyle3.astro";
 
 // Only banner1 is ever rendered, so only banner1 is imported.
 //
@@ -54,8 +54,8 @@ const mobileBannerImg = mobileBanner
   : null;
 
 const {
-  title = "POE888 หวยออนไลน์ แทงหวยไทยลาว เว็บสีฟ้า ตรวจผลไว ถอนง่าย",
-  description = "POE888 รวมหวยไทย หวยลาว และตลาดหวยออนไลน์ไว้ในเว็บสีฟ้า พร้อมระบบสมาชิก ตรวจผลผ่านมือถือ ฝากถอนสะดวก และทางเข้าใช้งานได้ตลอดวัน",
+  title = "BUNNY555 สล็อตเว็บตรง อันดับ 1 ให้บริการเกมค่ายใหญ่ โบนัสไหลทุกชม.",
+  description = "BUNNY555 รวมสล็อตจากค่ายใหญ่ PG Slot และ JILI พร้อมระบบสมาชิก ฝากถอนผ่าน True Wallet รองรับมือถือ มีโบนัสและทางเข้าใช้งานได้ตลอดวัน",
   robots = "index, follow",
 } = Astro.props;
 
@@ -177,7 +177,7 @@ const profile = brandProfile(Astro.site);
 
           {block === "appmeta" && (
             <Fragment>
-              {profile.showAppTitle && <meta name="apple-mobile-web-app-title" content="poe888" />}
+              {profile.showAppTitle && <meta name="apple-mobile-web-app-title" content="bunny555" />}
               <link rel="manifest" href="/site.webmanifest" />
             </Fragment>
           )}
@@ -219,7 +219,7 @@ const profile = brandProfile(Astro.site);
         background-attachment: fixed;
         background-repeat: no-repeat;
         margin: 0;
-        background-color: #020a1e;
+        background-color: #ffe4f0;
         font-weight: 400;
         font-family: var(--font-sans) !important;
       }
@@ -272,7 +272,7 @@ const profile = brandProfile(Astro.site);
         }
         <Image
           src={mainBanner}
-          alt="แบนเนอร์ POE888 พื้นหลังสีน้ำเงินเข้มมีเส้นแสงสีฟ้าและภาพเมืองยามค่ำ มุมซ้ายบนเป็นโลโก้ POE888 รูปหมีแพนด้าในกรอบสีน้ำเงินขอบทอง ใต้ตัวอักษร POE เป็นแถบสีเหลืองเขียนว่า โป888 ตรงกลางเป็นตัวอักษรขนาดใหญ่สีทองว่า POE888 คู่กับคำว่า หวยออนไลน์ สีขาว ถัดลงมาเป็นแถบสีน้ำเงินเขียนว่า แทงหวยไทยลาว เว็บสีฟ้า และบรรทัดถัดไปว่า ตรวจผลไว ถอนง่าย ด้านล่างเป็นแถบขอบมนสามช่องพร้อมไอคอนเขียนว่า โพยออนไลน์, ตรวจผลง่าย และ ใช้งานผ่านมือถือ ด้านซ้ายเป็นโทรศัพท์ที่เปิดหน้าแทงหวยของ POE888 พร้อมใบสลากและลูกบอลหวยเลข 2 8 9 ด้านขวาเป็นพรีเซนเตอร์หญิงสวมชุดสีน้ำเงินถือใบสลากและโทรศัพท์ที่มีโลโก้ POE888 ล้อมด้วยลูกบอลหวยเลข 13 กับ 7 และเหรียญทอง"
+          alt="แบนเนอร์ BUNNY555 พื้นหลังไล่สีชมพูมีประกายแสง หัวใจ ชิปคาสิโน และเหรียญทองกระจายอยู่ ด้านซ้ายเป็นโลโก้ BUNNY555 ตัวอักษรกลมสีชมพูมีหูกระต่ายบนตัว B คู่กับเลข 555 สีขาว ถัดลงมาเป็นมงกุฎทองกับข้อความว่า สล็อตเว็บตรง สีขาว และคำว่า อันดับ 1 สีทอง ใต้ลงมาเป็นแถบสีชมพูเขียนว่า ให้บริการเกมค่ายใหญ่ โบนัสไหลทุกชม. และแถบสีขาวสามช่องพร้อมไอคอนเขียนว่า สมัครง่าย ฝากถอนออโต้ และ เล่นได้ทุกอุปกรณ์ ด้านขวาเป็นพรีเซนเตอร์หญิงสวมชุดสีชมพูติดเลื่อมและโบว์ผม ข้างกันเป็นตุ๊กตากระต่ายสีขาว ไพ่เอซหัวใจ และตู้สล็อตที่มีป้าย JACKPOT พร้อมวงล้อเลข 777 และคำว่า BAR"
           loading="eager"
           fetchpriority="high"
           widths={[412, 640, 828, 1024, 1280, 1600, 1900]}

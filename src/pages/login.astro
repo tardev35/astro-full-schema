@@ -2,14 +2,14 @@
 import MainLayout from "../layouts/MainLayout.astro";
 import ContentBox from "../components/ContentBox.astro";
 import Navfoot from "../components/Navfoot.astro";
-import Announcement from "../components/Announcement6.astro";
+import Announcement from "../components/AnnouncementPremium.astro";
 import CtaRedirect from "../components/CtaRedirect.astro";
 import { pageGraph } from "../lib/schema";
 
-const pageDescription = "หน้าเข้าสู่ระบบ POE888 เว็บสีฟ้า มีปุ่มเดียวสำหรับเข้าบัญชีเดิม เพื่อเลือกเลขหวยไทย หวยลาว หวยฮานอย จัดโพย ตรวจผลรางวัล เช็กเครดิต และดูประวัติฝากถอนผ่านมือถือ";
+const pageDescription = "หน้าเข้าสู่ระบบ BUNNY555 สล็อตเว็บตรง มีปุ่มเดียวสำหรับเข้าบัญชีเดิม เพื่อเลือกเกมค่าย PG Slot และ JILI เช็กเครดิต ดูโบนัส จัดการฝากถอน True Wallet ผ่านมือถือ";
 
 const graph = pageGraph(Astro, {
-  name: "เข้าสู่ระบบ POE888 เว็บสีฟ้า",
+  name: "เข้าสู่ระบบ BUNNY555 สล็อตเว็บตรง",
   description: pageDescription,
   breadcrumb: [
     { name: "หน้าแรก", path: "/" },
@@ -20,20 +20,20 @@ const graph = pageGraph(Astro, {
 const targetUrl = "https://yoalink.com/22hs";
 ---
 
-<MainLayout title="เข้าสู่ระบบ POE888 | ปุ่มล็อกอินเว็บสีฟ้า หวยไทย ลาว ฮานอย" description={pageDescription}>
+<MainLayout title="เข้าสู่ระบบ BUNNY555 | ปุ่มล็อกอินเข้าเล่นสล็อตเว็บตรง PG Slot JILI" description={pageDescription}>
   <script type="application/ld+json" set:html={graph} />
 
   <Announcement />
 
-  <ContentBox title="เข้าสู่ระบบ POE888" as="h1">
+  <ContentBox title="เข้าสู่ระบบ BUNNY555" as="h1">
     <div class="flex justify-center py-8">
       <a
         href={targetUrl}
         rel="nofollow sponsored"
         data-cta-redirect
-        aria-label="เข้าสู่ระบบ POE888"
-        class="group relative mx-auto flex w-full max-w-[320px] items-center justify-center gap-3 overflow-hidden rounded-xl border border-[#2e8bff]/60 bg-[#04173f] px-6 py-4 text-xl font-bold tracking-wide text-[#a8d4ff] shadow-[0_10px_30px_rgba(11,78,168,0.35)] transition-all duration-300 hover:scale-105 hover:border-[#ffd93d]/70 hover:bg-[#062459] hover:text-[#ffe98a] hover:shadow-[0_15px_40px_rgba(46,139,255,0.30)]">
-        เข้าสู่ระบบ POE888
+        aria-label="เข้าสู่ระบบ BUNNY555"
+        class="group relative mx-auto flex w-full max-w-[320px] items-center justify-center gap-3 overflow-hidden rounded-xl border border-[#be185d]/50 bg-[#ec4899] px-6 py-4 text-xl font-bold tracking-wide text-white shadow-[0_10px_30px_rgba(190,24,93,0.20)] transition-all duration-300 hover:scale-105 hover:border-[#f7c948] hover:bg-[#be185d] hover:shadow-[0_15px_40px_rgba(236,72,153,0.20)]">
+        เข้าสู่ระบบ BUNNY555
       </a>
     </div>
   </ContentBox>

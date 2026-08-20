@@ -1,69 +1,69 @@
 ---
 import ContentBoxTwo from "./ContentBoxTwo.astro";
 
-const rates = [
-  { icon: "🔢", name: "3 ตัวบน", detail: "แทงเลขสามตัวตรงตามลำดับรางวัลบนของงวดที่เลือกไว้ในโพย", tag: "บาทละ 950" },
-  { icon: "🔀", name: "3 ตัวโต๊ด", detail: "เลขสามตัวชุดเดิมแต่สลับตำแหน่งได้ ใช้เลขชุดเดียวกับที่จัดไว้ในโพย", tag: "บาทละ 150" },
-  { icon: "🔻", name: "3 ตัวล่าง", detail: "แทงเลขสามตัวกับรางวัลล่างของงวด เลือกพร้อมประเภทอื่นในโพยเดียวกันได้", tag: "บาทละ 200" },
-  { icon: "🔼", name: "2 ตัวบน", detail: "เลขสองตัวกับรางวัลบน เป็นประเภทที่สมาชิกเลือกใส่โพยบ่อยที่สุด", tag: "บาทละ 95" },
-  { icon: "🔽", name: "2 ตัวล่าง", detail: "เลขสองตัวกับรางวัลล่าง แทงคู่กับ 2 ตัวบนในรายการเดียวกันได้", tag: "บาทละ 95" },
+const steps = [
+  { icon: "🔑", name: "เข้าสู่ระบบด้วยบัญชีเดิม", detail: "ใช้เบอร์โทรศัพท์หรือยูสเซอร์เนมที่สมัครไว้ เข้าได้ทั้งจากมือถือและคอม", tag: "ขั้นที่ 1" },
+  { icon: "🎰", name: "เปิดหมวดสล็อตแล้วเลือกค่าย", detail: "เลือกค่ายที่สนใจก่อน เช่น PG Slot หรือ JILI แล้วค่อยไล่ดูเกมในค่ายนั้น", tag: "ขั้นที่ 2" },
+  { icon: "🎁", name: "เช็กโบนัสที่เปิดอยู่", detail: "ดูสิทธิ์และเงื่อนไขของโปรแต่ละช่วงจากหน้าสมาชิกก่อนเลือกใช้", tag: "ขั้นที่ 3" },
+  { icon: "💳", name: "จัดการเครดิตผ่าน True Wallet", detail: "ฝากถอนจากหน้าบัญชีเดิม ดูยอดคงเหลือได้ก่อนกลับเข้าเกมต่อ", tag: "ขั้นที่ 4" },
+  { icon: "🧾", name: "ย้อนดูประวัติรายการ", detail: "เครดิต โบนัส และรายการฝากถอนรวมอยู่ในบัญชีเดียว ตรวจย้อนหลังได้เอง", tag: "ขั้นที่ 5" },
 ];
 
-const chips = ["หวยไทย", "หวยลาว", "หวยฮานอย", "หวยมาเลย์", "หวยยี่กี", "จัดโพยออนไลน์", "ตรวจผลผ่านมือถือ"];
+const chips = ["PG Slot", "JILI", "สล็อตเว็บตรง", "เกมโบนัส", "ฟรีสปิน", "โบนัสสมาชิก", "ฝากถอน True Wallet"];
 ---
 
-<ContentBoxTwo titleleft="เข้าสู่ระบบ POE888" titleright="ตารางอัตราจ่ายหวยออนไลน์ที่ POE888 เปิดรับ" label="เข้าสู่ระบบ POE888 และตารางอัตราจ่ายหวยออนไลน์">
+<ContentBoxTwo titleleft="เข้าสู่ระบบ BUNNY555" titleright="เข้าสู่ระบบแล้วเลือกเกมค่ายที่ชอบได้อย่างไร" label="เข้าสู่ระบบ BUNNY555 และขั้นตอนเลือกเกมค่ายที่ชอบ">
   <div slot="left" class="flex h-full flex-col gap-4">
-    <div class="relative overflow-hidden rounded-2xl border border-[#0b4ea8]/50 bg-[#04173f]/92 p-6 shadow-[0_10px_30px_rgba(2,10,30,0.65)] backdrop-blur-md">
-      <div aria-hidden="true" class="pointer-events-none absolute -top-10 -right-10 h-32 w-32 rounded-full bg-[#0b4ea8]/45 blur-[50px]"></div>
+    <div class="relative overflow-hidden rounded-2xl border border-[#f9c2d9] bg-[#ffffff]/92 p-6 shadow-[0_10px_30px_rgba(157,23,77,0.12)] backdrop-blur-md">
+      <div aria-hidden="true" class="pointer-events-none absolute -top-10 -right-10 h-32 w-32 rounded-full bg-[#f9a8d4]/45 blur-[50px]"></div>
 
       <div class="relative z-10 mb-5 flex items-center gap-3">
         <span
           aria-hidden="true"
-          class="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl border border-[#ffd93d]/40 bg-gradient-to-br from-[#ffe98a] via-[#ffd93d] to-[#cd994e] text-xl shadow-inner">
-          🎫
+          class="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl border border-[#e8a020]/40 bg-gradient-to-br from-[#f7c948] via-[#e8a020] to-[#a86a10] text-xl shadow-inner">
+          🎰
         </span>
         <div class="flex flex-col">
-          <p class="text-base font-black text-[#5aa9ff]">เข้าสู่ระบบแล้วเลือกตลาดหวยต่อได้ทันที</p>
-          <span class="text-[11px] text-[#b9cdf0]">บัญชีเดียวใช้เลือกเลข จัดโพย ตรวจผลรางวัล เช็กเครดิต และย้อนดูประวัติรายการของ POE888 ได้จากหน้าเดียว</span>
+          <p class="text-base font-black text-[#be185d]">เข้าสู่ระบบแล้วเลือกค่ายเกมที่ชอบต่อได้ทันที</p>
+          <span class="text-[11px] text-[#a8577a]">บัญชีเดียวใช้เลือกค่ายเกม เช็กโบนัส ดูเครดิต และย้อนดูประวัติรายการของ BUNNY555 ได้จากหน้าเดียว</span>
         </div>
       </div>
 
       <div class="relative z-10 flex flex-col gap-3.5">
         <div class="relative">
-          <span aria-hidden="true" class="absolute top-3.5 left-4 text-[#5aa9ff]">👤</span>
+          <span aria-hidden="true" class="absolute top-3.5 left-4 text-[#ec4899]">👤</span>
           <input
             type="text"
             placeholder="เบอร์โทรศัพท์ / ยูสเซอร์เนม"
-            class="w-full rounded-xl border border-[#0b4ea8]/60 bg-[#062459]/95 py-3 pr-4 pl-12 text-[#dbeafe] transition-all outline-none placeholder:text-[#b9cdf0]/70 focus:border-[#2e8bff] focus:ring-1 focus:ring-[#2e8bff]/50"
+            class="w-full rounded-xl border border-[#f9c2d9] bg-[#fff2f7] py-3 pr-4 pl-12 text-[#7a1038] transition-all outline-none placeholder:text-[#a8577a] focus:border-[#ec4899] focus:ring-1 focus:ring-[#ec4899]/50"
           />
         </div>
         <div class="relative">
-          <span aria-hidden="true" class="absolute top-3.5 left-4 text-[#5aa9ff]">🔑</span>
+          <span aria-hidden="true" class="absolute top-3.5 left-4 text-[#ec4899]">🔑</span>
           <input
             type="password"
             placeholder="รหัส PIN 4 หลัก"
-            class="w-full rounded-xl border border-[#0b4ea8]/60 bg-[#062459]/95 py-3 pr-4 pl-12 text-[#dbeafe] transition-all outline-none placeholder:text-[#b9cdf0]/70 focus:border-[#2e8bff] focus:ring-1 focus:ring-[#2e8bff]/50"
+            class="w-full rounded-xl border border-[#f9c2d9] bg-[#fff2f7] py-3 pr-4 pl-12 text-[#7a1038] transition-all outline-none placeholder:text-[#a8577a] focus:border-[#ec4899] focus:ring-1 focus:ring-[#ec4899]/50"
           />
         </div>
 
         <div class="flex items-center justify-between px-1 text-xs">
-          <label class="flex items-center gap-2 text-[#b9cdf0]">
-            <input type="checkbox" class="h-3.5 w-3.5 rounded border-[#0b4ea8]/60 bg-[#062459] accent-[#2e8bff]" />
+          <label class="flex items-center gap-2 text-[#a8577a]">
+            <input type="checkbox" class="h-3.5 w-3.5 rounded border-[#f9c2d9] bg-[#fff2f7] accent-[#ec4899]" />
             จดจำฉันไว้
           </label>
-          <a href="/login" class="text-[#b9cdf0] transition-colors hover:text-[#ffe98a]">ลืมรหัส PIN?</a>
+          <a href="/login" class="text-[#a8577a] transition-colors hover:text-[#be185d]">ลืมรหัส PIN?</a>
         </div>
 
         <button
-          class="mt-1 w-full rounded-xl border border-[#ffd93d]/40 bg-gradient-to-r from-[#ffe98a] via-[#ffd93d] to-[#cd994e] p-3.5 font-black text-[#02143a] shadow-[0_10px_30px_rgba(255,217,61,0.30)] transition-all hover:scale-[1.02] hover:shadow-[0_15px_40px_rgba(255,217,61,0.40)]">
+          class="mt-1 w-full rounded-xl border border-[#e8a020]/40 bg-gradient-to-r from-[#f7c948] via-[#e8a020] to-[#a86a10] p-3.5 font-black text-[#7a1038] shadow-[0_10px_30px_rgba(232,160,32,0.20)] transition-all hover:scale-[1.02] hover:shadow-[0_15px_40px_rgba(232,160,32,0.28)]">
           เข้าสู่ระบบ
         </button>
 
-        <div class="flex items-center gap-3 py-1 text-[11px] text-[#b9cdf0]">
-          <span class="h-px flex-1 bg-[#0b4ea8]/60"></span>
+        <div class="flex items-center gap-3 py-1 text-[11px] text-[#a8577a]">
+          <span class="h-px flex-1 bg-[#f9c2d9]"></span>
           หรือ
-          <span class="h-px flex-1 bg-[#0b4ea8]/60"></span>
+          <span class="h-px flex-1 bg-[#f9c2d9]"></span>
         </div>
 
         <a
@@ -74,58 +74,58 @@ const chips = ["หวยไทย", "หวยลาว", "หวยฮาน�
 
         <div class="mt-1 flex items-center justify-between px-1">
           <div class="flex gap-2">
-            <span class="rounded-full border border-[#2e8bff]/30 bg-[#062459] px-2.5 py-1 text-[10px] font-bold text-[#5aa9ff]"><span aria-hidden="true">🔒</span> เข้ารหัสข้อมูล</span>
-            <span class="rounded-full border border-[#ffd93d]/50 bg-[#062459]/80 px-2.5 py-1 text-[10px] font-bold text-[#ffd93d]"><span aria-hidden="true">🕐</span> ตรวจผลได้ทุกวัน</span>
+            <span class="rounded-full border border-[#f9c2d9] bg-[#fff2f7] px-2.5 py-1 text-[10px] font-bold text-[#be185d]"><span aria-hidden="true">🔒</span> เข้ารหัสข้อมูล</span>
+            <span class="rounded-full border border-[#e8a020]/50 bg-[#fff2f7] px-2.5 py-1 text-[10px] font-bold text-[#a86a10]"><span aria-hidden="true">🕐</span> ใช้งานได้ตลอด 24 ชม.</span>
           </div>
-          <a href="/register" class="text-xs font-bold text-[#b9cdf0] transition-colors hover:text-[#ffe98a]">สมัครสมาชิกใหม่</a>
+          <a href="/register" class="text-xs font-bold text-[#a8577a] transition-colors hover:text-[#be185d]">สมัครสมาชิกใหม่</a>
         </div>
       </div>
     </div>
   </div>
 
   <div slot="right" class="h-full">
-    <div class="flex h-full flex-col rounded-2xl border border-[#0b4ea8]/50 bg-[#04173f]/92 p-5 shadow-[0_10px_30px_rgba(2,10,30,0.65)] backdrop-blur-md">
+    <div class="flex h-full flex-col rounded-2xl border border-[#f9c2d9] bg-[#ffffff]/92 p-5 shadow-[0_10px_30px_rgba(157,23,77,0.12)] backdrop-blur-md">
       <div class="mb-5 flex items-center justify-between gap-3">
         <div>
-          <span class="text-xs font-bold tracking-wide text-[#b9cdf0]">อัตราจ่ายของแต่ละประเภทการแทงที่ POE888 แสดงไว้บนหน้าตลาดหวยออนไลน์</span>
-          <div class="bg-gradient-to-r from-[#ffe98a] via-[#ffd93d] to-[#cd994e] bg-clip-text text-2xl font-black text-transparent sm:text-3xl">หวยไทย • หวยลาว • ฮานอย • มาเลย์</div>
+          <span class="text-xs font-bold tracking-wide text-[#a8577a]">ลำดับการใช้งานที่ BUNNY555 วางไว้บนหน้าสมาชิก หลังเข้าสู่ระบบด้วยบัญชีเดิม</span>
+          <div class="bg-gradient-to-r from-[#e8a020] via-[#a86a10] to-[#e8a020] bg-clip-text text-2xl font-black text-transparent sm:text-3xl">PG Slot • JILI • โบนัส • True Wallet</div>
         </div>
-        <span class="flex items-center gap-1.5 self-start rounded-full border border-green-500/40 bg-green-900/40 px-2.5 py-1">
-          <span class="h-1.5 w-1.5 animate-pulse rounded-full bg-green-500 shadow-[0_0_8px_rgba(34,197,94,0.7)]"></span>
-          <span class="text-[10px] font-bold tracking-widest text-green-300 uppercase">Live</span>
+        <span class="flex items-center gap-1.5 self-start rounded-full border border-green-600/40 bg-green-50 px-2.5 py-1">
+          <span class="h-1.5 w-1.5 animate-pulse rounded-full bg-green-600 shadow-[0_0_8px_rgba(22,163,74,0.5)]"></span>
+          <span class="text-[10px] font-bold tracking-widest text-green-700 uppercase">Live</span>
         </span>
       </div>
 
-      <div class="mb-2 flex items-center justify-between text-[11px] font-bold tracking-widest text-[#b9cdf0] uppercase">
-        <span>ประเภทการแทง</span>
-        <span>อัตราจ่าย</span>
+      <div class="mb-2 flex items-center justify-between text-[11px] font-bold tracking-widest text-[#a8577a] uppercase">
+        <span>ขั้นตอนการใช้งาน</span>
+        <span>ลำดับ</span>
       </div>
 
       <div class="flex flex-1 flex-col gap-2.5">
         {
-          rates.map((r) => (
-            <div class="rounded-xl border border-[#0b4ea8]/50 bg-[#062459]/95 px-3.5 py-2.5 transition-colors hover:border-[#ffd93d]/50 hover:bg-[#083066]">
+          steps.map((s) => (
+            <div class="rounded-xl border border-[#f9c2d9] bg-[#fff2f7] px-3.5 py-2.5 transition-colors hover:border-[#e8a020]/50 hover:bg-[#ffe4f0]">
               <div class="flex items-center justify-between gap-2 text-sm">
-                <span class="flex min-w-0 items-center gap-2 font-bold text-[#dbeafe]">
+                <span class="flex min-w-0 items-center gap-2 font-bold text-[#7a1038]">
                   <span aria-hidden="true" class="w-5 shrink-0 text-center">
-                    {r.icon}
+                    {s.icon}
                   </span>{" "}
-                  <span class="truncate">{r.name}</span>
+                  <span class="truncate">{s.name}</span>
                 </span>
-                <span class="shrink-0 rounded-full border border-[#ffd93d]/45 bg-[#04173f] px-2.5 py-0.5 text-[10px] font-bold text-[#ffd93d]">{r.tag}</span>
+                <span class="shrink-0 rounded-full border border-[#e8a020]/45 bg-[#ffffff] px-2.5 py-0.5 text-[10px] font-bold text-[#a86a10]">{s.tag}</span>
               </div>
-              <div class="mt-1.5 text-[11px] tracking-wide text-[#b9cdf0]">{r.detail}</div>
+              <div class="mt-1.5 text-[11px] tracking-wide text-[#a8577a]">{s.detail}</div>
             </div>
           ))
         }
       </div>
 
       <div class="mt-4 flex flex-wrap items-center justify-center gap-2">
-        {chips.map((c) => <span class="rounded-full border border-[#0b4ea8]/50 bg-[#062459] px-3 py-1 text-[10px] font-bold text-[#a8d4ff]">{c}</span>)}
+        {chips.map((c) => <span class="rounded-full border border-[#f9c2d9] bg-[#fff2f7] px-3 py-1 text-[10px] font-bold text-[#9d174d]">{c}</span>)}
       </div>
 
-      <div class="mt-3 text-center text-[10px] tracking-wide text-[#b9cdf0]">
-        อัตราจ่ายในตารางสรุปจากที่หน้าเว็บแสดงไว้ อาจต่างกันตามตลาดและงวดที่เลือก เงื่อนไขจริงให้ยึดตามหน้าตลาดหวยของ POE888 ก่อนยืนยันโพยทุกครั้ง หากติดขัดตรงไหนทักไลน์ทีมงานได้ตลอด 24 ชั่วโมง
+      <div class="mt-3 text-center text-[10px] tracking-wide text-[#a8577a]">
+        ลำดับในตารางสรุปจากที่หน้าเว็บแสดงไว้ รายละเอียดของเกมและเงื่อนไขโบนัสจริงให้ยึดตามหน้าสมาชิกและหน้าโปรโมชั่นของ BUNNY555 ก่อนเลือกใช้ทุกครั้ง หากติดขัดตรงไหนทักไลน์ทีมงานได้ตลอด 24 ชั่วโมง
       </div>
     </div>
   </div>

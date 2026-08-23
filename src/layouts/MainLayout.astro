@@ -4,8 +4,8 @@ import bgConfig from "../assets/bg.json";
 import "../styles/global.css";
 import { BRAND_NAME, BRAND_TEXT, brandProfile, fontStack, iconVersion, usesGoogleFonts } from "../lib/brandProfile";
 import { canonicalFor } from "../lib/schema";
-import Navbar from "../components/NavbarStyle6.astro";
-import Footer from "../components/FooterStyle3.astro";
+import Navbar from "../components/NavbarStyle10.astro";
+import Footer from "../components/FooterPremiumSumo.astro";
 
 // Only banner1 is ever rendered, so only banner1 is imported.
 //
@@ -54,8 +54,8 @@ const mobileBannerImg = mobileBanner
   : null;
 
 const {
-  title = "BUNNY555 สล็อตเว็บตรง อันดับ 1 ให้บริการเกมค่ายใหญ่ โบนัสไหลทุกชม.",
-  description = "BUNNY555 รวมสล็อตจากค่ายใหญ่ PG Slot และ JILI พร้อมระบบสมาชิก ฝากถอนผ่าน True Wallet รองรับมือถือ มีโบนัสและทางเข้าใช้งานได้ตลอดวัน",
+  title = "SCLASS88 เข้าสู่ระบบ สล็อตแท้เว็บตรง สนุกแตกง่าย กำไรบาน",
+  description = "SCLASS88 รวมสล็อตเว็บตรง เกมค่ายใหญ่ โบนัส กำไรบาน ระบบออโต้ และฝากถอนง่าย รองรับมือถือ เข้าสู่ระบบง่าย พร้อมเลือกเกมที่สนุกได้ตลอดวัน",
   robots = "index, follow",
 } = Astro.props;
 
@@ -177,7 +177,7 @@ const profile = brandProfile(Astro.site);
 
           {block === "appmeta" && (
             <Fragment>
-              {profile.showAppTitle && <meta name="apple-mobile-web-app-title" content="bunny555" />}
+              {profile.showAppTitle && <meta name="apple-mobile-web-app-title" content="sclass88" />}
               <link rel="manifest" href="/site.webmanifest" />
             </Fragment>
           )}
@@ -219,7 +219,7 @@ const profile = brandProfile(Astro.site);
         background-attachment: fixed;
         background-repeat: no-repeat;
         margin: 0;
-        background-color: #ffe4f0;
+        background-color: #000000;
         font-weight: 400;
         font-family: var(--font-sans) !important;
       }
@@ -272,7 +272,7 @@ const profile = brandProfile(Astro.site);
         }
         <Image
           src={mainBanner}
-          alt="แบนเนอร์ BUNNY555 พื้นหลังไล่สีชมพูมีประกายแสง หัวใจ ชิปคาสิโน และเหรียญทองกระจายอยู่ ด้านซ้ายเป็นโลโก้ BUNNY555 ตัวอักษรกลมสีชมพูมีหูกระต่ายบนตัว B คู่กับเลข 555 สีขาว ถัดลงมาเป็นมงกุฎทองกับข้อความว่า สล็อตเว็บตรง สีขาว และคำว่า อันดับ 1 สีทอง ใต้ลงมาเป็นแถบสีชมพูเขียนว่า ให้บริการเกมค่ายใหญ่ โบนัสไหลทุกชม. และแถบสีขาวสามช่องพร้อมไอคอนเขียนว่า สมัครง่าย ฝากถอนออโต้ และ เล่นได้ทุกอุปกรณ์ ด้านขวาเป็นพรีเซนเตอร์หญิงสวมชุดสีชมพูติดเลื่อมและโบว์ผม ข้างกันเป็นตุ๊กตากระต่ายสีขาว ไพ่เอซหัวใจ และตู้สล็อตที่มีป้าย JACKPOT พร้อมวงล้อเลข 777 และคำว่า BAR"
+          alt="แบนเนอร์ SCLASS88 พื้นหลังสีดำมีเส้นโค้งสีทองและประกายแสงกระจายอยู่ กลางภาพเป็นโลโก้ Sclass88 ตัวอักษรทองนูนบนโล่ห์ทองที่มีมงกุฎและเพชรอยู่ด้านบน ถัดลงมาเป็นตัวอักษรทองขนาดใหญ่ว่า SCLASS88 เข้าสู่ระบบ ใต้ลงมาเป็นแถบสีดำขอบทองเขียนว่า สล็อตแท้เว็บตรง สนุกแตกง่าย กำไรบาน และบรรทัดเล็กว่า รวมสล็อตค่ายใหญ่ โบนัส และระบบออโต้ไว้ในบัญชีเดียว ด้านซ้ายเป็นพรีเซนเตอร์หญิงสวมชุดสีดำคาดทอง ข้างกันเป็นไพ่โพดำกับไพ่เอซ และชิปคาสิโนสีทอง ด้านขวาเป็นพรีเซนเตอร์หญิงอีกคนสวมชุดสีดำคาดทอง มีมงกุฎทอง วงล้อสล็อตที่มีเลข 7 7 และคำว่า BAR กับลูกเต๋าสีทอง"
           loading="eager"
           fetchpriority="high"
           widths={[412, 640, 828, 1024, 1280, 1600, 1900]}

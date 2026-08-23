@@ -7,55 +7,60 @@ const imagePaths = Object.keys(images);
 const mainLogo = imagePaths.length > 0 ? images[imagePaths[0]].default : null;
 ---
 
-<footer class="relative mt-16 w-full overflow-hidden rounded-t-[3rem] border-t border-[#f6c475]/60 bg-[#0e0402] pt-16 pb-8 font-sans text-[#f7e6d4] shadow-[0_-15px_40px_rgba(255,122,24,0.25)]">
-  <div class="pointer-events-none absolute inset-x-0 -top-20 mx-auto h-[250px] w-full max-w-4xl rounded-full bg-[#ff7a18]/20 blur-[100px]"></div>
-  <div class="pointer-events-none absolute inset-x-0 -bottom-24 mx-auto h-[220px] w-full max-w-2xl rounded-full bg-[#8d2b09]/30 blur-[100px]"></div>
+<footer class="relative mt-16 w-full overflow-hidden rounded-t-[3rem] border-t border-[#f5c542]/60 bg-[#060402] pt-16 pb-8 font-sans text-[#efe1c2] shadow-[0_-15px_40px_rgba(245,197,66,0.22)]">
+  <div class="pointer-events-none absolute inset-x-0 -top-20 mx-auto h-[250px] w-full max-w-4xl rounded-full bg-[#f5c542]/20 blur-[100px]"></div>
+  <div class="pointer-events-none absolute inset-x-0 -bottom-24 mx-auto h-[220px] w-full max-w-2xl rounded-full bg-[#7a4a0a]/35 blur-[100px]"></div>
 
   <div class="relative z-10 mx-auto w-full max-w-[1200px] px-6">
     <div class="mb-12 grid grid-cols-1 gap-12 md:grid-cols-12">
       <div class="flex flex-col gap-5 md:col-span-5">
-        <a href="/" class="inline-block max-w-max rounded-xl border border-[#f6c475]/30 bg-[#24100a] px-4 py-2 transition-transform duration-300 hover:scale-105">
+        <a href="/" class="inline-block max-w-max rounded-xl border border-[#f5c542]/30 bg-[#161006] px-4 py-2 transition-transform duration-300 hover:scale-105">
           {
             mainLogo ? (
               <Picture
                 src={mainLogo}
-                alt="โลโก้ YIMSIAM88 รูปหน้าจั่ววัดไทยสีทองมีลายกนกและช่อฟ้า ด้านล่างเขียนว่า Yimsiam88"
+                alt="โลโก้ SCLASS88 ตัวอักษรทองนูนเขียนว่า Sclass88 วางอยู่บนโล่ห์ทองที่มีมงกุฎและเพชรอยู่ด้านบน ล้อมด้วยเหรียญทองและริบบิ้นทอง"
+                widths={[160, 320, 480]}
+                sizes="160px"
+                loading="lazy"
+                decoding="async"
                 class="h-[50px] w-auto object-contain"
                 formats={["avif", "webp"]}
                 fallbackFormat="webp"
               />
             ) : (
-              <span class="text-3xl font-black tracking-widest text-[#f7e6d4]">
-                YIMSIAM<span class="text-[#f6c475]">88</span>
+              <span class="text-3xl font-black tracking-widest text-[#efe1c2]">
+                SCLASS<span class="text-[#f5c542]">88</span>
               </span>
             )
           }
         </a>
-        <p class="border-l-2 border-[#f6c475]/50 pl-4 text-sm leading-relaxed text-[#c9b6a3]">
-          YIMSIAM88 (ยิ้มสยาม88) สล็อตเว็บตรงไทยแท้ เกมรันด้วยระบบ RNG มาตรฐานโลก โบนัสแตกตามธรรมชาติ ฝากถอนออโต้ไม่มีขั้นต่ำ รองรับทุกช่องทางรวมถึงวอเล็ท และจ่ายเต็มไม่มีหักทุกยอด
+        <p class="border-l-2 border-[#f5c542]/50 pl-4 text-sm leading-relaxed text-[#c2ac7f]">
+          SCLASS88 สล็อตแท้เว็บตรง รวมเกมค่ายใหญ่หลายสไตล์ ทั้งเกมคลาสสิก เกมฟีเจอร์ โบนัส และฟรีสปิน ไว้ในบัญชีเดียว พร้อมระบบสมาชิกที่รวมเครดิต โบนัส และประวัติรายการ
+          และระบบออโต้ที่ทำรายการฝากถอนได้ตลอด 24 ชั่วโมง รองรับทั้งมือถือและคอมพิวเตอร์
         </p>
         <div class="mt-4 flex flex-wrap gap-3">
-          <span class="rounded-full border border-[#f6c475]/30 bg-[#24100a] px-4 py-1 text-xs font-medium text-[#f6c475] backdrop-blur-sm">จ่ายเต็มไม่มีหัก</span>
-          <span class="rounded-full border border-[#ff7a18]/40 bg-[#2a0f06] px-4 py-1 text-xs font-medium text-[#ffb37a] backdrop-blur-sm">ฝาก–ถอนไม่มีขั้นต่ำ</span>
+          <span class="rounded-full border border-[#f5c542]/30 bg-[#161006] px-4 py-1 text-xs font-medium text-[#f5c542] backdrop-blur-sm">สล็อตแท้เว็บตรง</span>
+          <span class="rounded-full border border-[#bc7b14]/40 bg-[#241906] px-4 py-1 text-xs font-medium text-[#ffe9a8] backdrop-blur-sm">ระบบออโต้ 24 ชม.</span>
         </div>
       </div>
 
       <nav class="flex flex-col gap-4 md:col-span-3 lg:pl-8">
-        <p class="text-lg font-black tracking-widest text-[#f7e6d4] uppercase drop-shadow-sm">ทางลัด</p>
-        <div class="h-[1px] w-12 bg-[#f6c475]"></div>
-        <ul class="flex flex-col gap-3 text-sm font-medium text-[#c9b6a3]">
-          <li><a href="/" class="transition-colors hover:text-[#f6c475]">หน้าหลัก</a></li>
-          <li><a href="/promotion" class="transition-colors hover:text-[#f6c475]">โปรโมชั่น</a></li>
-          <li><a href="/ทดลองเล่น" class="transition-colors hover:text-[#f6c475]">ทดลองเล่น</a></li>
-          <li><a href="/ทางเข้า" class="transition-colors hover:text-[#f6c475]">ทางเข้า</a></li>
-          <li><a href="/about-us" class="transition-colors hover:text-[#f6c475]">เกี่ยวกับเรา</a></li>
-          <li><a href="/contact-us" class="transition-colors hover:text-[#f6c475]">ติดต่อเรา</a></li>
+        <p class="text-lg font-black tracking-widest text-[#efe1c2] uppercase drop-shadow-sm">ทางลัด</p>
+        <div class="h-[1px] w-12 bg-[#f5c542]"></div>
+        <ul class="flex flex-col gap-3 text-sm font-medium text-[#c2ac7f]">
+          <li><a href="/" class="transition-colors hover:text-[#f5c542]">หน้าหลัก</a></li>
+          <li><a href="/promotion" class="transition-colors hover:text-[#f5c542]">โปรโมชั่น</a></li>
+          <li><a href="/ทดลองเล่น" class="transition-colors hover:text-[#f5c542]">ทดลองเล่น</a></li>
+          <li><a href="/ทางเข้า" class="transition-colors hover:text-[#f5c542]">ทางเข้า</a></li>
+          <li><a href="/about-us" class="transition-colors hover:text-[#f5c542]">เกี่ยวกับเรา</a></li>
+          <li><a href="/contact-us" class="transition-colors hover:text-[#f5c542]">ติดต่อเรา</a></li>
         </ul>
       </nav>
 
       <div class="flex flex-col gap-5 md:col-span-4">
-        <p class="text-lg font-black tracking-widest text-[#f7e6d4] uppercase drop-shadow-sm">บริการลูกค้า 24 ชม.</p>
-        <div class="h-[1px] w-12 bg-[#f6c475]"></div>
+        <p class="text-lg font-black tracking-widest text-[#efe1c2] uppercase drop-shadow-sm">บริการลูกค้า 24 ชม.</p>
+        <div class="h-[1px] w-12 bg-[#f5c542]"></div>
 
         <a
           href="/line"
@@ -87,16 +92,16 @@ const mainLogo = imagePaths.length > 0 ? images[imagePaths[0]].default : null;
           )
         }
 
-        <div class="mt-4 text-xs font-medium tracking-widest text-[#c9b6a3] uppercase">Supported Payments</div>
+        <div class="mt-4 text-xs font-medium tracking-widest text-[#c2ac7f] uppercase">Supported Payments</div>
         <BankStrip size={30} />
       </div>
     </div>
 
-    <div class="flex flex-col items-center justify-between border-t border-[#8d2b09]/60 pt-8 text-xs font-medium tracking-wide text-[#c9b6a3] md:flex-row">
-      <p>COPYRIGHT &copy; {new Date().getFullYear()} YIMSIAM88-HOMEPAGE.NET. ALL RIGHTS RESERVED.</p>
+    <div class="flex flex-col items-center justify-between border-t border-[#7a4a0a]/60 pt-8 text-xs font-medium tracking-wide text-[#c2ac7f] md:flex-row">
+      <p>COPYRIGHT &copy; {new Date().getFullYear()} SCLASS88-MEMBER.COM. ALL RIGHTS RESERVED.</p>
       <div class="mt-4 flex gap-4 md:mt-0">
-        <a href="/terms/" class="transition-colors hover:text-[#f6c475]">เงื่อนไขข้อตกลง</a>
-        <a href="/privacy/" class="transition-colors hover:text-[#f6c475]">นโยบายความเป็นส่วนตัว</a>
+        <a href="/terms/" class="transition-colors hover:text-[#f5c542]">เงื่อนไขข้อตกลง</a>
+        <a href="/privacy/" class="transition-colors hover:text-[#f5c542]">นโยบายความเป็นส่วนตัว</a>
       </div>
     </div>
   </div>

@@ -2,14 +2,14 @@
 import MainLayout from "../layouts/MainLayout.astro";
 import ContentBox from "../components/ContentBox.astro";
 import Navfoot from "../components/Navfoot.astro";
-import Announcement from "../components/AnnouncementPremium.astro";
+import Announcement from "../components/Announcement5.astro";
 import CtaRedirect from "../components/CtaRedirect.astro";
 import { pageGraph } from "../lib/schema";
 
-const pageDescription = "หน้าเข้าสู่ระบบ BUNNY555 สล็อตเว็บตรง มีปุ่มเดียวสำหรับเข้าบัญชีเดิม เพื่อเลือกเกมค่าย PG Slot และ JILI เช็กเครดิต ดูโบนัส จัดการฝากถอน True Wallet ผ่านมือถือ";
+const pageDescription = "หน้าเข้าสู่ระบบ SCLASS88 สล็อตแท้เว็บตรง รวมปุ่มล็อกอินเข้าบัญชีเดิมไว้จุดเดียว ใช้งานผ่านมือถือและคอม เพื่อเลือกเกมค่ายใหญ่ เช็กเครดิต ดูโบนัส และฝากถอนออโต้";
 
 const graph = pageGraph(Astro, {
-  name: "เข้าสู่ระบบ BUNNY555 สล็อตเว็บตรง",
+  name: "เข้าสู่ระบบ SCLASS88 สล็อตแท้เว็บตรง",
   description: pageDescription,
   breadcrumb: [
     { name: "หน้าแรก", path: "/" },
@@ -20,20 +20,20 @@ const graph = pageGraph(Astro, {
 const targetUrl = "https://yoalink.com/22hs";
 ---
 
-<MainLayout title="เข้าสู่ระบบ BUNNY555 | ปุ่มล็อกอินเข้าเล่นสล็อตเว็บตรง PG Slot JILI" description={pageDescription}>
+<MainLayout title="เข้าสู่ระบบ SCLASS88 | ปุ่มล็อกอินเข้าเล่นสล็อตแท้เว็บตรง" description={pageDescription}>
   <script type="application/ld+json" set:html={graph} />
 
   <Announcement />
 
-  <ContentBox title="เข้าสู่ระบบ BUNNY555" as="h1">
+  <ContentBox title="เข้าสู่ระบบ SCLASS88" as="h1">
     <div class="flex justify-center py-8">
       <a
         href={targetUrl}
         rel="nofollow sponsored"
         data-cta-redirect
-        aria-label="เข้าสู่ระบบ BUNNY555"
-        class="group relative mx-auto flex w-full max-w-[320px] items-center justify-center gap-3 overflow-hidden rounded-xl border border-[#be185d]/50 bg-[#ec4899] px-6 py-4 text-xl font-bold tracking-wide text-white shadow-[0_10px_30px_rgba(190,24,93,0.20)] transition-all duration-300 hover:scale-105 hover:border-[#f7c948] hover:bg-[#be185d] hover:shadow-[0_15px_40px_rgba(236,72,153,0.20)]">
-        เข้าสู่ระบบ BUNNY555
+        aria-label="เข้าสู่ระบบ SCLASS88"
+        class="group relative mx-auto flex w-full max-w-[320px] items-center justify-center gap-3 overflow-hidden rounded-xl border border-[#f5c542]/45 bg-[#161006] px-6 py-4 text-xl font-bold tracking-wide text-[#ffe9a8] shadow-[0_10px_30px_rgba(245,197,66,0.18)] transition-all duration-300 hover:scale-105 hover:border-[#ffd75e] hover:bg-[#241906] hover:shadow-[0_15px_40px_rgba(245,197,66,0.28)]">
+        เข้าสู่ระบบ SCLASS88
       </a>
     </div>
   </ContentBox>

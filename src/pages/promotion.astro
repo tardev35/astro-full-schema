@@ -1,8 +1,8 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
-import ContentBox from "../components/ContentBoxPremium.astro";
+import ContentBox from "../components/ContentBox.astro";
 import Navfoot from "../components/Navfoot.astro";
-import Announcement from "../components/AnnouncementPremium.astro";
+import Announcement from "../components/Announcement5.astro";
 
 import { Picture } from "astro:assets";
 
@@ -12,12 +12,12 @@ import pro3 from "../assets/slide3.png";
 import pro4 from "../assets/slide4.png";
 import { pageGraph } from "../lib/schema";
 
-const pageTitle = "โปรโมชั่น BUNNY555 รวมภาพโปรสล็อตเว็บตรง โบนัสสมาชิกใหม่และโปรเติมรับเพิ่ม";
+const pageTitle = "โปรโมชั่น SCLASS88 รวมภาพโปรสล็อตแท้เว็บตรง โบนัสสมาชิก และระบบออโต้";
 
-const pageHeading = "โปรโมชั่น BUNNY555";
+const pageHeading = "โปรโมชั่น SCLASS88";
 
 const pageDescription =
-  "รวมภาพโปรโมชั่นสล็อตของ BUNNY555 ไว้ในหน้าเดียว ทั้งโปรใจป๋าเติม 29 รับ 100 และโปรสมาชิกใหม่รับ 20 เปอร์เซ็นต์ อ่านเงื่อนไขบนภาพก่อนสมัครและเลือกใช้สิทธิ์";
+  "รวมภาพโปรโมชั่นสล็อตแท้เว็บตรงของ SCLASS88 ไว้ในหน้าเดียว ทั้งโบนัสสมาชิก เครดิตฟรี และระบบออโต้ฝากถอน อ่านเงื่อนไขบนภาพให้ครบก่อนเลือกใช้สิทธิ์แล้วสมัครสมาชิก";
 
 const graph = pageGraph(Astro, {
   name: pageTitle,
@@ -36,21 +36,22 @@ const graph = pageGraph(Astro, {
   <Announcement />
 
   <ContentBox title={pageHeading} as="h1">
-    <p class="mb-8 text-left text-base leading-relaxed text-[#7a1038]">
-      หน้านี้รวมภาพโปรโมชั่นที่ <strong class="text-[#be185d]">BUNNY555</strong> เปิดให้สมาชิกดูก่อนเลือกใช้ ทั้งโปรใจป๋าเติม 29 รับ 100 และโปรสมาชิกใหม่ที่ให้บิลแรกเพิ่มอีก 20 เปอร์เซ็นต์
+    <p class="mb-8 text-left text-base leading-relaxed text-[#efe1c2]">
+      หน้านี้รวมภาพโปรโมชั่นที่ <strong class="text-[#f5c542]">SCLASS88</strong> เปิดให้สมาชิกดูก่อนเลือกใช้ ทั้งโบนัสต้อนรับสมาชิกใหม่ เครดิตฟรีตามรอบ และสิทธิ์ที่ผูกกับระบบออโต้ฝากถอน
       โดยแต่ละรายการมีเงื่อนไขและช่วงเวลาที่เปิดใช้งานต่างกัน จึงควรอ่านรายละเอียดบนภาพให้ครบก่อนตัดสินใจ แล้วเลือกโปรที่เหมาะกับงบของตัวเอง
-      จากนั้นสมัครสมาชิกจากปุ่มด้านล่างเพื่อเข้าเลือกสล็อตค่ายใหญ่ทั้ง PG Slot และ JILI พร้อมจัดการเครดิตผ่าน True Wallet ได้จากบัญชีเดียว
+      จากนั้นสมัครสมาชิกจากปุ่มด้านล่างเพื่อเข้าสู่ระบบ เลือกสล็อตแท้เว็บตรงจากเกมค่ายใหญ่หลายค่าย และจัดการเครดิตต่อได้จากบัญชีเดียว
+      โบนัสมีไว้เพิ่มความคุ้ม ไม่ใช่เพิ่มงานอ่านเงื่อนไขระดับรายงานประจำปี
     </p>
 
     <div class="grid w-full grid-cols-1 gap-6 sm:grid-cols-2">
       <Picture
         src={pro1}
-        alt="ภาพโปรโมชั่น BUNNY555 พื้นหลังชมพูเข้มมีเหรียญทองกระจายอยู่ ด้านบนเป็นโลโก้ BUNNY555 ถัดลงมาเป็นตัวอักษรขนาดใหญ่ว่า สล็อตเว็บตรง อันดับ 1 และแถบเขียนว่า เกมค่ายใหญ่ โบนัสไหลทุกชม. ใต้ลงมาเป็นสองบรรทัดพร้อมไอคอนเขียนว่า รองรับ True Wallet และธนาคารชั้นนำ กับ ฝากถอนออโต้ ใช้งานง่าย ตลอด 24 ชม. ถัดลงมาเป็นป้ายสามช่องเขียนว่า ระบบออโต้ ค่ายเกมใหญ่ และ โบนัสต่อเนื่อง ด้านขวาเป็นพรีเซนเตอร์หญิงสวมชุดสีชมพูและที่คาดผมหูกระต่าย ถือโทรศัพท์ที่เปิดหน้าแอป BUNNY555 แสดงยอดแจ็กพอตและยอดเงิน 300,000.00 บาท แถวล่างสุดเป็นโลโก้ทรูมันนี่วอลเล็ทและธนาคารที่รองรับ"
+        alt="ภาพโปรโมชั่น SCLASS88 พื้นหลังดำแต่งลายทอง ด้านบนเป็นโลโก้ Sclass88 สีทอง ถัดลงมาเป็นตัวอักษรทองขนาดใหญ่ว่า สล็อตแท้เว็บตรง และ สนุกแตกง่าย กำไรบาน ใต้ลงมาเป็นป้ายทองสามช่องเขียนว่า ค่ายใหญ่ โบนัสจัดเต็ม และ ฝากถอนออโต้ ตรงกลางเป็นโทรศัพท์ที่แสดงตารางสล็อตพร้อมสัญลักษณ์ SCATTER และยอดรางวัล 88,888.00 ด้านขวาเป็นพรีเซนเตอร์หญิงสวมชุดสีดำแต่งทอง แถบล่างสุดเขียนว่า เข้าสู่ระบบง่าย เล่นได้ 24 ชม. ฉากหลังเป็นมังกรทอง เหรียญทอง และหีบสมบัติ"
         loading="lazy"
         fetchpriority="low"
         widths={[200, 400, 600]}
         sizes="(max-width: 768px) 100vw, 50vw"
-        class="mx-auto h-auto w-full rounded-xl border border-[#f9c2d9] object-contain shadow-[0_10px_30px_rgba(190,24,93,0.16)] transition-transform duration-300 hover:-translate-y-1 hover:border-[#ec4899]/60 hover:shadow-[0_15px_40px_rgba(236,72,153,0.20)]"
+        class="mx-auto h-auto w-full rounded-xl border border-[#f5c542]/25 object-contain shadow-[0_10px_30px_rgba(245,197,66,0.18)] transition-transform duration-300 hover:-translate-y-1 hover:border-[#f5c542]/60 hover:shadow-[0_15px_40px_rgba(245,197,66,0.28)]"
         decoding="async"
         formats={["avif", "webp"]}
         fallbackFormat="webp"
@@ -59,12 +60,12 @@ const graph = pageGraph(Astro, {
 
       <Picture
         src={pro2}
-        alt="ภาพโปรโมชั่น BUNNY555 โปรใจป๋า เติม 29 รับ 100 พื้นหลังชมพูมีเหรียญทองกระจายอยู่ ด้านบนเป็นมงกุฎทองและข้อความว่า โปรใจป๋า ถัดลงมาเป็นตัวเลขขนาดใหญ่ว่า เติม 29 รับ 100 ใต้ลงมาเป็นแถบเขียนว่า สล็อตเว็บตรง อันดับ 1 คู่กับโลโก้ BUNNY555 และแถบเขียนว่า เกมค่ายใหญ่ โบนัสไหลทุกชม. แถวล่างเป็นไอคอนวอลเล็ท ธนาคารที่รองรับ และพร้อมเพย์ พร้อมป้ายเขียนว่า เฉพาะสล็อตเท่านั้น ด้านขวาเป็นพรีเซนเตอร์หญิงสวมชุดสีชมพูถือชิปคาสิโน"
+        alt="ภาพโปรโมชั่น SCLASS88 พื้นหลังดำแต่งลายทอง ด้านบนเป็นคำว่า SCLASS88 ถัดลงมาเป็นตัวอักษรทองขนาดใหญ่ว่า โบนัสกำไรบาน และ สล็อตเว็บตรง สนุกแตกง่าย ใต้ลงมาเป็นสองบรรทัดเขียนว่า รวมสล็อตค่ายใหญ่ เข้าเล่นง้าย และ ฝากถอนออโต้ ตลอด 24 ชม. ตรงกลางเป็นหีบสมบัติเปิดอยู่เต็มไปด้วยเหรียญทอง ด้านขวาเป็นพรีเซนเตอร์หญิงสวมชุดสีดำ ข้างกันเป็นปุ่มสีทองเขียนว่า เข้าสู่ระบบ แถบล่างสุดเขียนว่า ลุ้นเครดิตฟรี สูงสุด 1,000 บาท"
         loading="lazy"
         fetchpriority="low"
         widths={[200, 400, 600]}
         sizes="(max-width: 768px) 100vw, 50vw"
-        class="mx-auto h-auto w-full rounded-xl border border-[#f9c2d9] object-contain shadow-[0_10px_30px_rgba(190,24,93,0.16)] transition-transform duration-300 hover:-translate-y-1 hover:border-[#ec4899]/60 hover:shadow-[0_15px_40px_rgba(236,72,153,0.20)]"
+        class="mx-auto h-auto w-full rounded-xl border border-[#f5c542]/25 object-contain shadow-[0_10px_30px_rgba(245,197,66,0.18)] transition-transform duration-300 hover:-translate-y-1 hover:border-[#f5c542]/60 hover:shadow-[0_15px_40px_rgba(245,197,66,0.28)]"
         decoding="async"
         formats={["avif", "webp"]}
         fallbackFormat="webp"
@@ -73,12 +74,12 @@ const graph = pageGraph(Astro, {
 
       <Picture
         src={pro3}
-        alt="ภาพโปรโมชั่น BUNNY555 โปรสมาชิกใหม่ บิลแรกรับ 20 เปอร์เซ็นต์ พื้นหลังชมพูมีไพ่ เหรียญทอง และของขวัญกระจายอยู่ ด้านบนซ้ายเป็นโลโก้ BUNNY555 ถัดมาเป็นป้ายเขียนว่า โปรสมาชิกใหม่ และตัวอักษรขนาดใหญ่ว่า บิลแรก รับ 20% ใต้ลงมาเป็นแถบเขียนว่า BUNNY555 สล็อตเว็บตรง อันดับ 1 และ เกมค่ายใหญ่ โบนัสไหลทุกชม. แถวล่างสุดเขียนว่า เล่นง่าย ฝาก-ถอนสะดวก ตลอด 24 ชม. ด้านขวาเป็นพรีเซนเตอร์หญิงสวมชุดสีชมพู ข้างกันเป็นตุ๊กตากระต่ายสีขาวสวมมงกุฎอยู่กับไหทองคำ"
+        alt="ภาพโปรโมชั่น SCLASS88 พื้นหลังดำแต่งลายทอง ด้านบนเป็นคำว่า SCLASS88 ถัดลงมาเขียนว่า ฝากเงินผ่าน QR Code ง่ายๆ และ ระบบออโต้ ฝากถอนไว ทำตามได้ไม่ยาก ตรงกลางเป็นภาพหน้าจอโทรศัพท์สามขั้นตอนเขียนว่า กดเมนูฝากเงิน เลือก QR Code และ สแกนและยืนยัน ด้านขวาเป็นพรีเซนเตอร์หญิงสวมชุดสีดำถือกล่องของขวัญสีทอง แถบล่างสุดเขียนว่า Auto Wallet 24 ชม. รองรับมือถือ ใช้งานง่าย"
         loading="lazy"
         fetchpriority="low"
         widths={[200, 400, 600]}
         sizes="(max-width: 768px) 100vw, 50vw"
-        class="mx-auto h-auto w-full rounded-xl border border-[#f9c2d9] object-contain shadow-[0_10px_30px_rgba(190,24,93,0.16)] transition-transform duration-300 hover:-translate-y-1 hover:border-[#ec4899]/60 hover:shadow-[0_15px_40px_rgba(236,72,153,0.20)]"
+        class="mx-auto h-auto w-full rounded-xl border border-[#f5c542]/25 object-contain shadow-[0_10px_30px_rgba(245,197,66,0.18)] transition-transform duration-300 hover:-translate-y-1 hover:border-[#f5c542]/60 hover:shadow-[0_15px_40px_rgba(245,197,66,0.28)]"
         decoding="async"
         formats={["avif", "webp"]}
         fallbackFormat="webp"
@@ -87,12 +88,12 @@ const graph = pageGraph(Astro, {
 
       <Picture
         src={pro4}
-        alt="ภาพโปรโมชั่น BUNNY555 พื้นหลังชมพูมีเหรียญทอง เพชร และกล่องของขวัญกระจายอยู่ ด้านบนเป็นโลโก้ BUNNY555 ถัดลงมาเป็นตัวอักษรขนาดใหญ่ว่า ฝากถอน AUTO และ รวดเร็วทันใจ ใต้ลงมาเป็นป้ายสามช่องพร้อมไอคอนเขียนว่า ระบบออโต้ ฝากถอนอัตโนมัติไม่ต้องรอนาน, ทำรายการง่าย 24 ชม. ทำรายการได้ตลอดเวลา และ ปลอดภัยมั่นใจ ข้อมูลปลอดภัยเชื่อถือได้ 100% แถบล่างสุดเขียนว่า ฝากง่าย ถอนได้ตลอดเวลา ด้านขวาเป็นพรีเซนเตอร์หญิงสวมชุดสีชมพูและที่คาดผมหูกระต่าย ชี้ไปที่โทรศัพท์ที่แสดงข้อความฝากถอนสำเร็จ ยอด 10,000.00 บาท ด้านซ้ายล่างเป็นตุ๊กตากระต่ายสีขาว"
+        alt="ภาพโปรโมชั่น SCLASS88 พื้นหลังดำแต่งลายทอง ด้านบนเป็นโลโก้ Sclass88 สีทอง ถัดลงมาเป็นตัวอักษรทองขนาดใหญ่ว่า สล็อตแท้เว็บตรง และ สนุกแตกง่าย พร้อมบรรทัดเขียนว่า โบนัสกำไรบาน ฝากถอนออโต้ 24 ชม. และ ค่ายใหญ่ เล่นง่าย เข้าสู่ระบบไว ข้างกันเป็นตราใบลอเรลสีทองเขียนว่า เริ่มต้น 1 บาท ด้านซ้ายเป็นพรีเซนเตอร์หญิงสวมชุดสีทอง ด้านขวาเป็นมังกรทองและเทพเจ้าแห่งโชคลาภถือก้อนทอง แถบล่างสุดเป็นโลโก้ธนาคาร ทรูมันนี่ และพร้อมเพย์"
         loading="lazy"
         fetchpriority="low"
         widths={[200, 400, 600]}
         sizes="(max-width: 768px) 100vw, 50vw"
-        class="mx-auto h-auto w-full rounded-xl border border-[#f9c2d9] object-contain shadow-[0_10px_30px_rgba(190,24,93,0.16)] transition-transform duration-300 hover:-translate-y-1 hover:border-[#ec4899]/60 hover:shadow-[0_15px_40px_rgba(236,72,153,0.20)]"
+        class="mx-auto h-auto w-full rounded-xl border border-[#f5c542]/25 object-contain shadow-[0_10px_30px_rgba(245,197,66,0.18)] transition-transform duration-300 hover:-translate-y-1 hover:border-[#f5c542]/60 hover:shadow-[0_15px_40px_rgba(245,197,66,0.28)]"
         decoding="async"
         formats={["avif", "webp"]}
         fallbackFormat="webp"
@@ -103,8 +104,8 @@ const graph = pageGraph(Astro, {
     <div class="mt-12 flex justify-center pb-4">
       <a
         href="/register"
-        class="flex items-center justify-center rounded-lg border border-[#f7c948]/60 bg-gradient-to-r from-[#f7c948] via-[#e8a020] to-[#a86a10] px-10 py-3.5 text-lg font-black text-[#7a1038] shadow-[0_10px_30px_rgba(157,23,77,0.18)] transition-transform hover:scale-105 hover:shadow-[0_15px_40px_rgba(232,160,32,0.20)]">
-        สมัครสมาชิก BUNNY555
+        class="flex items-center justify-center rounded-lg border border-[#f5c542]/60 bg-gradient-to-r from-[#f5c542] via-[#e0a81e] to-[#a3610c] px-10 py-3.5 text-lg font-black text-[#1a1206] shadow-[0_10px_30px_rgba(245,197,66,0.18)] transition-transform hover:scale-105 hover:shadow-[0_15px_40px_rgba(245,197,66,0.28)]">
+        สมัครสมาชิก SCLASS88
       </a>
     </div>
   </ContentBox>

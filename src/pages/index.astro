@@ -1,61 +1,60 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
-import AnnouncementPremium from "../components/AnnouncementPremium.astro";
+import Announcement from "../components/Announcement5.astro";
 import ContentBox from "../components/ContentBox.astro";
-import ContentBoxPremium from "../components/ContentBoxPremium.astro";
-import ContentBoxCyberCut from "../components/ContentBoxCyberCut.astro";
-import ContentBoxTwoPremium from "../components/ContentBoxTwoPremium.astro";
-import ContentBoxTwoCyberCut from "../components/ContentBoxTwoCyberCut.astro";
-import ContentBoxSevenThreePremium from "../components/ContentBoxSevenThreePremium.astro";
-import ContentBoxSevenThreeCyberCut from "../components/ContentBoxSevenThreeCyberCut.astro";
-import ContentBoxSpecial from "../components/ContentBoxSpecial.astro";
-import ProviderGrid from "../components/ProviderGrid.astro";
+import ContentBoxNeumorphism from "../components/ContentBoxNeumorphism.astro";
+import ContentBoxFloatingBadge from "../components/ContentBoxFloatingBadge.astro";
+import ContentBoxTwoNeumorphism from "../components/ContentBoxTwoNeumorphism.astro";
+import ContentBoxTwoFloatingBadge from "../components/ContentBoxTwoFloatingBadge.astro";
+import ContentBoxSevenThreeNeumorphism from "../components/ContentBoxSevenThreeNeumorphism.astro";
+import ContentBoxSevenThreeFloatingBadge from "../components/ContentBoxSevenThreeFloatingBadge.astro";
+import ProviderGridPremium from "../components/ProviderGridPremium.astro";
 import GameRankingBoard from "../components/GameRankingBoard.astro";
-import LatestWinnersCyber from "../components/LatestWinnersCyber.astro";
+import LatestWinnersPremium from "../components/LatestWinnersPremium.astro";
 import SmoothCarousel from "../components/SmoothCarousel.astro";
 import LoginRtpSection from "../components/LoginRtpSection.astro";
-import Faq3 from "../components/Faq3.astro";
-import ReviewCardSumo2 from "../components/ReviewCardSumo2.astro";
+import Faq4 from "../components/Faq4.astro";
+import ReviewCardSumo from "../components/ReviewCardSumo.astro";
 import Navfoot from "../components/Navfoot.astro";
 
 import { Picture } from "astro:assets";
 import { pageGraph } from "../lib/schema";
 import imgGames from "../assets/slide1.png";
-import imgWallet from "../assets/slide4.png";
+import imgBonus from "../assets/slide4.png";
 
-const pageTitle = "BUNNY555 สล็อตเว็บตรง อันดับ 1 ให้บริการเกมค่ายใหญ่ โบนัสไหลทุกชม.";
+const pageTitle = "SCLASS88 เข้าสู่ระบบ สล็อตแท้เว็บตรง สนุกแตกง่าย กำไรบาน";
 
-const pageDescription = "BUNNY555 รวมสล็อตจากค่ายใหญ่ PG Slot และ JILI พร้อมระบบสมาชิก ฝากถอนผ่าน True Wallet รองรับมือถือ มีโบนัสและทางเข้าใช้งานได้ตลอดวัน";
+const pageDescription = "SCLASS88 รวมสล็อตเว็บตรง เกมค่ายใหญ่ โบนัส กำไรบาน ระบบออโต้ และฝากถอนง่าย รองรับมือถือ เข้าสู่ระบบง่าย พร้อมเลือกเกมที่สนุกได้ตลอดวัน";
 
 const announcement =
-  "BUNNY555 รวมสล็อตค่ายใหญ่ทั้ง PG Slot และ JILI ไว้ในบัญชีเดียว เลือกค่ายแล้วเข้าเกมได้ทันที • โบนัสจัดไว้เป็นส่วนหนึ่งของระบบสมาชิก เช็กโปรที่เปิดอยู่ก่อนเลือกใช้ได้ทุกครั้ง • ฝากถอนผ่าน True Wallet จัดการเครดิตจากมือถือ ดูยอดและประวัติได้จากจุดเดียว • หน้าสมาชิกรวมเครดิต โบนัส และประวัติรายการไว้ในบัญชีเดียว • สมัครผ่านมือถือไม่กี่ขั้นตอน แล้วเข้าเลือกสล็อตต่อได้เลย • ทางเข้า BUNNY555 เว็บหลัก รองรับทั้งมือถือและคอมด้วยบัญชีเดิม";
+  "SCLASS88 รวมสล็อตแท้เว็บตรง เกมค่ายใหญ่ โบนัส และระบบออโต้ไว้ในบัญชีเดียว • เข้าสู่ระบบครั้งเดียวแล้วเลือกเกม ดูเครดิต และเช็กโบนัสได้จากหน้าเดียว ทั้งมือถือและคอมพิวเตอร์ • เกมหลายสไตล์จากหลายค่าย ทั้งเกมคลาสสิก เกมฟีเจอร์ โบนัส และฟรีสปิน • โบนัสและสิทธิ์สมาชิกรวมไว้ในหน้าสมาชิก เช็กเงื่อนไขก่อนเลือกใช้ได้ทุกครั้ง • ระบบออโต้ฝากถอนเชื่อมเครดิตเข้ากับบัญชีสมาชิกโดยตรง ลดขั้นตอนก่อนกลับไปเลือกเกมต่อ • ทางเข้าและหน้าล็อกอินรองรับมือถือ ใช้บัญชีเดิมเข้าเล่นต่อได้ทันที";
 
 const gamesAlt =
-  "ภาพโปรโมชั่น BUNNY555 พื้นหลังชมพูเข้มมีเหรียญทองกระจายอยู่ ด้านบนเป็นโลโก้ BUNNY555 ถัดลงมาเป็นตัวอักษรขนาดใหญ่ว่า สล็อตเว็บตรง อันดับ 1 และแถบเขียนว่า เกมค่ายใหญ่ โบนัสไหลทุกชม. ใต้ลงมาเป็นสองบรรทัดพร้อมไอคอนเขียนว่า รองรับ True Wallet และธนาคารชั้นนำ กับ ฝากถอนออโต้ ใช้งานง่าย ตลอด 24 ชม. ถัดลงมาเป็นป้ายสามช่องเขียนว่า ระบบออโต้ ค่ายเกมใหญ่ และ โบนัสต่อเนื่อง ด้านขวาเป็นพรีเซนเตอร์หญิงสวมชุดสีชมพูและที่คาดผมหูกระต่าย ถือโทรศัพท์ที่เปิดหน้าแอป BUNNY555 แสดงยอดแจ็กพอตและยอดเงิน 300,000.00 บาท แถวล่างสุดเป็นโลโก้ทรูมันนี่วอลเล็ทและธนาคารที่รองรับ";
+  "ภาพโปรโมชั่น SCLASS88 พื้นหลังสีดำตกแต่งด้วยทอง ด้านบนเป็นโลโก้ Sclass88 สีทอง ถัดลงมาเป็นตัวอักษรทองขนาดใหญ่ว่า สล็อตแท้เว็บตรง และ สนุกแตกง่าย กำไรบาน ใต้ลงมาเป็นป้ายทองสามช่องเขียนว่า ค่ายใหญ่ โบนัสจัดเต็ม และ ฝากถอนออโต้ ตรงกลางเป็นโทรศัพท์ที่เปิดตารางเกมสล็อต มีสัญลักษณ์ SCATTER และยอดรางวัล 88,888.00 ด้านขวาเป็นพรีเซนเตอร์หญิงสวมชุดสีดำสลับทอง แถบล่างสุดเขียนว่า เข้าสู่ระบบง่าย เล่นได้ 24 ชม. ฉากหลังมีมังกรทอง เหรียญทอง และหีบสมบัติ";
 
-const walletAlt =
-  "ภาพโปรโมชั่น BUNNY555 พื้นหลังชมพูมีเหรียญทอง เพชร และกล่องของขวัญกระจายอยู่ ด้านบนเป็นโลโก้ BUNNY555 ถัดลงมาเป็นตัวอักษรขนาดใหญ่ว่า ฝากถอน AUTO และ รวดเร็วทันใจ ใต้ลงมาเป็นป้ายสามช่องพร้อมไอคอนเขียนว่า ระบบออโต้ ฝากถอนอัตโนมัติไม่ต้องรอนาน, ทำรายการง่าย 24 ชม. ทำรายการได้ตลอดเวลา และ ปลอดภัยมั่นใจ ข้อมูลปลอดภัยเชื่อถือได้ 100% แถบล่างสุดเขียนว่า ฝากง่าย ถอนได้ตลอดเวลา ด้านขวาเป็นพรีเซนเตอร์หญิงสวมชุดสีชมพูและที่คาดผมหูกระต่าย ชี้ไปที่โทรศัพท์ที่แสดงข้อความฝากถอนสำเร็จ ยอด 10,000.00 บาท ด้านซ้ายล่างเป็นตุ๊กตากระต่ายสีขาว";
+const bonusAlt =
+  "ภาพโปรโมชั่น SCLASS88 พื้นหลังสีดำตกแต่งด้วยทอง ด้านบนเป็นโลโก้ Sclass88 สีทอง ถัดลงมาเป็นตัวอักษรทองขนาดใหญ่ว่า สล็อตแท้เว็บตรง และ สนุกแตกง่าย พร้อมบรรทัดเขียนว่า โบนัสกำไรบาน ฝากถอนออโต้ 24 ชม. และ ค่ายใหญ่ เล่นง่าย เข้าสู่ระบบไว มีป้ายช่อลอเรลสีทองเขียนว่า เริ่มต้น 1 บาท ด้านซ้ายเป็นพรีเซนเตอร์หญิงสวมชุดสีทอง ด้านขวาเป็นมังกรทองและเทพเจ้าแห่งโชคลาภถือก้อนทอง แถบล่างสุดเป็นโลโก้ธนาคารและช่องทางชำระเงินทรูมันนี่กับพร้อมเพย์";
 
 const faqs = [
   {
-    q: "BUNNY555 มีสล็อตค่ายใหญ่ค่ายไหนให้เลือกเล่นบ้าง",
-    a: "BUNNY555 รวมสล็อตจากหลายค่ายไว้ในบัญชีเดียว โดย PG Slot และ JILI เป็นชื่อที่พบเด่นในกลุ่มเกมของแบรนด์ มีทั้งสล็อตธีมแฟนตาซี เกมโบนัส ฟรีสปิน และรูปแบบที่ใช้ฟีเจอร์แตกต่างกัน สมาชิกเลือกค่ายก่อนแล้วค่อยหาเกมที่ชอบได้ จึงเปลี่ยนแนวเกมตามอารมณ์ของแต่ละวันได้จากบัญชีเดิม",
+    q: "เข้าสู่ระบบ SCLASS88 แล้วใช้งานส่วนไหนได้บ้าง",
+    a: "หลังเข้าสู่ระบบ สมาชิกเลือกสล็อต ดูเครดิต เช็กโบนัส และเข้าถึงข้อมูลบัญชีได้จากหน้าเดียว ใช้งานได้ทั้งบนมือถือและคอมพิวเตอร์ด้วยบัญชีเดิม เมนูสำคัญถูกจัดไว้ให้กดถึงได้เร็ว เพราะการล็อกอินควรเป็นประตูเข้าเกม ไม่ใช่ด่านทดสอบความอดทนก่อนเริ่มใช้งาน",
   },
   {
-    q: "โบนัส BUNNY555 มีสิทธิ์แบบไหนให้สมาชิกติดตาม",
-    a: "โบนัส BUNNY555 จัดไว้เป็นส่วนหนึ่งของระบบสมาชิก โดยสิทธิ์แต่ละช่วงอาจต่างกันทั้งรูปแบบการรับและเงื่อนไขการใช้งาน สมาชิกจึงควรเช็กโปรที่เปิดอยู่ก่อนเลือกใช้ทุกครั้ง คำว่าโบนัสไหลทุกชั่วโมงฟังแล้วสดชื่น แต่ของจริงต้องดูเงื่อนไขประกบเสมอ และไม่จำเป็นต้องรับทุกอัน",
+    q: "สล็อตแท้เว็บตรง SCLASS88 มีเกมและค่ายไหนให้เลือก",
+    a: "สล็อตแท้เว็บตรงของ SCLASS88 มีเกมหลายสไตล์จากค่ายใหญ่หลายค่ายให้เลือก ทั้งเกมคลาสสิก เกมสายฟีเจอร์ เกมที่มีโบนัส และเกมที่มีฟรีสปิน จึงเหมาะทั้งกับคนที่มีเกมประจำและคนที่ชอบไล่ลองเกมใหม่ การมีหลายค่ายรวมในบัญชีเดียวยังช่วยให้เปลี่ยนสไตล์การเล่นได้ตามอารมณ์ของแต่ละวัน",
   },
   {
-    q: "ฝากถอนผ่าน True Wallet ของ BUNNY555 ทำอย่างไร",
-    a: "True Wallet เป็นช่องทางสำหรับจัดการเครดิตผ่านมือถือ ทำให้สมาชิกฝากถอนและกลับเข้าเกมต่อจากอุปกรณ์เดิมได้สะดวกขึ้น ระบบของ BUNNY555 เชื่อมรายการเข้ากับบัญชีสมาชิก จึงดูยอดคงเหลือและประวัติรายการได้จากจุดเดียว ไม่ต้องเปิดหลายหน้าเพื่อตามว่าเครดิตเดินไปถึงไหนแล้ว",
+    q: "โบนัสและสิทธิ์สมาชิกของ SCLASS88 ต้องเช็กอะไรก่อนใช้",
+    a: "โบนัสและสิทธิ์สมาชิกช่วยเพิ่มทางเลือกตั้งแต่เริ่มใช้งาน โดยแต่ละช่วงอาจมีรูปแบบการรับและเงื่อนไขต่างกัน จึงควรอ่านรายละเอียดของโปรที่เปิดอยู่ก่อนเลือกใช้ทุกครั้ง สิทธิ์ทั้งหมดรวมไว้ในหน้าสมาชิกแล้ว โบนัสมีไว้เพิ่มความคุ้ม ไม่ใช่เพิ่มงานอ่านเงื่อนไขระดับรายงานประจำปี",
   },
   {
-    q: "ระบบสมาชิก BUNNY555 รวมเครดิต โบนัส และประวัติไว้ตรงไหน",
-    a: "หน้าสมาชิกของ BUNNY555 รวมเครดิต โบนัส และประวัติรายการไว้ในบัญชีเดียว ช่วยให้ตรวจข้อมูลสำคัญได้โดยไม่ต้องเปิดหลายหน้า คนที่เล่นหลายเกมหรือใช้หลายโปรจึงยังตามข้อมูลตัวเองได้ง่าย และหลังเข้าสู่ระบบก็เปิดหมวดสล็อต เลือกค่าย แล้วตรวจเครดิตก่อนเริ่มเล่นได้ทันที",
+    q: "ระบบออโต้ฝากถอนของ SCLASS88 ช่วยจัดการเครดิตอย่างไร",
+    a: "ระบบออโต้ช่วยให้สมาชิกทำรายการฝากถอนและเช็กเครดิตผ่านบัญชีได้โดยตรง ลดขั้นตอนก่อนกลับไปเลือกเกมต่อ เมื่อเชื่อมเข้ากับระบบสมาชิก การจัดการเครดิตจึงอยู่ที่เดียวกับเกมและประวัติรายการ ดูยอดคงเหลือและย้อนดูรายการได้จากจุดเดียวโดยไม่ต้องเปิดหลายหน้า",
   },
   {
-    q: "ทางเข้า BUNNY555 เว็บหลัก ใช้งานผ่านมือถือและคอมอย่างไร",
-    a: "ทางเข้าเว็บหลักรองรับทั้งมือถือและคอม สมาชิกใช้บัญชีเดิมเพื่อเข้าถึงสล็อต ระบบสมาชิก โบนัส และการจัดการเครดิตได้จากช่องทางเดียว การเข้า BUNNY555 ผ่านทางหลักยังช่วยลดความสับสนจากชื่อเว็บไซต์ใกล้เคียงบนผลค้นหา จึงไม่ต้องเสียเวลาสุ่มว่าลิงก์ไหนคือของจริง",
+    q: "ทางเข้าและเข้าสู่ระบบ SCLASS88 ผ่านมือถือใช้งานง่ายแค่ไหน",
+    a: "ทางเข้าและหน้าล็อกอินรองรับการใช้งานผ่านมือถือ สมาชิกใช้บัญชีเดิมเพื่อเข้าถึงเกม เครดิต โบนัส และข้อมูลส่วนตัวได้ต่อเนื่อง จึงเหมาะกับคนที่ต้องการเปิดแล้วใช้งานต่อได้ทันที มือถือมีไว้ลดสัมภาระ ไม่ใช่เพิ่มขั้นตอนให้ต้องเปิดคอมตามมาอีกเครื่อง",
   },
 ];
 
@@ -69,20 +68,31 @@ const graph = pageGraph(Astro, {
 <MainLayout title={pageTitle} description={pageDescription}>
   <script type="application/ld+json" set:html={graph} />
 
-  <AnnouncementPremium message={announcement} />
+  <Announcement message={announcement} />
 
-  <ContentBoxPremium as="h1" title="BUNNY555 รวมสล็อตค่ายใหญ่ โบนัส ระบบสมาชิก และ True Wallet ไว้ในบัญชีเดียว">
-    <div class="flex flex-col gap-4">
-      <p class="text-left text-base leading-relaxed text-[#7a1038]">
-        <strong class="text-[#be185d]">BUNNY555</strong> เน้นเกมสล็อตจากค่ายยอดนิยม พร้อมระบบสมาชิก โบนัส และการจัดการเครดิตในบัญชีเดียว รองรับมือถือ ทำให้เลือกเกม เช็กยอด และกลับเข้าเล่นต่อได้สะดวก
-      </p>
-      <p class="text-left text-base leading-relaxed text-[#7a1038]">
-        ฝากถอนผ่าน True Wallet ช่วยลดขั้นตอนเรื่องเครดิต ส่วนโบนัสมีให้ติดตามตามช่วงเวลาที่เปิดใช้งาน เกมจะมีเยอะแค่ไหนก็ได้ ขอแค่หาเจอไว เงินซื้อเวลาได้บ้าง อย่างน้อยเว็บก็ไม่ควรเอาเวลาเราไปฟรี ๆ
-      </p>
-    </div>
-  </ContentBoxPremium>
+  <ContentBoxNeumorphism as="h1" title="SCLASS88 รวมสล็อตเว็บตรง เกมค่ายใหญ่ โบนัส และระบบออโต้ไว้ในบัญชีเดียว">
+    <p class="mb-4 text-left text-base leading-relaxed text-[#efe1c2]">
+      <strong class="text-[#f5c542]">SCLASS88</strong> รวมสล็อต ระบบสมาชิก โบนัส และการจัดการเครดิตไว้ในบัญชีเดียว รองรับมือถือ ทำให้ตั้งแต่เข้าสู่ระบบ เลือกเกม
+      ไปจนถึงเช็กยอดคงเหลือทำได้ต่อเนื่องจากหน้าเดียว ไม่ต้องสลับไปมาหลายหน้าเพื่อตามข้อมูลของตัวเอง
+    </p>
 
-  <ContentBoxSevenThreePremium as="h2" titleright="BUNNY555 สล็อตเว็บตรง มีเกมค่ายใหญ่ไหนให้เลือกบ้าง">
+    <p class="text-left text-base leading-relaxed text-[#efe1c2]">
+      ระบบออโต้ช่วยลดขั้นตอนเรื่องฝากถอน ส่วนเกมหลายค่ายช่วยเพิ่มตัวเลือกในการเล่น เพราะคนมีทางเลือกไม่จำเป็นต้องรีบ เลือกเกมให้ถูกใจก่อนแล้วค่อยไปต่อ
+    </p>
+  </ContentBoxNeumorphism>
+
+  <ContentBoxFloatingBadge as="h2" title="SCLASS88 เข้าสู่ระบบแล้วใช้งานส่วนไหนได้บ้าง">
+    <p class="mb-4 text-left text-base leading-relaxed text-[#efe1c2]">
+      SCLASS88 หลังเข้าสู่ระบบแล้ว สมาชิกสามารถเลือกสล็อต ดูเครดิต เช็กโบนัส และเข้าถึงข้อมูลบัญชีได้จากหน้าเดียว ทั้งบนมือถือและคอมพิวเตอร์
+      โดยใช้ข้อมูลบัญชีชุดเดิมตลอดการใช้งาน
+    </p>
+
+    <p class="text-left text-base leading-relaxed text-[#efe1c2]">
+      เมนูสำคัญถูกจัดไว้ให้เข้าถึงง่าย เพราะการล็อกอินควรเป็นประตูเข้าเกม ไม่ใช่ด่านทดสอบความอดทนก่อนเริ่มใช้งาน
+    </p>
+  </ContentBoxFloatingBadge>
+
+  <ContentBoxSevenThreeNeumorphism as="h2" titleright="สล็อตแท้เว็บตรง SCLASS88 มีเกมและค่ายไหนให้เลือก">
     <Picture
       slot="left"
       src={imgGames}
@@ -95,43 +105,53 @@ const graph = pageGraph(Astro, {
       formats={["avif", "webp"]}
       fallbackFormat="webp"
       quality={80}
-      class="mx-auto h-auto w-full rounded-2xl border border-[#f9c2d9] shadow-[0_10px_30px_rgba(157,23,77,0.15)]"
+      class="mx-auto h-auto w-full rounded-2xl border border-[#a3610c]/50 shadow-[0_10px_30px_rgba(245,197,66,0.18)]"
     />
-    <div slot="right" class="flex flex-col gap-4">
-      <p class="text-left text-base leading-relaxed text-[#7a1038]">
-        BUNNY555 รวมสล็อตจากหลายค่าย โดย PG Slot และ JILI เป็นชื่อที่พบเด่นในกลุ่มเกมของแบรนด์ สมาชิกจึงเลือกเกมต่างสไตล์ได้จากบัญชีเดียว
-      </p>
-      <p class="text-left text-base leading-relaxed text-[#7a1038]">
-        การมีหลายค่ายช่วยให้เปลี่ยนเกมได้ตามอารมณ์ วันนี้สายฟีเจอร์ พรุ่งนี้สายคลาสสิกก็ได้ ความหรูไม่ใช่มีเกมเยอะอย่างเดียว แต่ต้องเลือกแล้วเข้าได้เลย
-      </p>
-    </div>
-  </ContentBoxSevenThreePremium>
-
-  <ContentBoxCyberCut as="h2" title="PG Slot และ JILI มีเกมหลายสไตล์ให้เลือกแค่ไหน">
-    <div class="flex flex-col gap-4">
-      <p class="text-left text-base leading-relaxed text-[#7a1038]">
-        เกมจาก PG Slot และ JILI มีทั้งสล็อตธีมแฟนตาซี เกมโบนัส ฟรีสปิน และรูปแบบที่ใช้ฟีเจอร์แตกต่างกัน เหมาะทั้งคนมีเกมประจำและคนชอบลองเกมใหม่
-      </p>
-      <p class="text-left text-base leading-relaxed text-[#7a1038]">ใน BUNNY555 สมาชิกสามารถเลือกค่ายก่อนแล้วค่อยหาเกมที่ชอบได้ง่ายขึ้น ตัวเลือกเยอะควรสร้างความสนุก ไม่ใช่สร้างงานประจำให้นิ้วโป้ง</p>
-    </div>
-  </ContentBoxCyberCut>
-
-  <ProviderGrid />
-
-  <ContentBoxTwoPremium as="h2" title="โบนัส BUNNY555 มีสิทธิ์แบบไหนให้สมาชิกติดตาม">
-    <p slot="left" class="text-left text-base leading-relaxed text-[#7a1038]">
-      โบนัส BUNNY555 จัดไว้เป็นส่วนหนึ่งของระบบสมาชิก โดยสิทธิ์แต่ละช่วงอาจต่างกันทั้งรูปแบบการรับและเงื่อนไขการใช้งาน สมาชิกจึงควรเช็กโปรที่เปิดอยู่ก่อนเลือกใช้
+    <p slot="right" class="text-left text-base leading-relaxed text-[#efe1c2]">
+      สล็อตแท้เว็บตรง SCLASS88 มีเกมหลายสไตล์จากค่ายต่าง ๆ ให้เลือก ทั้งเกมคลาสสิก เกมฟีเจอร์ โบนัส และฟรีสปิน เหมาะทั้งสายมีเกมประจำและคนชอบลองเกมใหม่
     </p>
-    <p slot="right" class="text-left text-base leading-relaxed text-[#7a1038]">
-      คำว่าโบนัสไหลทุกชั่วโมงฟังแล้วสดชื่น แต่ของจริงต้องดูเงื่อนไขประกบเสมอ คนมีงบเลือกโปรให้เหมาะ ไม่จำเป็นต้องรับทุกอันเหมือนของแจกหน้าออฟฟิศ
+    <p slot="right" class="text-left text-base leading-relaxed text-[#efe1c2]">
+      การมีหลายค่ายช่วยให้สมาชิกเปลี่ยนสไตล์ได้ตามอารมณ์ ของดีควรมีให้เลือก ไม่ใช่มีให้เลื่อนหาจนเมื่อยนิ้ว
     </p>
-  </ContentBoxTwoPremium>
+  </ContentBoxSevenThreeNeumorphism>
 
-  <ContentBoxSevenThreeCyberCut as="h2" titleright="ฝากถอนผ่าน True Wallet ช่วยให้จัดการเครดิตง่ายอย่างไร">
+  <ProviderGridPremium />
+
+  <ContentBoxTwoNeumorphism as="h2" title="สนุกแตกง่าย เลือกเกมสล็อตแบบไหนให้ตรงสไตล์มากขึ้น">
+    <p slot="left" class="text-left text-base leading-relaxed text-[#efe1c2]">
+      เกมที่ให้ความรู้สึกสนุกและมีจังหวะลุ้นแตกต่างกัน มักขึ้นอยู่กับฟีเจอร์ รูปแบบโบนัส และความผันผวนของแต่ละเกม จึงควรเลือกให้ตรงกับสไตล์ที่ตัวเองชอบ
+    </p>
+    <p slot="right" class="text-left text-base leading-relaxed text-[#efe1c2]">
+      ใน SCLASS88 สมาชิกสามารถสลับเกมได้หลายแนว ถ้าเกมหนึ่งไม่ใช่ก็เปลี่ยนได้เลย คนมีคลาสไม่ฝืนของที่ไม่ถูกใจ
+    </p>
+  </ContentBoxTwoNeumorphism>
+
+  <GameRankingBoard />
+
+  <ContentBox as="h2" title="สล็อตค่ายใหญ่ SCLASS88 มีตัวเลือกแตกต่างกันอย่างไร">
+    <p class="mb-4 text-left text-base leading-relaxed text-[#efe1c2]">
+      สล็อตค่ายใหญ่ใน SCLASS88 มีจุดเด่นต่างกันทั้งธีม ฟีเจอร์ โบนัส และรูปแบบการเล่น ทำให้สมาชิกเลือกค่ายที่คุ้นเคยหรือทดลองแนวใหม่ได้จากบัญชีเดียว
+    </p>
+
+    <p class="text-left text-base leading-relaxed text-[#efe1c2]">
+      บางค่ายเด่นเรื่องภาพ บางค่ายเด่นเรื่องฟีเจอร์ ส่วนคนเล่นก็เลือกตามรสนิยมได้เต็มที่ เพราะความชอบไม่ควรถูกล็อกไว้กับเกมเดียว
+    </p>
+  </ContentBox>
+
+  <ContentBoxTwoFloatingBadge as="h2" title="โบนัสและสิทธิ์สมาชิก ช่วยเพิ่มความคุ้มตั้งแต่เริ่มเล่นแบบไหน">
+    <p slot="left" class="text-left text-base leading-relaxed text-[#efe1c2]">
+      โบนัสและสิทธิ์สมาชิกช่วยเพิ่มทางเลือกตั้งแต่เริ่มใช้งาน โดยแต่ละช่วงอาจมีเงื่อนไขและรูปแบบการรับต่างกัน จึงควรเช็กรายละเอียดก่อนเลือกใช้
+    </p>
+    <p slot="right" class="text-left text-base leading-relaxed text-[#efe1c2]">
+      ระบบ SCLASS88 รวมสิทธิ์ไว้ในหน้าสมาชิก ทำให้ดูโปรที่เปิดอยู่ได้ง่ายขึ้น โบนัสมีไว้เพิ่มความคุ้ม ไม่ใช่เพิ่มงานอ่านเงื่อนไขระดับรายงานประจำปี
+    </p>
+  </ContentBoxTwoFloatingBadge>
+
+  <ContentBoxSevenThreeFloatingBadge as="h2" title="กำไรบานในสไตล์ SCLASS88 ควรเริ่มจากเกมและโบนัสแบบไหน">
     <Picture
       slot="left"
-      src={imgWallet}
-      alt={walletAlt}
+      src={imgBonus}
+      alt={bonusAlt}
       loading="lazy"
       fetchpriority="low"
       widths={[200, 400, 600]}
@@ -140,82 +160,78 @@ const graph = pageGraph(Astro, {
       formats={["avif", "webp"]}
       fallbackFormat="webp"
       quality={80}
-      class="mx-auto h-auto w-full rounded-2xl border border-[#e8a020]/40 shadow-[0_10px_30px_rgba(232,160,32,0.18)]"
+      class="mx-auto h-auto w-full rounded-2xl border border-[#f5c542]/45 shadow-[0_10px_30px_rgba(245,197,66,0.18)]"
     />
-    <div slot="right" class="flex flex-col gap-4">
-      <p class="text-left text-base leading-relaxed text-[#7a1038]">True Wallet เป็นช่องทางสำหรับจัดการเครดิตผ่านมือถือ ทำให้สมาชิกฝากถอนและกลับเข้าเกมต่อจากอุปกรณ์เดิมได้สะดวกขึ้น</p>
-      <p class="text-left text-base leading-relaxed text-[#7a1038]">
-        ระบบของ BUNNY555 เชื่อมรายการกับบัญชีสมาชิก ทำให้ดูยอดและประวัติได้จากจุดเดียว เงินควรเคลื่อนที่เร็ว ส่วนเจ้าของเงินควรนั่งสบาย ๆ
-      </p>
-    </div>
-  </ContentBoxSevenThreeCyberCut>
+    <p slot="right" class="text-left text-base leading-relaxed text-[#efe1c2]">
+      คำว่า “กำไรบาน” ควรมองเป็นอารมณ์ของการเล่นที่คุ้มและเลือกได้เหมาะกับตัวเอง มากกว่าการรับประกันผลลัพธ์ เพราะแต่ละเกมมีรูปแบบและความเสี่ยงต่างกัน
+    </p>
+    <p slot="right" class="text-left text-base leading-relaxed text-[#efe1c2]">
+      SCLASS88 จึงเปิดให้สมาชิกเลือกทั้งเกมและโบนัสที่ตรงสไตล์ของตัวเองก่อนเริ่ม คนมีเงินเลือกจากข้อมูล ไม่ได้เลือกเพราะตัวเลขตัวใหญ่ที่สุดบนหน้าเว็บ
+    </p>
+  </ContentBoxSevenThreeFloatingBadge>
 
-  <LatestWinnersCyber />
+  <ContentBoxFloatingBadge as="h2" title="ระบบออโต้ฝากถอนช่วยให้จัดการเครดิตสะดวกขึ้นอย่างไร">
+    <p class="mb-4 text-left text-base leading-relaxed text-[#efe1c2]">
+      ระบบออโต้ช่วยให้สมาชิกทำรายการฝากถอนและเช็กเครดิตผ่านบัญชีได้โดยตรง ลดขั้นตอนก่อนกลับไปเลือกเกมต่อ
+    </p>
 
-  <ContentBoxSpecial as="h2" title="ระบบสมาชิก BUNNY555 รวมเครดิต โบนัส และประวัติไว้ตรงไหน">
-    <p slot="left" class="text-left text-base leading-relaxed text-[#7a1038]">หน้าสมาชิกรวมเครดิต โบนัส และประวัติรายการไว้ในบัญชีเดียว ช่วยให้ตรวจข้อมูลสำคัญได้โดยไม่ต้องเปิดหลายหน้า</p>
-    <p slot="right" class="text-left text-base leading-relaxed text-[#7a1038]">
+    <p class="text-left text-base leading-relaxed text-[#efe1c2]">
+      เมื่อเชื่อมกับ SCLASS88 การจัดการเครดิตจึงอยู่ในระบบเดียวกับสมาชิกและเกม เงินมีหน้าที่เคลื่อนที่ ส่วนเจ้าของเงินควรใช้เวลาไปกับเรื่องที่สนุกกว่า
+    </p>
+  </ContentBoxFloatingBadge>
+
+  <LatestWinnersPremium />
+
+  <ContentBoxNeumorphism as="h2" title="ระบบสมาชิก SCLASS88 รวมเครดิต โบนัส และประวัติรายการไว้ตรงไหน">
+    <p class="mb-4 text-left text-base leading-relaxed text-[#efe1c2]">
+      ระบบสมาชิก SCLASS88 รวมเครดิต โบนัส และประวัติรายการไว้ในพื้นที่เดียว ทำให้ตรวจสอบข้อมูลสำคัญได้โดยไม่ต้องเปิดหลายหน้า
+    </p>
+
+    <p class="text-left text-base leading-relaxed text-[#efe1c2]">
       คนที่เล่นหลายเกมหรือใช้หลายโปรจึงยังตามข้อมูลตัวเองได้ง่าย ของสำคัญควรมีที่อยู่ชัด โดยเฉพาะเครดิต เรื่องนี้ไม่เหมาะกับเกมซ่อนหา
     </p>
-  </ContentBoxSpecial>
+  </ContentBoxNeumorphism>
 
-  <ContentBox as="h2" title="สมัครสมาชิกผ่านมือถือ เริ่มต้นได้ง่ายกี่ขั้นตอน">
-    <div class="flex flex-col gap-4">
-      <p class="text-left text-base leading-relaxed text-[#7a1038]">
-        การสมัครผ่านมือถือเริ่มจากกรอกข้อมูล ตั้งค่าบัญชี และยืนยันตามขั้นตอนของระบบ หลังจากนั้นจึงเข้าสู่หน้าสมาชิกเพื่อเลือกสล็อตหรือดูโบนัสต่อได้
-      </p>
-      <p class="text-left text-base leading-relaxed text-[#7a1038]">BUNNY555 วางขั้นตอนให้ใช้งานต่อบนมือถือได้เลย สมัครเว็บไม่ควรซับซ้อนระดับเปิดบริษัท ชีวิตมีเอกสารให้เซ็นเยอะพอแล้ว</p>
-    </div>
-  </ContentBox>
-
-  <ContentBoxTwoCyberCut as="h2" title="เข้าสู่ระบบ BUNNY555 แล้วเลือกเกมค่ายที่ชอบได้อย่างไร">
-    <p slot="left" class="text-left text-base leading-relaxed text-[#7a1038]">
-      หลังเข้าสู่ระบบ สมาชิกสามารถเปิดหมวดสล็อต เลือกค่ายที่สนใจ และเข้าเกมต่อจากบัญชีเดิมได้ทันที พร้อมตรวจเครดิตหรือโบนัสก่อนเริ่มเล่น
+  <ContentBoxTwoNeumorphism as="h2" title="ทางเข้าและเข้าสู่ระบบผ่านมือถือ ใช้งานง่ายแค่ไหน">
+    <p slot="left" class="text-left text-base leading-relaxed text-[#efe1c2]">
+      ทางเข้าและหน้าล็อกอินรองรับการใช้งานผ่านมือถือ สมาชิกใช้บัญชีเดิมเพื่อเข้าถึงเกม เครดิต โบนัส และข้อมูลส่วนตัวได้ต่อเนื่อง
     </p>
-    <p slot="right" class="text-left text-base leading-relaxed text-[#7a1038]">
-      เมนู BUNNY555 จึงเหมาะกับคนที่มีเกมประจำและคนชอบเปลี่ยนค่ายบ่อย รสนิยมเปลี่ยนได้ตามวัน แต่บัญชีเดียวก็พอ จะได้จำรหัสไว้ใช้กับเรื่องสำคัญกว่า
+    <p slot="right" class="text-left text-base leading-relaxed text-[#efe1c2]">
+      ระบบของ SCLASS88 จึงเหมาะกับคนที่ต้องการเปิดแล้วใช้งานต่อได้ทันที มือถือมีไว้ลดสัมภาระ ไม่ใช่เพิ่มขั้นตอนให้ต้องเปิดคอมตามมาอีกเครื่อง
     </p>
-  </ContentBoxTwoCyberCut>
+  </ContentBoxTwoNeumorphism>
 
   <LoginRtpSection />
 
-  <ContentBoxPremium as="h2" title="ทางเข้าเว็บหลัก ใช้งานผ่านมือถือและคอมสะดวกแค่ไหน">
-    <div class="flex flex-col gap-4">
-      <p class="text-left text-base leading-relaxed text-[#7a1038]">ทางเข้าเว็บหลักรองรับทั้งมือถือและคอม สมาชิกใช้บัญชีเดิมเพื่อเข้าถึงสล็อต ระบบสมาชิก โบนัส และการจัดการเครดิตได้จากช่องทางเดียว</p>
-      <p class="text-left text-base leading-relaxed text-[#7a1038]">
-        การเข้า BUNNY555 ผ่านทางหลักยังช่วยลดความสับสนจากชื่อเว็บไซต์ใกล้เคียงบนผลค้นหา คนมีเวลามีค่าไม่ควรใช้มันกับการสุ่มว่าลิงก์ไหนของจริง
-      </p>
-    </div>
-  </ContentBoxPremium>
+  <ContentBox as="h2" title="SCLASS88 เหมาะกับคนที่ชอบเล่นสล็อตแบบไหน">
+    <p class="mb-4 text-left text-base leading-relaxed text-[#efe1c2]">
+      SCLASS88 เหมาะกับคนที่ชอบสล็อตหลายค่าย ต้องการโบนัส ระบบออโต้ และการจัดการเครดิตผ่านบัญชีเดียว โดยเน้นใช้งานง่ายทั้งมือถือและคอมพิวเตอร์
+    </p>
 
-  <ContentBoxCyberCut as="h2" title="BUNNY555 เหมาะกับคนที่ชอบเล่นสล็อตหลายค่ายแบบไหน">
-    <div class="flex flex-col gap-4">
-      <p class="text-left text-base leading-relaxed text-[#7a1038]">BUNNY555 เหมาะกับคนที่ชอบสล็อตหลายค่าย โดยเฉพาะสาย PG Slot และ JILI พร้อมต้องการระบบสมาชิก โบนัส และ True Wallet ในบัญชีเดียว</p>
-      <p class="text-left text-base leading-relaxed text-[#7a1038]">เลือกค่ายที่ชอบ เช็กโปรที่เหมาะ แล้วจัดการเครดิตจากมือถือได้เลย มีหลายเกมไว้เลือกเป็นเรื่องดี มีหลายบัญชีไว้จำไม่ค่อยมีประโยชน์</p>
-    </div>
-  </ContentBoxCyberCut>
-
-  <GameRankingBoard />
+    <p class="text-left text-base leading-relaxed text-[#efe1c2]">
+      ถ้าชอบเปลี่ยนเกมตามอารมณ์และอยากให้เรื่องฝากถอนอยู่ในระบบเดียวกัน โครงแบบนี้ตอบโจทย์ได้ดี หลายเกมมีไว้เลือก หลายบัญชีส่วนใหญ่มีไว้ปวดหัว
+    </p>
+  </ContentBox>
 
   <SmoothCarousel />
 
   <div class="relative z-10 mx-auto mb-10 flex flex-nowrap justify-center gap-3 px-4 sm:gap-6">
     <a
       href="/register"
-      class="group relative flex flex-1 items-center justify-center rounded-full bg-gradient-to-r from-[#f7c948] via-[#e8a020] to-[#a86a10] px-4 py-3 text-sm font-black whitespace-nowrap text-[#7a1038] shadow-[0_10px_30px_rgba(232,160,32,0.20)] transition-all duration-300 hover:-translate-y-1 hover:scale-105 hover:shadow-[0_15px_40px_rgba(232,160,32,0.20)] sm:flex-none sm:px-10 sm:py-3.5 sm:text-base">
-      สมัครสมาชิก BUNNY555
+      class="group relative flex flex-1 items-center justify-center rounded-full bg-gradient-to-r from-[#ffd75e] via-[#e0a81e] to-[#a3610c] px-4 py-3 text-sm font-black whitespace-nowrap text-[#1a1206] shadow-[0_10px_30px_rgba(245,197,66,0.28)] transition-all duration-300 hover:-translate-y-1 hover:scale-105 hover:shadow-[0_15px_40px_rgba(245,197,66,0.28)] sm:flex-none sm:px-10 sm:py-3.5 sm:text-base">
+      สมัครสมาชิก SCLASS88
     </a>
 
     <a
       href="/login"
-      class="group relative flex flex-1 items-center justify-center rounded-full border border-[#ec4899]/80 bg-[#ffffff]/85 px-4 py-3 text-sm font-black whitespace-nowrap text-[#9d174d] backdrop-blur-sm transition-all duration-300 hover:scale-105 hover:border-[#f472b6] hover:bg-[#ffe4f0]/85 hover:shadow-[0_15px_40px_rgba(236,72,153,0.20)] sm:flex-none sm:px-10 sm:py-3.5 sm:text-base">
+      class="group relative flex flex-1 items-center justify-center rounded-full border border-[#f5c542]/45 bg-[#161006]/85 px-4 py-3 text-sm font-black whitespace-nowrap text-[#ffe9a8] backdrop-blur-sm transition-all duration-300 hover:scale-105 hover:border-[#f5c542] hover:bg-[#241906]/85 hover:shadow-[0_15px_40px_rgba(245,197,66,0.28)] sm:flex-none sm:px-10 sm:py-3.5 sm:text-base">
       เข้าสู่ระบบ
     </a>
   </div>
 
-  <Faq3 title="คำถามที่พบบ่อยเกี่ยวกับ BUNNY555" faqs={faqs} />
+  <Faq4 title="คำถามที่พบบ่อยเกี่ยวกับ SCLASS88" faqs={faqs} />
 
-  <ReviewCardSumo2 />
+  <ReviewCardSumo />
 
   <Navfoot />
 </MainLayout>

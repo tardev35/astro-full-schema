@@ -9,8 +9,7 @@ import imgLine from "../assets/contact-line.webp";
 import { pageGraph } from "../lib/schema";
 import { BRAND_ADDRESS } from "../lib/brandProfile";
 
-const pageDescription =
-  "หน้าติดต่อทีมงาน ONEHENG89 เว็บสล็อตลิขสิทธิ์แท้ รวมช่องทางแจ้งปัญหาและสอบถามการใช้งานทาง LINE Official ตลอด 24 ชั่วโมง พร้อมที่อยู่ติดต่อ อีเมล และปุ่มเข้าเล่น";
+const pageDescription = "หน้าติดต่อทีมงาน ONEHENG89 เว็บสล็อตลิขสิทธิ์แท้ รวมช่องทางแจ้งปัญหาและสอบถามการใช้งานทาง LINE Official ตลอด 24 ชั่วโมง พร้อมที่อยู่ติดต่อ อีเมล และปุ่มเข้าเล่น";
 
 const graph = pageGraph(Astro, {
   type: "ContactPage",
@@ -47,7 +46,7 @@ const graph = pageGraph(Astro, {
       fetchpriority="low"
       widths={[200, 400, 600]}
       sizes="(max-width: 768px) 100vw, 400px"
-      class="mx-auto h-auto w-full max-w-[400px] object-contain shadow-[0_10px_30px_rgba(11,63,184,0.14)]"
+      class="mx-auto h-auto w-full max-w-[400px] object-contain"
       decoding="async"
       formats={["avif", "webp"]}
       fallbackFormat="webp"

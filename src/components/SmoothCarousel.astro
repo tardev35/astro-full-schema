@@ -2,16 +2,16 @@
 import { Picture } from "astro:assets";
 
 import slide1 from "../assets/slide1.png";
-import slide4 from "../assets/slide4.png";
+import slide2 from "../assets/slide2.png";
 
 const images = [
   {
     src: slide1,
-    alt: "ภาพโปรโมชั่น ONEHENG89 โทนขาว น้ำเงิน และเขียว ด้านบนเป็นโลโก้ ONEHENG89 ถัดลงมาเป็นตัวอักษรขนาดใหญ่ว่า แนะนำสมาชิกวันนี้ มีแต่ได้กับได้ พร้อมบรรทัดเขียนว่า โบนัสแนะนำสมาชิก 0.3% และ สะสมนานสูงสุด 1 เดือน ด้านขวาเป็นพรีเซนเตอร์หญิงสวมชุดกีฬาสีขาวสลับน้ำเงิน รอบภาพมีป้ายสี่เหลี่ยมเขียนว่า เว็บสล็อตโบนัสไหล เกมลิขสิทธิ์แท้ ระบบออโต้ 24 ชม. แนะนำง่ายได้ทุกคน ยิ่งเล่นเยอะยิ่งได้เยอะ และ มั่นคง ปลอดภัย 100%",
+    alt: "ภาพโปรโมชั่น DOLLAR789 โทนม่วงเข้มสลับทอง ด้านบนเป็นโลโก้ DOLLAR789 สีทอง ถัดลงมาเป็นตัวอักษรขนาดใหญ่ว่า สมัครสมาชิกใหม่ ลุ้นรับของรางวัลใหญ่ ด้านซ้ายเป็นวงล้อของรางวัลสีทองพร้อมเครื่องประดับทองคำและเหรียญทองกองอยู่ด้านล่าง ด้านขวาเป็นพรีเซนเตอร์หญิงสวมชุดราตรีสีม่วง",
   },
   {
-    src: slide4,
-    alt: "ภาพโปรโมชั่น ONEHENG89 โทนน้ำเงินสลับขาว ด้านบนเป็นตัวอักษรขนาดใหญ่ว่า ฝาก 100 รับ 50 ถัดลงมาเขียนว่า ทำยอด 750 ถอนได้ 500 และ เดิมพันได้เฉพาะค่าย PG และ JILI เท่านั้น พร้อมบรรทัดเล็กว่า เงื่อนไขเป็นไปตามที่กำหนด ด้านซ้ายเป็นพรีเซนเตอร์หญิงสวมชุดสีน้ำเงินยืนคู่กับตัวการ์ตูนเพนกวินของค่าย PG ด้านขวาเป็นการ์ดไลน์เขียนว่า @one89 รอบภาพมีป้ายเขียนว่า ค่ายเกมดัง เล่นง่าย ถอนได้ไว ปลอดภัย 100% และ บริการ 24 ชม.",
+    src: slide2,
+    alt: "ภาพโปรโมชั่น DOLLAR789 โทนม่วงเข้มสลับทอง ด้านบนเป็นโลโก้ DOLLAR789 สีทอง ถัดลงมาเป็นตัวอักษรขนาดใหญ่ว่า คาสิโนสด บาคาร่า เว็บใหญ่มั่นคง และแถบเขียนว่า สมัครใหม่ รับโปรสมาชิก ถัดลงมาเป็นป้ายว่า ระบบออโต้ 24 ชม. และ เล่นง่ายบนมือถือ ด้านขวาเป็นพรีเซนเตอร์หญิงสวมชุดราตรีสีทองถือไพ่เอซและไพ่เค ล้อมด้วยลูกเต๋าสีม่วงและชิปคาสิโน ล่างสุดเขียนว่า สายบาคาร่า สายคาสิโนสด เข้าใช้งานสะดวก",
   },
 ];
 
@@ -23,7 +23,7 @@ const slides = Array.from({ length: COPIES }, () => images).flat();
   <input id="carousel-pause" type="checkbox" class="peer sr-only" />
   <label
     for="carousel-pause"
-    class="sr-only cursor-pointer peer-focus-visible:not-sr-only peer-focus-visible:mb-3 peer-focus-visible:inline-block peer-focus-visible:rounded-full peer-focus-visible:border peer-focus-visible:border-[#0b3fb8]/50 peer-focus-visible:bg-white peer-focus-visible:px-4 peer-focus-visible:py-2 peer-focus-visible:text-sm peer-focus-visible:font-bold peer-focus-visible:text-[#062c85]">
+    class="sr-only cursor-pointer peer-focus-visible:not-sr-only peer-focus-visible:mb-3 peer-focus-visible:inline-block peer-focus-visible:rounded-full peer-focus-visible:border peer-focus-visible:border-[#a855f7]/60 peer-focus-visible:bg-[#150826] peer-focus-visible:px-4 peer-focus-visible:py-2 peer-focus-visible:text-sm peer-focus-visible:font-bold peer-focus-visible:text-[#ffe9a8]">
     หยุด / เล่นสไลด์ภาพ
   </label>
 
@@ -36,7 +36,7 @@ const slides = Array.from({ length: COPIES }, () => images).flat();
             <Picture
               src={slide.src}
               alt={isDuplicate ? "" : slide.alt}
-              class="block w-full rounded-xl border border-[#c7dcfb] object-cover shadow-[0_10px_30px_rgba(11,63,184,0.14)]"
+              class="block w-full rounded-xl border border-[#3b1a63] object-cover shadow-[0_10px_30px_rgba(168,85,247,0.20)]"
               width={slide.src.width}
               height={slide.src.height}
               loading="lazy"

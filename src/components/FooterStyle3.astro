@@ -16,25 +16,28 @@ const quickLinks = [
   { name: "สมัครสมาชิก", path: "/register" },
   { name: "ติดต่อแอดมิน", path: "/contact-us" },
 ];
+
+const logoAlt =
+  "โลโก้ ONEHENG89 เป็นป้ายสี่เหลี่ยมมุมมนสีน้ำเงินเข้ม ตัวอักษรสีขาวอ่านว่า 1neheng โดยเลข 1 อยู่ในวงกลมสีขาว และเลข 89 สีน้ำเงินอยู่ในกรอบสี่เหลี่ยมมุมมนสีขาวด้านขวาสุด";
 ---
 
-<footer class="relative mt-32 w-full border-t border-[#f7c948]/30 bg-[#2a0614] pt-64 pb-6 font-sans text-[#ffe4ef] shadow-[0_-10px_30px_rgba(236,72,153,0.22)] md:pt-40">
+<footer class="relative mt-32 w-full border-t border-[#31c96b]/30 bg-[#07235f] pt-64 pb-6 font-sans text-[#dbe7fb] shadow-[0_-10px_30px_rgba(11,63,184,0.25)] md:pt-40">
   <div
-    class="absolute -top-14 left-1/2 z-20 flex w-[92%] max-w-5xl -translate-x-1/2 flex-col items-center justify-between rounded-2xl border border-[#f7c948]/35 bg-gradient-to-r from-[#4a1029] via-[#a01a55] to-[#3d0a20] p-6 shadow-[0_15px_40px_rgba(236,72,153,0.35)] md:-top-16 md:flex-row md:p-8">
+    class="absolute -top-14 left-1/2 z-20 flex w-[92%] max-w-5xl -translate-x-1/2 flex-col items-center justify-between rounded-2xl border border-[#31c96b]/40 bg-gradient-to-r from-[#062c85] via-[#0b3fb8] to-[#062c85] p-6 shadow-[0_15px_40px_rgba(11,63,184,0.35)] md:-top-16 md:flex-row md:p-8">
     <div class="mb-5 flex flex-col text-center md:mb-0 md:text-left">
-      <p class="text-xl font-black tracking-wide text-[#ffe08a] uppercase italic drop-shadow-[0_2px_4px_rgba(0,0,0,0.5)] md:text-3xl">
-        <span aria-hidden="true">🐰</span> พร้อมเลือกสล็อตค่ายใหญ่จากบัญชีเดียวกับ BUNNY555 แล้วหรือยัง?
+      <p class="text-xl font-black tracking-wide text-white uppercase italic drop-shadow-[0_2px_4px_rgba(4,22,52,0.5)] md:text-3xl">
+        <span aria-hidden="true">🎰</span> พร้อมเลือกสล็อตเกมลิขสิทธิ์แท้จากบัญชีเดียวกับ ONEHENG89 แล้วหรือยัง?
       </p>
-      <p class="mt-2 text-sm font-medium text-[#ffe4ef]/90 md:text-base">
-        สมัครสมาชิก BUNNY555 แล้วเลือกเกมจาก PG Slot และ JILI ได้จากบัญชีเดียว เปลี่ยนค่ายตามอารมณ์โดยไม่ต้องออกจากระบบ พร้อมฝากถอนผ่าน True Wallet ที่จัดการเครดิตให้จบในหน้าสมาชิก
+      <p class="mt-2 text-sm font-medium text-[#dbe7fb]/90 md:text-base">
+        สมัครสมาชิก ONEHENG89 แล้วเลือกเกมจากค่ายดังได้จากบัญชีเดียว เปลี่ยนแนวเล่นตามอารมณ์โดยไม่ต้องออกจากระบบ พร้อมระบบออโต้ที่จัดการฝากถอนและเครดิตให้จบในหน้าสมาชิก
       </p>
     </div>
 
     <a
       href="/register"
-      class="group relative flex items-center justify-center overflow-hidden rounded-full border border-[#ffe08a] bg-gradient-to-b from-[#ffe08a] to-[#a86a10] px-8 py-3.5 text-sm font-extrabold whitespace-nowrap text-[#3d0a20] shadow-[0_0_15px_rgba(247,201,72,0.4)] transition-all hover:scale-105 md:text-base">
+      class="group relative flex items-center justify-center overflow-hidden rounded-full border border-[#31c96b] bg-gradient-to-b from-[#31c96b] to-[#16a34a] px-8 py-3.5 text-sm font-extrabold whitespace-nowrap text-white shadow-[0_0_15px_rgba(22,163,74,0.45)] transition-all hover:scale-105 md:text-base">
       <span class="relative z-10">สมัครสมาชิกเลย <span aria-hidden="true">🚀</span></span>
-      <div aria-hidden="true" class="absolute inset-0 translate-y-full bg-[#ec4899] transition-transform duration-300 group-hover:translate-y-0"></div>
+      <div aria-hidden="true" class="absolute inset-0 translate-y-full bg-[#0b3fb8] transition-transform duration-300 group-hover:translate-y-0"></div>
     </a>
   </div>
 
@@ -46,30 +49,30 @@ const quickLinks = [
             mainLogo ? (
               <Picture
                 src={mainLogo}
-                alt="โลโก้ BUNNY555 ตัวอักษร BUNNY เป็นตัวกลมสีชมพูมีหูกระต่ายอยู่บนตัว B ต่อด้วยเลข 555 สีขาว ทั้งหมดมีขอบสีแดงเข้ม"
+                alt={logoAlt}
                 widths={[100, 200, 300]}
                 sizes="100px"
                 height={45}
                 loading="lazy"
                 decoding="async"
-                class="h-[45px] w-auto drop-shadow-[0_0_12px_rgba(236,72,153,0.55)]"
+                class="h-[45px] w-auto rounded-md bg-white/95 px-1.5 py-1 drop-shadow-[0_0_12px_rgba(59,116,232,0.55)]"
                 formats={["avif", "webp"]}
                 fallbackFormat="webp"
               />
             ) : (
-              <p class="bg-gradient-to-b from-[#ffe08a] to-[#a86a10] bg-clip-text text-3xl font-black text-transparent drop-shadow-[0_0_8px_rgba(247,201,72,0.5)]">BUNNY555</p>
+              <p class="bg-gradient-to-b from-white to-[#8fd6ac] bg-clip-text text-3xl font-black text-transparent drop-shadow-[0_0_8px_rgba(49,201,107,0.5)]">ONEHENG89</p>
             )
           }
         </a>
-        <p class="text-sm leading-relaxed text-[#ffe4ef]/75">
-          BUNNY555 รวมสล็อตจากค่ายใหญ่อย่าง PG Slot และ JILI ไว้ในแพลตฟอร์มเดียว เมนูแยกตามค่ายจึงเลือกเกมที่ชอบหรือเปลี่ยนไปลองเกมใหม่ได้เร็ว
-          เครดิต โบนัส และประวัติรายการรวมอยู่ในหน้าสมาชิกเดียวกัน พร้อมฝากถอนผ่าน True Wallet ที่ทำรายการและตรวจสถานะได้ตลอด 24 ชั่วโมง
+        <p class="text-sm leading-relaxed text-[#dbe7fb]/80">
+          ONEHENG89 รวมสล็อตเกมลิขสิทธิ์แท้จากหลายค่ายไว้ในแพลตฟอร์มเดียว การจัดหมวดตามค่ายและแนวเกมจึงเลือกเกมที่ชอบหรือลองเกมใหม่ได้เร็ว
+          เครดิต โบนัส และประวัติรายการรวมอยู่ในหน้าสมาชิกเดียวกัน พร้อมระบบออโต้ที่ทำรายการและตรวจสถานะได้ตลอด 24 ชั่วโมง
         </p>
 
         <div class="mt-2 flex flex-wrap gap-3">
           <a
             href="/line"
-            class="flex items-center gap-2 rounded-full border border-[#00B900]/30 bg-[#00B900]/10 px-4 py-2 text-xs font-bold text-[#00B900] shadow-[0_0_10px_rgba(0,185,0,0.1)] transition-colors hover:bg-[#00B900] hover:text-white">
+            class="flex items-center gap-2 rounded-full border border-[#00B900]/40 bg-[#00B900]/15 px-4 py-2 text-xs font-bold text-[#8fe6a8] shadow-[0_0_10px_rgba(0,185,0,0.15)] transition-colors hover:bg-[#00B900] hover:text-white">
             <span aria-hidden="true" class="text-base">💬</span> LINE OFFICIAL
           </a>
         </div>
@@ -96,16 +99,16 @@ const quickLinks = [
       </div>
 
       <div class="md:col-span-6 lg:col-span-5">
-        <p class="relative mb-5 inline-block text-lg font-bold tracking-wider text-[#ffe4ef] uppercase">
+        <p class="relative mb-5 inline-block text-lg font-bold tracking-wider text-white uppercase">
           ลิงก์ด่วน (Quick Links)
-          <span aria-hidden="true" class="absolute -bottom-2 left-0 h-1 w-1/2 rounded-full bg-gradient-to-r from-[#ec4899] to-[#ffe08a] shadow-[0_0_8px_rgba(247,201,72,0.6)]"></span>
+          <span aria-hidden="true" class="absolute -bottom-2 left-0 h-1 w-1/2 rounded-full bg-gradient-to-r from-[#31c96b] to-[#3b74e8] shadow-[0_0_8px_rgba(49,201,107,0.6)]"></span>
         </p>
 
         <div class="grid grid-cols-2 gap-x-4 gap-y-3 text-sm">
           {
             quickLinks.map((link) => (
-              <a href={link.path} class="group flex items-center text-[#ffe4ef]/75 transition-colors hover:text-[#ffe08a]">
-                <span aria-hidden="true" class="mr-2 h-1.5 w-1.5 rounded-sm bg-[#f472b6] transition-transform group-hover:rotate-45" />
+              <a href={link.path} class="group flex items-center text-[#dbe7fb]/80 transition-colors hover:text-[#8fd6ac]">
+                <span aria-hidden="true" class="mr-2 h-1.5 w-1.5 rounded-sm bg-[#31c96b] transition-transform group-hover:rotate-45" />
                 {link.name}
               </a>
             ))
@@ -114,38 +117,38 @@ const quickLinks = [
       </div>
 
       <div class="md:col-span-6 lg:col-span-3">
-        <p class="relative mb-5 inline-block text-lg font-bold tracking-wider text-[#ffe4ef] uppercase">
+        <p class="relative mb-5 inline-block text-lg font-bold tracking-wider text-white uppercase">
           ระบบการเงิน
-          <span aria-hidden="true" class="absolute -bottom-2 left-0 h-1 w-1/2 rounded-full bg-gradient-to-r from-[#ec4899] to-[#ffe08a] shadow-[0_0_8px_rgba(247,201,72,0.6)]"></span>
+          <span aria-hidden="true" class="absolute -bottom-2 left-0 h-1 w-1/2 rounded-full bg-gradient-to-r from-[#31c96b] to-[#3b74e8] shadow-[0_0_8px_rgba(49,201,107,0.6)]"></span>
         </p>
 
-        <p class="mb-4 text-xs text-[#ffe4ef]/75">รองรับการฝาก-ถอนผ่าน True Wallet และแอปธนาคารชั้นนำ โดยควรใช้บัญชีชื่อเดียวกับข้อมูลที่สมัครไว้</p>
+        <p class="mb-4 text-xs text-[#dbe7fb]/80">รองรับการฝาก-ถอนผ่านแอปธนาคารชั้นนำและทรูมันนี่วอลเล็ท โดยควรใช้บัญชีชื่อเดียวกับข้อมูลที่สมัครไว้</p>
 
         <BankStrip size={30} />
 
-        <div class="mt-3 flex h-10 items-center justify-center rounded border border-white/5 bg-[#3d0a20] transition-colors hover:border-[#f7c948]/50" title="ตรวจรายการย้อนหลัง">
-          <span class="flex items-center gap-1 text-xs font-bold text-[#ffe4ef]"><span aria-hidden="true" class="text-lg text-[#f7c948]">🧾</span> เก็บเลขรายการไว้ตรวจสอบได้</span>
+        <div class="mt-3 flex h-10 items-center justify-center rounded border border-white/10 bg-[#062c85] transition-colors hover:border-[#31c96b]/60" title="ตรวจรายการย้อนหลัง">
+          <span class="flex items-center gap-1 text-xs font-bold text-[#dbe7fb]"><span aria-hidden="true" class="text-lg text-[#8fd6ac]">🧾</span> เก็บเลขรายการไว้ตรวจสอบได้</span>
         </div>
       </div>
     </div>
 
-    <hr class="mb-6 border-[#f7c948]/25" />
+    <hr class="mb-6 border-white/15" />
 
-    <div class="mb-6 hidden text-justify text-[10px] leading-relaxed text-[#ffe4ef]/60 md:block">
-      BUNNY555 เว็บสล็อตเว็บตรง รวมเกมจากค่ายใหญ่ไว้ในบัญชีเดียว เลือกสล็อตตามค่าย ธีม ฟรีสปิน หรือฟีเจอร์โบนัส และสลับไปลองเกมใหม่ได้จากหมวดเดียวกัน
-      ฝากถอนผ่าน True Wallet ทำรายการได้ตลอด 24 ชั่วโมง ตรวจเครดิต โบนัส และประวัติรายการจากหน้าสมาชิก ทางเข้า BUNNY555 รองรับโทรศัพท์ แท็บเล็ต และคอมพิวเตอร์ด้วยบัญชีเดิม
+    <div class="mb-6 hidden text-justify text-[10px] leading-relaxed text-[#dbe7fb]/65 md:block">
+      ONEHENG89 เว็บสล็อตรวมเกมลิขสิทธิ์แท้จากหลายค่ายไว้ในบัญชีเดียว เลือกสล็อตตามค่าย ธีม ฟรีสปิน หรือฟีเจอร์โบนัส และสลับไปลองเกมใหม่ได้จากหมวดเดียวกัน
+      ระบบออโต้ทำรายการฝากถอนได้ตลอด 24 ชั่วโมง ตรวจเครดิต โบนัส และประวัติรายการจากหน้าสมาชิก ทางเข้า ONEHENG89 รองรับโทรศัพท์ แท็บเล็ต และคอมพิวเตอร์ด้วยบัญชีเดิม
     </div>
 
-    <div class="flex flex-col items-center justify-between gap-4 border-t border-white/5 pt-6 text-xs text-[#ffe4ef]/60 md:flex-row">
-      <p>&copy; {new Date().getFullYear()} <span class="font-bold tracking-wider text-[#ffe08a] uppercase">BUNNY555</span>. All Rights Reserved.</p>
+    <div class="flex flex-col items-center justify-between gap-4 border-t border-white/15 pt-6 text-xs text-[#dbe7fb]/70 md:flex-row">
+      <p>&copy; {new Date().getFullYear()} <span class="font-bold tracking-wider text-white uppercase">ONEHENG89</span>. All Rights Reserved.</p>
 
       <div class="flex items-center gap-6">
-        <a href="/terms/" class="transition-colors hover:text-[#ffe4ef]">เงื่อนไขและข้อตกลง</a>
-        <a href="/privacy/" class="transition-colors hover:text-[#ffe4ef]">นโยบายความเป็นส่วนตัว</a>
+        <a href="/terms/" class="transition-colors hover:text-white">เงื่อนไขและข้อตกลง</a>
+        <a href="/privacy/" class="transition-colors hover:text-white">นโยบายความเป็นส่วนตัว</a>
 
         <a
           href="#top"
-          class="flex h-8 w-8 items-center justify-center rounded border border-white/10 bg-white/5 text-[#ffe4ef] transition-all hover:border-[#ffe08a] hover:bg-[#4a1029] hover:shadow-[0_0_15px_rgba(247,201,72,0.5)]"
+          class="flex h-8 w-8 items-center justify-center rounded border border-white/20 bg-white/10 text-white transition-all hover:border-[#31c96b] hover:bg-[#062c85] hover:shadow-[0_0_15px_rgba(49,201,107,0.5)]"
           aria-label="กลับขึ้นด้านบนสุดของหน้า">
           <span aria-hidden="true">↑</span>
         </a>

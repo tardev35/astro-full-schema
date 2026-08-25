@@ -9,16 +9,16 @@ const headingSize = HeadingTag === "h1" ? "text-3xl" : "text-2xl";
 
 <section class="relative z-10 my-8 flex w-full justify-center px-4 font-sans">
   <div
-    class="group relative isolate w-full max-w-[1400px] overflow-hidden rounded-3xl border border-[#ec4899]/35 bg-gradient-to-br from-[#ffffff]/95 to-[#fff2f7]/92 p-8 text-left text-base leading-relaxed text-[#7a1038] shadow-[0_10px_30px_rgba(236,72,153,0.14)] backdrop-blur-xl transition-all duration-500 hover:border-[#ec4899]/65 hover:shadow-[0_15px_40px_rgba(236,72,153,0.22)] md:p-10">
-    <div aria-hidden="true" class="pointer-events-none absolute -top-20 -left-20 -z-10 h-40 w-40 rounded-full bg-[#f9a8d4]/40 blur-[55px] transition-all duration-500 group-hover:bg-[#ec4899]/25"></div>
-    <div aria-hidden="true" class="pointer-events-none absolute -right-20 -bottom-20 -z-10 h-40 w-40 rounded-full bg-[#f7c948]/35 blur-[55px] transition-all duration-500 group-hover:bg-[#f472b6]/30"></div>
+    class="group relative isolate w-full max-w-[1400px] overflow-hidden rounded-3xl border border-[#c7dcfb] bg-gradient-to-br from-white to-[#f3f8ff] p-8 text-left text-base leading-relaxed text-[#1b2c4a] shadow-[0_10px_30px_rgba(11,63,184,0.12)] transition-all duration-500 hover:border-[#0b3fb8]/45 hover:shadow-[0_15px_40px_rgba(11,63,184,0.18)] md:p-10">
+    <div aria-hidden="true" class="pointer-events-none absolute -top-20 -left-20 -z-10 h-40 w-40 rounded-full bg-[#0b3fb8]/12 blur-[55px] transition-all duration-500 group-hover:bg-[#3b74e8]/22"></div>
+    <div aria-hidden="true" class="pointer-events-none absolute -right-20 -bottom-20 -z-10 h-40 w-40 rounded-full bg-[#16a34a]/14 blur-[55px] transition-all duration-500 group-hover:bg-[#31c96b]/24"></div>
 
     {
       title && (
-        <header class="mb-8 flex items-center gap-4 border-b border-[#ec4899]/30 pb-4">
-          <div aria-hidden="true" class="h-8 w-1.5 shrink-0 rounded-full bg-gradient-to-b from-[#f7c948] via-[#f472b6] to-[#9d174d] shadow-[0_0_10px_rgba(236,72,153,0.4)]" />
+        <header class="mb-8 flex items-center gap-4 border-b border-[#c7dcfb] pb-4">
+          <div aria-hidden="true" class="h-8 w-1.5 shrink-0 rounded-full bg-gradient-to-b from-[#0b3fb8] via-[#3b74e8] to-[#16a34a] shadow-[0_0_10px_rgba(11,63,184,0.35)]" />
           <HeadingTag
-            class={`bg-gradient-to-r from-[#ec4899] via-[#9d174d] to-[#be185d] bg-clip-text ${headingSize} leading-normal font-black tracking-widest text-transparent uppercase`}>
+            class={`bg-gradient-to-r from-[#062c85] via-[#0b3fb8] to-[#16a34a] bg-clip-text ${headingSize} leading-normal font-black tracking-widest text-transparent uppercase`}>
             {title}
           </HeadingTag>
         </header>

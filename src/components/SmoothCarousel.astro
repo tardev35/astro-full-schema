@@ -1,17 +1,17 @@
 ---
 import { Picture } from "astro:assets";
 
-import slide2 from "../assets/slide2.png";
-import slide3 from "../assets/slide3.png";
+import slide1 from "../assets/slide1.png";
+import slide4 from "../assets/slide4.png";
 
 const images = [
   {
-    src: slide2,
-    alt: "ภาพโปรโมชั่น SCLASS88 พื้นหลังสีดำตกแต่งด้วยลายทองและเหรียญทอง ด้านบนเป็นตัวอักษร SCLASS88 ถัดลงมาเป็นตัวอักษรทองขนาดใหญ่ว่า โบนัสกำไรบาน และ สล็อตเว็บตรง สนุกแตกง่าย ใต้ลงมาเป็นสองบรรทัดเขียนว่า รวมสล็อตค่ายใหญ่ เข้าเล่นง้าย และ ฝากถอนออโต้ ตลอด 24 ชม. ตรงกลางเป็นหีบสมบัติเปิดออกมีเหรียญทองล้นออกมา ด้านขวาเป็นพรีเซนเตอร์หญิงสวมชุดสีดำ มีปุ่มสีทองเขียนว่า เข้าสู่ระบบ และแถบล่างสุดเขียนว่า ลุ้นเครดิตฟรี สูงสุด 1,000 บาท",
+    src: slide1,
+    alt: "ภาพโปรโมชั่น ONEHENG89 โทนขาว น้ำเงิน และเขียว ด้านบนเป็นโลโก้ ONEHENG89 ถัดลงมาเป็นตัวอักษรขนาดใหญ่ว่า แนะนำสมาชิกวันนี้ มีแต่ได้กับได้ พร้อมบรรทัดเขียนว่า โบนัสแนะนำสมาชิก 0.3% และ สะสมนานสูงสุด 1 เดือน ด้านขวาเป็นพรีเซนเตอร์หญิงสวมชุดกีฬาสีขาวสลับน้ำเงิน รอบภาพมีป้ายสี่เหลี่ยมเขียนว่า เว็บสล็อตโบนัสไหล เกมลิขสิทธิ์แท้ ระบบออโต้ 24 ชม. แนะนำง่ายได้ทุกคน ยิ่งเล่นเยอะยิ่งได้เยอะ และ มั่นคง ปลอดภัย 100%",
   },
   {
-    src: slide3,
-    alt: "ภาพโปรโมชั่น SCLASS88 พื้นหลังสีดำตกแต่งด้วยลายทอง ด้านบนเป็นตัวอักษร SCLASS88 ถัดลงมาเขียนว่า ฝากเงินผ่าน QR Code ง่ายๆ และ ระบบออโต้ ฝากถอนไว ทำตามได้ไม่ยาก ตรงกลางเป็นภาพหน้าจอโทรศัพท์สามเครื่องเรียงกันพร้อมลำดับขั้นตอนว่า 1 กดเมนูฝากเงิน 2 เลือก QR Code และ 3 สแกนและยืนยัน ด้านขวาเป็นพรีเซนเตอร์หญิงสวมชุดสีดำถือกล่องของขวัญสีทอง แถบล่างสุดเขียนว่า Auto Wallet 24 ชม. รองรับมือถือ ใช้งานง่าย",
+    src: slide4,
+    alt: "ภาพโปรโมชั่น ONEHENG89 โทนน้ำเงินสลับขาว ด้านบนเป็นตัวอักษรขนาดใหญ่ว่า ฝาก 100 รับ 50 ถัดลงมาเขียนว่า ทำยอด 750 ถอนได้ 500 และ เดิมพันได้เฉพาะค่าย PG และ JILI เท่านั้น พร้อมบรรทัดเล็กว่า เงื่อนไขเป็นไปตามที่กำหนด ด้านซ้ายเป็นพรีเซนเตอร์หญิงสวมชุดสีน้ำเงินยืนคู่กับตัวการ์ตูนเพนกวินของค่าย PG ด้านขวาเป็นการ์ดไลน์เขียนว่า @one89 รอบภาพมีป้ายเขียนว่า ค่ายเกมดัง เล่นง่าย ถอนได้ไว ปลอดภัย 100% และ บริการ 24 ชม.",
   },
 ];
 
@@ -23,7 +23,7 @@ const slides = Array.from({ length: COPIES }, () => images).flat();
   <input id="carousel-pause" type="checkbox" class="peer sr-only" />
   <label
     for="carousel-pause"
-    class="sr-only cursor-pointer peer-focus-visible:not-sr-only peer-focus-visible:mb-3 peer-focus-visible:inline-block peer-focus-visible:rounded-full peer-focus-visible:border peer-focus-visible:border-[#f5c542]/60 peer-focus-visible:px-4 peer-focus-visible:py-2 peer-focus-visible:text-sm peer-focus-visible:font-bold peer-focus-visible:text-[#ffe9a8]">
+    class="sr-only cursor-pointer peer-focus-visible:not-sr-only peer-focus-visible:mb-3 peer-focus-visible:inline-block peer-focus-visible:rounded-full peer-focus-visible:border peer-focus-visible:border-[#0b3fb8]/50 peer-focus-visible:bg-white peer-focus-visible:px-4 peer-focus-visible:py-2 peer-focus-visible:text-sm peer-focus-visible:font-bold peer-focus-visible:text-[#062c85]">
     หยุด / เล่นสไลด์ภาพ
   </label>
 
@@ -36,7 +36,7 @@ const slides = Array.from({ length: COPIES }, () => images).flat();
             <Picture
               src={slide.src}
               alt={isDuplicate ? "" : slide.alt}
-              class="block w-full rounded-xl border border-[#f5c542]/45 object-cover shadow-[0_10px_30px_rgba(245,197,66,0.18)]"
+              class="block w-full rounded-xl border border-[#c7dcfb] object-cover shadow-[0_10px_30px_rgba(11,63,184,0.14)]"
               width={slide.src.width}
               height={slide.src.height}
               loading="lazy"

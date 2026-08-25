@@ -1,60 +1,62 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
-import Announcement from "../components/Announcement5.astro";
+import Announcement from "../components/Announcement3.astro";
 import ContentBox from "../components/ContentBox.astro";
-import ContentBoxNeumorphism from "../components/ContentBoxNeumorphism.astro";
-import ContentBoxFloatingBadge from "../components/ContentBoxFloatingBadge.astro";
-import ContentBoxTwoNeumorphism from "../components/ContentBoxTwoNeumorphism.astro";
-import ContentBoxTwoFloatingBadge from "../components/ContentBoxTwoFloatingBadge.astro";
-import ContentBoxSevenThreeNeumorphism from "../components/ContentBoxSevenThreeNeumorphism.astro";
-import ContentBoxSevenThreeFloatingBadge from "../components/ContentBoxSevenThreeFloatingBadge.astro";
-import ProviderGridPremium from "../components/ProviderGridPremium.astro";
+import ContentBoxPremium from "../components/ContentBoxPremium.astro";
+import ContentBoxCyberCut from "../components/ContentBoxCyberCut.astro";
+import ContentBoxSpecial from "../components/ContentBoxSpecial.astro";
+import ContentBoxTwo from "../components/ContentBoxTwo.astro";
+import ContentBoxTwoPremium from "../components/ContentBoxTwoPremium.astro";
+import ContentBoxTwoCyberCut from "../components/ContentBoxTwoCyberCut.astro";
+import ContentBoxSevenThreePremium from "../components/ContentBoxSevenThreePremium.astro";
+import ContentBoxSevenThreeCyberCut from "../components/ContentBoxSevenThreeCyberCut.astro";
+import ProviderGrid from "../components/ProviderGrid.astro";
 import GameRankingBoard from "../components/GameRankingBoard.astro";
-import LatestWinnersPremium from "../components/LatestWinnersPremium.astro";
+import LatestWinners3 from "../components/LatestWinners3.astro";
 import SmoothCarousel from "../components/SmoothCarousel.astro";
 import LoginRtpSection from "../components/LoginRtpSection.astro";
-import Faq4 from "../components/Faq4.astro";
-import ReviewCardSumo from "../components/ReviewCardSumo.astro";
+import Faq2 from "../components/Faq2.astro";
+import ReviewCardSumo2 from "../components/ReviewCardSumo2.astro";
 import Navfoot from "../components/Navfoot.astro";
 
 import { Picture } from "astro:assets";
 import { pageGraph } from "../lib/schema";
-import imgGames from "../assets/slide1.png";
-import imgBonus from "../assets/slide4.png";
+import imgProviders from "../assets/slide2.png";
+import imgCashback from "../assets/slide3.png";
 
-const pageTitle = "SCLASS88 เข้าสู่ระบบ สล็อตแท้เว็บตรง สนุกแตกง่าย กำไรบาน";
+const pageTitle = "ONEHENG89 เว็บสล็อต โบนัสไหล เกมลิขสิทธิ์แท้ ระบบออโต้ 24 ชม.";
 
-const pageDescription = "SCLASS88 รวมสล็อตเว็บตรง เกมค่ายใหญ่ โบนัส กำไรบาน ระบบออโต้ และฝากถอนง่าย รองรับมือถือ เข้าสู่ระบบง่าย พร้อมเลือกเกมที่สนุกได้ตลอดวัน";
+const pageDescription = "ONEHENG89 รวมสล็อตเกมลิขสิทธิ์แท้ โบนัสสมาชิก ระบบออโต้ ฝากถอนสะดวก รองรับมือถือ พร้อมเกมค่ายดังและทางเข้าใช้งานได้ตลอด 24 ชั่วโมง";
 
 const announcement =
-  "SCLASS88 รวมสล็อตแท้เว็บตรง เกมค่ายใหญ่ โบนัส และระบบออโต้ไว้ในบัญชีเดียว • เข้าสู่ระบบครั้งเดียวแล้วเลือกเกม ดูเครดิต และเช็กโบนัสได้จากหน้าเดียว ทั้งมือถือและคอมพิวเตอร์ • เกมหลายสไตล์จากหลายค่าย ทั้งเกมคลาสสิก เกมฟีเจอร์ โบนัส และฟรีสปิน • โบนัสและสิทธิ์สมาชิกรวมไว้ในหน้าสมาชิก เช็กเงื่อนไขก่อนเลือกใช้ได้ทุกครั้ง • ระบบออโต้ฝากถอนเชื่อมเครดิตเข้ากับบัญชีสมาชิกโดยตรง ลดขั้นตอนก่อนกลับไปเลือกเกมต่อ • ทางเข้าและหน้าล็อกอินรองรับมือถือ ใช้บัญชีเดิมเข้าเล่นต่อได้ทันที";
+  "ONEHENG89 รวมสล็อตเกมลิขสิทธิ์แท้ โบนัส และระบบออโต้ไว้ในบัญชีเดียว • เลือกเกมจากหลายค่าย เช็กเครดิต และดูสิทธิ์โบนัสได้จากหน้าสมาชิกหน้าเดียว ทั้งมือถือและคอมพิวเตอร์ • ระบบออโต้รองรับการฝากถอนและตรวจข้อมูลบัญชีตลอด 24 ชั่วโมง • ทางเข้า ONEHENG89 เว็บหลัก ใช้บัญชีเดิมกลับเข้าเล่นต่อได้ทันที";
 
-const gamesAlt =
-  "ภาพโปรโมชั่น SCLASS88 พื้นหลังสีดำตกแต่งด้วยทอง ด้านบนเป็นโลโก้ Sclass88 สีทอง ถัดลงมาเป็นตัวอักษรทองขนาดใหญ่ว่า สล็อตแท้เว็บตรง และ สนุกแตกง่าย กำไรบาน ใต้ลงมาเป็นป้ายทองสามช่องเขียนว่า ค่ายใหญ่ โบนัสจัดเต็ม และ ฝากถอนออโต้ ตรงกลางเป็นโทรศัพท์ที่เปิดตารางเกมสล็อต มีสัญลักษณ์ SCATTER และยอดรางวัล 88,888.00 ด้านขวาเป็นพรีเซนเตอร์หญิงสวมชุดสีดำสลับทอง แถบล่างสุดเขียนว่า เข้าสู่ระบบง่าย เล่นได้ 24 ชม. ฉากหลังมีมังกรทอง เหรียญทอง และหีบสมบัติ";
+const providersAlt =
+  "ภาพโปรโมชั่น ONEHENG89 โทนขาวสลับน้ำเงินและเขียว ด้านบนเป็นโลโก้ ONEHENG89 ถัดลงมาเป็นตัวอักษรขนาดใหญ่ว่า ศูนย์รวมสล็อตจากค่ายระดับประเทศ และบรรทัดรองว่า รวมทุกค่ายดัง เล่นง่าย ได้จริง จ่ายเต็ม ด้านขวาเป็นพรีเซนเตอร์หญิงถือโทรศัพท์มือถือ รอบภาพมีป้ายเขียนว่า รวมทุกค่าย ระบบออโต้ ฝาก-ถอนไว มั่นคง ปลอดภัย เชื่อถือได้ 100% และ ซัพพอร์ต 24 ชม. แถบล่างสุดเป็นโลโก้ธนาคารและทรูมันนี่วอลเล็ท";
 
-const bonusAlt =
-  "ภาพโปรโมชั่น SCLASS88 พื้นหลังสีดำตกแต่งด้วยทอง ด้านบนเป็นโลโก้ Sclass88 สีทอง ถัดลงมาเป็นตัวอักษรทองขนาดใหญ่ว่า สล็อตแท้เว็บตรง และ สนุกแตกง่าย พร้อมบรรทัดเขียนว่า โบนัสกำไรบาน ฝากถอนออโต้ 24 ชม. และ ค่ายใหญ่ เล่นง่าย เข้าสู่ระบบไว มีป้ายช่อลอเรลสีทองเขียนว่า เริ่มต้น 1 บาท ด้านซ้ายเป็นพรีเซนเตอร์หญิงสวมชุดสีทอง ด้านขวาเป็นมังกรทองและเทพเจ้าแห่งโชคลาภถือก้อนทอง แถบล่างสุดเป็นโลโก้ธนาคารและช่องทางชำระเงินทรูมันนี่กับพร้อมเพย์";
+const cashbackAlt =
+  "ภาพโปรโมชั่น ONEHENG89 โทนขาวสลับน้ำเงิน ด้านบนเป็นโลโก้ ONEHENG89 ถัดลงมาเป็นตัวอักษรขนาดใหญ่ว่า คืนทุนยอดเสีย ทุกสัปดาห์ 5% พร้อมบรรทัดว่า ไม่ต้องทำเทิร์น ถอนเงินโบนัสได้ทันที และ รับเงินคืน 5% จากยอดเสียรวมทุกวันจันทร์ รอบภาพมีป้ายเขียนว่า เกมลิขสิทธิ์แท้ ฝาก-ถอน AUTO มั่นคง ปลอดภัย และ บริการดูแลตลอด 24 ชม. แถบล่างสุดเป็นโลโก้ธนาคาร";
 
 const faqs = [
   {
-    q: "เข้าสู่ระบบ SCLASS88 แล้วใช้งานส่วนไหนได้บ้าง",
-    a: "หลังเข้าสู่ระบบ สมาชิกเลือกสล็อต ดูเครดิต เช็กโบนัส และเข้าถึงข้อมูลบัญชีได้จากหน้าเดียว ใช้งานได้ทั้งบนมือถือและคอมพิวเตอร์ด้วยบัญชีเดิม เมนูสำคัญถูกจัดไว้ให้กดถึงได้เร็ว เพราะการล็อกอินควรเป็นประตูเข้าเกม ไม่ใช่ด่านทดสอบความอดทนก่อนเริ่มใช้งาน",
+    q: "ONEHENG89 มีเกมลิขสิทธิ์แท้แบบไหนให้เลือกบ้าง",
+    a: "ONEHENG89 เน้นเกมสล็อตจากหลายค่าย ทั้งเกมคลาสสิก เกมโบนัส ฟรีสปิน และเกมฟีเจอร์ใหม่ สมาชิกจึงเลือกแนวที่ชอบได้จากบัญชีเดียว การจัดหมวดในหน้ารวมเกมช่วยให้หาเกมง่ายขึ้น ทั้งสายที่มีเกมประจำและสายที่ชอบลองของใหม่ก็ไล่ดูต่อได้ไว โดยไม่ต้องออกจากระบบไปเริ่มใหม่หลายรอบ",
   },
   {
-    q: "สล็อตแท้เว็บตรง SCLASS88 มีเกมและค่ายไหนให้เลือก",
-    a: "สล็อตแท้เว็บตรงของ SCLASS88 มีเกมหลายสไตล์จากค่ายใหญ่หลายค่ายให้เลือก ทั้งเกมคลาสสิก เกมสายฟีเจอร์ เกมที่มีโบนัส และเกมที่มีฟรีสปิน จึงเหมาะทั้งกับคนที่มีเกมประจำและคนที่ชอบไล่ลองเกมใหม่ การมีหลายค่ายรวมในบัญชีเดียวยังช่วยให้เปลี่ยนสไตล์การเล่นได้ตามอารมณ์ของแต่ละวัน",
+    q: "โบนัส ONEHENG89 มีสิทธิ์แบบไหนให้สมาชิกติดตาม",
+    a: "โบนัส ONEHENG89 จัดไว้ในระบบสมาชิก โดยแต่ละช่วงอาจมีรูปแบบและเงื่อนไขต่างกัน สมาชิกจึงควรเช็กสิทธิ์ที่เปิดอยู่ก่อนเลือกใช้ทุกครั้ง โบนัสมีไว้เพิ่มความคุ้ม ไม่ใช่เพิ่มภาระอ่านตัวเล็กสิบหน้า คนมีงบเลือกโปรให้เหมาะกับตัวเองดีกว่าไล่รับทุกอย่างเพราะเห็นคำว่าฟรี",
   },
   {
-    q: "โบนัสและสิทธิ์สมาชิกของ SCLASS88 ต้องเช็กอะไรก่อนใช้",
-    a: "โบนัสและสิทธิ์สมาชิกช่วยเพิ่มทางเลือกตั้งแต่เริ่มใช้งาน โดยแต่ละช่วงอาจมีรูปแบบการรับและเงื่อนไขต่างกัน จึงควรอ่านรายละเอียดของโปรที่เปิดอยู่ก่อนเลือกใช้ทุกครั้ง สิทธิ์ทั้งหมดรวมไว้ในหน้าสมาชิกแล้ว โบนัสมีไว้เพิ่มความคุ้ม ไม่ใช่เพิ่มงานอ่านเงื่อนไขระดับรายงานประจำปี",
+    q: "ระบบออโต้ ONEHENG89 ช่วยให้ฝากถอนและเช็กเครดิตสะดวกขึ้นอย่างไร",
+    a: "ระบบออโต้ช่วยให้สมาชิกส่งรายการฝากถอนและตรวจเครดิตผ่านบัญชีได้โดยตรง ลดขั้นตอนก่อนกลับไปเลือกเกมต่อ เมื่อเชื่อมกับ ONEHENG89 การจัดการเงินจึงอยู่ในระบบเดียวกับเกมและสมาชิก ดูยอดคงเหลือและย้อนดูประวัติรายการได้จากจุดเดียว โดยระบบรองรับการทำรายการตลอด 24 ชั่วโมง",
   },
   {
-    q: "ระบบออโต้ฝากถอนของ SCLASS88 ช่วยจัดการเครดิตอย่างไร",
-    a: "ระบบออโต้ช่วยให้สมาชิกทำรายการฝากถอนและเช็กเครดิตผ่านบัญชีได้โดยตรง ลดขั้นตอนก่อนกลับไปเลือกเกมต่อ เมื่อเชื่อมเข้ากับระบบสมาชิก การจัดการเครดิตจึงอยู่ที่เดียวกับเกมและประวัติรายการ ดูยอดคงเหลือและย้อนดูรายการได้จากจุดเดียวโดยไม่ต้องเปิดหลายหน้า",
+    q: "ระบบสมาชิก ONEHENG89 รวมเครดิต โบนัส และประวัติไว้ตรงไหน",
+    a: "หน้าสมาชิกรวมเครดิต โบนัส และประวัติรายการไว้ในพื้นที่เดียว ช่วยให้ตรวจข้อมูลสำคัญได้โดยไม่ต้องเปิดหลายหน้า คนที่เล่นหลายเกมหรือใช้หลายสิทธิ์จึงตามข้อมูลของตัวเองได้ง่ายขึ้น ของสำคัญควรมีที่อยู่ชัด โดยเฉพาะเครดิต เรื่องนี้ไม่เหมาะกับเกมซ่อนหา",
   },
   {
-    q: "ทางเข้าและเข้าสู่ระบบ SCLASS88 ผ่านมือถือใช้งานง่ายแค่ไหน",
-    a: "ทางเข้าและหน้าล็อกอินรองรับการใช้งานผ่านมือถือ สมาชิกใช้บัญชีเดิมเพื่อเข้าถึงเกม เครดิต โบนัส และข้อมูลส่วนตัวได้ต่อเนื่อง จึงเหมาะกับคนที่ต้องการเปิดแล้วใช้งานต่อได้ทันที มือถือมีไว้ลดสัมภาระ ไม่ใช่เพิ่มขั้นตอนให้ต้องเปิดคอมตามมาอีกเครื่อง",
+    q: "ทางเข้า ONEHENG89 เว็บหลัก และการเข้าสู่ระบบผ่านมือถือใช้งานง่ายแค่ไหน",
+    a: "ทางเข้า ONEHENG89 เว็บหลักเชื่อมสมาชิกไปยังหน้าล็อกอิน เกม โบนัส และระบบบัญชี รองรับทั้งมือถือและคอมด้วยยูสเดิม การสมัครและเข้าสู่ระบบจึงทำต่อเนื่องได้จากเบราว์เซอร์มือถือ การจำช่องทางหลักไว้ยังช่วยลดความสับสนจากชื่อเว็บคล้ายกันบนผลค้นหา",
   },
 ];
 
@@ -70,168 +72,171 @@ const graph = pageGraph(Astro, {
 
   <Announcement message={announcement} />
 
-  <ContentBoxNeumorphism as="h1" title="SCLASS88 รวมสล็อตเว็บตรง เกมค่ายใหญ่ โบนัส และระบบออโต้ไว้ในบัญชีเดียว">
-    <p class="mb-4 text-left text-base leading-relaxed text-[#efe1c2]">
-      <strong class="text-[#f5c542]">SCLASS88</strong> รวมสล็อต ระบบสมาชิก โบนัส และการจัดการเครดิตไว้ในบัญชีเดียว รองรับมือถือ ทำให้ตั้งแต่เข้าสู่ระบบ เลือกเกม
-      ไปจนถึงเช็กยอดคงเหลือทำได้ต่อเนื่องจากหน้าเดียว ไม่ต้องสลับไปมาหลายหน้าเพื่อตามข้อมูลของตัวเอง
+  <ContentBoxPremium as="h1" title="ONEHENG89 รวมสล็อตเกมลิขสิทธิ์แท้ โบนัส และระบบออโต้ไว้ในบัญชีเดียว">
+    <p class="mb-4 text-left text-base leading-relaxed text-[#1b2c4a]">
+      <strong class="text-[#062c85]">ONEHENG89</strong> รวมเกมสล็อตจากหลายค่าย โบนัส ระบบสมาชิก และการจัดการเครดิตไว้ในบัญชีเดียว รองรับมือถือ ทำให้เลือกเกม เช็กยอด และกลับเข้าเล่นต่อได้สะดวก
     </p>
 
-    <p class="text-left text-base leading-relaxed text-[#efe1c2]">
-      ระบบออโต้ช่วยลดขั้นตอนเรื่องฝากถอน ส่วนเกมหลายค่ายช่วยเพิ่มตัวเลือกในการเล่น เพราะคนมีทางเลือกไม่จำเป็นต้องรีบ เลือกเกมให้ถูกใจก่อนแล้วค่อยไปต่อ
+    <p class="text-left text-base leading-relaxed text-[#1b2c4a]">
+      ระบบออโต้ช่วยลดขั้นตอนเรื่องฝากถอน ส่วนเกมหลายสไตล์ช่วยให้เปลี่ยนบรรยากาศได้ตามอารมณ์ เกมมีไว้เลือกเยอะได้ แต่เมนูไม่ควรเยอะจนต้องจ้างเลขามาช่วยหา
     </p>
-  </ContentBoxNeumorphism>
+  </ContentBoxPremium>
 
-  <ContentBoxFloatingBadge as="h2" title="SCLASS88 เข้าสู่ระบบแล้วใช้งานส่วนไหนได้บ้าง">
-    <p class="mb-4 text-left text-base leading-relaxed text-[#efe1c2]">
-      SCLASS88 หลังเข้าสู่ระบบแล้ว สมาชิกสามารถเลือกสล็อต ดูเครดิต เช็กโบนัส และเข้าถึงข้อมูลบัญชีได้จากหน้าเดียว ทั้งบนมือถือและคอมพิวเตอร์
-      โดยใช้ข้อมูลบัญชีชุดเดิมตลอดการใช้งาน
+  <ContentBox as="h2" title="ONEHENG89 เว็บสล็อต มีเกมลิขสิทธิ์แท้แบบไหนให้เลือกบ้าง">
+    <p class="mb-4 text-left text-base leading-relaxed text-[#1b2c4a]">
+      ONEHENG89 เน้นเกมสล็อตจากหลายค่าย ทั้งเกมคลาสสิก เกมโบนัส ฟรีสปิน และเกมฟีเจอร์ใหม่ สมาชิกจึงเลือกแนวที่ชอบได้จากบัญชีเดียว
     </p>
 
-    <p class="text-left text-base leading-relaxed text-[#efe1c2]">
-      เมนูสำคัญถูกจัดไว้ให้เข้าถึงง่าย เพราะการล็อกอินควรเป็นประตูเข้าเกม ไม่ใช่ด่านทดสอบความอดทนก่อนเริ่มใช้งาน
+    <p class="text-left text-base leading-relaxed text-[#1b2c4a]">
+      การจัดหมวดช่วยให้หาเกมง่ายขึ้น ทั้งสายมีเกมประจำและสายชอบลองของใหม่ก็ไปต่อได้ไว ของดีไม่จำเป็นต้องซ่อนลึกเหมือนห้องนิรภัย
     </p>
-  </ContentBoxFloatingBadge>
+  </ContentBox>
 
-  <ContentBoxSevenThreeNeumorphism as="h2" titleright="สล็อตแท้เว็บตรง SCLASS88 มีเกมและค่ายไหนให้เลือก">
+  <ProviderGrid />
+
+  <ContentBoxSevenThreePremium as="h2" titleright="สล็อตค่ายดังเลือกเกมและสไตล์ที่ชอบได้ง่ายแค่ไหน">
     <Picture
       slot="left"
-      src={imgGames}
-      alt={gamesAlt}
+      src={imgProviders}
+      alt={providersAlt}
       loading="lazy"
       fetchpriority="low"
-      widths={[200, 400, 600]}
-      sizes="(max-width: 768px) 100vw, 30vw"
+      widths={[240, 400, 600]}
+      sizes="(max-width: 767px) calc(100vw - 64px), 360px"
       decoding="async"
       formats={["avif", "webp"]}
       fallbackFormat="webp"
       quality={80}
-      class="mx-auto h-auto w-full rounded-2xl border border-[#a3610c]/50 shadow-[0_10px_30px_rgba(245,197,66,0.18)]"
+      class="mx-auto h-auto w-full rounded-2xl border border-[#c7dcfb] shadow-[0_10px_30px_rgba(11,63,184,0.14)]"
     />
-    <p slot="right" class="text-left text-base leading-relaxed text-[#efe1c2]">
-      สล็อตแท้เว็บตรง SCLASS88 มีเกมหลายสไตล์จากค่ายต่าง ๆ ให้เลือก ทั้งเกมคลาสสิก เกมฟีเจอร์ โบนัส และฟรีสปิน เหมาะทั้งสายมีเกมประจำและคนชอบลองเกมใหม่
-    </p>
-    <p slot="right" class="text-left text-base leading-relaxed text-[#efe1c2]">
-      การมีหลายค่ายช่วยให้สมาชิกเปลี่ยนสไตล์ได้ตามอารมณ์ ของดีควรมีให้เลือก ไม่ใช่มีให้เลื่อนหาจนเมื่อยนิ้ว
-    </p>
-  </ContentBoxSevenThreeNeumorphism>
 
-  <ProviderGridPremium />
-
-  <ContentBoxTwoNeumorphism as="h2" title="สนุกแตกง่าย เลือกเกมสล็อตแบบไหนให้ตรงสไตล์มากขึ้น">
-    <p slot="left" class="text-left text-base leading-relaxed text-[#efe1c2]">
-      เกมที่ให้ความรู้สึกสนุกและมีจังหวะลุ้นแตกต่างกัน มักขึ้นอยู่กับฟีเจอร์ รูปแบบโบนัส และความผันผวนของแต่ละเกม จึงควรเลือกให้ตรงกับสไตล์ที่ตัวเองชอบ
-    </p>
-    <p slot="right" class="text-left text-base leading-relaxed text-[#efe1c2]">
-      ใน SCLASS88 สมาชิกสามารถสลับเกมได้หลายแนว ถ้าเกมหนึ่งไม่ใช่ก็เปลี่ยนได้เลย คนมีคลาสไม่ฝืนของที่ไม่ถูกใจ
-    </p>
-  </ContentBoxTwoNeumorphism>
+    <div slot="right" class="flex flex-col gap-4">
+      <p class="text-left text-base leading-relaxed text-[#1b2c4a]">
+        เกมสล็อตแต่ละค่ายมีจุดเด่นต่างกันทั้งภาพ ธีม โบนัส และรูปแบบการเล่น สมาชิกจึงเลือกค่ายก่อนแล้วค่อยหาเกมที่ตรงสไตล์ได้
+      </p>
+      <p class="text-left text-base leading-relaxed text-[#1b2c4a]">
+        ใน ONEHENG89 การสลับเกมทำได้จากบัญชีเดิม ไม่ต้องเริ่มใหม่หลายรอบ รสนิยมเปลี่ยนได้ทุกวัน แต่ยูสเดียวก็พอ
+      </p>
+    </div>
+  </ContentBoxSevenThreePremium>
 
   <GameRankingBoard />
 
-  <ContentBox as="h2" title="สล็อตค่ายใหญ่ SCLASS88 มีตัวเลือกแตกต่างกันอย่างไร">
-    <p class="mb-4 text-left text-base leading-relaxed text-[#efe1c2]">
-      สล็อตค่ายใหญ่ใน SCLASS88 มีจุดเด่นต่างกันทั้งธีม ฟีเจอร์ โบนัส และรูปแบบการเล่น ทำให้สมาชิกเลือกค่ายที่คุ้นเคยหรือทดลองแนวใหม่ได้จากบัญชีเดียว
+  <ContentBoxTwoCyberCut as="h2" title="โบนัส ONEHENG89 มีสิทธิ์แบบไหนให้สมาชิกติดตาม">
+    <p slot="left" class="text-left text-base leading-relaxed text-[#1b2c4a]">
+      โบนัส ONEHENG89 จัดไว้ในระบบสมาชิก โดยแต่ละช่วงอาจมีรูปแบบและเงื่อนไขต่างกัน สมาชิกจึงควรเช็กสิทธิ์ที่เปิดอยู่ก่อนเลือกใช้
     </p>
+    <p slot="right" class="text-left text-base leading-relaxed text-[#1b2c4a]">
+      โบนัสมีไว้เพิ่มความคุ้ม ไม่ใช่เพิ่มภาระอ่านตัวเล็กสิบหน้า คนมีงบเลือกโปรให้เหมาะกับตัวเอง ดีกว่าไล่รับทุกอย่างเพราะเห็นคำว่า “ฟรี”
+    </p>
+  </ContentBoxTwoCyberCut>
 
-    <p class="text-left text-base leading-relaxed text-[#efe1c2]">
-      บางค่ายเด่นเรื่องภาพ บางค่ายเด่นเรื่องฟีเจอร์ ส่วนคนเล่นก็เลือกตามรสนิยมได้เต็มที่ เพราะความชอบไม่ควรถูกล็อกไว้กับเกมเดียว
-    </p>
-  </ContentBox>
-
-  <ContentBoxTwoFloatingBadge as="h2" title="โบนัสและสิทธิ์สมาชิก ช่วยเพิ่มความคุ้มตั้งแต่เริ่มเล่นแบบไหน">
-    <p slot="left" class="text-left text-base leading-relaxed text-[#efe1c2]">
-      โบนัสและสิทธิ์สมาชิกช่วยเพิ่มทางเลือกตั้งแต่เริ่มใช้งาน โดยแต่ละช่วงอาจมีเงื่อนไขและรูปแบบการรับต่างกัน จึงควรเช็กรายละเอียดก่อนเลือกใช้
-    </p>
-    <p slot="right" class="text-left text-base leading-relaxed text-[#efe1c2]">
-      ระบบ SCLASS88 รวมสิทธิ์ไว้ในหน้าสมาชิก ทำให้ดูโปรที่เปิดอยู่ได้ง่ายขึ้น โบนัสมีไว้เพิ่มความคุ้ม ไม่ใช่เพิ่มงานอ่านเงื่อนไขระดับรายงานประจำปี
-    </p>
-  </ContentBoxTwoFloatingBadge>
-
-  <ContentBoxSevenThreeFloatingBadge as="h2" title="กำไรบานในสไตล์ SCLASS88 ควรเริ่มจากเกมและโบนัสแบบไหน">
+  <ContentBoxSevenThreeCyberCut as="h2" titleright="เกมลิขสิทธิ์แท้ช่วยเพิ่มตัวเลือกในการเล่นอย่างไร">
     <Picture
       slot="left"
-      src={imgBonus}
-      alt={bonusAlt}
+      src={imgCashback}
+      alt={cashbackAlt}
       loading="lazy"
       fetchpriority="low"
-      widths={[200, 400, 600]}
-      sizes="(max-width: 768px) 100vw, 30vw"
+      widths={[240, 400, 600]}
+      sizes="(max-width: 767px) calc(100vw - 64px), 340px"
       decoding="async"
       formats={["avif", "webp"]}
       fallbackFormat="webp"
       quality={80}
-      class="mx-auto h-auto w-full rounded-2xl border border-[#f5c542]/45 shadow-[0_10px_30px_rgba(245,197,66,0.18)]"
+      class="mx-auto h-auto w-full rounded-2xl border border-[#c7dcfb] shadow-[0_10px_30px_rgba(11,63,184,0.14)]"
     />
-    <p slot="right" class="text-left text-base leading-relaxed text-[#efe1c2]">
-      คำว่า “กำไรบาน” ควรมองเป็นอารมณ์ของการเล่นที่คุ้มและเลือกได้เหมาะกับตัวเอง มากกว่าการรับประกันผลลัพธ์ เพราะแต่ละเกมมีรูปแบบและความเสี่ยงต่างกัน
-    </p>
-    <p slot="right" class="text-left text-base leading-relaxed text-[#efe1c2]">
-      SCLASS88 จึงเปิดให้สมาชิกเลือกทั้งเกมและโบนัสที่ตรงสไตล์ของตัวเองก่อนเริ่ม คนมีเงินเลือกจากข้อมูล ไม่ได้เลือกเพราะตัวเลขตัวใหญ่ที่สุดบนหน้าเว็บ
-    </p>
-  </ContentBoxSevenThreeFloatingBadge>
 
-  <ContentBoxFloatingBadge as="h2" title="ระบบออโต้ฝากถอนช่วยให้จัดการเครดิตสะดวกขึ้นอย่างไร">
-    <p class="mb-4 text-left text-base leading-relaxed text-[#efe1c2]">
-      ระบบออโต้ช่วยให้สมาชิกทำรายการฝากถอนและเช็กเครดิตผ่านบัญชีได้โดยตรง ลดขั้นตอนก่อนกลับไปเลือกเกมต่อ
-    </p>
+    <div slot="right" class="flex flex-col gap-4">
+      <p class="text-left text-base leading-relaxed text-[#1b2c4a]">
+        เกมลิขสิทธิ์แท้ช่วยให้สมาชิกเข้าถึงผลงานจากผู้ให้บริการหลายค่ายในรูปแบบที่เป็นระบบ ทั้งหน้าตา ฟีเจอร์ และรูปแบบเกมที่แตกต่างกัน
+      </p>
+      <p class="text-left text-base leading-relaxed text-[#1b2c4a]">
+        ONEHENG89 จึงเหมาะกับคนที่ชอบเปลี่ยนแนวเล่นโดยไม่ต้องเปลี่ยนเว็บไซต์ตาม เกมจะอลังการแค่ไหนก็เรื่องหนึ่ง แต่เปิดแล้วเล่นง่ายนี่แหละของจริง
+      </p>
+    </div>
+  </ContentBoxSevenThreeCyberCut>
 
-    <p class="text-left text-base leading-relaxed text-[#efe1c2]">
-      เมื่อเชื่อมกับ SCLASS88 การจัดการเครดิตจึงอยู่ในระบบเดียวกับสมาชิกและเกม เงินมีหน้าที่เคลื่อนที่ ส่วนเจ้าของเงินควรใช้เวลาไปกับเรื่องที่สนุกกว่า
-    </p>
-  </ContentBoxFloatingBadge>
-
-  <LatestWinnersPremium />
-
-  <ContentBoxNeumorphism as="h2" title="ระบบสมาชิก SCLASS88 รวมเครดิต โบนัส และประวัติรายการไว้ตรงไหน">
-    <p class="mb-4 text-left text-base leading-relaxed text-[#efe1c2]">
-      ระบบสมาชิก SCLASS88 รวมเครดิต โบนัส และประวัติรายการไว้ในพื้นที่เดียว ทำให้ตรวจสอบข้อมูลสำคัญได้โดยไม่ต้องเปิดหลายหน้า
+  <ContentBoxCyberCut as="h2" title="ระบบออโต้ช่วยให้ฝากถอนและเช็กเครดิตสะดวกขึ้นอย่างไร">
+    <p class="mb-4 text-left text-base leading-relaxed text-[#1b2c4a]">
+      ระบบออโต้ช่วยให้สมาชิกส่งรายการฝากถอนและตรวจเครดิตผ่านบัญชีได้โดยตรง ลดขั้นตอนก่อนกลับไปเลือกเกมต่อ
     </p>
 
-    <p class="text-left text-base leading-relaxed text-[#efe1c2]">
-      คนที่เล่นหลายเกมหรือใช้หลายโปรจึงยังตามข้อมูลตัวเองได้ง่าย ของสำคัญควรมีที่อยู่ชัด โดยเฉพาะเครดิต เรื่องนี้ไม่เหมาะกับเกมซ่อนหา
+    <p class="text-left text-base leading-relaxed text-[#1b2c4a]">
+      เมื่อเชื่อมกับ ONEHENG89 การจัดการเงินจึงอยู่ในระบบเดียวกับเกมและสมาชิก เงินมีหน้าที่เคลื่อนที่ ส่วนเจ้าของเงินไม่ควรต้องวิ่งตามเมนู
     </p>
-  </ContentBoxNeumorphism>
+  </ContentBoxCyberCut>
 
-  <ContentBoxTwoNeumorphism as="h2" title="ทางเข้าและเข้าสู่ระบบผ่านมือถือ ใช้งานง่ายแค่ไหน">
-    <p slot="left" class="text-left text-base leading-relaxed text-[#efe1c2]">
-      ทางเข้าและหน้าล็อกอินรองรับการใช้งานผ่านมือถือ สมาชิกใช้บัญชีเดิมเพื่อเข้าถึงเกม เครดิต โบนัส และข้อมูลส่วนตัวได้ต่อเนื่อง
+  <LatestWinners3 />
+
+  <ContentBoxSpecial as="h2" title="ระบบสมาชิก ONEHENG89 รวมเครดิต โบนัส และประวัติไว้ตรงไหน">
+    <p slot="left" class="text-left text-base leading-relaxed text-[#1b2c4a]">
+      หน้าสมาชิกรวมเครดิต โบนัส และประวัติรายการไว้ในพื้นที่เดียว ช่วยให้ตรวจข้อมูลสำคัญได้โดยไม่ต้องเปิดหลายหน้า
     </p>
-    <p slot="right" class="text-left text-base leading-relaxed text-[#efe1c2]">
-      ระบบของ SCLASS88 จึงเหมาะกับคนที่ต้องการเปิดแล้วใช้งานต่อได้ทันที มือถือมีไว้ลดสัมภาระ ไม่ใช่เพิ่มขั้นตอนให้ต้องเปิดคอมตามมาอีกเครื่อง
+    <p slot="right" class="text-left text-base leading-relaxed text-[#1b2c4a]">
+      คนที่เล่นหลายเกมหรือใช้หลายสิทธิ์จึงตามข้อมูลได้ง่ายขึ้น ของสำคัญควรมีที่อยู่ชัด โดยเฉพาะเครดิต เรื่องนี้ไม่เหมาะกับเกมซ่อนหา
     </p>
-  </ContentBoxTwoNeumorphism>
+  </ContentBoxSpecial>
+
+  <ContentBoxTwoPremium as="h2" title="สมัครและเข้าสู่ระบบผ่านมือถือใช้งานง่ายแค่ไหน">
+    <p slot="left" class="text-left text-base leading-relaxed text-[#1b2c4a]">
+      การสมัครและเข้าสู่ระบบรองรับการใช้งานผ่านมือถือ สมาชิกใช้บัญชีเดิมเพื่อเลือกสล็อต เช็กเครดิต ดูโบนัส และจัดการข้อมูลได้ต่อเนื่อง
+    </p>
+    <p slot="right" class="text-left text-base leading-relaxed text-[#1b2c4a]">
+      ONEHENG89 จึงเหมาะกับคนที่ต้องการเปิดแล้วใช้งานต่อทันที มือถือมีไว้ทำให้ชีวิตเบา ไม่ใช่สร้างขั้นตอนเพิ่มจนต้องเปิดคอมช่วย
+    </p>
+  </ContentBoxTwoPremium>
 
   <LoginRtpSection />
 
-  <ContentBox as="h2" title="SCLASS88 เหมาะกับคนที่ชอบเล่นสล็อตแบบไหน">
-    <p class="mb-4 text-left text-base leading-relaxed text-[#efe1c2]">
-      SCLASS88 เหมาะกับคนที่ชอบสล็อตหลายค่าย ต้องการโบนัส ระบบออโต้ และการจัดการเครดิตผ่านบัญชีเดียว โดยเน้นใช้งานง่ายทั้งมือถือและคอมพิวเตอร์
+  <ContentBox as="h2" title="ระบบออโต้ ONEHENG89 รองรับการใช้งานตลอด 24 ชั่วโมงแบบไหน">
+    <p class="mb-4 text-left text-base leading-relaxed text-[#1b2c4a]">
+      ระบบออโต้ ONEHENG89 รองรับการทำรายการและตรวจข้อมูลบัญชีได้ตลอดวัน ทำให้สมาชิกจัดการเครดิตตามเวลาที่สะดวกได้มากขึ้น
     </p>
 
-    <p class="text-left text-base leading-relaxed text-[#efe1c2]">
-      ถ้าชอบเปลี่ยนเกมตามอารมณ์และอยากให้เรื่องฝากถอนอยู่ในระบบเดียวกัน โครงแบบนี้ตอบโจทย์ได้ดี หลายเกมมีไว้เลือก หลายบัญชีส่วนใหญ่มีไว้ปวดหัว
+    <p class="text-left text-base leading-relaxed text-[#1b2c4a]">
+      สำหรับคนเล่นช่วงเวลาต่างกัน ความพร้อมของระบบสำคัญกว่าคำโฆษณาสวย ๆ เพราะตีหนึ่งแล้วใช้งานได้จริง มีค่ากว่าแบนเนอร์แพงสิบใบ
     </p>
   </ContentBox>
+
+  <ContentBoxPremium as="h2" title="ทางเข้า ONEHENG89 เว็บหลัก ช่วยให้กลับเข้าใช้งานได้สะดวกอย่างไร">
+    <p class="mb-4 text-left text-base leading-relaxed text-[#1b2c4a]">
+      ทางเข้า ONEHENG89 เว็บหลักเชื่อมสมาชิกไปยังหน้าล็อกอิน เกม โบนัส และระบบบัญชี รองรับทั้งมือถือและคอมด้วยยูสเดิม
+    </p>
+
+    <p class="text-left text-base leading-relaxed text-[#1b2c4a]">
+      การจำช่องทางหลักไว้ยังช่วยลดความสับสนจากชื่อเว็บคล้ายกันบนผลค้นหา คนมีเวลาราคาแพงไม่ควรเสียมันไปกับการสุ่มลิงก์
+    </p>
+  </ContentBoxPremium>
+
+  <ContentBoxTwo as="h2" title="ONEHENG89 เหมาะกับคนที่ชอบเล่นสล็อตหลายค่ายแบบไหน">
+    <p slot="left" class="text-left text-base leading-relaxed text-[#1b2c4a]">
+      ONEHENG89 เหมาะกับคนที่ชอบเกมสล็อตหลายสไตล์ ต้องการโบนัส ระบบออโต้ และการจัดการเครดิตจากบัญชีเดียว พร้อมใช้งานผ่านมือถือเป็นหลัก
+    </p>
+    <p slot="right" class="text-left text-base leading-relaxed text-[#1b2c4a]">
+      ถ้าชอบเลือกเกมตามอารมณ์และไม่อยากจัดการหลายระบบ โครงแบบนี้ตอบโจทย์ดี หลายเกมมีไว้เลือก ส่วนหลายบัญชีส่วนใหญ่มีไว้ลืมรหัส
+    </p>
+  </ContentBoxTwo>
 
   <SmoothCarousel />
 
   <div class="relative z-10 mx-auto mb-10 flex flex-nowrap justify-center gap-3 px-4 sm:gap-6">
     <a
       href="/register"
-      class="group relative flex flex-1 items-center justify-center rounded-full bg-gradient-to-r from-[#ffd75e] via-[#e0a81e] to-[#a3610c] px-4 py-3 text-sm font-black whitespace-nowrap text-[#1a1206] shadow-[0_10px_30px_rgba(245,197,66,0.28)] transition-all duration-300 hover:-translate-y-1 hover:scale-105 hover:shadow-[0_15px_40px_rgba(245,197,66,0.28)] sm:flex-none sm:px-10 sm:py-3.5 sm:text-base">
-      สมัครสมาชิก SCLASS88
+      class="group relative flex flex-1 items-center justify-center rounded-full bg-gradient-to-r from-[#0b3fb8] via-[#3b74e8] to-[#16a34a] px-4 py-3 text-sm font-black whitespace-nowrap text-white shadow-[0_10px_30px_rgba(11,63,184,0.24)] transition-all duration-300 hover:-translate-y-1 hover:scale-105 hover:shadow-[0_15px_40px_rgba(11,63,184,0.30)] sm:flex-none sm:px-10 sm:py-3.5 sm:text-base">
+      สมัครสมาชิก ONEHENG89
     </a>
 
     <a
       href="/login"
-      class="group relative flex flex-1 items-center justify-center rounded-full border border-[#f5c542]/45 bg-[#161006]/85 px-4 py-3 text-sm font-black whitespace-nowrap text-[#ffe9a8] backdrop-blur-sm transition-all duration-300 hover:scale-105 hover:border-[#f5c542] hover:bg-[#241906]/85 hover:shadow-[0_15px_40px_rgba(245,197,66,0.28)] sm:flex-none sm:px-10 sm:py-3.5 sm:text-base">
+      class="group relative flex flex-1 items-center justify-center rounded-full border border-[#c7dcfb] bg-white px-4 py-3 text-sm font-black whitespace-nowrap text-[#062c85] shadow-[0_10px_30px_rgba(11,63,184,0.10)] transition-all duration-300 hover:scale-105 hover:border-[#0b3fb8] hover:bg-[#e6efff] hover:shadow-[0_15px_40px_rgba(11,63,184,0.18)] sm:flex-none sm:px-10 sm:py-3.5 sm:text-base">
       เข้าสู่ระบบ
     </a>
   </div>
 
-  <Faq4 title="คำถามที่พบบ่อยเกี่ยวกับ SCLASS88" faqs={faqs} />
+  <Faq2 title="คำถามที่พบบ่อยเกี่ยวกับ ONEHENG89" faqs={faqs} />
 
-  <ReviewCardSumo />
+  <ReviewCardSumo2 />
 
   <Navfoot />
 </MainLayout>

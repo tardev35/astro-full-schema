@@ -4,8 +4,8 @@ import bgConfig from "../assets/bg.json";
 import "../styles/global.css";
 import { BRAND_NAME, BRAND_TEXT, brandProfile, fontStack, iconVersion, usesGoogleFonts } from "../lib/brandProfile";
 import { canonicalFor } from "../lib/schema";
-import Navbar from "../components/NavbarStyle10.astro";
-import Footer from "../components/FooterPremiumSumo.astro";
+import Navbar from "../components/NavbarStyle7.astro";
+import Footer from "../components/FooterStyle3.astro";
 
 // Only banner1 is ever rendered, so only banner1 is imported.
 //
@@ -54,8 +54,8 @@ const mobileBannerImg = mobileBanner
   : null;
 
 const {
-  title = "SCLASS88 เข้าสู่ระบบ สล็อตแท้เว็บตรง สนุกแตกง่าย กำไรบาน",
-  description = "SCLASS88 รวมสล็อตเว็บตรง เกมค่ายใหญ่ โบนัส กำไรบาน ระบบออโต้ และฝากถอนง่าย รองรับมือถือ เข้าสู่ระบบง่าย พร้อมเลือกเกมที่สนุกได้ตลอดวัน",
+  title = "ONEHENG89 เว็บสล็อต โบนัสไหล เกมลิขสิทธิ์แท้ ระบบออโต้ 24 ชม.",
+  description = "ONEHENG89 รวมสล็อตเกมลิขสิทธิ์แท้ โบนัสสมาชิก ระบบออโต้ ฝากถอนสะดวก รองรับมือถือ พร้อมเกมค่ายดังและทางเข้าใช้งานได้ตลอด 24 ชั่วโมง",
   robots = "index, follow",
 } = Astro.props;
 
@@ -177,7 +177,7 @@ const profile = brandProfile(Astro.site);
 
           {block === "appmeta" && (
             <Fragment>
-              {profile.showAppTitle && <meta name="apple-mobile-web-app-title" content="sclass88" />}
+              {profile.showAppTitle && <meta name="apple-mobile-web-app-title" content="oneheng89" />}
               <link rel="manifest" href="/site.webmanifest" />
             </Fragment>
           )}
@@ -219,7 +219,7 @@ const profile = brandProfile(Astro.site);
         background-attachment: fixed;
         background-repeat: no-repeat;
         margin: 0;
-        background-color: #000000;
+        background-color: #f3f8ff;
         font-weight: 400;
         font-family: var(--font-sans) !important;
       }
@@ -272,7 +272,7 @@ const profile = brandProfile(Astro.site);
         }
         <Image
           src={mainBanner}
-          alt="แบนเนอร์ SCLASS88 พื้นหลังสีดำมีเส้นโค้งสีทองและประกายแสงกระจายอยู่ กลางภาพเป็นโลโก้ Sclass88 ตัวอักษรทองนูนบนโล่ห์ทองที่มีมงกุฎและเพชรอยู่ด้านบน ถัดลงมาเป็นตัวอักษรทองขนาดใหญ่ว่า SCLASS88 เข้าสู่ระบบ ใต้ลงมาเป็นแถบสีดำขอบทองเขียนว่า สล็อตแท้เว็บตรง สนุกแตกง่าย กำไรบาน และบรรทัดเล็กว่า รวมสล็อตค่ายใหญ่ โบนัส และระบบออโต้ไว้ในบัญชีเดียว ด้านซ้ายเป็นพรีเซนเตอร์หญิงสวมชุดสีดำคาดทอง ข้างกันเป็นไพ่โพดำกับไพ่เอซ และชิปคาสิโนสีทอง ด้านขวาเป็นพรีเซนเตอร์หญิงอีกคนสวมชุดสีดำคาดทอง มีมงกุฎทอง วงล้อสล็อตที่มีเลข 7 7 และคำว่า BAR กับลูกเต๋าสีทอง"
+          alt="แบนเนอร์ ONEHENG89 พื้นหลังสีขาวเทาอมฟ้ามีเส้นแสงโค้งสีฟ้าและเขียว ด้านซ้ายเป็นโลโก้ ONEHENG89 ตัวอักษรเขียวขอบดำ คู่กับสัญลักษณ์วงกลมลูกศรสีเขียว ถัดลงมาเป็นตัวอักษรเขียวขนาดใหญ่ว่า ONEHENG89 และตัวอักษรน้ำเงินว่า เว็บสล็อต โบนัสไหล ใต้ลงมาเป็นแถบขอบมนเขียนว่า เกมลิขสิทธิ์แท้ และ ระบบออโต้ 24 ชม. พร้อมบรรทัดว่า เล่นผ่านมือถือสะดวก ล่างสุดเป็นปุ่มน้ำเงินว่า สมัครสมาชิก และปุ่มขาวว่า เข้าสู่ระบบ รอบภาพมีการ์ดสีขาวเขียนว่า ปลอดภัย มั่นใจ ระบบมาตรฐานสากล ฝาก-ถอน ออโต้ รวดเร็ว ทันใจ 24 ชม. และ รองรับทุกอุปกรณ์ เล่นได้ทุกที่ ทุกเวลา ด้านขวาเป็นพรีเซนเตอร์หญิงผมยาวสวมชุดสีขาว และสัญลักษณ์ลูกศรวงกลมสีน้ำเงินสลับเขียวขนาดใหญ่"
           loading="eager"
           fetchpriority="high"
           widths={[412, 640, 828, 1024, 1280, 1600, 1900]}

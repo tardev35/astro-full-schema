@@ -946,6 +946,68 @@ Applied on 2026-07-15 for HENGJUD365: cleaned `ContentBox`,
 `Navbar`/`Footer`/`NavbarStyle*`/`LatestWinnersPremium`/old
 `ReviewCardSumo` untouched as inventory.
 
+### How the prose should sound
+
+Asked for on 2026-08-26, after DOLLAR789's `/promotion` intro shipped reading
+like a manual. Two voices, picked by what the page is for.
+
+**Sales pages — `/promotion`, `/register`, `/login`, hero copy.** The owner
+supplied the target shape himself, quoting a competitor:
+
+> หากคุณกำลังมองหาความคุ้มค่าที่ไม่เหมือนใคร CEETONG789 พร้อมมอบโปรโมชั่นและ
+> โบนัสที่หลากหลาย เพื่อเพิ่มโอกาสในการชนะและประสบการณ์ที่เหนือกว่า
+
+Three moves: open on what the reader is after (`หากคุณกำลังมองหา…`), make the
+brand the subject that supplies it (`<BRAND> พร้อมมอบ…`), close on the payoff
+(`เพื่อ…`). What shipped on DOLLAR789's `/promotion`:
+
+> หากคุณกำลังมองหาความคุ้มค่าที่ไม่เหมือนใคร **DOLLAR789** พร้อมมอบโปรโมชั่น
+> และโบนัสที่หลากหลาย ทั้งโปรสมาชิกใหม่ คาสิโนสด บาคาร่า และแทงบอล รวมไว้ให้
+> เลือกครบในหน้าเดียว
+>
+> ทุกรายการระบุยอดรับ เงื่อนไขเทิร์น และช่วงเวลาที่ใช้ได้ไว้บนภาพอย่างชัดเจน
+> คุณจึงเลือกโปรที่ตรงกับสไตล์การเล่นและงบของตัวเองได้ทันที สมัครเพียงครั้งเดียว
+> ใช้ได้ทุกสิทธิ์ พร้อมระบบฝากถอนออโต้และหน้าเมมเบอร์ที่ติดตามเครดิตกับโปรที่ใช้
+> อยู่ได้ตลอดเวลา เพื่อประสบการณ์การเล่นที่คุ้มค่าและต่อเนื่องกว่าที่เคย
+
+**Informational pages — `index.astro`, `/about-us`, `/ทดลองเล่น`, `/บทความ`.**
+Keep the voice `index.astro` already has: short sentences, second person
+implied, and a closing line that is an observation rather than a slogan —
+`เซียนจริงไม่ได้เข้าโต๊ะเร็วที่สุด แต่รู้ว่าตัวเองกำลังจะเล่นอะไร` ·
+`เงินอยู่ตรงไหนต้องรู้ เกมอยู่ตรงไหนค่อยว่ากัน`. Do NOT push the sales voice
+into these; a page that explains something loses its authority the moment it
+starts selling.
+
+**The five tells of copy that reads forced.** All five were in the paragraph
+this section replaced:
+
+1. **The page describing itself** — `หน้านี้รวมภาพโปรโมชั่นที่…`. Nobody speaks
+   this way; it is pure SEO boilerplate. Start from the reader or the brand.
+2. **Two keyword lists back to back** with no real sentence between them, e.g.
+   `ทั้งโปรสมาชิกใหม่ คาสิโนสด บาคาร่า แทงบอล และสิทธิ์ที่ผูกกับระบบฝากถอนออโต้`
+   immediately followed by `ยอดรับ เงื่อนไข เทิร์น และช่วงเวลาที่ใช้ได้`.
+   One list per paragraph, and it has to sit inside a sentence.
+3. **Manual voice** — `จึงควรอ่านให้ครบก่อน… จากนั้นสมัคร… แล้วเช็ก…` is
+   step 1-2-3. State what is where; let the reader decide.
+4. **A closing line the paragraph did not earn.** The old ending —
+   `ไม่ใช่เพิ่มงานอ่านเงื่อนไขระดับรายงานประจำปี` — contradicted the three lines
+   above it that had just ordered the reader to read every condition.
+5. **One block with no breathing room.** Two short paragraphs beat one long one
+   every time. Quick check on a page you inherit: if its first `<p>` is over
+   ~250 characters it is almost certainly one of these.
+
+**Rewriting for voice never costs keywords.** Check the built HTML, not the
+source, and expect the count to go UP rather than down — the DOLLAR789 rewrite
+kept every term and added `โบนัส`, which the old paragraph did not have.
+
+**One phrase to keep out: anything claiming better odds** — `เพิ่มโอกาสในการ
+ชนะ` and its variants. A bonus does not change a game's payout rate, so it is a
+checkably false claim, and it is the category ad platforms cite when they pull a
+gambling site. `เพื่อประสบการณ์การเล่นที่คุ้มค่าและต่อเนื่องกว่าที่เคย` carries
+the same lift with nothing to disprove. This is a recommendation, not an
+instruction from the owner — the source quote he supplied did contain
+`เพิ่มโอกาสในการชนะ`. Say so once and use his wording if he asks again.
+
 ## Phase 3 — Retheme every component index.astro touches
 
 Identify the old brand's dominant Tailwind color family (grep the
@@ -1071,8 +1133,10 @@ every paragraph pushes the grid further down.
 Its whole body is, in order:
 
 1. the `ContentBox` `title` (the page's single `<h1>`)
-2. **one short intro paragraph — about four lines, and that is the entire prose
-   budget for the page**
+2. **one short intro — about four lines total, and that is the entire prose
+   budget for the page.** One paragraph or two; DOLLAR789 ships two short
+   ones, because a single block of four lines is itself one of the tells in
+   "How the prose should sound" above
 3. the promo image grid (the `slide*` files, `grid-cols-1 sm:grid-cols-2`)
 4. one `สมัครสมาชิก <BRAND>` button
 

@@ -951,8 +951,8 @@ Applied on 2026-07-15 for HENGJUD365: cleaned `ContentBox`,
 Asked for on 2026-08-26, after DOLLAR789's `/promotion` intro shipped reading
 like a manual. Two voices, picked by what the page is for.
 
-**Sales pages — `/promotion`, `/register`, `/login`, hero copy.** The owner
-supplied the target shape himself, quoting a competitor:
+**Sales pages — `/promotion`, `/register`, `/login`, `/ทดลองเล่น`, hero copy.**
+The owner supplied the target shape himself, quoting a competitor:
 
 > หากคุณกำลังมองหาความคุ้มค่าที่ไม่เหมือนใคร CEETONG789 พร้อมมอบโปรโมชั่นและ
 > โบนัสที่หลากหลาย เพื่อเพิ่มโอกาสในการชนะและประสบการณ์ที่เหนือกว่า
@@ -970,13 +970,37 @@ brand the subject that supplies it (`<BRAND> พร้อมมอบ…`), clos
 > ใช้ได้ทุกสิทธิ์ พร้อมระบบฝากถอนออโต้และหน้าเมมเบอร์ที่ติดตามเครดิตกับโปรที่ใช้
 > อยู่ได้ตลอดเวลา เพื่อประสบการณ์การเล่นที่คุ้มค่าและต่อเนื่องกว่าที่เคย
 
-**Informational pages — `index.astro`, `/about-us`, `/ทดลองเล่น`, `/บทความ`.**
+**Informational pages — `index.astro`, `/about-us`, `/บทความ`.**
 Keep the voice `index.astro` already has: short sentences, second person
 implied, and a closing line that is an observation rather than a slogan —
 `เซียนจริงไม่ได้เข้าโต๊ะเร็วที่สุด แต่รู้ว่าตัวเองกำลังจะเล่นอะไร` ·
 `เงินอยู่ตรงไหนต้องรู้ เกมอยู่ตรงไหนค่อยว่ากัน`. Do NOT push the sales voice
 into these; a page that explains something loses its authority the moment it
 starts selling.
+
+**`/ทดลองเล่น` is a sales page, not an article** — corrected by the owner on
+2026-08-26 after it shipped reading as narration: *"เหมือนการบรรยายเลย แต่เรา
+ต้องใช้โทนเชิญชวนมาลองเล่น"*. Its headings go with it. What were
+`โหมดทดลองเล่นบอกอะไรได้ และบอกอะไรไม่ได้` and `จากโหมดทดลองไปเล่นจริงกับ <BRAND>
+ควรเตรียมอะไรบ้าง` — both lecture titles — became `ทดลองเล่นฟรีไม่จำกัดรอบ
+ลองให้พอใจก่อนใช้เครดิตจริง` and `พร้อมเมื่อไหร่ สมัครสมาชิก <BRAND>
+แล้วเริ่มเล่นจริงได้ทันที`. The page is not in the docx at all (`content.txt` has
+no `ทดลองเล่น` section), so every word on it was invented by an earlier rebrand —
+rewrite it freely, headings included.
+
+**Check what the buttons actually do before promising anything.** The inviting
+voice makes it very easy to write a claim the page cannot honour. The first draft
+of that rewrite opened `เลือกค่ายที่สนใจแล้วกดเข้าไปดูของจริงได้เลย ไม่มีเงื่อนไข
+ไม่ต้องสมัครก่อน` — but all twelve game cards on the page link to `/register`, so
+it was lying to the visitor in its first sentence. Grep the `href`s on the page
+you are writing copy for and describe THAT path instead: `เลือกค่ายที่สนใจ
+สมัครยูสเดียวใช้เวลาไม่กี่นาที แล้วเข้าไปลองโหมดทดลองของค่ายนั้นได้เลย`. Warm and
+true is the target; warm and false is worse than the dry version it replaced.
+
+**Keep the safety and terms lines when you warm a page up.** Demo credit cannot be
+withdrawn and does not count toward any promotion's turnover; not every game has a
+demo button; never share a password or OTP. Say each once, plainly, and move on.
+Dropping them to sound more inviting is not a tone improvement.
 
 **The five tells of copy that reads forced.** All five were in the paragraph
 this section replaced:
@@ -993,8 +1017,12 @@ this section replaced:
    `ไม่ใช่เพิ่มงานอ่านเงื่อนไขระดับรายงานประจำปี` — contradicted the three lines
    above it that had just ordered the reader to read every condition.
 5. **One block with no breathing room.** Two short paragraphs beat one long one
-   every time. Quick check on a page you inherit: if its first `<p>` is over
-   ~250 characters it is almost certainly one of these.
+   every time. Measure EVERY `<p>` on a page you inherit, not just the first —
+   `/about-us` on DOLLAR789 had all fourteen of them between 248 and 366
+   characters, and the uniformity was the whole problem: no rhythm, every
+   point weighted the same, so the page read as one flat narration. Rewritten
+   to 25 paragraphs of 72–169 characters with the same word count and the same
+   six `<h2>`s. Aim for 110–190, and let a short one land a point on its own.
 
 **Rewriting for voice never costs keywords.** Check the built HTML, not the
 source, and expect the count to go UP rather than down — the DOLLAR789 rewrite

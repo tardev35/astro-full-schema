@@ -13,24 +13,25 @@ const isActive = (path: string) => isActivePath(currentPath, path);
 const links = [
   { name: "หน้าแรก", path: "/", icon: "🏠" },
   { name: "โปรโมชั่น", path: "/promotion", icon: "🎁" },
+  { name: "สมัครสมาชิก", path: "/register", icon: "📝" },
+  { name: "เข้าสู่ระบบ", path: "/login", icon: "🔑" },
   { name: "ทดลองเล่น", path: "/ทดลองเล่น", icon: "🎰" },
-  { name: "ทางเข้า", path: "/ทางเข้า", icon: "🌐" },
   { name: "เกี่ยวกับเรา", path: "/about-us", icon: "📖" },
   { name: "ติดต่อเรา", path: "/contact-us", icon: "📞" },
 ];
 ---
 
-<nav class="sticky top-0 z-50 w-full border-b border-[#ff7a18]/35 bg-[#160604] font-sans shadow-[0_4px_20px_rgba(255,122,24,0.18)] backdrop-blur-md">
+<nav class="sticky top-0 z-50 w-full border-b border-[#ef4444]/35 bg-[#1a0303] font-sans shadow-[0_4px_20px_rgba(239,68,68,0.18)] backdrop-blur-md">
   <div class="flex h-[75px] w-full items-center justify-between px-4 xl:px-8">
     <div class="z-50 flex items-center">
       <a href="/" class="group relative flex items-center">
-        <div class="absolute inset-0 scale-0 rounded-full bg-[#ff7a18]/25 blur-xl transition-transform duration-500 group-hover:scale-150"></div>
+        <div class="absolute inset-0 scale-0 rounded-full bg-[#ef4444]/25 blur-xl transition-transform duration-500 group-hover:scale-150"></div>
         <Picture
           src={mainLogo!}
-          alt="โลโก้ YIMSIAM88 รูปหน้าจั่ววัดไทยสีทองมีลายกนกและช่อฟ้า ด้านล่างเขียนว่า Yimsiam88 ด้วยตัวอักษรสีทองอมส้ม"
+          alt="โลโก้ PIGAUTO รูปหมูสีชมพูยิ้มอยู่ในวงเฟืองสีเงิน ใต้ภาพเขียนว่า PIGAUTO ด้วยตัวอักษรสีขาวขอบดำ"
           loading="eager"
           fetchpriority="high"
-          class="relative h-[40px] w-auto drop-shadow-[0_0_12px_rgba(255,122,24,0.45)] transition-transform group-hover:scale-105 xl:h-[45px]"
+          class="relative h-[40px] w-auto drop-shadow-[0_0_12px_rgba(239,68,68,0.45)] transition-transform group-hover:scale-105 xl:h-[45px]"
           formats={["avif", "webp"]}
           fallbackFormat="webp"
         />
@@ -42,11 +43,11 @@ const links = [
         links.map((item) => (
           <a
             href={item.path}
-            class={`group relative skew-x-[-15deg] overflow-hidden border px-5 py-2 transition-all duration-300 ${isActive(item.path) ? "border-[#f6c475] bg-[#8d2b09]/35 shadow-[0_0_15px_rgba(246,196,117,0.35)]" : "border-white/10 bg-white/5 hover:border-[#ff7a18]/60"}`}>
+            class={`group relative skew-x-[-15deg] overflow-hidden border px-5 py-2 transition-all duration-300 ${isActive(item.path) ? "border-[#f5c542] bg-[#7f1d1d]/35 shadow-[0_0_15px_rgba(245,197,66,0.35)]" : "border-white/10 bg-white/5 hover:border-[#ef4444]/60"}`}>
             <div
-              class={`absolute inset-0 translate-y-full bg-gradient-to-r from-[#8d2b09] to-[#ff7a18] transition-transform duration-300 ${isActive(item.path) ? "translate-y-0 opacity-25" : "opacity-40 group-hover:translate-y-0"}`}></div>
+              class={`absolute inset-0 translate-y-full bg-gradient-to-r from-[#7f1d1d] to-[#ef4444] transition-transform duration-300 ${isActive(item.path) ? "translate-y-0 opacity-25" : "opacity-40 group-hover:translate-y-0"}`}></div>
             <span
-              class={`relative z-10 block skew-x-[15deg] text-sm font-bold tracking-wide transition-colors ${isActive(item.path) ? "text-[#ffd98a] drop-shadow-[0_0_5px_rgba(255,122,24,0.6)]" : "text-[#e8d5c2] group-hover:text-white"}`}>
+              class={`relative z-10 block skew-x-[15deg] text-sm font-bold tracking-wide transition-colors ${isActive(item.path) ? "text-[#ffe9a8] drop-shadow-[0_0_5px_rgba(239,68,68,0.6)]" : "text-[#f7e2d6] group-hover:text-white"}`}>
               <span aria-hidden="true" class="mr-1">
                 {item.icon}
               </span>
@@ -60,11 +61,11 @@ const links = [
     <div class="z-50 flex items-center gap-2">
       <button
         id="hamburger-btn"
-        class="relative flex h-[45px] w-[45px] flex-col items-center justify-center space-y-1.5 rounded-lg border border-[#ff7a18]/35 bg-[#8d2b09]/25 p-2 shadow-[0_0_10px_rgba(255,122,24,0.25)] transition-all hover:bg-[#8d2b09]/45 xl:hidden"
+        class="relative flex h-[45px] w-[45px] flex-col items-center justify-center space-y-1.5 rounded-lg border border-[#ef4444]/35 bg-[#7f1d1d]/25 p-2 shadow-[0_0_10px_rgba(239,68,68,0.25)] transition-all hover:bg-[#7f1d1d]/45 xl:hidden"
         aria-label="เปิดหรือปิดเมนู">
-        <span class="hamburger-line h-[2px] w-6 origin-center bg-[#f6c475] transition-all duration-300"></span>
-        <span class="hamburger-line h-[2px] w-6 bg-[#f6c475] transition-all duration-300"></span>
-        <span class="hamburger-line h-[2px] w-6 origin-center bg-[#f6c475] transition-all duration-300"></span>
+        <span class="hamburger-line h-[2px] w-6 origin-center bg-[#f5c542] transition-all duration-300"></span>
+        <span class="hamburger-line h-[2px] w-6 bg-[#f5c542] transition-all duration-300"></span>
+        <span class="hamburger-line h-[2px] w-6 origin-center bg-[#f5c542] transition-all duration-300"></span>
       </button>
     </div>
   </div>
@@ -73,13 +74,13 @@ const links = [
 
   <div
     id="mobile-sidebar"
-    class="fixed top-0 right-0 z-40 h-screen w-[280px] translate-x-full transform overflow-y-auto border-l border-[#ff7a18]/55 bg-[#160604] shadow-[-10px_0_30px_rgba(0,0,0,0.8)] transition-transform duration-300 ease-out xl:hidden">
+    class="fixed top-0 right-0 z-40 h-screen w-[280px] translate-x-full transform overflow-y-auto border-l border-[#ef4444]/55 bg-[#1a0303] shadow-[-10px_0_30px_rgba(0,0,0,0.8)] transition-transform duration-300 ease-out xl:hidden">
     <div class="flex flex-col space-y-3 px-6 pt-24 pb-10">
       {
         links.map((item) => (
           <a
             href={item.path}
-            class={`sidebar-item flex items-center rounded-xl border px-4 py-3.5 transition-all ${isActive(item.path) ? "border-[#ff7a18] bg-[#8d2b09]/35 text-[#ffd98a] shadow-[inset_4px_0_0_#f6c475]" : "border-transparent bg-white/5 text-[#c9b6a3] hover:bg-white/10 hover:text-white"}`}>
+            class={`sidebar-item flex items-center rounded-xl border px-4 py-3.5 transition-all ${isActive(item.path) ? "border-[#ef4444] bg-[#7f1d1d]/35 text-[#ffe9a8] shadow-[inset_4px_0_0_#f5c542]" : "border-transparent bg-white/5 text-[#cfa79c] hover:bg-white/10 hover:text-white"}`}>
             <span aria-hidden="true" class="mr-3 text-xl">
               {item.icon}
             </span>
@@ -94,7 +95,7 @@ const links = [
 <style is:global>
   #hamburger-btn.active .hamburger-line:nth-child(1) {
     transform: translateY(8px) rotate(45deg);
-    background-color: #ff7a18;
+    background-color: #ef4444;
   }
   #hamburger-btn.active .hamburger-line:nth-child(2) {
     opacity: 0;
@@ -102,7 +103,7 @@ const links = [
   }
   #hamburger-btn.active .hamburger-line:nth-child(3) {
     transform: translateY(-8px) rotate(-45deg);
-    background-color: #ff7a18;
+    background-color: #ef4444;
   }
 
   .sidebar-item {
@@ -132,6 +133,9 @@ const links = [
   }
   .sidebar-item:nth-child(6) {
     transition-delay: 0.35s;
+  }
+  .sidebar-item:nth-child(7) {
+    transition-delay: 0.4s;
   }
 </style>
 

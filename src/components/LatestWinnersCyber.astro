@@ -8,7 +8,7 @@ import { brandFlag, brandPick } from "../lib/brandProfile";
 
 const bankPool = [
   { name: "KBank", color: "bg-[#1155cc]", icon: kbankLogo.src },
-  { name: "SCB", color: "bg-[#4e1c80]", icon: scbLogo.src },
+  { name: "SCB", color: "bg-[#822020]", icon: scbLogo.src },
   { name: "Krungsri", color: "bg-[#fcd34d]", icon: krungsriLogo.src },
   { name: "KTB", color: "bg-[#0ea5e9]", icon: ktbLogo.src },
   { name: "TTB", color: "bg-[#1279be]", icon: ttbLogo.src },
@@ -27,15 +27,15 @@ const initialRows = Array.from({ length: 5 }, (_, i) => ({
 
 <div class="mx-auto w-full max-w-[1300px] p-4">
   <section
-    aria-label="รายการฝากถอนผ่าน True Wallet ล่าสุดของ BUNNY555"
-    class="relative border-r-4 border-l-4 border-[#ec4899] bg-[#ffffff]/92 px-4 py-8 shadow-[0_10px_30px_rgba(157,23,77,0.15)] md:p-10"
+    aria-label="รายการฝากถอนออโต้ล่าสุดของสมาชิก PIGAUTO"
+    class="relative border-r-4 border-l-4 border-[#ef4444] bg-[#280707]/92 px-4 py-8 shadow-[0_10px_30px_rgba(239,68,68,0.15)] md:p-10"
     style="clip-path: polygon(20px 0, calc(100% - 20px) 0, 100% 20px, 100% calc(100% - 20px), calc(100% - 20px) 100%, 20px 100%, 0 calc(100% - 20px), 0 20px);">
-    <div class="absolute top-0 left-0 h-[1px] w-full bg-gradient-to-r from-transparent via-[#ec4899] to-transparent"></div>
-    <div class="absolute bottom-0 left-0 h-[1px] w-full bg-gradient-to-r from-transparent via-[#be185d] to-transparent"></div>
+    <div class="absolute top-0 left-0 h-[1px] w-full bg-gradient-to-r from-transparent via-[#ef4444] to-transparent"></div>
+    <div class="absolute bottom-0 left-0 h-[1px] w-full bg-gradient-to-r from-transparent via-[#f5c542] to-transparent"></div>
 
-    <div class="relative z-10 mb-8 flex items-center justify-between border-b border-[#f9c2d9] pb-4">
-      <p class="text-xl font-black tracking-[0.2em] text-[#be185d]">/// BUNNY555_TRUE_WALLET</p>
-      <span class="animate-pulse border border-[#be185d]/60 px-2 py-1 text-xs font-bold tracking-widest text-[#be185d]">24 ชม.</span>
+    <div class="relative z-10 mb-8 flex items-center justify-between border-b border-[#6b2020] pb-4">
+      <p class="text-xl font-black tracking-[0.2em] text-[#f5c542]">/// PIGAUTO_AUTO_WALLET</p>
+      <span class="animate-pulse border border-[#f5c542]/60 px-2 py-1 text-xs font-bold tracking-widest text-[#f5c542]">24 ชม.</span>
     </div>
 
     <div
@@ -51,13 +51,13 @@ const initialRows = Array.from({ length: 5 }, (_, i) => ({
       {
         initialRows.map((row) => (
           <div data-winner-row class="winner-row origin-left transform transition-all duration-500 ease-out">
-            <div class="flex items-center justify-between border-l-2 border-[#ec4899] bg-gradient-to-r from-[#fff2f7] to-transparent p-3 backdrop-blur-sm transition-colors hover:bg-[#ffe4f0]">
+            <div class="flex items-center justify-between border-l-2 border-[#ef4444] bg-gradient-to-r from-[#33090a] to-transparent p-3 backdrop-blur-sm transition-colors hover:bg-[#4a1010]">
               <div class="flex items-center gap-4">
-                <div data-winner-bank class={`flex h-8 w-8 items-center justify-center border border-[#f9c2d9] ${row.bank.color}`}>
+                <div data-winner-bank class={`flex h-8 w-8 items-center justify-center border border-[#6b2020] ${row.bank.color}`}>
                   <img data-winner-icon src={row.bank.icon} alt="" width="20" height="20" loading="lazy" decoding="async" class="h-5 w-5 object-contain" />
                 </div>
-                <div class="font-mono text-sm text-[#7a1038]">
-                  USR_ID: <span data-winner-user class="font-bold text-[#be185d]">{row.user}</span>
+                <div class="font-mono text-sm text-[#f7e2d6]">
+                  USR_ID: <span data-winner-user class="font-bold text-[#f5c542]">{row.user}</span>
                 </div>
               </div>
               <div class="flex items-center gap-6">
@@ -68,8 +68,8 @@ const initialRows = Array.from({ length: 5 }, (_, i) => ({
                   class={`winner-status font-mono text-[10px] tracking-widest ${row.pending ? "is-pending" : "is-verified"}`}>
                   {row.pending ? "[กำลังทำรายการ]" : "[ทำรายการสำเร็จ]"}
                 </div>
-                <div class="font-mono text-xl font-black text-[#be185d]">
-                  <span data-winner-amount>{row.amount}</span> <span class="text-xs text-[#a8577a]">THB</span>
+                <div class="font-mono text-xl font-black text-[#f5c542]">
+                  <span data-winner-amount>{row.amount}</span> <span class="text-xs text-[#cfa79c]">THB</span>
                 </div>
               </div>
             </div>
@@ -78,8 +78,8 @@ const initialRows = Array.from({ length: 5 }, (_, i) => ({
       }
     </div>
 
-    <p class="relative z-10 mt-6 text-left text-[11px] leading-relaxed tracking-wide text-[#a8577a]">
-      รายการที่แสดงเป็นตัวอย่างการทำรายการฝากถอนผ่าน True Wallet ของ BUNNY555 ซึ่งสมาชิกทำผ่านหน้าบัญชีได้เองตลอด 24 ชั่วโมง สถานะจริงของแต่ละรายการให้ดูจากหน้าบัญชีของสมาชิกเอง
+    <p class="relative z-10 mt-6 text-left text-[11px] leading-relaxed tracking-wide text-[#cfa79c]">
+      รายการที่แสดงเป็นตัวอย่างการฝากถอนออโต้ของสมาชิก PIGAUTO ทั้งผ่านวอลเล็ทและบัญชีธนาคาร ซึ่งส่งรายการเองได้จากหน้าสมาชิกตลอด 24 ชั่วโมง สถานะจริงของแต่ละรายการให้ยึดตามหน้าสมาชิกของตัวเอง
     </p>
 
     <script type="application/json" data-winners-banks set:html={JSON.stringify(bankPool)} />
@@ -98,12 +98,12 @@ const initialRows = Array.from({ length: 5 }, (_, i) => ({
   }
 
   .winner-status.is-pending {
-    color: #be185d;
-    border-color: #ec4899;
+    color: #f5c542;
+    border-color: #ef4444;
   }
   .winner-status.is-verified {
-    color: #15803d;
-    border-color: color-mix(in oklab, #15803d 50%, transparent);
+    color: #22c55e;
+    border-color: color-mix(in oklab, #22c55e 50%, transparent);
   }
 
   .winner-row.is-entering {

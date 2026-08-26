@@ -1,6 +1,6 @@
 ---
 const {
-  message = "BUNNY555 รวมสล็อตค่ายใหญ่ทั้ง PG Slot และ JILI ไว้ในบัญชีเดียว เลือกค่ายแล้วเข้าเกมได้ทันที • โบนัสจัดไว้เป็นส่วนหนึ่งของระบบสมาชิก เช็กโปรที่เปิดอยู่ก่อนเลือกใช้ได้ทุกครั้ง • ฝากถอนผ่าน True Wallet จัดการเครดิตจากมือถือ ดูยอดและประวัติได้จากจุดเดียว • หน้าสมาชิกรวมเครดิต โบนัส และประวัติรายการไว้ในบัญชีเดียว • สมัครผ่านมือถือไม่กี่ขั้นตอน แล้วเข้าเลือกสล็อตต่อได้เลย • ทางเข้า BUNNY555 เว็บหลัก รองรับทั้งมือถือและคอมด้วยบัญชีเดิม",
+  message = "PIGAUTO เว็บสล็อตออโต้แท้ ไม่มีขั้นต่ำ รวมค่ายดังไว้ในยูสเดียว เลือกค่ายแล้วเข้าเกมได้ทันที • รองรับวอลเล็ทเต็มระบบ ฝากถอนออโต้จากมือถือ ดูยอดและประวัติได้จากจุดเดียว • หน้าสมาชิกรวมเครดิต โปร และรายการย้อนหลังไว้ที่เดียว เช็กสถานะเองได้ตลอด • โปรสมาชิกใหม่ดูยอดรับ เงื่อนไข และเทิร์นได้ก่อนกดรับทุกครั้ง • ทางเข้า PIGAUTO เว็บหลัก ใช้ยูสเดิมสลับมือถือกับคอมได้ ไม่ต้องเริ่มใหม่",
 } = Astro.props;
 
 const SCROLL_PX_PER_SEC = 50;
@@ -11,18 +11,18 @@ const scrollSeconds = Math.max(12, Math.round((message.length * PX_PER_CHAR + TR
 
 <div class="mx-auto w-full max-w-7xl px-4 py-4 font-sans">
   <div
-    class="relative flex overflow-hidden rounded-full border border-[#f9c2d9] bg-[#ffffff]/92 shadow-[0_8px_20px_rgba(190,24,93,0.14)] backdrop-blur-lg transition-shadow duration-300 hover:shadow-[0_8px_25px_rgba(236,72,153,0.24)]">
+    class="relative flex overflow-hidden rounded-full border border-[#f5c542]/45 bg-[#280707]/92 shadow-[0_8px_20px_rgba(127,29,29,0.35)] backdrop-blur-lg transition-shadow duration-300 hover:shadow-[0_8px_25px_rgba(239,68,68,0.28)]">
     <div
-      class="relative z-10 flex shrink-0 items-center justify-center rounded-full bg-gradient-to-r from-[#f472b6] via-[#ec4899] to-[#be185d] px-8 py-2.5 font-black text-white shadow-[4px_0_15px_rgba(236,72,153,0.28)]">
-      <span aria-hidden="true" class="mr-2 text-lg">👑</span> ประกาศ
+      class="relative z-10 flex shrink-0 items-center justify-center rounded-full bg-gradient-to-r from-[#ffe9a8] via-[#f5c542] to-[#a3610c] px-8 py-2.5 font-black text-[#280707] shadow-[4px_0_15px_rgba(245,197,66,0.28)]">
+      <span aria-hidden="true" class="mr-2 text-lg">🏮</span> ประกาศ
     </div>
 
     <div class="marquee-container relative flex-1 overflow-hidden py-2.5 pr-6">
-      <div aria-hidden="true" class="pointer-events-none absolute top-0 left-0 z-10 h-full w-12 bg-gradient-to-r from-[#ffffff] to-transparent"></div>
+      <div aria-hidden="true" class="pointer-events-none absolute top-0 left-0 z-10 h-full w-12 bg-gradient-to-r from-[#280707] to-transparent"></div>
 
-      <div class="marquee-content inline-block pl-4 text-sm font-medium tracking-wide whitespace-nowrap text-[#7a1038]" style={`animation-duration:${scrollSeconds}s`}>
-        <span class="mr-10 inline-flex items-center gap-3"><span aria-hidden="true" class="h-2 w-2 rounded-full bg-[#e8a020] shadow-[0_0_8px_rgba(232,160,32,0.55)]"></span>{message}</span>
-        <span aria-hidden="true" class="mr-10 inline-flex items-center gap-3"><span class="h-2 w-2 rounded-full bg-[#e8a020] shadow-[0_0_8px_rgba(232,160,32,0.55)]"></span>{message}</span>
+      <div class="marquee-content inline-block pl-4 text-sm font-medium tracking-wide whitespace-nowrap text-[#f7e2d6]" style={`animation-duration:${scrollSeconds}s`}>
+        <span class="mr-10 inline-flex items-center gap-3"><span aria-hidden="true" class="h-2 w-2 rounded-full bg-[#f5c542] shadow-[0_0_8px_rgba(245,197,66,0.55)]"></span>{message}</span>
+        <span aria-hidden="true" class="mr-10 inline-flex items-center gap-3"><span class="h-2 w-2 rounded-full bg-[#f5c542] shadow-[0_0_8px_rgba(245,197,66,0.55)]"></span>{message}</span>
       </div>
     </div>
   </div>

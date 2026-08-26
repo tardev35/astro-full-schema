@@ -4,8 +4,8 @@ import bgConfig from "../assets/bg.json";
 import "../styles/global.css";
 import { BRAND_NAME, BRAND_TEXT, brandProfile, fontStack, iconVersion } from "../lib/brandProfile";
 import { canonicalFor } from "../lib/schema";
-import Navbar from "../components/NavbarStyle10.astro";
-import Footer from "../components/FooterPremium.astro";
+import Navbar from "../components/NavbarStyle4.astro";
+import Footer from "../components/FooterStyle3.astro";
 
 // Only banner1 is ever rendered, so only banner1 is imported.
 //
@@ -54,8 +54,8 @@ const mobileBannerImg = mobileBanner
   : null;
 
 const {
-  title = "DOLLAR789 คาสิโนสด บาคาร่า เว็บใหญ่มั่นคง สมัครรับโปรสมาชิกใหม่",
-  description = "DOLLAR789 รวมคาสิโนสด บาคาร่า สล็อต และฟุตบอล พร้อมระบบสมาชิก ฝากถอนออโต้ รองรับมือถือ สมัครง่าย เช็กโปรสมาชิกใหม่และเข้าใช้งานได้ตลอดวัน",
+  title = "PIGAUTO เว็บสล็อตออโต้ ไม่มีขั้นต่ำ รองรับวอลเล็ท สมัครรับโปรสมาชิกใหม่",
+  description = "PIGAUTO เว็บสล็อตออโต้แท้ ไม่มีขั้นต่ำ รวมสล็อต คาสิโนสด และบาคาร่า ไว้ในยูสเดียว รองรับวอลเล็ท ฝากถอนออโต้ สมัครผ่านมือถือ เช็กโปรสมาชิกใหม่ได้ก่อนกดรับ",
   robots = "index, follow",
 } = Astro.props;
 
@@ -165,7 +165,7 @@ const profile = brandProfile(Astro.site);
 
           {block === "appmeta" && (
             <Fragment>
-              {profile.showAppTitle && <meta name="apple-mobile-web-app-title" content="dollar789" />}
+              {profile.showAppTitle && <meta name="apple-mobile-web-app-title" content="pigauto" />}
               <link rel="manifest" href="/site.webmanifest" />
             </Fragment>
           )}
@@ -207,7 +207,7 @@ const profile = brandProfile(Astro.site);
         background-attachment: fixed;
         background-repeat: no-repeat;
         margin: 0;
-        background-color: #0b011b;
+        background-color: #1a0303;
         font-weight: 400;
         font-family: var(--font-sans) !important;
       }
@@ -260,7 +260,7 @@ const profile = brandProfile(Astro.site);
         }
         <Image
           src={mainBanner}
-          alt="แบนเนอร์ DOLLAR789 พื้นหลังสีม่วงเข้มเกือบดำมีแสงม่วงและเหรียญทองปลิว ด้านบนกลางเป็นโลโก้ทองเขียนว่า DOLLAR789 โดยตัว D เป็นสัญลักษณ์ดอลลาร์ ใต้โลโก้เขียนว่า LIVE CASINO & SLOT ONLINE ด้านซ้ายเป็นตัวอักษรทองขนาดใหญ่ว่า DOLLAR789 ถัดลงมาเป็นคำว่า คาสิโนสด สีขาวและ บาคาร่า สีทอง ตรงกลางเป็นป้ายขอบทองสองอันเขียนว่า เว็บใหญ่มั่นคง มีมงกุฎทองอยู่ด้านบน และ สมัครรับโปรสมาชิกใหม่ ใต้ลงมาเป็นแถบขอบมนสามอันเขียนว่า ระบบบออโต้ 24 ชม. เล่นผ่านมือถือ และ ฝาก-ถอน ง่าย ล่างสุดเป็นแถบเขียนว่า มั่นคง ปลอดภัย มาตรฐานสากล บริการประทับใจ ตลอด 24 ชม. และ รวดเร็ว ทันใจ ทุกการบริการ ด้านขวาเป็นพรีเซนเตอร์หญิงผมยาวสวมชุดกำมะหยี่สีม่วง ยืนคู่กับวงล้อรูเล็ต ไพ่เอซสี่ใบ กองชิปและเหรียญทอง มีป้ายไฟคำว่า JACKPOT อยู่มุมขวาบน"
+          alt="แบนเนอร์ PIGAUTO พื้นหลังแดงเข้มแบบตรุษจีนมีลายวงกลมสีทอง โคมไฟจีนสีแดงและพัดทองกระจายอยู่รอบ ๆ พร้อมเหรียญทองและชิปคาสิโนปลิวกลางอากาศ ด้านบนกลางเป็นโลโก้หมูสีชมพูในเฟืองเงินใต้ภาพเขียนว่า PIGAUTO ตรงกลางเป็นข้อความสีทองขนาดใหญ่ว่า เว็บไซต์เดิมพันที่ดีที่สุด และคำว่า PIGAUTO ตัวหนาสีทอง ใต้ลงมาเขียนว่า เว็บสล็อตออโต้แท้ เดิมพันสนุก ไม่มีขั้นต่ำ ด้านซ้ายและขวาเป็นพรีเซนเตอร์หญิงผมยาวสวมชุดกี่เพ้าสีแดงปักลายทอง ยืนคู่กับไพ่เอซและกองชิปสีแดงทอง"
           loading="eager"
           fetchpriority="high"
           widths={[412, 640, 828, 1024, 1280, 1600, 1900]}

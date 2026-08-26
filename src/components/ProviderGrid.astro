@@ -1,21 +1,21 @@
 ---
 const providers = [
+  { name: "สล็อตออโต้", desc: "หมวดหลักของเว็บ เข้าปั่นต่อได้ทันทีหลังเครดิตขึ้น ไม่มีขั้นต่ำในการเข้าเล่น", tag: "เกมหลัก", icon: "🎰" },
+  { name: "เกมโบนัสและฟรีสปิน", desc: "สล็อตที่มีรอบโบนัสในตัว สำหรับสายที่ชอบรอฟีเจอร์มากกว่าปั่นรัวยาว", tag: "หมวดเกม", icon: "🍀" },
   { name: "คาสิโนสด", desc: "ห้องเล่นแบบเรียลไทม์ เปิดดูบรรยากาศห้องก่อนเลือกลงเดิมพันได้จากหน้าเดียว", tag: "เล่นสด", icon: "🃏" },
-  { name: "บาคาร่า", desc: "เกมหลักของสายโต๊ะสด สลับโต๊ะจากยูสเดิมได้เมื่อรู้สึกว่าโต๊ะนี้ไม่ใช่", tag: "เกมหลัก", icon: "🎴" },
-  { name: "สล็อต", desc: "หมวดสำหรับวันที่ไม่อยากนั่งโต๊ะสด มีทั้งเกมคลาสสิก เกมโบนัส และฟรีสปิน", tag: "หมวดเกม", icon: "🎰" },
-  { name: "ฟุตบอลออนไลน์", desc: "เปิดหมวดกีฬาเมื่อมีคู่ที่ตามอยู่ ใช้เครดิตชุดเดียวกับโต๊ะสดและสล็อต", tag: "กีฬา", icon: "⚽" },
+  { name: "บาคาร่า", desc: "หมวดรองสำหรับวันที่อยากพักจากวงล้อ สลับโต๊ะจากยูสเดิมได้เมื่อโต๊ะนี้ไม่ใช่", tag: "เปลี่ยนโหมด", icon: "🎴" },
   { name: "โปรสมาชิกใหม่", desc: "ดูยอดรับ เงื่อนไข เทิร์น และช่วงเวลาที่ใช้ได้ก่อนกดรับได้ทุกครั้ง", tag: "สิทธิ์สมาชิก", icon: "🎁" },
   { name: "ระบบสมาชิก", desc: "รวมเครดิต โปร และประวัติรายการไว้จุดเดียว ตรวจย้อนหลังได้โดยไม่ต้องเปิดหลายหน้า", tag: "ยูสเดียว", icon: "🧾" },
-  { name: "ฝากถอนออโต้", desc: "ส่งรายการฝากถอนและดูยอดคงเหลือผ่านหน้าสมาชิกได้ตลอด 24 ชั่วโมง", tag: "ช่องทางหลัก", icon: "💳" },
+  { name: "ฝากถอนออโต้และวอลเล็ท", desc: "ส่งรายการผ่านวอลเล็ทหรือบัญชีธนาคาร แล้วดูยอดคงเหลือจากหน้าสมาชิกได้ตลอด 24 ชั่วโมง", tag: "ช่องทางหลัก", icon: "💳" },
 ];
 ---
 
-<section aria-label="หมวดเกมและบริการที่ DOLLAR789 รวมไว้ในยูสเดียว" class="relative z-10 mx-auto mb-10 w-full max-w-[1400px] px-4 font-sans">
+<section aria-label="หมวดเกมและบริการที่ PIGAUTO รวมไว้ในยูสเดียว" class="relative z-10 mx-auto mb-10 w-full max-w-[1400px] px-4 font-sans">
   <div class="mb-8 flex w-full flex-col items-center justify-center gap-2 text-center">
-    <p class="bg-gradient-to-r from-[#c084fc] via-[#e9d5ff] to-[#f5c542] bg-clip-text text-3xl font-black tracking-widest text-transparent uppercase">
-      หมวดเกมและบริการที่ <span class="text-[#f5c542]">DOLLAR789</span> รวมไว้ในยูสเดียว
+    <p class="bg-gradient-to-r from-[#f87171] via-[#ffe2d8] to-[#f5c542] bg-clip-text text-3xl font-black tracking-widest text-transparent uppercase">
+      หมวดเกมและบริการที่ <span class="text-[#f5c542]">PIGAUTO</span> รวมไว้ในยูสเดียว
     </p>
-    <div class="mt-2 h-[4px] w-24 rounded-full bg-gradient-to-r from-transparent via-[#a855f7] to-transparent"></div>
+    <div class="mt-2 h-[4px] w-24 rounded-full bg-gradient-to-r from-transparent via-[#ef4444] to-transparent"></div>
   </div>
 
   <div class="grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-4 lg:gap-5 xl:grid-cols-7">
@@ -23,10 +23,10 @@ const providers = [
       providers.map((provider) => (
         <a
           href="/register"
-          class="group relative flex flex-col items-center justify-center overflow-hidden rounded-2xl border border-[#3b1a63] bg-[#150826] p-5 shadow-[0_10px_30px_rgba(168,85,247,0.14)] transition-all duration-300 hover:-translate-y-2 hover:border-[#a855f7]/60 hover:bg-[#1e0c33] hover:shadow-[0_15px_40px_rgba(168,85,247,0.28)]">
-          <div class="pointer-events-none absolute inset-0 bg-[#a855f7]/8 opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
+          class="group relative flex flex-col items-center justify-center overflow-hidden rounded-2xl border border-[#6b2020] bg-[#280707] p-5 shadow-[0_10px_30px_rgba(239,68,68,0.14)] transition-all duration-300 hover:-translate-y-2 hover:border-[#ef4444]/60 hover:bg-[#33090a] hover:shadow-[0_15px_40px_rgba(239,68,68,0.28)]">
+          <div class="pointer-events-none absolute inset-0 bg-[#ef4444]/8 opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
 
-          <div class="absolute top-2 right-2 z-10 rounded-full bg-gradient-to-r from-[#c084fc] via-[#a855f7] to-[#4c1d95] px-2 py-0.5 text-[9px] font-black tracking-wide whitespace-nowrap text-[#0b011b] shadow-sm transition-transform duration-300 group-hover:scale-110">
+          <div class="absolute top-2 right-2 z-10 rounded-full bg-gradient-to-r from-[#f87171] via-[#ef4444] to-[#7f1d1d] px-2 py-0.5 text-[9px] font-black tracking-wide whitespace-nowrap text-[#1a0303] shadow-sm transition-transform duration-300 group-hover:scale-110">
             {provider.tag}
           </div>
 
@@ -34,9 +34,9 @@ const providers = [
             {provider.icon}
           </div>
           <p class="text-center text-sm font-black text-[#ffe9a8] transition-colors group-hover:text-[#f5c542]">{provider.name}</p>
-          <p class="mt-1 text-center text-[10px] text-[#a894c9]">{provider.desc}</p>
+          <p class="mt-1 text-center text-[10px] text-[#cfa79c]">{provider.desc}</p>
 
-          <span class="relative z-10 mt-4 block w-full rounded-full border border-[#3b1a63] bg-[#0b011b] py-1.5 text-center text-[11px] font-bold text-[#c084fc] shadow-inner transition-colors duration-300 group-hover:border-[#f5c542]/60 group-hover:bg-gradient-to-r group-hover:from-[#ffd75e] group-hover:via-[#f5c542] group-hover:to-[#a3610c] group-hover:text-[#0b011b]">
+          <span class="relative z-10 mt-4 block w-full rounded-full border border-[#6b2020] bg-[#1a0303] py-1.5 text-center text-[11px] font-bold text-[#f87171] shadow-inner transition-colors duration-300 group-hover:border-[#f5c542]/60 group-hover:bg-gradient-to-r group-hover:from-[#ffd75e] group-hover:via-[#f5c542] group-hover:to-[#a3610c] group-hover:text-[#1a0303]">
             เข้าดูหมวดนี้
           </span>
         </a>

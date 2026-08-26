@@ -19,17 +19,17 @@ const { items } = Astro.props;
       const isGold = item.accent !== "blue";
       return (
         <div
-          class={`group flex flex-col items-start gap-4 rounded-2xl border border-[#2a1147] bg-[#150826]/60 p-6 transition-all duration-300 hover:-translate-y-1 sm:flex-row ${
+          class={`group flex flex-col items-start gap-4 rounded-2xl border border-[#4a1010] bg-[#280707]/60 p-6 transition-all duration-300 hover:-translate-y-1 sm:flex-row ${
             isGold
-              ? "hover:border-amber-500/50 hover:bg-[#1e0c33] hover:shadow-[0_10px_20px_rgba(245,197,66,0.14)]"
-              : "hover:border-purple-500/60 hover:bg-[#1e0c33] hover:shadow-[0_10px_20px_rgba(168,85,247,0.22)]"
+              ? "hover:border-amber-500/50 hover:bg-[#33090a] hover:shadow-[0_10px_20px_rgba(245,197,66,0.14)]"
+              : "hover:border-red-500/60 hover:bg-[#33090a] hover:shadow-[0_10px_20px_rgba(239,68,68,0.22)]"
           }`}>
           <div
             aria-hidden="true"
             class={`flex h-14 w-14 shrink-0 items-center justify-center rounded-xl text-3xl transition-transform duration-300 group-hover:scale-110 ${
               isGold
                 ? "border border-amber-300/50 bg-gradient-to-br from-amber-400 to-amber-600 shadow-[0_0_15px_rgba(245,197,66,0.5)] group-hover:rotate-3"
-                : "border border-purple-500/50 bg-gradient-to-br from-purple-600 to-purple-900 shadow-[0_0_15px_rgba(168,85,247,0.45)]"
+                : "border border-red-500/50 bg-gradient-to-br from-red-600 to-red-900 shadow-[0_0_15px_rgba(239,68,68,0.45)]"
             }`}>
             {item.icon}
           </div>
@@ -38,11 +38,11 @@ const { items } = Astro.props;
               class={`text-xl font-black tracking-wide drop-shadow-sm ${
                 isGold
                   ? "bg-gradient-to-r from-amber-200 to-amber-500 bg-clip-text text-transparent"
-                  : "bg-gradient-to-r from-purple-200 to-purple-400 bg-clip-text text-transparent transition-colors group-hover:text-purple-300"
+                  : "bg-gradient-to-r from-red-200 to-red-400 bg-clip-text text-transparent transition-colors group-hover:text-red-300"
               }`}>
               {item.title}
             </h3>
-            <p class="text-left text-base leading-relaxed text-[#e7dcf7] transition-colors group-hover:text-[#e9d5ff]">{item.description}</p>
+            <p class="text-left text-base leading-relaxed text-[#f7e2d6] transition-colors group-hover:text-[#ffe2d8]">{item.description}</p>
           </div>
         </div>
       );

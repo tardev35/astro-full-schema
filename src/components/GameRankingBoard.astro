@@ -8,25 +8,25 @@ import img5 from "../assets/providers/game5.avif";
 import img6 from "../assets/providers/game6.avif";
 
 const games = [
-  { rank: 1, name: "บาคาร่าโต๊ะสด", type: "หมวดที่สมาชิก DOLLAR789 เปิดบ่อยที่สุด ห้องเรียลไทม์ที่สลับโต๊ะจากยูสเดิมได้", menus: ["เกมหลัก", "เล่นสด"], players: 5124, img: img2 },
-  { rank: 2, name: "คาสิโนสดห้องอื่น ๆ", type: "ห้องเล่นสดแบบอื่นสำหรับคนที่ชอบไล่ดูหลายห้องก่อนเลือกลงเดิมพัน", menus: ["ห้องสด", "เลือกต่อได้"], players: 3842, img: img5 },
-  { rank: 3, name: "สล็อตเกมโบนัสและฟรีสปิน", type: "หมวดเกมที่มีรอบโบนัสในตัว เหมาะกับวันที่ไม่อยากนั่งโต๊ะสด", menus: ["เกมโบนัส", "ฟรีสปิน"], players: 3517, img: img6 },
-  { rank: 4, name: "สล็อตธีมแฟนตาซี", type: "เกมภาพจัดเต็มสำหรับคนที่เลือกจากธีมก่อนเป็นหลัก หาเจอได้จากหน้ารวมเกม", menus: ["ตามธีม", "ภาพจัดเต็ม"], players: 2905, img: img3 },
-  { rank: 5, name: "ฟุตบอลออนไลน์", type: "หมวดกีฬาสำหรับวันที่มีคู่ที่ตามอยู่ ใช้เครดิตชุดเดียวกับโต๊ะสดและสล็อต", menus: ["กีฬา", "เริ่มต้น 10 บาท"], players: 2431, img: img4 },
-  { rank: 6, name: "เกมที่เล่นล่าสุดและรายการโปรด", type: "กลับไปเปิดโต๊ะหรือเกมที่เคยเล่นได้ทันทีจากระบบสมาชิก DOLLAR789", menus: ["เล่นประจำ", "รายการโปรด"], players: 2108, img: img1 },
+  { rank: 1, name: "สล็อตออโต้ค่ายยอดนิยม", type: "หมวดที่สมาชิก PIGAUTO เปิดบ่อยที่สุด เข้าเกมต่อได้เลยหลังเครดิตขึ้น ไม่มีขั้นต่ำ", menus: ["เกมหลัก", "ออโต้"], players: 5124, img: img2 },
+  { rank: 2, name: "สล็อตเกมโบนัสและฟรีสปิน", type: "หมวดเกมที่มีรอบโบนัสในตัว สายปั่นที่ชอบรอฟีเจอร์มักเริ่มจากตรงนี้", menus: ["เกมโบนัส", "ฟรีสปิน"], players: 3842, img: img6 },
+  { rank: 3, name: "สล็อตธีมแฟนตาซี", type: "เกมภาพจัดเต็มสำหรับคนที่เลือกจากธีมก่อนเป็นหลัก หาเจอได้จากหน้ารวมเกม", menus: ["ตามธีม", "ภาพจัดเต็ม"], players: 3517, img: img3 },
+  { rank: 4, name: "บาคาร่าโต๊ะสด", type: "หมวดรองสำหรับวันที่อยากพักจากวงล้อ ห้องเรียลไทม์ที่สลับโต๊ะจากยูสเดิมได้", menus: ["เล่นสด", "เปลี่ยนโหมด"], players: 2905, img: img4 },
+  { rank: 5, name: "คาสิโนสดห้องอื่น ๆ", type: "ห้องเล่นสดแบบอื่นสำหรับคนที่ชอบไล่ดูหลายห้องก่อนเลือกลงเดิมพัน", menus: ["ห้องสด", "เลือกต่อได้"], players: 2431, img: img5 },
+  { rank: 6, name: "เกมที่เล่นล่าสุดและรายการโปรด", type: "กลับไปเปิดเกมหรือโต๊ะที่เคยเล่นได้ทันทีจากระบบสมาชิก PIGAUTO", menus: ["เล่นประจำ", "รายการโปรด"], players: 2108, img: img1 },
 ];
 
 const medal = (rank: number) => (rank === 1 ? "🥇" : rank === 2 ? "🥈" : rank === 3 ? "🥉" : null);
 ---
 
-<section aria-label="หมวดเกมที่สมาชิก DOLLAR789 เลือกเปิดใช้บ่อย" class="mx-auto w-full max-w-[1300px] px-4 py-8 font-sans">
+<section aria-label="หมวดเกมที่สมาชิก PIGAUTO เลือกเปิดใช้บ่อย" class="mx-auto w-full max-w-[1300px] px-4 py-8 font-sans">
   <div class="mb-8 flex w-full flex-col items-center justify-center gap-2 text-center">
     <span aria-hidden="true" class="text-2xl">🏆</span>
-    <p class="bg-gradient-to-r from-[#c084fc] via-[#e9d5ff] to-[#f5c542] bg-clip-text text-2xl font-black tracking-widest text-transparent uppercase">หมวดเกมที่สมาชิก DOLLAR789 เปิดใช้บ่อยที่สุด</p>
-    <p class="max-w-3xl text-base leading-relaxed text-[#e7dcf7]">
-      ทุกหมวดในตารางนี้ใช้ยูสและเครดิตชุดเดียวกัน สลับจากโต๊ะสดไปสล็อตหรือบอลได้โดยไม่ต้องออกจากระบบ ลำดับความนิยมขยับตามคนที่เข้ามาใช้งานในแต่ละช่วง ไม่ได้แปลว่าหมวดไหนให้อัตราจ่ายดีกว่าหมวดไหน เลือกจากสไตล์ที่ชอบแล้วเข้าเล่นต่อจากหน้าสมาชิกได้เลย
+    <p class="bg-gradient-to-r from-[#f87171] via-[#ffe2d8] to-[#f5c542] bg-clip-text text-2xl font-black tracking-widest text-transparent uppercase">หมวดเกมที่สมาชิก PIGAUTO เปิดใช้บ่อยที่สุด</p>
+    <p class="max-w-3xl text-base leading-relaxed text-[#f7e2d6]">
+      ทุกหมวดในตารางนี้ใช้ยูสและเครดิตชุดเดียวกัน สลับจากวงล้อสล็อตไปโต๊ะสดได้โดยไม่ต้องออกจากระบบ ลำดับความนิยมขยับตามคนที่เข้ามาใช้งานในแต่ละช่วง ไม่ได้แปลว่าหมวดไหนให้อัตราจ่ายดีกว่าหมวดไหน เลือกจากสไตล์ที่ถนัดแล้วเข้าเล่นต่อจากหน้าสมาชิกได้เลย
     </p>
-    <div class="mt-2 h-[3px] w-24 rounded-full bg-gradient-to-r from-transparent via-[#a855f7] to-transparent"></div>
+    <div class="mt-2 h-[3px] w-24 rounded-full bg-gradient-to-r from-transparent via-[#ef4444] to-transparent"></div>
   </div>
 
   <div class="flex flex-col gap-3">
@@ -37,12 +37,12 @@ const medal = (rank: number) => (rank === 1 ? "🥇" : rank === 2 ? "🥈" : ran
           <article
             class={`group relative flex items-center gap-3 overflow-hidden rounded-2xl border p-3 transition-all duration-300 hover:-translate-y-0.5 sm:gap-5 sm:p-4 ${
               top
-                ? "border-[#a855f7]/60 bg-gradient-to-r from-[#1e0c33] via-[#150826] to-[#241206] shadow-[0_15px_40px_rgba(168,85,247,0.26)]"
-                : "border-[#3b1a63] bg-[#150826] shadow-[0_10px_30px_rgba(168,85,247,0.14)] hover:border-[#a855f7]/60 hover:shadow-[0_15px_40px_rgba(168,85,247,0.26)]"
+                ? "border-[#ef4444]/60 bg-gradient-to-r from-[#33090a] via-[#280707] to-[#241206] shadow-[0_15px_40px_rgba(239,68,68,0.26)]"
+                : "border-[#6b2020] bg-[#280707] shadow-[0_10px_30px_rgba(239,68,68,0.14)] hover:border-[#ef4444]/60 hover:shadow-[0_15px_40px_rgba(239,68,68,0.26)]"
             }`}>
             <div
               aria-hidden="true"
-              class="pointer-events-none absolute top-1/2 -left-10 h-24 w-24 -translate-y-1/2 rounded-full bg-[#a855f7]/16 blur-[40px] transition-all duration-500 group-hover:bg-[#f5c542]/20"
+              class="pointer-events-none absolute top-1/2 -left-10 h-24 w-24 -translate-y-1/2 rounded-full bg-[#ef4444]/16 blur-[40px] transition-all duration-500 group-hover:bg-[#f5c542]/20"
             />
 
             <div class="relative z-10 flex w-8 shrink-0 flex-col items-center justify-center sm:w-12">
@@ -52,14 +52,14 @@ const medal = (rank: number) => (rank === 1 ? "🥇" : rank === 2 ? "🥈" : ran
                   <span class="sr-only">อันดับ {g.rank}</span>
                 </span>
               ) : (
-                <span class="text-xl font-black text-[#c084fc] sm:text-2xl">#{g.rank}</span>
+                <span class="text-xl font-black text-[#f87171] sm:text-2xl">#{g.rank}</span>
               )}
             </div>
 
-            <div class={`relative z-10 h-14 w-14 shrink-0 overflow-hidden rounded-xl border sm:h-16 sm:w-16 ${top ? "border-[#a855f7]/60" : "border-[#3b1a63]"}`}>
+            <div class={`relative z-10 h-14 w-14 shrink-0 overflow-hidden rounded-xl border sm:h-16 sm:w-16 ${top ? "border-[#ef4444]/60" : "border-[#6b2020]"}`}>
               <Picture
                 src={g.img}
-                alt={`ภาพหน้าปกเกมของหมวด ${g.name} บนกระดานหมวดเกมยอดนิยมของ DOLLAR789`}
+                alt={`ภาพหน้าปกเกมของหมวด ${g.name} บนกระดานหมวดเกมยอดนิยมของ PIGAUTO`}
                 formats={["avif", "webp"]}
                 fallbackFormat="webp"
                 loading="lazy"
@@ -75,20 +75,20 @@ const medal = (rank: number) => (rank === 1 ? "🥇" : rank === 2 ? "🥈" : ran
               <div class="flex items-center gap-2">
                 <p class="truncate text-base font-black text-[#ffe9a8] sm:text-lg">{g.name}</p>
                 {top && (
-                  <span class="hidden shrink-0 rounded-full border border-[#a855f7]/50 bg-[#1e0c33] px-2 py-0.5 text-[9px] font-black tracking-wider text-[#f5c542] sm:inline">ยอดนิยมสูงสุด</span>
+                  <span class="hidden shrink-0 rounded-full border border-[#ef4444]/50 bg-[#33090a] px-2 py-0.5 text-[9px] font-black tracking-wider text-[#f5c542] sm:inline">ยอดนิยมสูงสุด</span>
                 )}
               </div>
-              <p class="truncate text-[11px] text-[#a894c9] sm:text-xs">{g.type}</p>
+              <p class="truncate text-[11px] text-[#cfa79c] sm:text-xs">{g.type}</p>
 
               <div class="mt-2 flex flex-wrap items-center gap-1.5">
                 {g.menus.map((m) => (
-                  <span class="rounded-full border border-[#3b1a63] bg-[#0b011b] px-2.5 py-0.5 text-[10px] font-bold text-[#c084fc]">{m}</span>
+                  <span class="rounded-full border border-[#6b2020] bg-[#1a0303] px-2.5 py-0.5 text-[10px] font-bold text-[#f87171]">{m}</span>
                 ))}
               </div>
             </div>
 
             <div class="relative z-10 hidden shrink-0 flex-col items-end gap-1 sm:flex">
-              <span class="flex items-center gap-1.5 text-[11px] text-[#a894c9]">
+              <span class="flex items-center gap-1.5 text-[11px] text-[#cfa79c]">
                 <span class="h-1.5 w-1.5 animate-pulse rounded-full bg-green-400 shadow-[0_0_6px_rgba(74,222,128,0.7)]" />
                 <span class="tabular-nums" data-players data-base={g.players}>
                   {g.players.toLocaleString("en-US")}
@@ -99,8 +99,8 @@ const medal = (rank: number) => (rank === 1 ? "🥇" : rank === 2 ? "🥈" : ran
                 href="/register"
                 class={`rounded-full px-4 py-1.5 text-xs font-black transition-transform hover:scale-105 ${
                   top
-                    ? "bg-gradient-to-r from-[#ffd75e] via-[#f5c542] to-[#a3610c] text-[#0b011b] shadow-[0_10px_30px_rgba(168,85,247,0.28)]"
-                    : "border border-[#3b1a63] bg-[#0b011b] text-[#c084fc] hover:border-[#a855f7]/60 hover:bg-[#1e0c33]"
+                    ? "bg-gradient-to-r from-[#ffd75e] via-[#f5c542] to-[#a3610c] text-[#1a0303] shadow-[0_10px_30px_rgba(239,68,68,0.28)]"
+                    : "border border-[#6b2020] bg-[#1a0303] text-[#f87171] hover:border-[#ef4444]/60 hover:bg-[#33090a]"
                 }`}>
                 เข้าดูหมวดนี้
               </a>

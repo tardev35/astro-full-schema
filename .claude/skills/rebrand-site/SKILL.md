@@ -1095,6 +1095,16 @@ Phase 5 build covers all pages at once.) For each page:
 4. **Stale-asset check per page** (Phase 4 applies here too — e.g.
    `promotion.astro` hardcodes `slide1-4` imports; confirm the extensions
    exist).
+
+   **`slide5` exists as an optional fifth slot** (added to the uploader on
+   2026-08-28 as "Promotion + Carousel 5"). Slots 1-3 are required, 4 and 5 are
+   not, and **nothing deletes them between brands** — so `slide4.png` or
+   `slide5.png` sitting in `src/assets` may belong to the brand before this one.
+   That is the trap that shipped GOAT888's artwork under 888NEO and stale
+   `banner2-4` under TEMMAX69, and a fifth optional file is a fifth way to hit
+   it. Before wiring one in, compare its mtime against `slide1.png`, which the
+   uploader always overwrites: if slide5 is older than slide1, it is not this
+   brand's and must not be rendered.
 5. **The one sanctioned exception: intentionally-themed sub-sections.**
    Lottery/`หวย` pages (`แนวทาง.astro`, `ตรวจหวย.astro`) run their own
    `Huay` theme (red/gold) + `AnnouncementHuay` on purpose — do **not**

@@ -1227,7 +1227,7 @@ async function handleUpload(slot, index, ext, buf, params) {
       return [await toPng(buf, ASSETS, "banner1-mobile", { maxWidth: MOBILE_BANNER_WIDTH })];
     }
     case "slide": {
-      if (!(n >= 1 && n <= 4)) throw new Error("slide index must be 1-4");
+      if (!(n >= 1 && n <= 5)) throw new Error("slide index must be 1-5");
       const written = [await toPng(buf, ASSETS, `slide${n}`, { box: SLIDE_BOX })];
       if (n === 1) {
         // From the ORIGINAL upload, not the 600px-boxed slide — the og image is
@@ -3217,6 +3217,11 @@ const PAGE = /* html */ `<!doctype html>
     <div class="field" data-img>
       <div class="row"><label>Promotion + Carousel 4</label><span class="opt">optional</span><span class="target">slide4.png</span></div>
       <div class="row"><input type="file" accept="image/*" data-slot="slide" data-index="4" /><img class="thumb" /></div>
+      <span class="status"></span>
+    </div>
+    <div class="field" data-img>
+      <div class="row"><label>Promotion + Carousel 5</label><span class="opt">optional</span><span class="target">slide5.png</span></div>
+      <div class="row"><input type="file" accept="image/*" data-slot="slide" data-index="5" /><img class="thumb" /></div>
       <span class="status"></span>
     </div>
       </div>

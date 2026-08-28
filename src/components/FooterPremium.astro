@@ -7,12 +7,12 @@ const imagePaths = Object.keys(images);
 const mainLogo = imagePaths.length > 0 ? images[imagePaths[0]].default : null;
 
 const logoAlt =
-  "โลโก้ DOLLAR789 ตัวอักษรนูนสามมิติเขียนว่า DOLLAR789 โดยคำว่า DOLLAR เป็นสีทองและตัว D ทำเป็นสัญลักษณ์ดอลลาร์ ส่วนเลข 789 เป็นสีเงินโครเมียม วางบนพื้นหลังโปร่งใส";
+  "โลโก้ OKHENG ตัวอักษร OK สีขาวบนกรอบมนสีแดงสด ถัดมาเป็นคำว่า Heng สีแดงและเลข 18 สีดำ ด้านซ้ายเป็นสัญลักษณ์เหรียญทองจีนสีแดงทอง";
 ---
 
 <footer
-  class="relative mt-16 w-full overflow-hidden rounded-t-[3rem] border-t border-[#a855f7]/45 bg-[#0b011b] pt-16 pb-8 font-sans text-[#e7dcf7] shadow-[0_-15px_40px_rgba(168,85,247,0.3)]">
-  <div class="pointer-events-none absolute inset-x-0 -top-20 mx-auto h-[250px] w-full max-w-4xl rounded-full bg-[#a855f7]/25 blur-[100px]"></div>
+  class="relative mt-16 w-full overflow-hidden rounded-t-[3rem] border-t border-[#ed0133]/45 bg-[#170206] pt-16 pb-8 font-sans text-[#f9dfe3] shadow-[0_-15px_40px_rgba(237,1,51,0.3)]">
+  <div class="pointer-events-none absolute inset-x-0 -top-20 mx-auto h-[250px] w-full max-w-4xl rounded-full bg-[#ed0133]/25 blur-[100px]"></div>
 
   <div class="relative z-10 mx-auto w-full max-w-[1200px] px-6">
     <div class="mb-12 grid grid-cols-1 gap-12 md:grid-cols-12">
@@ -25,44 +25,44 @@ const logoAlt =
                 alt={logoAlt}
                 widths={[130, 260, 390]}
                 sizes="130px"
-                class="h-[65px] w-auto drop-shadow-[0_5px_15px_rgba(168,85,247,0.4)]"
+                class="h-[65px] w-auto drop-shadow-[0_5px_15px_rgba(237,1,51,0.4)]"
                 formats={["avif", "webp"]}
                 fallbackFormat="webp"
               />
             ) : (
-              <span class="bg-gradient-to-r from-[#ffe9a8] to-[#f5c542] bg-clip-text text-4xl font-black tracking-widest text-transparent">
-                DOLLAR<span class="bg-gradient-to-r from-[#e9d5ff] to-[#c084fc] bg-clip-text text-transparent">789</span>
+              <span class="bg-gradient-to-r from-[#ffdb7d] to-[#f0b429] bg-clip-text text-4xl font-black tracking-widest text-transparent">
+                OK<span class="bg-gradient-to-r from-[#ff3d63] to-[#ed0133] bg-clip-text text-transparent">HENG</span>
               </span>
             )
           }
         </a>
-        <p class="border-l-2 border-[#a855f7]/55 pl-4 text-sm leading-relaxed text-[#e7dcf7]/70">
-          DOLLAR789 รวมคาสิโนสด บาคาร่า สล็อต และฟุตบอลไว้ในยูสเดียว เครดิต โปร และประวัติรายการดูได้จากหน้าเมมเบอร์เดียวกัน พร้อมระบบฝากถอนออโต้ที่ทำรายการได้ตลอด 24 ชั่วโมง ใช้งานผ่านมือถือได้ตั้งแต่สมัครจนถึงเข้าโต๊ะ
+        <p class="border-l-2 border-[#ed0133]/55 pl-4 text-sm leading-relaxed text-[#f9dfe3]/70">
+          OKHENG รวมบาคาร่า คาสิโนสด และสล็อตลิขสิทธิ์จากหลายค่ายไว้ในยูสเดียว เชื่อมเกมด้วยระบบ API แท้ เครดิต โปร และประวัติรายการดูได้จากหน้าเมมเบอร์เดียวกัน พร้อมระบบฝากถอนออโต้ที่ทำรายการได้ตลอด 24 ชั่วโมง ใช้งานผ่านมือถือได้ตั้งแต่สมัครจนถึงเข้าโต๊ะ
         </p>
         <div class="mt-4 flex gap-3">
-          <span class="rounded-full border border-[#a855f7]/35 bg-[#a855f7]/20 px-4 py-1 text-xs font-medium text-[#e9d5ff] backdrop-blur-sm">Auto Wallet</span>
-          <span class="rounded-full border border-[#f5c542]/35 bg-[#a855f7]/20 px-4 py-1 text-xs font-medium text-[#f5c542] backdrop-blur-sm">ออโต้ 24 ชม.</span>
+          <span class="rounded-full border border-[#1f5fd6]/45 bg-[#1f5fd6]/20 px-4 py-1 text-xs font-medium text-[#6fa8ff] backdrop-blur-sm">API แท้</span>
+          <span class="rounded-full border border-[#f0b429]/35 bg-[#ed0133]/20 px-4 py-1 text-xs font-medium text-[#f0b429] backdrop-blur-sm">ออโต้ 24 ชม.</span>
         </div>
       </div>
 
       <nav class="flex flex-col gap-4 md:col-span-3 lg:pl-8">
-        <p class="text-lg font-black tracking-widest text-[#ffe9a8] uppercase drop-shadow-sm">เมนูลัด</p>
-        <div class="h-[1px] w-12 bg-[#a855f7]"></div>
-        <ul class="flex flex-col gap-3 text-sm font-medium text-[#e7dcf7]/70">
-          <li><a href="/" class="transition-colors hover:text-[#f5c542]">หน้าหลัก</a></li>
-          <li><a href="/promotion" class="transition-colors hover:text-[#f5c542]">โปรโมชั่น</a></li>
-          <li><a href="/register" class="transition-colors hover:text-[#f5c542]">สมัครสมาชิก</a></li>
-          <li><a href="/login" class="transition-colors hover:text-[#f5c542]">เข้าสู่ระบบ</a></li>
-          <li><a href="/ทางเข้า" class="transition-colors hover:text-[#f5c542]">ทางเข้า</a></li>
-          <li><a href="/ทดลองเล่น" class="transition-colors hover:text-[#f5c542]">ทดลองเล่น</a></li>
-          <li><a href="/about-us" class="transition-colors hover:text-[#f5c542]">เกี่ยวกับเรา</a></li>
-          <li><a href="/contact-us" class="transition-colors hover:text-[#f5c542]">ติดต่อเรา</a></li>
+        <p class="text-lg font-black tracking-widest text-[#ffdb7d] uppercase drop-shadow-sm">เมนูลัด</p>
+        <div class="h-[1px] w-12 bg-[#ed0133]"></div>
+        <ul class="flex flex-col gap-3 text-sm font-medium text-[#f9dfe3]/70">
+          <li><a href="/" class="transition-colors hover:text-[#f0b429]">หน้าหลัก</a></li>
+          <li><a href="/promotion" class="transition-colors hover:text-[#f0b429]">โปรโมชั่น</a></li>
+          <li><a href="/register" class="transition-colors hover:text-[#f0b429]">สมัครสมาชิก</a></li>
+          <li><a href="/login" class="transition-colors hover:text-[#f0b429]">เข้าสู่ระบบ</a></li>
+          <li><a href="/ทางเข้า" class="transition-colors hover:text-[#f0b429]">ทางเข้า</a></li>
+          <li><a href="/ทดลองเล่น" class="transition-colors hover:text-[#f0b429]">ทดลองเล่น</a></li>
+          <li><a href="/about-us" class="transition-colors hover:text-[#f0b429]">เกี่ยวกับเรา</a></li>
+          <li><a href="/contact-us" class="transition-colors hover:text-[#f0b429]">ติดต่อเรา</a></li>
         </ul>
       </nav>
 
       <div class="flex flex-col gap-5 md:col-span-4">
-        <p class="text-lg font-black tracking-widest text-[#ffe9a8] uppercase drop-shadow-sm">ฝ่ายดูแลสมาชิก</p>
-        <div class="h-[1px] w-12 bg-[#a855f7]"></div>
+        <p class="text-lg font-black tracking-widest text-[#ffdb7d] uppercase drop-shadow-sm">ฝ่ายดูแลสมาชิก</p>
+        <div class="h-[1px] w-12 bg-[#ed0133]"></div>
 
         <a
           href="/line"
@@ -90,16 +90,16 @@ const logoAlt =
           )
         }
 
-        <div class="mt-4 text-xs font-medium tracking-widest text-[#c084fc]/60 uppercase">ช่องทางฝากถอนที่รองรับ</div>
+        <div class="mt-4 text-xs font-medium tracking-widest text-[#e0b6bd]/60 uppercase">ช่องทางฝากถอนที่รองรับ</div>
         <BankStrip size={30} />
       </div>
     </div>
 
-    <div class="flex flex-col items-center justify-between border-t border-[#4c1d95]/60 pt-8 text-xs font-medium tracking-wide text-[#e7dcf7]/50 md:flex-row">
-      <p>COPYRIGHT &copy; {new Date().getFullYear()} DOLLAR789. ALL RIGHTS RESERVED.</p>
+    <div class="flex flex-col items-center justify-between border-t border-[#6b0d1e] pt-8 text-xs font-medium tracking-wide text-[#f9dfe3]/50 md:flex-row">
+      <p>COPYRIGHT &copy; {new Date().getFullYear()} OKHENG. ALL RIGHTS RESERVED.</p>
       <div class="mt-4 flex gap-4 md:mt-0">
-        <a href="/terms/" class="transition-colors hover:text-[#f5c542]">TERMS &amp; CONDITIONS</a>
-        <a href="/privacy/" class="transition-colors hover:text-[#f5c542]">PRIVACY POLICY</a>
+        <a href="/terms/" class="transition-colors hover:text-[#f0b429]">TERMS &amp; CONDITIONS</a>
+        <a href="/privacy/" class="transition-colors hover:text-[#f0b429]">PRIVACY POLICY</a>
       </div>
     </div>
   </div>

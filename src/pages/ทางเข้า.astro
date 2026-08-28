@@ -2,13 +2,13 @@
 import MainLayout from "../layouts/MainLayout.astro";
 import ContentBox from "../components/ContentBox.astro";
 import Navfoot from "../components/Navfoot.astro";
-import Announcement from "../components/AnnouncementPremium.astro";
+import Announcement from "../components/Announcement5.astro";
 import { pageGraph } from "../lib/schema";
 
-const pageTitle = "ทางเข้า PIGAUTO เว็บหลัก";
+const pageTitle = "ทางเข้า OKHENG เว็บหลัก";
 
 const pageDescription =
-  "หน้าทางเข้า PIGAUTO เว็บหลัก สำหรับกดเข้าสู่ระบบหรือสมัครสมาชิกได้จากจุดเดียว รองรับมือถือและคอมพิวเตอร์ ใช้ยูสเดิมเข้าเล่นสล็อตออโต้และคาสิโนสดได้ทันที";
+  "ทางเข้า OKHENG เว็บหลัก กดเข้าสู่ระบบหรือสมัครสมาชิกได้จากจุดเดียว รองรับทั้งมือถือและคอมพิวเตอร์ ใช้ยูสเดิมเข้าเล่นบาคาร่า คาสิโนสด และสล็อตลิขสิทธิ์ได้ทันที";
 
 const graph = pageGraph(Astro, {
   name: pageTitle,
@@ -20,7 +20,7 @@ const graph = pageGraph(Astro, {
 });
 ---
 
-<MainLayout title="ทางเข้า PIGAUTO เว็บหลัก | เข้าสู่ระบบและสมัครสมาชิกสล็อตออโต้" description={pageDescription}>
+<MainLayout title="ทางเข้า OKHENG เว็บหลัก | เข้าสู่ระบบและสมัครสมาชิกบาคาร่าคาสิโนสด" description={pageDescription}>
   <script type="application/ld+json" set:html={graph} />
 
   <Announcement />
@@ -30,12 +30,12 @@ const graph = pageGraph(Astro, {
       <div class="flex flex-col items-center justify-center gap-4">
         <a
           href="/login"
-          aria-label="เข้าสู่ระบบ PIGAUTO"
-          class="group relative mx-auto flex w-full max-w-[320px] items-center justify-center gap-3 overflow-hidden rounded-xl border border-[#ef4444]/45 bg-[#33090a] px-6 py-4 shadow-[0_10px_30px_rgba(239,68,68,0.14)] transition-all duration-300 hover:scale-105 hover:border-[#ef4444] hover:bg-[#4a1010] hover:shadow-[0_15px_40px_rgba(239,68,68,0.22)]">
-          <div aria-hidden="true" class="absolute inset-x-0 top-0 h-1/2 bg-gradient-to-b from-[#ef4444]/20 to-transparent"></div>
+          aria-label="เข้าสู่ระบบ OKHENG"
+          class="group relative mx-auto flex w-full max-w-[320px] items-center justify-center gap-3 overflow-hidden rounded-xl border border-[#ed0133]/45 bg-[#3a070f] px-6 py-4 shadow-[0_10px_30px_rgba(237,1,51,0.14)] transition-all duration-300 hover:scale-105 hover:border-[#ed0133] hover:bg-[#4a0611] hover:shadow-[0_15px_40px_rgba(237,1,51,0.22)]">
+          <div aria-hidden="true" class="absolute inset-x-0 top-0 h-1/2 bg-gradient-to-b from-[#ed0133]/20 to-transparent"></div>
 
           <svg
-            class="relative z-10 h-9 w-9 text-[#f87171]"
+            class="relative z-10 h-9 w-9 text-[#ff3d63]"
             aria-hidden="true"
             focusable="false"
             fill="none"
@@ -46,19 +46,19 @@ const graph = pageGraph(Astro, {
             <path stroke-linecap="round" stroke-linejoin="round" d="M11 16l-4-4m0 0l4-4m-4 4h14m-5 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h7a3 3 0 013 3v1"></path>
           </svg>
 
-          <span class="relative z-10 text-3xl font-bold tracking-wide text-[#ffe2d8]">เข้าสู่ระบบ</span>
+          <span class="relative z-10 text-3xl font-bold tracking-wide text-[#f9dfe3]">เข้าสู่ระบบ</span>
         </a>
       </div>
 
       <div class="flex flex-col items-center justify-center gap-4">
         <a
           href="/register"
-          aria-label="สมัครสมาชิก PIGAUTO"
-          class="group relative mx-auto flex w-full max-w-[320px] items-center justify-center gap-3 overflow-hidden rounded-xl border border-[#a3610c]/60 bg-gradient-to-r from-[#ffd75e] via-[#ffe9a8] to-[#f5c542] px-6 py-4 shadow-[0_10px_30px_rgba(245,197,66,0.20)] transition-all duration-300 hover:scale-105 hover:border-[#ef4444]/70 hover:shadow-[0_15px_40px_rgba(239,68,68,0.24)]">
+          aria-label="สมัครสมาชิก OKHENG"
+          class="group relative mx-auto flex w-full max-w-[320px] items-center justify-center gap-3 overflow-hidden rounded-xl border border-[#a8710c]/60 bg-gradient-to-r from-[#f0b429] via-[#ffdb7d] to-[#f0b429] px-6 py-4 shadow-[0_10px_30px_rgba(240,180,41,0.20)] transition-all duration-300 hover:scale-105 hover:border-[#ed0133]/70 hover:shadow-[0_15px_40px_rgba(237,1,51,0.24)]">
           <div aria-hidden="true" class="absolute inset-x-0 top-0 h-1/2 bg-gradient-to-b from-white/25 to-transparent"></div>
 
           <svg
-            class="relative z-10 h-9 w-9 text-[#1a0303]"
+            class="relative z-10 h-9 w-9 text-[#170206]"
             aria-hidden="true"
             focusable="false"
             fill="none"
@@ -69,7 +69,7 @@ const graph = pageGraph(Astro, {
             <path stroke-linecap="round" stroke-linejoin="round" d="M18 9v3m0 0v3m0-3h3m-3 0h-3m-2-5a4 4 0 11-8 0 4 4 0 018 0zM3 20a6 6 0 0112 0v1H3v-1z"></path>
           </svg>
 
-          <span class="relative z-10 text-3xl font-bold tracking-wide text-[#1a0303]">สมัครสมาชิก</span>
+          <span class="relative z-10 text-3xl font-bold tracking-wide text-[#170206]">สมัครสมาชิก</span>
         </a>
       </div>
     </div>

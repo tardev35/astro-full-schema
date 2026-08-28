@@ -2,7 +2,7 @@
 import MainLayout from "../layouts/MainLayout.astro";
 import ContentBox from "../components/ContentBox.astro";
 import Navfoot from "../components/Navfoot.astro";
-import Announcement from "../components/AnnouncementPremium.astro";
+import Announcement from "../components/Announcement5.astro";
 
 import { Picture } from "astro:assets";
 
@@ -11,12 +11,12 @@ import pro2 from "../assets/slide2.png";
 import pro3 from "../assets/slide3.png";
 import { pageGraph } from "../lib/schema";
 
-const pageTitle = "โปรโมชั่น PIGAUTO รวมภาพโปรสมาชิกใหม่ สล็อตออโต้ และคาสิโนสด";
+const pageTitle = "โปรโมชั่น OKHENG รวมภาพโปรสมาชิกใหม่ คืนยอดเสีย และฝากประจำ";
 
-const pageHeading = "โปรโมชั่น PIGAUTO";
+const pageHeading = "โปรโมชั่น OKHENG";
 
 const pageDescription =
-  "หากคุณกำลังมองหาโปรที่คุ้มกว่าเดิม PIGAUTO รวมภาพโปรสมาชิกใหม่ สล็อตออโต้ คาสิโนสด และสิทธิ์สายวอลเล็ทไว้หน้าเดียว ดูยอดรับและเงื่อนไขบนภาพก่อนกดสมัครใช้สิทธิ์";
+  "หากคุณกำลังมองหาโปรที่คุ้มกว่าเดิม OKHENG รวมภาพโปรสมาชิกใหม่ คืนยอดเสีย ฝากประจำ และสิทธิ์สายวอลเล็ทไว้หน้าเดียว ดูยอดรับและเงื่อนไขบนภาพก่อนกดสมัครใช้สิทธิ์";
 
 const graph = pageGraph(Astro, {
   name: pageTitle,
@@ -35,25 +35,25 @@ const graph = pageGraph(Astro, {
   <Announcement />
 
   <ContentBox title={pageHeading} as="h1">
-    <p class="mb-4 text-left text-base leading-relaxed text-[#f7e2d6]">
-      หากคุณกำลังมองหาโปรโมชั่นที่คุ้มค่าและใช้ได้จริง <strong class="text-[#f5c542]">PIGAUTO</strong> พร้อมมอบทั้งโปรสมาชิกใหม่ สล็อตออโต้
-      คาสิโนสด และสิทธิ์สำหรับสายวอลเล็ท รวมไว้ให้เลือกครบในหน้าเดียว
+    <p class="mb-4 text-left text-base leading-relaxed text-[#f9dfe3]">
+      หากคุณกำลังมองหาโปรโมชั่นที่คุ้มค่าและใช้ได้จริง <strong class="text-[#f0b429]">OKHENG</strong> พร้อมมอบทั้งโปรสมาชิกใหม่ คืนยอดเสียสูงถึง 5%
+      และเครดิตฟรีสำหรับสายฝากประจำ รวมไว้ให้เลือกครบในหน้าเดียว
     </p>
 
-    <p class="mb-8 text-left text-base leading-relaxed text-[#f7e2d6]">
-      แต่ละใบระบุยอดรับ เงื่อนไขเทิร์น และช่วงเวลาที่ใช้ได้ไว้บนภาพ เลือกโปรที่ตรงกับงบและสไตล์ของคุณ แล้วสมัครครั้งเดียวใช้สิทธิ์ต่อได้ยาว ๆ
-      เพื่อให้ทุกยอดฝากคุ้มค่ากว่าที่เคย
+    <p class="mb-8 text-left text-base leading-relaxed text-[#f9dfe3]">
+      แต่ละใบระบุยอดรับ เงื่อนไข และช่วงเวลาที่ใช้ได้ไว้บนภาพ เลือกโปรที่ตรงกับงบและสไตล์ของคุณ แล้วสมัครยูสเดียวใช้สิทธิ์ต่อได้ยาว ๆ
+      เพื่อประสบการณ์การเล่นที่คุ้มค่ากว่าที่เคย
     </p>
 
     <div class="grid w-full grid-cols-1 gap-6 sm:grid-cols-2">
       <Picture
         src={pro1}
-        alt="ภาพโปรโมชั่น PIGAUTO โทนแดงทองแบบตรุษจีน พรีเซนเตอร์หญิงสวมชุดกี่เพ้าสีแดงปักลายทอง ยืนท่ามกลางโคมไฟจีนสีแดง พัดทอง ไพ่ ชิปคาสิโน และเหรียญทองที่ลอยฟุ้ง ด้านบนเป็นโลโก้หมูสีชมพู PIGAUTO ข้อความบนภาพเขียนว่า รองรับวอลเล็ท เต็มระบบ และ pig auto wallet ใช้ง่าย"
+        alt="ภาพโปรโมชั่น OKHENG โทนแดงทองแบบตรุษจีน เทพเจ้าไฉ่ซิงเอี๊ยสวมชุดคลุมแดงปักลายทอง มือถือก้อนทองคำ ข้อความบนภาพเขียนว่า OKHENG เว็บใหญ่สายตรง เล่นได้ทุกค่าย บาคาร่า สล็อตลิขสิทธิ์ API แท้ พร้อมป้าย ถอนได้จริง 10 ล้าน และ ฝาก-ถอนออโต้ 24 ชม. ด้านล่างเป็นโลโก้ OK HENG บนกองเหรียญทอง"
         loading="lazy"
         fetchpriority="low"
         widths={[200, 400, 600]}
         sizes="(max-width: 768px) 100vw, 50vw"
-        class="mx-auto h-auto w-full rounded-xl border border-[#6b2020] object-contain shadow-[0_10px_30px_rgba(239,68,68,0.16)] transition-transform duration-300 hover:-translate-y-1 hover:border-[#ef4444]/50 hover:shadow-[0_15px_40px_rgba(239,68,68,0.26)]"
+        class="mx-auto h-auto w-full rounded-xl border border-[#6b0d1e] object-contain shadow-[0_10px_30px_rgba(237,1,51,0.16)] transition-transform duration-300 hover:-translate-y-1 hover:border-[#ed0133]/50 hover:shadow-[0_15px_40px_rgba(237,1,51,0.26)]"
         decoding="async"
         formats={["avif", "webp"]}
         fallbackFormat="webp"
@@ -62,12 +62,12 @@ const graph = pageGraph(Astro, {
 
       <Picture
         src={pro2}
-        alt="ภาพโปรโมชั่น PIGAUTO พื้นแดงเข้มโทนตรุษจีน มีโคมไฟแดงและพัดทองเรียงอยู่รอบภาพ พรีเซนเตอร์หญิงชุดกี่เพ้าแดงปักลายทองยืนอยู่ด้านขวา ล้อมด้วยไพ่ ชิปคาสิโน และเหรียญทอง ข้อความบนภาพเขียนว่า เว็บสล็อตออโต้ไม่มีขั้นต่ำ และ เล่นได้อย่างเป็นมิตร ปลอดภัยสูง"
+        alt="ภาพโปรโมชั่น OKHENG พื้นแดงเข้มโทนตรุษจีน มีโคมไฟจีนสีแดงห้อยอยู่ด้านบน พรีเซนเตอร์หญิงชุดกี่เพ้าแดงถือเหรียญทอง ข้อความบนภาพเขียนว่า คืนยอดเสีย สูงถึง 5% ทุกวันอาทิตย์ หลังเที่ยงคืน 12.00 น. ระบบรีเซ็ตทุก 7 วัน และ ยอดเสียมีคืน เล่นต่อได้สบายกว่าเดิม"
         loading="lazy"
         fetchpriority="low"
         widths={[200, 400, 600]}
         sizes="(max-width: 768px) 100vw, 50vw"
-        class="mx-auto h-auto w-full rounded-xl border border-[#6b2020] object-contain shadow-[0_10px_30px_rgba(239,68,68,0.16)] transition-transform duration-300 hover:-translate-y-1 hover:border-[#ef4444]/50 hover:shadow-[0_15px_40px_rgba(239,68,68,0.26)]"
+        class="mx-auto h-auto w-full rounded-xl border border-[#6b0d1e] object-contain shadow-[0_10px_30px_rgba(237,1,51,0.16)] transition-transform duration-300 hover:-translate-y-1 hover:border-[#ed0133]/50 hover:shadow-[0_15px_40px_rgba(237,1,51,0.26)]"
         decoding="async"
         formats={["avif", "webp"]}
         fallbackFormat="webp"
@@ -76,12 +76,12 @@ const graph = pageGraph(Astro, {
 
       <Picture
         src={pro3}
-        alt="ภาพโปรโมชั่น PIGAUTO พรีเซนเตอร์หญิงชุดกี่เพ้าแดงยืนอยู่ด้านซ้าย ด้านหลังเป็นวงกลมลายจีนสีทองบนผ้าม่านแดง มีโคมไฟแดง พัดทอง เหรียญจีน และไพ่กระจายรอบภาพ มุมบนขวาเป็นโลโก้หมูสีชมพู PIGAUTO ตัวอักษรใหญ่กลางภาพเขียนว่า PIGAUTO และ สมัครง่ายเหมือนเปิดมือถือ"
+        alt="ภาพโปรโมชั่น OKHENG พรีเซนเตอร์หญิงชุดกี่เพ้าแดงถือการ์ด OK HENG ยืนข้างไหทองที่ล้นด้วยก้อนทองคำ ข้อความบนภาพเขียนว่า ฝากประจำต่อเนื่องทุกวัน รับเพิ่มเครดิตฟรี และ ถอนได้ทันที ไม่ติดเทิร์น"
         loading="lazy"
         fetchpriority="low"
         widths={[200, 400, 600]}
         sizes="(max-width: 768px) 100vw, 50vw"
-        class="mx-auto h-auto w-full rounded-xl border border-[#6b2020] object-contain shadow-[0_10px_30px_rgba(239,68,68,0.16)] transition-transform duration-300 hover:-translate-y-1 hover:border-[#ef4444]/50 hover:shadow-[0_15px_40px_rgba(239,68,68,0.26)]"
+        class="mx-auto h-auto w-full rounded-xl border border-[#6b0d1e] object-contain shadow-[0_10px_30px_rgba(237,1,51,0.16)] transition-transform duration-300 hover:-translate-y-1 hover:border-[#ed0133]/50 hover:shadow-[0_15px_40px_rgba(237,1,51,0.26)]"
         decoding="async"
         formats={["avif", "webp"]}
         fallbackFormat="webp"
@@ -92,8 +92,8 @@ const graph = pageGraph(Astro, {
     <div class="mt-12 flex justify-center pb-4">
       <a
         href="/register"
-        class="flex items-center justify-center rounded-lg border border-[#ef4444]/40 bg-gradient-to-r from-[#ffe9a8] via-[#f5c542] to-[#ffd75e] px-10 py-3.5 text-lg font-black text-[#280707] shadow-[0_10px_30px_rgba(239,68,68,0.24)] transition-transform hover:scale-105 hover:shadow-[0_15px_40px_rgba(245,197,66,0.30)]">
-        สมัครสมาชิก PIGAUTO
+        class="flex items-center justify-center rounded-lg border border-[#ed0133]/40 bg-gradient-to-r from-[#ffdb7d] via-[#f0b429] to-[#ffcf5a] px-10 py-3.5 text-lg font-black text-[#2a0509] shadow-[0_10px_30px_rgba(237,1,51,0.24)] transition-transform hover:scale-105 hover:shadow-[0_15px_40px_rgba(240,180,41,0.30)]">
+        สมัครสมาชิก OKHENG
       </a>
     </div>
   </ContentBox>

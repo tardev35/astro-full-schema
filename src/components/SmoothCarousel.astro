@@ -1,17 +1,17 @@
 ---
 import { Picture } from "astro:assets";
 
-import slide1 from "../assets/slide1.png";
 import slide2 from "../assets/slide2.png";
+import slide3 from "../assets/slide3.png";
 
 const images = [
   {
-    src: slide1,
-    alt: "ภาพโปรโมชั่น PIGAUTO โทนแดงตรุษจีนสลับทอง ด้านบนเป็นโลโก้หมูสีชมพูในเฟืองพร้อมคำว่า PIGAUTO มีโคมไฟจีนสีแดงห้อยลงมา พัดกระดาษสีทองกางอยู่ด้านหลัง ไพ่โพดำและไพ่หัวใจกระจายกลางภาพพร้อมชิปคาสิโนและเหรียญทอง ด้านซ้ายเป็นพรีเซนเตอร์หญิงสวมชุดกี่เพ้าสีแดงปักลายทอง ด้านล่างเป็นตัวอักษรสีขาวขอบทองว่า รองรับวอลเล็ท เต็มระบบ และแถบว่า pig auto wallet ใช้ง่าย",
+    src: slide2,
+    alt: "ภาพโปรโมชั่น OKHENG โทนแดงตรุษจีนสลับทอง มีโคมไฟจีนสีแดงห้อยอยู่ด้านบนและพรีเซนเตอร์หญิงสวมชุดกี่เพ้าสีแดงถือเหรียญทอง ตัวอักษรสีทองขนาดใหญ่ว่า คืนยอดเสีย สูงถึง 5% บรรทัดถัดมาว่า ทุกวันอาทิตย์ หลังเที่ยงคืน 12.00 น. และ ระบบรีเซ็ตทุก 7 วัน ด้านล่างเป็นข้อความว่า ยอดเสียมีคืน เล่นต่อได้สบายกว่าเดิม พร้อมแถวไอคอน บาคาร่าครบทุกค่าย สล็อตลิขสิทธิ์แท้ API แท้เชื่อมตรงทุกค่าย ระบบออโต้ 24 ชม. และ มั่นคง ปลอดภัย 100%",
   },
   {
-    src: slide2,
-    alt: "ภาพโปรโมชั่น PIGAUTO โทนแดงตรุษจีนสลับทอง ด้านบนเป็นโลโก้หมูสีชมพูในเฟืองพร้อมคำว่า PIGAUTO มีโคมไฟจีนสีแดงและพัดกระดาษสีทองเรียงอยู่ด้านหลัง ไพ่เอซ ชิปคาสิโน และเหรียญทองกระจายอยู่รอบภาพ ด้านขวาเป็นพรีเซนเตอร์หญิงสวมชุดกี่เพ้าสีแดงปักลายทอง ด้านล่างเป็นตัวอักษรสีขาวขอบทองว่า เว็บสล็อตออโต้ไม่มีขั้นต่ำ และแถบว่า เล่นได้อย่างเป็นมิตร ปลอดภัยสูง",
+    src: slide3,
+    alt: "ภาพโปรโมชั่น OKHENG โทนแดงตรุษจีนสลับทอง ด้านขวาเป็นพรีเซนเตอร์หญิงสวมชุดกี่เพ้าสีแดงถือการ์ด OK HENG ข้างหม้อทองที่มีทองแท่งกองอยู่ ตัวอักษรสีทองว่า ฝากประจำต่อเนื่องทุกวัน บรรทัดถัดมาว่า รับเพิ่มเครดิตฟรี และด้านล่างว่า ถอนได้ทันที ไม่ติดเทิร์น",
   },
 ];
 
@@ -23,7 +23,7 @@ const slides = Array.from({ length: COPIES }, () => images).flat();
   <input id="carousel-pause" type="checkbox" class="peer sr-only" />
   <label
     for="carousel-pause"
-    class="sr-only cursor-pointer peer-focus-visible:not-sr-only peer-focus-visible:mb-3 peer-focus-visible:inline-block peer-focus-visible:rounded-full peer-focus-visible:border peer-focus-visible:border-[#ef4444]/60 peer-focus-visible:bg-[#280707] peer-focus-visible:px-4 peer-focus-visible:py-2 peer-focus-visible:text-sm peer-focus-visible:font-bold peer-focus-visible:text-[#ffe9a8]">
+    class="sr-only cursor-pointer peer-focus-visible:not-sr-only peer-focus-visible:mb-3 peer-focus-visible:inline-block peer-focus-visible:rounded-full peer-focus-visible:border peer-focus-visible:border-[#ed0133]/60 peer-focus-visible:bg-[#2a0509] peer-focus-visible:px-4 peer-focus-visible:py-2 peer-focus-visible:text-sm peer-focus-visible:font-bold peer-focus-visible:text-[#ffdb7d]">
     หยุด / เล่นสไลด์ภาพ
   </label>
 
@@ -36,7 +36,7 @@ const slides = Array.from({ length: COPIES }, () => images).flat();
             <Picture
               src={slide.src}
               alt={isDuplicate ? "" : slide.alt}
-              class="block w-full rounded-xl border border-[#6b2020] object-cover shadow-[0_10px_30px_rgba(239,68,68,0.20)]"
+              class="block w-full rounded-xl border border-[#6b0d1e] object-cover shadow-[0_10px_30px_rgba(237,1,51,0.20)]"
               width={slide.src.width}
               height={slide.src.height}
               loading="lazy"

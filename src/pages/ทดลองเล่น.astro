@@ -2,7 +2,7 @@
 import MainLayout from "../layouts/MainLayout.astro";
 import ContentBox from "../components/ContentBox.astro";
 import Navfoot from "../components/Navfoot.astro";
-import Announcement from "../components/AnnouncementPremium.astro";
+import Announcement from "../components/Announcement5.astro";
 
 import { Picture } from "astro:assets";
 import { itemList, pageGraph, schemaCtx } from "../lib/schema";
@@ -36,12 +36,12 @@ const demoGames = [
 
 const gameList = demoGames.map((game) => ({ name: game.name, imagePath: game.src.src }));
 
-const pageTitle = "ทดลองเล่น PIGAUTO ลองสล็อตออโต้ บาคาร่า และคาสิโนสดก่อนสมัครสมาชิก";
+const pageTitle = "ทดลองเล่น OKHENG ลองบาคาร่า สล็อตลิขสิทธิ์ และคาสิโนสดก่อนสมัคร";
 
-const pageHeading = "ทดลองเล่น PIGAUTO ลองสล็อตออโต้และคาสิโนสดให้พอใจก่อนลงเครดิตจริง";
+const pageHeading = "ทดลองเล่น OKHENG ลองบาคาร่าและสล็อตลิขสิทธิ์ให้พอใจก่อนลงเครดิตจริง";
 
 const pageDescription =
-  "อยากลองก่อนตัดสินใจ PIGAUTO เปิดให้ทดลองเล่นสล็อตออโต้ บาคาร่า และคาสิโนสดหลายค่ายฟรี ดูเดิมพันต่อรอบและฟีเจอร์ในเกมจนพอใจ ค่อยสมัครสมาชิกแล้วเล่นด้วยเครดิตจริง";
+  "อยากลองก่อนตัดสินใจ OKHENG เปิดให้ทดลองเล่นสล็อตลิขสิทธิ์ บาคาร่า และคาสิโนสดหลายค่าย ดูเดิมพันต่อรอบและฟีเจอร์จนพอใจ ค่อยสมัครยูสเดียวแล้วเล่นด้วยเครดิตจริง";
 
 const ctx = schemaCtx(Astro);
 const graph = pageGraph(Astro, {
@@ -54,8 +54,8 @@ const graph = pageGraph(Astro, {
   ],
   extra: [
     itemList(ctx, {
-      name: "ทดลองเล่นเกมของ PIGAUTO",
-      alternateName: "PIGAUTO โหมดทดลองเกมหลายค่ายบนมือถือก่อนเล่นด้วยเครดิตจริง",
+      name: "ทดลองเล่นเกมของ OKHENG",
+      alternateName: "OKHENG โหมดทดลองเกมหลายค่ายบนมือถือก่อนเล่นด้วยเครดิตจริง",
       itemType: "Game",
       items: gameList,
     }),
@@ -69,23 +69,29 @@ const graph = pageGraph(Astro, {
   <Announcement />
 
   <ContentBox as="h1" title={pageHeading}>
-    <p class="mb-4 text-left text-base leading-relaxed text-[#f7e2d6]">
-      อยากลองก่อนตัดสินใจใช่ไหม <strong class="text-[#f5c542]">PIGAUTO</strong> เปิดให้คุณทดลองเล่นได้ฟรี ทั้งสล็อตออโต้จากค่ายดัง บาคาร่า และห้องคาสิโนสด
-      เลือกค่ายที่สนใจ สมัครยูสเดียวใช้เวลาไม่กี่นาที แล้วเข้าไปลองโหมดทดลองของค่ายนั้นได้เลย
+    <p class="mb-4 text-left text-base leading-relaxed text-[#f9dfe3]">
+      อยากลองก่อนตัดสินใจใช่ไหม <strong class="text-[#f0b429]">OKHENG</strong> เปิดให้คุณลองได้ฟรี ทั้งบาคาร่า ห้องคาสิโนสด และสล็อตลิขสิทธิ์จากหลายค่าย
     </p>
 
-    <p class="text-left text-base leading-relaxed text-[#f7e2d6]">
-      เปิดผ่านเบราว์เซอร์ได้ทันทีทั้งบนมือถือ แท็บเล็ต และคอมพิวเตอร์ ไม่ต้องติดตั้งโปรแกรมเพิ่ม ลองจนเจอเกมที่ใช่และจังหวะที่ถูกใจ
-      แล้วค่อยเริ่มเล่นด้วยเครดิตจริงจากยูสเดิม ไม่ต้องเปิดบัญชีที่สอง
+    <p class="mb-4 text-left text-base leading-relaxed text-[#f9dfe3]">
+      เลือกค่ายที่สนใจ สมัครยูสเดียวใช้เวลาไม่กี่นาที แล้วเข้าไปลองโหมดทดลองของค่ายนั้นได้เลย เปิดผ่านเบราว์เซอร์ได้ทั้งบนมือถือ แท็บเล็ต และคอมพิวเตอร์
+      ไม่ต้องติดตั้งโปรแกรมเพิ่ม
     </p>
 
+    <p class="text-left text-base leading-relaxed text-[#f9dfe3]">
+      ลองจนเจอเกมที่ใช่และจังหวะที่ถูกใจ แล้วค่อยเริ่มเล่นด้วยเครดิตจริงจากยูสเดิม ไม่ต้องเปิดบัญชีที่สอง
+    </p>
   </ContentBox>
 
-  <ContentBox as="h2" title="รวมค่ายสล็อตออโต้และห้องคาสิโนสดที่เปิดให้ลองใน PIGAUTO">
-    <p class="mb-8 text-left text-base leading-relaxed text-[#f7e2d6]">
-      เริ่มจากค่ายไหนก็ได้ที่สะดุดตา แต่ละค่ายมีธีมและฟีเจอร์เป็นของตัวเอง ทั้งสล็อตออโต้หลายแนวจากค่ายดัง และห้องคาสิโนสดที่มีบาคาร่าเป็นตัวหลัก
+  <ContentBox as="h2" title="เลือกค่ายที่ถูกใจ แล้วเข้าไปลองของจริงกับ OKHENG ได้เลย">
+    <p class="mb-4 text-left text-base leading-relaxed text-[#f9dfe3]">
+      เริ่มจากค่ายไหนก็ได้ที่สะดุดตา แต่ละค่ายมีธีมและฟีเจอร์เป็นของตัวเอง ทั้งสล็อตลิขสิทธิ์หลายแนวและห้องคาสิโนสดที่มีบาคาร่าเป็นตัวหลัก
       พร้อมเกมใหม่ที่ทยอยเพิ่มเข้ามาตลอดทั้งปี
-      กดที่ภาพค่ายที่สนใจเพื่อไปยังขั้นตอนสมัคร แล้วเข้าใช้งานค่ายนั้นได้ทันที ใช้ยูสเดียวสลับไปมาได้ทุกค่าย ไม่ต้องเปิดบัญชีใหม่ทุกครั้งที่อยากเปลี่ยนแนว
+    </p>
+
+    <p class="mb-8 text-left text-base leading-relaxed text-[#f9dfe3]">
+      กดที่ภาพค่ายที่สนใจเพื่อไปยังขั้นตอนสมัคร แล้วเข้าใช้งานค่ายนั้นได้ทันที ระบบ API แท้ทำให้ใช้ยูสเดียวสลับไปมาได้ทุกค่าย
+      ไม่ต้องเปิดบัญชีใหม่ทุกครั้งที่อยากเปลี่ยนแนว
     </p>
     <div class="mb-5 grid grid-cols-2 gap-5 sm:grid-cols-2 md:grid-cols-4">
       {
@@ -98,7 +104,7 @@ const graph = pageGraph(Astro, {
               fetchpriority="low"
               widths={[200, 400, 600]}
               sizes="(max-width: 768px) 50vw, 25vw"
-              class="block h-auto w-full object-cover shadow-[0_10px_30px_rgba(239,68,68,0.16)] transition-transform duration-300 group-hover/game:scale-105"
+              class="block h-auto w-full object-cover shadow-[0_10px_30px_rgba(237,1,51,0.16)] transition-transform duration-300 group-hover/game:scale-105"
               decoding="async"
               formats={["avif", "webp"]}
               fallbackFormat="webp"
@@ -108,9 +114,9 @@ const graph = pageGraph(Astro, {
               href="/register"
               target="_blank"
               rel="noopener noreferrer"
-              aria-label={`สมัครสมาชิกเพื่อเล่น ${game.name} ที่ PIGAUTO`}
-              class="absolute inset-0 flex items-center justify-center bg-[#0d0101]/85 opacity-0 transition-opacity duration-300 group-hover/game:opacity-100 focus-visible:opacity-100">
-              <span class="rounded-full border border-[#f87171]/60 bg-gradient-to-r from-[#ffe9a8] via-[#f5c542] to-[#ffd75e] px-6 py-2 font-bold text-[#280707] shadow-[0_10px_30px_rgba(239,68,68,0.32)] transition-transform hover:scale-110">เล่นเลย</span>
+              aria-label={`สมัครสมาชิกเพื่อเล่น ${game.name} ที่ OKHENG`}
+              class="absolute inset-0 flex items-center justify-center bg-[#0d0104]/85 opacity-0 transition-opacity duration-300 group-hover/game:opacity-100 focus-visible:opacity-100">
+              <span class="rounded-full border border-[#ff3d63]/60 bg-gradient-to-r from-[#ffdb7d] via-[#f0b429] to-[#ffcf5a] px-6 py-2 font-bold text-[#2a0509] shadow-[0_10px_30px_rgba(237,1,51,0.32)] transition-transform hover:scale-110">เล่นเลย</span>
             </a>
           </div>
         ))
@@ -119,36 +125,45 @@ const graph = pageGraph(Astro, {
   </ContentBox>
 
   <ContentBox as="h2" title="ทดลองเล่นฟรีไม่จำกัดรอบ ลองจนมั่นใจแล้วค่อยลงเครดิตจริง">
-    <p class="mb-4 text-left text-base leading-relaxed text-[#f7e2d6]">
+    <p class="mb-4 text-left text-base leading-relaxed text-[#f9dfe3]">
       พอเข้าไปถึงโหมดทดลองแล้วหมุนได้ไม่จำกัดรอบ เพราะเป็นเครดิตสมมติล้วน ๆ จึงลองผิดลองถูกได้เต็มที่โดยไม่ต้องเสี่ยงอะไรเลย
+    </p>
+
+    <p class="mb-4 text-left text-base leading-relaxed text-[#f9dfe3]">
       ดูว่าเดิมพันต่อรอบเริ่มที่เท่าไร ฟีเจอร์เข้าง่ายแค่ไหน หนึ่งรอบใช้เวลานานไหม แล้วเก็บไว้เป็นข้อมูลตอนเลือกเกมที่จะเล่นจริง
     </p>
 
-    <p class="text-left text-base leading-relaxed text-[#f7e2d6]">
-      มีสองเรื่องที่อยากให้รู้ไว้ก่อน เครดิตในโหมดทดลองถอนไม่ได้และไม่นับเป็นยอดเทิร์นของโปรใด ๆ
-      และบางเกม โดยเฉพาะห้องคาสิโนสด ต้องเข้าโต๊ะจริงถึงจะเห็นบรรยากาศได้ครบ ถ้าเกมที่อยากลองยังไม่มีปุ่มทดลอง
+    <p class="mb-4 text-left text-base leading-relaxed text-[#f9dfe3]">
+      มีสองเรื่องที่อยากให้รู้ไว้ก่อน เครดิตในโหมดทดลองถอนไม่ได้ และไม่นับเป็นยอดเทิร์นของโปรใด ๆ
+    </p>
+
+    <p class="text-left text-base leading-relaxed text-[#f9dfe3]">
+      อีกเรื่องคือไม่ใช่ทุกเกมที่มีปุ่มทดลอง โดยเฉพาะห้องคาสิโนสดที่ต้องเข้าโต๊ะจริงถึงจะเห็นบรรยากาศได้ครบ ถ้าเกมที่อยากลองยังไม่มีให้ทดลอง
       สมัครสมาชิกแล้วเข้าไปดูของจริงได้เลย
     </p>
-
   </ContentBox>
 
-  <ContentBox as="h2" title="พร้อมเมื่อไหร่ สมัครสมาชิก PIGAUTO แล้วเริ่มเล่นจริงได้ทันที">
-    <p class="mb-4 text-left text-base leading-relaxed text-[#f7e2d6]">
-      สมัครใช้เวลาไม่นาน แล้วได้ยูสเดียวที่ครอบคลุมทั้งสล็อตออโต้ คาสิโนสด และบาคาร่า
+  <ContentBox as="h2" title="พร้อมเมื่อไหร่ สมัครสมาชิก OKHENG แล้วเริ่มเล่นจริงได้ทันที">
+    <p class="mb-4 text-left text-base leading-relaxed text-[#f9dfe3]">
+      สมัครใช้เวลาไม่นาน แล้วได้ยูสเดียวที่ครอบคลุมทั้งบาคาร่า คาสิโนสด และสล็อตลิขสิทธิ์
+    </p>
+
+    <p class="mb-4 text-left text-base leading-relaxed text-[#f9dfe3]">
       หน้าเมมเบอร์รวมเครดิต โปร และประวัติรายการไว้ที่เดียว เช็กสถานะของตัวเองได้ตลอดโดยไม่ต้องออกจากระบบ
+      ส่วนระบบฝากถอนออโต้รองรับทรูวอลเล็ตและธนาคารชั้นนำ ทำรายการจากมือถือได้ตลอด 24 ชั่วโมง
     </p>
 
-    <p class="mb-4 text-left text-base leading-relaxed text-[#f7e2d6]">
-      ระบบฝากถอนออโต้รองรับวอลเล็ทและเชื่อมกับเครดิตโดยตรง ทำรายการจากมือถือได้ตลอด 24 ชั่วโมง ไม่มีขั้นต่ำ และย้อนดูยอดได้จากที่เดียวกัน
+    <p class="mb-4 text-left text-base leading-relaxed text-[#f9dfe3]">
       ก่อนลงเดิมพันรอบแรก แนะนำให้ตั้งงบต่อรอบที่รับไหวไว้ก่อน และเปิดดูเงื่อนไขของโปรที่จะใช้ว่าครอบคลุมหมวดไหน ยอดรับเท่าไร เทิร์นเท่าไร
-      เพื่อให้เล่นได้สบายใจตั้งแต่รอบแรก
     </p>
 
-    <p class="text-left text-base leading-relaxed text-[#f7e2d6]">
-      เข้าใช้งานผ่านเว็บหลักของ PIGAUTO ได้ด้วยยูสเดิมทุกอุปกรณ์ เมนูจัดมาให้ใช้มือเดียวบนจอเล็กได้สะดวก
-      การเข้าจากช่องทางหลักยังช่วยเลี่ยงโดเมนชื่อใกล้เคียงบนผลค้นหา และอย่าลืมเก็บรหัสผ่านกับรหัส OTP ไว้กับตัวเสมอ ไม่ต้องบอกใครทั้งนั้น
+    <p class="mb-4 text-left text-base leading-relaxed text-[#f9dfe3]">
+      เข้าใช้งานผ่านเว็บหลักของ OKHENG ได้ด้วยยูสเดิมทุกอุปกรณ์ เมนูจัดมาให้ใช้มือเดียวบนจอเล็กได้สะดวก และช่วยเลี่ยงโดเมนชื่อใกล้เคียงบนผลค้นหา
     </p>
 
+    <p class="text-left text-base leading-relaxed text-[#f9dfe3]">
+      อีกอย่างที่ควรติดตัวไว้เสมอ อย่าบอกรหัสผ่านหรือรหัส OTP ให้ใครทั้งนั้น
+    </p>
   </ContentBox>
 
   <Navfoot />

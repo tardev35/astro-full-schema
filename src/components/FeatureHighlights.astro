@@ -19,28 +19,28 @@ const { items } = Astro.props;
       const isGold = item.accent !== "blue";
       return (
         <div
-          class={`group flex flex-col items-start gap-4 rounded-2xl border border-[#4a0611] bg-[#2a0509]/60 p-6 transition-all duration-300 hover:-translate-y-1 sm:flex-row ${
+          class={`group flex flex-col items-start gap-4 rounded-2xl border border-[#4a2109] bg-[#241004]/60 p-6 transition-all duration-300 hover:-translate-y-1 sm:flex-row ${
             isGold
-              ? "hover:border-[#f0b429]/50 hover:bg-[#3a070f] hover:shadow-[0_10px_20px_rgba(240,180,41,0.14)]"
-              : "hover:border-[#1f5fd6]/60 hover:bg-[#3a070f] hover:shadow-[0_10px_20px_rgba(31,95,214,0.24)]"
+              ? "hover:border-[#fbbf24]/50 hover:bg-[#331608] hover:shadow-[0_10px_20px_rgba(251,191,36,0.14)]"
+              : "hover:border-[#b91c1c]/60 hover:bg-[#331608] hover:shadow-[0_10px_20px_rgba(185,28,28,0.24)]"
           }`}>
           <div
             aria-hidden="true"
             class={`flex h-14 w-14 shrink-0 items-center justify-center rounded-xl text-3xl transition-transform duration-300 group-hover:scale-110 ${
               isGold
-                ? "border border-[#ffdb7d]/50 bg-gradient-to-br from-[#f0b429] to-[#a8710c] shadow-[0_0_15px_rgba(240,180,41,0.5)] group-hover:rotate-3"
-                : "border border-[#6fa8ff]/50 bg-gradient-to-br from-[#1f5fd6] to-[#123a85] shadow-[0_0_15px_rgba(31,95,214,0.45)]"
+                ? "border border-[#fcd34d]/50 bg-gradient-to-br from-[#fbbf24] to-[#b45309] shadow-[0_0_15px_rgba(251,191,36,0.5)] group-hover:rotate-3"
+                : "border border-[#f87171]/50 bg-gradient-to-br from-[#b91c1c] to-[#7f1d1d] shadow-[0_0_15px_rgba(185,28,28,0.45)]"
             }`}>
             {item.icon}
           </div>
           <div class="flex flex-col gap-2 text-left">
-            <h3
+            <p
               class={`text-xl font-black tracking-wide drop-shadow-sm ${
-                isGold ? "bg-gradient-to-r from-[#ffdb7d] to-[#f0b429] bg-clip-text text-transparent" : "bg-gradient-to-r from-[#6fa8ff] to-[#1f5fd6] bg-clip-text text-transparent"
+                isGold ? "bg-gradient-to-r from-[#fcd34d] to-[#fbbf24] bg-clip-text text-transparent" : "bg-gradient-to-r from-[#f87171] to-[#b91c1c] bg-clip-text text-transparent"
               }`}>
               {item.title}
-            </h3>
-            <p class="text-left text-base leading-relaxed text-[#f9dfe3] transition-colors group-hover:text-[#ffdb7d]">{item.description}</p>
+            </p>
+            <p class="text-left text-base leading-relaxed text-[#f8e3d2] transition-colors group-hover:text-[#fcd34d]">{item.description}</p>
           </div>
         </div>
       );

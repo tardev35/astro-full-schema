@@ -13,21 +13,21 @@ const { title, faqs = [] } = Astro.props;
 ---
 
 <div class="mx-auto max-w-[1000px] px-4 py-10 font-sans">
-  {title && <h2 class="mb-8 bg-gradient-to-b from-[#f5d488] to-[#b87814] bg-clip-text text-center text-2xl font-black tracking-tight text-transparent uppercase md:text-4xl">{title}</h2>}
+  {title && <h2 class="mb-8 bg-gradient-to-b from-[#fcd34d] via-[#f97316] to-[#b45309] bg-clip-text text-center text-2xl font-black tracking-tight text-transparent uppercase md:text-4xl">{title}</h2>}
 
   <div class="space-y-4">
     {
       faqs.map((faq) => (
-        <details name="faq-plain" class="faq-item group overflow-hidden rounded-xl border border-[#e0aa2e]/25 bg-gradient-to-br from-[#241809] to-[#160f07] transition-all hover:border-[#e0aa2e]/50">
+        <details name="faq-plain" class="faq-item group overflow-hidden rounded-xl border border-[#fbbf24]/25 bg-gradient-to-br from-[#241004] to-[#180a03] transition-all hover:border-[#fbbf24]/50">
           <summary class="flex w-full cursor-pointer items-center justify-between p-5 text-left transition-all">
-            <span class="text-base font-bold text-[#efe0c4] md:text-lg">{faq.q}</span>
+            <span class="text-base font-bold text-[#f8e3d2] md:text-lg">{faq.q}</span>
             <span
               aria-hidden="true"
-              class="faq-icon ml-4 flex h-8 w-8 shrink-0 items-center justify-center rounded-full border border-[#e0aa2e]/40 text-lg leading-none font-black text-[#e0aa2e] transition-transform duration-300">
+              class="faq-icon ml-4 flex h-8 w-8 shrink-0 items-center justify-center rounded-full border border-[#fbbf24]/40 text-lg leading-none font-black text-[#fbbf24] transition-transform duration-300">
               +
             </span>
           </summary>
-          <div class="faq-answer border-t border-[#6b4310] p-5 pt-0 text-left text-base leading-relaxed text-[#efe0c4]">{faq.a}</div>
+          <div class="faq-answer border-t border-[#6b2f0b] p-5 pt-0 text-left text-base leading-relaxed text-[#f8e3d2]">{faq.a}</div>
         </details>
       ))
     }
@@ -42,13 +42,13 @@ const { title, faqs = [] } = Astro.props;
     display: none;
   }
   .faq-item[open] {
-    border-color: rgba(224, 170, 46, 0.6);
-    box-shadow: 0 0 20px rgba(224, 170, 46, 0.25);
+    border-color: rgba(251, 191, 36, 0.6);
+    box-shadow: 0 0 20px rgba(251, 191, 36, 0.25);
   }
   .faq-item[open] .faq-icon {
     transform: rotate(45deg);
-    border-color: #e0aa2e;
-    color: #f5d488;
+    border-color: #fbbf24;
+    color: #fcd34d;
   }
   .faq-item[open] .faq-answer {
     animation: faq-reveal 0.25s ease-out;

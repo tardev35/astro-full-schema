@@ -2,7 +2,7 @@
 import MainLayout from "../layouts/MainLayout.astro";
 import ContentBox from "../components/ContentBox.astro";
 import Navfoot from "../components/Navfoot.astro";
-import Announcement from "../components/Announcement5.astro";
+import Announcement from "../components/Announcement2.astro";
 
 import { Picture } from "astro:assets";
 import { itemList, pageGraph, schemaCtx } from "../lib/schema";
@@ -28,7 +28,7 @@ const demoGames = [
   { name: "SBOBET", src: image6, alt: "แบนเนอร์ค่ายเกม SBOBET โลโก้ตัวอักษรขาวบนพื้นดำ คู่กับตัวการ์ตูนอนิเมะสาวหูจิ้งจอกผมบลอนด์ในชุดกิโมโนสีชมพู มือถืออมยิ้มเกลียวหลากสี" },
   { name: "Sexy Slot", src: image7, alt: "แบนเนอร์ค่าย Sexy Slot ตัวอักษรสีชมพูม่วงมีประกายวิบวับ คู่กับตัวการ์ตูนสาวผมน้ำตาลในชุดรัดรูปสีม่วง นั่งอยู่ในกรอบวงกลมที่ล้อมด้วยหัวใจสีชมพู" },
   { name: "JILI", src: image8, alt: "แบนเนอร์ค่ายเกม JILI ตัวอักษรทองบนพื้นดำ คู่กับนางเงือกผมแดงสวมเกราะเปลือกหอยสีทอง ยกหอยสังข์แนบหูอยู่ใต้ทะเลที่มีปลาการ์ตูนและปะการัง" },
-  { name: "Ask Me Bet", src: image9, alt: "แบนเนอร์ค่ายเกม ask me bet โลโก้สามช่องสีขาวเขียวเหลืองบนพื้นดำ คู่กับหัวสิงโตเชิดตรุษจีนสีแดงทองตาโต ใต้แถวโคมไฟแดงหน้าศาลเจ้า" },
+  { name: "Ask Me Bet", src: image9, alt: "แบนเนอร์ค่ายเกม ask me bet โลโก้สามช่องสีขาวเขียวเหลืองบนพื้นดำ คู่กับหัวสิงโตเชิดสีแดงทองตาโต ใต้แถวโคมไฟสีแดงหน้าศาลเจ้า" },
   { name: "New Game", src: image10, alt: "แบนเนอร์ New Game ตัวอักษรสีขาวนูนกลางภาพ ขนาบด้วยตัวการ์ตูนฟักทองหัวไฟกับโครงกระดูกยิ้ม ยืนบนฟลอร์นีออนสีชมพูฟ้าที่เกลื่อนด้วยชิปและลูกเต๋า" },
   { name: "JOKER", src: image11, alt: "แบนเนอร์ค่ายเกม JOKER ตัวอักษรขาวทองบนพื้นดำ คู่กับนักรบโรมันสวมหมวกเหล็กติดขนนกและถือโล่ ยืนเคียงสิงโตกำลังคำรามกลางสนามประลอง" },
   { name: "AFB Gaming", src: image12, alt: "แบนเนอร์ค่ายเกม AFB Gaming โลโก้ตัวอักษรทองบนพื้นดำ คู่กับเทพซุสเคราขาวตาเรืองแสงสีฟ้า สวมมงกุฎใบลอเรลและกำไลทองหน้าวิหารกรีก" },
@@ -36,12 +36,12 @@ const demoGames = [
 
 const gameList = demoGames.map((game) => ({ name: game.name, imagePath: game.src.src }));
 
-const pageTitle = "ทดลองเล่น OKHENG ลองบาคาร่า สล็อตลิขสิทธิ์ และคาสิโนสดก่อนสมัคร";
+const pageTitle = "ทดลองเล่น WON22 ลองสล็อตออนไลน์เว็บตรงหลายค่ายก่อนลงเครดิตจริง";
 
-const pageHeading = "ทดลองเล่น OKHENG ลองบาคาร่าและสล็อตลิขสิทธิ์ให้พอใจก่อนลงเครดิตจริง";
+const pageHeading = "ทดลองเล่น WON22 ลองสล็อตออนไลน์เว็บตรงหลายค่ายให้พอใจก่อนลงเครดิตจริง";
 
 const pageDescription =
-  "อยากลองก่อนตัดสินใจ OKHENG เปิดให้ทดลองเล่นสล็อตลิขสิทธิ์ บาคาร่า และคาสิโนสดหลายค่าย ดูเดิมพันต่อรอบและฟีเจอร์จนพอใจ ค่อยสมัครยูสเดียวแล้วเล่นด้วยเครดิตจริง";
+  "อยากลองก่อนตัดสินใจ WON22 รวมค่ายสล็อตออนไลน์เว็บตรงไว้ให้เลือกทดลองเล่นหลายค่าย ดูเดิมพันต่อรอบและฟีเจอร์จนพอใจ แล้วค่อยสมัครยูสเดียวไปเล่นด้วยเครดิตจริง";
 
 const ctx = schemaCtx(Astro);
 const graph = pageGraph(Astro, {
@@ -54,8 +54,8 @@ const graph = pageGraph(Astro, {
   ],
   extra: [
     itemList(ctx, {
-      name: "ทดลองเล่นเกมของ OKHENG",
-      alternateName: "OKHENG โหมดทดลองเกมหลายค่ายบนมือถือก่อนเล่นด้วยเครดิตจริง",
+      name: "ทดลองเล่นเกมของ WON22",
+      alternateName: "WON22 โหมดทดลองเกมหลายค่ายบนมือถือก่อนเล่นด้วยเครดิตจริง",
       itemType: "Game",
       items: gameList,
     }),
@@ -69,28 +69,28 @@ const graph = pageGraph(Astro, {
   <Announcement />
 
   <ContentBox as="h1" title={pageHeading}>
-    <p class="mb-4 text-left text-base leading-relaxed text-[#f9dfe3]">
-      อยากลองก่อนตัดสินใจใช่ไหม <strong class="text-[#f0b429]">OKHENG</strong> เปิดให้คุณลองได้ฟรี ทั้งบาคาร่า ห้องคาสิโนสด และสล็อตลิขสิทธิ์จากหลายค่าย
+    <p class="mb-4 text-left text-base leading-relaxed text-[#f8e3d2]">
+      อยากลองก่อนตัดสินใจใช่ไหม <strong class="text-[#fbbf24]">WON22</strong> เปิดให้คุณลองได้ฟรี ทั้งสล็อตออนไลน์เว็บตรงหลายค่ายและห้องคาสิโนสด
     </p>
 
-    <p class="mb-4 text-left text-base leading-relaxed text-[#f9dfe3]">
+    <p class="mb-4 text-left text-base leading-relaxed text-[#f8e3d2]">
       เลือกค่ายที่สนใจ สมัครยูสเดียวใช้เวลาไม่กี่นาที แล้วเข้าไปลองโหมดทดลองของค่ายนั้นได้เลย เปิดผ่านเบราว์เซอร์ได้ทั้งบนมือถือ แท็บเล็ต และคอมพิวเตอร์
       ไม่ต้องติดตั้งโปรแกรมเพิ่ม
     </p>
 
-    <p class="text-left text-base leading-relaxed text-[#f9dfe3]">
+    <p class="text-left text-base leading-relaxed text-[#f8e3d2]">
       ลองจนเจอเกมที่ใช่และจังหวะที่ถูกใจ แล้วค่อยเริ่มเล่นด้วยเครดิตจริงจากยูสเดิม ไม่ต้องเปิดบัญชีที่สอง
     </p>
   </ContentBox>
 
-  <ContentBox as="h2" title="เลือกค่ายที่ถูกใจ แล้วเข้าไปลองของจริงกับ OKHENG ได้เลย">
-    <p class="mb-4 text-left text-base leading-relaxed text-[#f9dfe3]">
-      เริ่มจากค่ายไหนก็ได้ที่สะดุดตา แต่ละค่ายมีธีมและฟีเจอร์เป็นของตัวเอง ทั้งสล็อตลิขสิทธิ์หลายแนวและห้องคาสิโนสดที่มีบาคาร่าเป็นตัวหลัก
+  <ContentBox as="h2" title="เลือกค่ายที่ถูกใจ แล้วกดเข้าไปลองกับ WON22 ได้เลย">
+    <p class="mb-4 text-left text-base leading-relaxed text-[#f8e3d2]">
+      เริ่มจากค่ายไหนก็ได้ที่สะดุดตา แต่ละค่ายมีธีมและฟีเจอร์เป็นของตัวเอง ทั้งสล็อตหมุนคลาสสิก เกมโบนัสฟีเจอร์ และห้องคาสิโนสด
       พร้อมเกมใหม่ที่ทยอยเพิ่มเข้ามาตลอดทั้งปี
     </p>
 
-    <p class="mb-8 text-left text-base leading-relaxed text-[#f9dfe3]">
-      กดที่ภาพค่ายที่สนใจเพื่อไปยังขั้นตอนสมัคร แล้วเข้าใช้งานค่ายนั้นได้ทันที ระบบ API แท้ทำให้ใช้ยูสเดียวสลับไปมาได้ทุกค่าย
+    <p class="mb-8 text-left text-base leading-relaxed text-[#f8e3d2]">
+      กดที่ภาพค่ายที่สนใจเพื่อไปยังขั้นตอนสมัคร แล้วเข้าใช้งานค่ายนั้นได้ทันที เพราะเป็นระบบเว็บตรง ยูสเดียวจึงสลับไปมาได้ทุกค่าย
       ไม่ต้องเปิดบัญชีใหม่ทุกครั้งที่อยากเปลี่ยนแนว
     </p>
     <div class="mb-5 grid grid-cols-2 gap-5 sm:grid-cols-2 md:grid-cols-4">
@@ -104,7 +104,7 @@ const graph = pageGraph(Astro, {
               fetchpriority="low"
               widths={[200, 400, 600]}
               sizes="(max-width: 768px) 50vw, 25vw"
-              class="block h-auto w-full object-cover shadow-[0_10px_30px_rgba(237,1,51,0.16)] transition-transform duration-300 group-hover/game:scale-105"
+              class="block h-auto w-full object-cover shadow-[0_10px_30px_rgba(249,115,22,0.16)] transition-transform duration-300 group-hover/game:scale-105"
               decoding="async"
               formats={["avif", "webp"]}
               fallbackFormat="webp"
@@ -114,9 +114,9 @@ const graph = pageGraph(Astro, {
               href="/register"
               target="_blank"
               rel="noopener noreferrer"
-              aria-label={`สมัครสมาชิกเพื่อเล่น ${game.name} ที่ OKHENG`}
-              class="absolute inset-0 flex items-center justify-center bg-[#0d0104]/85 opacity-0 transition-opacity duration-300 group-hover/game:opacity-100 focus-visible:opacity-100">
-              <span class="rounded-full border border-[#ff3d63]/60 bg-gradient-to-r from-[#ffdb7d] via-[#f0b429] to-[#ffcf5a] px-6 py-2 font-bold text-[#2a0509] shadow-[0_10px_30px_rgba(237,1,51,0.32)] transition-transform hover:scale-110">เล่นเลย</span>
+              aria-label={`สมัครสมาชิกเพื่อเล่น ${game.name} ที่ WON22`}
+              class="absolute inset-0 flex items-center justify-center bg-[#0d0502]/85 opacity-0 transition-opacity duration-300 group-hover/game:opacity-100 focus-visible:opacity-100">
+              <span class="rounded-full border border-[#fb923c]/60 bg-gradient-to-r from-[#fcd34d] via-[#fbbf24] to-[#fde68a] px-6 py-2 font-bold text-[#241004] shadow-[0_10px_30px_rgba(249,115,22,0.32)] transition-transform hover:scale-110">เล่นเลย</span>
             </a>
           </div>
         ))
@@ -124,44 +124,44 @@ const graph = pageGraph(Astro, {
     </div>
   </ContentBox>
 
-  <ContentBox as="h2" title="ทดลองเล่นฟรีไม่จำกัดรอบ ลองจนมั่นใจแล้วค่อยลงเครดิตจริง">
-    <p class="mb-4 text-left text-base leading-relaxed text-[#f9dfe3]">
-      พอเข้าไปถึงโหมดทดลองแล้วหมุนได้ไม่จำกัดรอบ เพราะเป็นเครดิตสมมติล้วน ๆ จึงลองผิดลองถูกได้เต็มที่โดยไม่ต้องเสี่ยงอะไรเลย
+  <ContentBox as="h2" title="ทดลองเล่นฟรีไม่จำกัดรอบ ลองให้พอใจก่อนใช้เครดิตจริง">
+    <p class="mb-4 text-left text-base leading-relaxed text-[#f8e3d2]">
+      พอเข้าไปถึงโหมดทดลองแล้วหมุนได้ไม่จำกัดรอบ เพราะเป็นเครดิตสมมติล้วน ๆ จะลองผิดลองถูกกี่ครั้งก็ได้โดยไม่ต้องเสี่ยงอะไรเลย
     </p>
 
-    <p class="mb-4 text-left text-base leading-relaxed text-[#f9dfe3]">
+    <p class="mb-4 text-left text-base leading-relaxed text-[#f8e3d2]">
       ดูว่าเดิมพันต่อรอบเริ่มที่เท่าไร ฟีเจอร์เข้าง่ายแค่ไหน หนึ่งรอบใช้เวลานานไหม แล้วเก็บไว้เป็นข้อมูลตอนเลือกเกมที่จะเล่นจริง
     </p>
 
-    <p class="mb-4 text-left text-base leading-relaxed text-[#f9dfe3]">
+    <p class="mb-4 text-left text-base leading-relaxed text-[#f8e3d2]">
       มีสองเรื่องที่อยากให้รู้ไว้ก่อน เครดิตในโหมดทดลองถอนไม่ได้ และไม่นับเป็นยอดเทิร์นของโปรใด ๆ
     </p>
 
-    <p class="text-left text-base leading-relaxed text-[#f9dfe3]">
+    <p class="text-left text-base leading-relaxed text-[#f8e3d2]">
       อีกเรื่องคือไม่ใช่ทุกเกมที่มีปุ่มทดลอง โดยเฉพาะห้องคาสิโนสดที่ต้องเข้าโต๊ะจริงถึงจะเห็นบรรยากาศได้ครบ ถ้าเกมที่อยากลองยังไม่มีให้ทดลอง
       สมัครสมาชิกแล้วเข้าไปดูของจริงได้เลย
     </p>
   </ContentBox>
 
-  <ContentBox as="h2" title="พร้อมเมื่อไหร่ สมัครสมาชิก OKHENG แล้วเริ่มเล่นจริงได้ทันที">
-    <p class="mb-4 text-left text-base leading-relaxed text-[#f9dfe3]">
-      สมัครใช้เวลาไม่นาน แล้วได้ยูสเดียวที่ครอบคลุมทั้งบาคาร่า คาสิโนสด และสล็อตลิขสิทธิ์
+  <ContentBox as="h2" title="พร้อมเมื่อไหร่ สมัครสมาชิก WON22 แล้วเริ่มเล่นจริงได้ทันที">
+    <p class="mb-4 text-left text-base leading-relaxed text-[#f8e3d2]">
+      สมัครใช้เวลาไม่นาน แล้วได้ยูสเดียวที่ครอบคลุมทั้งสล็อตออนไลน์เว็บตรงหลายค่ายและห้องคาสิโนสด
     </p>
 
-    <p class="mb-4 text-left text-base leading-relaxed text-[#f9dfe3]">
-      หน้าเมมเบอร์รวมเครดิต โปร และประวัติรายการไว้ที่เดียว เช็กสถานะของตัวเองได้ตลอดโดยไม่ต้องออกจากระบบ
-      ส่วนระบบฝากถอนออโต้รองรับทรูวอลเล็ตและธนาคารชั้นนำ ทำรายการจากมือถือได้ตลอด 24 ชั่วโมง
+    <p class="mb-4 text-left text-base leading-relaxed text-[#f8e3d2]">
+      หน้าเมมเบอร์รวมเกม เครดิต โปร และประวัติรายการไว้ที่เดียว เช็กสถานะของตัวเองได้ตลอดโดยไม่ต้องออกจากระบบ
+      ส่วนระบบฝากถอนออโต้ทำรายการจากมือถือได้ตลอด 24 ชั่วโมง
     </p>
 
-    <p class="mb-4 text-left text-base leading-relaxed text-[#f9dfe3]">
+    <p class="mb-4 text-left text-base leading-relaxed text-[#f8e3d2]">
       ก่อนลงเดิมพันรอบแรก แนะนำให้ตั้งงบต่อรอบที่รับไหวไว้ก่อน และเปิดดูเงื่อนไขของโปรที่จะใช้ว่าครอบคลุมหมวดไหน ยอดรับเท่าไร เทิร์นเท่าไร
     </p>
 
-    <p class="mb-4 text-left text-base leading-relaxed text-[#f9dfe3]">
-      เข้าใช้งานผ่านเว็บหลักของ OKHENG ได้ด้วยยูสเดิมทุกอุปกรณ์ เมนูจัดมาให้ใช้มือเดียวบนจอเล็กได้สะดวก และช่วยเลี่ยงโดเมนชื่อใกล้เคียงบนผลค้นหา
+    <p class="mb-4 text-left text-base leading-relaxed text-[#f8e3d2]">
+      เข้าใช้งานผ่านเว็บหลักของ WON22 ได้ด้วยยูสเดิมทุกอุปกรณ์ เมนูจัดมาให้ใช้มือเดียวบนจอเล็กได้สะดวก และช่วยเลี่ยงโดเมนชื่อใกล้เคียงบนผลค้นหา
     </p>
 
-    <p class="text-left text-base leading-relaxed text-[#f9dfe3]">
+    <p class="text-left text-base leading-relaxed text-[#f8e3d2]">
       อีกอย่างที่ควรติดตัวไว้เสมอ อย่าบอกรหัสผ่านหรือรหัส OTP ให้ใครทั้งนั้น
     </p>
   </ContentBox>

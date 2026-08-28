@@ -10,24 +10,24 @@ const { title, as: HeadingTag = "h2", titleleft, titleright } = Astro.props;
 
 <section class="relative z-10 mx-auto mb-8 w-full max-w-7xl px-4 font-sans">
   <div
-    class="group relative isolate w-full overflow-hidden rounded-3xl border border-[#6b2020] bg-[#280707] p-8 text-[#f7e2d6] shadow-[0_10px_30px_rgba(239,68,68,0.12)] transition-all duration-500 hover:border-[#ef4444]/45 hover:shadow-[0_15px_40px_rgba(239,68,68,0.18)] md:p-10">
-    <div aria-hidden="true" class="pointer-events-none absolute inset-0 -z-10 bg-gradient-to-br from-[#4a1010] to-transparent opacity-70"></div>
+    class="group relative isolate w-full overflow-hidden rounded-3xl border border-[#6b2f0b] bg-[#241004] p-8 text-[#f8e3d2] shadow-[0_10px_30px_rgba(249,115,22,0.12)] transition-all duration-500 hover:border-[#f97316]/45 hover:shadow-[0_15px_40px_rgba(249,115,22,0.18)] md:p-10">
+    <div aria-hidden="true" class="pointer-events-none absolute inset-0 -z-10 bg-gradient-to-br from-[#4a2109] to-transparent opacity-70"></div>
 
     {
       title && (
-        <header class="mb-8 flex items-center gap-4 border-b border-[#6b2020] pb-4">
-          <span aria-hidden="true" class="h-8 w-1.5 shrink-0 rounded-full bg-gradient-to-b from-[#ef4444] via-[#f87171] to-[#f5c542] shadow-[0_0_10px_rgba(239,68,68,0.35)]" />
-          <HeadingTag class="bg-gradient-to-r from-[#f87171] via-[#ffe2d8] to-[#f5c542] bg-clip-text text-2xl leading-normal font-black tracking-widest text-transparent uppercase">{title}</HeadingTag>
+        <header class="mb-8 flex items-center gap-4 border-b border-[#6b2f0b] pb-4">
+          <span aria-hidden="true" class="h-8 w-1.5 shrink-0 rounded-full bg-gradient-to-b from-[#f97316] via-[#fb923c] to-[#fbbf24] shadow-[0_0_10px_rgba(249,115,22,0.35)]" />
+          <HeadingTag class="bg-gradient-to-r from-[#fb923c] via-[#ffeadb] to-[#fbbf24] bg-clip-text text-2xl leading-normal font-black tracking-widest text-transparent uppercase">{title}</HeadingTag>
         </header>
       )
     }
 
     <div class="grid grid-cols-1 gap-10 md:grid-cols-2">
-      <article class="flex flex-col gap-4 text-left text-base leading-relaxed text-[#f7e2d6]">
+      <article class="flex flex-col gap-4 text-left text-base leading-relaxed text-[#f8e3d2]">
         {
           titleleft && (
-            <p class="flex items-center gap-3 border-b border-[#6b2020] pb-3 text-xl leading-normal font-black tracking-widest text-[#ffe9a8] uppercase">
-              <span aria-hidden="true" class="h-6 w-1.5 shrink-0 rounded-full bg-gradient-to-b from-[#ef4444] to-[#f5c542] shadow-[0_0_10px_rgba(239,68,68,0.30)]" />
+            <p class="flex items-center gap-3 border-b border-[#6b2f0b] pb-3 text-xl leading-normal font-black tracking-widest text-[#fde68a] uppercase">
+              <span aria-hidden="true" class="h-6 w-1.5 shrink-0 rounded-full bg-gradient-to-b from-[#f97316] to-[#fbbf24] shadow-[0_0_10px_rgba(249,115,22,0.30)]" />
               {titleleft}
             </p>
           )
@@ -35,11 +35,11 @@ const { title, as: HeadingTag = "h2", titleleft, titleright } = Astro.props;
         <slot name="left" />
       </article>
 
-      <article class="flex flex-col gap-4 text-left text-base leading-relaxed text-[#f7e2d6] md:border-l md:border-[#6b2020] md:pl-10">
+      <article class="flex flex-col gap-4 text-left text-base leading-relaxed text-[#f8e3d2] md:border-l md:border-[#6b2f0b] md:pl-10">
         {
           titleright && (
-            <p class="flex items-center gap-3 border-b border-[#6b2020] pb-3 text-xl leading-normal font-black tracking-widest text-[#ffe9a8] uppercase">
-              <span aria-hidden="true" class="h-6 w-1.5 shrink-0 rounded-full bg-gradient-to-b from-[#f5c542] to-[#ef4444] shadow-[0_0_10px_rgba(245,197,66,0.30)]" />
+            <p class="flex items-center gap-3 border-b border-[#6b2f0b] pb-3 text-xl leading-normal font-black tracking-widest text-[#fde68a] uppercase">
+              <span aria-hidden="true" class="h-6 w-1.5 shrink-0 rounded-full bg-gradient-to-b from-[#fbbf24] to-[#f97316] shadow-[0_0_10px_rgba(251,191,36,0.30)]" />
               {titleright}
             </p>
           )

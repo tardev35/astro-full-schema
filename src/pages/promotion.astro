@@ -2,21 +2,22 @@
 import MainLayout from "../layouts/MainLayout.astro";
 import ContentBox from "../components/ContentBox.astro";
 import Navfoot from "../components/Navfoot.astro";
-import Announcement from "../components/Announcement5.astro";
+import Announcement from "../components/Announcement2.astro";
 
 import { Picture } from "astro:assets";
 
 import pro1 from "../assets/slide1.png";
 import pro2 from "../assets/slide2.png";
 import pro3 from "../assets/slide3.png";
+import pro4 from "../assets/slide4.png";
 import { pageGraph } from "../lib/schema";
 
-const pageTitle = "โปรโมชั่น OKHENG รวมภาพโปรสมาชิกใหม่ คืนยอดเสีย และฝากประจำ";
+const pageTitle = "โปรโมชั่น WON22 รวมสิทธิ์สมาชิก ฝากประจำ เครดิตฟรี ไม่ติดเทิร์น";
 
-const pageHeading = "โปรโมชั่น OKHENG";
+const pageHeading = "โปรโมชั่น WON22 รวมสิทธิ์สำหรับสมาชิก";
 
 const pageDescription =
-  "หากคุณกำลังมองหาโปรที่คุ้มกว่าเดิม OKHENG รวมภาพโปรสมาชิกใหม่ คืนยอดเสีย ฝากประจำ และสิทธิ์สายวอลเล็ทไว้หน้าเดียว ดูยอดรับและเงื่อนไขบนภาพก่อนกดสมัครใช้สิทธิ์";
+  "รวมภาพโปรโมชั่น WON22 ทั้งฝากประจำครบ 7 วันรับเครดิตฟรี 300 บาท ฝากถอนออโต้ ไม่ติดเทิร์น และสิทธิ์สมาชิกใหม่ ดูยอดรับกับเงื่อนไขบนภาพก่อนกดสมัครใช้สิทธิ์";
 
 const graph = pageGraph(Astro, {
   name: pageTitle,
@@ -35,25 +36,24 @@ const graph = pageGraph(Astro, {
   <Announcement />
 
   <ContentBox title={pageHeading} as="h1">
-    <p class="mb-4 text-left text-base leading-relaxed text-[#f9dfe3]">
-      หากคุณกำลังมองหาโปรโมชั่นที่คุ้มค่าและใช้ได้จริง <strong class="text-[#f0b429]">OKHENG</strong> พร้อมมอบทั้งโปรสมาชิกใหม่ คืนยอดเสียสูงถึง 5%
-      และเครดิตฟรีสำหรับสายฝากประจำ รวมไว้ให้เลือกครบในหน้าเดียว
+    <p class="mb-4 text-left text-base leading-relaxed text-[#f8e3d2]">
+      อยากได้โปรที่ดูจบในหน้าเดียวว่ารับอะไรได้บ้าง <strong class="text-[#fbbf24]">WON22</strong> รวมสิทธิ์สำหรับสมาชิกไว้ให้ครบ ทั้งฝากประจำครบ 7 วันรับเครดิตฟรี
+      ระบบฝากถอนออโต้ และแนวทางไม่ติดเทิร์นตามเงื่อนไขที่ระบบกำหนด
     </p>
 
-    <p class="mb-8 text-left text-base leading-relaxed text-[#f9dfe3]">
-      แต่ละใบระบุยอดรับ เงื่อนไข และช่วงเวลาที่ใช้ได้ไว้บนภาพ เลือกโปรที่ตรงกับงบและสไตล์ของคุณ แล้วสมัครยูสเดียวใช้สิทธิ์ต่อได้ยาว ๆ
-      เพื่อประสบการณ์การเล่นที่คุ้มค่ากว่าที่เคย
+    <p class="mb-8 text-left text-base leading-relaxed text-[#f8e3d2]">
+      ยอดรับและเงื่อนไขพิมพ์ไว้บนภาพทุกใบ เลือกใบที่ตรงกับทุนและสไตล์เล่นของคุณ แล้วสมัครยูสเดียวใช้สิทธิ์ต่อจากหน้าเมมเบอร์ได้ยาว ๆ
     </p>
 
     <div class="grid w-full grid-cols-1 gap-6 sm:grid-cols-2">
       <Picture
         src={pro1}
-        alt="ภาพโปรโมชั่น OKHENG โทนแดงทองแบบตรุษจีน เทพเจ้าไฉ่ซิงเอี๊ยสวมชุดคลุมแดงปักลายทอง มือถือก้อนทองคำ ข้อความบนภาพเขียนว่า OKHENG เว็บใหญ่สายตรง เล่นได้ทุกค่าย บาคาร่า สล็อตลิขสิทธิ์ API แท้ พร้อมป้าย ถอนได้จริง 10 ล้าน และ ฝาก-ถอนออโต้ 24 ชม. ด้านล่างเป็นโลโก้ OK HENG บนกองเหรียญทอง"
+        alt="ภาพโปรโมชั่น WON22 โทนส้มไฟและทองบนพื้นดำ พรีเซนเตอร์หญิงสวมสูทดำสลับส้มชี้มือขึ้นด้านบน ข้อความบนภาพเขียนว่า ฝากประจำสัปดาห์ ต่อเนื่องครบ 7 วัน รับทันที เครดิตฟรี 300฿ มีโลโก้ WON22 สีทองบนริบบิ้นแดง และแถบด้านล่างเขียนว่า ระบบออโต้ เล่นผ่านมือถือ เข้าเกมไว"
         loading="lazy"
         fetchpriority="low"
         widths={[200, 400, 600]}
         sizes="(max-width: 768px) 100vw, 50vw"
-        class="mx-auto h-auto w-full rounded-xl border border-[#6b0d1e] object-contain shadow-[0_10px_30px_rgba(237,1,51,0.16)] transition-transform duration-300 hover:-translate-y-1 hover:border-[#ed0133]/50 hover:shadow-[0_15px_40px_rgba(237,1,51,0.26)]"
+        class="mx-auto h-auto w-full rounded-xl border border-[#6b2f0b] object-contain shadow-[0_10px_30px_rgba(249,115,22,0.16)] transition-transform duration-300 hover:-translate-y-1 hover:border-[#f97316]/50 hover:shadow-[0_15px_40px_rgba(249,115,22,0.26)]"
         decoding="async"
         formats={["avif", "webp"]}
         fallbackFormat="webp"
@@ -62,12 +62,12 @@ const graph = pageGraph(Astro, {
 
       <Picture
         src={pro2}
-        alt="ภาพโปรโมชั่น OKHENG พื้นแดงเข้มโทนตรุษจีน มีโคมไฟจีนสีแดงห้อยอยู่ด้านบน พรีเซนเตอร์หญิงชุดกี่เพ้าแดงถือเหรียญทอง ข้อความบนภาพเขียนว่า คืนยอดเสีย สูงถึง 5% ทุกวันอาทิตย์ หลังเที่ยงคืน 12.00 น. ระบบรีเซ็ตทุก 7 วัน และ ยอดเสียมีคืน เล่นต่อได้สบายกว่าเดิม"
+        alt="ภาพโปรโมชั่น WON22 พื้นดำโทนส้มทอง มีมงกุฎทองและคำว่า WON TO WIN อยู่เหนือหัวข้อ เกมสล็อต ออนไลน์เว็บตรง พรีเซนเตอร์หญิงชุดซาตินสีแดงสนิมยืนอยู่ด้านขวา ถัดมาเป็นสี่หัวข้อไอคอนทอง ฝากถอนออโต้ รวดเร็ว ทันใจ 24 ชม. ไม่ติดเทิร์น เล่นง่าย ถอนได้จริง สมัครง่าย ไม่กี่ขั้นตอน เล่นได้ทันที และ โปรโมชั่นจัดเต็ม โบนัสเยอะ ให้ทุกวัน แถบด้านล่างเขียนว่า เว็บตรง ปลอดภัย เกมสล็อต ครบทุกค่าย รองรับมือถือ เล่นได้ทุกที่"
         loading="lazy"
         fetchpriority="low"
         widths={[200, 400, 600]}
         sizes="(max-width: 768px) 100vw, 50vw"
-        class="mx-auto h-auto w-full rounded-xl border border-[#6b0d1e] object-contain shadow-[0_10px_30px_rgba(237,1,51,0.16)] transition-transform duration-300 hover:-translate-y-1 hover:border-[#ed0133]/50 hover:shadow-[0_15px_40px_rgba(237,1,51,0.26)]"
+        class="mx-auto h-auto w-full rounded-xl border border-[#6b2f0b] object-contain shadow-[0_10px_30px_rgba(249,115,22,0.16)] transition-transform duration-300 hover:-translate-y-1 hover:border-[#f97316]/50 hover:shadow-[0_15px_40px_rgba(249,115,22,0.26)]"
         decoding="async"
         formats={["avif", "webp"]}
         fallbackFormat="webp"
@@ -76,12 +76,26 @@ const graph = pageGraph(Astro, {
 
       <Picture
         src={pro3}
-        alt="ภาพโปรโมชั่น OKHENG พรีเซนเตอร์หญิงชุดกี่เพ้าแดงถือการ์ด OK HENG ยืนข้างไหทองที่ล้นด้วยก้อนทองคำ ข้อความบนภาพเขียนว่า ฝากประจำต่อเนื่องทุกวัน รับเพิ่มเครดิตฟรี และ ถอนได้ทันที ไม่ติดเทิร์น"
+        alt="ภาพโปรโมชั่น WON22 พื้นดำโทนส้มทอง มีมงกุฎทองและคำว่า WON TO WIN อยู่เหนือหัวข้อ เกมสล็อตออนไลน์ เว็บตรง ฝากถอน ไม่ติดเทิร์น สมัครง่าย พรีเซนเตอร์หญิงถือโทรศัพท์มือถืออยู่ด้านขวา พร้อมห้าหัวข้อไอคอนทอง ฝากถอนออโต้ ไม่ติดเทิร์น สมัครง่าย โปรโมชั่นจัดเต็ม และ รองรับมือถือ แถบด้านล่างเขียนว่า เว็บตรง ปลอดภัย 100% เกมสล็อต ครบทุกค่าย มั่นคง ปลอดภัย ข้อมูลไม่รั่วไหล"
         loading="lazy"
         fetchpriority="low"
         widths={[200, 400, 600]}
         sizes="(max-width: 768px) 100vw, 50vw"
-        class="mx-auto h-auto w-full rounded-xl border border-[#6b0d1e] object-contain shadow-[0_10px_30px_rgba(237,1,51,0.16)] transition-transform duration-300 hover:-translate-y-1 hover:border-[#ed0133]/50 hover:shadow-[0_15px_40px_rgba(237,1,51,0.26)]"
+        class="mx-auto h-auto w-full rounded-xl border border-[#6b2f0b] object-contain shadow-[0_10px_30px_rgba(249,115,22,0.16)] transition-transform duration-300 hover:-translate-y-1 hover:border-[#f97316]/50 hover:shadow-[0_15px_40px_rgba(249,115,22,0.26)]"
+        decoding="async"
+        formats={["avif", "webp"]}
+        fallbackFormat="webp"
+        quality={80}
+      />
+
+      <Picture
+        src={pro4}
+        alt="ภาพโปรโมชั่น WON22 พื้นดำโทนส้มทอง มีมงกุฎทองและคำว่า WON TO WIN อยู่เหนือหัวข้อ เกมสล็อต ออนไลน์เว็บตรง ฝากถอน ไม่ติดเทิร์น สมัครง่าย พรีเซนเตอร์หญิงถือโทรศัพท์มือถืออยู่ด้านขวา พร้อมสี่หัวข้อไอคอนทอง ฝากถอนออโต้ ไม่ติดเทิร์น สมัครง่าย และ โปรโมชั่นจัดเต็ม แถบด้านล่างเขียนว่า เว็บตรง ปลอดภัย มั่นใจได้ เกมสล็อต ครบทุกค่าย รองรับมือถือ เล่นได้ทุกที่ ทุกเวลา"
+        loading="lazy"
+        fetchpriority="low"
+        widths={[200, 400, 600]}
+        sizes="(max-width: 768px) 100vw, 50vw"
+        class="mx-auto h-auto w-full rounded-xl border border-[#6b2f0b] object-contain shadow-[0_10px_30px_rgba(249,115,22,0.16)] transition-transform duration-300 hover:-translate-y-1 hover:border-[#f97316]/50 hover:shadow-[0_15px_40px_rgba(249,115,22,0.26)]"
         decoding="async"
         formats={["avif", "webp"]}
         fallbackFormat="webp"
@@ -92,8 +106,8 @@ const graph = pageGraph(Astro, {
     <div class="mt-12 flex justify-center pb-4">
       <a
         href="/register"
-        class="flex items-center justify-center rounded-lg border border-[#ed0133]/40 bg-gradient-to-r from-[#ffdb7d] via-[#f0b429] to-[#ffcf5a] px-10 py-3.5 text-lg font-black text-[#2a0509] shadow-[0_10px_30px_rgba(237,1,51,0.24)] transition-transform hover:scale-105 hover:shadow-[0_15px_40px_rgba(240,180,41,0.30)]">
-        สมัครสมาชิก OKHENG
+        class="flex items-center justify-center rounded-lg border border-[#f97316]/40 bg-gradient-to-r from-[#fcd34d] via-[#fbbf24] to-[#fde68a] px-10 py-3.5 text-lg font-black text-[#241004] shadow-[0_10px_30px_rgba(249,115,22,0.24)] transition-transform hover:scale-105 hover:shadow-[0_15px_40px_rgba(251,191,36,0.30)]">
+        สมัครสมาชิก WON22
       </a>
     </div>
   </ContentBox>

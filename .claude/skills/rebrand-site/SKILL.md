@@ -1922,6 +1922,162 @@ pointing at a `public/` path during a rebrand, repoint it to the
    unavailable, leave the dev server running and move on — a leftover
    dev server is harmless. Never widen the kill to make it succeed.
 
+## PageSpeed — what actually moved the number
+
+Worked end to end on 2026-08-26/27 across ONEHENG89, DOLLAR789 and PIGAUTO.
+PIGAUTO on mobile went 80 → 86 → 92 with CLS 0 and no design change. Everything
+below was measured on this template, not read somewhere.
+
+### Trust the measurement before you trust the finding
+
+Local Lighthouse on this repo's pages is **noisy enough to send you down a
+wrong path**. Two consecutive runs of the identical build of PIGAUTO:
+
+```
+run 1   CLS 0.231   TBT   0 ms
+run 2   CLS 0       TBT 460 ms
+```
+
+A whole investigation was spent on that 0.231 — aspect ratios, fonts,
+keyframes, JS-injected rows — before the second run showed it was never there.
+**Use https://pagespeed.web.dev/ (runs on Google's machines) or take the median
+of three local runs before optimising anything.**
+
+And a metric can improve for the worst possible reason. PIGAUTO scored a clean
+**Performance 100** at one point — because its stylesheet was 404ing and a page
+with no CSS has no style or layout work to do. Always look at the filmstrip
+thumbnail in the report before believing a jump.
+
+### Read the main-thread table, not the top-line advice
+
+`Minimize main-thread work` on PIGAUTO:
+
+```
+Style & Layout        1,290 ms    ← 61%
+Other                   717 ms
+Script Evaluation        43 ms
+Parse HTML & CSS         25 ms
+Script Parsing            7 ms
+```
+
+Lighthouse's headline advice is "deliver smaller JS payloads". **This site's
+entire JavaScript is 5.7 kB across three inline modules** (hamburger toggle,
+player-count ticker, winners feed) and evaluates in 43 ms. There is nothing to
+cut. The cost is style recalc and layout over ~884 elements against ~88 kB of
+CSS carrying 117 hand-written `shadow-[...]` and 111 gradients — the price of
+the design, not a bug.
+
+The lever that targets it is `content-visibility: auto` on the below-the-fold
+sections (`main section` in `global.css`; the home page has 16 sections and
+shows one or two on load). **`contain-intrinsic-size` must go with it** or the
+sections measure 0 until rendered and the scrollbar jumps — which is CLS back
+again. `auto 640px` lets the browser remember the real size after first render.
+
+⚠️ It also brings **paint containment**: anything a descendant paints outside
+its section box is clipped. This template has 34 elements on negative offsets
+and 29 negative translates, so **eyeball the page after deploying it** —
+glows behind cards, corner badges, decorative lines. Rollback is deleting the
+one rule.
+
+### Cloudflare injects a render-blocking script for a single email address
+
+One `support@<brand>` in the footer makes Cloudflare's **Email Address
+Obfuscation** rewrite it to `<span class="__cf_email__">` and inject
+`/cdn-cgi/scripts/…/email-decode.min.js`. No `async`, no `defer` — Lighthouse
+counted it as **480 ms of render-blocking** on SCLASS88. Turning it off is a
+per-zone switch and cost nothing anywhere.
+
+`npm run cf:shield` (port 9898) reads every zone on the account, shows which
+still have it on, and switches them off one at a time or all at once.
+
+**The trap: the origin never carries this script**, on or off. It is injected
+at the edge. `curl` the origin directly, see zero, and you will conclude the
+switch is off when it is not. Test through Cloudflare, on a fresh cache.
+
+### `backdrop-blur` behind an opaque background is free work you can delete
+
+PIGAUTO had 11 `backdrop-blur` elements. Five of them sat on backgrounds of
+92–100% opacity — you cannot see a blur through a wall. Two of those five were
+`sticky` (navbar) and `fixed` (Navfoot), which recomposite **every frame you
+scroll**.
+
+Check the class list, not the intent: `bg-[#1a0303] backdrop-blur-md` (no alpha
+at all) and `bg-[#280707]/92 backdrop-blur-xl` are both invisible.
+`bg-gradient-to-r from-… to-transparent backdrop-blur-sm` is genuinely visible
+— keep it.
+
+### "Image larger than necessary" is usually a missing srcset step
+
+Lighthouse said banner2 downloaded 672×672 to draw 546×546. The file was fine;
+the **candidate list had a hole in it**:
+
+```
+sizes = (max-width: 767px) calc(100vw - 96px), 672px
+phone 412 px × DPR 1.75  →  needs 553 px
+widths = 320 … 480 … [nothing here] … 672 … 1024
+```
+
+Adding 560 and 800 saved 8.6 kB on that phone and **25 kB on a DPR-3 phone at
+360 px**, which the report never mentioned because it only tests one device.
+Work the arithmetic — `sizes` value × device DPR — rather than lowering quality.
+
+Separately, a component with no `quality` prop gets 80. `GameRankingBoard`
+draws its covers at 56×56 CSS px; `quality={60}` cut the six of them 29% at
+100w and 32% at 200w with nothing visible to lose.
+
+### 8 kB of the stylesheet came from class names quoted in documentation
+
+Found on 2026-08-27 while writing this very section: adding it grew the built
+CSS by 790 bytes, because Tailwind 4 scans `.md` and turns every utility name
+quoted as an *example* into real CSS that no page uses.
+
+It was not just this file. `workspec.md` is 504 kB of retired rebrand log full
+of quoted classes, `README.md` is another 42 kB, and everything under
+`.claude/skills/`. Excluding the three from the scan:
+
+```
+88,108 -> 79,962 bytes   (-9.2%)
+```
+
+**Nine percent of a render-blocking stylesheet existed only because it was
+mentioned in prose.** The exclusions live in `src/styles/global.css` next to
+the generated component ones:
+
+```css
+@source not "../../.claude";
+@source not "../../workspec.md";
+@source not "../../README.md";
+```
+
+Add a line there for any new doc file at the root. This also removes the reason
+the old rule said never to quote a Tailwind class in `workspec.md` — the scan
+no longer reaches it — but the file is still retired; do not append to it.
+
+### The deploy trap that takes the whole site down
+
+**This one broke pigauto-brand.com in production.**
+
+```
+/_astro/* filenames carry a content hash  →  a new build renames every asset
+deploy-aapanel.ps1 wipes the webroot      →  the old files are gone
+Cloudflare had started caching the HTML   →  stale HTML points at deleted files
+                                          =  CSS 404 → an unstyled page
+```
+
+The origin was perfectly healthy the whole time — `--resolve` straight to the
+box returned the correct hash and a 200. Only visitors going through Cloudflare
+saw the wreck.
+
+**Purge the Cloudflare cache after every deploy**, or set a Cache Rule that
+bypasses cache for `text/html`. On this box HTML TTFB measured the same either
+way (0.28 s cached vs uncached), so bypassing costs nothing. Diagnose it with:
+
+```sh
+curl -s https://DOMAIN/ | grep -o 'about-us[^"]*\.css'          # what HTML asks for
+curl -sI https://DOMAIN/_astro/<that file>  | head -1            # 404 = this bug
+curl -sI https://DOMAIN/ | grep -i cf-cache-status               # HIT = stale HTML
+```
+
 ## Phase 6 — Report, and do NOT write `workspec.md`
 
 **Do not append to `workspec.md`.** It is not maintained any more (owner's

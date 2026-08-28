@@ -4,8 +4,8 @@ import bgConfig from "../assets/bg.json";
 import "../styles/global.css";
 import { BRAND_NAME, BRAND_TEXT, brandProfile, fontStack, iconVersion } from "../lib/brandProfile";
 import { canonicalFor } from "../lib/schema";
-import Navbar from "../components/NavbarStyle2.astro";
-import Footer from "../components/FooterCyber.astro";
+import Navbar from "../components/NavbarStyle8.astro";
+import Footer from "../components/FooterStyle3.astro";
 
 // Only banner1 is ever rendered, so only banner1 is imported.
 //
@@ -54,8 +54,8 @@ const mobileBannerImg = mobileBanner
   : null;
 
 const {
-  title = "WON22 เกมสล็อตออนไลน์เว็บตรง ฝากถอน ไม่ติดเทิร์น สมัครง่าย",
-  description = "WON22 รวมเกมสล็อตออนไลน์เว็บตรง ระบบฝากถอนออโต้ ไม่ติดเทิร์น สมัครง่าย รองรับมือถือ พร้อมโปรโมชั่นและระบบสมาชิกสำหรับเข้าเล่นได้ตลอดวัน",
+  title = "VING999 เว็บตรงอันดับ1 บริการสล็อตออนไลน์ เกมค่ายดัง ปี 2026",
+  description = "VING999 สล็อตออนไลน์เว็บตรง รวมเกมค่ายดังปี 2026 ระบบฝากถอนออโต้ รองรับธนาคารและวอเลท สมัครง่าย เล่นผ่านมือถือ พร้อมโปรโมชั่นสมาชิก",
   robots = "index, follow",
 } = Astro.props;
 
@@ -207,7 +207,7 @@ const profile = brandProfile(Astro.site);
         background-attachment: fixed;
         background-repeat: no-repeat;
         margin: 0;
-        background-color: #180a03;
+        background-color: #0a0506;
         font-weight: 400;
         font-family: var(--font-sans) !important;
       }
@@ -260,7 +260,7 @@ const profile = brandProfile(Astro.site);
         }
         <Image
           src={mainBanner}
-          alt="แบนเนอร์ WON22 พื้นหลังสีดำไล่เป็นส้มไฟและเส้นแสงสีทอง ด้านซ้ายเป็นโลโก้ WON22 ตัวอักษร WON สีทองบนริบบิ้นแดงเข้ม ใต้ลงมาเป็นเลข 22 สีขาวขอบแดง ถัดลงมาเป็นข้อความว่า WON22 เกมสล็อตออนไลน์เว็บตรง และป้ายกรอบโค้งเขียนว่า ฝากถอน ไม่ติดเทิร์น สมัครง่าย ใต้ป้ายมีไอคอนสามช่องกำกับว่า ระบบออโต้ เล่นผ่านมือถือ และ เข้าเกมไว ด้านขวาเป็นพรีเซนเตอร์หญิงสวมสูทสีดำสลับส้มติดโลโก้ WON22 ที่อกเสื้อ ยกมือชี้ขึ้น ด้านหลังเป็นตู้สล็อตเรืองแสงและป้าย JACKPOT กับ สล็อตออนไลน์"
+          alt="แบนเนอร์ VING999 พื้นหลังสีดำมีเปลวไฟและเส้นแสงสีแดง ด้านซ้ายบนเป็นโลโก้ VING999 ตัวอักษร VING สีโครเมียมเงินและเลข 999 สีแดงพร้อมเส้นความเร็ว ถัดลงมาเป็นข้อความตัวใหญ่ว่า VING999 สีทอง ต่อด้วย เว็บตรงอันดับ1 สีเงิน และป้ายกรอบเขียนว่า บริการสล็อตออนไลน์ เกมค่ายดัง ปี 2026 ใต้ป้ายเป็นแถบสามช่องกำกับว่า เว็บตรง เกมค่ายดัง และ ฝากถอนออโต้ ด้านขวาเป็นพรีเซนเตอร์หญิงสวมสูทสีดำปกแดงยืนอยู่หน้าวงล้อรูเล็ต มีไพ่โพดำสีแดง ลูกเต๋าทอง กองเหรียญ และชิปคาสิโนสีดำขอบทองพิมพ์โลโก้ VING999"
           loading="eager"
           fetchpriority="high"
           widths={[412, 640, 828, 1024, 1280, 1600, 1900]}

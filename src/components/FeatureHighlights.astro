@@ -16,31 +16,31 @@ const { items } = Astro.props;
 <div class="mt-4 flex flex-col gap-5">
   {
     items.map((item) => {
-      const isGold = item.accent !== "blue";
+      const isChrome = item.accent !== "blue";
       return (
         <div
-          class={`group flex flex-col items-start gap-4 rounded-2xl border border-[#4a2109] bg-[#241004]/60 p-6 transition-all duration-300 hover:-translate-y-1 sm:flex-row ${
-            isGold
-              ? "hover:border-[#fbbf24]/50 hover:bg-[#331608] hover:shadow-[0_10px_20px_rgba(251,191,36,0.14)]"
-              : "hover:border-[#b91c1c]/60 hover:bg-[#331608] hover:shadow-[0_10px_20px_rgba(185,28,28,0.24)]"
+          class={`group flex flex-col items-start gap-4 rounded-2xl border border-[#5a1a1e] bg-[#170a0b]/60 p-6 transition-all duration-300 hover:-translate-y-1 sm:flex-row ${
+            isChrome
+              ? "hover:border-[#bdcad2]/50 hover:bg-[#220d0f] hover:shadow-[0_10px_20px_rgba(189,202,210,0.16)]"
+              : "hover:border-[#e01b2d]/60 hover:bg-[#220d0f] hover:shadow-[0_10px_20px_rgba(224,27,45,0.24)]"
           }`}>
           <div
             aria-hidden="true"
             class={`flex h-14 w-14 shrink-0 items-center justify-center rounded-xl text-3xl transition-transform duration-300 group-hover:scale-110 ${
-              isGold
-                ? "border border-[#fcd34d]/50 bg-gradient-to-br from-[#fbbf24] to-[#b45309] shadow-[0_0_15px_rgba(251,191,36,0.5)] group-hover:rotate-3"
-                : "border border-[#f87171]/50 bg-gradient-to-br from-[#b91c1c] to-[#7f1d1d] shadow-[0_0_15px_rgba(185,28,28,0.45)]"
+              isChrome
+                ? "border border-[#f2f5f7]/50 bg-gradient-to-br from-[#bdcad2] to-[#7d8b95] shadow-[0_0_15px_rgba(189,202,210,0.45)] group-hover:rotate-3"
+                : "border border-[#ff3b46]/50 bg-gradient-to-br from-[#e01b2d] to-[#8f0a13] shadow-[0_0_15px_rgba(224,27,45,0.45)]"
             }`}>
             {item.icon}
           </div>
           <div class="flex flex-col gap-2 text-left">
             <p
               class={`text-xl font-black tracking-wide drop-shadow-sm ${
-                isGold ? "bg-gradient-to-r from-[#fcd34d] to-[#fbbf24] bg-clip-text text-transparent" : "bg-gradient-to-r from-[#f87171] to-[#b91c1c] bg-clip-text text-transparent"
+                isChrome ? "bg-gradient-to-r from-[#f2f5f7] to-[#bdcad2] bg-clip-text text-transparent" : "bg-gradient-to-r from-[#ff3b46] to-[#8f0a13] bg-clip-text text-transparent"
               }`}>
               {item.title}
             </p>
-            <p class="text-left text-base leading-relaxed text-[#f8e3d2] transition-colors group-hover:text-[#fcd34d]">{item.description}</p>
+            <p class="text-left text-base leading-relaxed text-[#dce3e8] transition-colors group-hover:text-[#f2f5f7]">{item.description}</p>
           </div>
         </div>
       );

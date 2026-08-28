@@ -78,14 +78,6 @@ html {
   scroll-behavior: smooth;
 }
 
-/* ข้ามงาน layout/paint ของ section ที่ยังไม่ถึงจอ
-   contain-intrinsic-size ต้องมีคู่เสมอ ไม่งั้นความสูงเป็น 0 ตอนยังไม่ render
-   แล้วแถบ scroll จะกระโดด — คำว่า auto สั่งให้จำขนาดจริงไว้หลัง render รอบแรก */
-main section {
-  content-visibility: auto;
-  contain-intrinsic-size: auto 640px;
-}
-
 /* google-sans-latin - variable 400..700 */
 @font-face {
   font-family: 'Google Sans';

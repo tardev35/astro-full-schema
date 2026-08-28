@@ -2,15 +2,15 @@
 import MainLayout from "../layouts/MainLayout.astro";
 import ContentBox from "../components/ContentBox.astro";
 import Navfoot from "../components/Navfoot.astro";
-import Announcement from "../components/Announcement2.astro";
+import Announcement from "../components/Announcement5.astro";
 import CtaRedirect from "../components/CtaRedirect.astro";
 import { pageGraph } from "../lib/schema";
 
 const pageDescription =
-  "เข้าสู่ระบบ WON22 รวมปุ่มล็อกอินไว้จุดเดียว ใช้ยูสเดิมกดเข้าหน้าเมมเบอร์ เล่นสล็อตออนไลน์เว็บตรงหลายค่าย เช็กเครดิตและทำรายการฝากถอนออโต้ได้ตลอด 24 ชั่วโมง";
+  "เข้าสู่ระบบ VING999 กดปุ่มเดียวไปหน้าล็อกอินด้วยยูสเดิม เข้าเล่นสล็อตออนไลน์เว็บตรงหลายค่าย เช็กเครดิตในหน้าเมมเบอร์ และทำรายการฝากถอนออโต้ได้ตลอด 24 ชั่วโมง";
 
 const graph = pageGraph(Astro, {
-  name: "เข้าสู่ระบบ WON22 สล็อตออนไลน์เว็บตรง ฝากถอนออโต้",
+  name: "เข้าสู่ระบบ VING999 สล็อตออนไลน์เว็บตรง ฝากถอนออโต้",
   description: pageDescription,
   breadcrumb: [
     { name: "หน้าแรก", path: "/" },
@@ -21,20 +21,20 @@ const graph = pageGraph(Astro, {
 const targetUrl = "https://yoalink.com/22hs";
 ---
 
-<MainLayout title="เข้าสู่ระบบ WON22 | ปุ่มล็อกอินเข้าหน้าเมมเบอร์ สล็อตเว็บตรง" description={pageDescription}>
+<MainLayout title="เข้าสู่ระบบ VING999 | ปุ่มล็อกอินเข้าหน้าเมมเบอร์ สล็อตเว็บตรง" description={pageDescription}>
   <script type="application/ld+json" set:html={graph} />
 
   <Announcement />
 
-  <ContentBox title="เข้าสู่ระบบ WON22" as="h1">
+  <ContentBox title="เข้าสู่ระบบ VING999" as="h1">
     <div class="flex justify-center py-8">
       <a
         href={targetUrl}
         rel="nofollow sponsored"
         data-cta-redirect
-        aria-label="เข้าสู่ระบบ WON22"
-        class="group relative mx-auto flex w-full max-w-[320px] items-center justify-center gap-3 overflow-hidden rounded-xl border border-[#9a3412]/60 bg-gradient-to-b from-[#f97316] to-[#9a3412] px-6 py-4 text-xl font-bold tracking-wide text-[#fcd34d] shadow-[0_10px_30px_rgba(249,115,22,0.18)] transition-all duration-300 hover:scale-105 hover:border-[#fbbf24]/70 hover:shadow-[0_15px_40px_rgba(251,191,36,0.24)]">
-        เข้าสู่ระบบ WON22
+        aria-label="เข้าสู่ระบบ VING999"
+        class="group relative mx-auto flex w-full max-w-[320px] items-center justify-center gap-3 overflow-hidden rounded-xl border border-[#8f0a13]/60 bg-gradient-to-b from-[#e01b2d] to-[#8f0a13] px-6 py-4 text-xl font-bold tracking-wide text-[#f2f5f7] shadow-[0_10px_30px_rgba(224,27,45,0.18)] transition-all duration-300 hover:scale-105 hover:border-[#ff3b46]/70 hover:shadow-[0_15px_40px_rgba(255,59,70,0.28)]">
+        เข้าสู่ระบบ VING999
       </a>
     </div>
   </ContentBox>

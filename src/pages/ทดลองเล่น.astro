@@ -2,7 +2,7 @@
 import MainLayout from "../layouts/MainLayout.astro";
 import ContentBox from "../components/ContentBox.astro";
 import Navfoot from "../components/Navfoot.astro";
-import Announcement from "../components/Announcement5.astro";
+import Announcement from "../components/AnnouncementPremium.astro";
 
 import { Picture } from "astro:assets";
 import { itemList, pageGraph, schemaCtx } from "../lib/schema";
@@ -36,12 +36,12 @@ const demoGames = [
 
 const gameList = demoGames.map((game) => ({ name: game.name, imagePath: game.src.src }));
 
-const pageTitle = "ทดลองเล่น VING999 ลองสล็อตออนไลน์เว็บตรงหลายค่ายก่อนลงเครดิตจริง";
+const pageTitle = "ทดลองเล่น PIGAUTO ลองสล็อตออโต้หลายค่ายก่อนเริ่มด้วยเครดิตจริง";
 
-const pageHeading = "ทดลองเล่น VING999 ลองสล็อตออนไลน์เว็บตรงหลายค่ายให้พอใจก่อนลงเครดิตจริง";
+const pageHeading = "ทดลองเล่น PIGAUTO ลองสล็อตลิขสิทธิ์แท้หลายค่ายให้พอใจก่อนเริ่มด้วยเครดิตจริง";
 
 const pageDescription =
-  "อยากลองก่อนตัดสินใจ VING999 รวมค่ายสล็อตออนไลน์เว็บตรงไว้ให้เลือกทดลองเล่นหลายค่าย ดูเดิมพันต่อรอบและฟีเจอร์จนพอใจ แล้วค่อยสมัครยูสเดียวไปเล่นด้วยเครดิตจริง";
+  "รวมค่ายเกมลิขสิทธิ์แท้ของ PIGAUTO ให้เลือกทดลองเล่น ดูเดิมพันต่อรอบและฟีเจอร์ของแต่ละเกมจนพอใจ แล้วสมัครยูสเดียวไปเริ่มเล่นจริงด้วยระบบฝากถอนออโต้ไม่มีขั้นต่ำ";
 
 const ctx = schemaCtx(Astro);
 const graph = pageGraph(Astro, {
@@ -54,8 +54,8 @@ const graph = pageGraph(Astro, {
   ],
   extra: [
     itemList(ctx, {
-      name: "ทดลองเล่นเกมของ VING999",
-      alternateName: "VING999 โหมดทดลองเกมหลายค่ายบนมือถือก่อนเล่นด้วยเครดิตจริง",
+      name: "ทดลองเล่นเกมของ PIGAUTO",
+      alternateName: "PIGAUTO โหมดทดลองเกมลิขสิทธิ์แท้หลายค่ายบนมือถือก่อนเล่นด้วยเครดิตจริง",
       itemType: "Game",
       items: gameList,
     }),
@@ -69,30 +69,31 @@ const graph = pageGraph(Astro, {
   <Announcement />
 
   <ContentBox as="h1" title={pageHeading}>
-    <p class="mb-4 text-left text-base leading-relaxed text-[#dce3e8]">
-      หากคุณกำลังมองหาที่ลองเล่นสล็อตให้หายสงสัยก่อนลงเครดิตจริง <strong class="text-[#f2f5f7]">VING999</strong> เปิดให้ลองเกมค่ายดังได้หลายค่ายในที่เดียว
-      ทั้งเกมยอดฮิต เกมใหม่ และเกมที่มีโบนัสฟีเจอร์
+    <p class="mb-4 text-left text-base leading-relaxed text-[#f7e2d6]">
+      หากคุณกำลังมองหาที่ลองสล็อตให้หายสงสัยก่อนลงเครดิตจริง <strong class="text-[#f5c542]">PIGAUTO</strong> เปิดให้ลองเกมลิขสิทธิ์แท้จากค่ายใหญ่ได้หลายค่ายในที่เดียว
+      ทั้ง PG Soft, Joker, Pragmatic Play และ JILI
     </p>
 
-    <p class="mb-4 text-left text-base leading-relaxed text-[#dce3e8]">
-      เลือกค่ายที่สนใจ สมัครยูสเดียวใช้เวลาไม่กี่นาที แล้วเข้าไปลองโหมดทดลองของค่ายนั้นได้เลย เปิดผ่านเบราว์เซอร์ได้ทั้งบนมือถือ แท็บเล็ต และคอมพิวเตอร์
+    <p class="mb-4 text-left text-base leading-relaxed text-[#f7e2d6]">
+      เลือกค่ายที่สนใจ สมัครยูสเดียวเสร็จในไม่กี่วินาที แล้วเข้าไปลองโหมดทดลองของค่ายนั้นได้เลย เปิดผ่านเบราว์เซอร์ได้ทั้งบนมือถือ แท็บเล็ต และคอมพิวเตอร์
       ไม่ต้องติดตั้งโปรแกรมเพิ่ม
     </p>
 
-    <p class="text-left text-base leading-relaxed text-[#dce3e8]">
-      ลองจนเจอเกมที่ใช่และจังหวะที่ถูกมือ แล้วค่อยเริ่มด้วยเครดิตจริงจากยูสเดิม เพื่อให้รอบแรกที่ลงเงินเป็นเกมที่คุณรู้จักมันอยู่แล้ว
+    <p class="text-left text-base leading-relaxed text-[#f7e2d6]">
+      ลองจนเจอเกมที่ใช่และจังหวะที่ถูกมือ แล้วค่อยเริ่มด้วยเครดิตจริงจากยูสเดิม รอบแรกที่ลงเงินจะได้เป็นเกมที่คุณรู้จักมันอยู่แล้ว
     </p>
   </ContentBox>
 
-  <ContentBox as="h2" title="เลือกค่ายที่ถูกใจ แล้วเข้าไปลองกับ VING999 ได้เลย">
-    <p class="mb-4 text-left text-base leading-relaxed text-[#dce3e8]">
-      เริ่มจากค่ายไหนก็ได้ที่สะดุดตา แต่ละค่ายมีธีมและฟีเจอร์เป็นของตัวเอง ทั้งสล็อตหมุนคลาสสิก เกมฟรีสปิน และเกมโบนัสฟีเจอร์ พร้อมเกมใหม่ที่ทยอยเพิ่มเข้ามาตลอดทั้งปี
+  <ContentBox as="h2" title="เลือกค่ายที่สะดุดตา แล้วเข้าไปลองกับ PIGAUTO ได้เลย">
+    <p class="mb-4 text-left text-base leading-relaxed text-[#f7e2d6]">
+      เริ่มจากค่ายไหนก็ได้ที่ถูกใจ แต่ละค่ายมีธีมและฟีเจอร์เป็นของตัวเอง ทั้งสล็อตหมุนคลาสสิก เกมฟรีสปิน และเกมโบนัสฟีเจอร์ที่จังหวะไม่เหมือนกันสักค่าย
     </p>
 
-    <p class="mb-8 text-left text-base leading-relaxed text-[#dce3e8]">
-      กดที่ภาพค่ายที่สนใจเพื่อไปยังขั้นตอนสมัคร แล้วเข้าใช้งานค่ายนั้นได้ทันที เพราะเป็นระบบเว็บตรง ยูสเดียวจึงสลับไปมาได้ทุกค่าย
-      ไม่ต้องเปิดบัญชีใหม่ทุกครั้งที่อยากเปลี่ยนแนว
+    <p class="mb-4 text-left text-base leading-relaxed text-[#f7e2d6]">
+      กดที่ภาพค่ายที่สนใจเพื่อไปยังขั้นตอนสมัคร แล้วเข้าใช้งานค่ายนั้นได้ทันที ทุกเกมเป็นลิขสิทธิ์แท้จากผู้พัฒนาโดยตรงและทำงานตามค่า RTP จริง
     </p>
+
+    <p class="mb-8 text-left text-base leading-relaxed text-[#f7e2d6]">ยูสเดียวสลับได้ทุกค่าย ไม่ต้องเปิดบัญชีใหม่ทุกครั้งที่อยากเปลี่ยนแนว</p>
     <div class="mb-5 grid grid-cols-2 gap-5 sm:grid-cols-2 md:grid-cols-4">
       {
         demoGames.map((game) => (
@@ -104,7 +105,7 @@ const graph = pageGraph(Astro, {
               fetchpriority="low"
               widths={[200, 400, 600]}
               sizes="(max-width: 768px) 50vw, 25vw"
-              class="block h-auto w-full object-cover shadow-[0_10px_30px_rgba(224,27,45,0.16)] transition-transform duration-300 group-hover/game:scale-105"
+              class="block h-auto w-full object-cover shadow-[0_10px_30px_rgba(239,68,68,0.16)] transition-transform duration-300 group-hover/game:scale-105"
               decoding="async"
               formats={["avif", "webp"]}
               fallbackFormat="webp"
@@ -114,9 +115,9 @@ const graph = pageGraph(Astro, {
               href="/register"
               target="_blank"
               rel="noopener noreferrer"
-              aria-label={`สมัครสมาชิกเพื่อเล่น ${game.name} ที่ VING999`}
-              class="absolute inset-0 flex items-center justify-center bg-[#0a0506]/85 opacity-0 transition-opacity duration-300 group-hover/game:opacity-100 focus-visible:opacity-100">
-              <span class="rounded-full border border-[#e01b2d]/60 bg-gradient-to-r from-[#f2f5f7] via-[#bdcad2] to-[#e8eef2] px-6 py-2 font-bold text-[#0a0506] shadow-[0_10px_30px_rgba(224,27,45,0.32)] transition-transform hover:scale-110">เล่นเลย</span>
+              aria-label={`สมัครสมาชิกเพื่อเล่น ${game.name} ที่ PIGAUTO`}
+              class="absolute inset-0 flex items-center justify-center bg-[#1a0303]/85 opacity-0 transition-opacity duration-300 group-hover/game:opacity-100 focus-visible:opacity-100">
+              <span class="rounded-full border border-[#ef4444]/60 bg-gradient-to-r from-[#ffe9a8] via-[#f5c542] to-[#fbbccc] px-6 py-2 font-bold text-[#1a0303] shadow-[0_10px_30px_rgba(239,68,68,0.32)] transition-transform hover:scale-110">เล่นเลย</span>
             </a>
           </div>
         ))
@@ -125,42 +126,41 @@ const graph = pageGraph(Astro, {
   </ContentBox>
 
   <ContentBox as="h2" title="ทดลองเล่นฟรีไม่จำกัดรอบ ลองให้พอใจก่อนใช้เครดิตจริง">
-    <p class="mb-4 text-left text-base leading-relaxed text-[#dce3e8]">
+    <p class="mb-4 text-left text-base leading-relaxed text-[#f7e2d6]">
       พอเข้าไปถึงโหมดทดลองแล้วหมุนได้ไม่จำกัดรอบ เพราะเป็นเครดิตสมมติล้วน ๆ จะลองผิดลองถูกกี่ครั้งก็ได้โดยไม่ต้องเสี่ยงอะไรเลย
     </p>
 
-    <p class="mb-4 text-left text-base leading-relaxed text-[#dce3e8]">
+    <p class="mb-4 text-left text-base leading-relaxed text-[#f7e2d6]">
       ดูว่าเดิมพันต่อรอบเริ่มที่เท่าไร ฟีเจอร์เข้าง่ายแค่ไหน หนึ่งรอบใช้เวลานานไหม แล้วเก็บไว้เป็นข้อมูลตอนเลือกเกมที่จะเล่นจริง
     </p>
 
-    <p class="mb-4 text-left text-base leading-relaxed text-[#dce3e8]">
+    <p class="mb-4 text-left text-base leading-relaxed text-[#f7e2d6]">
       มีสองเรื่องที่อยากให้รู้ไว้ก่อน เครดิตในโหมดทดลองถอนไม่ได้ และไม่นับเป็นยอดเทิร์นของโปรใด ๆ
     </p>
 
-    <p class="text-left text-base leading-relaxed text-[#dce3e8]">
+    <p class="text-left text-base leading-relaxed text-[#f7e2d6]">
       อีกเรื่องคือไม่ใช่ทุกเกมที่มีปุ่มทดลอง ถ้าเกมที่อยากลองยังไม่เปิดโหมดนี้ สมัครสมาชิกแล้วเข้าไปดูของจริงได้เลย
     </p>
   </ContentBox>
 
-  <ContentBox as="h2" title="พร้อมเมื่อไหร่ สมัครสมาชิก VING999 แล้วเริ่มเล่นจริงได้ทันที">
-    <p class="mb-4 text-left text-base leading-relaxed text-[#dce3e8]">
-      สมัครใช้เวลาไม่นาน แล้วได้ยูสเดียวที่ครอบคลุมเกมค่ายดังทั้งหมดในเว็บ
+  <ContentBox as="h2" title="พร้อมเมื่อไหร่ สมัครสมาชิก PIGAUTO แล้วเริ่มเล่นจริงได้ทันที">
+    <p class="mb-4 text-left text-base leading-relaxed text-[#f7e2d6]">
+      สมัครเสร็จในไม่กี่วินาที ไม่ต้องคุยกับแอดมิน ไม่ต้องส่งบัตร แล้วได้ยูสเดียวที่ครอบคลุมเกมทุกค่ายในเว็บ
     </p>
 
-    <p class="mb-4 text-left text-base leading-relaxed text-[#dce3e8]">
-      หน้าเมมเบอร์รวมเกม เครดิต โปร และประวัติรายการไว้ที่เดียว ส่วนระบบฝากถอนออโต้ทำรายการเองได้จากมือถือ รองรับทั้งบัญชีธนาคารและ TrueWallet
-      และฝากขั้นต่ำ 1 บาท จึงเริ่มจากทุนเล็กได้
+    <p class="mb-4 text-left text-base leading-relaxed text-[#f7e2d6]">
+      หน้าเมมเบอร์รวมเกม เครดิต โปร และประวัติรายการไว้ที่เดียว ส่วนระบบฝากถอนเป็นออโต้ ทำรายการเองได้จากมือถือ ฝากปุ๊บเข้าปั๊บ ถอนปุ๊บยอดขึ้นปั๊บ ไม่ผ่านคนกลาง
     </p>
 
-    <p class="mb-4 text-left text-base leading-relaxed text-[#dce3e8]">
+    <p class="mb-4 text-left text-base leading-relaxed text-[#f7e2d6]">
+      รองรับทั้งบัญชีธนาคารและ True Wallet เต็มระบบ และไม่มีขั้นต่ำจริง อยากฝากเท่าไหร่ก็ฝากได้ อยากถอนเท่าไหร่ก็ถอนได้
+    </p>
+
+    <p class="mb-4 text-left text-base leading-relaxed text-[#f7e2d6]">
       ก่อนลงเดิมพันรอบแรก ตั้งงบต่อรอบที่รับไหวไว้ก่อน แล้วเปิดดูสิทธิ์ที่เปิดอยู่ในหน้าโปรว่ายอดรับเท่าไร เทิร์นเท่าไร
     </p>
 
-    <p class="mb-4 text-left text-base leading-relaxed text-[#dce3e8]">
-      เข้าใช้งานผ่านเว็บหลักของ VING999 ได้ด้วยยูสเดิมทุกอุปกรณ์ เพื่อให้หยิบเครื่องไหนขึ้นมาก็เล่นต่อจากที่ค้างไว้ได้ทันที
-    </p>
-
-    <p class="text-left text-base leading-relaxed text-[#dce3e8]">
+    <p class="text-left text-base leading-relaxed text-[#f7e2d6]">
       อีกอย่างที่ควรติดตัวไว้เสมอ อย่าบอกรหัสผ่านหรือรหัส OTP ให้ใครทั้งนั้น
     </p>
   </ContentBox>

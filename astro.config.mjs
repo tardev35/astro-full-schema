@@ -75,7 +75,7 @@ export default defineConfig({
     "/line": "https://tinyurl.com/suhng",
   },
 
-  site: "https://ving999-brand.com",
+  site: "https://pigauto.com",
   integrations: [
     sitemap({
       // /login, /register and /line are forwarding pages that all ship

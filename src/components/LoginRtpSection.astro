@@ -2,68 +2,70 @@
 import ContentBoxTwo from "./ContentBoxTwo.astro";
 
 const steps = [
-  { icon: "🔑", name: "เข้าสู่ระบบด้วยยูสเดิม", detail: "ใช้เบอร์โทรศัพท์หรือยูสเซอร์เนมที่สมัครไว้ เข้าได้ทั้งจากมือถือและคอม", tag: "ขั้นที่ 1" },
-  { icon: "🎰", name: "เลือกค่ายและหมวดเกมสล็อต", detail: "ไล่ดูค่ายกับหมวดที่เปิดอยู่ก่อน แล้วค่อยเลือกเกมที่จังหวะตรงกับสไตล์ตัวเอง", tag: "ขั้นที่ 2" },
-  { icon: "🌀", name: "สลับค่ายด้วยเครดิตชุดเดิม", detail: "เปลี่ยนจากเกมที่คุ้นมือไปเกมค่ายใหม่ได้กลางทาง ไม่ต้องแยกยูสตามผู้ให้บริการ", tag: "ขั้นที่ 3" },
-  { icon: "🎁", name: "เช็กโปรโมชั่นที่เปิดอยู่", detail: "ดูยอดรับ เงื่อนไข เทิร์น และช่วงเวลาที่ใช้ได้จากหน้าโปรก่อนกดรับทุกครั้ง", tag: "ขั้นที่ 4" },
-  { icon: "💳", name: "ฝากถอนออโต้และย้อนดูประวัติ", detail: "ทำรายการผ่านบัญชีธนาคารหรือ TrueWallet แล้วตามสถานะรายการได้เองจากหน้าเดิม", tag: "ขั้นที่ 5" },
+  { icon: "📝", name: "สมัครในไม่กี่วินาที", detail: "กรอกข้อมูลไม่กี่อย่างก็จบ ไม่ต้องคุยกับแอดมิน ไม่ต้องส่งบัตร กดครั้งเดียวเข้าใช้งานได้เลย", tag: "ขั้นที่ 1" },
+  { icon: "🔑", name: "เข้าสู่ระบบด้วยยูสเดิม", detail: "ใช้เบอร์โทรศัพท์หรือยูสเซอร์เนมที่สมัครไว้ เข้าได้ทั้งจากมือถือและคอม", tag: "ขั้นที่ 2" },
+  { icon: "👛", name: "ฝากผ่านวอเล็ทหรือธนาคาร", detail: "รองรับ True Wallet เต็มระบบ ไม่ต้องผูกบัญชีธนาคารก็ทำรายการได้ ไม่มีขั้นต่ำบังคับ", tag: "ขั้นที่ 3" },
+  { icon: "🎰", name: "เลือกค่ายเกมลิขสิทธิ์แท้", detail: "PG Soft, Joker, Pragmatic Play และ JILI อยู่หลังยูสเดียวกัน สลับค่ายด้วยเครดิตชุดเดิม", tag: "ขั้นที่ 4" },
+  { icon: "⚡", name: "ถอนออโต้และตามสถานะเอง", detail: "ยืนยันถอนแล้วยอดวิ่งเข้าบัญชีหรือวอเล็ทที่ผูกไว้ ไม่มีคนกลาง ตามสถานะได้จากหน้าเดิม", tag: "ขั้นที่ 5" },
 ];
 
-const chips = ["สล็อตเว็บตรง", "เกมค่ายดัง", "ฟรีสปิน", "เกมโบนัส", "ฝากถอนออโต้", "ธนาคารและวอเลท", "ฝากขั้นต่ำ 1 บาท"];
+const chips = ["ไม่มีขั้นต่ำ", "ฝากถอนตรง", "ระบบออโต้เต็มระบบ", "pig auto wallet", "PG Soft", "Joker", "Pragmatic Play", "JILI"];
 ---
 
-<ContentBoxTwo titleleft="เข้าสู่ระบบ VING999" titleright="ลำดับการใช้งานบนหน้าเมมเบอร์" label="เข้าสู่ระบบ VING999 และลำดับการใช้งานบนหน้าเมมเบอร์">
+<ContentBoxTwo titleleft="เข้าสู่ระบบ PIGAUTO" titleright="ลำดับการใช้งานบนหน้าสมาชิก" label="เข้าสู่ระบบ PIGAUTO และลำดับการใช้งานบนหน้าสมาชิก">
   <div slot="left" class="flex h-full flex-col gap-4">
-    <div class="relative overflow-hidden rounded-2xl border border-[#5a1a1e] bg-[#170a0b] p-6 shadow-[0_10px_30px_rgba(224,27,45,0.18)]">
-      <div aria-hidden="true" class="pointer-events-none absolute -top-10 -right-10 h-32 w-32 rounded-full bg-[#e01b2d]/20 blur-[50px]"></div>
+    <div class="relative overflow-hidden rounded-2xl border border-[#7f1d1d] bg-[#280707] p-6 shadow-[0_10px_30px_rgba(239,68,68,0.18)]">
+      <div aria-hidden="true" class="pointer-events-none absolute -top-10 -right-10 h-32 w-32 rounded-full bg-[#ef4444]/20 blur-[50px]"></div>
 
       <div class="relative z-10 mb-5 flex items-center gap-3">
         <span
           aria-hidden="true"
-          class="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl border border-[#5a1a1e] bg-gradient-to-br from-[#ff3b46] via-[#e01b2d] to-[#8f0a13] text-xl shadow-inner">
+          class="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl border border-[#7f1d1d] bg-gradient-to-br from-[#f87171] via-[#ef4444] to-[#7f1d1d] text-xl shadow-inner">
           🎰
         </span>
         <div class="flex flex-col">
-          <p class="text-base font-black text-[#f2f5f7]">เข้าสู่ระบบแล้วเลือกค่ายและหมวดเกมสล็อตที่อยากเล่นต่อได้ทันที</p>
-          <span class="text-[11px] text-[#b3bec6]">ยูสเดียวใช้เข้าได้ทั้งสล็อตคลาสสิก เกมฟรีสปิน และเกมโบนัสจากหลายค่าย เช็กเครดิต ดูโปร และย้อนดูประวัติรายการของ VING999 ได้จากหน้าเดียว</span>
+          <p class="text-base font-black text-[#fff5e6]">เข้าสู่ระบบแล้วเลือกค่ายเกมลิขสิทธิ์แท้ที่อยากเล่นต่อได้ทันที</p>
+          <span class="text-[11px] text-[#b08b80]">
+            ยูสเดียวใช้เข้าได้ทุกค่าย ทั้ง PG Soft, Joker, Pragmatic Play และ JILI ส่งรายการฝากถอนออโต้ เช็กเครดิต และย้อนดูประวัติรายการของ PIGAUTO ได้จากหน้าเดียว
+          </span>
         </div>
       </div>
 
       <div class="relative z-10 flex flex-col gap-3.5">
         <div class="relative">
-          <span aria-hidden="true" class="absolute top-3.5 left-4 text-[#ff3b46]">👤</span>
+          <span aria-hidden="true" class="absolute top-3.5 left-4 text-[#f87171]">👤</span>
           <input
             type="text"
             placeholder="เบอร์โทรศัพท์ / ยูสเซอร์เนม"
-            class="w-full rounded-xl border border-[#5a1a1e] bg-[#0a0506] py-3 pr-4 pl-12 text-[#dce3e8] transition-all outline-none placeholder:text-[#b3bec6] focus:border-[#e01b2d] focus:ring-1 focus:ring-[#e01b2d]/40"
+            class="w-full rounded-xl border border-[#7f1d1d] bg-[#1a0303] py-3 pr-4 pl-12 text-[#f7e2d6] transition-all outline-none placeholder:text-[#b08b80] focus:border-[#ef4444] focus:ring-1 focus:ring-[#ef4444]/40"
           />
         </div>
         <div class="relative">
-          <span aria-hidden="true" class="absolute top-3.5 left-4 text-[#ff3b46]">🔑</span>
+          <span aria-hidden="true" class="absolute top-3.5 left-4 text-[#f87171]">🔑</span>
           <input
             type="password"
             placeholder="รหัส PIN 4 หลัก"
-            class="w-full rounded-xl border border-[#5a1a1e] bg-[#0a0506] py-3 pr-4 pl-12 text-[#dce3e8] transition-all outline-none placeholder:text-[#b3bec6] focus:border-[#e01b2d] focus:ring-1 focus:ring-[#e01b2d]/40"
+            class="w-full rounded-xl border border-[#7f1d1d] bg-[#1a0303] py-3 pr-4 pl-12 text-[#f7e2d6] transition-all outline-none placeholder:text-[#b08b80] focus:border-[#ef4444] focus:ring-1 focus:ring-[#ef4444]/40"
           />
         </div>
 
         <div class="flex items-center justify-between px-1 text-xs">
-          <label class="flex items-center gap-2 text-[#b3bec6]">
-            <input type="checkbox" class="h-3.5 w-3.5 rounded border-[#5a1a1e] bg-[#0a0506] accent-[#e01b2d]" />
+          <label class="flex items-center gap-2 text-[#b08b80]">
+            <input type="checkbox" class="h-3.5 w-3.5 rounded border-[#7f1d1d] bg-[#1a0303] accent-[#ef4444]" />
             จดจำฉันไว้
           </label>
-          <a href="/login" class="text-[#b3bec6] transition-colors hover:text-[#ff3b46]">ลืมรหัส PIN?</a>
+          <a href="/login" class="text-[#b08b80] transition-colors hover:text-[#f87171]">ลืมรหัส PIN?</a>
         </div>
 
         <button
-          class="mt-1 w-full rounded-xl border border-[#ff3b46]/50 bg-gradient-to-r from-[#ff3b46] via-[#e01b2d] to-[#8f0a13] p-3.5 font-black text-[#f2f5f7] shadow-[0_10px_30px_rgba(224,27,45,0.28)] transition-all hover:scale-[1.02] hover:shadow-[0_15px_40px_rgba(255,59,70,0.35)]">
+          class="mt-1 w-full rounded-xl border border-[#f87171]/50 bg-gradient-to-r from-[#f87171] via-[#ef4444] to-[#7f1d1d] p-3.5 font-black text-[#fff5e6] shadow-[0_10px_30px_rgba(239,68,68,0.28)] transition-all hover:scale-[1.02] hover:shadow-[0_15px_40px_rgba(248,113,113,0.35)]">
           เข้าสู่ระบบ
         </button>
 
-        <div class="flex items-center gap-3 py-1 text-[11px] text-[#b3bec6]">
-          <span class="h-px flex-1 bg-[#5a1a1e]"></span>
+        <div class="flex items-center gap-3 py-1 text-[11px] text-[#b08b80]">
+          <span class="h-px flex-1 bg-[#7f1d1d]"></span>
           หรือ
-          <span class="h-px flex-1 bg-[#5a1a1e]"></span>
+          <span class="h-px flex-1 bg-[#7f1d1d]"></span>
         </div>
 
         <a
@@ -74,21 +76,21 @@ const chips = ["สล็อตเว็บตรง", "เกมค่ายด
 
         <div class="mt-1 flex items-center justify-between px-1">
           <div class="flex gap-2">
-            <span class="rounded-full border border-[#e01b2d]/55 bg-[#220d0f] px-2.5 py-1 text-[10px] font-bold text-[#ff3b46]"><span aria-hidden="true">🔒</span> เข้ารหัสข้อมูล</span>
-            <span class="rounded-full border border-[#7d8b95]/55 bg-[#1a1416] px-2.5 py-1 text-[10px] font-bold text-[#bdcad2]"><span aria-hidden="true">🕐</span> ใช้งานได้ตลอด 24 ชม.</span>
+            <span class="rounded-full border border-[#ef4444]/55 bg-[#3a0d0d] px-2.5 py-1 text-[10px] font-bold text-[#f87171]"><span aria-hidden="true">🔒</span> เข้ารหัสข้อมูล</span>
+            <span class="rounded-full border border-[#fbbccc]/55 bg-[#3a0d0d] px-2.5 py-1 text-[10px] font-bold text-[#fbbccc]"><span aria-hidden="true">🕐</span> ใช้งานได้ตลอด 24 ชม.</span>
           </div>
-          <a href="/register" class="text-xs font-bold text-[#b3bec6] transition-colors hover:text-[#ff3b46]">สมัครสมาชิกใหม่</a>
+          <a href="/register" class="text-xs font-bold text-[#b08b80] transition-colors hover:text-[#f87171]">สมัครสมาชิกใหม่</a>
         </div>
       </div>
     </div>
   </div>
 
   <div slot="right" class="h-full">
-    <div class="flex h-full flex-col rounded-2xl border border-[#5a1a1e] bg-[#170a0b] p-5 shadow-[0_10px_30px_rgba(224,27,45,0.18)]">
+    <div class="flex h-full flex-col rounded-2xl border border-[#7f1d1d] bg-[#280707] p-5 shadow-[0_10px_30px_rgba(239,68,68,0.18)]">
       <div class="mb-5 flex items-center justify-between gap-3">
         <div>
-          <span class="text-xs font-bold tracking-wide text-[#b3bec6]">ลำดับการใช้งานที่ VING999 วางไว้บนหน้าเมมเบอร์ หลังเข้าสู่ระบบด้วยยูสเดิม</span>
-          <div class="bg-gradient-to-r from-[#ff3b46] via-[#f2f5f7] to-[#bdcad2] bg-clip-text text-2xl font-black text-transparent sm:text-3xl">สล็อตเว็บตรง • เกมค่ายดัง • ฝากถอนออโต้</div>
+          <span class="text-xs font-bold tracking-wide text-[#b08b80]">ลำดับการใช้งานที่ PIGAUTO วางไว้ ตั้งแต่สมัครจนถอนออก ทุกขั้นเป็นระบบออโต้</span>
+          <div class="bg-gradient-to-r from-[#f87171] via-[#fff5e6] to-[#f5c542] bg-clip-text text-2xl font-black text-transparent sm:text-3xl">สมัคร • ฝากออโต้ • เล่น • ถอนออโต้</div>
         </div>
         <span class="flex items-center gap-1.5 self-start rounded-full border border-green-500/40 bg-green-900/20 px-2.5 py-1">
           <span class="h-1.5 w-1.5 animate-pulse rounded-full bg-green-400 shadow-[0_0_8px_rgba(74,222,128,0.7)]"></span>
@@ -96,7 +98,7 @@ const chips = ["สล็อตเว็บตรง", "เกมค่ายด
         </span>
       </div>
 
-      <div class="mb-2 flex items-center justify-between text-[11px] font-bold tracking-widest text-[#b3bec6] uppercase">
+      <div class="mb-2 flex items-center justify-between text-[11px] font-bold tracking-widest text-[#b08b80] uppercase">
         <span>ขั้นตอนการใช้งาน</span>
         <span>ลำดับ</span>
       </div>
@@ -104,28 +106,28 @@ const chips = ["สล็อตเว็บตรง", "เกมค่ายด
       <div class="flex flex-1 flex-col gap-2.5">
         {
           steps.map((s) => (
-            <div class="rounded-xl border border-[#5a1a1e] bg-[#0a0506] px-3.5 py-2.5 transition-colors hover:border-[#e01b2d]/60 hover:bg-[#220d0f]">
+            <div class="rounded-xl border border-[#7f1d1d] bg-[#1a0303] px-3.5 py-2.5 transition-colors hover:border-[#ef4444]/60 hover:bg-[#3a0d0d]">
               <div class="flex items-center justify-between gap-2 text-sm">
-                <span class="flex min-w-0 items-center gap-2 font-bold text-[#dce3e8]">
+                <span class="flex min-w-0 items-center gap-2 font-bold text-[#f7e2d6]">
                   <span aria-hidden="true" class="w-5 shrink-0 text-center">
                     {s.icon}
                   </span>{" "}
                   <span class="truncate">{s.name}</span>
                 </span>
-                <span class="shrink-0 rounded-full border border-[#e01b2d]/45 bg-[#220d0f] px-2.5 py-0.5 text-[10px] font-bold text-[#f2f5f7]">{s.tag}</span>
+                <span class="shrink-0 rounded-full border border-[#ef4444]/45 bg-[#3a0d0d] px-2.5 py-0.5 text-[10px] font-bold text-[#fff5e6]">{s.tag}</span>
               </div>
-              <div class="mt-1.5 text-[11px] tracking-wide text-[#b3bec6]">{s.detail}</div>
+              <div class="mt-1.5 text-[11px] tracking-wide text-[#b08b80]">{s.detail}</div>
             </div>
           ))
         }
       </div>
 
       <div class="mt-4 flex flex-wrap items-center justify-center gap-2">
-        {chips.map((c) => <span class="rounded-full border border-[#5a1a1e] bg-[#0a0506] px-3 py-1 text-[10px] font-bold text-[#bdcad2]">{c}</span>)}
+        {chips.map((c) => <span class="rounded-full border border-[#7f1d1d] bg-[#1a0303] px-3 py-1 text-[10px] font-bold text-[#d9b7ab]">{c}</span>)}
       </div>
 
-      <div class="mt-3 text-center text-[10px] tracking-wide text-[#b3bec6]">
-        ลำดับในตารางสรุปจากที่หน้าเว็บแสดงไว้ รายละเอียดของค่ายเกม เงื่อนไขเครดิต และโปรที่เปิดอยู่จริงให้ยึดตามหน้าเมมเบอร์และหน้าโปรโมชั่นของ VING999 ก่อนเลือกใช้ทุกครั้ง
+      <div class="mt-3 text-center text-[10px] tracking-wide text-[#b08b80]">
+        ลำดับในตารางสรุปจากที่หน้าเว็บแสดงไว้ รายละเอียดของค่ายเกม เงื่อนไขเครดิต และช่องทางฝากถอนที่เปิดอยู่จริงให้ยึดตามหน้าสมาชิกของ PIGAUTO ก่อนทำรายการทุกครั้ง อย่าบอกรหัส PIN หรือ OTP กับใคร
         หากติดขัดตรงไหนทักไลน์ทีมงานได้ตลอด 24 ชั่วโมง
       </div>
     </div>

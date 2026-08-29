@@ -7,11 +7,11 @@ import slide3 from "../assets/slide3.png";
 const images = [
   {
     src: slide2,
-    alt: "ภาพโปรโมชั่น VING999 โทนแดงเข้มบนพื้นดำ มุมบนซ้ายเป็นโลโก้ตัวอักษรโครเมียม VING กับเลข 999 สีแดง ด้านขวาเป็นพรีเซนเตอร์หญิงสวมชุดสีแดงสลับขาวถือเหรียญที่มีโลโก้ VING999 ตัวอักษรใหญ่ว่า โบนัสสุดคุ้ม! ถัดมาระบุช่วงเวลา 12:00น. ถึง 15:00น. และ 15% ซื้อฟรีสปินได้ พร้อมบรรทัดเงื่อนไขว่า ทำเทิร์น 1 เท่า 2 เท่า รวมทุน รับได้วันละ 1 ครั้ง ด้านล่างเป็นแถวไอคอนห้าช่องว่า สมัครง่าย รวดเร็ว ไม่กี่ขั้นตอน ฝาก-ถอน ออโต้ รวดเร็วทันใจ รองรับธนาคารและวอเลท โปรโมชั่นจัดเต็มทุกสัปดาห์ และ ปลอดภัย มั่นคง เชื่อถือได้",
+    alt: "ภาพโปรโมชั่น PIGAUTO โทนแดงเข้มลายตรุษจีน ด้านบนเป็นโลโก้หมูการ์ตูนสีชมพูในวงเฟืองสีเงินกับคำว่า PIGAUTO ฉากหลังมีโคมไฟจีนสีแดง พัดกระดาษสีทอง ไพ่ ชิปคาสิโน และเหรียญทองปลิว ด้านขวาเป็นพรีเซนเตอร์หญิงสวมชุดกี่เพ้าสีแดงปักลายมังกรทอง ข้อความตัวใหญ่ว่า เว็บสล็อตออโต้ไม่มีขั้นต่ำ และบรรทัดล่างว่า เล่นได้อย่างเป็นมิตร ปลอดภัยสูง",
   },
   {
     src: slide3,
-    alt: "ภาพโปรโมชั่น VING999 โทนแดงเข้มบนพื้นดำ มุมบนซ้ายเป็นโลโก้ตัวอักษรโครเมียม VING กับเลข 999 สีแดง ตัวอักษรใหญ่ว่า โปรฝากสุดคุ้ม พร้อมตัวเลขใหญ่ว่า ฝาก 29฿ รับ 100฿ ถัดลงมาเป็นบรรทัดเงื่อนไขว่า ทำเทิร์น 4 เท่า รวมทุน และป้ายว่า ฝากขั้นต่ำ 1 บาท ด้านล่างเป็นแถวไอคอนห้าช่องว่า สมัครง่าย รวดเร็ว ไม่กี่ขั้นตอน ฝาก-ถอน ออโต้ รวดเร็วทันใจ รองรับธนาคารและวอเลท โปรโมชั่นจัดเต็มทุกสัปดาห์ และ ปลอดภัย มั่นคง เชื่อถือได้",
+    alt: "ภาพโปรโมชั่น PIGAUTO โทนแดงเข้มลายตรุษจีน มุมบนขวาเป็นโลโก้หมูการ์ตูนสีชมพูในวงเฟืองสีเงินกับคำว่า PIGAUTO ฉากหลังมีโคมไฟจีนสีแดง พัดกระดาษสีทอง วงกลมลายจีนสีทอง เหรียญจีนและเหรียญทองปลิว ด้านซ้ายเป็นพรีเซนเตอร์หญิงสวมชุดกี่เพ้าสีแดงปักลายมังกรทอง ข้อความตัวใหญ่ว่า PIGAUTO และบรรทัดล่างว่า สมัครง่ายเหมือนเปิดมือถือ",
   },
 ];
 
@@ -23,7 +23,7 @@ const slides = Array.from({ length: COPIES }, () => images).flat();
   <input id="carousel-pause" type="checkbox" class="peer sr-only" />
   <label
     for="carousel-pause"
-    class="sr-only cursor-pointer peer-focus-visible:not-sr-only peer-focus-visible:mb-3 peer-focus-visible:inline-block peer-focus-visible:rounded-full peer-focus-visible:border peer-focus-visible:border-[#e01b2d]/60 peer-focus-visible:bg-[#170a0b] peer-focus-visible:px-4 peer-focus-visible:py-2 peer-focus-visible:text-sm peer-focus-visible:font-bold peer-focus-visible:text-[#f2f5f7]">
+    class="sr-only cursor-pointer peer-focus-visible:not-sr-only peer-focus-visible:mb-3 peer-focus-visible:inline-block peer-focus-visible:rounded-full peer-focus-visible:border peer-focus-visible:border-[#ef4444]/60 peer-focus-visible:bg-[#280707] peer-focus-visible:px-4 peer-focus-visible:py-2 peer-focus-visible:text-sm peer-focus-visible:font-bold peer-focus-visible:text-[#fff5e6]">
     หยุด / เล่นสไลด์ภาพ
   </label>
 
@@ -36,7 +36,7 @@ const slides = Array.from({ length: COPIES }, () => images).flat();
             <Picture
               src={slide.src}
               alt={isDuplicate ? "" : slide.alt}
-              class="block w-full rounded-xl border border-[#5a1a1e] object-cover shadow-[0_10px_30px_rgba(224,27,45,0.20)]"
+              class="block w-full rounded-xl border border-[#7f1d1d] object-cover shadow-[0_10px_30px_rgba(239,68,68,0.20)]"
               width={slide.src.width}
               height={slide.src.height}
               loading="lazy"

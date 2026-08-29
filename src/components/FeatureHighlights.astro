@@ -16,31 +16,31 @@ const { items } = Astro.props;
 <div class="mt-4 flex flex-col gap-5">
   {
     items.map((item) => {
-      const isChrome = item.accent !== "blue";
+      const isGold = item.accent !== "blue";
       return (
         <div
-          class={`group flex flex-col items-start gap-4 rounded-2xl border border-[#5a1a1e] bg-[#170a0b]/60 p-6 transition-all duration-300 hover:-translate-y-1 sm:flex-row ${
-            isChrome
-              ? "hover:border-[#bdcad2]/50 hover:bg-[#220d0f] hover:shadow-[0_10px_20px_rgba(189,202,210,0.16)]"
-              : "hover:border-[#e01b2d]/60 hover:bg-[#220d0f] hover:shadow-[0_10px_20px_rgba(224,27,45,0.24)]"
+          class={`group flex flex-col items-start gap-4 rounded-2xl border border-[#7f1d1d] bg-[#280707]/60 p-6 transition-all duration-300 hover:-translate-y-1 sm:flex-row ${
+            isGold
+              ? "hover:border-[#f5c542]/55 hover:bg-[#3a0d0d] hover:shadow-[0_10px_20px_rgba(245,197,66,0.18)]"
+              : "hover:border-[#fbbccc]/60 hover:bg-[#3a0d0d] hover:shadow-[0_10px_20px_rgba(251,188,204,0.22)]"
           }`}>
           <div
             aria-hidden="true"
             class={`flex h-14 w-14 shrink-0 items-center justify-center rounded-xl text-3xl transition-transform duration-300 group-hover:scale-110 ${
-              isChrome
-                ? "border border-[#f2f5f7]/50 bg-gradient-to-br from-[#bdcad2] to-[#7d8b95] shadow-[0_0_15px_rgba(189,202,210,0.45)] group-hover:rotate-3"
-                : "border border-[#ff3b46]/50 bg-gradient-to-br from-[#e01b2d] to-[#8f0a13] shadow-[0_0_15px_rgba(224,27,45,0.45)]"
+              isGold
+                ? "border border-[#ffe9a8]/50 bg-gradient-to-br from-[#f5c542] to-[#a3610c] shadow-[0_0_15px_rgba(245,197,66,0.45)] group-hover:rotate-3"
+                : "border border-[#fbbccc]/50 bg-gradient-to-br from-[#fbbccc] via-[#ef8fae] to-[#b91c1c] shadow-[0_0_15px_rgba(251,188,204,0.45)]"
             }`}>
             {item.icon}
           </div>
           <div class="flex flex-col gap-2 text-left">
             <p
               class={`text-xl font-black tracking-wide drop-shadow-sm ${
-                isChrome ? "bg-gradient-to-r from-[#f2f5f7] to-[#bdcad2] bg-clip-text text-transparent" : "bg-gradient-to-r from-[#ff3b46] to-[#8f0a13] bg-clip-text text-transparent"
+                isGold ? "bg-gradient-to-r from-[#ffe9a8] to-[#f5c542] bg-clip-text text-transparent" : "bg-gradient-to-r from-[#fbbccc] to-[#ef4444] bg-clip-text text-transparent"
               }`}>
               {item.title}
             </p>
-            <p class="text-left text-base leading-relaxed text-[#dce3e8] transition-colors group-hover:text-[#f2f5f7]">{item.description}</p>
+            <p class="text-left text-base leading-relaxed text-[#f7e2d6] transition-colors group-hover:text-[#fff5e6]">{item.description}</p>
           </div>
         </div>
       );

@@ -1,92 +1,92 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
-import Announcement from "../components/Announcement5.astro";
-import ContentBox from "../components/ContentBox.astro";
-import ContentBoxNeumorphism from "../components/ContentBoxNeumorphism.astro";
-import ContentBoxFloatingBadge from "../components/ContentBoxFloatingBadge.astro";
-import ContentBoxTwo from "../components/ContentBoxTwo.astro";
-import ContentBoxTwoNeumorphism from "../components/ContentBoxTwoNeumorphism.astro";
-import ContentBoxTwoFloatingBadge from "../components/ContentBoxTwoFloatingBadge.astro";
-import ContentBoxSevenThreeNeumorphism from "../components/ContentBoxSevenThreeNeumorphism.astro";
+import Announcement from "../components/AnnouncementPremium.astro";
+import ContentBoxPremium from "../components/ContentBoxPremium.astro";
+import ContentBoxCyberCut from "../components/ContentBoxCyberCut.astro";
+import ContentBoxSpecial from "../components/ContentBoxSpecial.astro";
+import ContentBoxTwoPremium from "../components/ContentBoxTwoPremium.astro";
+import ContentBoxTwoCyberCut from "../components/ContentBoxTwoCyberCut.astro";
+import ContentBoxSevenThreePremium from "../components/ContentBoxSevenThreePremium.astro";
+import ContentBoxSevenThreeCyberCut from "../components/ContentBoxSevenThreeCyberCut.astro";
 import GameRankingBoard from "../components/GameRankingBoard.astro";
 import FeatureHighlights from "../components/FeatureHighlights.astro";
 import SmoothCarousel from "../components/SmoothCarousel.astro";
 import LoginRtpSection from "../components/LoginRtpSection.astro";
-import LatestWinnersPremium from "../components/LatestWinnersPremium.astro";
+import LatestWinnersCyber from "../components/LatestWinnersCyber.astro";
 import ProviderGrid from "../components/ProviderGrid.astro";
 import ReviewCardSumo2 from "../components/ReviewCardSumo2.astro";
-import Faq3 from "../components/Faq3.astro";
+import Faq2 from "../components/Faq2.astro";
 import Navfoot from "../components/Navfoot.astro";
 
 import { Picture } from "astro:assets";
 import { pageGraph } from "../lib/schema";
-import imgSlotPick from "../assets/slide5.png";
-import imgDepositPromo from "../assets/slide1.png";
+import imgNoMinimum from "../assets/slide2.png";
+import imgWallet from "../assets/slide1.png";
 
-const pageTitle = "VING999 เว็บตรงอันดับ1 บริการสล็อตออนไลน์ เกมค่ายดัง ปี 2026";
+const pageTitle = "PIGAUTO เว็บสล็อตออโต้ไม่มีขั้นต่ำ อันดับ1 ฝากถอนตรง รองรับวอเล็ท";
 
-const pageDescription = "VING999 สล็อตออนไลน์เว็บตรง รวมเกมค่ายดังปี 2026 ระบบฝากถอนออโต้ รองรับธนาคารและวอเลท สมัครง่าย เล่นผ่านมือถือ พร้อมโปรโมชั่นสมาชิก";
+const pageDescription = "PIGAUTO เว็บสล็อตออโต้ไม่มีขั้นต่ำ อันดับ 1 ลิขสิทธิ์แท้ ระบบเร็ว ฝากถอนตรง เฉียมคม รองรับวอเล็ท ปลอดภัยสูง สมัครเข้าระบบในไม่กี่วินาที";
 
 const announcement =
-  "VING999 เว็บตรงอันดับ1 รวมสล็อตออนไลน์จากหลายค่ายไว้ในยูสเดียว ทั้งเกมยอดฮิต เกมใหม่ และเกมที่มีโบนัสฟีเจอร์ • สลับค่ายหรือเปลี่ยนหมวดเกมได้ทันทีด้วยเครดิตและบัญชีเดิม ไม่ต้องแยกยูสตามผู้ให้บริการ • ระบบฝากถอนออโต้ ทำรายการและเช็กสถานะได้เองจากหน้าเมมเบอร์ • รองรับทั้งบัญชีธนาคารและ TrueWallet เลือกช่องทางที่ถนัดได้จากระบบสมาชิก • ฝากขั้นต่ำ 1 บาท เริ่มจากทุนเล็กเพื่อลองระบบและเลือกเกมก่อนได้ • โปรโมชั่นเปลี่ยนตามช่วงเวลา ดูสิทธิ์ที่เปิดอยู่ในหน้าโปรก่อนเลือกใช้ทุกครั้ง • ทางเข้า VING999 รองรับมือถือ ล็อกอินด้วยยูสเดิมแล้วเข้าเกมต่อได้จากเครื่องเดียว";
+  "PIGAUTO เว็บสล็อตออโต้ไม่มีขั้นต่ำ อันดับ 1 ใช้เทคโนโลยีออโต้ตัวเดียวกับที่คาสิโนระดับอินเตอร์ใช้ ทำงานเรียลไทม์ตั้งแต่สมัครจนเข้าเล่นเกม • ฝากถอนตรง เฉียมคม ฝากปุ๊บเข้าปั๊บ ถอนปุ๊บยอดขึ้นปั๊บ ไม่มีคนกลาง ไม่มีพักระบบ • ไม่มีขั้นต่ำจริง อยากฝากเท่าไหร่ก็ฝากได้ อยากถอนเท่าไหร่ก็ถอนได้ ไม่ต้องกลัวว่าระบบจะบังคับยอด • รองรับ True Wallet เต็มระบบ สมัครได้โดยไม่ต้องผูกบัญชีธนาคาร ระบบ pig auto wallet โอนไวเท่าธนาคาร • รวมเกมลิขสิทธิ์แท้จาก PG Soft, Joker, Pragmatic Play และ JILI ทุกเกมทำงานตามค่า RTP จริง ไม่มีปรับเรท • สมัครเข้าระบบในไม่กี่วินาที ไม่ต้องคุยกับแอดมิน ไม่ต้องส่งบัตร กดครั้งเดียวก็เข้าใช้งานได้เลย • ทุกขั้นตอนมีระบบชัดเจน โปร่งใส ตรวจสอบได้ และรองรับผู้เล่นพร้อมกันได้เยอะ";
 
-const slotPickAlt =
-  "ภาพโปรโมชั่น VING999 โทนแดงเข้มบนพื้นดำ ด้านซ้ายเป็นโลโก้ตัวอักษรโครเมียม VING กับเลข 999 สีแดง ตัวอักษรใหญ่ว่า สล็อตแตกง่าย VING999 เกมค่ายดัง พร้อมป้ายสามช่องว่า ฝาก-ถอน ออโต้ รองรับ วอเลท และ ฝากขั้นต่ำ 1 บาท ด้านล่างเป็นแถวไอคอนห้าช่องว่า สมัครง่าย รวดเร็ว ไม่กี่ขั้นตอน ฝาก-ถอน ออโต้ รวดเร็วทันใจ รองรับธนาคารและวอเลท โปรโมชั่นจัดเต็มทุกสัปดาห์ และ ปลอดภัย มั่นคง เชื่อถือได้";
+const noMinimumAlt =
+  "ภาพโปรโมชั่น PIGAUTO โทนแดงเข้มลายตรุษจีน ด้านบนเป็นโลโก้หมูการ์ตูนสีชมพูในวงเฟืองสีเงินกับคำว่า PIGAUTO ฉากหลังมีโคมไฟจีนสีแดง พัดกระดาษสีทอง ไพ่ ชิปคาสิโน และเหรียญทองปลิว ด้านขวาเป็นพรีเซนเตอร์หญิงสวมชุดกี่เพ้าสีแดงปักลายมังกรทอง ข้อความตัวใหญ่ว่า เว็บสล็อตออโต้ไม่มีขั้นต่ำ และบรรทัดล่างว่า เล่นได้อย่างเป็นมิตร ปลอดภัยสูง";
 
-const depositPromoAlt =
-  "ภาพโปรโมชั่น VING999 โทนแดงเข้มบนพื้นดำ มุมบนซ้ายเป็นโลโก้ตัวอักษรโครเมียม VING กับเลข 999 สีแดง ด้านขวาเป็นพรีเซนเตอร์หญิงสวมเดรสกำมะหยี่สีแดงยืนคู่ป้ายคำว่า SLOT ตัวอักษรใหญ่ว่า โปรฝากสุดคุ้ม พร้อมตัวเลขใหญ่ว่า ฝาก 59฿ รับ 200฿ ถัดลงมาเป็นบรรทัดเงื่อนไขว่า ทำเทิร์น 4 เท่า รวมทุน และป้ายว่า ฝากขั้นต่ำ 1 บาท ด้านล่างเป็นแถวไอคอนห้าช่องว่า สมัครง่าย รวดเร็ว ไม่กี่ขั้นตอน ฝาก-ถอน ออโต้ รวดเร็วทันใจ รองรับธนาคารและวอเลท โปรโมชั่นจัดเต็มทุกสัปดาห์ และ ปลอดภัย มั่นคง เชื่อถือได้";
+const walletAlt =
+  "ภาพโปรโมชั่น PIGAUTO โทนแดงเข้มลายตรุษจีน ด้านบนเป็นโลโก้หมูการ์ตูนสีชมพูในวงเฟืองสีเงินกับคำว่า PIGAUTO ฉากหลังมีโคมไฟจีนสีแดง พัดกระดาษสีทอง ไพ่โพดำโพแดง ชิปคาสิโน และเหรียญทองปลิว ด้านซ้ายเป็นพรีเซนเตอร์หญิงสวมชุดกี่เพ้าสีแดงปักลายทอง ข้อความตัวใหญ่ว่า รองรับวอเล็ท เต็มระบบ และบรรทัดล่างว่า pig auto wallet ใช้ง่าย";
 
 const trustPoints = [
   {
-    icon: "🎰",
-    title: "สายที่เล่นสล็อตเป็นหลัก",
-    description: "เกมค่ายดังหลายแนวอยู่หลังบัญชีเดียวกัน ทั้งสล็อตคลาสสิก เกมฟรีสปิน และเกมโบนัสฟีเจอร์ เลือกจากหน้ารวมเกมแล้วเข้าเล่นต่อได้เลย",
+    icon: "🌐",
+    title: "เทคโนโลยีออโต้ระดับอินเตอร์",
+    description: "PIGAUTO อาจเป็นแบรนด์ใหม่ แต่หัวใจของระบบไม่ใช่มือใหม่ เพราะใช้เทคโนโลยีออโต้ตัวเดียวกับที่คาสิโนระดับอินเตอร์ใช้กันอยู่",
     accent: "gold" as const,
   },
   {
-    icon: "🔁",
-    title: "สายที่ชอบเปลี่ยนเกมบ่อย",
-    description: "สลับจากเกมประจำไปเกมค่ายใหม่ได้ด้วยเครดิตและยูสเดิม ไม่ต้องแยกบัญชีตามผู้ให้บริการ และไม่ต้องจำรหัสผ่านหลายชุด",
+    icon: "⚡",
+    title: "เรียลไทม์ ไม่สะดุด",
+    description: "ตั้งแต่สมัคร ฝาก ถอน ไปจนถึงการเข้าเล่นเกม ทำได้แบบเรียลไทม์ ลดขั้นตอนที่ไม่เป็นมิตรต่อสมาชิก และไม่ต้องคอยตามแอดมิน",
+    accent: "blue" as const,
+  },
+  {
+    icon: "🔎",
+    title: "โปร่งใส ตรวจสอบได้",
+    description: "ทุกขั้นตอนมีระบบชัดเจน สมาชิกดูสถานะรายการของตัวเองได้เอง ไม่มีอะไรซ่อนไว้หลังบ้านให้ต้องเดา",
     accent: "gold" as const,
   },
   {
-    icon: "💳",
-    title: "สายที่อยากจัดการเงินเอง",
-    description: "ฝาก ถอน และเช็กเครดิตผ่านหน้าเมมเบอร์ได้โดยตรง รองรับทั้งบัญชีธนาคารและ TrueWallet เลือกช่องทางตามที่ถนัด",
-    accent: "gold" as const,
-  },
-  {
-    icon: "📱",
-    title: "สายที่เข้าเล่นผ่านมือถือ",
-    description: "ล็อกอิน เปิดเกม เช็กเครดิต ดูโปรโมชั่น และทำรายการต่าง ๆ จบได้จากอุปกรณ์เดียว ไม่ต้องกลับไปเปิดคอมทุกครั้ง",
+    icon: "👥",
+    title: "รองรับผู้เล่นพร้อมกันได้เยอะ",
+    description: "ระบบรองรับจำนวนผู้เล่นพร้อมกันได้เยอะมาก ช่วงคนเข้าหนาแน่นก็ยังทำรายการและเข้าเกมได้ตามปกติ",
     accent: "blue" as const,
   },
 ];
 
 const faqs = [
   {
-    q: "สล็อตออนไลน์ VING999 มีเกมแบบไหนให้เลือกเล่น",
-    a: "VING999 มีทั้งสล็อตคลาสสิก เกมฟรีสปิน เกมโบนัส และเกมใหม่จากผู้ให้บริการหลายค่าย รวมไว้ในยูสเดียว คนที่มีเกมประจำอยู่แล้วก็กลับเข้าเกมเดิมได้ทันที ส่วนสายที่ชอบลองของใหม่ก็เปลี่ยนหมวดหรือเลือกค่ายใหม่ได้จากหน้ารวมเกม โดยไม่ต้องสมัครบัญชีใหม่ทุกครั้ง",
+    q: "ฝากเงินกับ PIGAUTO มีขั้นต่ำไหม?",
+    a: "ไม่มีขั้นต่ำ ฝากเท่าไหร่ก็ได้ คุณสามารถเริ่มลองเล่นด้วยยอดเล็ก ๆ ก่อนเพื่อเช็กระบบ หรือจะฝากหนักตั้งแต่ต้นก็ทำได้ตามสะดวก",
   },
   {
-    q: "เกมค่ายดังใน VING999 สลับไปมาได้โดยไม่ต้องเปิดยูสใหม่จริงไหม",
-    a: "จริง เพราะ VING999 รวมเกมจากหลายค่ายไว้ในระบบเดียว สมาชิกจึงสลับจากเกมที่คุ้นมือไปหาเกมใหม่ได้โดยใช้เครดิตและบัญชีเดิม ไม่ต้องแยกยูสตามแต่ละผู้ให้บริการ จุดนี้ช่วยมากเวลาอยากเทียบฟีเจอร์ ฟรีสปิน หรือจังหวะเกมจากหลายค่ายในวันเดียวกัน",
+    q: "ถอนเงินจาก PIGAUTO ใช้เวลานานแค่ไหน?",
+    a: "ระบบถอนเป็นออโต้เต็มระบบ เมื่อคุณยืนยันการถอน ยอดจะถูกส่งเข้าธนาคารหรือวอเล็ทที่ผูกไว้ภายในเวลาสั้น ๆ หากข้อมูลถูกต้องตามระบบ",
   },
   {
-    q: "ระบบฝากถอนออโต้ VING999 ทำรายการเองได้ตอนไหนบ้าง",
-    a: "ระบบออโต้ให้สมาชิกทำรายการฝาก ถอน และเช็กเครดิตผ่านหน้าเมมเบอร์ได้โดยตรง จึงลดขั้นตอนระหว่างเติมเครดิตกับกลับเข้าเกมสล็อต สายที่เล่นช่วงดึกจะเห็นประโยชน์ชัดที่สุด เพราะไม่ต้องรอถามแอดมินทุกครั้งที่ต้องการทำรายการ และตามสถานะของรายการตัวเองได้จากหน้าเดิม",
+    q: "PIGAUTO รองรับการฝากถอนผ่าน True Wallet หรือไม่?",
+    a: "รองรับเต็มระบบ คุณสามารถใช้ True Wallet ในการฝากและถอนผ่านเมนูฝากถอนของ PIGAUTO ได้ทันที โดยไม่ต้องผูกบัญชีธนาคารก็ใช้งานได้",
   },
   {
-    q: "VING999 รองรับธนาคารและ TrueWallet แบบไหน",
-    a: "VING999 รองรับช่องทางการเงินที่คนไทยใช้งานเป็นประจำ ทั้งบัญชีธนาคารและ TrueWallet สมาชิกจึงเลือกวิธีฝากเงินตามความสะดวกของตัวเองได้จากระบบสมาชิก สายมือถือมักถนัดวอเลทเพราะทำรายการได้ไว ส่วนคนที่ใช้บัญชีธนาคารเป็นหลักก็ยังใช้งานต่อได้ตามปกติ",
+    q: "ต้องส่งสลิปให้แอดมินทุกครั้งที่ฝากเงินไหม?",
+    a: "ไม่จำเป็น ระบบฝากของ PIGAUTO เป็นออโต้ ตรวจจับยอดและปรับเครดิตให้อัตโนมัติ หากโอนตามยอดและช่องทางที่ระบบแสดงไว้",
   },
   {
-    q: "ฝากขั้นต่ำ 1 บาท เหมาะกับคนเพิ่งเริ่มยังไง",
-    a: "จากข้อมูลที่ปรากฏบนหน้า VING999 มีการสื่อถึงการเริ่มฝากขั้นต่ำระดับ 1 บาท คนที่อยากเปิดยูสแล้วลองดูระบบหรือเลือกเกมก่อนจึงเริ่มจากทุนเล็กได้ ไม่จำเป็นต้องใส่ทุนก้อนใหญ่ตั้งแต่ครั้งแรก ได้ดูหน้าเกม ระบบเครดิต และรูปแบบการใช้งานก่อนว่าเว็บเข้ามือเราหรือเปล่า",
+    q: "ถอนยอดเล็ก ๆ ได้ไหม หรือบังคับให้ถอนยอดสูงเท่านั้น?",
+    a: "ถอนยอดเล็ก–ใหญ่ได้ทั้งหมด ตามยอดคงเหลือที่ระบบอนุญาต ไม่มีบังคับให้ต้องถอนยอดสูงอย่างเดียว",
   },
   {
-    q: "โปรโมชั่น VING999 ดูสิทธิ์ที่ใช้ได้จริงจากตรงไหน",
-    a: "โปรโมชั่นมีไว้เสริมเครดิตหรือสิทธิ์ตามกิจกรรมของสมาชิก และรูปแบบโปรอาจต่างกันตามช่วงเวลา ทั้งสมาชิกใหม่และสมาชิกที่กลับมาเล่นต่อจึงควรดูสิทธิ์ที่เปิดอยู่ในหน้าโปรก่อนทุกครั้ง ไม่จำเป็นต้องกวาดทุกโบนัสเข้ายูส เลือกอันที่เข้ากับทุนและแนวเล่นของตัวเองก็พอ",
+    q: "ถ้าระบบล่มหรือเน็ตหลุดระหว่างทำรายการฝาก–ถอน ทำอย่างไร?",
+    a: "โดยปกติระบบจะบันทึกสถานะการทำรายการไว้ หากเน็ตหลุดหรือล็อกเอาต์กลางคัน เมื่อกลับมาเข้าสู่ระบบอีกครั้งให้ตรวจสอบยอดในกระเป๋า หากยังไม่อัปเดตสามารถติดต่อทีมงานเพื่อช่วยตรวจสอบได้",
   },
 ];
 
@@ -102,160 +102,139 @@ const graph = pageGraph(Astro, {
 
   <Announcement message={announcement} />
 
-  <ContentBoxNeumorphism as="h1" title="VING999 เว็บตรงอันดับ1 รวมสล็อตออนไลน์ เกมค่ายดัง และระบบออโต้ปี 2026">
+  <ContentBoxPremium as="h1" title="PIGAUTO เว็บสล็อตออโต้ไม่มีขั้นต่ำ อันดับ 1">
     <p class="mb-4 text-left text-base leading-relaxed">
-      <strong class="text-[#f2f5f7]">VING999</strong> รวมสล็อตออนไลน์จากหลายค่ายไว้ในยูสเดียว ทั้งเกมยอดฮิต เกมใหม่ และสล็อตที่มีโบนัสฟีเจอร์ให้เลือกตามสไตล์คนเล่น พร้อมหน้าเมมเบอร์สำหรับเช็กเครดิต โปร และรายการต่าง ๆ ได้จากจุดเดียว
+      <strong class="text-[#ffe9a8]">PIGAUTO</strong> ขอต้อนรับเข้าสู่เว็บสล็อตออโต้ที่ตั้งใจเปิดตัว เพื่อให้ผู้เล่นสัมผัส “ความลื่น + ความเร็ว + ความจริงใจ” แบบที่หาได้ยากในวงการเว็บสล็อตออนไลน์ตอนนี้
+      ในฐานะเจ้าของเว็บ เราตั้งใจสร้าง PIGAUTO ให้เป็นพื้นที่ที่ทุกคนเข้ามาแล้วสบายใจ ฝั่งระบบก็ไฮเทคเต็มร้อย ฝั่งบริการก็เป็นกันเองไม่ยัดเยียดเหมือนเว็บเก่า ๆ ที่คุณเคยเจอ
     </p>
 
     <p class="text-left text-base leading-relaxed">
-      ปี 2026 คนเล่นสล็อตไม่ได้ดูแค่ว่าเว็บมีเกมกี่พันเกม แต่ดูว่า เข้าเกมไว เครดิตขึ้นง่าย และถอนสะดวกไหม VING999 จึงเน้นให้เกมกับระบบการเงินทำงานต่อกันแบบไม่เสียจังหวะ หมุนเสร็จไม่ควรต้องมาหลงเมนูต่อ
+      เพราะผมรู้ดีว่าผู้เล่นทุกคนต้องการเว็บที่เชื่อถือได้ ปลอดภัย โปร่งใส ไม่ซ่อนไม้ซ่อนมือ และที่สำคัญ ฝาก–ถอนต้องเร็ว แม่นยำ เฉียบคม แบบไม่ต้องทักตามยอดเงินจากแอดมิน
     </p>
-  </ContentBoxNeumorphism>
+  </ContentBoxPremium>
 
-  <ContentBoxFloatingBadge as="h2" title="VING999 เว็บตรงอันดับ1 มีอะไรที่สายสล็อตมองหาในปี 2026">
-    <p class="mb-4 text-left text-base leading-relaxed">
-      VING999 วางตัวเป็นเว็บตรงสำหรับสายสล็อตที่ต้องการทั้งเกมค่ายดัง ระบบสมาชิก และช่องทางฝากถอนอยู่ในยูสเดียว หน้าเกมแบ่งหมวดให้เลือกง่าย จะกลับเกมเดิมหรือหาเกมใหม่ก็ไม่ต้องเปิดหลายเว็บแข่งกันกิน RAM
-    </p>
-
-    <p class="text-left text-base leading-relaxed">
-      จุดที่คนเล่นปี 2026 ให้ความสำคัญคือความคล่องตัวมากขึ้น เปิดมือถือแล้วต้องเข้าเกมได้ไว เช็กเครดิตรู้เรื่อง และจัดการบัญชีได้เอง เพราะคำว่าเว็บใหญ่ไม่ได้วัดจากแบนเนอร์ใหญ่ แต่วัดจากตอนใช้งานจริงแล้วมันไม่ทำให้หัวร้อน
-    </p>
-  </ContentBoxFloatingBadge>
-
-  <ContentBoxTwoNeumorphism as="h2" title="สล็อตออนไลน์ VING999 มีเกมแบบไหนให้เลือกเล่น">
-    <p slot="left" class="text-left text-base leading-relaxed">
-      สล็อตออนไลน์ VING999 มีทั้งสล็อตคลาสสิก เกมฟรีสปิน เกมโบนัส และเกมใหม่จากผู้ให้บริการหลายค่าย ทำให้คนที่มีเกมประจำกับสายชอบลองของใหม่อยู่ในยูสเดียวกันได้สบาย
-    </p>
-    <p slot="right" class="text-left text-base leading-relaxed">
-      เวลาเบื่อเกมเดิมก็เปลี่ยนหมวดหรือเลือกค่ายใหม่ได้ทันที ไม่ต้องสมัครบัญชีใหม่ทุกครั้ง เกมเยอะควรทำให้มีตัวเลือกมากขึ้น ไม่ใช่เพิ่มภารกิจให้นิ้วโป้งเลื่อนจนลืมว่าตอนแรกจะเล่นอะไร
-    </p>
-  </ContentBoxTwoNeumorphism>
-
-  <GameRankingBoard />
-
-  <ContentBox as="h2" title="เกมค่ายดัง VING999 ช่วยให้เปลี่ยนเกมได้ง่ายขึ้นยังไง">
-    <p class="mb-4 text-left text-base leading-relaxed">
-      VING999 รวมเกมจากหลายค่ายไว้ในระบบเดียว สมาชิกจึงสามารถสลับจากเกมที่คุ้นมือไปหาเกมใหม่ได้โดยใช้เครดิตและบัญชีเดิม ไม่ต้องแยกยูสตามแต่ละผู้ให้บริการ
-    </p>
-
-    <p class="text-left text-base leading-relaxed">
-      สำหรับสายสล็อต จุดนี้ช่วยมากเวลาอยากเทียบฟีเจอร์ ฟรีสปิน หรือจังหวะเกมจากหลายค่าย เพราะบางวันเกมโปรดก็ไม่ใช่เกมที่อยากเล่นที่สุด รสนิยมเปลี่ยนได้รายชั่วโมง เว็บก็ควรตามอารมณ์เราให้ทัน
-    </p>
-  </ContentBox>
-
-  <ProviderGrid />
-
-  <ContentBoxSevenThreeNeumorphism as="h2" title="สล็อตแตกง่ายใน VING999 เลือกเกมยังไงให้ตรงแนวตัวเอง">
-    <Picture
-      slot="left"
-      src={imgSlotPick}
-      alt={slotPickAlt}
-      loading="lazy"
-      fetchpriority="low"
-      widths={[240, 400, 600]}
-      sizes="(max-width: 767px) calc(100vw - 64px), 380px"
-      decoding="async"
-      formats={["avif", "webp"]}
-      fallbackFormat="webp"
-      quality={80}
-      class="mx-auto h-auto w-full rounded-2xl border border-[#5a1a1e] shadow-[0_10px_30px_rgba(224,27,45,0.24)]"
-    />
-
-    <div slot="right" class="flex flex-col gap-4">
-      <p class="text-left text-base leading-relaxed">
-        คำว่า สล็อตแตกง่าย สำหรับคนเล่นจริงไม่ได้แปลว่าเข้าเกมไหนก็แตกทันที แต่หมายถึงการเลือกเกมที่มีรูปแบบ โบนัส และความผันผวนตรงกับทุนและจังหวะเล่นของตัวเองมากกว่า
-      </p>
-      <p class="text-left text-base leading-relaxed">
-        VING999 มีเกมหลายแนวให้เลือก จึงเหมาะกับทั้งสายชอบฟรีสปิน สายโบนัสฟีเจอร์ และคนที่เล่นเป็นรอบสั้น ๆ เลือกเกมให้ตรงสไตล์ดีกว่าวิ่งตามคำว่าแตกทุกเกม เพราะสุดท้ายทุนเรา ไม่ใช่ทุนคนทำป้าย
-      </p>
-    </div>
-  </ContentBoxSevenThreeNeumorphism>
-
-  <ContentBoxTwoFloatingBadge as="h2" title="ระบบฝากถอนออโต้ VING999 ช่วยให้เครดิตเข้าออกคล่องแค่ไหน">
-    <p slot="left" class="text-left text-base leading-relaxed">
-      ระบบออโต้ VING999 ช่วยให้สมาชิกทำรายการฝาก ถอน และเช็กเครดิตผ่านหน้าเมมเบอร์ได้โดยตรง ลดขั้นตอนระหว่างเติมเครดิตกับกลับเข้าเกมสล็อต
-    </p>
-    <p slot="right" class="text-left text-base leading-relaxed">
-      สำหรับสายเล่นช่วงดึก ระบบออโต้ยิ่งมีประโยชน์ เพราะไม่ต้องรอถามแอดมินทุกครั้งที่ต้องการทำรายการ เงินเข้าเมื่อไหร่ก็ควรเห็นยอดตรงนั้น เงินจะออกก็ต้องตามสถานะได้ เรื่องการเงินยิ่งเรียบ ยิ่งเล่นสบายใจ
-    </p>
-  </ContentBoxTwoFloatingBadge>
-
-  <LatestWinnersPremium />
-
-  <ContentBoxTwo as="h2" title="VING999 รองรับธนาคารและ TrueWallet แบบไหน">
-    <p slot="left" class="text-left text-base leading-relaxed">
-      VING999 รองรับช่องทางการเงินที่คนไทยใช้งานเป็นประจำ ทั้งบัญชีธนาคารและ TrueWallet ทำให้สมาชิกเลือกวิธีฝากเงินตามความสะดวกของตัวเองได้จากระบบสมาชิก
-    </p>
-    <p slot="right" class="text-left text-base leading-relaxed">
-      สายมือถือมักชอบวอเลทเพราะทำรายการได้ไว ส่วนคนที่ใช้บัญชีธนาคารเป็นหลักก็ยังใช้งานต่อได้ตามปกติ มีหลายช่องทางไว้ให้เลือกก็ดีกว่า เพราะไม่มีใครอยากเปลี่ยนวิธีใช้เงินเพียงเพื่อเข้าเล่นสล็อตหนึ่งเว็บ
-    </p>
-  </ContentBoxTwo>
-
-  <ContentBoxNeumorphism as="h2" title="ฝากขั้นต่ำ 1 บาท เหมาะกับคนเริ่มลอง VING999 ยังไง">
-    <p class="mb-4 text-left text-base leading-relaxed">
-      จากข้อมูลที่ปรากฏบนหน้า VING999 มีการสื่อถึงการเริ่มฝากขั้นต่ำระดับ 1 บาท ทำให้คนที่อยากเปิดยูสแล้วลองดูระบบหรือเลือกเกมก่อนสามารถเริ่มจากทุนเล็กได้
-    </p>
-
-    <p class="text-left text-base leading-relaxed">
-      ข้อดีคือไม่จำเป็นต้องใส่ทุนก้อนใหญ่ตั้งแต่ครั้งแรก คนเล่นใหม่สามารถดูหน้าเกม ระบบเครดิต และรูปแบบการใช้งานก่อน เงินหนึ่งบาทอาจไม่ได้พาไปไกล แต่ช่วยให้รู้ก่อนว่าเว็บเข้ามือเราหรือเปล่า
-    </p>
-  </ContentBoxNeumorphism>
-
-  <ContentBoxSevenThreeNeumorphism as="h2" title="โปรโมชั่น VING999 มีไว้เพิ่มความคุ้มแบบไหน">
-    <Picture
-      slot="left"
-      src={imgDepositPromo}
-      alt={depositPromoAlt}
-      loading="lazy"
-      fetchpriority="low"
-      widths={[240, 400, 600]}
-      sizes="(max-width: 767px) calc(100vw - 64px), 380px"
-      decoding="async"
-      formats={["avif", "webp"]}
-      fallbackFormat="webp"
-      quality={80}
-      class="mx-auto h-auto w-full rounded-2xl border border-[#5a1a1e] shadow-[0_10px_30px_rgba(224,27,45,0.24)]"
-    />
-
-    <div slot="right" class="flex flex-col gap-4">
-      <p class="text-left text-base leading-relaxed">
-        โปรโมชั่น VING999 มีไว้เสริมเครดิตหรือสิทธิ์ตามกิจกรรมของสมาชิก โดยรูปแบบโปรอาจต่างกันตามช่วงเวลา ทั้งสมาชิกใหม่และสมาชิกที่กลับมาเล่นต่อจึงควรดูสิทธิ์ที่เปิดอยู่ในหน้าโปร
-      </p>
-      <p class="text-left text-base leading-relaxed">
-        คนเล่นเป็นไม่จำเป็นต้องกวาดทุกโบนัสเข้ายูส เลือกอันที่เข้ากับทุนและแนวเล่นของตัวเองก็พอ โปรที่คุ้มคือโปรที่เราใช้ได้จริง ไม่ใช่โปรที่ตัวเลขใหญ่จนต้องอ่านเงื่อนไขเหมือนเตรียมสอบราชการ
-      </p>
-    </div>
-  </ContentBoxSevenThreeNeumorphism>
-
-  <SmoothCarousel />
-
-  <ContentBoxTwoNeumorphism as="h2" title="ทางเข้า VING999 เล่นผ่านมือถือสะดวกแค่ไหน">
-    <p slot="left" class="text-left text-base leading-relaxed">
-      VING999 รองรับการเข้าใช้งานผ่านมือถือ สมาชิกสามารถล็อกอิน เปิดเกมสล็อต เช็กเครดิต ดูโปรโมชั่น และทำรายการต่าง ๆ จากอุปกรณ์เดียวได้
-    </p>
-    <p slot="right" class="text-left text-base leading-relaxed">
-      สายที่ชอบเล่นระหว่างพักหรืออยู่นอกบ้านจึงไม่ต้องกลับไปเปิดคอมทุกครั้ง แค่จำทางเข้าหลักกับยูสของตัวเองไว้ก็พอ ปี 2026 มือถือเครื่องเดียวควรจบ ถ้ายังต้องเปิดสามอุปกรณ์ นั่นไม่ใช่ระบบ นั่นคือภารกิจ
-    </p>
-  </ContentBoxTwoNeumorphism>
-
-  <LoginRtpSection />
-
-  <ContentBoxTwoFloatingBadge as="h2" title="VING999 เหมาะกับนักเล่นสล็อตแบบไหน">
+  <ContentBoxTwoCyberCut as="h2" title="ทำไม PIGAUTO ถึงเป็นเว็บออโต้ อันดับ1 ที่มั่นใจว่าผู้เล่นจะไว้ใจ ใช้บริการ">
     <div slot="left" class="flex flex-col gap-4">
       <p class="text-left text-base leading-relaxed">
-        VING999 เหมาะกับคนที่เล่นสล็อตเป็นหลักและต้องการ เกมค่ายดังหลายแนว ระบบฝากถอนออโต้ ธนาคารและวอเลท รวมถึงโปรโมชั่นในบัญชีเดียว โดยเฉพาะสายที่เข้าเล่นผ่านมือถือเป็นประจำ
+        PIGAUTO อาจเป็นแบรนด์ใหม่ แต่หัวใจของระบบไม่ใช่มือใหม่เลย เราใช้เทคโนโลยีออโต้ตัวเดียวกับที่คาสิโนระดับอินเตอร์ใช้ ทำให้ทุกอย่างตั้งแต่สมัคร ฝาก ถอน ไปจนถึงการเข้าเล่นเกม ทำได้แบบเรียลไทม์
+        ไม่มีสะดุด
       </p>
       <p class="text-left text-base leading-relaxed">
-        ถ้าคุณชอบเปลี่ยนเกมบ่อย มีทั้งเกมประจำและเกมใหม่ที่อยากลอง และไม่อยากจำยูสหลายเว็บ VING999 จะตอบโจทย์แนวนี้ตรงที่สุด เล่นหลายค่ายได้ แต่ชีวิตไม่ต้องมีรหัสผ่านหลายชุดตามไป
+        ลดขั้นตอนที่ไม่เป็นมิตรต่อสมาชิกผู้ใช้บริการ และไม่ต้องคอยตามแอดมิน แต่ทุกขั้นตอนมีระบบชัดเจน โปร่งใส ตรวจสอบได้ และรองรับจำนวนผู้เล่นพร้อมกันได้เยอะมาก
       </p>
     </div>
 
     <FeatureHighlights slot="right" items={trustPoints} />
-  </ContentBoxTwoFloatingBadge>
+  </ContentBoxTwoCyberCut>
+
+  <ContentBoxCyberCut as="h2" title="PIGAUTO สล็อตออโต้ที่เร็วแรงที่สุด ฝากถอนตรง เฉียมคม">
+    <p class="mb-4 text-left text-base leading-relaxed">
+      จุดเด่นแรกของ PIGAUTO คือ “ความเร็วของระบบออโต้” ฝากถอนตรง เฉียมคม ที่ใครเล่นก็ต้องบอกต่อ เพราะฝากปุ๊บเข้าปั๊บ ถอนปุ๊บยอดขึ้นปั๊บทันที ไม่มีคนกลาง ไม่มีพักระบบ และไม่มีช่วงเวลาอืดให้ผู้เล่นกังวล
+      ระบบนี้สร้างมาเพื่อให้คุณเล่นได้ต่อเนื่อง ไม่ติดขัด ไม่สะดุด ไม่ต้องรีเฟรชให้เสียเวลา
+    </p>
+
+    <p class="text-left text-base leading-relaxed">
+      ความเร็วคือคาแรกเตอร์หลักของ PIGAUTO ใครที่เคยช้ำใจกับเว็บที่ปรับยอดช้า ลองที่นี่แล้วจะรู้ทันทีว่านี่คือเว็บที่ “เกิดมาเพื่อเป็นเว็บสล็อตออโต้ อันดับ 1 จริง ๆ”
+    </p>
+  </ContentBoxCyberCut>
+
+  <LatestWinnersCyber />
+
+  <ContentBoxSevenThreePremium as="h2" title="เว็บสล็อตออโต้ไม่มีขั้นต่ำ เล่นได้อย่างเป็นมิตร ปลอดภัยสูง">
+    <Picture
+      slot="left"
+      src={imgNoMinimum}
+      alt={noMinimumAlt}
+      loading="lazy"
+      fetchpriority="low"
+      widths={[240, 400, 600]}
+      sizes="(max-width: 767px) calc(100vw - 64px), 380px"
+      decoding="async"
+      formats={["avif", "webp"]}
+      fallbackFormat="webp"
+      quality={80}
+      class="mx-auto h-auto w-full rounded-2xl border border-[#7f1d1d] shadow-[0_10px_30px_rgba(239,68,68,0.24)]"
+    />
+
+    <div slot="right" class="flex flex-col gap-4">
+      <p class="text-left text-base leading-relaxed">
+        หลายเว็บบอกว่าไม่มีขั้นต่ำ แต่เวลาเล่นจริงมีเงื่อนไขมากมาย แต่ที่ PIGAUTO เราตั้งกฎแบบตรงไปตรงมา ไม่มีขั้นต่ำจริง อยากฝากเท่าไหร่ก็ฝากได้ อยากถอนเท่าไหร่ก็ถอนได้ ไม่ต้องกลัวว่าระบบจะบังคับยอด
+      </p>
+      <p class="text-left text-base leading-relaxed">
+        แนวคิดของเราคือ “ผู้เล่นทุกคนต้องมีสิทธิ์เริ่มต้นเท่ากัน” และถ้าคุณอยากลองเชิงก่อนก็ได้ ไม่ต้องอาย เพราะเว็บนี้ออกแบบเพื่อรองรับทุกงบ ทุกสไตล์การเล่น ปลอดภัยสูง กับทุกคน
+      </p>
+    </div>
+  </ContentBoxSevenThreePremium>
+
+  <ContentBoxSevenThreeCyberCut as="h2" titleright="รองรับวอเล็ท เต็มระบบ pig auto wallet ใช้ง่าย โอนไว ถูกใจผู้เล่นไทย">
+    <Picture
+      slot="left"
+      src={imgWallet}
+      alt={walletAlt}
+      loading="lazy"
+      fetchpriority="low"
+      widths={[240, 400, 600]}
+      sizes="(max-width: 767px) calc(100vw - 64px), 380px"
+      decoding="async"
+      formats={["avif", "webp"]}
+      fallbackFormat="webp"
+      quality={80}
+      class="mx-auto h-auto w-full rounded-2xl border border-[#7f1d1d] shadow-[0_10px_30px_rgba(239,68,68,0.24)]"
+    />
+
+    <div slot="right" class="flex flex-col gap-4">
+      <p class="text-left text-base leading-relaxed">
+        PIGAUTO รองรับ True Wallet เต็มระบบ แบบไม่ต้องใช้บัญชีธนาคารก็สมัครได้ เหมาะกับผู้เล่นยุคใหม่ที่ต้องการความสะดวก ปลอดภัย และไม่อยากผูกบัญชีไว้กับเว็บพนัน
+      </p>
+      <p class="text-left text-base leading-relaxed">
+        การทำรายการผ่านวอเล็ทเร็วเท่าธนาคาร ไม่มีดีเลย์ เงินเข้าไวเหมือนกันทั้งสองแบบ ระบบ pig auto wallet ช่วยให้ผู้เล่นมีทางเลือกมากขึ้น และได้รับประสบการณ์ใช้งานที่ง่ายที่สุดเท่าที่จะเป็นไปได้
+      </p>
+    </div>
+  </ContentBoxSevenThreeCyberCut>
+
+  <ContentBoxSpecial as="h2" title="รวมเกมแตกง่ายจากค่ายใหญ่ pigauto slot ลิขสิทธิ์แท้">
+    <div slot="left" class="flex flex-col gap-4">
+      <p class="text-left text-base leading-relaxed">
+        ถึงแม้ว่า PIGAUTO จะเป็นแบรนด์ใหม่ แต่ผมคัดเฉพาะเกมลิขสิทธิ์แท้จากผู้พัฒนาโดยตรง เช่น PG Soft, Joker, Pragmatic Play, JILI และค่ายใหญ่ระดับอินเตอร์
+      </p>
+      <p class="text-left text-base leading-relaxed">ทุกเกมทำงานตามค่า RTP จริง ไม่มีปรับแต้ม ไม่มีปรับเรท ไม่มีเซตยูสลับหลังบ้าน</p>
+    </div>
+
+    <div slot="right" class="flex flex-col gap-4">
+      <p class="text-left text-base leading-relaxed">จะเข้าเล่นเวลาไหนก็ยังลื่นไหล มี bonus time แทบทุกช่วงเวลา</p>
+      <p class="text-left text-base leading-relaxed">เหมาะกับทั้งมือใหม่และสายเล่นแบบจริงจัง กะฟันเงินเน้นที่ต้องการระบบมั่นคง</p>
+    </div>
+  </ContentBoxSpecial>
+
+  <ProviderGrid />
+
+  <GameRankingBoard />
+
+  <ContentBoxTwoPremium as="h2" title="PIGAUTO สมัครเข้าระบบในไม่กี่วินาที ง่ายเหมือนเปิดมือถือ">
+    <p slot="left" class="text-left text-base leading-relaxed">
+      ขั้นตอนสมัครไม่ซับซ้อน กรอกข้อมูลไม่กี่อย่างก็พร้อมเข้าเล่นทันที ทั้งหมดเป็นระบบออโต้ กดครั้งเดียวก็เข้าใช้งานได้แล้ว ไม่ต้องคุยกับแอดมิน ไม่ต้องส่งบัตร
+    </p>
+
+    <div slot="right" class="flex flex-col gap-4">
+      <p class="text-left text-base leading-relaxed">
+        ไม่มีให้กรอกข้อมูลที่มากเกินไปจนดูเหมือนจะเป็นมิจฉาชีพ เว็บนี้ตั้งใจให้ “สมัครเร็วที่สุดเท่าที่จะทำได้” เพราะเรารู้ว่าผู้เล่นอยากเข้าเล่น ไม่อยากกรอกฟอร์มสมัครงาน
+      </p>
+
+      <a
+        href="/register"
+        class="inline-flex w-fit items-center gap-2 rounded-full border border-[#f5c542]/60 bg-gradient-to-r from-[#ef4444] via-[#b91c1c] to-[#7f1d1d] px-7 py-3 text-sm font-black tracking-widest text-[#fff5e6] uppercase shadow-[0_10px_30px_rgba(239,68,68,0.28)] transition-transform duration-300 hover:scale-105">
+        <span aria-hidden="true">🐷</span> สมัครสมาชิก PIGAUTO
+      </a>
+    </div>
+  </ContentBoxTwoPremium>
+
+  <LoginRtpSection />
+
+  <SmoothCarousel />
 
   <ReviewCardSumo2 />
 
-  <Faq3 title="คำถามที่พบบ่อยเกี่ยวกับ VING999" faqs={faqs} />
+  <Faq2 title="คำถามที่พบบ่อยเกี่ยวกับ PIGAUTO" faqs={faqs} />
 
   <Navfoot />
 </MainLayout>

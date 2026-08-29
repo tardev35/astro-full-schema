@@ -33,9 +33,9 @@ const initialRows = Array.from({ length: 5 }, (_, i) => ({
     <div class="absolute top-0 left-0 h-[1px] w-full bg-gradient-to-r from-transparent via-[#ef4444] to-transparent"></div>
     <div class="absolute bottom-0 left-0 h-[1px] w-full bg-gradient-to-r from-transparent via-[#f5c542] to-transparent"></div>
 
-    <div class="relative z-10 mb-8 flex items-center justify-between border-b border-[#6b2020] pb-4">
+    <div class="relative z-10 mb-8 flex items-center justify-between border-b border-[#7f1d1d] pb-4">
       <p class="text-xl font-black tracking-[0.2em] text-[#f5c542]">/// PIGAUTO_AUTO_WALLET</p>
-      <span class="animate-pulse border border-[#f5c542]/60 px-2 py-1 text-xs font-bold tracking-widest text-[#f5c542]">24 ชม.</span>
+      <span class="animate-pulse border border-[#fbbccc]/60 px-2 py-1 text-xs font-bold tracking-widest text-[#fbbccc]">24 ชม.</span>
     </div>
 
     <div
@@ -51,13 +51,16 @@ const initialRows = Array.from({ length: 5 }, (_, i) => ({
       {
         initialRows.map((row) => (
           <div data-winner-row class="winner-row origin-left transform transition-all duration-500 ease-out">
-            <div class="flex items-center justify-between border-l-2 border-[#ef4444] bg-gradient-to-r from-[#33090a] to-transparent p-3 backdrop-blur-sm transition-colors hover:bg-[#4a1010]">
+            <div class="flex items-center justify-between border-l-2 border-[#ef4444] bg-gradient-to-r from-[#3a0d0d] to-transparent p-3 backdrop-blur-sm transition-colors hover:bg-[#5c1414]">
               <div class="flex items-center gap-4">
-                <div data-winner-bank class={`flex h-8 w-8 items-center justify-center border border-[#6b2020] ${row.bank.color}`}>
+                <div data-winner-bank class={`flex h-8 w-8 items-center justify-center border border-[#7f1d1d] ${row.bank.color}`}>
                   <img data-winner-icon src={row.bank.icon} alt="" width="20" height="20" loading="lazy" decoding="async" class="h-5 w-5 object-contain" />
                 </div>
                 <div class="font-mono text-sm text-[#f7e2d6]">
-                  USR_ID: <span data-winner-user class="font-bold text-[#f5c542]">{row.user}</span>
+                  USR_ID:{" "}
+                  <span data-winner-user class="font-bold text-[#f5c542]">
+                    {row.user}
+                  </span>
                 </div>
               </div>
               <div class="flex items-center gap-6">
@@ -69,7 +72,7 @@ const initialRows = Array.from({ length: 5 }, (_, i) => ({
                   {row.pending ? "[กำลังทำรายการ]" : "[ทำรายการสำเร็จ]"}
                 </div>
                 <div class="font-mono text-xl font-black text-[#f5c542]">
-                  <span data-winner-amount>{row.amount}</span> <span class="text-xs text-[#cfa79c]">THB</span>
+                  <span data-winner-amount>{row.amount}</span> <span class="text-xs text-[#d9b7ab]">THB</span>
                 </div>
               </div>
             </div>
@@ -78,7 +81,7 @@ const initialRows = Array.from({ length: 5 }, (_, i) => ({
       }
     </div>
 
-    <p class="relative z-10 mt-6 text-left text-[11px] leading-relaxed tracking-wide text-[#cfa79c]">
+    <p class="relative z-10 mt-6 text-left text-[11px] leading-relaxed tracking-wide text-[#d9b7ab]">
       รายการที่แสดงเป็นตัวอย่างการฝากถอนออโต้ของสมาชิก PIGAUTO ทั้งผ่านวอลเล็ทและบัญชีธนาคาร ซึ่งส่งรายการเองได้จากหน้าสมาชิกตลอด 24 ชั่วโมง สถานะจริงของแต่ละรายการให้ยึดตามหน้าสมาชิกของตัวเอง
     </p>
 

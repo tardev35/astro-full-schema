@@ -2,15 +2,15 @@
 import MainLayout from "../layouts/MainLayout.astro";
 import ContentBox from "../components/ContentBox.astro";
 import Navfoot from "../components/Navfoot.astro";
-import Announcement from "../components/Announcement5.astro";
+import Announcement from "../components/AnnouncementPremium.astro";
 import CtaRedirect from "../components/CtaRedirect.astro";
 import { pageGraph } from "../lib/schema";
 
 const pageDescription =
-  "สมัครสมาชิก VING999 เปิดยูสใหม่ผ่านมือถือจบในไม่กี่นาที กดปุ่มเดียวไปยังหน้าสมัคร แล้วใช้ยูสเดียวเล่นสล็อตออนไลน์เว็บตรงหลายค่าย ฝากขั้นต่ำ 1 บาท ฝากถอนออโต้";
+  "สมัครสมาชิก PIGAUTO เปิดยูสใหม่ผ่านมือถือเสร็จในไม่กี่วินาที กดปุ่มเดียวไปยังหน้าสมัคร ใช้ยูสเดียวเล่นสล็อตลิขสิทธิ์แท้ทุกค่าย ฝากถอนออโต้ รองรับวอเล็ท";
 
 const graph = pageGraph(Astro, {
-  name: "สมัครสมาชิก VING999 สล็อตออนไลน์เว็บตรง ฝากขั้นต่ำ 1 บาท",
+  name: "สมัครสมาชิก PIGAUTO เว็บสล็อตออโต้ไม่มีขั้นต่ำ รองรับวอเล็ท",
   description: pageDescription,
   breadcrumb: [
     { name: "หน้าแรก", path: "/" },
@@ -21,20 +21,20 @@ const graph = pageGraph(Astro, {
 const targetUrl = "https://yoalink.com/22hs";
 ---
 
-<MainLayout title="สมัครสมาชิก VING999 | ปุ่มเปิดยูสใหม่ผ่านมือถือ สล็อตเว็บตรง" description={pageDescription}>
+<MainLayout title="สมัครสมาชิก PIGAUTO | ปุ่มเปิดยูสใหม่ผ่านมือถือ สล็อตออโต้" description={pageDescription}>
   <script type="application/ld+json" set:html={graph} />
 
   <Announcement />
 
-  <ContentBox title="สมัครสมาชิก VING999" as="h1">
+  <ContentBox title="สมัครสมาชิก PIGAUTO" as="h1">
     <div class="flex justify-center py-8">
       <a
         href={targetUrl}
         rel="nofollow sponsored"
         data-cta-redirect
-        aria-label="สมัครสมาชิก VING999"
-        class="group relative mx-auto flex w-full max-w-[320px] items-center justify-center gap-3 overflow-hidden rounded-xl border border-[#7d8b95]/60 bg-gradient-to-b from-[#f2f5f7] to-[#bdcad2] px-6 py-4 text-xl font-bold tracking-wide text-[#0a0506] shadow-[0_10px_30px_rgba(189,202,210,0.20)] transition-all duration-300 hover:scale-105 hover:border-[#e01b2d]/70 hover:shadow-[0_15px_40px_rgba(224,27,45,0.28)]">
-        สมัครสมาชิก VING999
+        aria-label="สมัครสมาชิก PIGAUTO"
+        class="group relative mx-auto flex w-full max-w-[320px] items-center justify-center gap-3 overflow-hidden rounded-xl border border-[#a3610c]/60 bg-gradient-to-b from-[#ffe9a8] to-[#f5c542] px-6 py-4 text-xl font-bold tracking-wide text-[#1a0303] shadow-[0_10px_30px_rgba(245,197,66,0.20)] transition-all duration-300 hover:scale-105 hover:border-[#fbbccc]/70 hover:shadow-[0_15px_40px_rgba(251,188,204,0.28)]">
+        สมัครสมาชิก PIGAUTO
       </a>
     </div>
   </ContentBox>

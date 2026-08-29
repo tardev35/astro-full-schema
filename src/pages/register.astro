@@ -2,15 +2,17 @@
 import MainLayout from "../layouts/MainLayout.astro";
 import ContentBox from "../components/ContentBox.astro";
 import Navfoot from "../components/Navfoot.astro";
-import Announcement from "../components/AnnouncementPremium.astro";
+import Announcement from "../components/Announcement4.astro";
 import CtaRedirect from "../components/CtaRedirect.astro";
 import { pageGraph } from "../lib/schema";
 
+const pageTitle = "สมัครสมาชิก OSIRIS168 | ปุ่มเปิดยูสใหม่ผ่านมือถือ สล็อตระบบใหม่";
+
 const pageDescription =
-  "สมัครสมาชิก PIGAUTO เปิดยูสใหม่ผ่านมือถือเสร็จในไม่กี่วินาที กดปุ่มเดียวไปยังหน้าสมัคร ใช้ยูสเดียวเล่นสล็อตลิขสิทธิ์แท้ทุกค่าย ฝากถอนออโต้ รองรับวอเล็ท";
+  "สมัครสมาชิก OSIRIS168 เปิดยูสใหม่ผ่านมือถือเสร็จในไม่กี่นาที กดปุ่มเดียวไปยังหน้าสมัคร ใช้ยูสเดียวเล่นได้ทุกค่ายเกม พร้อมรับโปรสมาชิกใหม่ของ osiris 168";
 
 const graph = pageGraph(Astro, {
-  name: "สมัครสมาชิก PIGAUTO เว็บสล็อตออโต้ไม่มีขั้นต่ำ รองรับวอเล็ท",
+  name: pageTitle,
   description: pageDescription,
   breadcrumb: [
     { name: "หน้าแรก", path: "/" },
@@ -21,20 +23,20 @@ const graph = pageGraph(Astro, {
 const targetUrl = "https://yoalink.com/22hs";
 ---
 
-<MainLayout title="สมัครสมาชิก PIGAUTO | ปุ่มเปิดยูสใหม่ผ่านมือถือ สล็อตออโต้" description={pageDescription}>
+<MainLayout title={pageTitle} description={pageDescription}>
   <script type="application/ld+json" set:html={graph} />
 
   <Announcement />
 
-  <ContentBox title="สมัครสมาชิก PIGAUTO" as="h1">
+  <ContentBox title="สมัครสมาชิก OSIRIS168" as="h1">
     <div class="flex justify-center py-8">
       <a
         href={targetUrl}
         rel="nofollow sponsored"
         data-cta-redirect
-        aria-label="สมัครสมาชิก PIGAUTO"
-        class="group relative mx-auto flex w-full max-w-[320px] items-center justify-center gap-3 overflow-hidden rounded-xl border border-[#a3610c]/60 bg-gradient-to-b from-[#ffe9a8] to-[#f5c542] px-6 py-4 text-xl font-bold tracking-wide text-[#1a0303] shadow-[0_10px_30px_rgba(245,197,66,0.20)] transition-all duration-300 hover:scale-105 hover:border-[#fbbccc]/70 hover:shadow-[0_15px_40px_rgba(251,188,204,0.28)]">
-        สมัครสมาชิก PIGAUTO
+        aria-label="สมัครสมาชิก OSIRIS168"
+        class="group relative mx-auto flex w-full max-w-[320px] items-center justify-center gap-3 overflow-hidden rounded-xl border border-[#8a6314]/60 bg-gradient-to-b from-[#ffdd8a] to-[#e8b52c] px-6 py-4 text-xl font-bold tracking-wide text-[#0a1a15] shadow-[0_10px_30px_rgba(232,181,44,0.20)] transition-all duration-300 hover:scale-105 hover:border-[#ffdd8a]/70 hover:shadow-[0_15px_40px_rgba(232,181,44,0.28)]">
+        สมัครสมาชิก OSIRIS168
       </a>
     </div>
   </ContentBox>

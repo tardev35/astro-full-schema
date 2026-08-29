@@ -25,19 +25,19 @@ const initialRows = Array.from({ length: 4 }, (_, i) => ({
   pending: brandFlag(Astro.site, `card-pending-${i}`),
 }));
 
-const PENDING_CLASS = "text-[#ffe999] bg-[#062a4f] border border-[#21d4f2]/60 animate-pulse";
-const DONE_CLASS = "text-[#04182f] bg-gradient-to-r from-[#ffe999] via-[#fdb524] to-[#b06f00] border border-[#fdb524]/40 font-black shadow-md";
+const PENDING_CLASS = "text-[#ffdd8a] bg-[#0f241d] border border-[#12c48f]/60 animate-pulse";
+const DONE_CLASS = "text-[#03251c] bg-gradient-to-r from-[#ffdd8a] via-[#e8b52c] to-[#8a6314] border border-[#e8b52c]/40 font-black shadow-md";
 ---
 
 <div class="mx-auto w-full max-w-[1300px] p-4 font-sans">
   <section
-    aria-label="รายการถอนเงินล่าสุดของสมาชิก ANDAMAN168"
-    class="relative overflow-hidden rounded-[30px] border-2 border-[#21d4f2]/25 bg-[#04182f]/92 px-4 py-8 shadow-[0_10px_30px_rgba(33,212,242,0.20)] backdrop-blur-md md:p-10">
-    <div aria-hidden="true" class="pointer-events-none absolute -top-10 left-1/2 h-32 w-64 -translate-x-1/2 rounded-full bg-[#21d4f2]/35 blur-[50px]"></div>
+    aria-label="รายการถอนเงินล่าสุดของสมาชิก OSIRIS168"
+    class="relative overflow-hidden rounded-[30px] border-2 border-[#12c48f]/25 bg-[#0a1a15]/92 px-4 py-8 shadow-[0_10px_30px_rgba(18,196,143,0.20)] backdrop-blur-md md:p-10">
+    <div aria-hidden="true" class="pointer-events-none absolute -top-10 left-1/2 h-32 w-64 -translate-x-1/2 rounded-full bg-[#12c48f]/35 blur-[50px]"></div>
 
     <div class="relative z-10 mb-8 flex items-center justify-center gap-3">
       <span aria-hidden="true" class="text-2xl">🏆</span>
-      <p class="bg-gradient-to-r from-[#ffe999] via-[#fdb524] to-[#7fe6ff] bg-clip-text text-xl font-black tracking-wide text-transparent md:text-3xl">รายการถอนเงินล่าสุดของสมาชิก ANDAMAN168</p>
+      <p class="bg-gradient-to-r from-[#ffdd8a] via-[#e8b52c] to-[#4ff0bb] bg-clip-text text-xl font-black tracking-wide text-transparent md:text-3xl">รายการถอนเงินล่าสุดของสมาชิก OSIRIS168</p>
       <span aria-hidden="true" class="text-2xl">🏆</span>
     </div>
 
@@ -54,7 +54,7 @@ const DONE_CLASS = "text-[#04182f] bg-gradient-to-r from-[#ffe999] via-[#fdb524]
       {
         initialRows.map((row) => (
           <div data-winner-row class="winner-card transition-all duration-500 ease-out">
-            <div class="flex flex-col rounded-[20px] border border-[#0a3a68] bg-[#031324]/95 p-5 shadow-sm transition-all hover:border-[#fdb524]/50 hover:bg-[#062a4f]/95">
+            <div class="flex flex-col rounded-[20px] border border-[#064c39] bg-[#050d0b]/95 p-5 shadow-sm transition-all hover:border-[#e8b52c]/50 hover:bg-[#0f241d]/95">
               <div class="mb-4 flex items-start justify-between">
                 <div data-winner-bank class={`flex h-10 w-10 items-center justify-center rounded-full border border-white/10 shadow-inner ${row.bank.color}`}>
                   <img data-winner-icon src={row.bank.icon} alt="" width="24" height="24" loading="lazy" decoding="async" class="h-6 w-6 object-contain" />
@@ -70,14 +70,14 @@ const DONE_CLASS = "text-[#04182f] bg-gradient-to-r from-[#ffe999] via-[#fdb524]
                 </div>
               </div>
               <div>
-                <div class="text-sm text-[#dbeefb]/70">
+                <div class="text-sm text-[#b9d6c9]">
                   ยูสเซอร์:{" "}
-                  <span data-winner-user class="font-bold text-[#dbeefb]">
+                  <span data-winner-user class="font-bold text-[#dfeee6]">
                     {row.user}
                   </span>
                 </div>
-                <div class="mt-1 text-2xl font-black text-[#fdb524]">
-                  <span data-winner-amount>{row.amount}</span> <span class="text-xs text-[#dbeefb]/70">THB</span>
+                <div class="mt-1 text-2xl font-black text-[#e8b52c]">
+                  <span data-winner-amount>{row.amount}</span> <span class="text-xs text-[#b9d6c9]">THB</span>
                 </div>
               </div>
             </div>
@@ -86,8 +86,8 @@ const DONE_CLASS = "text-[#04182f] bg-gradient-to-r from-[#ffe999] via-[#fdb524]
       }
     </div>
 
-    <p class="relative z-10 mt-6 text-center text-[11px] tracking-wide text-[#dbeefb]/70">
-      ระบบออโต้ของ ANDAMAN168 รองรับการฝากถอนและเช็กยอดได้ตลอด 24 ชั่วโมง ตรวจสถานะและประวัติรายการได้จากหน้าสมาชิก หากรายการยังประมวลผลอยู่ไม่ควรกดซ้ำทันที
+    <p class="relative z-10 mt-6 text-center text-[11px] tracking-wide text-[#b9d6c9]">
+      ระบบออโต้ของ OSIRIS168 เชื่อมการฝากถอนเข้ากับหน้าเมมเบอร์ ส่งรายการและเช็กสถานะได้จากจุดเดียว หากรายการยังประมวลผลอยู่ไม่ควรกดซ้ำทันที รอให้ระบบอัปเดตก่อนแล้วค่อยกลับไปเล่นต่อ
     </p>
 
     <script type="application/json" data-winners-banks set:html={JSON.stringify(bankPool)} />

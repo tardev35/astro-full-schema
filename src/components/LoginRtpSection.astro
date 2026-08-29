@@ -2,70 +2,70 @@
 import ContentBoxTwo from "./ContentBoxTwo.astro";
 
 const steps = [
-  { icon: "📝", name: "สมัครในไม่กี่วินาที", detail: "กรอกข้อมูลไม่กี่อย่างก็จบ ไม่ต้องคุยกับแอดมิน ไม่ต้องส่งบัตร กดครั้งเดียวเข้าใช้งานได้เลย", tag: "ขั้นที่ 1" },
-  { icon: "🔑", name: "เข้าสู่ระบบด้วยยูสเดิม", detail: "ใช้เบอร์โทรศัพท์หรือยูสเซอร์เนมที่สมัครไว้ เข้าได้ทั้งจากมือถือและคอม", tag: "ขั้นที่ 2" },
-  { icon: "👛", name: "ฝากผ่านวอเล็ทหรือธนาคาร", detail: "รองรับ True Wallet เต็มระบบ ไม่ต้องผูกบัญชีธนาคารก็ทำรายการได้ ไม่มีขั้นต่ำบังคับ", tag: "ขั้นที่ 3" },
+  { icon: "📝", name: "สมัครจากมือถือได้ตั้งแต่ต้น", detail: "เปิดบัญชีและยืนยันข้อมูลจบได้ในเครื่องเดียว ไม่ต้องสลับไปใช้คอมระหว่างทาง", tag: "ขั้นที่ 1" },
+  { icon: "🔑", name: "ล็อกอินเข้าหน้าเมมเบอร์", detail: "ใช้เบอร์โทรศัพท์หรือยูสเซอร์เนมที่สมัครไว้ เข้าได้ทั้งจากมือถือ แท็บเล็ต และคอม", tag: "ขั้นที่ 2" },
+  { icon: "⚡", name: "ฝากผ่านระบบออโต้", detail: "ส่งรายการฝากจากหน้าเมมเบอร์แล้วดูสถานะต่อได้จากจุดเดิม ไม่ต้องเปิดหลายหน้าไปมา", tag: "ขั้นที่ 3" },
   { icon: "🎰", name: "เลือกค่ายเกมลิขสิทธิ์แท้", detail: "PG Soft, Joker, Pragmatic Play และ JILI อยู่หลังยูสเดียวกัน สลับค่ายด้วยเครดิตชุดเดิม", tag: "ขั้นที่ 4" },
-  { icon: "⚡", name: "ถอนออโต้และตามสถานะเอง", detail: "ยืนยันถอนแล้วยอดวิ่งเข้าบัญชีหรือวอเล็ทที่ผูกไว้ ไม่มีคนกลาง ตามสถานะได้จากหน้าเดิม", tag: "ขั้นที่ 5" },
+  { icon: "💳", name: "ถอนออโต้แล้วเช็กเครดิต", detail: "ยืนยันถอนแล้วตามสถานะรายการได้จากหน้าเดิม ก่อนกลับเข้าเกมที่เล่นค้างไว้", tag: "ขั้นที่ 5" },
 ];
 
-const chips = ["ไม่มีขั้นต่ำ", "ฝากถอนตรง", "ระบบออโต้เต็มระบบ", "pig auto wallet", "PG Soft", "Joker", "Pragmatic Play", "JILI"];
+const chips = ["รวมหลายค่าย", "ฝากถอนออโต้", "หน้าเมมเบอร์", "เล่นผ่านมือถือ", "PG Soft", "Joker", "Pragmatic Play", "JILI"];
 ---
 
-<ContentBoxTwo titleleft="เข้าสู่ระบบ PIGAUTO" titleright="ลำดับการใช้งานบนหน้าสมาชิก" label="เข้าสู่ระบบ PIGAUTO และลำดับการใช้งานบนหน้าสมาชิก">
+<ContentBoxTwo titleleft="เข้าสู่ระบบ OSIRIS168" titleright="ลำดับการใช้งานบนหน้าเมมเบอร์" label="เข้าสู่ระบบ OSIRIS168 และลำดับการใช้งานบนหน้าเมมเบอร์">
   <div slot="left" class="flex h-full flex-col gap-4">
-    <div class="relative overflow-hidden rounded-2xl border border-[#7f1d1d] bg-[#280707] p-6 shadow-[0_10px_30px_rgba(239,68,68,0.18)]">
-      <div aria-hidden="true" class="pointer-events-none absolute -top-10 -right-10 h-32 w-32 rounded-full bg-[#ef4444]/20 blur-[50px]"></div>
+    <div class="relative overflow-hidden rounded-2xl border border-[#064c39] bg-[#0f241d] p-6 shadow-[0_10px_30px_rgba(18,196,143,0.18)]">
+      <div aria-hidden="true" class="pointer-events-none absolute -top-10 -right-10 h-32 w-32 rounded-full bg-[#12c48f]/20 blur-[50px]"></div>
 
       <div class="relative z-10 mb-5 flex items-center gap-3">
         <span
           aria-hidden="true"
-          class="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl border border-[#7f1d1d] bg-gradient-to-br from-[#f87171] via-[#ef4444] to-[#7f1d1d] text-xl shadow-inner">
+          class="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl border border-[#064c39] bg-gradient-to-br from-[#4ff0bb] via-[#12c48f] to-[#064c39] text-xl shadow-inner">
           🎰
         </span>
         <div class="flex flex-col">
-          <p class="text-base font-black text-[#fff5e6]">เข้าสู่ระบบแล้วเลือกค่ายเกมลิขสิทธิ์แท้ที่อยากเล่นต่อได้ทันที</p>
-          <span class="text-[11px] text-[#b08b80]">
-            ยูสเดียวใช้เข้าได้ทุกค่าย ทั้ง PG Soft, Joker, Pragmatic Play และ JILI ส่งรายการฝากถอนออโต้ เช็กเครดิต และย้อนดูประวัติรายการของ PIGAUTO ได้จากหน้าเดียว
+          <p class="text-base font-black text-[#f8ecc9]">ล็อกอินแล้วเลือกค่ายเกมลิขสิทธิ์แท้ที่อยากเล่นต่อได้ทันที</p>
+          <span class="text-[11px] text-[#b9d6c9]">
+            ยูสเดียวใช้เข้าได้ทุกค่าย ทั้ง PG Soft, Joker, Pragmatic Play และ JILI ส่งรายการฝากถอนออโต้ เช็กเครดิต และย้อนดูประวัติรายการของ OSIRIS168 ได้จากหน้าเมมเบอร์จุดเดียว
           </span>
         </div>
       </div>
 
       <div class="relative z-10 flex flex-col gap-3.5">
         <div class="relative">
-          <span aria-hidden="true" class="absolute top-3.5 left-4 text-[#f87171]">👤</span>
+          <span aria-hidden="true" class="absolute top-3.5 left-4 text-[#4ff0bb]">👤</span>
           <input
             type="text"
             placeholder="เบอร์โทรศัพท์ / ยูสเซอร์เนม"
-            class="w-full rounded-xl border border-[#7f1d1d] bg-[#1a0303] py-3 pr-4 pl-12 text-[#f7e2d6] transition-all outline-none placeholder:text-[#b08b80] focus:border-[#ef4444] focus:ring-1 focus:ring-[#ef4444]/40"
+            class="w-full rounded-xl border border-[#064c39] bg-[#050d0b] py-3 pr-4 pl-12 text-[#dfeee6] transition-all outline-none placeholder:text-[#b9d6c9] focus:border-[#12c48f] focus:ring-1 focus:ring-[#12c48f]/40"
           />
         </div>
         <div class="relative">
-          <span aria-hidden="true" class="absolute top-3.5 left-4 text-[#f87171]">🔑</span>
+          <span aria-hidden="true" class="absolute top-3.5 left-4 text-[#4ff0bb]">🔑</span>
           <input
             type="password"
             placeholder="รหัส PIN 4 หลัก"
-            class="w-full rounded-xl border border-[#7f1d1d] bg-[#1a0303] py-3 pr-4 pl-12 text-[#f7e2d6] transition-all outline-none placeholder:text-[#b08b80] focus:border-[#ef4444] focus:ring-1 focus:ring-[#ef4444]/40"
+            class="w-full rounded-xl border border-[#064c39] bg-[#050d0b] py-3 pr-4 pl-12 text-[#dfeee6] transition-all outline-none placeholder:text-[#b9d6c9] focus:border-[#12c48f] focus:ring-1 focus:ring-[#12c48f]/40"
           />
         </div>
 
         <div class="flex items-center justify-between px-1 text-xs">
-          <label class="flex items-center gap-2 text-[#b08b80]">
-            <input type="checkbox" class="h-3.5 w-3.5 rounded border-[#7f1d1d] bg-[#1a0303] accent-[#ef4444]" />
+          <label class="flex items-center gap-2 text-[#b9d6c9]">
+            <input type="checkbox" class="h-3.5 w-3.5 rounded border-[#064c39] bg-[#050d0b] accent-[#12c48f]" />
             จดจำฉันไว้
           </label>
-          <a href="/login" class="text-[#b08b80] transition-colors hover:text-[#f87171]">ลืมรหัส PIN?</a>
+          <a href="/login" class="text-[#b9d6c9] transition-colors hover:text-[#4ff0bb]">ลืมรหัส PIN?</a>
         </div>
 
         <button
-          class="mt-1 w-full rounded-xl border border-[#f87171]/50 bg-gradient-to-r from-[#f87171] via-[#ef4444] to-[#7f1d1d] p-3.5 font-black text-[#fff5e6] shadow-[0_10px_30px_rgba(239,68,68,0.28)] transition-all hover:scale-[1.02] hover:shadow-[0_15px_40px_rgba(248,113,113,0.35)]">
+          class="mt-1 w-full rounded-xl border border-[#4ff0bb]/50 bg-gradient-to-r from-[#4ff0bb] via-[#12c48f] to-[#0a8f68] p-3.5 font-black text-[#03251c] shadow-[0_10px_30px_rgba(18,196,143,0.28)] transition-all hover:scale-[1.02] hover:shadow-[0_15px_40px_rgba(79,240,187,0.35)]">
           เข้าสู่ระบบ
         </button>
 
-        <div class="flex items-center gap-3 py-1 text-[11px] text-[#b08b80]">
-          <span class="h-px flex-1 bg-[#7f1d1d]"></span>
+        <div class="flex items-center gap-3 py-1 text-[11px] text-[#b9d6c9]">
+          <span class="h-px flex-1 bg-[#064c39]"></span>
           หรือ
-          <span class="h-px flex-1 bg-[#7f1d1d]"></span>
+          <span class="h-px flex-1 bg-[#064c39]"></span>
         </div>
 
         <a
@@ -76,29 +76,29 @@ const chips = ["ไม่มีขั้นต่ำ", "ฝากถอนตร
 
         <div class="mt-1 flex items-center justify-between px-1">
           <div class="flex gap-2">
-            <span class="rounded-full border border-[#ef4444]/55 bg-[#3a0d0d] px-2.5 py-1 text-[10px] font-bold text-[#f87171]"><span aria-hidden="true">🔒</span> เข้ารหัสข้อมูล</span>
-            <span class="rounded-full border border-[#fbbccc]/55 bg-[#3a0d0d] px-2.5 py-1 text-[10px] font-bold text-[#fbbccc]"><span aria-hidden="true">🕐</span> ใช้งานได้ตลอด 24 ชม.</span>
+            <span class="rounded-full border border-[#12c48f]/55 bg-[#123128] px-2.5 py-1 text-[10px] font-bold text-[#4ff0bb]"><span aria-hidden="true">🔒</span> เข้ารหัสข้อมูล</span>
+            <span class="rounded-full border border-[#e8b52c]/55 bg-[#123128] px-2.5 py-1 text-[10px] font-bold text-[#ffdd8a]"><span aria-hidden="true">🕐</span> ใช้งานได้ตลอด 24 ชม.</span>
           </div>
-          <a href="/register" class="text-xs font-bold text-[#b08b80] transition-colors hover:text-[#f87171]">สมัครสมาชิกใหม่</a>
+          <a href="/register" class="text-xs font-bold text-[#b9d6c9] transition-colors hover:text-[#4ff0bb]">สมัครสมาชิกใหม่</a>
         </div>
       </div>
     </div>
   </div>
 
   <div slot="right" class="h-full">
-    <div class="flex h-full flex-col rounded-2xl border border-[#7f1d1d] bg-[#280707] p-5 shadow-[0_10px_30px_rgba(239,68,68,0.18)]">
+    <div class="flex h-full flex-col rounded-2xl border border-[#064c39] bg-[#0f241d] p-5 shadow-[0_10px_30px_rgba(18,196,143,0.18)]">
       <div class="mb-5 flex items-center justify-between gap-3">
         <div>
-          <span class="text-xs font-bold tracking-wide text-[#b08b80]">ลำดับการใช้งานที่ PIGAUTO วางไว้ ตั้งแต่สมัครจนถอนออก ทุกขั้นเป็นระบบออโต้</span>
-          <div class="bg-gradient-to-r from-[#f87171] via-[#fff5e6] to-[#f5c542] bg-clip-text text-2xl font-black text-transparent sm:text-3xl">สมัคร • ฝากออโต้ • เล่น • ถอนออโต้</div>
+          <span class="text-xs font-bold tracking-wide text-[#b9d6c9]">ลำดับการใช้งานที่ OSIRIS168 วางไว้ ตั้งแต่สมัครจนถอนออก ทุกขั้นอยู่ในระบบออโต้เดียวกัน</span>
+          <div class="bg-gradient-to-r from-[#4ff0bb] via-[#f8ecc9] to-[#e8b52c] bg-clip-text text-2xl font-black text-transparent sm:text-3xl">สมัคร • ฝากออโต้ • เล่น • ถอนออโต้</div>
         </div>
-        <span class="flex items-center gap-1.5 self-start rounded-full border border-green-500/40 bg-green-900/20 px-2.5 py-1">
-          <span class="h-1.5 w-1.5 animate-pulse rounded-full bg-green-400 shadow-[0_0_8px_rgba(74,222,128,0.7)]"></span>
-          <span class="text-[10px] font-bold tracking-widest text-green-400 uppercase">Live</span>
+        <span class="flex items-center gap-1.5 self-start rounded-full border border-[#12c48f]/45 bg-[#03251c] px-2.5 py-1">
+          <span class="h-1.5 w-1.5 animate-pulse rounded-full bg-[#4ff0bb] shadow-[0_0_8px_rgba(79,240,187,0.7)]"></span>
+          <span class="text-[10px] font-bold tracking-widest text-[#4ff0bb] uppercase">Live</span>
         </span>
       </div>
 
-      <div class="mb-2 flex items-center justify-between text-[11px] font-bold tracking-widest text-[#b08b80] uppercase">
+      <div class="mb-2 flex items-center justify-between text-[11px] font-bold tracking-widest text-[#b9d6c9] uppercase">
         <span>ขั้นตอนการใช้งาน</span>
         <span>ลำดับ</span>
       </div>
@@ -106,28 +106,28 @@ const chips = ["ไม่มีขั้นต่ำ", "ฝากถอนตร
       <div class="flex flex-1 flex-col gap-2.5">
         {
           steps.map((s) => (
-            <div class="rounded-xl border border-[#7f1d1d] bg-[#1a0303] px-3.5 py-2.5 transition-colors hover:border-[#ef4444]/60 hover:bg-[#3a0d0d]">
+            <div class="rounded-xl border border-[#064c39] bg-[#050d0b] px-3.5 py-2.5 transition-colors hover:border-[#12c48f]/60 hover:bg-[#123128]">
               <div class="flex items-center justify-between gap-2 text-sm">
-                <span class="flex min-w-0 items-center gap-2 font-bold text-[#f7e2d6]">
+                <span class="flex min-w-0 items-center gap-2 font-bold text-[#dfeee6]">
                   <span aria-hidden="true" class="w-5 shrink-0 text-center">
                     {s.icon}
                   </span>{" "}
                   <span class="truncate">{s.name}</span>
                 </span>
-                <span class="shrink-0 rounded-full border border-[#ef4444]/45 bg-[#3a0d0d] px-2.5 py-0.5 text-[10px] font-bold text-[#fff5e6]">{s.tag}</span>
+                <span class="shrink-0 rounded-full border border-[#e8b52c]/45 bg-[#123128] px-2.5 py-0.5 text-[10px] font-bold text-[#ffdd8a]">{s.tag}</span>
               </div>
-              <div class="mt-1.5 text-[11px] tracking-wide text-[#b08b80]">{s.detail}</div>
+              <div class="mt-1.5 text-[11px] tracking-wide text-[#b9d6c9]">{s.detail}</div>
             </div>
           ))
         }
       </div>
 
       <div class="mt-4 flex flex-wrap items-center justify-center gap-2">
-        {chips.map((c) => <span class="rounded-full border border-[#7f1d1d] bg-[#1a0303] px-3 py-1 text-[10px] font-bold text-[#d9b7ab]">{c}</span>)}
+        {chips.map((c) => <span class="rounded-full border border-[#064c39] bg-[#050d0b] px-3 py-1 text-[10px] font-bold text-[#b9d6c9]">{c}</span>)}
       </div>
 
-      <div class="mt-3 text-center text-[10px] tracking-wide text-[#b08b80]">
-        ลำดับในตารางสรุปจากที่หน้าเว็บแสดงไว้ รายละเอียดของค่ายเกม เงื่อนไขเครดิต และช่องทางฝากถอนที่เปิดอยู่จริงให้ยึดตามหน้าสมาชิกของ PIGAUTO ก่อนทำรายการทุกครั้ง อย่าบอกรหัส PIN หรือ OTP กับใคร
+      <div class="mt-3 text-center text-[10px] tracking-wide text-[#b9d6c9]">
+        ลำดับในตารางสรุปจากที่หน้าเว็บแสดงไว้ รายละเอียดของค่ายเกม เงื่อนไขเครดิต และช่องทางฝากถอนที่เปิดอยู่จริงให้ยึดตามหน้าเมมเบอร์ของ OSIRIS168 ก่อนทำรายการทุกครั้ง อย่าบอกรหัส PIN หรือ OTP กับใคร
         หากติดขัดตรงไหนทักไลน์ทีมงานได้ตลอด 24 ชั่วโมง
       </div>
     </div>

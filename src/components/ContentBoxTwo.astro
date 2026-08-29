@@ -12,46 +12,49 @@ const sectionLabel = label ?? title ?? titleleft ?? titleright ?? "ข้อม�
 ---
 
 <section aria-label={sectionLabel} class="relative z-10 mx-auto mb-10 w-full max-w-[1400px] px-4 font-sans">
-  {
-    title && (
-      <header class="mb-6 flex items-center gap-4 border-b border-[#7f1d1d] pb-4">
-        <span aria-hidden="true" class="h-8 w-1.5 shrink-0 rounded-full bg-gradient-to-b from-[#ef4444] to-[#f5c542] shadow-[0_0_10px_rgba(239,68,68,0.45)]" />
-        <HeadingTag class="bg-gradient-to-r from-[#f87171] via-[#fff5e6] to-[#f5c542] bg-clip-text text-2xl leading-normal font-black tracking-widest text-transparent uppercase">{title}</HeadingTag>
-      </header>
-    )
-  }
+  <div
+    class="group relative isolate w-full overflow-hidden rounded-3xl border border-[#064c39] bg-[#0f241d]/92 p-8 text-[#dfeee6] shadow-[0_10px_30px_rgba(18,196,143,0.22)] backdrop-blur-xl transition-all duration-500 hover:border-[#12c48f]/70 md:p-10">
+    {
+      title && (
+        <header class="mb-6 flex items-center gap-4 border-b border-[#064c39] pb-4">
+          <span aria-hidden="true" class="h-8 w-1.5 shrink-0 rounded-full bg-gradient-to-b from-[#12c48f] to-[#e8b52c] shadow-[0_0_10px_rgba(18,196,143,0.45)]" />
+          <HeadingTag class="bg-gradient-to-r from-[#4ff0bb] via-[#f8ecc9] to-[#e8b52c] bg-clip-text text-2xl leading-normal font-black tracking-widest text-transparent uppercase">{title}</HeadingTag>
+        </header>
+      )
+    }
 
-  <div class="grid grid-cols-1 gap-6 md:grid-cols-2 lg:gap-8">
-    <article class="flex flex-col gap-4 text-left text-base leading-relaxed text-[#f7e2d6]">
-      {
-        titleleft && (
-          <p class="flex items-center gap-3 border-b border-[#7f1d1d] pb-3 text-xl leading-normal font-black tracking-widest text-[#fff5e6] uppercase">
-            <span
-              aria-hidden="true"
-              class="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg border border-[#7f1d1d] bg-gradient-to-br from-[#f87171] via-[#ef4444] to-[#7f1d1d] text-sm text-[#1a0303] shadow-[0_5px_15px_rgba(239,68,68,0.28)]">
-              🔐
-            </span>
-            {titleleft}
-          </p>
-        )
-      }
-      <slot name="left" />
-    </article>
+    <div class="grid grid-cols-1 gap-6 md:grid-cols-2 lg:gap-8">
+      <article class="flex flex-col gap-4 text-left text-base leading-relaxed text-[#dfeee6]">
+        {
+          titleleft && (
+            <p class="flex items-center gap-3 border-b border-[#064c39] pb-3 text-xl leading-normal font-black tracking-widest text-[#f8ecc9] uppercase">
+              <span
+                aria-hidden="true"
+                class="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg border border-[#064c39] bg-gradient-to-br from-[#4ff0bb] via-[#12c48f] to-[#064c39] text-sm text-[#03251c] shadow-[0_5px_15px_rgba(18,196,143,0.28)]">
+                🔐
+              </span>
+              {titleleft}
+            </p>
+          )
+        }
+        <slot name="left" />
+      </article>
 
-    <article class="flex flex-col gap-4 text-left text-base leading-relaxed text-[#f7e2d6]">
-      {
-        titleright && (
-          <p class="flex items-center gap-3 border-b border-[#7f1d1d] pb-3 text-xl leading-normal font-black tracking-widest text-[#fff5e6] uppercase">
-            <span
-              aria-hidden="true"
-              class="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg border border-[#7f1d1d] bg-gradient-to-br from-[#ffe9a8] via-[#f5c542] to-[#a3610c] text-sm text-[#1a0303] shadow-[0_5px_15px_rgba(245,197,66,0.28)]">
-              📊
-            </span>
-            {titleright}
-          </p>
-        )
-      }
-      <slot name="right" />
-    </article>
+      <article class="flex flex-col gap-4 text-left text-base leading-relaxed text-[#dfeee6]">
+        {
+          titleright && (
+            <p class="flex items-center gap-3 border-b border-[#064c39] pb-3 text-xl leading-normal font-black tracking-widest text-[#f8ecc9] uppercase">
+              <span
+                aria-hidden="true"
+                class="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg border border-[#064c39] bg-gradient-to-br from-[#ffdd8a] via-[#e8b52c] to-[#8a6314] text-sm text-[#0a1a15] shadow-[0_5px_15px_rgba(232,181,44,0.28)]">
+                📊
+              </span>
+              {titleright}
+            </p>
+          )
+        }
+        <slot name="right" />
+      </article>
+    </div>
   </div>
 </section>

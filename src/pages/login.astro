@@ -2,15 +2,17 @@
 import MainLayout from "../layouts/MainLayout.astro";
 import ContentBox from "../components/ContentBox.astro";
 import Navfoot from "../components/Navfoot.astro";
-import Announcement from "../components/AnnouncementPremium.astro";
+import Announcement from "../components/Announcement4.astro";
 import CtaRedirect from "../components/CtaRedirect.astro";
 import { pageGraph } from "../lib/schema";
 
+const pageTitle = "เข้าสู่ระบบ OSIRIS168 | ปุ่มล็อกอินเข้าหน้าเมมเบอร์ สล็อตระบบใหม่";
+
 const pageDescription =
-  "เข้าสู่ระบบ PIGAUTO กดปุ่มเดียวเข้าหน้าล็อกอินด้วยยูสเดิม เล่นสล็อตลิขสิทธิ์แท้ PG Soft Joker Pragmatic Play JILI เช็กเครดิต ฝากถอนออโต้ทันที ไม่ผ่านคนกลาง";
+  "เข้าสู่ระบบ OSIRIS168 กดปุ่มเดียวไปยังหน้าล็อกอินด้วยยูสเดิม เข้าเล่นสล็อตรวมค่ายเกมดังในยูสเดียว เช็กเครดิตและส่งรายการฝากถอนออโต้ได้จากหน้าเมมเบอร์จุดเดียว";
 
 const graph = pageGraph(Astro, {
-  name: "เข้าสู่ระบบ PIGAUTO เว็บสล็อตออโต้ ฝากถอนตรง ไม่ผ่านคนกลาง",
+  name: pageTitle,
   description: pageDescription,
   breadcrumb: [
     { name: "หน้าแรก", path: "/" },
@@ -21,20 +23,20 @@ const graph = pageGraph(Astro, {
 const targetUrl = "https://yoalink.com/22hs";
 ---
 
-<MainLayout title="เข้าสู่ระบบ PIGAUTO | ปุ่มล็อกอินเข้าหน้าเมมเบอร์ สล็อตออโต้" description={pageDescription}>
+<MainLayout title={pageTitle} description={pageDescription}>
   <script type="application/ld+json" set:html={graph} />
 
   <Announcement />
 
-  <ContentBox title="เข้าสู่ระบบ PIGAUTO" as="h1">
+  <ContentBox title="เข้าสู่ระบบ OSIRIS168" as="h1">
     <div class="flex justify-center py-8">
       <a
         href={targetUrl}
         rel="nofollow sponsored"
         data-cta-redirect
-        aria-label="เข้าสู่ระบบ PIGAUTO"
-        class="group relative mx-auto flex w-full max-w-[320px] items-center justify-center gap-3 overflow-hidden rounded-xl border border-[#7f1d1d]/60 bg-gradient-to-b from-[#ef4444] to-[#7f1d1d] px-6 py-4 text-xl font-bold tracking-wide text-[#fff5e6] shadow-[0_10px_30px_rgba(239,68,68,0.18)] transition-all duration-300 hover:scale-105 hover:border-[#fbbccc]/70 hover:shadow-[0_15px_40px_rgba(251,188,204,0.28)]">
-        เข้าสู่ระบบ PIGAUTO
+        aria-label="เข้าสู่ระบบ OSIRIS168"
+        class="group relative mx-auto flex w-full max-w-[320px] items-center justify-center gap-3 overflow-hidden rounded-xl border border-[#064c39]/60 bg-gradient-to-b from-[#0a8f68] to-[#064c39] px-6 py-4 text-xl font-bold tracking-wide text-[#f8ecc9] shadow-[0_10px_30px_rgba(18,196,143,0.18)] transition-all duration-300 hover:scale-105 hover:border-[#4ff0bb]/70 hover:shadow-[0_15px_40px_rgba(79,240,187,0.28)]">
+        เข้าสู่ระบบ OSIRIS168
       </a>
     </div>
   </ContentBox>

@@ -1,92 +1,96 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
-import Announcement from "../components/AnnouncementPremium.astro";
-import ContentBoxPremium from "../components/ContentBoxPremium.astro";
-import ContentBoxCyberCut from "../components/ContentBoxCyberCut.astro";
-import ContentBoxSpecial from "../components/ContentBoxSpecial.astro";
-import ContentBoxTwoPremium from "../components/ContentBoxTwoPremium.astro";
-import ContentBoxTwoCyberCut from "../components/ContentBoxTwoCyberCut.astro";
-import ContentBoxSevenThreePremium from "../components/ContentBoxSevenThreePremium.astro";
-import ContentBoxSevenThreeCyberCut from "../components/ContentBoxSevenThreeCyberCut.astro";
-import GameRankingBoard from "../components/GameRankingBoard.astro";
+import Announcement from "../components/Announcement4.astro";
+import ContentBox from "../components/ContentBox.astro";
+import ContentBoxNeumorphism from "../components/ContentBoxNeumorphism.astro";
+import ContentBoxFloatingBadge from "../components/ContentBoxFloatingBadge.astro";
+import ContentBoxTwo from "../components/ContentBoxTwo.astro";
+import ContentBoxTwoNeumorphism from "../components/ContentBoxTwoNeumorphism.astro";
+import ContentBoxSevenThree from "../components/ContentBoxSevenThree.astro";
+import ContentBoxSevenThreeNeumorphism from "../components/ContentBoxSevenThreeNeumorphism.astro";
 import FeatureHighlights from "../components/FeatureHighlights.astro";
-import SmoothCarousel from "../components/SmoothCarousel.astro";
-import LoginRtpSection from "../components/LoginRtpSection.astro";
-import LatestWinnersCyber from "../components/LatestWinnersCyber.astro";
 import ProviderGrid from "../components/ProviderGrid.astro";
+import GameRankingBoard from "../components/GameRankingBoard.astro";
+import SmoothCarousel from "../components/SmoothCarousel.astro";
+import LatestWinners2 from "../components/LatestWinners2.astro";
+import LoginRtpSection from "../components/LoginRtpSection.astro";
 import ReviewCardSumo2 from "../components/ReviewCardSumo2.astro";
-import Faq2 from "../components/Faq2.astro";
+import Faq4 from "../components/Faq4.astro";
 import Navfoot from "../components/Navfoot.astro";
 
 import { Picture } from "astro:assets";
 import { pageGraph } from "../lib/schema";
-import imgNoMinimum from "../assets/slide2.png";
-import imgWallet from "../assets/slide1.png";
+import imgProviders from "../assets/slide3.png";
+import imgNewMemberPromo from "../assets/slide1.png";
+import imgAutoSystem from "../assets/banner2.png";
 
-const pageTitle = "PIGAUTO เว็บสล็อตออโต้ไม่มีขั้นต่ำ อันดับ1 ฝากถอนตรง รองรับวอเล็ท";
+const pageTitle = "OSIRIS168 เว็บสล็อตระบบใหม่ รวมค่ายเกม 2026 มีโปรสมาชิกใหม่";
 
-const pageDescription = "PIGAUTO เว็บสล็อตออโต้ไม่มีขั้นต่ำ อันดับ 1 ลิขสิทธิ์แท้ ระบบเร็ว ฝากถอนตรง เฉียมคม รองรับวอเล็ท ปลอดภัยสูง สมัครเข้าระบบในไม่กี่วินาที";
+const pageDescription = "OSIRIS168 เว็บสล็อตระบบใหม่ปี 2026 รวมค่ายเกม โปรสมาชิกใหม่ osiris 168 ธีมเทพเจ้าโอไซริให้โชค ฝากถอนออโต้เต็มระบบ เล่นผ่านมือถือ ไม่ต้องโหลดapp";
 
 const announcement =
-  "PIGAUTO เว็บสล็อตออโต้ไม่มีขั้นต่ำ อันดับ 1 ใช้เทคโนโลยีออโต้ตัวเดียวกับที่คาสิโนระดับอินเตอร์ใช้ ทำงานเรียลไทม์ตั้งแต่สมัครจนเข้าเล่นเกม • ฝากถอนตรง เฉียมคม ฝากปุ๊บเข้าปั๊บ ถอนปุ๊บยอดขึ้นปั๊บ ไม่มีคนกลาง ไม่มีพักระบบ • ไม่มีขั้นต่ำจริง อยากฝากเท่าไหร่ก็ฝากได้ อยากถอนเท่าไหร่ก็ถอนได้ ไม่ต้องกลัวว่าระบบจะบังคับยอด • รองรับ True Wallet เต็มระบบ สมัครได้โดยไม่ต้องผูกบัญชีธนาคาร ระบบ pig auto wallet โอนไวเท่าธนาคาร • รวมเกมลิขสิทธิ์แท้จาก PG Soft, Joker, Pragmatic Play และ JILI ทุกเกมทำงานตามค่า RTP จริง ไม่มีปรับเรท • สมัครเข้าระบบในไม่กี่วินาที ไม่ต้องคุยกับแอดมิน ไม่ต้องส่งบัตร กดครั้งเดียวก็เข้าใช้งานได้เลย • ทุกขั้นตอนมีระบบชัดเจน โปร่งใส ตรวจสอบได้ และรองรับผู้เล่นพร้อมกันได้เยอะ";
+  "OSIRIS168 เว็บสล็อตระบบใหม่ปี 2026 รวมสล็อตหลายค่ายไว้ในระบบเดียว เลือกตามค่าย ธีม หรือโบนัสได้โดยไม่ต้องเปิดบัญชีใหม่ • ระบบใหม่ลดขั้นตอนตั้งแต่ล็อกอิน เลือกเกม เช็กเครดิต ไปจนถึงกลับเข้าเกมที่เล่นค้างไว้ • หมวดเกมปี 2026 มีทั้งสล็อตเปิดใหม่และตัวฮิตเดิมให้สลับกันเล่น • โปรสมาชิกใหม่ osiris 168 เข้าไปดูสิทธิ์ โบนัส และรายละเอียดได้จากหน้าเมมเบอร์ก่อนเลือกใช้ • ระบบออโต้เชื่อมฝากถอนเข้ากับหน้าเมมเบอร์ ส่งรายการและเช็กสถานะได้จากจุดเดียว • เล่นผ่านมือถือได้เลย ไม่ต้องโหลดapp เปิดเบราว์เซอร์แล้วล็อกอินด้วยยูสเดิม • ธีมเทพเจ้าโอไซริให้โชคใช้กับทั้งเว็บ เปิดเข้ามาก็รู้ว่าอยู่เว็บไหน";
 
-const noMinimumAlt =
-  "ภาพโปรโมชั่น PIGAUTO โทนแดงเข้มลายตรุษจีน ด้านบนเป็นโลโก้หมูการ์ตูนสีชมพูในวงเฟืองสีเงินกับคำว่า PIGAUTO ฉากหลังมีโคมไฟจีนสีแดง พัดกระดาษสีทอง ไพ่ ชิปคาสิโน และเหรียญทองปลิว ด้านขวาเป็นพรีเซนเตอร์หญิงสวมชุดกี่เพ้าสีแดงปักลายมังกรทอง ข้อความตัวใหญ่ว่า เว็บสล็อตออโต้ไม่มีขั้นต่ำ และบรรทัดล่างว่า เล่นได้อย่างเป็นมิตร ปลอดภัยสูง";
+const providersAlt =
+  "ภาพโปรโมชั่น OSIRIS168 เว็บสล็อตระบบใหม่ปี 2026 สมัครใหม่รับโบนัส 100% สูงสุด 10,000 บาท รวมค่ายเกมดัง PG Pragmatic Play Joker Habanero Play'n GO พร้อมไอคอนสี่ช่องว่า เล่นผ่านมือถือไม่ต้องโหลดapp ฝากถอนออโต้เต็มระบบ 24 ชม. เกมสล็อตคุณภาพสูง และโปรสมาชิกใหม่คุ้มทุกยูส ด้านขวาเป็นพรีเซนเตอร์หญิงชุดอียิปต์ทอง";
 
-const walletAlt =
-  "ภาพโปรโมชั่น PIGAUTO โทนแดงเข้มลายตรุษจีน ด้านบนเป็นโลโก้หมูการ์ตูนสีชมพูในวงเฟืองสีเงินกับคำว่า PIGAUTO ฉากหลังมีโคมไฟจีนสีแดง พัดกระดาษสีทอง ไพ่โพดำโพแดง ชิปคาสิโน และเหรียญทองปลิว ด้านซ้ายเป็นพรีเซนเตอร์หญิงสวมชุดกี่เพ้าสีแดงปักลายทอง ข้อความตัวใหญ่ว่า รองรับวอเล็ท เต็มระบบ และบรรทัดล่างว่า pig auto wallet ใช้ง่าย";
+const newMemberPromoAlt =
+  "ภาพโปรโมชั่น OSIRIS168 โปรเปิดยูสใหม่ เริ่มฝาก 50 รับเพิ่ม 150 โบนัสต้อนรับสมาชิกใหม่ ปุ่มเช็กโปรล่าสุด พรีเซนเตอร์หญิงชุดอียิปต์ดำทองชี้ไปที่ข้อความ ล้อมด้วยเหรียญทองบนพื้นหลังวิหารสีเขียวเข้ม บรรทัดล่างว่า เล่นผ่านมือถือสะดวก ระบบออโต้เต็มรูปแบบ";
 
-const trustPoints = [
+const autoSystemAlt =
+  "แบนเนอร์ OSIRIS168 พื้นหลังห้องเก็บสมบัติอียิปต์โทนเขียวทอง ตรงกลางเป็นด้วงปีกทองประดับหยกเขียวเหนือโลโก้ OSIRIS168 ข้อความตัวใหญ่ว่า เกมสล็อตออนไลน์แจกหนัก และ ฝากถอนทันใจ บริการสุดเลิศ ขนาบด้วยพรีเซนเตอร์หญิงชุดดำทอง รูปปั้นอนูบิสทอง เหรียญทอง และหน้าจอมือถือที่ขึ้นคำว่า SUPER MEGA WIN กับ BIG WIN";
+
+const newSystemPoints = [
   {
-    icon: "🌐",
-    title: "เทคโนโลยีออโต้ระดับอินเตอร์",
-    description: "PIGAUTO อาจเป็นแบรนด์ใหม่ แต่หัวใจของระบบไม่ใช่มือใหม่ เพราะใช้เทคโนโลยีออโต้ตัวเดียวกับที่คาสิโนระดับอินเตอร์ใช้กันอยู่",
+    icon: "🔑",
+    title: "ล็อกอินในไม่กี่ขั้นตอน",
+    description: "เข้าหน้าเมมเบอร์ด้วยยูสเดิมได้จากทั้งมือถือและคอม เมนูหลักอยู่จุดเดิมทุกครั้ง ไม่ต้องจำว่าปุ่มสำคัญซ่อนอยู่ชั้นไหน",
     accent: "gold" as const,
   },
   {
-    icon: "⚡",
-    title: "เรียลไทม์ ไม่สะดุด",
-    description: "ตั้งแต่สมัคร ฝาก ถอน ไปจนถึงการเข้าเล่นเกม ทำได้แบบเรียลไทม์ ลดขั้นตอนที่ไม่เป็นมิตรต่อสมาชิก และไม่ต้องคอยตามแอดมิน",
-    accent: "blue" as const,
+    icon: "🎰",
+    title: "เลือกเกมจากหน้าเดียว",
+    description: "หน้าเกมจัดให้เลือกตามค่าย ธีม หรือโบนัสได้ในที่เดียว กดเข้าเกมต่อได้โดยไม่ต้องย้อนกลับหลายชั้นเมนู",
+    accent: "jade" as const,
   },
   {
-    icon: "🔎",
-    title: "โปร่งใส ตรวจสอบได้",
-    description: "ทุกขั้นตอนมีระบบชัดเจน สมาชิกดูสถานะรายการของตัวเองได้เอง ไม่มีอะไรซ่อนไว้หลังบ้านให้ต้องเดา",
+    icon: "💳",
+    title: "เช็กเครดิตได้ทันที",
+    description: "ยอดเครดิตและประวัติรายการอยู่บนหน้าเมมเบอร์ ดูก่อนตัดสินใจเล่นต่อได้โดยไม่ต้องสลับหน้าไปมา",
     accent: "gold" as const,
   },
   {
-    icon: "👥",
-    title: "รองรับผู้เล่นพร้อมกันได้เยอะ",
-    description: "ระบบรองรับจำนวนผู้เล่นพร้อมกันได้เยอะมาก ช่วงคนเข้าหนาแน่นก็ยังทำรายการและเข้าเกมได้ตามปกติ",
-    accent: "blue" as const,
+    icon: "🔄",
+    title: "กลับเข้าเกมที่เล่นค้างไว้",
+    description: "เกมที่เปิดค้างไว้รอบก่อนกลับไปเล่นต่อได้จากรายการเดิม ไม่ต้องไล่หาใหม่ทุกครั้งที่ล็อกอินเข้ามา",
+    accent: "jade" as const,
   },
 ];
 
 const faqs = [
   {
-    q: "ฝากเงินกับ PIGAUTO มีขั้นต่ำไหม?",
-    a: "ไม่มีขั้นต่ำ ฝากเท่าไหร่ก็ได้ คุณสามารถเริ่มลองเล่นด้วยยอดเล็ก ๆ ก่อนเพื่อเช็กระบบ หรือจะฝากหนักตั้งแต่ต้นก็ทำได้ตามสะดวก",
+    q: "OSIRIS168 รวมค่ายเกมสล็อตไว้แบบไหน",
+    a: "รวมเกมสล็อตจากหลายผู้ให้บริการไว้ในระบบเดียว เลือกตามค่าย ธีม โบนัส หรือสไตล์ที่ชอบได้ โดยไม่ต้องเปิดบัญชีใหม่ตามแต่ละค่าย และใช้เครดิตชุดเดิมข้ามค่ายได้",
   },
   {
-    q: "ถอนเงินจาก PIGAUTO ใช้เวลานานแค่ไหน?",
-    a: "ระบบถอนเป็นออโต้เต็มระบบ เมื่อคุณยืนยันการถอน ยอดจะถูกส่งเข้าธนาคารหรือวอเล็ทที่ผูกไว้ภายในเวลาสั้น ๆ หากข้อมูลถูกต้องตามระบบ",
+    q: "โปรสมาชิกใหม่ osiris 168 ดูได้จากตรงไหน",
+    a: "หลังเปิดยูสแล้วเข้าไปดูสิทธิ์ โบนัส และรายละเอียดของแคมเปญที่เปิดอยู่ได้จากหน้าเมมเบอร์ก่อนเลือกใช้ โปรที่เปิดใช้งานจะต่างกันไปตามช่วงเวลา",
   },
   {
-    q: "PIGAUTO รองรับการฝากถอนผ่าน True Wallet หรือไม่?",
-    a: "รองรับเต็มระบบ คุณสามารถใช้ True Wallet ในการฝากและถอนผ่านเมนูฝากถอนของ PIGAUTO ได้ทันที โดยไม่ต้องผูกบัญชีธนาคารก็ใช้งานได้",
+    q: "ระบบฝากถอนออโต้ของ OSIRIS168 ทำงานยังไง",
+    a: "ระบบออโต้เชื่อมการฝากถอนเข้ากับหน้าเมมเบอร์ ส่งรายการ ดูเครดิต และเช็กสถานะได้จากจุดเดียว ก่อนกลับไปเล่นสล็อตต่อโดยไม่ต้องวิ่งหลายหน้า",
   },
   {
-    q: "ต้องส่งสลิปให้แอดมินทุกครั้งที่ฝากเงินไหม?",
-    a: "ไม่จำเป็น ระบบฝากของ PIGAUTO เป็นออโต้ ตรวจจับยอดและปรับเครดิตให้อัตโนมัติ หากโอนตามยอดและช่องทางที่ระบบแสดงไว้",
+    q: "เล่น OSIRIS168 บนมือถือต้องโหลดแอปไหม",
+    a: "ไม่ต้องโหลดapp เปิดผ่านเว็บเบราว์เซอร์อย่าง Chrome หรือ Safari แล้วล็อกอินด้วยยูสเดิมได้เลย เข้าเกม เช็กเครดิต และทำรายการได้ครบจากมือถือเครื่องเดียว",
   },
   {
-    q: "ถอนยอดเล็ก ๆ ได้ไหม หรือบังคับให้ถอนยอดสูงเท่านั้น?",
-    a: "ถอนยอดเล็ก–ใหญ่ได้ทั้งหมด ตามยอดคงเหลือที่ระบบอนุญาต ไม่มีบังคับให้ต้องถอนยอดสูงอย่างเดียว",
+    q: "หน้าเมมเบอร์ osiris 168 รวมอะไรไว้บ้าง",
+    a: "เป็นจุดรวมเครดิต โปรโมชั่น ประวัติรายการ และทางเข้าเกมจากหลายค่าย ทำให้เช็กข้อมูลของตัวเองได้จากหน้าเดียวโดยไม่ต้องสลับไปมาระหว่างเมนู",
   },
   {
-    q: "ถ้าระบบล่มหรือเน็ตหลุดระหว่างทำรายการฝาก–ถอน ทำอย่างไร?",
-    a: "โดยปกติระบบจะบันทึกสถานะการทำรายการไว้ หากเน็ตหลุดหรือล็อกเอาต์กลางคัน เมื่อกลับมาเข้าสู่ระบบอีกครั้งให้ตรวจสอบยอดในกระเป๋า หากยังไม่อัปเดตสามารถติดต่อทีมงานเพื่อช่วยตรวจสอบได้",
+    q: "สมัคร OSIRIS168 ผ่านมือถือทำยังไง",
+    a: "สมัครผ่านมือถือได้ตั้งแต่เปิดบัญชี ยืนยันข้อมูล ไปจนถึงล็อกอินเข้าหน้าเมมเบอร์ หลังจากนั้นก็เลือกสล็อต ดูเครดิต หรือเช็กโปรโมชั่นต่อได้จากเครื่องเดิม",
   },
 ];
 
@@ -102,49 +106,35 @@ const graph = pageGraph(Astro, {
 
   <Announcement message={announcement} />
 
-  <ContentBoxPremium as="h1" title="PIGAUTO เว็บสล็อตออโต้ไม่มีขั้นต่ำ อันดับ 1">
+  <ContentBox as="h1" title="OSIRIS168 เว็บสล็อตระบบใหม่ 2026 รวมค่ายเกม พร้อมธีมเทพเจ้าโอไซริให้โชค">
     <p class="mb-4 text-left text-base leading-relaxed">
-      <strong class="text-[#ffe9a8]">PIGAUTO</strong> ขอต้อนรับเข้าสู่เว็บสล็อตออโต้ที่ตั้งใจเปิดตัว เพื่อให้ผู้เล่นสัมผัส “ความลื่น + ความเร็ว + ความจริงใจ” แบบที่หาได้ยากในวงการเว็บสล็อตออนไลน์ตอนนี้
-      ในฐานะเจ้าของเว็บ เราตั้งใจสร้าง PIGAUTO ให้เป็นพื้นที่ที่ทุกคนเข้ามาแล้วสบายใจ ฝั่งระบบก็ไฮเทคเต็มร้อย ฝั่งบริการก็เป็นกันเองไม่ยัดเยียดเหมือนเว็บเก่า ๆ ที่คุณเคยเจอ
+      OSIRIS168 ปรับเว็บสล็อตให้เข้ากับสายเล่นปี 2026 ทั้งหน้าเกมที่เลือกค่ายง่าย ระบบสมาชิกที่รวมเครดิตกับโปรโมชั่น และการใช้งานผ่านมือถือ ux ui เข้าใจง่าย ภาพจำของแบรนด์ยังหยิบคอนเซปต์ osiris 168 และ
+      เทพเจ้าโอไซริให้โชค มาทำให้เว็บมีบุคลิกต่างจากสล็อตทั่วไป
     </p>
 
     <p class="text-left text-base leading-relaxed">
-      เพราะผมรู้ดีว่าผู้เล่นทุกคนต้องการเว็บที่เชื่อถือได้ ปลอดภัย โปร่งใส ไม่ซ่อนไม้ซ่อนมือ และที่สำคัญ ฝาก–ถอนต้องเร็ว แม่นยำ เฉียบคม แบบไม่ต้องทักตามยอดเงินจากแอดมิน
+      ระบบฝากถอนออโต้ช่วยจัดการเครดิตจากหน้าเมมเบอร์ ส่วนสล็อตหลายค่ายก็เลือกเล่นต่อได้ทันที เว็บปี 2026 เกมเยอะเป็นพื้นฐาน แต่ต้องเข้าเกมง่าย แตกง่าย ยั่งยืนระยะยาว
     </p>
-  </ContentBoxPremium>
+  </ContentBox>
 
-  <ContentBoxTwoCyberCut as="h2" title="ทำไม PIGAUTO ถึงเป็นเว็บออโต้ อันดับ1 ที่มั่นใจว่าผู้เล่นจะไว้ใจ ใช้บริการ">
+  <ContentBoxTwo as="h2" title="OSIRIS168 ระบบใหม่ปี 2026 ทำให้สายสล็อตเล่นง่ายขึ้นตรงไหน">
     <div slot="left" class="flex flex-col gap-4">
       <p class="text-left text-base leading-relaxed">
-        PIGAUTO อาจเป็นแบรนด์ใหม่ แต่หัวใจของระบบไม่ใช่มือใหม่เลย เราใช้เทคโนโลยีออโต้ตัวเดียวกับที่คาสิโนระดับอินเตอร์ใช้ ทำให้ทุกอย่างตั้งแต่สมัคร ฝาก ถอน ไปจนถึงการเข้าเล่นเกม ทำได้แบบเรียลไทม์
-        ไม่มีสะดุด
+        ระบบใหม่ของ OSIRIS168 ลดขั้นตอนตั้งแต่ล็อกอิน เลือกเกม เช็กเครดิต ไปจนถึงกลับเข้าเกมที่เล่นค้างไว้ เมนูหลักถูกจัดให้เข้าถึงได้ทั้งมือถือและคอม ไม่ต้องจำว่าปุ่มสำคัญซ่อนอยู่ชั้นไหน
       </p>
       <p class="text-left text-base leading-relaxed">
-        ลดขั้นตอนที่ไม่เป็นมิตรต่อสมาชิกผู้ใช้บริการ และไม่ต้องคอยตามแอดมิน แต่ทุกขั้นตอนมีระบบชัดเจน โปร่งใส ตรวจสอบได้ และรองรับจำนวนผู้เล่นพร้อมกันได้เยอะมาก
+        ฝั่งดีไซน์ใช้คาแรกเตอร์ osiris 168 และแนวคิด เทพเจ้าโอไซริให้โชค เป็นธีมเชื่อมหน้าเว็บเข้าด้วยกัน ทำให้ภาพจำของแบรนด์ชัดขึ้น เปิดเข้ามาก็รู้ว่าอยู่เว็บไหน ไม่ใช่หน้าตาคล้ายกันจนต้องดู URL ซ้ำ
       </p>
     </div>
 
-    <FeatureHighlights slot="right" items={trustPoints} />
-  </ContentBoxTwoCyberCut>
+    <FeatureHighlights slot="right" items={newSystemPoints} />
+  </ContentBoxTwo>
 
-  <ContentBoxCyberCut as="h2" title="PIGAUTO สล็อตออโต้ที่เร็วแรงที่สุด ฝากถอนตรง เฉียมคม">
-    <p class="mb-4 text-left text-base leading-relaxed">
-      จุดเด่นแรกของ PIGAUTO คือ “ความเร็วของระบบออโต้” ฝากถอนตรง เฉียมคม ที่ใครเล่นก็ต้องบอกต่อ เพราะฝากปุ๊บเข้าปั๊บ ถอนปุ๊บยอดขึ้นปั๊บทันที ไม่มีคนกลาง ไม่มีพักระบบ และไม่มีช่วงเวลาอืดให้ผู้เล่นกังวล
-      ระบบนี้สร้างมาเพื่อให้คุณเล่นได้ต่อเนื่อง ไม่ติดขัด ไม่สะดุด ไม่ต้องรีเฟรชให้เสียเวลา
-    </p>
-
-    <p class="text-left text-base leading-relaxed">
-      ความเร็วคือคาแรกเตอร์หลักของ PIGAUTO ใครที่เคยช้ำใจกับเว็บที่ปรับยอดช้า ลองที่นี่แล้วจะรู้ทันทีว่านี่คือเว็บที่ “เกิดมาเพื่อเป็นเว็บสล็อตออโต้ อันดับ 1 จริง ๆ”
-    </p>
-  </ContentBoxCyberCut>
-
-  <LatestWinnersCyber />
-
-  <ContentBoxSevenThreePremium as="h2" title="เว็บสล็อตออโต้ไม่มีขั้นต่ำ เล่นได้อย่างเป็นมิตร ปลอดภัยสูง">
+  <ContentBoxSevenThree as="h2" titleright="osiris 168 รวมสล็อตหลายค่ายให้เปลี่ยนเกมได้ง่ายแค่ไหน">
     <Picture
       slot="left"
-      src={imgNoMinimum}
-      alt={noMinimumAlt}
+      src={imgProviders}
+      alt={providersAlt}
       loading="lazy"
       fetchpriority="low"
       widths={[240, 400, 600]}
@@ -153,88 +143,141 @@ const graph = pageGraph(Astro, {
       formats={["avif", "webp"]}
       fallbackFormat="webp"
       quality={80}
-      class="mx-auto h-auto w-full rounded-2xl border border-[#7f1d1d] shadow-[0_10px_30px_rgba(239,68,68,0.24)]"
+      class="mx-auto h-auto w-full rounded-2xl border border-[#064c39] shadow-[0_10px_30px_rgba(18,196,143,0.24)]"
     />
 
     <div slot="right" class="flex flex-col gap-4">
       <p class="text-left text-base leading-relaxed">
-        หลายเว็บบอกว่าไม่มีขั้นต่ำ แต่เวลาเล่นจริงมีเงื่อนไขมากมาย แต่ที่ PIGAUTO เราตั้งกฎแบบตรงไปตรงมา ไม่มีขั้นต่ำจริง อยากฝากเท่าไหร่ก็ฝากได้ อยากถอนเท่าไหร่ก็ถอนได้ ไม่ต้องกลัวว่าระบบจะบังคับยอด
+        osiris 168 รวมเกมสล็อตจากหลายผู้ให้บริการไว้ในระบบเดียว สมาชิกจึงเลือกเกมตามค่าย ธีม โบนัส หรือสไตล์ที่ตัวเองชอบได้โดยไม่ต้องเปิดบัญชีใหม่ตามแต่ละค่าย
       </p>
       <p class="text-left text-base leading-relaxed">
-        แนวคิดของเราคือ “ผู้เล่นทุกคนต้องมีสิทธิ์เริ่มต้นเท่ากัน” และถ้าคุณอยากลองเชิงก่อนก็ได้ ไม่ต้องอาย เพราะเว็บนี้ออกแบบเพื่อรองรับทุกงบ ทุกสไตล์การเล่น ปลอดภัยสูง กับทุกคน
+        บางวันเกมประจำกำลังเข้ามือก็เล่นต่อ บางวันอยากเปลี่ยนบรรยากาศก็เปิดค่ายใหม่ได้เลย จุดนี้เข้ากับคอนเซปต์ เทพเจ้าโอไซริให้โชค ที่ใช้สร้างสีสันให้หน้าเกม แต่สุดท้ายสายสล็อตยังเลือกจังหวะของตัวเองเหมือนเดิม
       </p>
     </div>
-  </ContentBoxSevenThreePremium>
-
-  <ContentBoxSevenThreeCyberCut as="h2" titleright="รองรับวอเล็ท เต็มระบบ pig auto wallet ใช้ง่าย โอนไว ถูกใจผู้เล่นไทย">
-    <Picture
-      slot="left"
-      src={imgWallet}
-      alt={walletAlt}
-      loading="lazy"
-      fetchpriority="low"
-      widths={[240, 400, 600]}
-      sizes="(max-width: 767px) calc(100vw - 64px), 380px"
-      decoding="async"
-      formats={["avif", "webp"]}
-      fallbackFormat="webp"
-      quality={80}
-      class="mx-auto h-auto w-full rounded-2xl border border-[#7f1d1d] shadow-[0_10px_30px_rgba(239,68,68,0.24)]"
-    />
-
-    <div slot="right" class="flex flex-col gap-4">
-      <p class="text-left text-base leading-relaxed">
-        PIGAUTO รองรับ True Wallet เต็มระบบ แบบไม่ต้องใช้บัญชีธนาคารก็สมัครได้ เหมาะกับผู้เล่นยุคใหม่ที่ต้องการความสะดวก ปลอดภัย และไม่อยากผูกบัญชีไว้กับเว็บพนัน
-      </p>
-      <p class="text-left text-base leading-relaxed">
-        การทำรายการผ่านวอเล็ทเร็วเท่าธนาคาร ไม่มีดีเลย์ เงินเข้าไวเหมือนกันทั้งสองแบบ ระบบ pig auto wallet ช่วยให้ผู้เล่นมีทางเลือกมากขึ้น และได้รับประสบการณ์ใช้งานที่ง่ายที่สุดเท่าที่จะเป็นไปได้
-      </p>
-    </div>
-  </ContentBoxSevenThreeCyberCut>
-
-  <ContentBoxSpecial as="h2" title="รวมเกมแตกง่ายจากค่ายใหญ่ pigauto slot ลิขสิทธิ์แท้">
-    <div slot="left" class="flex flex-col gap-4">
-      <p class="text-left text-base leading-relaxed">
-        ถึงแม้ว่า PIGAUTO จะเป็นแบรนด์ใหม่ แต่ผมคัดเฉพาะเกมลิขสิทธิ์แท้จากผู้พัฒนาโดยตรง เช่น PG Soft, Joker, Pragmatic Play, JILI และค่ายใหญ่ระดับอินเตอร์
-      </p>
-      <p class="text-left text-base leading-relaxed">ทุกเกมทำงานตามค่า RTP จริง ไม่มีปรับแต้ม ไม่มีปรับเรท ไม่มีเซตยูสลับหลังบ้าน</p>
-    </div>
-
-    <div slot="right" class="flex flex-col gap-4">
-      <p class="text-left text-base leading-relaxed">จะเข้าเล่นเวลาไหนก็ยังลื่นไหล มี bonus time แทบทุกช่วงเวลา</p>
-      <p class="text-left text-base leading-relaxed">เหมาะกับทั้งมือใหม่และสายเล่นแบบจริงจัง กะฟันเงินเน้นที่ต้องการระบบมั่นคง</p>
-    </div>
-  </ContentBoxSpecial>
+  </ContentBoxSevenThree>
 
   <ProviderGrid />
 
+  <ContentBoxNeumorphism as="h2" title="เกมใหม่ OSIRIS168 ปี 2026 มีอะไรให้สายชอบลองของใหม่">
+    <p class="mb-4 text-left text-base leading-relaxed">
+      หมวดเกมปี 2026 ของ OSIRIS168 เหมาะกับคนที่ชอบไล่สล็อตเปิดใหม่ ฟีเจอร์โบนัสใหม่ และเกมที่ออกแบบมาให้เล่นบนมือถือได้เต็มจอมากขึ้น โดยยังมีเกมเดิมสำหรับคนที่ไม่อยากเปลี่ยนของคุ้นมือ
+    </p>
+
+    <p class="text-left text-base leading-relaxed">
+      หน้าเกมของ osiris 168 จึงมีทั้งฝั่งของใหม่และตัวฮิตให้สลับกันเล่น คอนเซปต์ เทพเจ้าโอไซริให้โชค ช่วยเติมภาพลักษณ์แบรนด์ ส่วนเกมไหนจะเข้ามือจริงก็ให้คนเล่นลองแล้วตัดสินกันเอง แบบนี้แฟร์กว่า
+    </p>
+  </ContentBoxNeumorphism>
+
   <GameRankingBoard />
 
-  <ContentBoxTwoPremium as="h2" title="PIGAUTO สมัครเข้าระบบในไม่กี่วินาที ง่ายเหมือนเปิดมือถือ">
-    <p slot="left" class="text-left text-base leading-relaxed">
-      ขั้นตอนสมัครไม่ซับซ้อน กรอกข้อมูลไม่กี่อย่างก็พร้อมเข้าเล่นทันที ทั้งหมดเป็นระบบออโต้ กดครั้งเดียวก็เข้าใช้งานได้แล้ว ไม่ต้องคุยกับแอดมิน ไม่ต้องส่งบัตร
-    </p>
+  <ContentBoxSevenThreeNeumorphism as="h2" title="โปรสมาชิกใหม่ osiris 168 มีอะไรให้เช็กหลังเปิดยูส">
+    <Picture
+      slot="left"
+      src={imgNewMemberPromo}
+      alt={newMemberPromoAlt}
+      loading="lazy"
+      fetchpriority="low"
+      widths={[240, 400, 600]}
+      sizes="(max-width: 767px) calc(100vw - 64px), 360px"
+      decoding="async"
+      formats={["avif", "webp"]}
+      fallbackFormat="webp"
+      quality={80}
+      class="mx-auto h-auto w-full rounded-2xl border border-[#064c39] shadow-[0_10px_30px_rgba(18,196,143,0.24)]"
+    />
 
     <div slot="right" class="flex flex-col gap-4">
       <p class="text-left text-base leading-relaxed">
-        ไม่มีให้กรอกข้อมูลที่มากเกินไปจนดูเหมือนจะเป็นมิจฉาชีพ เว็บนี้ตั้งใจให้ “สมัครเร็วที่สุดเท่าที่จะทำได้” เพราะเรารู้ว่าผู้เล่นอยากเข้าเล่น ไม่อยากกรอกฟอร์มสมัครงาน
+        osiris 168 มีพื้นที่โปรโมชั่นสำหรับสมาชิกใหม่ตามแคมเปญที่เปิดใช้งานในแต่ละช่วง หลังสมัครสามารถเข้าไปดูสิทธิ์ โบนัส และรายละเอียดของโปรจากหน้าเมมเบอร์ได้ก่อนเลือกใช้
+      </p>
+      <p class="text-left text-base leading-relaxed">
+        ธีม เทพเจ้าโอไซริให้โชค สามารถนำมาเชื่อมกับโปรเปิดยูสใหม่ได้พอดี ทำให้แคมเปญมีภาพจำมากกว่าการแปะคำว่าโบนัสเฉย ๆ แต่คนเล่นควรเลือกโปรตามทุนและสไตล์ตัวเอง โปรเยอะไม่จำเป็นต้องรับทุกอันเหมือนบุฟเฟต์
+      </p>
+    </div>
+  </ContentBoxSevenThreeNeumorphism>
+
+  <SmoothCarousel />
+
+  <ContentBoxTwoNeumorphism as="h2" title="สมัคร OSIRIS168 ผ่านมือถือแล้วเข้าเกมต่อได้เลยไหม">
+    <p slot="left" class="text-left text-base leading-relaxed">
+      การสมัคร OSIRIS168 ทำผ่านมือถือได้ตั้งแต่เปิดบัญชี ยืนยันข้อมูล ไปจนถึงล็อกอินเข้าหน้าเมมเบอร์ หลังจากนั้นก็เลือกสล็อต ดูเครดิต หรือเช็กโปรโมชั่นต่อได้จากเครื่องเดิม
+    </p>
+
+    <div slot="right" class="flex flex-col gap-5">
+      <p class="text-left text-base leading-relaxed">
+        หน้าใช้งานของ osiris 168 ถูกวางให้เหมาะกับพฤติกรรมคนเล่นปี 2026 ที่มือถือเป็นเครื่องหลัก ส่วนธีม เทพเจ้าโอไซริให้โชค ทำหน้าที่สร้างบรรยากาศให้เว็บ ไม่ได้มาขวาง UX จนกดอะไรไม่เจอ
       </p>
 
       <a
         href="/register"
-        class="inline-flex w-fit items-center gap-2 rounded-full border border-[#f5c542]/60 bg-gradient-to-r from-[#ef4444] via-[#b91c1c] to-[#7f1d1d] px-7 py-3 text-sm font-black tracking-widest text-[#fff5e6] uppercase shadow-[0_10px_30px_rgba(239,68,68,0.28)] transition-transform duration-300 hover:scale-105">
-        <span aria-hidden="true">🐷</span> สมัครสมาชิก PIGAUTO
+        class="inline-flex w-fit items-center gap-2 rounded-full border border-[#e8b52c]/60 bg-gradient-to-r from-[#4ff0bb] via-[#12c48f] to-[#0a8f68] px-7 py-3 text-sm font-black tracking-widest text-[#03251c] uppercase shadow-[0_10px_30px_rgba(18,196,143,0.28)] transition-transform duration-300 hover:scale-105">
+        <span aria-hidden="true">📝</span> สมัครสมาชิก OSIRIS168
       </a>
     </div>
-  </ContentBoxTwoPremium>
+  </ContentBoxTwoNeumorphism>
+
+  <ContentBox as="h2" title="ระบบออโต้ OSIRIS168 ฝากถอนและเช็กเครดิตสะดวกยังไง">
+    <p class="mb-4 text-left text-base leading-relaxed">
+      ระบบออโต้ของ OSIRIS168 เชื่อมการฝากถอนเข้ากับหน้าเมมเบอร์ สมาชิกจึงส่งรายการ ดูเครดิต และเช็กสถานะได้จากจุดเดียว ก่อนกลับไปเล่นสล็อตต่อโดยไม่ต้องวิ่งหลายหน้า
+    </p>
+
+    <p class="mb-4 text-left text-base leading-relaxed">
+      สำหรับสาย osiris 168 ที่เข้าเล่นช่วงเวลาไม่แน่นอน ระบบการเงินต้องพร้อมพอ ๆ กับหน้าเกม เพราะเวลาจะเล่นไม่มีใครอยากเริ่มด้วยการตามหาแอดมิน ให้ เทพเจ้าโอไซริให้โชค อยู่ในธีม ส่วนระบบหลังบ้านต้องทำงานจริงของมัน
+    </p>
+
+    <Picture
+      src={imgAutoSystem}
+      alt={autoSystemAlt}
+      loading="lazy"
+      fetchpriority="low"
+      widths={[320, 480, 672, 900]}
+      sizes="(max-width: 767px) calc(100vw - 96px), 672px"
+      decoding="async"
+      formats={["avif", "webp"]}
+      fallbackFormat="webp"
+      quality={80}
+      class="mx-auto h-auto w-full max-w-2xl rounded-2xl border border-[#064c39] shadow-[0_10px_30px_rgba(232,181,44,0.22)]"
+    />
+  </ContentBox>
+
+  <LatestWinners2 />
+
+  <ContentBoxFloatingBadge as="h2" title="OSIRIS168 เล่นผ่านมือถือ ไม่ต้องโหลดapp ใช้งานได้ยังไง">
+    <p class="mb-4 text-left text-base leading-relaxed">
+      OSIRIS168 เล่นผ่านมือถือได้โดยตรงผ่านเว็บเบราว์เซอร์ ไม่ต้องโหลดapp หรือเสียเวลาติดตั้งโปรแกรมเพิ่ม ล็อกอินด้วยยูสเดิมก็เข้าเกมสล็อต เช็กเครดิต ดูโปรโมชั่น และทำรายการฝากถอนได้ครบจากมือถือเครื่องเดียว
+    </p>
+
+    <p class="text-left text-base leading-relaxed">
+      หน้าเว็บของ osiris 168 ปรับให้รองรับทั้งมือถือ แท็บเล็ต และคอม พร้อมคอนเซปต์ เทพเจ้าโอไซริให้โชค ที่ยังคงภาพจำของแบรนด์ไว้ครบ เปิด Chrome หรือ Safari แล้วเข้าเล่นได้เลย เหมาะกับคนปี 2026
+      ที่อยากกดเข้าเกมไว มากกว่านั่งรอแอปโหลดจนหมดอารมณ์เล่น
+    </p>
+  </ContentBoxFloatingBadge>
+
+  <ContentBoxTwo as="h2" title="หน้าเมมเบอร์ osiris 168 รวมอะไรไว้ให้คนเล่นบ้าง">
+    <p slot="left" class="text-left text-base leading-relaxed">
+      หน้าเมมเบอร์ osiris 168 เป็นจุดรวมเครดิต โปรโมชั่น ประวัติรายการ และทางเข้าเกมจากหลายค่าย ทำให้สมาชิกเช็กข้อมูลของตัวเองได้โดยไม่ต้องสลับหน้าไปมา
+    </p>
+
+    <p slot="right" class="text-left text-base leading-relaxed">
+      แม้ OSIRIS168 จะใช้ธีม เทพเจ้าโอไซริให้โชค เป็นภาพจำ แต่เรื่องที่คนเล่นเปิดดูบ่อยที่สุดยังเป็นเครดิตกับรายการของตัวเองอยู่ดี ของสำคัญควรเจอก่อนของสวย แบบนั้นถึงเรียกว่าออกแบบมาให้คนเล่นจริง
+    </p>
+  </ContentBoxTwo>
 
   <LoginRtpSection />
 
-  <SmoothCarousel />
+  <ContentBoxNeumorphism as="h2" title="OSIRIS168 เหมาะกับสายสล็อตแบบไหนในปี 2026">
+    <p class="mb-4 text-left text-base leading-relaxed">
+      OSIRIS168 เหมาะกับคนที่ชอบเกมสล็อตหลายค่าย ชอบตามเกมใหม่ ใช้มือถือเป็นหลัก และต้องการให้ฝากถอน โปรโมชั่น และหน้าเมมเบอร์อยู่ในระบบเดียว
+    </p>
+
+    <p class="text-left text-base leading-relaxed">
+      ถ้าชอบแบรนด์ที่มีคาแรกเตอร์ชัด osiris 168 ก็เพิ่มบรรยากาศด้วยแนว เทพเจ้าโอไซริให้โชค เข้ามาอีกชั้น ได้ทั้งธีมที่จำง่ายและระบบที่ใช้งานตรงไปตรงมา เกมจะเปลี่ยนกี่ค่ายก็ยังจบในยูสเดียว
+    </p>
+  </ContentBoxNeumorphism>
 
   <ReviewCardSumo2 />
 
-  <Faq2 title="คำถามที่พบบ่อยเกี่ยวกับ PIGAUTO" faqs={faqs} />
+  <Faq4 title="คำถามที่พบบ่อยเกี่ยวกับ OSIRIS168" faqs={faqs} />
 
   <Navfoot />
 </MainLayout>

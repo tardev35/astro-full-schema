@@ -4,8 +4,8 @@ import bgConfig from "../assets/bg.json";
 import "../styles/global.css";
 import { BRAND_NAME, BRAND_TEXT, brandProfile, fontStack, iconVersion } from "../lib/brandProfile";
 import { canonicalFor } from "../lib/schema";
-import Navbar from "../components/NavbarStyle4.astro";
-import Footer from "../components/FooterPremium.astro";
+import Navbar from "../components/NavbarStyle11.astro";
+import Footer from "../components/Footer.astro";
 
 // Only banner1 is ever rendered, so only banner1 is imported.
 //
@@ -54,8 +54,8 @@ const mobileBannerImg = mobileBanner
   : null;
 
 const {
-  title = "PIGAUTO เว็บสล็อตออโต้ไม่มีขั้นต่ำ อันดับ1 ฝากถอนตรง รองรับวอเล็ท",
-  description = "PIGAUTO เว็บสล็อตออโต้ไม่มีขั้นต่ำ อันดับ 1 ลิขสิทธิ์แท้ ระบบเร็ว ฝากถอนตรง เฉียมคม รองรับวอเล็ท ปลอดภัยสูง สมัครเข้าระบบในไม่กี่วินาที",
+  title = "OSIRIS168 เว็บสล็อตระบบใหม่ รวมค่ายเกม 2026 มีโปรสมาชิกใหม่",
+  description = "OSIRIS168 เว็บสล็อตระบบใหม่ปี 2026 รวมค่ายเกม โปรสมาชิกใหม่ osiris 168 ธีมเทพเจ้าโอไซริให้โชค ฝากถอนออโต้เต็มระบบ เล่นผ่านมือถือ ไม่ต้องโหลดapp",
   robots = "index, follow",
 } = Astro.props;
 
@@ -207,7 +207,7 @@ const profile = brandProfile(Astro.site);
         background-attachment: fixed;
         background-repeat: no-repeat;
         margin: 0;
-        background-color: #0a0506;
+        background-color: #050d0b;
         font-weight: 400;
         font-family: var(--font-sans) !important;
       }
@@ -260,7 +260,7 @@ const profile = brandProfile(Astro.site);
         }
         <Image
           src={mainBanner}
-          alt="แบนเนอร์ PIGAUTO ธีมตรุษจีน พื้นหลังสีแดงเข้มมีลายวงกลมทองและพัดจีนสีทอง แขวนโคมไฟจีนสีแดงทั้งสองฝั่ง ตรงกลางด้านบนเป็นโลโก้ PIGAUTO รูปหมูสีชมพูในวงเฟืองสีเงิน ถัดลงมาเป็นข้อความสีขาวว่า เว็บไซต์เดิมพันที่ดีที่สุด ต่อด้วยคำว่า PIGAUTO ตัวอักษรทองขนาดใหญ่ และบรรทัดล่างว่า เว็บสล็อตออโต้แท้ เดิมพันสนุก ไม่มีขั้นต่ำ ซ้ายและขวาเป็นพรีเซนเตอร์หญิงสวมชุดกี่เพ้าสีแดงปักลายทอง รายล้อมด้วยไพ่ ชิปคาสิโน และเหรียญทองจีน"
+          alt="แบนเนอร์ OSIRIS168 พื้นหลังวิหารอียิปต์โทนเขียวมรกตเข้ม มีเสาหินสลักอักษรไฮโรกลิฟิกทั้งสองฝั่งและปิรามิดอยู่ด้านหลัง ตรงกลางด้านบนเป็นโลโก้ OSIRIS168 สีทองประดับมงกุฎอาเตฟและปีกทอง ถัดลงมาเป็นข้อความตัวใหญ่สีทองว่า OSIRIS168 เว็บสล็อตระบบใหม่ และบรรทัดล่างว่า รวมค่ายเกม 2026 โปรสมาชิกใหม่ ด้านซ้ายเป็นพรีเซนเตอร์หญิงสวมชุดอียิปต์สีเขียวมรกตประดับเครื่องประดับทอง ด้านขวาเป็นรูปปั้นเทพอนูบิสหัวสุนัขสีทอง แถวล่างสุดมีป้ายสามอันเขียนว่า ฝากถอนออโต้เต็มระบบ เล่นผ่านมือถือ และ ไม่ต้องโหลดapp"
           loading="eager"
           fetchpriority="high"
           widths={[412, 640, 828, 1024, 1280, 1600, 1900]}

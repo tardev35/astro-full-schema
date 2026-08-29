@@ -9,20 +9,20 @@ const { titleleft, titleright, as: HeadingTag = "h2" } = Astro.props;
 
 <section class="relative z-10 mx-auto mb-10 w-full max-w-[1400px] px-4 font-sans">
   <div
-    class="group relative isolate w-full overflow-hidden rounded-3xl border border-[#7c3aed]/80 bg-[#0b011b]/92 p-8 text-[#e9d5ff] shadow-[0_10px_30px_rgba(168,85,247,0.22)] backdrop-blur-xl transition-all duration-500 hover:border-[#a855f7]/70 md:p-10">
+    class="group relative isolate w-full overflow-hidden rounded-3xl border border-[#064c39] bg-[#0f241d]/92 p-8 text-[#dfeee6] shadow-[0_10px_30px_rgba(18,196,143,0.22)] backdrop-blur-xl transition-all duration-500 hover:border-[#12c48f]/70 md:p-10">
     <div class="grid grid-cols-1 gap-8 md:grid-cols-[3fr_7fr] md:items-center">
       <article
-        class="flex flex-col gap-4 border-b border-[#7c3aed]/80 pb-6 text-center text-base font-medium text-[#f5c542] md:border-r md:border-b-0 md:pr-6 md:pb-0 md:text-left">
+        class="flex flex-col gap-4 border-b border-[#064c39] pb-6 text-center text-base font-medium text-[#e8b52c] md:border-r md:border-b-0 md:pr-6 md:pb-0 md:text-left">
         {
           titleleft && (
-            <HeadingTag class="text-center text-4xl leading-normal font-black tracking-wider text-[#e9d5ff] uppercase drop-shadow-[0_2px_10px_rgba(168,85,247,0.45)] md:text-left">{titleleft}</HeadingTag>
+            <HeadingTag class="text-center text-4xl leading-normal font-black tracking-wider text-[#f8ecc9] uppercase drop-shadow-[0_2px_10px_rgba(18,196,143,0.45)] md:text-left">{titleleft}</HeadingTag>
           )
         }
         <slot name="left" />
       </article>
 
-      <article class="flex flex-col gap-3 text-left text-base leading-relaxed text-[#e9d5ff] md:pl-6">
-        {titleright && <HeadingTag class="flex items-center gap-2 text-2xl leading-normal font-black text-[#f5c542] drop-shadow-[0_0_8px_rgba(168,85,247,0.45)]">{titleright}</HeadingTag>}
+      <article class="flex flex-col gap-3 text-left text-base leading-relaxed text-[#dfeee6] md:pl-6">
+        {titleright && <HeadingTag class="flex items-center gap-2 text-2xl leading-normal font-black text-[#e8b52c] drop-shadow-[0_0_8px_rgba(18,196,143,0.45)]">{titleright}</HeadingTag>}
         <slot name="right" />
       </article>
     </div>

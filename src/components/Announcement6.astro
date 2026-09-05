@@ -2,9 +2,9 @@
 const {
   // No leading emoji in the message. The badge to its left already shows one,
   // and a decorative glyph baked into a text prop cannot be marked aria-hidden
-  // from here — it would be read out as "soccer ball" ahead of the sentence,
+  // from here — it would be read out as "pig face" ahead of the sentence,
   // three times over, once per marquee copy.
-  message = "POE888 เว็บสีฟ้า รวมหวยไทย หวยลาว และตลาดหวยออนไลน์ไว้ในบัญชีเดียว • เลือกเลข จัดโพย และตรวจผลผ่านมือถือได้จากหน้าจอเดียว • แต่ละตลาดมีรอบและเวลาปิดรับต่างกัน เช็กข้อมูลของงวดก่อนยืนยันโพยทุกครั้ง • ระบบสมาชิกรวมโพย เครดิต และประวัติรายการไว้ในพื้นที่เดียว • ฝากถอนและจัดการเครดิตผ่านหน้าบัญชี ตรวจสอบรายการย้อนหลังได้เอง • ทางเข้า POE888 ใช้งานได้ทั้งมือถือและคอมด้วยบัญชีเดิม",
+  message = "PIGAUTO สล็อตหมูเว็บตรง เชื่อมเกมลิขสิทธิ์ผ่าน API แท้จากค่ายผู้พัฒนาโดยตรง • ฝากถอนออโต้ภายใน 3 วินาที ยอดเข้าทันที ไม่ต้องส่งสลิป • รองรับทั้งบัญชีธนาคารและทรูมันนี่วอเลท ฝากได้ตั้งแต่ 1 บาท ไม่มีขั้นต่ำ • ไม่มีนโยบายล็อกยูส โบนัสและฟรีสปินออกตามค่ามาตรฐานของค่ายเกม • ระบบความปลอดภัยมาตรฐานเดียวกับแอปธนาคาร ข้อมูลสมาชิกถูกเก็บเป็นความลับ • ทีมงานซัพพอร์ต 24 ชั่วโมง แนะนำเกมและส่งเรื่องเข้าค่ายให้โดยตรง",
 } = Astro.props;
 
 const SCROLL_PX_PER_SEC = 50;
@@ -15,28 +15,28 @@ const scrollSeconds = Math.max(12, Math.round((message.length * PX_PER_CHAR + TR
 
 <div class="mx-auto max-w-[900px] p-2">
   <div
-    class="group relative flex h-[50px] items-center overflow-hidden rounded-full border border-[#ffd93d]/40 bg-gradient-to-b from-[#04173f] via-[#020a1e] to-[#04173f] p-1 shadow-[0_5px_20px_rgba(255,217,61,0.18),inset_0_1px_1px_rgba(255,255,255,0.08)]">
-    <div class="pointer-events-none absolute -top-6 left-10 h-16 w-16 rounded-full bg-[#ffd93d]/20 blur-[30px]"></div>
-    <div class="pointer-events-none absolute right-16 -bottom-6 h-16 w-16 rounded-full bg-[#a8d4ff]/15 blur-[30px]"></div>
+    class="group relative flex h-[50px] items-center overflow-hidden rounded-full border border-[#f5c542]/45 bg-gradient-to-b from-[#3a0808] via-[#1a0303] to-[#3a0808] p-1 shadow-[0_5px_20px_rgba(245,197,66,0.2),inset_0_1px_1px_rgba(255,255,255,0.08)]">
+    <div aria-hidden="true" class="pointer-events-none absolute -top-6 left-10 h-16 w-16 rounded-full bg-[#f5c542]/22 blur-[30px]"></div>
+    <div aria-hidden="true" class="pointer-events-none absolute right-16 -bottom-6 h-16 w-16 rounded-full bg-[#d92121]/25 blur-[30px]"></div>
 
     <div
-      class="relative z-10 flex h-full shrink-0 items-center gap-1.5 rounded-full border border-[#ffe98a]/40 bg-gradient-to-b from-[#ffe98a] via-[#ffd93d] to-[#cd994e] px-3.5 shadow-[inset_0_1px_1px_rgba(255,255,255,0.6)] md:px-4">
-      <span class="h-1.5 w-1.5 animate-pulse rounded-full bg-[#02143a] shadow-[0_0_6px_rgba(2,20,58,0.8)]"></span>
-      <span class="text-xs font-black tracking-wider text-[#02143a] uppercase md:text-sm"><span aria-hidden="true">🎫</span> POE888</span>
+      class="relative z-10 flex h-full shrink-0 items-center gap-1.5 rounded-full border border-[#ffe08a]/45 bg-gradient-to-b from-[#ffe08a] via-[#f5c542] to-[#b07d12] px-3.5 shadow-[inset_0_1px_1px_rgba(255,255,255,0.6)] md:px-4">
+      <span class="h-1.5 w-1.5 animate-pulse rounded-full bg-[#1f0303] shadow-[0_0_6px_rgba(31,3,3,0.8)]"></span>
+      <span class="text-xs font-black tracking-wider text-[#1f0303] uppercase md:text-sm"><span aria-hidden="true">🐷</span> PIGAUTO</span>
     </div>
 
     <div class="marquee-window relative z-10 flex-1 overflow-hidden px-4">
-      <div class="marquee-track flex w-max gap-10 text-sm font-bold whitespace-nowrap text-[#ffe98a]/90" style={`animation-duration:${scrollSeconds}s`}>
+      <div class="marquee-track flex w-max gap-10 text-sm font-bold whitespace-nowrap text-[#ffe08a]/90" style={`animation-duration:${scrollSeconds}s`}>
         <span>{message}</span>
-        <span aria-hidden="true" class="text-[#a8d4ff]/80">✨</span>
+        <span aria-hidden="true" class="text-[#f9a8c0]/85">✨</span>
         <span aria-hidden="true">{message}</span>
-        <span aria-hidden="true" class="text-[#a8d4ff]/80">✨</span>
+        <span aria-hidden="true" class="text-[#f9a8c0]/85">✨</span>
         <span aria-hidden="true">{message}</span>
-        <span aria-hidden="true" class="text-[#a8d4ff]/80">✨</span>
+        <span aria-hidden="true" class="text-[#f9a8c0]/85">✨</span>
       </div>
     </div>
 
-    <div class="pointer-events-none absolute inset-x-0 bottom-0 h-[2px] bg-gradient-to-r from-transparent via-[#ffd93d]/70 to-transparent opacity-70"></div>
+    <div aria-hidden="true" class="pointer-events-none absolute inset-x-0 bottom-0 h-[2px] bg-gradient-to-r from-transparent via-[#f5c542]/70 to-transparent opacity-70"></div>
   </div>
 </div>
 

@@ -4,18 +4,18 @@ const providers = [
   { name: "Pragmatic Play", desc: "สายรอรอบโบนัสจะคุ้นกับ Sweet Bonanza, Gates of Olympus และ Starlight Princess อยู่แล้ว", tag: "ฟรีสปิน", icon: "🎁" },
   { name: "JILI", desc: "เกมเดินจังหวะไว ฟีเจอร์หลากหลาย เช่น Super Ace, Fortune Gems และ Money Coming", tag: "จังหวะไว", icon: "⚡" },
   { name: "Joker Gaming", desc: "วงล้อคลาสสิกที่คนไทยคุ้นมือ กติกาตรงไปตรงมา เปิดเล่นต่อจากยูสเดิมได้ทันที", tag: "คลาสสิก", icon: "🃏" },
-  { name: "ทดลองเล่นฟรี", desc: "ดูรูปแบบเกมและฟีเจอร์ด้วยเครดิตจำลองก่อนลงเงินจริง เครดิตส่วนนี้ถอนไม่ได้", tag: "โหมดทดลอง", icon: "🕹️" },
-  { name: "Smart Wallet", desc: "รวมเครดิตไว้จุดเดียว สลับค่ายกี่รอบก็ไม่ต้องโยกเงินเองระหว่างหน้ากระเป๋า", tag: "จัดการเครดิต", icon: "👛" },
-  { name: "ระบบ AI หลังบ้าน", desc: "ช่วยรวมข้อมูลเกมที่เล่นบ่อย เทียบ RTP และสรุปโบนัสให้ดูจากหน้าเมมเบอร์", tag: "จัดข้อมูล", icon: "🤖" },
+  { name: "เกมยิงปลา", desc: "หมวดยิงปลาอยู่ในยูสเดียวกับสล็อต เปลี่ยนไปพักมือแล้วกลับมาปั่นต่อได้ไม่ต้องออกจากระบบ", tag: "ยิงปลา", icon: "🐟" },
+  { name: "ทรูมันนี่วอเลท", desc: "ไม่สะดวกผูกบัญชีธนาคารก็เติมจากวอเลทได้เต็มระบบ ยอดเข้าเหมือนกันทุกช่องทาง", tag: "รองรับวอเลท", icon: "👛" },
+  { name: "ฝากถอนออโต้ 3 วิ", desc: "ระบบประมวลผลเอง ไม่ต้องส่งสลิป ฝากได้ตั้งแต่ 1 บาท ถอนเท่าไหร่ก็ไม่มียอดขั้นต่ำ", tag: "ไม่มีขั้นต่ำ", icon: "⏱️" },
 ];
 ---
 
-<section aria-label="ค่ายเกมและระบบที่ RIEL38 รวมไว้ในบัญชีเดียว" class="relative z-10 mx-auto mb-10 w-full max-w-[1400px] px-4 font-sans">
+<section aria-label="ค่ายเกมและระบบที่ PIGAUTO รวมไว้ในยูสเดียว" class="relative z-10 mx-auto mb-10 w-full max-w-[1400px] px-4 font-sans">
   <div class="mb-8 flex w-full flex-col items-center justify-center gap-2 text-center">
-    <p class="bg-gradient-to-r from-[#9d174d] via-[#db2777] to-[#7e22ce] bg-clip-text text-3xl font-black tracking-widest text-transparent uppercase">
-      ค่ายเกมและระบบที่ <span class="text-[#db2777]">RIEL38</span> รวมไว้ในบัญชีเดียว
+    <p class="bg-gradient-to-r from-[#ffe08a] via-[#f5c542] to-[#d99e1f] bg-clip-text text-3xl font-black tracking-widest text-transparent uppercase">
+      ค่ายเกมและระบบที่ <span class="text-[#f5c542]">PIGAUTO</span> รวมไว้ในยูสเดียว
     </p>
-    <div class="mt-2 h-[4px] w-24 rounded-full bg-gradient-to-r from-transparent via-[#ec4899] to-transparent"></div>
+    <div class="mt-2 h-[4px] w-24 rounded-full bg-gradient-to-r from-transparent via-[#f5c542] to-transparent"></div>
   </div>
 
   <div class="grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-4 lg:gap-5 xl:grid-cols-7">
@@ -23,20 +23,20 @@ const providers = [
       providers.map((provider) => (
         <a
           href="/register"
-          class="group relative flex flex-col items-center justify-center overflow-hidden rounded-2xl border border-[#f9a8d4] bg-white p-5 shadow-[0_10px_30px_rgba(236,72,153,0.12)] transition-all duration-300 hover:-translate-y-2 hover:border-[#ec4899]/70 hover:bg-[#fdf2f8] hover:shadow-[0_15px_40px_rgba(236,72,153,0.22)]">
-          <div class="pointer-events-none absolute inset-0 bg-[#ec4899]/6 opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
+          class="group relative flex flex-col items-center justify-center overflow-hidden rounded-2xl border border-[#f5c542]/40 bg-[#2a0505] p-5 shadow-[0_10px_30px_rgba(245,197,66,0.12)] transition-all duration-300 hover:-translate-y-2 hover:border-[#f5c542]/80 hover:bg-[#3a0808] hover:shadow-[0_15px_40px_rgba(245,197,66,0.24)]">
+          <div class="pointer-events-none absolute inset-0 bg-[#f5c542]/6 opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
 
-          <div class="absolute top-2 right-2 z-10 rounded-full bg-gradient-to-r from-[#f472b6] via-[#ec4899] to-[#a855f7] px-2 py-0.5 text-[9px] font-black tracking-wide whitespace-nowrap text-white shadow-sm transition-transform duration-300 group-hover:scale-110">
+          <div class="absolute top-2 right-2 z-10 rounded-full bg-gradient-to-r from-[#ffe08a] via-[#f5c542] to-[#d99e1f] px-2 py-0.5 text-[9px] font-black tracking-wide whitespace-nowrap text-[#1f0303] shadow-sm transition-transform duration-300 group-hover:scale-110">
             {provider.tag}
           </div>
 
           <div aria-hidden="true" class="mb-3 text-4xl transition-transform duration-300 group-hover:scale-125 group-hover:rotate-3">
             {provider.icon}
           </div>
-          <p class="text-center text-sm font-black text-[#9d174d] transition-colors group-hover:text-[#831843]">{provider.name}</p>
-          <p class="mt-1 text-center text-[10px] text-[#8a5670]">{provider.desc}</p>
+          <p class="text-center text-sm font-black text-[#ffe08a] transition-colors group-hover:text-[#f5c542]">{provider.name}</p>
+          <p class="mt-1 text-center text-[10px] text-[#d7b9a4]">{provider.desc}</p>
 
-          <span class="relative z-10 mt-4 block w-full rounded-full border border-[#f9a8d4] bg-[#fdf2f8] py-1.5 text-center text-[11px] font-bold text-[#9d174d] shadow-inner transition-colors duration-300 group-hover:border-transparent group-hover:bg-gradient-to-r group-hover:from-[#f472b6] group-hover:via-[#ec4899] group-hover:to-[#a855f7] group-hover:text-white">
+          <span class="relative z-10 mt-4 block w-full rounded-full border border-[#b07d12]/60 bg-[#3a0808] py-1.5 text-center text-[11px] font-bold text-[#ffe08a] shadow-inner transition-colors duration-300 group-hover:border-transparent group-hover:bg-gradient-to-r group-hover:from-[#ffe08a] group-hover:via-[#f5c542] group-hover:to-[#d99e1f] group-hover:text-[#1f0303]">
             สมัครเข้าเล่น
           </span>
         </a>

@@ -1,95 +1,82 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
-import Announcement from "../components/Announcement3.astro";
+import Announcement from "../components/Announcement6.astro";
 import ContentBox from "../components/ContentBox.astro";
-import ContentBoxPremium from "../components/ContentBoxPremium.astro";
-import ContentBoxSpecial from "../components/ContentBoxSpecial.astro";
-import ContentBoxTwo from "../components/ContentBoxTwo.astro";
-import ContentBoxTwoPremium from "../components/ContentBoxTwoPremium.astro";
-import ContentBoxSevenThree from "../components/ContentBoxSevenThree.astro";
-import ContentBoxSevenThreePremium from "../components/ContentBoxSevenThreePremium.astro";
+import ContentBoxNeumorphism from "../components/ContentBoxNeumorphism.astro";
+import ContentBoxCyberCut from "../components/ContentBoxCyberCut.astro";
+import ContentBoxTwoCyberCut from "../components/ContentBoxTwoCyberCut.astro";
+import ContentBoxTwoNeumorphism from "../components/ContentBoxTwoNeumorphism.astro";
+import ContentBoxSevenThreeCyberCut from "../components/ContentBoxSevenThreeCyberCut.astro";
+import ContentBoxSevenThreeNeumorphism from "../components/ContentBoxSevenThreeNeumorphism.astro";
 import FeatureHighlights from "../components/FeatureHighlights.astro";
 import ProviderGrid from "../components/ProviderGrid.astro";
 import GameRankingBoard from "../components/GameRankingBoard.astro";
 import SmoothCarousel from "../components/SmoothCarousel.astro";
-import LatestWinners3 from "../components/LatestWinners3.astro";
+import LatestWinners from "../components/LatestWinners.astro";
 import LoginRtpSection from "../components/LoginRtpSection.astro";
 import ReviewCardSumo2 from "../components/ReviewCardSumo2.astro";
-import Faq3 from "../components/Faq3.astro";
+import FaqHuay from "../components/FaqHuay.astro";
 import Navfoot from "../components/Navfoot.astro";
 
 import { Picture } from "astro:assets";
 import { pageGraph } from "../lib/schema";
-import imgGameLobby from "../assets/slide2.png";
-import imgSmartWallet from "../assets/slide4.png";
+import imgWallet from "../assets/slide1.png";
+import imgNoMinimum from "../assets/slide2.png";
 
-const pageTitle = "RIEL38 เว็บสล็อตมาใหม่ เลือกเล่นกว่า 2,000 เกม ลองเล่นฟรีที่ เรียล38";
+const pageTitle = "PIGAUTO สล็อตหมูเว็บตรง แตกง่าย รับวอเลท ฝากถอนไม่มีขั้นต่ำ";
 
-const pageDescription = "RIEL38 เว็บสล็อตมาใหม่ รวมค่ายดัง มีเกมสล็อตให้เลือก กว่า 2,000 เกม รองรับ Smart Wallet เข้าสู่ระบบ ได้ทุกอุปกรณ์ สมัครสมาชิกรับโปรดีๆ ทดลองเล่นฟรี เรียล38";
+const pageDescription = "PIGAUTO สล็อตหมูเว็บตรง ระบบออโต้ที่ไวที่สุด เกมแท้แตกง่าย โบนัสแตกดุเดือด ฝากถอนเร็ว ไม่มีขั้นต่ำ ปลอดภัย รองรับวอเลท สมัครเลย";
 
 const announcement =
-  "เรียล38 เปิดให้เลือกเกมสล็อตกว่า 2,000 เกม จากค่ายชั้นนำมากกว่า 30 ค่าย จบในบัญชีเดียว • อยากดูจังหวะเกมก่อนก็กดโหมดทดลองเล่นฟรี เครดิตจำลองถอนไม่ได้และไม่นับเป็นยอดเทิร์น • Smart Wallet เก็บเครดิตไว้ที่เดียว เปลี่ยนค่ายแล้วเข้าเกมต่อได้ทันที • AI หลังบ้านคอยรวมข้อมูลเกมที่เล่นบ่อย เทียบ RTP และสรุปโบนัสไว้ให้ดูจากหน้าเมมเบอร์ • ยูสเดิมใช้เข้าได้ทั้งมือถือ แท็บเล็ต และคอม เปลี่ยนเครื่องกลางวันแล้วเล่นต่อได้ • โปรฝาก 39 รับรวม 69 เทิร์น 1 เท่า ถอนได้สูงสุด 300 บาท";
+  "PIGAUTO สล็อตหมูเว็บตรง เชื่อมเกมลิขสิทธิ์ผ่าน API แท้จากค่ายผู้พัฒนาโดยตรง • ฝากถอนออโต้ภายใน 3 วินาที ยอดเข้าทันที ไม่ต้องส่งสลิป • รองรับทั้งบัญชีธนาคารและทรูมันนี่วอเลท ฝากได้ตั้งแต่ 1 บาท ไม่มีขั้นต่ำ • ไม่มีนโยบายล็อกยูส โบนัสและฟรีสปินออกตามค่ามาตรฐานของค่ายเกม • ระบบความปลอดภัยมาตรฐานเดียวกับแอปธนาคาร ข้อมูลสมาชิกถูกเก็บเป็นความลับ • ทีมงานซัพพอร์ต 24 ชั่วโมง แนะนำเกมและส่งเรื่องเข้าค่ายให้โดยตรง";
 
-const gameLobbyAlt =
-  "ภาพโปรโมชั่น RIEL38 ข้อความ กว่า 2,000 เกม รวม 30+ ค่ายดัง พร้อมปุ่มสีชมพูคำว่า ทดลองเล่นฟรี ฉากหลังเป็นหน้าล็อบบี้เกมสล็อต มีโลโก้ค่าย PG, PRAGMATIC PLAY, JILI, HABANERO และ JOKER พร้อมคำว่า และอีกมากมาย ด้านขวาเป็นพรีเซนเตอร์หญิงชี้มาที่กล้อง";
+const walletAlt =
+  "ภาพโปรโมชั่น PIGAUTO ข้อความ รองรับวอเล็ท เต็มระบบ และ pig auto wallet ใช้ง่าย พรีเซนเตอร์หญิงในชุดกี่เพ้าสีแดงปักลายทอง ล้อมด้วยโคมไฟจีน พัดกระดาษสีทอง ไพ่ และเหรียญทอง มีโลโก้หมู PIGAUTO อยู่ด้านบน";
 
-const smartWalletAlt =
-  "ภาพอธิบายระบบ Smart Wallet ของ RIEL38 ข้อความ สลับเกมหลายค่าย เครดิตไม่สะดุด ตรงกลางเป็นกระเป๋าเงินสามมิติสีชมพู ล้อมด้วยไอคอนวงกลม SLOT, LIVE CASINO, FISHING, CRASH และ SPORTS ด้านล่างมีป้ายสามอันว่า รวมเครดิตไว้จุดเดียว เข้าเกมต่อเนื่อง และ สลับค่ายง่าย";
+const noMinimumAlt =
+  "ภาพโปรโมชั่น PIGAUTO ข้อความ เว็บสล็อตออโต้ไม่มีขั้นต่ำ และ เล่นได้อย่างเป็นมิตร ปลอดภัยสูง พรีเซนเตอร์หญิงในชุดกี่เพ้าสีแดงยืนด้านขวา มีพัดทอง ชิปคาสิโน และเหรียญทองบนฉากหลังแดงทอง";
 
-const freeTrialRemark = [
-  { label: "วันที่ทดสอบ", value: "1 ก.ย." },
-  { label: "มือถือที่ใช้ทดสอบ", value: "SAMSUNG A17" },
-  { label: "บราวเซอร์", value: "Google Chrome" },
-  { label: "ความเร็วโหลดเกม", value: "ประมาณ 6-10 วินาที" },
-  { label: "ค่ายเกมที่ทดลองเล่น", value: "PG SLOT และ JILI และเปิดใช้งาน Smart Wallet ทำงานได้แม่นยำ" },
-];
-
-const providerStyles = [
+const apiPoints = [
+  {
+    icon: "🔗",
+    title: "API แท้จากค่ายผู้พัฒนาโดยตรง",
+    description: "เกมทุกตัวเรียกผ่าน API ลิขสิทธิ์ของค่ายเอง ไม่มีคนกลางมาปรับเรทระหว่างทาง ค่าที่ค่ายตั้งไว้เป็นอย่างไร หน้าจอผู้เล่นก็เห็นอย่างนั้น",
+    accent: "gold" as const,
+  },
   {
     icon: "📱",
-    title: "PG Soft เหมาะกับสายเล่นมือถือและชอบเกมเข้าใจง่าย",
-    description: "เกมจาก PG Soft มักมีภาพจำชัด เล่นบนมือถือสะดวก และฟีเจอร์เรียนรู้ไม่ยาก ตัวที่คนเล่นคุ้นชื่อ เช่น Mahjong Ways 2, Lucky Neko, Fortune Tiger และ Ways of the Qilin",
-    accent: "pink" as const,
+    title: "เล่นลื่นทั้งมือถือและคอม",
+    description: "หน้าเว็บเปิดไวบนจอเล็ก ปุ่มอยู่ในระยะนิ้ว ย้ายไปเปิดบนคอมก็ได้ภาพชุดเดียวกัน ไม่ต้องโหลดแอปเพิ่มและไม่ต้องซูมหาปุ่ม",
+    accent: "crimson" as const,
   },
   {
-    icon: "🎁",
-    title: "Pragmatic Play เหมาะกับสายชอบฟรีสปินและตัวคูณ",
-    description:
-      "ถ้าชอบรอลุ้นรอบโบนัส เกมอย่าง Sweet Bonanza, Gates of Olympus, Starlight Princess และ Sugar Rush เป็นชื่อที่เจอกันบ่อย จุดเด่นคือแต่ละเกมมีฟีเจอร์ค่อนข้างชัด คนเล่นจึงเลือกแนวที่ตัวเองชอบได้ง่าย",
-    accent: "violet" as const,
-  },
-  {
-    icon: "⚡",
-    title: "JILI มีเกมจังหวะไวสำหรับสายชอบเปลี่ยนเกมบ่อย",
-    description: "ค่าย JILI มีเกมที่เดินจังหวะเร็วและมีฟีเจอร์หลากหลาย เช่น Super Ace, Fortune Gems, Golden Empire และ Money Coming เหมาะกับคนที่ชอบลองหลายเกมในหนึ่งรอบเล่น",
-    accent: "pink" as const,
+    icon: "🔓",
+    title: "ไม่มีนโยบายล็อกยูส",
+    description: "ยูสของสมาชิกไม่ถูกจำกัดรอบเล่นหรือกันฟีเจอร์ใด ๆ โบนัสและฟรีสปินออกตามค่ามาตรฐานที่ค่ายเกมกำหนดไว้เท่านั้น",
+    accent: "gold" as const,
   },
 ];
 
 const faqs = [
   {
-    q: "RIEL38 มีเกมสล็อตให้เลือกกี่เกม",
-    a: "รวมเกมจากหลายค่ายไว้มากกว่า 2,000 เกมในบัญชีเดียว มีทั้งเกมยอดนิยม เกมใหม่ ฟรีสปิน และสล็อตหลายสไตล์ เลือกตามค่าย ธีม หรือฟีเจอร์ที่ต้องการได้โดยไม่ต้องเปิดยูสใหม่ตามค่าย",
+    q: "PIGAUTO คือเว็บอะไร?",
+    a: "PIGAUTO คือสล็อตหมูเว็บตรง API แท้ ที่รวมเกมลิขสิทธิ์จากค่ายดัง แตกง่าย ระบบออโต้เร็ว 3 วิ รองรับวอเลท ฝากถอนไม่มีขั้นต่ำ และจ่ายจริงทุกยอด",
   },
   {
-    q: "โหมดทดลองเล่นฟรีของ เรียล38 ใช้งานยังไง",
-    a: "กดเข้าโหมดทดลองเล่นเพื่อดูรูปแบบเกมและฟีเจอร์ก่อนลงเงินจริงได้เลย เครดิตในโหมดนี้เป็นเครดิตจำลอง ถอนไม่ได้และไม่นับเป็นยอดเทิร์น และไม่ใช่ทุกเกมที่เปิดโหมดทดลองให้เล่น",
+    q: "PIGAUTO แตกง่ายจริงไหม?",
+    a: "แตกง่ายจริง เพราะเป็นระบบ API แท้จากค่ายเกมโดยตรง ไม่มีการปรับเรท ทำให้โบนัส Big Win, Mega Win และฟรีสปินออกตามค่ามาตรฐานของค่าย",
   },
   {
-    q: "RIEL38 รวมค่ายเกมอะไรไว้บ้าง",
-    a: "มีผู้ให้บริการสล็อตกว่า 30 ค่ายอยู่ในระบบเดียว ทั้งค่ายที่คนไทยคุ้นชื่ออย่าง PG Soft, Pragmatic Play, JILI และ Joker Gaming ไปจนถึงผู้ให้บริการระดับสากลรายอื่นตามที่เปิดให้บริการอยู่",
+    q: "ฝากถอนใช้เวลานานเท่าไหร่?",
+    a: "ระบบฝากถอนของ PIGAUTO ใช้เวลาเพียง 3 วินาที ไม่ต้องส่งสลิป รองรับทั้งธนาคารและวอเลท สามารถถอนยอดใหญ่ได้ทันทีไม่ดองบิล",
   },
   {
-    q: "Smart Wallet ของ RIEL38 ทำงานยังไง",
-    a: "เป็นศูนย์กลางของเครดิตในระบบสมาชิก เลือกเกมจากหลายค่ายได้โดยยังจัดการยอดผ่านบัญชีหลักจุดเดียว ไม่ต้องมีหน้ากระเป๋าเงินหลายชุดให้จำ และไม่ต้องโยกเครดิตเองก่อนเปลี่ยนค่าย",
+    q: "เว็บนี้มีขั้นต่ำฝากถอนหรือไม่?",
+    a: "ไม่มีขั้นต่ำ 1 บาทก็ฝากได้ ถอนเท่าไหร่ก็ได้ เหมาะสำหรับผู้เล่นทุกทุน โดยเฉพาะผู้เล่นทุนน้อยที่ต้องการปั้นกำไรแบบค่อยเป็นค่อยไป",
   },
   {
-    q: "ระบบ AI หลังบ้านของ เรียล38 ช่วยอะไรได้บ้าง",
-    a: "ใช้ข้อมูลที่ระบบมีอยู่ช่วยจัดให้ดูง่ายขึ้น เช่น รวมเกมที่เล่นบ่อย เปรียบเทียบ RTP ตรวจโบนัส และเช็กประวัติการใช้งาน ไม่ได้มีหน้าที่ทำนายว่าเกมไหนจะแตกหรือรอบไหนจะจ่าย",
-  },
-  {
-    q: "เข้าสู่ระบบ RIEL38 จากอุปกรณ์ไหนได้บ้าง",
-    a: "ใช้บัญชีเดิมล็อกอินได้จากมือถือ แท็บเล็ต หรือคอมพิวเตอร์ เพื่อเปิดเกม เช็กเครดิต และดูโปรโมชั่น โดยไม่ต้องสร้างยูสใหม่ตามเครื่องที่ใช้ เปลี่ยนอุปกรณ์กลางวันแล้วเล่นต่อได้",
+    q: "ทีมงานช่วยเหลือผู้เล่นอย่างไร?",
+    a: "ทีมงาน PIGAUTO พร้อมซัพพอร์ต 24 ชั่วโมง ช่วยแก้ปัญหา แนะนำเกม และดูแลธุรกรรมทุกอย่าง รวมถึงดำเนินการติดต่อค่ายเกมให้เมื่อพบปัญหาในระบบ",
   },
 ];
 
@@ -105,180 +92,155 @@ const graph = pageGraph(Astro, {
 
   <Announcement message={announcement} />
 
-  <ContentBoxPremium as="h1" title="RIEL38 เว็บสล็อตมาใหม่ โดดเด่นด้วยระบบ AI สำหรับเกมสล็อตยุคใหม่">
+  <ContentBoxNeumorphism as="h1" title="PIGAUTO สล็อตหมูเว็บตรง แตกง่าย รับวอเลท ฝากถอนไม่มีขั้นต่ำ">
     <p class="mb-4 text-left text-base leading-relaxed">
-      RIEL38 เว็บสล็อตยุคใหม่ที่ยังรักษาความสนุกของเกมสล็อตแบบดั้งเดิมไว้ครบ แต่เพิ่ม AI เข้ามาช่วยจัดการประสบการณ์ใช้งานให้สะดวกขึ้น เหมือนมีเลขาส่วนตัวประจำยูส คุณแค่เล่นและ enjoy ให้มากที่สุด
-      ที่เหลือปล่อยให้เป็นหน้าที่ของมัน
+      PIGAUTO สล็อตหมูเว็บตรง แตกง่าย จ่ายจริง ฝากถอนเร็ว ไม่มีขั้นต่ำ รองรับวอเลท รวมเกมสล็อตยิงปลาและค่ายดัง พร้อมโปรโมชั่นแรงสุดคุ้มสำหรับสมาชิกใหม่
     </p>
 
     <p class="mb-4 text-left text-base leading-relaxed">
-      ระบบเชื่อมโยงกับหลังบ้านเพื่อช่วยจัดข้อมูลให้แม่นยำได้ทุกเรื่อง ไม่ว่าจะเป็นข้อมูลเกม อัตราการจ่ายตามที่ค่ายตั้งไว้ จำนวนเงินฝากถอน โบนัสสมาชิก และความรวดเร็วของระบบ เรียลตามชื่อ เรียล38
+      PIGAUTO เหมาะสำหรับผู้เล่นที่ต้องการเว็บตรงแท้ แตกง่าย โบนัสออกดุเดือด และมีระบบออโต้ที่เร็วพอจะทำให้ทุกขั้นตอน สมัคร ฝาก ถอน จบในไม่กี่วินาที
     </p>
 
     <p class="text-left text-base leading-relaxed">
-      ที่นี่มีเกมให้เลือกกว่า 2,000 เกม จากกว่า 30 ค่ายสล็อตชั้นนำที่ได้รับความนิยม เลือกได้อิสระ โยกย้ายเงินเล่นแบบไม่เสียจังหวะเพราะมี Smart Wallet ทางเข้า RIEL38 เว็บตรงแสนง่าย
-      เข้าสู่ระบบรองรับการใช้งานทุกอุปกรณ์
+      เว็บนี้ออกแบบมาสำหรับผู้เล่นไทยโดยเฉพาะ รองรับทั้งธนาคารและวอเลท ไม่มีขั้นต่ำ ทุนน้อยก็เริ่มได้ และที่สำคัญคือ จ่ายจริงตรงเวลาทุกยอด
     </p>
-  </ContentBoxPremium>
+  </ContentBoxNeumorphism>
 
-  <ContentBoxSevenThreePremium as="h2" title="เรียล38 เว็บสล็อตมาใหม่ รวมกว่า 2,000 เกม ทดลองเล่นฟรีก่อนเปิดยูสจริง">
-    <Picture
-      slot="left"
-      src={imgGameLobby}
-      alt={gameLobbyAlt}
-      loading="lazy"
-      fetchpriority="low"
-      widths={[240, 340, 480, 680]}
-      sizes="(max-width: 767px) calc(100vw - 96px), 340px"
-      decoding="async"
-      formats={["avif", "webp"]}
-      fallbackFormat="webp"
-      quality={80}
-      class="mx-auto h-auto w-full rounded-2xl border border-[#f9a8d4] shadow-[0_10px_30px_rgba(236,72,153,0.20)]"
-    />
-
-    <div slot="right" class="flex flex-col gap-4">
-      <p class="text-left text-base leading-relaxed">
-        RIEL38 เป็นเว็บสล็อตมาใหม่ที่รวมเกมจากหลายค่ายไว้มากกว่า 2,000 เกม มีทั้งเกมยอดนิยม เกมใหม่ ฟรีสปิน และสล็อตหลายสไตล์ให้เลือกจากบัญชีเดียว
-        คนที่ยังไม่รู้ว่าจะเริ่มเกมไหนสามารถใช้โหมดทดลองเล่นฟรีเพื่อดูรูปแบบเกมก่อนลงเงินจริง
-      </p>
-
-      <p class="text-left text-base leading-relaxed">
-        ข้อดีของการมีเกมหลายแบบไม่ใช่แค่ตัวเลขเยอะ แต่คือสมาชิก เรียล38 สามารถสลับค่าย เปลี่ยนธีม หรือหาเกมตามฟีเจอร์ที่ต้องการได้สะดวกกว่า วันนี้อยากเล่นเกมไว พรุ่งนี้อยากนั่งรอโบนัสดี ๆ
-        ก็ไม่ต้องเปลี่ยนเว็บตามอารมณ์
-      </p>
-
-      <p class="text-left text-base leading-relaxed">เครดิตในโหมดทดลองเล่นเป็นเครดิตจำลอง ถอนไม่ได้และไม่นับเป็นยอดเทิร์น และไม่ใช่ทุกเกมที่เปิดโหมดทดลองให้เล่น</p>
-
-      <div class="rounded-2xl border border-[#fbcfe8] bg-[#fdf2f8] p-5">
-        <p class="mb-3 flex items-center gap-2 text-sm font-black tracking-widest text-[#9d174d] uppercase">
-          <span aria-hidden="true">🧪</span> Remark การทดสอบใช้งานฟรี
-        </p>
-
-        <dl class="flex flex-col gap-2 text-left text-base leading-relaxed">
-          {
-            freeTrialRemark.map((row) => (
-              <div class="flex flex-col gap-0.5 sm:flex-row sm:gap-3">
-                <dt class="shrink-0 font-bold text-[#9d174d] sm:w-52">{row.label}</dt>
-                <dd class="text-[#5b2140]">{row.value}</dd>
-              </div>
-            ))
-          }
-        </dl>
-      </div>
-
-      <a
-        href="/ทดลองเล่น"
-        class="inline-flex w-fit items-center gap-2 rounded-full bg-gradient-to-r from-[#f472b6] via-[#ec4899] to-[#a855f7] px-7 py-3 text-sm font-black tracking-widest text-white uppercase shadow-[0_10px_30px_rgba(236,72,153,0.28)] transition-transform duration-300 hover:scale-105">
-        <span aria-hidden="true">🕹️</span> เปิดโหมดทดลองเล่นฟรี
-      </a>
-    </div>
-  </ContentBoxSevenThreePremium>
-
-  <GameRankingBoard />
-
-  <ContentBoxTwo as="h2" title="กว่า 30 ค่ายเกมดังบน RIEL38 มีอะไรให้สายสล็อตเลือกบ้าง">
+  <ContentBoxTwoCyberCut as="h2" title="ทำไมต้อง PIGAUTO สล็อตหมูเว็บตรง API แท้" titleright="สามจุดที่ API แท้ต่างจากเว็บทั่วไป">
     <div slot="left" class="flex flex-col gap-4">
       <p class="text-left text-base leading-relaxed">
-        รวมผู้ให้บริการสล็อตกว่า 30 ค่ายเจ้าดัง ตั้งแต่ค่ายที่คนไทยคุ้นชื่อ ไปจนถึงผู้ให้บริการเกมระดับสากล ไว้ในระบบเดียว โดยสามารถพบเกมจากค่ายที่นักเล่นสล็อตรู้จักกันดี เช่น PG Soft, Pragmatic Play,
-        JILI, Joker Gaming และค่ายอื่น ๆ อีกหลายรายการตามที่เปิดให้บริการในระบบ
+        เล่นสล็อตแบบหมู ๆ ที่ไว้ใจได้จริง PIGAUTO ไม่ได้เป็นเพียงเว็บสล็อตที่มีชื่อจำง่าย แต่เป็นแพลตฟอร์มที่เชื่อมต่อกับระบบเกมแบบ API แท้จากค่ายผู้พัฒนาโดยตรง
       </p>
 
       <p class="text-left text-base leading-relaxed">
-        แต่ละค่ายมีบุคลิกต่างกัน บางค่ายเด่นเรื่องฟรีสปิน บางค่ายเกมเดินเร็ว บางค่ายเน้นฟีเจอร์และตัวคูณ การมีหลายค่ายใน เรียล38 จึงช่วยให้คนเล่นเลือกตามสไตล์ตัวเองได้มากกว่าวิ่งตามคำว่า “เกมแตก”
-        อย่างเดียว
+        ประสบการณ์ใช้งาน “หมู ๆ” แต่สเปกเว็บระดับมืออาชีพ ผู้เล่นรู้สึกว่าเล่นง่าย ไม่ต้องทำอะไรยุ่งยาก แต่เบื้องหลังคือระบบ API ที่รองรับอย่างเสถียรทั้งในมือถือและคอม
+      </p>
+
+      <p class="text-left text-base leading-relaxed">
+        ถ้าต้องการเว็บที่ “แตกง่ายตามจริง เล่นลื่น ไม่ล็อกยูส” เว็บที่ต้องเลือกคือเว็บที่ใช้ API แท้เท่านั้น และ PIGAUTO คือหนึ่งในเว็บที่ผ่านมาตรฐานนั้นอย่างแท้จริง
       </p>
     </div>
 
-    <FeatureHighlights slot="right" items={providerStyles} />
-  </ContentBoxTwo>
+    <FeatureHighlights slot="right" items={apiPoints} />
+  </ContentBoxTwoCyberCut>
 
   <ProviderGrid />
 
-  <ContentBoxSevenThree as="h2" titleright="Smart Wallet ระบบนี้ของ RIEL38 ช่วยจัดการเครดิตหลายค่ายยังไง">
+  <ContentBoxCyberCut as="h2" title="โบนัสแตกดุเดือด PIGAUTO เกมแท้แตกง่าย สูงที่สุด">
+    <p class="mb-4 text-left text-base leading-relaxed">
+      ไฮไลท์ของเว็บสล็อตหมู PIGAUTO คือความใจป๋าครับ เกมสล็อตแท้ล้วนเป็นเกมที่มีค่าความผันผวน (Volatility) เหมาะสม ทำให้โบนัสแตกดุเดือดสูงที่สุดแบบที่คุณคาดไม่ถึง
+    </p>
+
+    <p class="mb-4 text-left text-base leading-relaxed">
+      บทจะมาก็มาเป็นพายุ ทั้ง Big Win, Mega Win หรือฟีเจอร์ฟรีสปินที่เข้าง่ายจนน่าตกใจ เราไม่มีนโยบายล็อกยูสเซอร์ ความเฮงที่ PIGAUTO เกมแท้แตกง่าย เกิดขึ้นอย่างเป็นธรรมชาติและยุติธรรมที่สุด
+    </p>
+
+    <p class="text-left text-base leading-relaxed">เตรียมถุงใบใหญ่ ๆ มารอรับเงินได้เลย เพราะเมื่อไหร่ที่แจ็คพอตแตก มันจะไหลมาเทมาเหมือนกระปุกออมสินระเบิดเลยล่ะครับ</p>
+  </ContentBoxCyberCut>
+
+  <GameRankingBoard />
+
+  <ContentBoxSevenThreeCyberCut as="h2" titleright="ระบบ PIGAUTO อัจฉริยะ ฝากถอนเร็ว 3 วิ รองรับวอเลท">
     <Picture
       slot="left"
-      src={imgSmartWallet}
-      alt={smartWalletAlt}
+      src={imgWallet}
+      alt={walletAlt}
       loading="lazy"
       fetchpriority="low"
-      widths={[260, 390, 520, 780]}
-      sizes="(max-width: 767px) calc(100vw - 96px), 386px"
+      widths={[240, 346, 480, 692]}
+      sizes="(max-width: 767px) calc(100vw - 96px), 346px"
       decoding="async"
       formats={["avif", "webp"]}
       fallbackFormat="webp"
-      quality={80}
-      class="mx-auto h-auto w-full rounded-2xl border border-[#f9a8d4] shadow-[0_10px_30px_rgba(236,72,153,0.20)]"
+      quality={70}
+      class="mx-auto h-auto w-full rounded-2xl border border-[#f5c542]/45 shadow-[0_10px_30px_rgba(245,197,66,0.20)]"
     />
 
     <div slot="right" class="flex flex-col gap-4">
       <p class="text-left text-base leading-relaxed">
-        Smart Wallet RIEL38 ใช้เป็นศูนย์กลางของเครดิตในระบบสมาชิก ทำให้สมาชิกสามารถเลือกเกมจากหลายค่ายโดยยังจัดการยอดผ่านบัญชีหลักจุดเดียว ไม่ต้องมีหน้ากระเป๋าเงินหลายชุดให้จำตามจำนวนค่ายเกม
+        เรื่องเงินทองต้องไวครับ ชื่อเราบอกอยู่แล้วว่า AUTO ดังนั้นระบบธุรกรรมของเราจึงต้องเร็วที่สุดในปฐพี ด้วยเทคโนโลยีอัจฉริยะที่ประมวลผลแม่นยำ ฝากถอนเร็วภายใน 3 วินาที ยอดเข้าทันทีไม่ต้องส่งสลิป
       </p>
 
       <p class="text-left text-base leading-relaxed">
-        สำหรับสายที่เปลี่ยนเกมบ่อย จุดนี้ช่วยให้การใช้งานของ เรียล38 ต่อเนื่องขึ้น เพราะสิ่งที่ผู้เล่นอยากเปลี่ยนคือเกม ไม่ใช่ขั้นตอนจัดการเงิน ระบบ Wallet ที่ดีควรทำให้เครดิตตามเราไป
-        ไม่ใช่ให้เราวิ่งตามเครดิต
+        และเพื่อความสะดวกสูงสุด เราเปิดระบบให้รองรับวอเลท (True Money Wallet) เต็มรูปแบบ ใครไม่สะดวกใช้บัญชีธนาคาร ก็สามารถใช้แอปเป๋าตังค์เติมเข้ามาทุบกระปุกหมูได้เหมือนกัน
       </p>
+
+      <p class="text-left text-base leading-relaxed">จ่ายจริงทุกบาททุกสตางค์ ไม่ว่าคุณจะถอนหลักร้อยหรือหลักล้าน เรามีสภาพคล่องสูงพร้อมโอนให้ทันทีครับ</p>
     </div>
-  </ContentBoxSevenThree>
+  </ContentBoxSevenThreeCyberCut>
 
-  <LatestWinners3 />
+  <LatestWinners />
 
-  <ContentBox as="h2" title="โปรโมชั่นดีๆ RIEL38 มีอะไรให้ สมาชิกใหม่ และ สมาชิกเดิม เลือก">
+  <ContentBox as="h2" title="เว็บนี้ ปลอดภัย ระดับตู้เซฟ เก็บรักษาข้อมูลแน่นหนา">
     <p class="mb-4 text-left text-base leading-relaxed">
-      โปรโมชั่นดีๆ ที่อยากแนะนำของเว็บคือ โปรฝาก 39 รับรวม 69 เทิร์น 1 เท่า ถอนได้สูงสุด 300 แต่สำหรับสมาชิกทั้งใหม่และเดิม RIEL38 มีพื้นที่ให้กับพวกท่านทั้งหมด
-      โดยสิทธิ์ที่เปิดใช้งานอาจแตกต่างกันตามช่วงเวลา เช่น โปรต้อนรับสมาชิกใหม่ โบนัสจากยอดฝาก กิจกรรมเครดิต หรือสิทธิ์สำหรับการใช้งานต่อเนื่อง
+      ถึงเราจะดูสนุกสนาน แต่เรื่องความปลอดภัยเราจริงจังมากครับ PIGAUTO ใช้ระบบรักษาความปลอดภัยมาตรฐานเดียวกับแอปพลิเคชันธนาคารชั้นนำ
     </p>
 
-    <p class="mb-6 text-left text-base leading-relaxed">
-      เวลาจะรับโปรของ เรียล38 ควรเลือกจากสไตล์การเล่นของตัวเองมากกว่ารับทุกอย่างเพราะเห็นคำว่าโบนัส สายทุนเล็กกับสายเล่นยาวต้องการโปรคนละแบบ
-      โปรที่เข้ากับเราใช้ประโยชน์ได้มากกว่าตัวเลขใหญ่ที่รับมาแล้วไม่ได้ใช้
-    </p>
+    <p class="mb-4 text-left text-base leading-relaxed">เปรียบเสมือนตู้เซฟนิรภัยที่ล็อคหลายชั้น ข้อมูลส่วนตัวและบัญชีการเงินของคุณจะถูกเก็บเป็นความลับสุดยอด</p>
 
-    <a
-      href="/promotion"
-      class="inline-flex w-fit items-center gap-2 rounded-full bg-gradient-to-r from-[#fb923c] via-[#f472b6] to-[#ec4899] px-7 py-3 text-sm font-black tracking-widest text-white uppercase shadow-[0_10px_30px_rgba(236,72,153,0.28)] transition-transform duration-300 hover:scale-105">
-      <span aria-hidden="true">🎁</span> ดูโปรโมชั่นที่เปิดอยู่
-    </a>
+    <p class="text-left text-base leading-relaxed">
+      ไม่มีทางที่ข้อมูลจะรั่วไหล หรือโดนคนนอกเข้าถึงได้แน่นอน คุณสามารถโฟกัสกับการปั่นสล็อตและยิงปลาได้อย่างสบายใจ ปล่อยให้เรื่องความปลอดภัยเป็นหน้าที่ของทีมงานมืออาชีพของเราดูแลครับ
+    </p>
   </ContentBox>
 
   <SmoothCarousel />
 
-  <ContentBoxSpecial as="h2" title="RIEL38 เข้าสู่ระบบผ่านมือถือ คอม และแท็บเล็ตได้ยังไง">
-    <p slot="left" class="text-left text-base leading-relaxed">
-      RIEL38 รองรับการเข้าใช้งานผ่านอุปกรณ์หลายประเภท สมาชิกสามารถใช้บัญชีเดิมล็อกอินจากมือถือ แท็บเล็ต หรือคอม เพื่อเปิดเกม เช็กเครดิต และดูโปรโมชั่นโดยไม่ต้องสร้างยูสใหม่ตามเครื่องที่ใช้
-    </p>
+  <ContentBoxSevenThreeNeumorphism as="h2" title="PIGAUTO ไม่มีขั้นต่ำ เริ่มต้นกับสล็อตเว็บตรงง่ายๆ">
+    <Picture
+      slot="left"
+      src={imgNoMinimum}
+      alt={noMinimumAlt}
+      loading="lazy"
+      fetchpriority="low"
+      widths={[260, 382, 520, 764]}
+      sizes="(max-width: 767px) calc(100vw - 96px), 382px"
+      decoding="async"
+      formats={["avif", "webp"]}
+      fallbackFormat="webp"
+      quality={70}
+      class="mx-auto h-auto w-full rounded-2xl border border-[#f5c542]/45 shadow-[0_10px_30px_rgba(245,197,66,0.20)]"
+    />
 
-    <p slot="right" class="text-left text-base leading-relaxed">
-      การออกแบบแบบนี้เหมาะกับพฤติกรรมปี 2026 เพราะคนไม่ได้เล่นอยู่หน้าเครื่องเดิมทั้งวัน เรียล38 จึงควรให้ประสบการณ์หลักต่อเนื่องกัน เปลี่ยนอุปกรณ์ได้ แต่ข้อมูลบัญชี เกม
-      และเครดิตของเรายังต้องตามมาเหมือนเดิม
-    </p>
-  </ContentBoxSpecial>
+    <div slot="right" class="flex flex-col gap-4">
+      <p class="text-left text-base leading-relaxed">ที่ PIGAUTO ทุกคนเริ่มต้นกับสล็อตเว็บตรง ฝากถอนไม่มีขั้นต่ำ ฝากกี่บาทก็ได้ ระบบรองรับตั้งแต่ 1 บาท</p>
+
+      <p class="text-left text-base leading-relaxed">
+        คุณไม่จำเป็นต้องมีทุนมากมายก็สามารถเข้ามาเริ่มต้นกับเว็บตรงของเราได้ตั้งแต่วันนี้ ถอนเท่าไหร่ก็ได้ ไม่มีบังคับยอดขั้นต่ำ ระบบออโต้ช่วยให้ทุกขั้นตอนทำได้เองแบบง่าย ๆ
+      </p>
+
+      <p class="text-left text-base leading-relaxed">คุณสามารถลอง เริ่ม ลงมือ และต่อยอดได้ตามสไตล์ของคุณเอง นี่คือพื้นที่ของผู้เล่นที่ต้องการโอกาสและความยืดหยุ่นอย่างแท้จริง</p>
+    </div>
+  </ContentBoxSevenThreeNeumorphism>
 
   <LoginRtpSection />
 
-  <ContentBoxTwoPremium as="h2" title="ระบบ AI หลังบ้าน RIEL38 ช่วยให้สมาชิกสนุกกับเกมได้ทวีคูณอย่างไร">
-    <p slot="left" class="text-left text-base leading-relaxed">
-      AI ของ เรียล38 ไม่ได้มีหน้าที่ทำนายว่าเกมไหนจะแตกหรือรอบไหนจะจ่าย แต่ใช้ข้อมูลที่ระบบมีอยู่ช่วยให้สมาชิกเข้าใจเกมและบัญชีของตัวเองได้เร็วขึ้น
-    </p>
+  <ContentBoxTwoNeumorphism as="h2" title="สมัครเลย ทีมงาน PIGAUTO พร้อมซัพพอร์ต 24 ชั่วโมง">
+    <div slot="left" class="flex flex-col gap-4">
+      <p class="text-left text-base leading-relaxed">
+        PIGAUTO พร้อมดูแลคุณทุกขั้นตอนตลอด 24 ชั่วโมง เป็นมิตรกับผู้เล่นใหม่ที่อยากเริ่มแต่ยังไม่แน่ใจว่าจะทำขั้นตอนไหนก่อน ทีมงานแนะนำวิธีสมัครและเริ่มต้นเล่นอย่างถูกต้องให้ตั้งแต่ต้น
+      </p>
+
+      <p class="text-left text-base leading-relaxed">แนะนำเกมที่เหมาะกับทุน เช่น เกมแตกง่าย หรือเกมที่คนเล่นเยอะตอนนี้ ช่วยให้ผู้เล่นตัดสินใจง่ายขึ้น</p>
+    </div>
 
     <div slot="right" class="flex flex-col gap-4">
       <p class="text-left text-base leading-relaxed">
-        เช่น ดูเกมที่เล่นบ่อย เปรียบเทียบ RTP ตรวจโบนัส หรือเช็กประวัติการใช้งาน คุณมีหน้าที่เลือกเกมแล้ว Enjoy ส่วนเรื่องจัดข้อมูลหลังบ้าน ปล่อยให้ระบบช่วยจำแทนก็พอ
+        ติดตามปัญหายาก ๆ เช่น บัคเกม หรือยอดไม่ปรับ ทีมงานสามารถส่งเรื่องเข้าระบบของค่ายเกมโดยตรง ทำให้แก้ไขได้เร็วกว่าเว็บทั่วไป
       </p>
+
+      <p class="text-left text-base leading-relaxed">เว็บที่ดูแลดีไม่ได้วัดกันตอนทุกอย่างราบรื่น แต่วัดกันตอนมีอะไรติดขัดแล้วยังมีคนรับเรื่องอยู่จริง</p>
 
       <a
         href="/register"
-        class="inline-flex w-fit items-center gap-2 rounded-full bg-gradient-to-r from-[#f472b6] via-[#ec4899] to-[#a855f7] px-7 py-3 text-sm font-black tracking-widest text-white uppercase shadow-[0_10px_30px_rgba(236,72,153,0.28)] transition-transform duration-300 hover:scale-105">
-        <span aria-hidden="true">📝</span> สมัครสมาชิก RIEL38
+        class="inline-flex w-fit items-center gap-2 rounded-full bg-gradient-to-r from-[#ffe08a] via-[#f5c542] to-[#d99e1f] px-7 py-3 text-sm font-black tracking-widest text-[#1f0303] uppercase shadow-[0_10px_30px_rgba(245,197,66,0.30)] transition-transform duration-300 hover:scale-105">
+        <span aria-hidden="true">🐷</span> สมัครสมาชิก PIGAUTO
       </a>
     </div>
-  </ContentBoxTwoPremium>
+  </ContentBoxTwoNeumorphism>
 
   <ReviewCardSumo2 />
 
-  <Faq3 title="คำถามที่พบบ่อยเกี่ยวกับ RIEL38" faqs={faqs} />
+  <FaqHuay title="คำถามที่พบบ่อยเกี่ยวกับ PIGAUTO" faqs={faqs} />
 
   <Navfoot />
 </MainLayout>

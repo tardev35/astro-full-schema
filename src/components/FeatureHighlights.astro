@@ -3,7 +3,7 @@ export interface FeatureItem {
   icon: string;
   title: string;
   description: string;
-  accent?: "pink" | "violet";
+  accent?: "gold" | "crimson";
 }
 
 export interface Props {
@@ -17,26 +17,26 @@ const { items, as: HeadingTag = "h3" } = Astro.props;
 <div class="mt-4 flex flex-col gap-5">
   {
     items.map((item) => {
-      const isPink = item.accent !== "violet";
+      const isGold = item.accent !== "crimson";
       return (
         <div
           class={`group flex flex-col items-start gap-4 rounded-2xl border p-6 transition-all duration-300 hover:-translate-y-1 sm:flex-row ${
-            isPink
-              ? "border-[#fbcfe8] bg-[#fdf2f8] hover:border-[#ec4899]/60 hover:bg-[#fce7f3] hover:shadow-[0_10px_20px_rgba(236,72,153,0.18)]"
-              : "border-[#e9d5ff] bg-[#faf5ff] hover:border-[#a855f7]/60 hover:bg-[#f3e8ff] hover:shadow-[0_10px_20px_rgba(168,85,247,0.18)]"
+            isGold
+              ? "border-[#b07d12]/55 bg-[#3a0808] hover:border-[#f5c542]/70 hover:bg-[#451010] hover:shadow-[0_10px_20px_rgba(245,197,66,0.20)]"
+              : "border-[#8c0f0f] bg-[#340707] hover:border-[#d92121]/70 hover:bg-[#451010] hover:shadow-[0_10px_20px_rgba(217,33,33,0.22)]"
           }`}>
           <div
             aria-hidden="true"
             class={`flex h-14 w-14 shrink-0 items-center justify-center rounded-xl text-3xl transition-transform duration-300 group-hover:scale-110 ${
-              isPink
-                ? "border border-[#f9a8d4] bg-gradient-to-br from-[#f472b6] via-[#ec4899] to-[#db2777] shadow-[0_0_15px_rgba(236,72,153,0.35)] group-hover:rotate-3"
-                : "border border-[#e9d5ff] bg-gradient-to-br from-[#c084fc] via-[#a855f7] to-[#7e22ce] shadow-[0_0_15px_rgba(168,85,247,0.35)]"
+              isGold
+                ? "border border-[#ffe08a]/55 bg-gradient-to-br from-[#ffe08a] via-[#f5c542] to-[#b07d12] shadow-[0_0_15px_rgba(245,197,66,0.35)] group-hover:rotate-3"
+                : "border border-[#f9a8c0]/45 bg-gradient-to-br from-[#d92121] via-[#b01818] to-[#8c0f0f] shadow-[0_0_15px_rgba(217,33,33,0.35)]"
             }`}>
             {item.icon}
           </div>
           <div class="flex flex-col gap-2 text-left">
-            <HeadingTag class={`text-xl leading-normal font-black tracking-wide ${isPink ? "text-[#9d174d]" : "text-[#7e22ce]"}`}>{item.title}</HeadingTag>
-            <p class="text-left text-base leading-relaxed text-[#5b2140] transition-colors group-hover:text-[#831843]">{item.description}</p>
+            <HeadingTag class={`text-xl leading-normal font-black tracking-wide ${isGold ? "text-[#ffe08a]" : "text-[#f9a8c0]"}`}>{item.title}</HeadingTag>
+            <p class="text-left text-base leading-relaxed text-[#f7e4d4] transition-colors group-hover:text-[#ffe08a]">{item.description}</p>
           </div>
         </div>
       );

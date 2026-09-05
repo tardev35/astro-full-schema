@@ -9,36 +9,36 @@ const { titleleft, titleright, as: HeadingTag = "h2" } = Astro.props;
 
 <section class="mx-auto mb-6 w-full max-w-7xl px-4 font-sans">
   <div
-    class="relative isolate w-full border border-[#7f1d1d] bg-[#280707] p-8 text-[#f7e2d6] shadow-[0_10px_30px_rgba(239,68,68,0.12)] transition-all duration-300 hover:border-[#ef4444]/45 hover:shadow-[0_15px_40px_rgba(239,68,68,0.18)]"
+    class="relative isolate w-full border border-[#8c0f0f] bg-[#2a0505] p-8 text-[#f7e4d4] shadow-[0_10px_30px_rgba(217,33,33,0.16)] transition-all duration-300 hover:border-[#d92121]/60 hover:shadow-[0_15px_40px_rgba(217,33,33,0.24)]"
     style="clip-path: polygon(30px 0, 100% 0, 100% calc(100% - 30px), calc(100% - 30px) 100%, 0 100%, 0 30px);">
-    <div aria-hidden="true" class="absolute top-0 left-0 -z-10 h-[2px] w-24 bg-gradient-to-r from-[#ef4444] to-transparent"></div>
+    <div aria-hidden="true" class="absolute top-0 left-0 -z-10 h-[2px] w-24 bg-gradient-to-r from-[#d92121] to-transparent"></div>
     <div aria-hidden="true" class="absolute right-0 bottom-0 -z-10 h-[2px] w-24 bg-gradient-to-l from-[#f5c542] to-transparent"></div>
-    <div aria-hidden="true" class="absolute top-0 left-0 -z-10 h-16 w-[2px] bg-gradient-to-b from-[#ef4444] to-transparent"></div>
+    <div aria-hidden="true" class="absolute top-0 left-0 -z-10 h-16 w-[2px] bg-gradient-to-b from-[#d92121] to-transparent"></div>
     <div aria-hidden="true" class="absolute right-0 bottom-0 -z-10 h-16 w-[2px] bg-gradient-to-t from-[#f5c542] to-transparent"></div>
 
     <div class="grid grid-cols-1 gap-8 md:grid-cols-[3fr_7fr] md:items-center">
-      <article class="flex flex-col gap-4 text-left text-base leading-relaxed text-[#f7e2d6]">
+      <article class="flex flex-col gap-4 text-left text-base leading-relaxed text-[#f7e4d4]">
         {
           titleleft && (
-            <div class="flex items-baseline gap-2 border-b border-[#7f1d1d] pb-2">
-              <span aria-hidden="true" class="font-mono text-[#ef4444]">
+            <div class="flex items-baseline gap-2 border-b border-[#8c0f0f] pb-2">
+              <span aria-hidden="true" class="font-mono text-[#d92121]">
                 &gt;_
               </span>
-              <HeadingTag class="text-xl leading-normal font-black text-[#ffe9a8] uppercase">{titleleft}</HeadingTag>
+              <HeadingTag class="text-xl leading-normal font-black text-[#ffe08a] uppercase">{titleleft}</HeadingTag>
             </div>
           )
         }
         <slot name="left" />
       </article>
 
-      <article class="flex flex-col gap-4 text-left text-base leading-relaxed text-[#f7e2d6] md:border-l md:border-[#7f1d1d] md:pl-8">
+      <article class="flex flex-col gap-4 text-left text-base leading-relaxed text-[#f7e4d4] md:border-l md:border-[#8c0f0f] md:pl-8">
         {
           titleright && (
-            <div class="flex items-baseline gap-2 border-b border-[#7f1d1d] pb-2">
+            <div class="flex items-baseline gap-2 border-b border-[#8c0f0f] pb-2">
               <span aria-hidden="true" class="font-mono text-[#f5c542]">
                 &gt;_
               </span>
-              <HeadingTag class="text-xl leading-normal font-black text-[#ffe9a8] uppercase">{titleright}</HeadingTag>
+              <HeadingTag class="text-xl leading-normal font-black text-[#ffe08a] uppercase">{titleright}</HeadingTag>
             </div>
           )
         }

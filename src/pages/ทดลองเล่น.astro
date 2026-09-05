@@ -2,7 +2,7 @@
 import MainLayout from "../layouts/MainLayout.astro";
 import ContentBox from "../components/ContentBox.astro";
 import Navfoot from "../components/Navfoot.astro";
-import Announcement from "../components/Announcement3.astro";
+import Announcement from "../components/Announcement6.astro";
 
 import { Picture } from "astro:assets";
 import { itemList, pageGraph, schemaCtx } from "../lib/schema";
@@ -36,12 +36,12 @@ const demoGames = [
 
 const gameList = demoGames.map((game) => ({ name: game.name, imagePath: game.src.src }));
 
-const pageTitle = "ทดลองเล่นสล็อตฟรี RIEL38 ลองหลายค่ายให้พอใจก่อนเปิดยูสจริง";
+const pageTitle = "ทดลองเล่นสล็อต PIGAUTO ลองหลายค่ายให้พอใจ ก่อนลงเครดิตจริง";
 
-const pageHeading = "ทดลองเล่นฟรีกับ RIEL38 ลองสล็อตหลายค่ายให้พอใจ ก่อนเปิดยูสจริง";
+const pageHeading = "ทดลองเล่นสล็อตกับ PIGAUTO เลือกค่ายที่ชอบ แล้วลองให้พอใจก่อนลงเครดิตจริง";
 
 const pageDescription =
-  "ทดลองเล่นสล็อตฟรีกับ RIEL38 เลือกลองได้จากค่ายดัง ทั้ง PG Soft, Pragmatic Play, JILI และ Joker ดูรูปแบบเกมและเดิมพันต่อรอบให้พอใจ ก่อนเปิดยูสจริงแล้วเริ่มเล่น";
+  "ทดลองเล่นสล็อตฟรีกับ PIGAUTO เลือกค่ายที่สนใจ สมัครยูสเดียวใช้เวลาไม่กี่นาที แล้วเข้าโหมดทดลองของค่ายนั้น ดูฟีเจอร์และเดิมพันต่อรอบให้พอใจก่อนลงเครดิตจริง";
 
 const ctx = schemaCtx(Astro);
 const graph = pageGraph(Astro, {
@@ -54,8 +54,8 @@ const graph = pageGraph(Astro, {
   ],
   extra: [
     itemList(ctx, {
-      name: "ทดลองเล่นเกมของ RIEL38",
-      alternateName: "RIEL38 โหมดทดลองเล่นสล็อตลิขสิทธิ์แท้หลายค่ายบนมือถือก่อนลงเครดิตจริง",
+      name: "ทดลองเล่นเกมของ PIGAUTO",
+      alternateName: "PIGAUTO โหมดทดลองเล่นสล็อตลิขสิทธิ์แท้หลายค่ายบนมือถือก่อนลงเครดิตจริง",
       itemType: "Game",
       items: gameList,
     }),
@@ -69,30 +69,27 @@ const graph = pageGraph(Astro, {
   <Announcement />
 
   <ContentBox as="h1" title={pageHeading}>
-    <p class="mb-4 text-left text-base leading-relaxed text-[#5b2140]">
-      หากคุณกำลังมองหาเว็บสล็อตที่ลองได้ก่อนตัดสินใจ <strong class="text-[#9d174d]">RIEL38</strong> รวมเกมไว้กว่า 2,000 เกมจาก 30+ ค่ายดัง ทั้ง PG Soft, Pragmatic Play, JILI,
-      Joker Gaming และ Habanero
+    <p class="mb-4 text-left text-base leading-relaxed text-[#f7e4d4]">
+      หากคุณกำลังมองหาเว็บที่ได้ลองก่อนตัดสินใจ <strong class="text-[#ffe08a]">PIGAUTO</strong> พร้อมมอบโหมดทดลองจากค่ายดังที่ต่อตรงผ่าน API แท้ ทั้ง PG Soft, JILI, JOKER, SlotXO และ Skywind
     </p>
 
-    <p class="mb-4 text-left text-base leading-relaxed text-[#5b2140]">
-      เลือกค่ายที่อยากลองจากด้านล่าง กดที่ภาพเพื่อไปยังหน้าสมัคร เปิดยูสเสร็จในไม่กี่วินาที แล้วเข้าโหมดทดลองของค่ายนั้นต่อได้จากหน้าเมมเบอร์
+    <p class="mb-4 text-left text-base leading-relaxed text-[#f7e4d4]">
+      เลือกค่ายที่สนใจจากด้านล่าง สมัครยูสเดียวใช้เวลาไม่กี่นาที แล้วเข้าไปลองโหมดทดลองของค่ายนั้นต่อได้จากหน้าเมมเบอร์
     </p>
 
-    <p class="text-left text-base leading-relaxed text-[#5b2140]">เปิดจากมือถือ แท็บเล็ต หรือคอมก็ได้เหมือนกัน ใช้ยูสเดิมตัวเดียวทุกเครื่อง</p>
+    <p class="text-left text-base leading-relaxed text-[#f7e4d4]">เปิดจากมือถือ แท็บเล็ต หรือคอมก็ได้เหมือนกัน ใช้ยูสเดิมตัวเดียวทุกเครื่อง</p>
   </ContentBox>
 
-  <ContentBox as="h2" title="เลือกค่ายที่สะดุดตา แล้วกดเข้าไปลองกับ RIEL38 ได้เลย">
-    <p class="mb-4 text-left text-base leading-relaxed text-[#5b2140]">
-      ค่ายไหนก็ได้ที่ถูกตา เริ่มจากตรงนั้นเลย เพราะแต่ละค่ายมีจังหวะและฟีเจอร์เป็นของตัวเอง ทั้งสล็อตหมุนคลาสสิก เกมฟรีสปิน และเกมโบนัสที่ไม่ซ้ำกันสักค่าย
+  <ContentBox as="h2" title="ค่ายไหนสะดุดตา เลือกได้เลย PIGAUTO เปิดให้ลองครบทุกค่าย">
+    <p class="mb-4 text-left text-base leading-relaxed text-[#f7e4d4]">
+      ค่ายไหนก็ได้ที่ถูกตา เริ่มจากตรงนั้นเลย เพราะแต่ละค่ายมีจังหวะและฟีเจอร์เป็นของตัวเอง ทั้งสล็อตหมุนคลาสสิก เกมฟรีสปิน เกมโบนัส และยิงปลา
     </p>
 
-    <p class="mb-4 text-left text-base leading-relaxed text-[#5b2140]">
-      กดที่ภาพค่ายที่สนใจเพื่อไปยังขั้นตอนสมัคร เปิดยูสเสร็จก็เข้าใช้งานค่ายนั้นได้ทันที ทุกเกมเป็นลิขสิทธิ์แท้จากผู้พัฒนาโดยตรงและทำงานตามค่า RTP จริง
+    <p class="mb-4 text-left text-base leading-relaxed text-[#f7e4d4]">
+      กดที่ภาพค่ายที่สนใจเพื่อไปยังขั้นตอนสมัคร เปิดยูสเสร็จก็เข้าใช้งานค่ายนั้นได้ทันที ทุกเกมเชื่อมตรงจากค่ายผู้พัฒนา จึงออกโบนัสตามค่ามาตรฐานของค่ายจริง
     </p>
 
-    <p class="mb-8 text-left text-base leading-relaxed text-[#5b2140]">
-      ยูสเดียวสลับได้ทุกค่าย เพราะ Smart Wallet รวมเครดิตไว้จุดเดียวให้แล้ว
-    </p>
+    <p class="mb-8 text-left text-base leading-relaxed text-[#f7e4d4]">ยูสเดียวสลับได้ทุกค่าย ไม่ต้องเปิดบัญชีใหม่ทีละค่าย</p>
     <div class="mb-5 grid grid-cols-2 gap-5 sm:grid-cols-2 md:grid-cols-4">
       {
         demoGames.map((game) => (
@@ -104,7 +101,7 @@ const graph = pageGraph(Astro, {
               fetchpriority="low"
               widths={[200, 400, 600]}
               sizes="(max-width: 768px) 50vw, 25vw"
-              class="block h-auto w-full object-cover shadow-[0_10px_30px_rgba(236,72,153,0.16)] transition-transform duration-300 group-hover/game:scale-105"
+              class="block h-auto w-full object-cover shadow-[0_10px_30px_rgba(245,197,66,0.16)] transition-transform duration-300 group-hover/game:scale-105"
               decoding="async"
               formats={["avif", "webp"]}
               fallbackFormat="webp"
@@ -114,9 +111,9 @@ const graph = pageGraph(Astro, {
               href="/register"
               target="_blank"
               rel="noopener noreferrer"
-              aria-label={`สมัครสมาชิกเพื่อเล่น ${game.name} ที่ RIEL38`}
-              class="absolute inset-0 flex items-center justify-center bg-[#fdf2f8]/90 opacity-0 transition-opacity duration-300 group-hover/game:opacity-100 focus-visible:opacity-100">
-              <span class="rounded-full border border-white/70 bg-gradient-to-r from-[#f472b6] via-[#ec4899] to-[#a855f7] px-6 py-2 font-bold text-white shadow-[0_10px_30px_rgba(236,72,153,0.32)] transition-transform hover:scale-110">เล่นเลย</span>
+              aria-label={`สมัครสมาชิกเพื่อลองเล่น ${game.name} ที่ PIGAUTO`}
+              class="absolute inset-0 flex items-center justify-center bg-[#1f0303]/85 opacity-0 transition-opacity duration-300 group-hover/game:opacity-100 focus-visible:opacity-100">
+              <span class="rounded-full border border-[#b07d12]/60 bg-gradient-to-r from-[#ffe08a] via-[#f5c542] to-[#d99e1f] px-6 py-2 font-bold text-[#1f0303] shadow-[0_10px_30px_rgba(245,197,66,0.32)] transition-transform hover:scale-110">สมัครเพื่อลอง</span>
             </a>
           </div>
         ))
@@ -125,38 +122,34 @@ const graph = pageGraph(Astro, {
   </ContentBox>
 
   <ContentBox as="h2" title="ทดลองเล่นฟรีไม่จำกัดรอบ ลองให้พอใจก่อนใช้เครดิตจริง">
-    <p class="mb-4 text-left text-base leading-relaxed text-[#5b2140]">
+    <p class="mb-4 text-left text-base leading-relaxed text-[#f7e4d4]">
       เข้าโหมดทดลองแล้วหมุนได้ไม่จำกัดรอบ เพราะเป็นเครดิตสมมติล้วนๆ อยากลองผิดลองถูกกี่ครั้งก็ตามสบาย ไม่มีอะไรต้องเสี่ยงเลยสักบาท
     </p>
 
-    <p class="mb-4 text-left text-base leading-relaxed text-[#5b2140]">
+    <p class="mb-4 text-left text-base leading-relaxed text-[#f7e4d4]">
       ระหว่างลองก็ดูไปด้วยว่าเดิมพันต่อรอบเริ่มที่เท่าไร ฟีเจอร์เข้าง่ายแค่ไหน หนึ่งรอบกินเวลานานไหม แล้วเก็บไว้เป็นข้อมูลตอนเลือกเกมที่จะเล่นจริง
     </p>
 
-    <p class="mb-4 text-left text-base leading-relaxed text-[#5b2140]">เครดิตในโหมดทดลองถอนไม่ได้ และไม่นับเป็นยอดเทิร์นของโปรใดๆ</p>
+    <p class="mb-4 text-left text-base leading-relaxed text-[#f7e4d4]">เครดิตในโหมดทดลองถอนไม่ได้ และไม่นับเป็นยอดเทิร์นของโปรใดๆ</p>
 
-    <p class="text-left text-base leading-relaxed text-[#5b2140]">
-      อีกอย่างคือไม่ใช่ทุกเกมที่มีปุ่มทดลอง ถ้าเกมที่อยากลองยังไม่เปิดโหมดนี้ เปิดยูสแล้วเข้าไปดูของจริงได้เลย
+    <p class="text-left text-base leading-relaxed text-[#f7e4d4]">
+      อีกอย่างคือไม่ใช่ทุกเกมที่มีปุ่มทดลอง ถ้าเกมที่อยากลองยังไม่เปิดโหมดนี้ ทักทีมงานที่ดูแลอยู่ตลอด 24 ชั่วโมงให้ช่วยแนะนำเกมใกล้เคียงได้
     </p>
   </ContentBox>
 
-  <ContentBox as="h2" title="ถูกใจเกมไหนแล้ว เปิดยูส RIEL38 แล้วเริ่มเล่นจริงได้ทันที">
-    <p class="mb-4 text-left text-base leading-relaxed text-[#5b2140]">
-      สมัครเสร็จในไม่กี่วินาที ไม่ต้องรอคุยกับแอดมิน แล้วได้บัญชีเดียวที่ครอบคลุมเกมทุกค่ายในเว็บ
+  <ContentBox as="h2" title="พร้อมเมื่อไหร่ สมัคร PIGAUTO ยูสเดียว เริ่มเล่นจริงได้ทันที">
+    <p class="mb-4 text-left text-base leading-relaxed text-[#f7e4d4]">
+      สมัครจบในไม่กี่นาที ไม่ต้องรอคุยกับแอดมิน แล้วได้ยูสเดียวที่ใช้ได้กับทุกค่ายในเว็บ
     </p>
 
-    <p class="mb-4 text-left text-base leading-relaxed text-[#5b2140]">
-      หน้าเมมเบอร์รวมเกม เครดิต โปรโมชั่น และประวัติรายการไว้จุดเดียว ส่วนระบบ AI หลังบ้านช่วยสรุปข้อมูลเกม RTP โบนัส และเครดิตให้อ่านง่ายในที่เดียว
+    <p class="mb-4 text-left text-base leading-relaxed text-[#f7e4d4]">
+      ฝากถอนเป็นระบบออโต้ ยอดเข้าภายใน 3 วินาที ไม่ต้องส่งสลิป รองรับทั้งบัญชีธนาคารและทรูมันนี่วอเลท เริ่มได้ตั้งแต่ 1 บาท ไม่มีขั้นต่ำ
     </p>
 
-    <p class="mb-4 text-left text-base leading-relaxed text-[#5b2140]">
-      สมาชิกใหม่มีโปรฝาก 39 รับรวม 69 เทิร์น 1 เท่า ถอนได้สูงสุด 300 บาท ก่อนกดรับ ลองตั้งงบต่อรอบที่รับไหวไว้ก่อนสักหน่อย
-    </p>
+    <p class="mb-4 text-left text-base leading-relaxed text-[#f7e4d4]">อีกอย่างที่ควรติดตัวไว้เสมอ อย่าบอกรหัสผ่านหรือรหัส OTP ให้ใครทั้งนั้น</p>
 
-    <p class="mb-4 text-left text-base leading-relaxed text-[#5b2140]">อีกอย่างที่ควรติดตัวไว้เสมอ อย่าบอกรหัสผ่านหรือรหัส OTP ให้ใครทั้งนั้น</p>
-
-    <p class="text-left text-base leading-relaxed text-[#5b2140]">
-      เลือกค่ายที่ถูกใจแล้วกดลองได้เลย เกมที่คุณคุ้นมือวันนี้ คือเกมที่พร้อมลงเครดิตจริงในรอบถัดไป เพื่อประสบการณ์การเล่นที่คุ้มค่าและต่อเนื่องกว่าที่เคย
+    <p class="text-left text-base leading-relaxed text-[#f7e4d4]">
+      เลือกค่ายที่ถูกใจแล้วเริ่มได้เลย เกมที่คุณคุ้นมือวันนี้ คือเกมที่พร้อมลงเครดิตจริงในรอบถัดไป เพื่อประสบการณ์การเล่นที่คุ้มค่าและต่อเนื่องกว่าที่เคย
     </p>
   </ContentBox>
 

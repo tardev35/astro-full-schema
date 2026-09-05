@@ -27,18 +27,18 @@ const initialRows = Array.from({ length: 4 }, (_, i) => ({
   pending: brandFlag(Astro.site, `std-pending-${i}`),
 }));
 
-const PENDING_CLASS = "bg-[#153b26]/70 text-[#9dbfa8] animate-pulse border border-[#153b26]";
+const PENDING_CLASS = "bg-[#3a0808]/80 text-[#d7b9a4] animate-pulse border border-[#b07d12]/45";
 const DONE_CLASS = "bg-[#10b981]/20 text-[#34d399] border border-[#10b981]/50";
 ---
 
 <div class="mx-auto w-full max-w-[1300px] p-4 font-sans">
   <section
-    aria-label="รายการถอนเงินล่าสุดของสมาชิก YOK789"
-    class="relative overflow-hidden rounded-[20px] border border-[#12b84f]/40 bg-[#08150d]/80 px-4 py-8 shadow-[0_10px_30px_rgba(18,184,79,0.15)] backdrop-blur-md md:p-10">
+    aria-label="รายการถอนเงินล่าสุดของสมาชิก PIGAUTO"
+    class="relative overflow-hidden rounded-[20px] border border-[#f5c542]/40 bg-[#1f0303]/85 px-4 py-8 shadow-[0_10px_30px_rgba(245,197,66,0.16)] backdrop-blur-md md:p-10">
     <div class="relative z-10 mb-8 flex items-center justify-center gap-3">
-      <span aria-hidden="true" class="text-2xl drop-shadow-[0_0_8px_rgba(18,184,79,0.6)]">🏆</span>
-      <p class="bg-gradient-to-b from-[#d5f0dd] to-[#12b84f] bg-clip-text text-xl font-black tracking-wide text-transparent drop-shadow-sm md:text-3xl">รายการถอนเงินล่าสุดของสมาชิก YOK789</p>
-      <span aria-hidden="true" class="text-2xl drop-shadow-[0_0_8px_rgba(18,184,79,0.6)]">🏆</span>
+      <span aria-hidden="true" class="text-2xl drop-shadow-[0_0_8px_rgba(245,197,66,0.6)]">🐷</span>
+      <p class="bg-gradient-to-b from-[#ffe08a] to-[#d99e1f] bg-clip-text text-xl font-black tracking-wide text-transparent drop-shadow-sm md:text-3xl">รายการถอนเงินล่าสุดของสมาชิก PIGAUTO</p>
+      <span aria-hidden="true" class="text-2xl drop-shadow-[0_0_8px_rgba(245,197,66,0.6)]">🐷</span>
     </div>
 
     <div data-winners-feed data-interval="5000" data-max-rows="4" class="relative z-10 flex flex-col">
@@ -46,25 +46,25 @@ const DONE_CLASS = "bg-[#10b981]/20 text-[#34d399] border border-[#10b981]/50";
         initialRows.map((row) => (
           <div data-winner-row class="winner-row grid grid-rows-[1fr] transition-all duration-700 ease-in-out">
             <div class="overflow-hidden">
-              <div class="mb-3 flex items-center justify-between rounded-xl border border-[#12b84f]/20 bg-[#050d07]/60 p-4 shadow-sm backdrop-blur-md transition-all hover:border-[#12b84f]/50 hover:bg-[#0e2216]">
+              <div class="mb-3 flex items-center justify-between rounded-xl border border-[#f5c542]/20 bg-[#2a0505]/70 p-4 shadow-sm backdrop-blur-md transition-all hover:border-[#f5c542]/55 hover:bg-[#3a0808]">
                 <div class="flex items-center gap-4">
-                  <div class="relative flex h-11 w-11 shrink-0 items-center justify-center rounded-full border border-[#12b84f]/30 bg-white/5 shadow-sm">
+                  <div class="relative flex h-11 w-11 shrink-0 items-center justify-center rounded-full border border-[#f5c542]/30 bg-white/5 shadow-sm">
                     <div data-winner-bank class={`flex h-9 w-9 items-center justify-center overflow-hidden rounded-full ${row.bank.color}`}>
                       <img data-winner-icon src={row.bank.icon} alt="" width="24" height="24" loading="lazy" decoding="async" class="h-6 w-6 object-contain" />
                     </div>
                   </div>
                   <div class="flex flex-col justify-center">
-                    <div class="text-sm font-bold text-[#d5f0dd] md:text-base">
-                      User: <span data-winner-user class="tracking-wider text-[#5cff9b]">{row.user}</span>
+                    <div class="text-sm font-bold text-[#f7e4d4] md:text-base">
+                      User: <span data-winner-user class="tracking-wider text-[#ffe08a]">{row.user}</span>
                     </div>
-                    <div class="mt-0.5 text-[10px] text-[#9dbfa8] md:text-xs">
+                    <div class="mt-0.5 text-[10px] text-[#d7b9a4] md:text-xs">
                       REF#<span data-winner-ref data-ref-length="8">{row.ref}</span> · <span data-winner-time>{row.time}</span>
                     </div>
                   </div>
                 </div>
                 <div class="flex flex-col items-end justify-center gap-1.5">
-                  <div class="text-lg font-black tracking-tight text-[#5cff9b] drop-shadow-[0_0_5px_rgba(18,184,79,0.35)] md:text-2xl">
-                    <span data-winner-amount>{row.amount}</span> <span class="text-[10px] font-medium text-[#ffd94a] md:text-xs">THB</span>
+                  <div class="text-lg font-black tracking-tight text-[#f5c542] drop-shadow-[0_0_5px_rgba(245,197,66,0.4)] md:text-2xl">
+                    <span data-winner-amount>{row.amount}</span> <span class="text-[10px] font-medium text-[#f9a8c0] md:text-xs">THB</span>
                   </div>
                   <div
                     data-winner-status

@@ -8,22 +8,23 @@ const currentPath = Astro.url.pathname;
 const isActive = (path: string) => isActivePath(currentPath, path);
 
 const logoAlt =
-  "โลโก้ GODDUBAI เส้นขอบฟ้าเมืองดูไบสีดำมีตึกเบิร์จคาลิฟาสูงเด่นตั้งอยู่หน้าดวงอาทิตย์กลมสีส้มทอง ใต้ภาพเป็นตัวอักษรสีส้มทองคำว่า GOD DUBAI";
+  "โลโก้ PIGAUTO หัวหมูการ์ตูนสีชมพูยิ้มอยู่กลางเฟืองจักรโลหะสีเทาเงิน มีปีกโลหะกางออกสองข้าง ด้านล่างเป็นตัวอักษรสีขาวขอบเข้มว่า PIGAUTO";
 
 const links = [
   { name: "หน้าแรก", path: "/", icon: "🏠" },
-  { name: "โปรโมชั่น", path: "/promotion", icon: "🎁" },
+  { name: "โปรโมชั่น", path: "/promotion", icon: "🧧" },
+  { name: "สมัครสมาชิก", path: "/register", icon: "📝" },
+  { name: "เข้าสู่ระบบ", path: "/login", icon: "🔑" },
   { name: "ทดลองเล่น", path: "/ทดลองเล่น", icon: "🎰" },
-  { name: "ทางเข้า", path: "/ทางเข้า", icon: "🚪" },
-  { name: "เกี่ยวกับเรา", path: "/about-us", icon: "📖" },
+  { name: "เกี่ยวกับเรา", path: "/about-us", icon: "🐷" },
   { name: "ติดต่อเรา", path: "/contact-us", icon: "💬" },
 ];
 ---
 
 <header class="sticky top-0 z-[100] w-full font-sans">
   <nav
-    class="relative mx-auto flex h-[85px] w-full items-center justify-between rounded-b-2xl border-b border-[#e8a13c]/40 bg-[#0b1610]/85 px-4 shadow-[0_10px_30px_rgba(232,161,60,0.32)] backdrop-blur-xl xl:px-8">
-    <a href="/" class="z-[110] flex-shrink-0 transition-transform duration-300 hover:scale-105 hover:drop-shadow-[0_0_15px_rgba(247,207,138,0.5)]">
+    class="relative mx-auto flex h-[85px] w-full items-center justify-between rounded-b-2xl border-b border-[#f5c542]/45 bg-[#1f0303]/92 px-4 shadow-[0_10px_30px_rgba(245,197,66,0.28)] xl:px-8">
+    <a href="/" class="z-[110] flex-shrink-0 transition-transform duration-300 hover:scale-105 hover:drop-shadow-[0_0_15px_rgba(255,224,138,0.55)]">
       {
         mainLogo ? (
           <Picture
@@ -37,25 +38,25 @@ const links = [
             fallbackFormat="webp"
           />
         ) : (
-          <span class="bg-gradient-to-r from-[#f1e6d3] to-[#a8611a] bg-clip-text text-4xl font-black tracking-widest text-transparent drop-shadow-md">
-            GOD<span class="bg-gradient-to-r from-[#f7cf8a] to-[#e8a13c] bg-clip-text text-transparent">DUBAI</span>
+          <span class="bg-gradient-to-r from-[#ffe08a] to-[#b07d12] bg-clip-text text-4xl font-black tracking-widest text-transparent drop-shadow-md">
+            PIG<span class="bg-gradient-to-r from-[#f9a8c0] to-[#d92121] bg-clip-text text-transparent">AUTO</span>
           </span>
         )
       }
     </a>
 
-    <div class="hidden h-full flex-1 items-center justify-center gap-6 lg:flex">
+    <div class="hidden h-full flex-1 items-center justify-center gap-5 lg:flex">
       {
         links.map((item) => (
           <a
             href={item.path}
-            class={`group relative flex h-full items-center gap-2 px-2 text-sm font-bold tracking-wide uppercase transition-colors duration-300 xl:text-base ${isActive(item.path) ? "text-[#f7cf8a]" : "text-[#f1e6d3]/60 hover:text-white"}`}>
+            class={`group relative flex h-full items-center gap-2 px-2 text-sm font-bold tracking-wide uppercase transition-colors duration-300 xl:text-base ${isActive(item.path) ? "text-[#ffe08a]" : "text-[#f7e4d4]/65 hover:text-white"}`}>
             <span aria-hidden="true" class="text-base">
               {item.icon}
             </span>
             <span>{item.name}</span>
             <div
-              class={`absolute bottom-0 left-0 h-[3px] w-full rounded-t-full bg-gradient-to-r from-[#f7cf8a] to-[#0f8f57] shadow-[0_-2px_10px_rgba(232,161,60,0.8)] transition-transform duration-300 ${isActive(item.path) ? "scale-x-100" : "scale-x-0 group-hover:scale-x-100"}`}
+              class={`absolute bottom-0 left-0 h-[3px] w-full rounded-t-full bg-gradient-to-r from-[#ffe08a] via-[#f5c542] to-[#d92121] shadow-[0_-2px_10px_rgba(245,197,66,0.8)] transition-transform duration-300 ${isActive(item.path) ? "scale-x-100" : "scale-x-0 group-hover:scale-x-100"}`}
             />
           </a>
         ))
@@ -65,35 +66,35 @@ const links = [
     <div class="z-[110] flex items-center gap-4">
       <a
         href="/login"
-        class="hidden items-center justify-center rounded-full border border-[#e8a13c]/50 bg-[#0b1610]/60 px-7 py-2.5 text-sm font-bold text-[#f1e6d3] backdrop-blur-md transition-all duration-300 hover:bg-[#0f8f57]/35 hover:text-white hover:shadow-[0_0_15px_rgba(232,161,60,0.4)] lg:flex">
+        class="hidden items-center justify-center rounded-full border border-[#f5c542]/55 bg-[#2a0505]/70 px-7 py-2.5 text-sm font-bold text-[#f7e4d4] transition-all duration-300 hover:bg-[#8c0f0f]/55 hover:text-white hover:shadow-[0_0_15px_rgba(245,197,66,0.4)] lg:flex">
         เข้าสู่ระบบ
       </a>
       <a
         href="/register"
-        class="hidden items-center justify-center rounded-full bg-gradient-to-r from-[#f7cf8a] via-[#e8a13c] to-[#a8611a] px-7 py-2.5 text-sm font-black text-[#091310] shadow-[0_4px_15px_rgba(232,161,60,0.4)] transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_8px_25px_rgba(232,161,60,0.6)] lg:flex">
+        class="hidden items-center justify-center rounded-full bg-gradient-to-r from-[#ffe08a] via-[#f5c542] to-[#b07d12] px-7 py-2.5 text-sm font-black text-[#1f0303] shadow-[0_4px_15px_rgba(245,197,66,0.42)] transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_8px_25px_rgba(245,197,66,0.6)] lg:flex">
         สมัครสมาชิก
       </a>
 
       <button
         id="hamburger-btn"
-        class="relative flex h-[45px] w-[45px] flex-col items-center justify-center gap-[6px] rounded-full border border-[#e8a13c]/30 bg-[#0b1610]/60 lg:hidden"
+        class="relative flex h-[45px] w-[45px] flex-col items-center justify-center gap-[6px] rounded-full border border-[#f5c542]/35 bg-[#2a0505]/70 lg:hidden"
         aria-label="เปิดเมนู">
-        <span class="line-1 h-[2px] w-5 origin-center rounded-full bg-[#f7cf8a] transition-all duration-300"></span>
-        <span class="line-2 h-[2px] w-5 origin-center rounded-full bg-[#f7cf8a] transition-all duration-300"></span>
-        <span class="line-3 h-[2px] w-5 origin-center rounded-full bg-[#f7cf8a] transition-all duration-300"></span>
+        <span class="line-1 h-[2px] w-5 origin-center rounded-full bg-[#ffe08a] transition-all duration-300"></span>
+        <span class="line-2 h-[2px] w-5 origin-center rounded-full bg-[#ffe08a] transition-all duration-300"></span>
+        <span class="line-3 h-[2px] w-5 origin-center rounded-full bg-[#ffe08a] transition-all duration-300"></span>
       </button>
     </div>
   </nav>
 
   <div
     id="mobile-menu"
-    class="pointer-events-none absolute top-[85px] left-0 w-full origin-top -translate-y-4 scale-y-95 flex-col rounded-b-3xl border-b border-[#e8a13c]/40 bg-[#0b1610]/98 px-6 pt-4 pb-8 opacity-0 shadow-2xl backdrop-blur-2xl transition-all duration-400 lg:hidden">
+    class="pointer-events-none absolute top-[85px] left-0 w-full origin-top -translate-y-4 scale-y-95 flex-col rounded-b-3xl border-b border-[#f5c542]/45 bg-[#1f0303]/98 px-6 pt-4 pb-8 opacity-0 shadow-2xl transition-all duration-400 lg:hidden">
     <div class="flex flex-col gap-2">
       {
         links.map((item) => (
           <a
             href={item.path}
-            class={`flex items-center gap-3 rounded-xl px-5 py-3.5 text-lg font-bold tracking-wide uppercase transition-colors ${isActive(item.path) ? "bg-[#0f8f57]/30 text-[#f7cf8a] shadow-inner" : "text-[#f1e6d3]/60 hover:bg-white/5 hover:text-white"}`}>
+            class={`flex items-center gap-3 rounded-xl px-5 py-3.5 text-lg font-bold tracking-wide uppercase transition-colors ${isActive(item.path) ? "bg-[#8c0f0f]/45 text-[#ffe08a] shadow-inner" : "text-[#f7e4d4]/65 hover:bg-white/5 hover:text-white"}`}>
             <span aria-hidden="true" class="text-xl">
               {item.icon}
             </span>
@@ -105,10 +106,10 @@ const links = [
     <div class="mt-6 flex flex-col gap-4">
       <a
         href="/register"
-        class="flex w-full justify-center rounded-full bg-gradient-to-r from-[#f7cf8a] to-[#a8611a] py-3.5 text-lg font-black text-[#091310] shadow-[0_5px_15px_rgba(232,161,60,0.3)]">
+        class="flex w-full justify-center rounded-full bg-gradient-to-r from-[#ffe08a] to-[#b07d12] py-3.5 text-lg font-black text-[#1f0303] shadow-[0_5px_15px_rgba(245,197,66,0.32)]">
         สมัครสมาชิก
       </a>
-      <a href="/login" class="flex w-full justify-center rounded-full border border-[#e8a13c]/50 bg-[#0b1610]/60 py-3.5 text-lg font-bold text-[#f1e6d3]">เข้าสู่ระบบ</a>
+      <a href="/login" class="flex w-full justify-center rounded-full border border-[#f5c542]/55 bg-[#2a0505]/70 py-3.5 text-lg font-bold text-[#f7e4d4]">เข้าสู่ระบบ</a>
     </div>
   </div>
 </header>

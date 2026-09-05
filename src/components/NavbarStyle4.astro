@@ -10,28 +10,34 @@ const currentPath = Astro.url.pathname;
 
 const isActive = (path: string) => isActivePath(currentPath, path);
 
+const logoAlt =
+  "โลโก้ RIEL38 ตัวอักษร Riel38 แบบสามมิติสีชมพูมันวาวขอบขาว ด้านซ้ายเป็นแมวกวักสีชมพูยิ้มถือเหรียญทอง ด้านขวาเป็นหมูสีชมพูในกล่องสีม่วง ด้านล่างมีอัญมณีสีชมพูและกองเหรียญ";
+
 const links = [
   { name: "หน้าแรก", path: "/", icon: "🏠" },
   { name: "โปรโมชั่น", path: "/promotion", icon: "🎁" },
   { name: "สมัครสมาชิก", path: "/register", icon: "📝" },
   { name: "เข้าสู่ระบบ", path: "/login", icon: "🔑" },
   { name: "ทดลองเล่น", path: "/ทดลองเล่น", icon: "🎰" },
-  { name: "เกี่ยวกับเรา", path: "/about-us", icon: "📖" },
-  { name: "ติดต่อเรา", path: "/contact-us", icon: "📞" },
+  { name: "เกี่ยวกับเรา", path: "/about-us", icon: "🐰" },
+  { name: "ติดต่อเรา", path: "/contact-us", icon: "💬" },
 ];
 ---
 
-<nav class="sticky top-0 z-50 w-full border-b border-[#ef4444]/35 bg-[#1a0303] font-sans shadow-[0_4px_20px_rgba(239,68,68,0.18)]">
+<nav class="sticky top-0 z-50 w-full border-b border-[#f9a8d4] bg-[#4a0d2e] font-sans shadow-[0_4px_20px_rgba(236,72,153,0.28)]">
   <div class="flex h-[75px] w-full items-center justify-between px-4 xl:px-8">
     <div class="z-50 flex items-center">
       <a href="/" class="group relative flex items-center">
-        <div class="absolute inset-0 scale-0 rounded-full bg-[#ef4444]/25 blur-xl transition-transform duration-500 group-hover:scale-150"></div>
+        <div aria-hidden="true" class="absolute inset-0 scale-0 rounded-full bg-[#ec4899]/30 blur-xl transition-transform duration-500 group-hover:scale-150"></div>
         <Picture
           src={mainLogo!}
-          alt="โลโก้ PIGAUTO รูปหมูสีชมพูยิ้มอยู่ในวงเฟืองสีเงิน ใต้ภาพเขียนว่า PIGAUTO ด้วยตัวอักษรสีขาวขอบดำ"
+          alt={logoAlt}
+          widths={[110, 220, 330]}
+          sizes="110px"
           loading="eager"
           fetchpriority="high"
-          class="relative h-[40px] w-auto drop-shadow-[0_0_12px_rgba(239,68,68,0.45)] transition-transform group-hover:scale-105 xl:h-[45px]"
+          decoding="async"
+          class="relative h-[40px] w-auto drop-shadow-[0_0_12px_rgba(249,168,212,0.55)] transition-transform group-hover:scale-105 xl:h-[45px]"
           formats={["avif", "webp"]}
           fallbackFormat="webp"
         />
@@ -43,11 +49,13 @@ const links = [
         links.map((item) => (
           <a
             href={item.path}
-            class={`group relative skew-x-[-15deg] overflow-hidden border px-5 py-2 transition-all duration-300 ${isActive(item.path) ? "border-[#f5c542] bg-[#7f1d1d]/35 shadow-[0_0_15px_rgba(245,197,66,0.35)]" : "border-white/10 bg-white/5 hover:border-[#ef4444]/60"}`}>
+            class={`group relative skew-x-[-15deg] overflow-hidden rounded-lg border px-5 py-2 transition-all duration-300 ${isActive(item.path) ? "border-[#f9a8d4] bg-[#ec4899]/35 shadow-[0_0_15px_rgba(249,168,212,0.4)]" : "border-white/15 bg-white/8 hover:border-[#f9a8d4]/70"}`}>
             <div
-              class={`absolute inset-0 translate-y-full bg-gradient-to-r from-[#7f1d1d] to-[#ef4444] transition-transform duration-300 ${isActive(item.path) ? "translate-y-0 opacity-25" : "opacity-40 group-hover:translate-y-0"}`}></div>
+              aria-hidden="true"
+              class={`absolute inset-0 translate-y-full bg-gradient-to-r from-[#db2777] to-[#a855f7] transition-transform duration-300 ${isActive(item.path) ? "translate-y-0 opacity-30" : "opacity-45 group-hover:translate-y-0"}`}
+            />
             <span
-              class={`relative z-10 block skew-x-[15deg] text-sm font-bold tracking-wide transition-colors ${isActive(item.path) ? "text-[#ffe9a8] drop-shadow-[0_0_5px_rgba(239,68,68,0.6)]" : "text-[#f7e2d6] group-hover:text-white"}`}>
+              class={`relative z-10 block skew-x-[15deg] text-sm font-bold tracking-wide transition-colors ${isActive(item.path) ? "text-white drop-shadow-[0_0_5px_rgba(236,72,153,0.7)]" : "text-[#ffe4f2] group-hover:text-white"}`}>
               <span aria-hidden="true" class="mr-1">
                 {item.icon}
               </span>
@@ -61,26 +69,26 @@ const links = [
     <div class="z-50 flex items-center gap-2">
       <button
         id="hamburger-btn"
-        class="relative flex h-[45px] w-[45px] flex-col items-center justify-center space-y-1.5 rounded-lg border border-[#ef4444]/35 bg-[#7f1d1d]/25 p-2 shadow-[0_0_10px_rgba(239,68,68,0.25)] transition-all hover:bg-[#7f1d1d]/45 xl:hidden"
+        class="relative flex h-[45px] w-[45px] flex-col items-center justify-center space-y-1.5 rounded-lg border border-[#f9a8d4]/50 bg-[#ec4899]/20 p-2 shadow-[0_0_10px_rgba(236,72,153,0.3)] transition-all hover:bg-[#ec4899]/35 xl:hidden"
         aria-label="เปิดหรือปิดเมนู">
-        <span class="hamburger-line h-[2px] w-6 origin-center bg-[#f5c542] transition-all duration-300"></span>
-        <span class="hamburger-line h-[2px] w-6 bg-[#f5c542] transition-all duration-300"></span>
-        <span class="hamburger-line h-[2px] w-6 origin-center bg-[#f5c542] transition-all duration-300"></span>
+        <span class="hamburger-line h-[2px] w-6 origin-center bg-[#fbcfe8] transition-all duration-300"></span>
+        <span class="hamburger-line h-[2px] w-6 bg-[#fbcfe8] transition-all duration-300"></span>
+        <span class="hamburger-line h-[2px] w-6 origin-center bg-[#fbcfe8] transition-all duration-300"></span>
       </button>
     </div>
   </div>
 
-  <div id="mobile-overlay" class="pointer-events-none fixed inset-0 z-30 bg-black/80 opacity-0 backdrop-blur-sm transition-opacity duration-300 xl:hidden"></div>
+  <div id="mobile-overlay" class="pointer-events-none fixed inset-0 z-30 bg-[#2d0719]/80 opacity-0 backdrop-blur-sm transition-opacity duration-300 xl:hidden"></div>
 
   <div
     id="mobile-sidebar"
-    class="fixed top-0 right-0 z-40 h-screen w-[280px] translate-x-full transform overflow-y-auto border-l border-[#ef4444]/55 bg-[#1a0303] shadow-[-10px_0_30px_rgba(0,0,0,0.8)] transition-transform duration-300 ease-out xl:hidden">
+    class="fixed top-0 right-0 z-40 h-screen w-[280px] translate-x-full transform overflow-y-auto border-l border-[#f9a8d4]/60 bg-[#2d0719] shadow-[-10px_0_30px_rgba(45,7,25,0.7)] transition-transform duration-300 ease-out xl:hidden">
     <div class="flex flex-col space-y-3 px-6 pt-24 pb-10">
       {
         links.map((item) => (
           <a
             href={item.path}
-            class={`sidebar-item flex items-center rounded-xl border px-4 py-3.5 transition-all ${isActive(item.path) ? "border-[#ef4444] bg-[#7f1d1d]/35 text-[#ffe9a8] shadow-[inset_4px_0_0_#f5c542]" : "border-transparent bg-white/5 text-[#d9b7ab] hover:bg-white/10 hover:text-white"}`}>
+            class={`sidebar-item flex items-center rounded-xl border px-4 py-3.5 transition-all ${isActive(item.path) ? "border-[#ec4899] bg-[#ec4899]/30 text-white shadow-[inset_4px_0_0_#f9a8d4]" : "border-transparent bg-white/8 text-[#ffe4f2] hover:bg-white/15 hover:text-white"}`}>
             <span aria-hidden="true" class="mr-3 text-xl">
               {item.icon}
             </span>
@@ -95,7 +103,7 @@ const links = [
 <style is:global>
   #hamburger-btn.active .hamburger-line:nth-child(1) {
     transform: translateY(8px) rotate(45deg);
-    background-color: #ef4444;
+    background-color: #ec4899;
   }
   #hamburger-btn.active .hamburger-line:nth-child(2) {
     opacity: 0;
@@ -103,7 +111,7 @@ const links = [
   }
   #hamburger-btn.active .hamburger-line:nth-child(3) {
     transform: translateY(-8px) rotate(-45deg);
-    background-color: #ef4444;
+    background-color: #ec4899;
   }
 
   .sidebar-item {

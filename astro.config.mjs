@@ -75,7 +75,7 @@ export default defineConfig({
     "/line": "https://tinyurl.com/suhng",
   },
 
-  site: "https://osiris168-brand.com",
+  site: "https://riel38.co",
   integrations: [
     sitemap({
       // /login, /register and /line are forwarding pages that all ship

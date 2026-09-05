@@ -27,32 +27,37 @@ const initialRows = Array.from({ length: 5 }, (_, i) => ({
 
 <div class="mx-auto w-full max-w-[900px] p-4 font-sans">
   <section
-    aria-label="ประวัติการถอนเงินล่าสุดของสมาชิก ONEHENG89"
-    class="relative overflow-hidden rounded-[30px] border border-[#c7dcfb] bg-white px-4 py-8 shadow-[0_10px_30px_rgba(11,63,184,0.12)] md:p-10">
-    <div aria-hidden="true" class="pointer-events-none absolute -top-16 -right-10 h-40 w-40 rounded-full bg-[#0b3fb8]/12 blur-[60px]"></div>
-    <div aria-hidden="true" class="pointer-events-none absolute -bottom-16 -left-10 h-40 w-40 rounded-full bg-[#16a34a]/14 blur-[60px]"></div>
+    aria-label="ประวัติการถอนเงินล่าสุดของสมาชิก RIEL38"
+    class="relative overflow-hidden rounded-[30px] border border-[#f9a8d4] bg-white px-4 py-8 shadow-[0_10px_30px_rgba(236,72,153,0.12)] md:p-10">
+    <div aria-hidden="true" class="pointer-events-none absolute -top-16 -right-10 h-40 w-40 rounded-full bg-[#ec4899]/12 blur-[60px]"></div>
+    <div aria-hidden="true" class="pointer-events-none absolute -bottom-16 -left-10 h-40 w-40 rounded-full bg-[#a855f7]/14 blur-[60px]"></div>
 
     <div class="relative z-10 mb-8 text-center">
-      <p class="bg-gradient-to-r from-[#062c85] via-[#0b3fb8] to-[#16a34a] bg-clip-text text-xl font-black text-transparent md:text-3xl">ประวัติการถอนเงินของสมาชิก ONEHENG89 แบบเรียลไทม์</p>
-      <p class="mt-2 text-base leading-relaxed text-[#1b2c4a]">ระบบออโต้ ONEHENG89 เปิดทำรายการตลอด 24 ชั่วโมง ตัวเลขด้านล่างเป็นข้อมูลตัวอย่างสำหรับแสดงรูปแบบรายการเท่านั้น</p>
+      <p class="bg-gradient-to-r from-[#9d174d] via-[#ec4899] to-[#a855f7] bg-clip-text text-xl font-black text-transparent md:text-3xl">ประวัติการถอนเงินของสมาชิก RIEL38 แบบเรียลไทม์</p>
+      <p class="mt-2 text-base leading-relaxed text-[#5b2140]">
+        ยอดถอนของ RIEL38 ตัดจาก Smart Wallet จุดเดียว ทำรายการได้ตลอด 24 ชั่วโมง ตัวเลขด้านล่างเป็นข้อมูลตัวอย่างสำหรับแสดงรูปแบบรายการเท่านั้น
+      </p>
     </div>
 
-    <div data-winners-feed class="relative z-10 ml-4 border-l-2 border-[#c7dcfb] pl-6 md:ml-8 md:pl-8">
+    <div data-winners-feed class="relative z-10 ml-4 border-l-2 border-[#f9a8d4] pl-6 md:ml-8 md:pl-8">
       {
         initialRows.map((row) => (
           <div data-winner-row class="winner-row relative mb-6 transition-all duration-500 ease-out">
-            <div class="absolute top-2 -left-[35px] h-4 w-4 rounded-full border-2 border-white bg-[#0b3fb8] shadow-[0_0_10px_rgba(11,63,184,0.45)] md:-left-[43px]" />
+            <div class="absolute top-2 -left-[35px] h-4 w-4 rounded-full border-2 border-white bg-[#ec4899] shadow-[0_0_10px_rgba(236,72,153,0.45)] md:-left-[43px]" />
 
-            <div class="flex items-center gap-4 rounded-[20px] border border-[#c7dcfb] bg-gradient-to-r from-[#f3f8ff] to-white p-4 transition-colors hover:from-[#e6efff] hover:to-[#f3f8ff]">
+            <div class="flex items-center gap-4 rounded-[20px] border border-[#f9a8d4] bg-gradient-to-r from-[#fdf2f8] to-white p-4 transition-colors hover:from-[#fce7f3] hover:to-[#fdf2f8]">
               <div data-winner-bank class={`flex h-10 w-10 shrink-0 items-center justify-center rounded-full ${row.bank.color}`}>
                 <img data-winner-icon src={row.bank.icon} alt="" width="24" height="24" loading="lazy" decoding="async" class="h-6 w-6 object-contain" />
               </div>
 
               <div class="min-w-0 flex-1">
-                <div class="text-sm text-[#5b7099]">
-                  ยูสเซอร์: <span data-winner-user class="font-bold text-[#0a1c3a]">{row.user}</span>
+                <div class="text-sm text-[#8a5670]">
+                  ยูสเซอร์:{" "}
+                  <span data-winner-user class="font-bold text-[#5b2140]">
+                    {row.user}
+                  </span>
                 </div>
-                <div class="text-xl font-black text-[#0b3fb8]">
+                <div class="text-xl font-black text-[#db2777]">
                   <span data-winner-amount>{row.amount}</span> THB
                 </div>
               </div>
@@ -82,9 +87,9 @@ const initialRows = Array.from({ length: 5 }, (_, i) => ({
 
 <style>
   .winner-status.is-pending {
-    color: #062c85;
-    border-color: #c7dcfb;
-    background-color: #e6efff;
+    color: #9d174d;
+    border-color: #f9a8d4;
+    background-color: #fce7f3;
   }
   .winner-status.is-verified {
     color: #0f7a37;

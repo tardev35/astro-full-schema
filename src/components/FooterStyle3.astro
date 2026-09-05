@@ -18,26 +18,27 @@ const quickLinks = [
   { name: "ติดต่อแอดมิน", path: "/contact-us" },
 ];
 
-const logoAlt = "โลโก้ VING999 ตัวอักษร VING สีโครเมียมเงินวางในวงแหวนโลหะ ใต้ลงมาเป็นเลข 999 สีแดงพร้อมเส้นความเร็วสีแดงพุ่งไปทางขวา";
+const logoAlt =
+  "โลโก้ RIEL38 ตัวอักษร Riel38 แบบสามมิติสีชมพูมันวาวขอบขาว ด้านซ้ายเป็นแมวกวักสีชมพูยิ้มถือเหรียญทอง ด้านขวาเป็นหมูสีชมพูในกล่องสีม่วง ด้านล่างมีอัญมณีสีชมพูและกองเหรียญ";
 ---
 
-<footer class="relative mt-32 w-full border-t border-[#bdcad2]/25 bg-[#0e0708] pt-64 pb-6 font-sans text-[#dce3e8] shadow-[0_-10px_30px_rgba(143,10,19,0.35)] md:pt-40">
+<footer class="relative mt-32 w-full border-t border-[#f9a8d4]/45 bg-[#2d0719] pt-64 pb-6 font-sans text-[#ffe4f2] shadow-[0_-10px_30px_rgba(236,72,153,0.28)] md:pt-40">
   <div
-    class="absolute -top-14 left-1/2 z-20 flex w-[92%] max-w-5xl -translate-x-1/2 flex-col items-center justify-between rounded-2xl border border-[#bdcad2]/35 bg-gradient-to-r from-[#1c0a0c] via-[#8f0a13] to-[#1c0a0c] p-6 shadow-[0_15px_40px_rgba(224,27,45,0.3)] md:-top-16 md:flex-row md:p-8">
+    class="absolute -top-14 left-1/2 z-20 flex w-[92%] max-w-5xl -translate-x-1/2 flex-col items-center justify-between rounded-2xl border border-[#f9a8d4]/50 bg-gradient-to-r from-[#4a0d2e] via-[#db2777] to-[#7e22ce] p-6 shadow-[0_15px_40px_rgba(236,72,153,0.32)] md:-top-16 md:flex-row md:p-8">
     <div class="mb-5 flex flex-col text-center md:mb-0 md:text-left">
-      <p class="text-xl font-black tracking-wide text-white uppercase italic drop-shadow-[0_2px_4px_rgba(10,5,6,0.6)] md:text-3xl">
-        <span aria-hidden="true">🎰</span> พร้อมหมุนสล็อตเว็บตรงกับ VING999 แล้วหรือยัง?
+      <p class="text-xl font-black tracking-wide text-white uppercase italic drop-shadow-[0_2px_4px_rgba(45,7,25,0.6)] md:text-3xl">
+        <span aria-hidden="true">🎰</span> พร้อมลองสล็อตกว่า 2,000 เกมกับ RIEL38 แล้วหรือยัง?
       </p>
-      <p class="mt-2 text-sm font-medium text-[#dce3e8]/90 md:text-base">
-        สมัครยูสเดียวได้เกมค่ายดังครบทุกหมวด เปลี่ยนเกมกี่รอบก็ใช้เครดิตชุดเดิม พร้อมระบบฝากถอนออโต้ที่รองรับทั้งบัญชีธนาคารและ TrueWallet จบได้จากหน้าเมมเบอร์
+      <p class="mt-2 text-sm font-medium text-[#ffe4f2]/90 md:text-base">
+        สมัครยูสเดียวได้ครบทั้ง 30+ ค่าย ลองโหมดทดลองเล่นฟรีก่อนได้ทุกเกม เครดิตรวมอยู่ใน Smart Wallet จุดเดียว สลับค่ายกี่รอบก็ไม่ต้องโยกเงินเอง
       </p>
     </div>
 
     <a
       href="/register"
-      class="group relative flex items-center justify-center overflow-hidden rounded-full border border-[#bdcad2] bg-gradient-to-b from-[#f2f5f7] to-[#bdcad2] px-8 py-3.5 text-sm font-extrabold whitespace-nowrap text-[#1c0a0c] shadow-[0_0_15px_rgba(189,202,210,0.45)] transition-all hover:scale-105 md:text-base">
+      class="group relative flex items-center justify-center overflow-hidden rounded-full border border-[#fbcfe8] bg-gradient-to-b from-white to-[#fbcfe8] px-8 py-3.5 text-sm font-extrabold whitespace-nowrap text-[#9d174d] shadow-[0_0_15px_rgba(251,207,232,0.5)] transition-all hover:scale-105 md:text-base">
       <span class="relative z-10">สมัครสมาชิกเลย <span aria-hidden="true">🚀</span></span>
-      <div aria-hidden="true" class="absolute inset-0 translate-y-full bg-[#e01b2d] transition-transform duration-300 group-hover:translate-y-0"></div>
+      <div aria-hidden="true" class="absolute inset-0 translate-y-full bg-[#ec4899] transition-transform duration-300 group-hover:translate-y-0"></div>
     </a>
   </div>
 
@@ -55,18 +56,18 @@ const logoAlt = "โลโก้ VING999 ตัวอักษร VING สีโ
                 height={45}
                 loading="lazy"
                 decoding="async"
-                class="h-[45px] w-auto rounded-md bg-white/95 px-1.5 py-1 drop-shadow-[0_0_12px_rgba(224,27,45,0.55)]"
+                class="h-[45px] w-auto rounded-md bg-white/95 px-1.5 py-1 drop-shadow-[0_0_12px_rgba(236,72,153,0.55)]"
                 formats={["avif", "webp"]}
                 fallbackFormat="webp"
               />
             ) : (
-              <p class="bg-gradient-to-b from-white to-[#bdcad2] bg-clip-text text-3xl font-black text-transparent drop-shadow-[0_0_8px_rgba(189,202,210,0.5)]">VING999</p>
+              <p class="bg-gradient-to-b from-white to-[#fbcfe8] bg-clip-text text-3xl font-black text-transparent drop-shadow-[0_0_8px_rgba(249,168,212,0.5)]">RIEL38</p>
             )
           }
         </a>
-        <p class="text-sm leading-relaxed text-[#dce3e8]/80">
-          VING999 รวมสล็อตออนไลน์จากหลายค่ายไว้ในยูสเดียว แบ่งหมวดให้กลับเกมประจำหรือหาเกมใหม่ได้เร็ว เครดิต โปรโมชั่น และประวัติรายการอยู่ในหน้าเมมเบอร์เดียวกัน
-          พร้อมระบบฝากถอนออโต้ที่รองรับทั้งบัญชีธนาคารและ TrueWallet ทำรายการและตามสถานะได้เอง
+        <p class="text-sm leading-relaxed text-[#ffe4f2]/85">
+          RIEL38 รวมเกมสล็อตกว่า 2,000 เกมจาก 30+ ค่ายไว้ในบัญชีเดียว แบ่งหมวดให้กลับเกมประจำหรือหาเกมใหม่ได้เร็ว เครดิต โปรโมชั่น และประวัติรายการอยู่ในหน้าเมมเบอร์เดียวกัน
+          พร้อม Smart Wallet ที่ให้เครดิตตามไปทุกค่าย และระบบ AI หลังบ้านที่ช่วยสรุปข้อมูลเกมกับบัญชีให้อ่านง่าย
         </p>
 
         <div class="mt-2 flex flex-wrap gap-3">
@@ -101,14 +102,14 @@ const logoAlt = "โลโก้ VING999 ตัวอักษร VING สีโ
       <div class="md:col-span-6 lg:col-span-5">
         <p class="relative mb-5 inline-block text-lg font-bold tracking-wider text-white uppercase">
           ลิงก์ด่วน (Quick Links)
-          <span aria-hidden="true" class="absolute -bottom-2 left-0 h-1 w-1/2 rounded-full bg-gradient-to-r from-[#bdcad2] to-[#e01b2d] shadow-[0_0_8px_rgba(189,202,210,0.6)]"></span>
+          <span aria-hidden="true" class="absolute -bottom-2 left-0 h-1 w-1/2 rounded-full bg-gradient-to-r from-[#fbcfe8] to-[#ec4899] shadow-[0_0_8px_rgba(249,168,212,0.6)]"></span>
         </p>
 
         <div class="grid grid-cols-2 gap-x-4 gap-y-3 text-sm">
           {
             quickLinks.map((link) => (
-              <a href={link.path} class="group flex items-center text-[#dce3e8]/80 transition-colors hover:text-[#f2f5f7]">
-                <span aria-hidden="true" class="mr-2 h-1.5 w-1.5 rounded-sm bg-[#e01b2d] transition-transform group-hover:rotate-45" />
+              <a href={link.path} class="group flex items-center text-[#ffe4f2]/85 transition-colors hover:text-white">
+                <span aria-hidden="true" class="mr-2 h-1.5 w-1.5 rounded-sm bg-[#ec4899] transition-transform group-hover:rotate-45" />
                 {link.name}
               </a>
             ))
@@ -119,28 +120,29 @@ const logoAlt = "โลโก้ VING999 ตัวอักษร VING สีโ
       <div class="md:col-span-6 lg:col-span-3">
         <p class="relative mb-5 inline-block text-lg font-bold tracking-wider text-white uppercase">
           ระบบการเงิน
-          <span aria-hidden="true" class="absolute -bottom-2 left-0 h-1 w-1/2 rounded-full bg-gradient-to-r from-[#bdcad2] to-[#e01b2d] shadow-[0_0_8px_rgba(189,202,210,0.6)]"></span>
+          <span aria-hidden="true" class="absolute -bottom-2 left-0 h-1 w-1/2 rounded-full bg-gradient-to-r from-[#fbcfe8] to-[#ec4899] shadow-[0_0_8px_rgba(249,168,212,0.6)]"></span>
         </p>
 
-        <p class="mb-4 text-xs text-[#dce3e8]/80">รองรับการฝาก-ถอนผ่านแอปธนาคารชั้นนำและทรูมันนี่วอลเล็ท โดยควรใช้บัญชีชื่อเดียวกับข้อมูลที่สมัครไว้</p>
+        <p class="mb-4 text-xs text-[#ffe4f2]/85">รองรับการฝาก-ถอนผ่านแอปธนาคารชั้นนำและทรูมันนี่วอลเล็ท โดยควรใช้บัญชีชื่อเดียวกับข้อมูลที่สมัครไว้</p>
 
         <BankStrip size={30} />
 
-        <div class="mt-3 flex h-10 items-center justify-center rounded border border-white/10 bg-[#1c0a0c] transition-colors hover:border-[#bdcad2]/60" title="ตรวจรายการย้อนหลัง">
-          <span class="flex items-center gap-1 text-xs font-bold text-[#dce3e8]"><span aria-hidden="true" class="text-lg text-[#bdcad2]">🧾</span> เก็บเลขรายการไว้ตรวจสอบได้</span>
+        <div class="mt-3 flex h-10 items-center justify-center rounded border border-white/12 bg-[#4a0d2e] transition-colors hover:border-[#f9a8d4]/70" title="ตรวจรายการย้อนหลัง">
+          <span class="flex items-center gap-1 text-xs font-bold text-[#ffe4f2]"><span aria-hidden="true" class="text-lg text-[#fbcfe8]">🧾</span> เก็บเลขรายการไว้ตรวจสอบได้</span>
         </div>
       </div>
     </div>
 
     <hr class="mb-6 border-white/15" />
 
-    <div class="mb-6 hidden text-justify text-[10px] leading-relaxed text-[#dce3e8]/65 md:block">
-      VING999 เว็บตรงอันดับ1 สำหรับสายสล็อต รวมเกมค่ายดังหลายแนวไว้ในยูสเดียว เลือกได้ทั้งสล็อตคลาสสิก เกมฟรีสปิน เกมโบนัสฟีเจอร์ และเกมใหม่ สลับค่ายได้โดยใช้เครดิตและบัญชีเดิม
-      ระบบฝากถอนออโต้รองรับบัญชีธนาคารและ TrueWallet ฝากขั้นต่ำ 1 บาท ตรวจเครดิต โปรโมชั่น และประวัติรายการได้จากหน้าเมมเบอร์ ทางเข้า VING999 รองรับโทรศัพท์ แท็บเล็ต และคอมพิวเตอร์ด้วยยูสเดิม
+    <div class="mb-6 hidden text-justify text-[10px] leading-relaxed text-[#ffe4f2]/65 md:block">
+      RIEL38 เว็บสล็อตมาใหม่ที่รวมเกมกว่า 2,000 เกมจากผู้ให้บริการมากกว่า 30 ค่ายไว้ในยูสเดียว มีทั้งสล็อตยอดนิยม เกมเปิดใหม่ ฟรีสปิน และเกมฟีเจอร์ตัวคูณ เลือกได้จากบัญชีเดียวโดยไม่ต้องเปิดยูสตามค่าย
+      โหมดทดลองเล่นฟรีเปิดให้ดูรูปแบบเกมก่อนลงเครดิตจริง Smart Wallet รวมเครดิตไว้จุดเดียวเพื่อให้สลับค่ายได้ต่อเนื่อง และระบบ AI หลังบ้านช่วยสรุปข้อมูลเกม RTP โบนัส และประวัติการใช้งานจากหน้าเมมเบอร์
+      เข้าสู่ระบบ RIEL38 ด้วยยูสเดิมได้จากมือถือ แท็บเล็ต และคอมพิวเตอร์
     </div>
 
-    <div class="flex flex-col items-center justify-between gap-4 border-t border-white/15 pt-6 text-xs text-[#dce3e8]/70 md:flex-row">
-      <p>&copy; {new Date().getFullYear()} <span class="font-bold tracking-wider text-white uppercase">VING999</span>. All Rights Reserved.</p>
+    <div class="flex flex-col items-center justify-between gap-4 border-t border-white/15 pt-6 text-xs text-[#ffe4f2]/75 md:flex-row">
+      <p>&copy; {new Date().getFullYear()} <span class="font-bold tracking-wider text-white uppercase">RIEL38</span>. All Rights Reserved.</p>
 
       <div class="flex items-center gap-6">
         <a href="/terms/" class="transition-colors hover:text-white">เงื่อนไขและข้อตกลง</a>
@@ -148,7 +150,7 @@ const logoAlt = "โลโก้ VING999 ตัวอักษร VING สีโ
 
         <a
           href="#top"
-          class="flex h-8 w-8 items-center justify-center rounded border border-white/20 bg-white/10 text-white transition-all hover:border-[#bdcad2] hover:bg-[#1c0a0c] hover:shadow-[0_0_15px_rgba(189,202,210,0.5)]"
+          class="flex h-8 w-8 items-center justify-center rounded border border-white/25 bg-white/10 text-white transition-all hover:border-[#f9a8d4] hover:bg-[#4a0d2e] hover:shadow-[0_0_15px_rgba(249,168,212,0.5)]"
           aria-label="กลับขึ้นด้านบนสุดของหน้า">
           <span aria-hidden="true">↑</span>
         </a>

@@ -11,32 +11,44 @@ const games = [
   {
     rank: 1,
     name: "PG Soft",
-    type: "ค่ายที่สมาชิก OSIRIS168 เปิดบ่อยที่สุด เกมลิขสิทธิ์แท้จากผู้พัฒนาโดยตรง ค่า RTP ตรงตามที่ค่ายตั้งไว้",
-    menus: ["ลิขสิทธิ์แท้", "เล่นประจำ"],
+    type: "ค่ายที่สมาชิก RIEL38 เปิดบ่อยที่สุด ภาพจำชัด เล่นบนมือถือสะดวก และมีโหมดทดลองเล่นฟรีให้ดูรูปแบบเกมก่อน",
+    menus: ["สายมือถือ", "เล่นประจำ"],
     players: 5124,
     img: img4,
   },
-  { rank: 2, name: "Pragmatic Play", type: "ค่ายใหญ่ระดับอินเตอร์ ฟีเจอร์แน่น จังหวะเกมนิ่ง เข้าเล่นเวลาไหนก็ยังลื่นไหลเหมือนเดิม", menus: ["ระดับอินเตอร์", "ฟีเจอร์แน่น"], players: 3842, img: img5 },
-  { rank: 3, name: "JILI", type: "ค่ายที่มาแรงในฝั่งเอเชีย มีฟีเจอร์โบนัสให้ไล่เก็บแทบทุกช่วงเวลา เหมาะกับสายที่เล่นเป็นรอบสั้น", menus: ["ฟีเจอร์โบนัส", "มาแรง"], players: 3517, img: img2 },
-  { rank: 4, name: "Joker", type: "วงล้อคลาสสิกที่คนไทยคุ้นมือที่สุด กติกาตรงไปตรงมา เข้าเล่นต่อจากยูสเดิมได้เลย", menus: ["คลาสสิก", "คุ้นมือ"], players: 2905, img: img6 },
-  { rank: 5, name: "ค่ายใหม่ที่เพิ่งเข้าระบบปี 2026", type: "หมวดเกมเปิดใหม่สำหรับคนที่ชอบลองของใหม่ ใช้บัญชีเดิมเข้าเล่นได้โดยไม่ต้องเปิดยูสเพิ่ม", menus: ["ของใหม่", "หลายค่าย"], players: 2431, img: img3 },
-  { rank: 6, name: "เกมที่เล่นค้างไว้และรายการโปรด", type: "กลับเข้าเกมที่เล่นค้างไว้ได้จากหน้าเมมเบอร์ ไม่ต้องไล่หาใหม่ทุกรอบที่ล็อกอิน", menus: ["เล่นประจำ", "รายการโปรด"], players: 2108, img: img1 },
+  { rank: 2, name: "Pragmatic Play", type: "สายรอรอบโบนัสกับตัวคูณจะคุ้นค่ายนี้ ฟีเจอร์ของแต่ละเกมค่อนข้างชัด เลือกแนวที่ชอบได้ง่าย", menus: ["ฟรีสปิน", "ตัวคูณ"], players: 3842, img: img5 },
+  { rank: 3, name: "JILI", type: "เกมเดินจังหวะไวและมีฟีเจอร์หลากหลาย เหมาะกับคนที่ชอบลองหลายเกมในหนึ่งรอบเล่น", menus: ["จังหวะไว", "เปลี่ยนเกมบ่อย"], players: 3517, img: img2 },
+  { rank: 4, name: "Joker Gaming", type: "วงล้อคลาสสิกที่คนไทยคุ้นมือที่สุด กติกาตรงไปตรงมา เข้าเล่นต่อจากยูสเดิมได้เลย", menus: ["คลาสสิก", "คุ้นมือ"], players: 2905, img: img6 },
+  {
+    rank: 5,
+    name: "ค่ายอื่นในระบบอีกกว่า 30 ค่าย",
+    type: "ตั้งแต่ค่ายที่คนไทยคุ้นชื่อไปจนถึงผู้ให้บริการระดับสากล ใช้บัญชีเดิมเข้าเล่นได้โดยไม่ต้องเปิดยูสเพิ่ม",
+    menus: ["30+ ค่าย", "บัญชีเดียว"],
+    players: 2431,
+    img: img3,
+  },
+  {
+    rank: 6,
+    name: "หมวดทดลองเล่นฟรี",
+    type: "เปิดดูรูปแบบเกมด้วยเครดิตจำลองก่อนลงเงินจริง เครดิตส่วนนี้ถอนไม่ได้และไม่นับเป็นยอดเทิร์น",
+    menus: ["โหมดทดลอง", "ก่อนเปิดยูส"],
+    players: 2108,
+    img: img1,
+  },
 ];
 
 const medal = (rank: number) => (rank === 1 ? "🥇" : rank === 2 ? "🥈" : rank === 3 ? "🥉" : null);
 ---
 
-<section aria-label="ค่ายเกมลิขสิทธิ์แท้ที่สมาชิก OSIRIS168 เลือกเปิดเล่นบ่อย" class="mx-auto w-full max-w-[1300px] px-4 py-8 font-sans">
+<section aria-label="ค่ายเกมที่สมาชิก RIEL38 เปิดเล่นบ่อย" class="mx-auto w-full max-w-[1300px] px-4 py-8 font-sans">
   <div class="mb-8 flex w-full flex-col items-center justify-center gap-2 text-center">
     <span aria-hidden="true" class="text-2xl">🏆</span>
-    <p class="bg-gradient-to-r from-[#4ff0bb] via-[#f8ecc9] to-[#e8b52c] bg-clip-text text-2xl font-black tracking-widest text-transparent uppercase">
-      ค่ายเกมลิขสิทธิ์แท้ที่สมาชิก OSIRIS168 เปิดเล่นบ่อยที่สุด
-    </p>
-    <p class="max-w-3xl text-base leading-relaxed text-[#dfeee6]">
-      ทุกค่ายในตารางนี้อยู่หลังยูสเดียวกันและใช้เครดิตชุดเดียวกัน สลับจากค่ายที่คุ้นมือไปค่ายอื่นได้โดยไม่ต้องออกจากระบบ ลำดับความนิยมขยับตามคนที่เข้ามาใช้งานในแต่ละช่วง
+    <p class="bg-gradient-to-r from-[#9d174d] via-[#db2777] to-[#7e22ce] bg-clip-text text-2xl font-black tracking-widest text-transparent uppercase">ค่ายเกมที่สมาชิก RIEL38 เปิดเล่นบ่อยที่สุด</p>
+    <p class="max-w-3xl text-base leading-relaxed text-[#5b2140]">
+      ทุกค่ายในตารางนี้อยู่หลังบัญชีเดียวกันและใช้เครดิตชุดเดียวกันผ่าน Smart Wallet สลับจากค่ายที่คุ้นมือไปค่ายอื่นได้โดยไม่ต้องออกจากระบบ ลำดับความนิยมขยับตามคนที่เข้ามาใช้งานในแต่ละช่วง
       ไม่ได้แปลว่าค่ายไหนให้อัตราจ่ายดีกว่าค่ายไหน ทุกเกมทำงานตามค่า RTP ที่ค่ายตั้งไว้ เลือกจากสไตล์ที่ถนัดแล้วเข้าเล่นต่อได้เลย
     </p>
-    <div class="mt-2 h-[3px] w-24 rounded-full bg-gradient-to-r from-transparent via-[#e8b52c] to-transparent"></div>
+    <div class="mt-2 h-[3px] w-24 rounded-full bg-gradient-to-r from-transparent via-[#ec4899] to-transparent"></div>
   </div>
 
   <div class="flex flex-col gap-3">
@@ -47,12 +59,12 @@ const medal = (rank: number) => (rank === 1 ? "🥇" : rank === 2 ? "🥈" : ran
           <article
             class={`group relative flex items-center gap-3 overflow-hidden rounded-2xl border p-3 transition-all duration-300 hover:-translate-y-0.5 sm:gap-5 sm:p-4 ${
               top
-                ? "border-[#e8b52c]/60 bg-gradient-to-r from-[#123128] via-[#0f241d] to-[#123128] shadow-[0_15px_40px_rgba(232,181,44,0.26)]"
-                : "border-[#064c39] bg-[#0f241d] shadow-[0_10px_30px_rgba(18,196,143,0.14)] hover:border-[#12c48f]/60 hover:shadow-[0_15px_40px_rgba(18,196,143,0.26)]"
+                ? "border-[#ec4899]/70 bg-gradient-to-r from-[#fce7f3] via-white to-[#f3e8ff] shadow-[0_15px_40px_rgba(236,72,153,0.20)]"
+                : "border-[#f9a8d4] bg-white shadow-[0_10px_30px_rgba(236,72,153,0.10)] hover:border-[#ec4899]/60 hover:shadow-[0_15px_40px_rgba(236,72,153,0.18)]"
             }`}>
             <div
               aria-hidden="true"
-              class="pointer-events-none absolute top-1/2 -left-10 h-24 w-24 -translate-y-1/2 rounded-full bg-[#12c48f]/16 blur-[40px] transition-all duration-500 group-hover:bg-[#e8b52c]/22"
+              class="pointer-events-none absolute top-1/2 -left-10 h-24 w-24 -translate-y-1/2 rounded-full bg-[#ec4899]/12 blur-[40px] transition-all duration-500 group-hover:bg-[#a855f7]/16"
             />
 
             <div class="relative z-10 flex w-8 shrink-0 flex-col items-center justify-center sm:w-12">
@@ -62,14 +74,14 @@ const medal = (rank: number) => (rank === 1 ? "🥇" : rank === 2 ? "🥈" : ran
                   <span class="sr-only">อันดับ {g.rank}</span>
                 </span>
               ) : (
-                <span class="text-xl font-black text-[#4ff0bb] sm:text-2xl">#{g.rank}</span>
+                <span class="text-xl font-black text-[#db2777] sm:text-2xl">#{g.rank}</span>
               )}
             </div>
 
-            <div class={`relative z-10 h-14 w-14 shrink-0 overflow-hidden rounded-xl border sm:h-16 sm:w-16 ${top ? "border-[#e8b52c]/60" : "border-[#064c39]"}`}>
+            <div class={`relative z-10 h-14 w-14 shrink-0 overflow-hidden rounded-xl border sm:h-16 sm:w-16 ${top ? "border-[#ec4899]/70" : "border-[#f9a8d4]"}`}>
               <Picture
                 src={g.img}
-                alt={`ภาพหน้าปกเกมของค่าย ${g.name} บนกระดานค่ายเกมลิขสิทธิ์แท้ยอดนิยมของ OSIRIS168`}
+                alt={`ภาพหน้าปกเกมของค่าย ${g.name} บนกระดานค่ายเกมยอดนิยมของ RIEL38`}
                 formats={["avif", "webp"]}
                 fallbackFormat="webp"
                 loading="lazy"
@@ -84,23 +96,23 @@ const medal = (rank: number) => (rank === 1 ? "🥇" : rank === 2 ? "🥈" : ran
 
             <div class="relative z-10 min-w-0 flex-1">
               <div class="flex items-center gap-2">
-                <p class="truncate text-base font-black text-[#f8ecc9] sm:text-lg">{g.name}</p>
+                <p class="truncate text-base font-black text-[#9d174d] sm:text-lg">{g.name}</p>
                 {top && (
-                  <span class="hidden shrink-0 rounded-full border border-[#e8b52c]/50 bg-[#123128] px-2 py-0.5 text-[9px] font-black tracking-wider text-[#ffdd8a] sm:inline">ยอดนิยมสูงสุด</span>
+                  <span class="hidden shrink-0 rounded-full border border-[#ec4899]/50 bg-[#fce7f3] px-2 py-0.5 text-[9px] font-black tracking-wider text-[#9d174d] sm:inline">ยอดนิยมสูงสุด</span>
                 )}
               </div>
-              <p class="truncate text-[11px] text-[#b9d6c9] sm:text-xs">{g.type}</p>
+              <p class="truncate text-[11px] text-[#8a5670] sm:text-xs">{g.type}</p>
 
               <div class="mt-2 flex flex-wrap items-center gap-1.5">
                 {g.menus.map((m) => (
-                  <span class="rounded-full border border-[#064c39] bg-[#050d0b] px-2.5 py-0.5 text-[10px] font-bold text-[#b9d6c9]">{m}</span>
+                  <span class="rounded-full border border-[#fbcfe8] bg-[#fdf2f8] px-2.5 py-0.5 text-[10px] font-bold text-[#9d174d]">{m}</span>
                 ))}
               </div>
             </div>
 
             <div class="relative z-10 hidden shrink-0 flex-col items-end gap-1 sm:flex">
-              <span class="flex items-center gap-1.5 text-[11px] text-[#b9d6c9]">
-                <span class="h-1.5 w-1.5 animate-pulse rounded-full bg-[#4ff0bb] shadow-[0_0_6px_rgba(79,240,187,0.7)]" />
+              <span class="flex items-center gap-1.5 text-[11px] text-[#8a5670]">
+                <span class="h-1.5 w-1.5 animate-pulse rounded-full bg-[#ec4899] shadow-[0_0_6px_rgba(236,72,153,0.6)]" />
                 <span class="tabular-nums" data-players data-base={g.players}>
                   {g.players.toLocaleString("en-US")}
                 </span>{" "}
@@ -110,8 +122,8 @@ const medal = (rank: number) => (rank === 1 ? "🥇" : rank === 2 ? "🥈" : ran
                 href="/register"
                 class={`rounded-full px-4 py-1.5 text-xs font-black transition-transform hover:scale-105 ${
                   top
-                    ? "bg-gradient-to-r from-[#ffdd8a] via-[#e8b52c] to-[#8a6314] text-[#0a1a15] shadow-[0_10px_30px_rgba(232,181,44,0.28)]"
-                    : "border border-[#064c39] bg-[#050d0b] text-[#b9d6c9] hover:border-[#12c48f]/60 hover:bg-[#123128]"
+                    ? "bg-gradient-to-r from-[#f472b6] via-[#ec4899] to-[#a855f7] text-white shadow-[0_10px_30px_rgba(236,72,153,0.28)]"
+                    : "border border-[#f9a8d4] bg-[#fdf2f8] text-[#9d174d] hover:border-[#ec4899]/60 hover:bg-[#fce7f3]"
                 }`}>
                 สมัครเข้าเล่น
               </a>

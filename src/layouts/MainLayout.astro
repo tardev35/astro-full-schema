@@ -4,8 +4,8 @@ import bgConfig from "../assets/bg.json";
 import "../styles/global.css";
 import { BRAND_NAME, BRAND_TEXT, brandProfile, fontStack, iconVersion } from "../lib/brandProfile";
 import { canonicalFor } from "../lib/schema";
-import Navbar from "../components/NavbarStyle11.astro";
-import Footer from "../components/Footer.astro";
+import Navbar from "../components/NavbarStyle4.astro";
+import Footer from "../components/FooterStyle3.astro";
 
 // Only banner1 is ever rendered, so only banner1 is imported.
 //
@@ -54,8 +54,8 @@ const mobileBannerImg = mobileBanner
   : null;
 
 const {
-  title = "OSIRIS168 เว็บสล็อตระบบใหม่ รวมค่ายเกม 2026 มีโปรสมาชิกใหม่",
-  description = "OSIRIS168 เว็บสล็อตระบบใหม่ปี 2026 รวมค่ายเกม โปรสมาชิกใหม่ osiris 168 ธีมเทพเจ้าโอไซริให้โชค ฝากถอนออโต้เต็มระบบ เล่นผ่านมือถือ ไม่ต้องโหลดapp",
+  title = "RIEL38 เว็บสล็อตมาใหม่ เลือกเล่นกว่า 2,000 เกม ลองเล่นฟรีที่ เรียล38",
+  description = "RIEL38 เว็บสล็อตมาใหม่ รวมค่ายดัง มีเกมสล็อตให้เลือก กว่า 2,000 เกม รองรับ Smart Wallet เข้าสู่ระบบ ได้ทุกอุปกรณ์ สมัครสมาชิกรับโปรดีๆ ทดลองเล่นฟรี เรียล38",
   robots = "index, follow",
 } = Astro.props;
 
@@ -207,7 +207,7 @@ const profile = brandProfile(Astro.site);
         background-attachment: fixed;
         background-repeat: no-repeat;
         margin: 0;
-        background-color: #050d0b;
+        background-color: #fdf2f8;
         font-weight: 400;
         font-family: var(--font-sans) !important;
       }
@@ -260,7 +260,7 @@ const profile = brandProfile(Astro.site);
         }
         <Image
           src={mainBanner}
-          alt="แบนเนอร์ OSIRIS168 พื้นหลังวิหารอียิปต์โทนเขียวมรกตเข้ม มีเสาหินสลักอักษรไฮโรกลิฟิกทั้งสองฝั่งและปิรามิดอยู่ด้านหลัง ตรงกลางด้านบนเป็นโลโก้ OSIRIS168 สีทองประดับมงกุฎอาเตฟและปีกทอง ถัดลงมาเป็นข้อความตัวใหญ่สีทองว่า OSIRIS168 เว็บสล็อตระบบใหม่ และบรรทัดล่างว่า รวมค่ายเกม 2026 โปรสมาชิกใหม่ ด้านซ้ายเป็นพรีเซนเตอร์หญิงสวมชุดอียิปต์สีเขียวมรกตประดับเครื่องประดับทอง ด้านขวาเป็นรูปปั้นเทพอนูบิสหัวสุนัขสีทอง แถวล่างสุดมีป้ายสามอันเขียนว่า ฝากถอนออโต้เต็มระบบ เล่นผ่านมือถือ และ ไม่ต้องโหลดapp"
+          alt="แบนเนอร์ RIEL38 พื้นหลังพาสเทลชมพูขาว ตรงกลางเป็นโลโก้ RIEL38 สีชมพูมันวาวมีมงกุฎทอง ถัดลงมาเป็นข้อความตัวใหญ่ว่า เว็บสล็อตมาใหม่ และบรรทัดล่างว่า กว่า 2,000 เกม จาก 30+ ค่ายดัง ใต้ลงมามีป้ายสามอันเขียนว่า Smart Wallet, AI System และ ทดลองเล่นฟรี ปิดท้ายด้วยไอคอนมือถือ แท็บเล็ต คอมพิวเตอร์ กำกับว่า เล่นได้ทุกอุปกรณ์ เข้าสู่ระบบง่าย ด้านซ้ายเป็นพรีเซนเตอร์หญิงในเสื้อไหมพรมสีชมพูข้างวงล้อสล็อตเลข 777 และกระต่ายการ์ตูนสีขาว ด้านขวาเป็นมือถือที่ขึ้นปุ่ม LET S PLAY พร้อมมงกุฎทองและลูกเต๋าดาว"
           loading="eager"
           fetchpriority="high"
           widths={[412, 640, 828, 1024, 1280, 1600, 1900]}

@@ -2,17 +2,17 @@
 import MainLayout from "../layouts/MainLayout.astro";
 import ContentBox from "../components/ContentBox.astro";
 import Navfoot from "../components/Navfoot.astro";
-import Announcement from "../components/Announcement2.astro";
+import Announcement from "../components/Announcement5.astro";
 
 import { Picture } from "astro:assets";
 import imgLine from "../assets/contact-line.webp";
 import { pageGraph } from "../lib/schema";
 import { BRAND_ADDRESS } from "../lib/brandProfile";
 
-const pageTitle = "ติดต่อทีมงาน AMD365 | แจ้งปัญหาฝากถอนผ่าน LINE Official ตลอด 24 ชม.";
+const pageTitle = "ติดต่อทีมงาน PAYDAY24 | แจ้งปัญหาฝากถอนและกิจกรรมรับเครดิตผ่าน LINE Official";
 
 const pageDescription =
-  "ช่องทางติดต่อทีมงาน AMD365 แจ้งปัญหาฝากถอน สอบถามการใช้งานหน้าเมมเบอร์ และหมวดเกมทั้งสล็อต คาสิโนสด กีฬา หวย ผ่าน LINE Official พร้อมที่อยู่ติดต่อและอีเมล";
+  "ช่องทางติดต่อทีมงาน PAYDAY24 แจ้งปัญหาฝากถอนออโต้ สอบถามกิจกรรมรับเครดิต และการใช้งานหน้าเมมเบอร์ ผ่าน LINE Official พร้อมที่อยู่ติดต่อและอีเมลของทีมงาน";
 
 const graph = pageGraph(Astro, {
   type: "ContactPage",
@@ -23,13 +23,13 @@ const graph = pageGraph(Astro, {
     { name: "ติดต่อเรา", path: "/contact-us" },
   ],
   org: {
-    alternateName: "AMD365 รวมสล็อต คาสิโนสด กีฬา eSports และหวยออนไลน์ไว้ในบัญชีสมาชิกเดียว ฝากถอนออโต้โอนไว",
+    alternateName: "PAYDAY24 เว็บสล็อตมั่นคง รวมคาสิโนสด บาคาร่า หวย และกีฬาออนไลน์ พร้อมกิจกรรมรับเครดิตทุกวัน",
     contactPoints: [
       {
         contactType: "customer service",
         availableLanguage: ["Thai", "English"],
         path: "/line",
-        description: "ติดต่อแอดมินผ่าน LINE Official",
+        description: "ติดต่อแอดมิน PAYDAY24 ผ่าน LINE Official แจ้งปัญหาฝากถอนและสอบถามกิจกรรมรับเครดิต",
       },
     ],
   },
@@ -41,7 +41,7 @@ const graph = pageGraph(Astro, {
 
   <Announcement />
 
-  <ContentBox title="ติดต่อทีมงาน AMD365" as="h1">
+  <ContentBox title="ติดต่อทีมงาน PAYDAY24" as="h1">
     <Picture
       src={imgLine}
       alt="พนักงานหญิงผมยาวสีน้ำตาลลอนสวมชุดเลื่อมสีชมพูแขนยาวคอวี ยิ้มกอดอกอยู่หน้าวงกลมสีชมพู ด้านล่างเป็นแถบสีขาวที่มีโลโก้ LINE สีเขียวและคำว่า Support"
@@ -57,8 +57,8 @@ const graph = pageGraph(Astro, {
     />
     {
       BRAND_ADDRESS.lines.length > 0 && (
-        <address aria-label={BRAND_ADDRESS.label} class="mt-8 mb-8 border-l-4 border-[#fec93a] pl-6 text-left text-base leading-relaxed text-[#f4e8d2] not-italic">
-          <p class="mb-1 font-bold text-[#ffe9a8]">{BRAND_ADDRESS.label}</p>
+        <address aria-label={BRAND_ADDRESS.label} class="mt-8 mb-8 border-l-4 border-[#fdc700] pl-6 text-left text-base leading-relaxed text-[#ede4fb] not-italic">
+          <p class="mb-1 font-bold text-[#ffe680]">{BRAND_ADDRESS.label}</p>
           {BRAND_ADDRESS.lines.map((line) => (
             <span class="block">{line}</span>
           ))}
@@ -67,7 +67,7 @@ const graph = pageGraph(Astro, {
               <span aria-hidden="true" class="mr-2">
                 ✉️
               </span>
-              <a href={`mailto:${BRAND_ADDRESS.email}`} class="font-bold text-[#fec93a] underline decoration-[#a06a09] underline-offset-4 transition-colors hover:text-[#ffe9a8]">
+              <a href={`mailto:${BRAND_ADDRESS.email}`} class="font-bold text-[#fdc700] underline decoration-[#a86f00] underline-offset-4 transition-colors hover:text-[#ffe680]">
                 {BRAND_ADDRESS.email}
               </a>
             </span>
@@ -79,15 +79,15 @@ const graph = pageGraph(Astro, {
     <div class="flex flex-wrap justify-center gap-4">
       <a
         href="/register"
-        aria-label="สมัครสมาชิก AMD365"
-        class="flex items-center justify-center rounded-lg border border-[#a06a09] bg-gradient-to-r from-[#ffe9a8] via-[#fec93a] to-[#d4840e] px-8 py-3 font-bold text-[#160e03] shadow-[0_10px_30px_rgba(254,201,58,0.28)] transition-transform hover:scale-105 hover:shadow-[0_15px_40px_rgba(254,201,58,0.35)]">
+        aria-label="สมัครสมาชิก PAYDAY24"
+        class="flex items-center justify-center rounded-lg border border-[#a86f00] bg-gradient-to-r from-[#ffe680] via-[#fdc700] to-[#d99400] px-8 py-3 font-bold text-[#150726] shadow-[0_10px_30px_rgba(253,199,0,0.28)] transition-transform hover:scale-105 hover:shadow-[0_15px_40px_rgba(253,199,0,0.35)]">
         สมัครสมาชิก
       </a>
 
       <a
         href="/login"
-        aria-label="เข้าสู่ระบบ AMD365"
-        class="flex items-center justify-center rounded-lg border border-[#fec93a]/60 bg-[#33220a] px-8 py-3 font-extrabold text-[#ffe9a8] shadow-[0_4px_14px_rgba(254,201,58,0.16)] transition-transform hover:scale-105 hover:bg-[#3c2606]">
+        aria-label="เข้าสู่ระบบ PAYDAY24"
+        class="flex items-center justify-center rounded-lg border border-[#fdc700]/60 bg-[#2c1247] px-8 py-3 font-extrabold text-[#ffe680] shadow-[0_4px_14px_rgba(253,199,0,0.16)] transition-transform hover:scale-105 hover:bg-[#331652]">
         เข้าสู่ระบบ
       </a>
 
@@ -95,7 +95,7 @@ const graph = pageGraph(Astro, {
         href="/line"
         target="_blank"
         rel="noopener noreferrer"
-        aria-label="ติดต่อทีมงานผ่าน Line Official"
+        aria-label="ติดต่อทีมงาน PAYDAY24 ผ่าน Line Official"
         class="flex items-center justify-center rounded-lg border border-green-300 bg-gradient-to-b from-green-400 to-green-700 px-8 py-3 font-bold text-white transition-transform hover:scale-105">
         ติดต่อผ่าน Line Official
       </a>

@@ -1,86 +1,81 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
-import Announcement from "../components/Announcement2.astro";
+import Announcement from "../components/Announcement5.astro";
 import ContentBox from "../components/ContentBox.astro";
-import ContentBoxPremium from "../components/ContentBoxPremium.astro";
-import ContentBoxSpecial from "../components/ContentBoxSpecial.astro";
-import ContentBoxFloatingBadge from "../components/ContentBoxFloatingBadge.astro";
-import ContentBoxTwoPremium from "../components/ContentBoxTwoPremium.astro";
-import ContentBoxTwoFloatingBadge from "../components/ContentBoxTwoFloatingBadge.astro";
-import ContentBoxSevenThreePremium from "../components/ContentBoxSevenThreePremium.astro";
-import ContentBoxSevenThreeFloatingBadge from "../components/ContentBoxSevenThreeFloatingBadge.astro";
+import ContentBoxCyberCut from "../components/ContentBoxCyberCut.astro";
+import ContentBoxTwoNeumorphism from "../components/ContentBoxTwoNeumorphism.astro";
+import ContentBoxSevenThreeCyberCut from "../components/ContentBoxSevenThreeCyberCut.astro";
+import ContentBoxSevenThreeNeumorphism from "../components/ContentBoxSevenThreeNeumorphism.astro";
 import FeatureHighlights from "../components/FeatureHighlights.astro";
 import ProviderGrid from "../components/ProviderGrid.astro";
 import GameRankingBoard from "../components/GameRankingBoard.astro";
 import SmoothCarousel from "../components/SmoothCarousel.astro";
-import LatestWinners4 from "../components/LatestWinners4.astro";
+import LatestWinnersCyber from "../components/LatestWinnersCyber.astro";
 import LoginRtpSection from "../components/LoginRtpSection.astro";
 import ReviewCardSumo2 from "../components/ReviewCardSumo2.astro";
-import Faq from "../components/Faq.astro";
+import Faq3 from "../components/Faq3.astro";
 import Navfoot from "../components/Navfoot.astro";
 
 import { Picture } from "astro:assets";
 import { pageGraph } from "../lib/schema";
-import imgAllCategories from "../assets/slide2.png";
-import imgSlotGames from "../assets/slide4.png";
+import imgAllServices from "../assets/slide2.png";
+import imgAutoWallet from "../assets/slide1.png";
 
-const pageTitle = "AMD365 เว็บสล็อตครบทุกค่าย รวมคาสิโน กีฬา หวย ระบบออโต้โอนไว";
+const pageTitle = "PAYDAY24 เว็บสล็อตมั่นคง คาสิโนสดออนไลน์ มีกิจกรรมรับเครดิตทุกวัน";
 
-const pageDescription = "AMD365 รวมสล็อต คาสิโนสด กีฬา หวย และเกมออนไลน์ไว้ในบัญชีเดียว ฝากถอนออโต้โอนไว มีทดลองเล่น โปรโมชั่นสมาชิก รองรับมือถือ คอม และแท็บเล็ต";
+const pageDescription = "PAYDAY24 เว็บสล็อตมั่นคง รวมบริการ คาสิโนสด บาคาร่า หวย และกีฬาออนไลน์ มีกิจกรรมรับเครดิตทุกวัน คืนยอดเสีย เช็กอิน กงล้อ ฝากถอนออโต้ รองรับ True Wallet";
 
 const announcement =
-  "AMD365 รวมสล็อต คาสิโนสด กีฬา eSports และหวยออนไลน์ไว้ในบัญชีสมาชิกเดียว เปลี่ยนหมวดเกมได้โดยไม่ต้องสมัครยูสใหม่ • ระบบฝากถอนออโต้เชื่อมอยู่กับหน้าเมมเบอร์ ตรวจยอดเครดิตและสถานะรายการได้เองทุกครั้ง • หมวดสล็อตรวมเกมจาก PG Slot, Pragmatic Play, Joker และค่ายอื่น ๆ ที่เปิดอยู่ในระบบ • คาสิโนสดมีบาคาร่า รูเล็ต ไฮโล แบล็กแจ็ก เลือกโต๊ะจากหน้าเดียวได้เลย • หมวดกีฬาไม่ได้มีแค่ฟุตบอล ยังมีบาสเกตบอล เทนนิส มวย และ eSports ตามรายการที่เปิดให้บริการ • หวยออนไลน์เลือกตลาดได้ตามรอบที่ระบบกำหนด ตรวจเวลาเปิด-ปิดของแต่ละตลาดก่อนทำรายการ • เกมที่รองรับ DEMO ลองดูฟีเจอร์และจังหวะเกมก่อนใช้เครดิตจริงได้";
+  "PAYDAY24 เว็บสล็อตมั่นคง เว็บตรงลิขสิทธิ์แท้ จ่ายจริง 100% รวมสล็อตแตกง่าย แตกบ่อย จาก PG Slot, Joker Gaming และ Jili ไว้ในยูสเดียว • คาสิโนสดส่งตรงจากสตูดิโอชั้นนำอย่าง SA Gaming มีบาคาร่าและโต๊ะสดให้เลือกจากหน้าเดียว • หวยออนไลน์อัปเดตทุกงวด เลือกตลาดได้ตามรอบที่ระบบกำหนด • แทงบอลออนไลน์ในราคานับบอลที่ดีที่สุด ตามรายการแข่งขันที่เปิดให้บริการ • กิจกรรมรับเครดิตทุกวัน ทั้งเช็กอินประจำวัน กงล้อ กรอกโค้ด และเครดิตฟรีตามช่วงเวลา • คืนยอดเสียเป็นสิทธิ์ที่อิงเงื่อนไขการใช้งานของบัญชี เช็กหน้ากิจกรรมรับเครดิตก่อนเริ่มเล่นทุกครั้ง • ฝากถอนออโต้รองรับ True Wallet ทำรายการและดูสถานะได้เองจากหน้าเมมเบอร์ตลอด 24 ชั่วโมง";
 
-const allCategoriesAlt =
-  "ภาพโปรโมชั่น AMD365 โลโก้ AMD365 ขนาดใหญ่ พร้อมข้อความ เว็บสล็อตครบทุกค่าย รวมคาสิโน กีฬา หวย ระบบออโต้โอนไว และไอคอนสี่หมวด SLOT CASINO SPORTS LOTTERY โดยมีพรีเซนเตอร์หญิงยื่นมือออกมาด้านข้าง";
+const allServicesAlt =
+  "ภาพโปรโมชั่น PAYDAY24 ข้อความ รวมบริการครบใน PAYDAY24 ค่ายชั้นนำในระบบเดียว มีพรีเซนเตอร์หญิงในชุดราตรีสีม่วง มือถือแสดงหน้าเว็บ PAYDAY24 ป้าย LIVE CASINO BACCARAT LOTTERY นักฟุตบอล ลูกบอลหวย ไพ่ และกองชิป พร้อมแถบหมวด คาสิโนสด บาคาร่า หวย กีฬา";
 
-const slotGamesAlt =
-  "ภาพโปรโมชั่น AMD365 ข้อความ สล็อตแตกง่าย ปั่นง่ายแตกไว ทุนหลักสิบแตกหลักแสน มีมาสคอตซูเปอร์ฮีโร่และตัวละครจากเกมสล็อต พร้อมหน้าจอมือถือแสดงยอด TotalWin 137,900.00 บนฉากหลังสีดำทอง";
+const autoWalletAlt =
+  "ภาพโปรโมชั่น PAYDAY24 ข้อความ ฝากถอนออโต้ รองรับ True Wallet คล่องตัว รวดเร็ว ใช้งานง่าย มีพรีเซนเตอร์ถือมือถือที่เปิดแอป True Wallet กระเป๋าเงิน หน้าจอทำรายการสำเร็จ เหรียญทอง นาฬิกา 24 ชั่วโมง และแถบข้อความ รองรับ True Wallet ฝากถอนออโต้ 24 ชั่วโมง ปลอดภัยเชื่อถือได้ พร้อมดูแลตลอด 24 ชม.";
 
-const providerPoints = [
+const activityPoints = [
   {
-    icon: "📱",
-    title: "PG Slot เหมาะกับสายมือถือและเกมเข้าใจง่าย",
+    icon: "💸",
+    title: "คืนยอดเสีย สิทธิ์ที่อิงเงื่อนไขการใช้งานของบัญชี",
     description:
-      "เกมจาก PG Slot มีจุดเด่นด้านภาพและรูปแบบการเล่นที่เรียนรู้ไม่ยาก หลายเกมถูกออกแบบให้เหมาะกับหน้าจอมือถือ จึงเหมาะกับสมาชิก AMD365 ที่ชอบเข้าเกมไวและต้องการเมนูไม่ซับซ้อน ทั้งสายเกมธีมเอเชีย เกมโบนัส หรือเกมที่มีฟีเจอร์พิเศษให้ลุ้นระหว่างทาง",
+      "คืนยอดเสียของ PAYDAY24 ไม่ใช่ของแจกที่ทุกบัญชีกดรับได้เหมือนกันหมด แต่เป็นสิทธิ์ที่ผูกกับเงื่อนไขการใช้งานและโปรที่เปิดอยู่ ณ เวลานั้น สมาชิกที่เข้าเกณฑ์จึงจะได้รับ ควรอ่านรายละเอียดของโปรแต่ละตัวก่อนเริ่มเล่น",
     accent: "gold" as const,
   },
   {
-    icon: "🎁",
-    title: "Pragmatic Play เหมาะกับสายโบนัสและฟรีสปิน",
-    description:
-      "Pragmatic Play เป็นอีกค่ายที่มีเกมสล็อตหลายแนว โดยเฉพาะกลุ่มเกมที่มีฟรีสปิน ตัวคูณ และรอบโบนัสชัดเจน คนที่ชอบเกมซึ่งมีจังหวะเปลี่ยนระหว่างเกมหลักกับโบนัสจะมีตัวเลือกค่อนข้างหลากหลาย และสามารถเปลี่ยนไปลองเกมอื่นใน AMD365 ได้ตามความชอบ",
-    accent: "platinum" as const,
+    icon: "📅",
+    title: "เช็กอิน สิทธิ์ของคนที่กลับเข้ามาตามรอบ",
+    description: "เช็กอินประจำวันเน้นการกลับเข้ามารับสิทธิ์ตามรอบมากกว่าจำนวนเงินที่เล่น บางรายการอิงจำนวนวันเข้าใช้งาน จึงเหมาะกับสมาชิกที่เข้าระบบเป็นประจำอยู่แล้ว มากกว่าคนที่นาน ๆ เปิดเว็บที",
+    accent: "purple" as const,
   },
   {
-    icon: "🃏",
-    title: "Joker และค่ายอื่น ๆ เพิ่มทางเลือกให้สายชอบลองเกมใหม่",
-    description:
-      "สำหรับคนที่ไม่ชอบอยู่กับเกมเดิมนาน ๆ หมวดสล็อต AMD365 ยังมีเกมจาก Joker และผู้ให้บริการอื่น ๆ ให้สลับเล่นได้หลายรูปแบบ จุดสำคัญคือไม่จำเป็นต้องเลือกจากชื่อค่ายอย่างเดียว สามารถดูธีม ฟีเจอร์ และรูปแบบโบนัสก่อนตัดสินใจได้เช่นกัน",
+    icon: "🎡",
+    title: "กงล้อ จังหวะลุ้นสั้น ๆ ระหว่างวัน",
+    description: "กงล้อเพิ่มความสนุกด้วยการลุ้นของรางวัลหรือเครดิตจากกิจกรรม เป็นจังหวะลุ้นแบบสั้น ๆ ที่ไม่กินเวลา ทำหน้าที่คนละอย่างกับคืนยอดเสียและเช็กอิน ไม่ใช่โบนัสก้อนเดียวที่เปลี่ยนชื่อไปมา",
     accent: "gold" as const,
   },
 ];
 
 const faqs = [
   {
-    q: "AMD365 มีเกมสล็อตและคาสิโนในบัญชีเดียวกันไหม",
-    a: "มีครับ AMD365 รวมสล็อต คาสิโนสด กีฬา หวย และหมวดเกมอื่น ๆ ไว้ภายใต้ระบบสมาชิกเดียว ทำให้สามารถเปลี่ยนหมวดโดยยังใช้บัญชีเดิมได้",
+    q: "PAYDAY24 มีเกมสล็อตจากค่ายไหนให้เลือกบ้าง",
+    a: "PAYDAY24 เป็นเว็บตรงลิขสิทธิ์แท้ที่รวมเกมสล็อตแตกง่าย แตกบ่อย จากค่ายชั้นนำอย่าง PG Slot, Joker Gaming และ Jili ไว้ในยูสเดียว สลับค่ายและเปลี่ยนเกมได้จากเมนูเดิมโดยไม่ต้องสมัครยูสใหม่",
   },
   {
-    q: "AMD365 ทดลองเล่นสล็อตฟรีก่อนสมัครได้ไหม",
-    a: "AMD365 มีเกมที่รองรับโหมดทดลองเล่น ผู้ใช้สามารถดูรูปแบบเกมและฟีเจอร์ก่อนเลือกเล่นจริงได้ ทั้งนี้โหมด DEMO ขึ้นอยู่กับเกมและผู้ให้บริการแต่ละราย",
+    q: "นอกจากสล็อตแล้ว PAYDAY24 มีคาสิโนสด หวย และกีฬาไหม",
+    a: "มีครับ PAYDAY24 ให้บริการคาสิโนสดส่งตรงจากสตูดิโอชั้นนำ เช่น SA Gaming ที่มีบาคาร่าเสมือนจริง พร้อมหวยออนไลน์ที่มีให้อัปเดตทุกงวด และแทงบอลออนไลน์ในราคานับบอลที่ดีที่สุด",
   },
   {
-    q: "AMD365 รองรับ iPhone และ Android หรือไม่",
-    a: "รองรับการใช้งานผ่านมือถือทั้ง iPhone และ Android รวมถึงแท็บเล็ตและคอมพิวเตอร์ โดยสามารถเข้าใช้งานผ่านเว็บเบราว์เซอร์ที่รองรับระบบ",
+    q: "กิจกรรมรับเครดิตของ PAYDAY24 มีอะไรบ้าง",
+    a: "มีทั้งเช็กอินประจำวัน กงล้อ กรอกโค้ด โปรโมชั่น เครดิตฟรี และกิจกรรมพิเศษตามช่วงเวลา แต่ละแบบใช้เงื่อนไขไม่เหมือนกัน วิธีที่ง่ายที่สุดคือเข้าสู่ระบบแล้วเช็กหน้ากิจกรรมรับเครดิตก่อนเริ่มเล่น",
   },
   {
-    q: "ระบบฝากถอนออโต้ AMD365 ใช้งานอย่างไร",
-    a: "สมาชิกเข้าสู่หน้าเมมเบอร์ของ AMD365 เลือกเมนูฝากหรือถอน จากนั้นทำรายการตามช่องทางที่ระบบเปิดให้บริการ พร้อมตรวจสอบเครดิตและสถานะรายการจากบัญชีของตัวเอง",
+    q: "คืนยอดเสีย เช็กอิน และกงล้อ ต่างกันอย่างไร",
+    a: "คืนยอดเสียเป็นสิทธิ์ที่เชื่อมกับเงื่อนไขการใช้งานของสมาชิก เช็กอินเน้นการกลับเข้ามารับสิทธิ์ตามรอบ ส่วนกงล้อเป็นการลุ้นของรางวัลหรือเครดิตแบบสั้น ๆ ทั้งสามอย่างมีหน้าที่คนละแบบ ไม่ได้เป็นโบนัสก้อนเดียวเปลี่ยนชื่อไปมา",
   },
   {
-    q: "AMD365 มีทั้งกีฬาและหวยออนไลน์หรือไม่",
-    a: "มีครับ AMD365 มีทั้งหมวดกีฬา eSports และหวยออนไลน์ควบคู่กับสล็อตและคาสิโน โดยรายการที่เปิดให้บริการสามารถเปลี่ยนแปลงตามช่วงเวลาและตารางของแต่ละหมวดได้",
+    q: "PAYDAY24 ฝากถอนออโต้และรองรับ True Wallet หรือไม่",
+    a: "รองรับครับ สมาชิกทำรายการฝากถอนได้เองจากหน้าเมมเบอร์ ทั้งผ่าน True Wallet และบัญชีธนาคาร ความเร็วของแต่ละรายการขึ้นอยู่กับช่องทาง เวลา และสถานะของระบบในขณะนั้น จึงไม่ได้กำหนดเป็นเลขวินาทีตายตัว",
   },
 ];
 
@@ -96,18 +91,24 @@ const graph = pageGraph(Astro, {
 
   <Announcement message={announcement} />
 
-  <ContentBoxPremium as="h1" title="AMD365 เว็บเกมออนไลน์ครบทุกความสนุก สล็อต คาสิโน กีฬา หวย ในบัญชีเดียว">
-    <p class="text-left text-base leading-relaxed">
-      AMD365 ออกแบบมาให้คนที่ชอบความสนุกหลายแบบเลือกได้จากบัญชีเดียว ไม่ว่าจะเป็นเกมสล็อต คาสิโนสด กีฬา eSports หรือหวยออนไลน์ ไม่ต้องเปลี่ยนเว็บตามประเภทเกมที่อยากเล่น ระบบสมาชิกเชื่อมเมนูเกม เครดิต
-      โปรโมชั่น และฝากถอนออโต้ไว้ด้วยกัน ทำให้เวลาอยากเปลี่ยนจากสล็อตไปดูบอล หรือกลับมาลองเกมใหม่ ก็จัดการข้อมูลบัญชีจากหน้าเมมเบอร์เดียว
+  <ContentBoxCyberCut as="h1" title="PAYDAY24 เว็บสล็อตมั่นคง ที่มีทั้งเกมออนไลน์และกิจกรรมเครดิต ทุกวัน เล่นได้ไม่มีเบื่อ">
+    <p class="mb-4 text-left text-base leading-relaxed">
+      PAYDAY24 เว็บสล็อตมั่นคง ทางเข้าเล่นคาสิโนออนไลน์ และเว็บสล็อตอันดับ 1 เราคือเว็บตรงลิขสิทธิ์แท้ที่มั่นคง ปลอดภัย และจ่ายจริง 100% เต็มอิ่มไปกับเกมสล็อตแตกง่าย แตกบ่อย จากค่ายเกมชั้นนำ PG Slot,
+      Joker Gaming และ Jili ที่มาพร้อมกับระบบสล็อต RTP สูง ทุกบริการด้วยระบบฝากถอนออโต้ที่รวดเร็วทันใจ
     </p>
-  </ContentBoxPremium>
 
-  <ContentBoxSevenThreePremium as="h2" title="AMD365 รวมสล็อต คาสิโน กีฬา และหวยไว้ด้วยกันสะดวกยังไง">
+    <p class="text-left text-base leading-relaxed">
+      พิเศษสุด! สมัครสมาชิกใหม่วันนี้ รับโปรโมชั่นสุดคุ้ม พร้อมเครดิตฟรี และระบบคืนยอดเสียคอยซัพพอร์ต คลิกเลยที่ payday24.org เว็บตรงไม่ผ่านเอเย่นต์ที่คุณไว้วางใจ
+    </p>
+  </ContentBoxCyberCut>
+
+  <ProviderGrid />
+
+  <ContentBoxSevenThreeCyberCut as="h2" titleright="PAYDAY24 รวมคาสิโนสด บาคาร่า หวย และกีฬาออนไลน์ จากค่ายชั้นนำ">
     <Picture
       slot="left"
-      src={imgAllCategories}
-      alt={allCategoriesAlt}
+      src={imgAllServices}
+      alt={allServicesAlt}
       loading="lazy"
       fetchpriority="low"
       widths={[240, 346, 480, 692]}
@@ -116,159 +117,92 @@ const graph = pageGraph(Astro, {
       formats={["avif", "webp"]}
       fallbackFormat="webp"
       quality={70}
-      class="mx-auto h-auto w-full rounded-2xl border border-[#fec93a]/45 shadow-[0_10px_30px_rgba(254,201,58,0.20)]"
+      class="mx-auto h-auto w-full rounded-2xl border border-[#fdc700]/45 shadow-[0_10px_30px_rgba(253,199,0,0.20)]"
     />
 
     <div slot="right" class="flex flex-col gap-4">
       <p class="text-left text-base leading-relaxed">
-        AMD365 รวมหมวดความบันเทิงหลักไว้ในระบบเดียว ตั้งแต่เกมสล็อต คาสิโนสด กีฬา eSports ไปจนถึงหวยออนไลน์ สมาชิกจึงสามารถเลือกเกมตามอารมณ์ในแต่ละวันได้โดยไม่ต้องสมัครบัญชีใหม่ทุกครั้ง
-        วันนี้อยากหมุนสล็อต พรุ่งนี้อยากเช็กคู่บอล หรืออยากเปลี่ยนบรรยากาศไปบาคาร่า ก็เลือกจากบัญชีเดิมได้เลย
+        นอกจากเกมสล็อตแล้ว PAYDAY24 ยังให้บริการคาสิโนสดส่งตรงจากสตูดิโอชั้นนำ เช่น SA Gaming มอบประสบการณ์เล่นบาคาร่าเสมือนจริง ตลอดจนบริการแทงบอลออนไลน์ในราคานับบอลที่ดีที่สุด
+        สนุกไปกับหวยออนไลน์ที่มีให้อัปเดตทุกงวด
       </p>
 
       <p class="text-left text-base leading-relaxed">
-        ข้อดีของการรวมหลายหมวดไม่ได้อยู่แค่คำว่า “ครบ” แต่คือการจัดการที่ต่อเนื่องกว่า เครดิต ประวัติรายการ โปรโมชั่น และข้อมูลสมาชิกยังอยู่ภายใต้บัญชี AMD365 เดิม
-        ทำให้การเปลี่ยนหมวดเป็นเรื่องของการเลือกเกม ไม่ใช่การเริ่มต้นระบบใหม่ตั้งแต่ศูนย์ทุกครั้ง
+        จุดเด่นของ PAYDAY24 จึงอยู่ที่ความหลากหลายมากกว่าการบังคับให้เล่นเกมแบบเดียว วันไหนสล็อตไม่ใช่อารมณ์ ก็ยังมีโต๊ะสด หวย หรือกีฬาให้เปลี่ยนบรรยากาศได้ทันที
       </p>
     </div>
-  </ContentBoxSevenThreePremium>
+  </ContentBoxSevenThreeCyberCut>
 
-  <ContentBoxSevenThreeFloatingBadge as="h2" title="สล็อต AMD365 มีเกมและค่ายแบบไหนให้เลือก">
+  <GameRankingBoard />
+
+  <ContentBoxTwoNeumorphism
+    as="h2"
+    title="กิจกรรมเครดิต PAYDAY24 เติมสีสันให้ทุกวัน ไม่ได้มีแค่เข้าเกมแล้วจบ"
+    titleleft="กิจกรรมที่เปิดให้เก็บระหว่างวัน"
+    titleright="เช็กหน้ากิจกรรมก่อนเริ่มเล่นทุกครั้ง">
+    <p slot="left" class="text-left text-base leading-relaxed">
+      ทุกครั้งที่เข้าสู่ระบบเล่น โปรดอย่าลืมเช็กอินประจำวัน กงล้อ กรอกโค้ด โปรโมชั่น เครดิตฟรี หรือกิจกรรมพิเศษตามช่วงเวลา กิจกรรมแต่ละแบบของ PAYDAY24 ไม่ได้ใช้เงื่อนไขเหมือนกันทั้งหมด
+    </p>
+
+    <p slot="right" class="text-left text-base leading-relaxed">
+      บางรายการอาจอิงจำนวนวันเข้าใช้งาน บางกิจกรรมต้องกดรับสิทธิ์หรือกรอกข้อมูลก่อน และบางโปรเปิดเฉพาะช่วงที่กำหนด วิธีที่ง่ายที่สุดคือเข้าสู่ระบบแล้วเช็กหน้ากิจกรรมรับเครดิตก่อนเริ่มเล่น
+      เพราะสิทธิ์ที่บัญชีมีวันนี้อาจไม่เหมือนเมื่อวาน
+    </p>
+  </ContentBoxTwoNeumorphism>
+
+  <ContentBox as="h2" title="คืนยอดเสีย เช็กอิน และกงล้อ 3 กิจกรรมที่ให้สมาชิกได้ลุ้นสิทธิ์ต่างกัน">
+    <p class="mb-4 text-left text-base leading-relaxed">
+      คืนยอดเสีย PAYDAY24 เป็นสิทธิ์ที่เชื่อมกับเงื่อนไขการใช้งานของสมาชิก ขณะที่เช็กอินเน้นการกลับเข้ามารับสิทธิ์ตามรอบ ส่วนกงล้อเพิ่มความสนุกด้วยการลุ้นของรางวัลหรือเครดิตจากกิจกรรม
+      แต่ละแบบจึงมีหน้าที่คนละอย่าง ไม่ได้เป็นโบนัสก้อนเดียวเปลี่ยนชื่อไปมา
+    </p>
+
+    <p class="text-left text-base leading-relaxed">
+      เสน่ห์ของ 3 กิจกรรมนี้อยู่ตรงที่ทำให้ PAYDAY24 มีอะไรให้ทำมากกว่าการเปิดเกมแล้วออก เช็กอินเหมาะกับคนที่เข้าระบบเป็นประจำ กงล้อเพิ่มจังหวะลุ้นแบบสั้น ๆ
+      ส่วนคืนยอดเสียเป็นอีกสิทธิ์สำหรับบัญชีที่เข้าเกณฑ์ตามโปร ณ เวลานั้น
+    </p>
+
+    <FeatureHighlights items={activityPoints} />
+  </ContentBox>
+
+  <ContentBoxSevenThreeNeumorphism as="h2" title="เมื่อมีระบบออโต้และ True Wallet ช่วยให้ ฝากถอนคล่องตัว ได้ไวแค่ไหน">
     <Picture
       slot="left"
-      src={imgSlotGames}
-      alt={slotGamesAlt}
+      src={imgAutoWallet}
+      alt={autoWalletAlt}
       loading="lazy"
       fetchpriority="low"
-      widths={[240, 352, 480, 704]}
-      sizes="(max-width: 767px) calc(100vw - 96px), 352px"
+      widths={[240, 384, 480, 768]}
+      sizes="(max-width: 767px) calc(100vw - 96px), 384px"
       decoding="async"
       formats={["avif", "webp"]}
       fallbackFormat="webp"
       quality={70}
-      class="mx-auto h-auto w-full rounded-2xl border border-[#fec93a]/45 shadow-[0_10px_30px_rgba(254,201,58,0.20)]"
+      class="mx-auto h-auto w-full rounded-2xl border border-[#fdc700]/45 shadow-[0_10px_30px_rgba(253,199,0,0.20)]"
     />
 
     <div slot="right" class="flex flex-col gap-4">
       <p class="text-left text-base leading-relaxed">
-        หมวดสล็อตของ AMD365 รวบรวมเกมจากผู้ให้บริการหลายค่าย มีทั้งเกมยอดนิยม เกมใหม่ สล็อตฟรีสปิน เกมที่เน้นตัวคูณ และเกมที่ออกแบบมาสำหรับการเล่นบนมือถือ
-        จากข้อมูลหน้าเว็บสามารถพบค่ายที่นักเล่นสล็อตคุ้นชื่อ เช่น PG Slot, Pragmatic Play, Joker และผู้ให้บริการอื่น ๆ ที่เปิดอยู่ในระบบ
+        ความเร็วของรายการ PAYDAY24 อาจแตกต่างกันตามช่องทาง เวลา และสถานะของระบบในขณะนั้น ดังนั้นคำว่า “โอนไว” ไม่ควรหมายถึงเลขวินาทีตายตัว แต่หมายถึงการลดขั้นตอนที่ไม่จำเป็นให้น้อยลง
       </p>
 
-      <p class="text-left text-base leading-relaxed">
-        แต่ละค่ายมีสไตล์ต่างกันอย่างชัดเจน บางค่ายภาพสวยและเล่นง่าย บางค่ายเด่นเรื่องโบนัส บางเกมจังหวะเร็วเหมาะกับคนชอบเปลี่ยนเกมบ่อย AMD365 จึงไม่ได้บังคับให้คนเล่นวิ่งตามคำว่าเกมฮิตเพียงอย่างเดียว
-        เพราะเกมที่สนุกที่สุดก็ควรเป็นเกมที่เข้ากับสไตล์ของคนเล่นด้วย
-      </p>
+      <p class="text-left text-base leading-relaxed">สมาชิกฝาก ถอน และกลับไปเลือกเกมได้ต่อเนื่องกว่าเดิม เงินควรเดินตามเกมให้ทัน ไม่ใช่ให้คนเล่นนั่งเฝ้าหน้าจอรอจนความสนุกหมดก่อนครับ</p>
 
-      <FeatureHighlights items={providerPoints} />
+      <a
+        href="/register"
+        class="inline-flex w-fit items-center gap-2 rounded-full bg-gradient-to-r from-[#ffe680] via-[#fdc700] to-[#d99400] px-7 py-3 text-sm font-black tracking-widest text-[#150726] uppercase shadow-[0_10px_30px_rgba(253,199,0,0.30)] transition-transform duration-300 hover:scale-105">
+        <span aria-hidden="true">🎲</span> สมัครสมาชิก PAYDAY24
+      </a>
     </div>
-  </ContentBoxSevenThreeFloatingBadge>
-
-  <ProviderGrid />
-
-  <ContentBoxFloatingBadge as="h2" title="คาสิโนสด AMD365 ให้บรรยากาศเกมโต๊ะแบบไหน">
-    <p class="mb-4 text-left text-base leading-relaxed">
-      AMD365 คาสิโนสด เหมาะกับคนที่อยากเปลี่ยนจากสล็อตมาสัมผัสเกมโต๊ะมากขึ้น โดยมีหมวดอย่างบาคาร่า รูเล็ต ไฮโล แบล็กแจ็ก และเกม Live อื่น ๆ ตามรายการที่เปิดให้บริการ
-      สมาชิกสามารถเลือกโต๊ะและประเภทเกมจากหน้าเดียวโดยไม่ต้องเปลี่ยนบัญชีสมาชิก
-    </p>
-
-    <p class="text-left text-base leading-relaxed">
-      ความสนุกของคาสิโนสดต่างจากสล็อตตรงที่มีจังหวะเกมและบรรยากาศโต๊ะเข้ามาเป็นส่วนหนึ่งของประสบการณ์ AMD365 จึงจัดหมวดให้ค้นหาเกมได้ง่ายทั้งบนมือถือและคอม คนที่มีเกมประจำก็เข้าโต๊ะเดิมได้เร็ว
-    </p>
-  </ContentBoxFloatingBadge>
-
-  <GameRankingBoard />
-
-  <ContentBox as="h2" title="กีฬา AMD365 มีอะไรให้เลือกนอกจากฟุตบอล">
-    <p class="mb-4 text-left text-base leading-relaxed">
-      หมวดกีฬาใน AMD365 ไม่ได้จำกัดอยู่เฉพาะฟุตบอล แต่สามารถพบตัวเลือกจากกีฬาหลายประเภทตามรายการแข่งขันที่เปิดให้บริการ เช่น บาสเกตบอล เทนนิส มวย และ eSports
-      ทำให้สมาชิกที่ติดตามหลายชนิดกีฬาไม่จำเป็นต้องเปลี่ยนแพลตฟอร์มตามฤดูกาลแข่งขัน
-    </p>
-
-    <p class="text-left text-base leading-relaxed">
-      การรวมหมวดกีฬาไว้กับเกมประเภทอื่นทำให้ AMD365 เหมาะกับคนที่มีความสนใจมากกว่าหนึ่งอย่าง ช่วงก่อนแข่งอาจเปิดดูคู่กีฬา พอจบเกมก็กลับไปเล่นสล็อตหรือคาสิโนได้จากบัญชีเดิม
-      ระบบควรตามพฤติกรรมคนเล่นให้ทัน เพราะความสนุกไม่ได้มีตารางเวลาราชการ
-    </p>
-  </ContentBox>
-
-  <ContentBoxSpecial as="h2" title="หวยออนไลน์ AMD365 มีตลาดไหนให้เลือกบ้าง">
-    <div slot="left" class="flex flex-col gap-4">
-      <p class="text-left text-base leading-relaxed">
-        AMD365 หวยออนไลน์ เปิดทางเลือกให้สมาชิกที่ชอบลุ้นตัวเลขสามารถเลือกตลาดหวยจากระบบเดียวกับเกมประเภทอื่น โดยรายการที่เปิดให้บริการอาจมีทั้งหวยรัฐบาลไทย หวยลาว หวยหุ้น หวยยี่กี และตลาดอื่น ๆ
-        ตามรอบที่ระบบกำหนด
-      </p>
-    </div>
-
-    <div slot="right" class="flex flex-col gap-4">
-      <p class="text-left text-base leading-relaxed">
-        ข้อดีของการรวมหมวดหวยไว้ใน AMD365 คือสมาชิกสามารถดูรายการและจัดการบัญชีจากหน้าเมมเบอร์เดิม ไม่ต้องสร้างยูสอีกชุดเพียงเพราะเปลี่ยนจากสล็อตมาลุ้นเลข
-        สิ่งสำคัญคือควรตรวจรอบเปิด-ปิดและเงื่อนไขของแต่ละตลาดก่อนทำรายการทุกครั้ง เพราะแต่ละประเภทมีช่วงเวลาไม่เหมือนกัน
-      </p>
-    </div>
-  </ContentBoxSpecial>
-
-  <ContentBoxTwoPremium as="h2" title="ระบบฝากถอนออโต้ AMD365 โอนไวและใช้งานจากหน้าเมมเบอร์ยังไง" titleleft="ทำรายการจบในหน้าเมมเบอร์เดียว" titleright="โอนไวและแจ้งสถานะได้ชัดเจน">
-    <div slot="left" class="flex flex-col gap-4">
-      <p class="text-left text-base leading-relaxed">
-        ระบบฝากถอนออโต้ของ AMD365 เชื่อมอยู่กับบัญชีสมาชิกเพื่อช่วยลดขั้นตอนในการทำรายการ สมาชิกสามารถเลือกเมนูฝากหรือถอน ตรวจยอดเครดิต และดูสถานะรายการจากหน้าเมมเบอร์ได้โดยตรง
-        ไม่ต้องสลับไปหลายหน้าเพื่อทำเรื่องเดียวให้เสร็จ
-      </p>
-    </div>
-
-    <div slot="right" class="flex flex-col gap-4">
-      <p class="text-left text-base leading-relaxed">ออโต้โอนไว ของ AMD365 ทำงานที่ลดขั้นตอนและแจ้งสถานะได้ชัดเจน มากกว่าการโยนตัวเลขเวลาสวย ๆ มาโฆษณา</p>
-    </div>
-  </ContentBoxTwoPremium>
-
-  <LatestWinners4 />
-
-  <ContentBox as="h2" title="ทดลองเล่น AMD365 ช่วยเลือกเกมก่อนเริ่มเล่นจริงได้ยังไง">
-    <p class="text-left text-base leading-relaxed">
-      โหมดทดลองเล่นของ AMD365 เหมาะกับคนที่อยากทำความรู้จักเกมก่อนใช้เครดิตจริง เกมที่รองรับ DEMO สามารถใช้ดูหน้าตาเกม ระบบสัญลักษณ์ ฟรีสปิน โบนัส และจังหวะการเล่น
-      เพื่อช่วยตัดสินใจว่าเกมนั้นเข้ากับสไตล์ของตัวเองหรือไม่
-    </p>
-  </ContentBox>
+  </ContentBoxSevenThreeNeumorphism>
 
   <SmoothCarousel />
 
-  <ContentBoxTwoFloatingBadge as="h2" title="AMD365 ดูแลเรื่องความปลอดภัยและมาตรฐานเกมอย่างไร" titleleft="การดูแลข้อมูลและที่มาของเกม" titleright="ความน่าเชื่อถือที่ตรวจสอบได้">
-    <div slot="left" class="flex flex-col gap-4">
-      <p class="text-left text-base leading-relaxed">
-        AMD365 ให้ความสำคัญกับการจัดการข้อมูลสมาชิกและการเชื่อมต่อของเว็บไซต์ผ่านระบบที่รองรับการเข้ารหัส รวมถึงเลือกใช้เกมจากผู้ให้บริการที่มีระบบเกมและมาตรฐานของตัวเอง
-        สมาชิกจึงควรตรวจสอบชื่อผู้ให้บริการเกมและข้อมูลที่แสดงในแต่ละหมวดก่อนใช้งาน
-      </p>
-    </div>
-
-    <div slot="right" class="flex flex-col gap-4">
-      <p class="text-left text-base leading-relaxed">
-        ด้านความน่าเชื่อถือ AMD365 ควรสื่อสารจากสิ่งที่ตรวจสอบได้จริง เช่น ช่องทางติดต่อ ระบบสมาชิก ประวัติรายการ และข้อมูลเกม มากกว่าพึ่งคำว่า “ปลอดภัย 100%” เพียงอย่างเดียว
-        ความน่าเชื่อถือไม่ได้เกิดจากตัวหนังสือหนา ๆ แต่เกิดจากระบบที่ใช้งานแล้วข้อมูลตรงและติดต่อได้เมื่อมีปัญหา
-      </p>
-    </div>
-  </ContentBoxTwoFloatingBadge>
+  <LatestWinnersCyber />
 
   <LoginRtpSection />
 
-  <ContentBoxPremium as="h2" title="AMD365 เหมาะกับคนเล่นเกมออนไลน์แบบไหน">
-    <p class="mb-4 text-left text-base leading-relaxed">
-      AMD365 เหมาะกับคนที่ไม่ได้ยึดติดกับเกมประเภทเดียว โดยเฉพาะสายที่เล่นสล็อตเป็นหลักแต่บางวันอยากเปลี่ยนไปคาสิโน กีฬา หรือหวย รวมถึงคนที่ต้องการจัดการเกม เครดิต ฝากถอน
-      และโปรโมชั่นจากบัญชีสมาชิกเดียว
-    </p>
-
-    <p class="mb-6 text-left text-base leading-relaxed">
-      ถ้าคุณเป็นคนประเภทที่ “วันนี้เอาสล็อต พรุ่งนี้ค่อยว่ากัน” AMD365 วางตัวมาในทิศทางนั้นพอดี มีหลายหมวดให้เปลี่ยนอารมณ์โดยไม่ต้องเปลี่ยนระบบตาม และยังสามารถทดลองเกมที่รองรับก่อนเลือกเล่นจริงได้
-      เกมหลายแนวได้ แต่ขั้นตอนควรน้อยแนวไว้ก่อน แบบนี้ใช้งานสนุกกว่าเยอะ
-    </p>
-
-    <a
-      href="/register"
-      class="inline-flex w-fit items-center gap-2 rounded-full bg-gradient-to-r from-[#ffe9a8] via-[#fec93a] to-[#d4840e] px-7 py-3 text-sm font-black tracking-widest text-[#160e03] uppercase shadow-[0_10px_30px_rgba(254,201,58,0.30)] transition-transform duration-300 hover:scale-105">
-      <span aria-hidden="true">🎲</span> สมัครสมาชิก AMD365
-    </a>
-  </ContentBoxPremium>
-
   <ReviewCardSumo2 />
 
-  <Faq title="FAQ คำถามที่พบบ่อยเกี่ยวกับ AMD365" faqs={faqs} />
+  <Faq3 title="FAQ คำถามที่พบบ่อยเกี่ยวกับ PAYDAY24" faqs={faqs} />
 
   <Navfoot />
 </MainLayout>

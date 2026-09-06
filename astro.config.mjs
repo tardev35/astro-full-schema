@@ -75,7 +75,7 @@ export default defineConfig({
     "/line": "https://tinyurl.com/suhng",
   },
 
-  site: "https://amd365-brand.com",
+  site: "https://payday24.org",
   integrations: [
     sitemap({
       // /login, /register and /line are forwarding pages that all ship

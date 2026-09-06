@@ -10,23 +10,23 @@ const { title, as: HeadingTag = "h2", titleleft, titleright } = Astro.props;
 
 <section class="mx-auto mb-8 w-full max-w-7xl px-4 font-sans">
   <div
-    class="w-full rounded-[25px] border border-[#b07d12]/55 bg-[#2a0505] p-8 shadow-[10px_10px_20px_#160202,-10px_-10px_20px_#3a0808] transition-all duration-300 hover:shadow-[15px_15px_30px_#160202,-15px_-15px_30px_#451010]">
+    class="w-full rounded-[25px] border border-[#a86f00]/55 bg-[#1c0a30] p-8 shadow-[10px_10px_20px_#0b0313,-10px_-10px_20px_#2c1247] transition-all duration-300 hover:shadow-[15px_15px_30px_#0b0313,-15px_-15px_30px_#3d1a5e]">
     {
       title && (
-        <header class="mb-8 border-b border-[#b07d12]/45 pb-4 text-center">
-          <HeadingTag class="bg-gradient-to-r from-[#ffe08a] via-[#f5c542] to-[#d99e1f] bg-clip-text text-2xl leading-normal font-black tracking-wide text-transparent">{title}</HeadingTag>
+        <header class="mb-8 border-b border-[#a86f00]/45 pb-4 text-center">
+          <HeadingTag class="bg-gradient-to-r from-[#ffe680] via-[#fdc700] to-[#d99400] bg-clip-text text-2xl leading-normal font-black tracking-wide text-transparent">{title}</HeadingTag>
         </header>
       )
     }
 
     <div class="grid grid-cols-1 gap-8 md:grid-cols-2">
-      <article class="flex flex-col gap-4 text-left text-base leading-relaxed text-[#f7e4d4]">
-        {titleleft && <p class="text-xl leading-normal font-black tracking-wide text-[#ffe08a] drop-shadow-[0_0_10px_rgba(245,197,66,0.35)]">{titleleft}</p>}
+      <article class="flex flex-col gap-4 text-left text-base leading-relaxed text-[#ede4fb]">
+        {titleleft && <p class="text-xl leading-normal font-black tracking-wide text-[#ffe680] drop-shadow-[0_0_10px_rgba(253,199,0,0.35)]">{titleleft}</p>}
         <slot name="left" />
       </article>
 
-      <article class="flex flex-col gap-4 text-left text-base leading-relaxed text-[#f7e4d4] md:border-l md:border-[#b07d12]/45 md:pl-8">
-        {titleright && <p class="text-xl leading-normal font-black tracking-wide text-[#ffe08a] drop-shadow-[0_0_10px_rgba(245,197,66,0.35)]">{titleright}</p>}
+      <article class="flex flex-col gap-4 text-left text-base leading-relaxed text-[#ede4fb] md:border-l md:border-[#a86f00]/45 md:pl-8">
+        {titleright && <p class="text-xl leading-normal font-black tracking-wide text-[#ffe680] drop-shadow-[0_0_10px_rgba(253,199,0,0.35)]">{titleright}</p>}
         <slot name="right" />
       </article>
     </div>

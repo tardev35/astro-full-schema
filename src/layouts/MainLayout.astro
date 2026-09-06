@@ -4,8 +4,8 @@ import bgConfig from "../assets/bg.json";
 import "../styles/global.css";
 import { BRAND_NAME, BRAND_TEXT, brandProfile, fontStack, iconVersion } from "../lib/brandProfile";
 import { canonicalFor } from "../lib/schema";
-import Navbar from "../components/NavbarStyle5.astro";
-import Footer from "../components/FooterStyle2.astro";
+import Navbar from "../components/NavbarStyle8.astro";
+import Footer from "../components/FooterStyle3.astro";
 
 // Only banner1 is ever rendered, so only banner1 is imported.
 //
@@ -54,8 +54,8 @@ const mobileBannerImg = mobileBanner
   : null;
 
 const {
-  title = "AMD365 เว็บสล็อตครบทุกค่าย รวมคาสิโน กีฬา หวย ระบบออโต้โอนไว",
-  description = "AMD365 รวมสล็อต คาสิโนสด กีฬา หวย และเกมออนไลน์ไว้ในบัญชีเดียว ฝากถอนออโต้โอนไว มีทดลองเล่น โปรโมชั่นสมาชิก รองรับมือถือ คอม และแท็บเล็ต",
+  title = "PAYDAY24 เว็บสล็อตมั่นคง คาสิโนสดออนไลน์ มีกิจกรรมรับเครดิตทุกวัน",
+  description = "PAYDAY24 เว็บสล็อตมั่นคง รวมบริการ คาสิโนสด บาคาร่า หวย และกีฬาออนไลน์ มีกิจกรรมรับเครดิตทุกวัน คืนยอดเสีย เช็กอิน กงล้อ ฝากถอนออโต้ รองรับ True Wallet",
   robots = "index, follow",
 } = Astro.props;
 
@@ -207,7 +207,7 @@ const profile = brandProfile(Astro.site);
         background-attachment: fixed;
         background-repeat: no-repeat;
         margin: 0;
-        background-color: #140b02;
+        background-color: #0d0416;
         font-weight: 400;
         font-family: var(--font-sans) !important;
       }
@@ -260,7 +260,7 @@ const profile = brandProfile(Astro.site);
         }
         <Image
           src={mainBanner}
-          alt="แบนเนอร์ AMD365 พื้นหลังสีดำเข้มมีเส้นโค้งทองและประกายทองกระจาย ด้านซ้ายเป็นโลโก้ Amd365 ตัวอักษรทองกับเงินและลูกเต๋าทอง ถัดลงมาเป็นข้อความทองขนาดใหญ่ว่า AMD365 เว็บสล็อตครบทุกค่าย และบรรทัดล่างว่า รวมคาสิโน กีฬา หวย ระบบออโต้โอนไว ใต้ข้อความเป็นแถบสามช่องเขียนว่า เล่นผ่านมือถือ ฝากถอนออโต้ บัญชีเดียวครบ ด้านขวาเป็นพรีเซนเตอร์หญิงในชุดเลื่อมสีทองถือโทรศัพท์ที่มีโลโก้ AMD365 ล้อมด้วยวงล้อรูเล็ต ไพ่ ชิปคาสิโน เหรียญทอง และลูกเต๋า"
+          alt="แบนเนอร์ PAYDAY24 พื้นหลังสีดำม่วงมีเส้นแสงสีม่วงและประกายทอง ด้านซ้ายบนเป็นโลโก้ PayDay24 พร้อมมงกุฎทองและคำว่า PLAY MORE WIN BIGGER ถัดลงมาเป็นข้อความทองขนาดใหญ่ว่า PAYDAY24 เว็บสล็อตมั่นคง และบรรทัดล่างว่า คาสิโนสดออนไลน์ มีกิจกรรมรับเครดิตทุกวัน ใต้ข้อความเป็นแถบไอคอนสองแถว แถวบนเขียนว่า คาสิโนสด บาคาร่า หวย กีฬา แถวล่างเขียนว่า คืนยอดเสีย เช็กอิน กงล้อ ฝากถอนออโต้ True Wallet ถัดลงมาเป็นปุ่มทองว่า สมัครสมาชิก ด้านขวาเป็นพรีเซนเตอร์หญิงในชุดราตรีสีม่วงนั่งอยู่ข้างวงล้อรูเล็ต ไพ่ ชิปคาสิโน เหรียญทอง ลูกบอล และป้าย BIG WIN"
           loading="eager"
           fetchpriority="high"
           widths={[412, 640, 828, 1024, 1280, 1600, 1900]}

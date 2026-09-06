@@ -10,28 +10,35 @@ import img6 from "../assets/providers/game6.avif";
 const games = [
   {
     rank: 1,
-    name: "PG Soft",
-    type: "ค่ายที่สมาชิก PIGAUTO เปิดบ่อยที่สุด ภาพจำชัด เล่นบนมือถือสะดวก และเรียกผ่าน API ลิขสิทธิ์ของค่ายโดยตรง",
-    menus: ["สายมือถือ", "เล่นประจำ"],
+    name: "PG Slot",
+    type: "ค่ายที่สมาชิก AMD365 เปิดบ่อยที่สุด ภาพชัด เมนูไม่ซับซ้อน และหลายเกมออกแบบมาให้เหมาะกับหน้าจอมือถือ",
+    menus: ["สายมือถือ", "เข้าใจง่าย"],
     players: 5124,
     img: img4,
   },
-  { rank: 2, name: "Pragmatic Play", type: "สายรอรอบโบนัสกับตัวคูณจะคุ้นค่ายนี้ ฟีเจอร์ของแต่ละเกมค่อนข้างชัด เลือกแนวที่ชอบได้ง่าย", menus: ["ฟรีสปิน", "ตัวคูณ"], players: 3842, img: img5 },
-  { rank: 3, name: "JILI", type: "เกมเดินจังหวะไวและมีฟีเจอร์หลากหลาย เหมาะกับคนที่ชอบลองหลายเกมในหนึ่งรอบเล่น", menus: ["จังหวะไว", "เปลี่ยนเกมบ่อย"], players: 3517, img: img2 },
-  { rank: 4, name: "Joker Gaming", type: "วงล้อคลาสสิกที่คนไทยคุ้นมือที่สุด กติกาตรงไปตรงมา เข้าเล่นต่อจากยูสเดิมได้เลย", menus: ["คลาสสิก", "คุ้นมือ"], players: 2905, img: img6 },
+  {
+    rank: 2,
+    name: "Pragmatic Play",
+    type: "กลุ่มเกมที่มีฟรีสปิน ตัวคูณ และรอบโบนัสชัดเจน เหมาะกับคนที่ชอบจังหวะเปลี่ยนระหว่างเกมหลักกับโบนัส",
+    menus: ["ฟรีสปิน", "ตัวคูณ"],
+    players: 3842,
+    img: img5,
+  },
+  { rank: 3, name: "คาสิโนสด", type: "บาคาร่า รูเล็ต ไฮโล แบล็กแจ็ก และเกม Live อื่น ๆ เลือกโต๊ะจากหน้าเดียวโดยไม่ต้องเปลี่ยนบัญชีสมาชิก", menus: ["เกมโต๊ะ", "บรรยากาศสด"], players: 3517, img: img2 },
+  { rank: 4, name: "Joker และค่ายอื่น ๆ", type: "วงล้อคลาสสิกที่คนไทยคุ้นมือ พร้อมค่ายอื่นในระบบให้สลับไปดูธีมและฟีเจอร์ใหม่ได้เรื่อย ๆ", menus: ["คลาสสิก", "ลองเกมใหม่"], players: 2905, img: img6 },
   {
     rank: 5,
-    name: "หมวดเกมยิงปลา",
-    type: "อยู่ในยูสเดียวกับสล็อต พักมือจากวงล้อมายิงปลาแล้วกลับไปปั่นต่อได้โดยไม่ต้องออกจากระบบ",
-    menus: ["ยิงปลา", "ยูสเดียว"],
+    name: "กีฬาและ eSports",
+    type: "ฟุตบอล บาสเกตบอล เทนนิส มวย และ eSports ตามรายการแข่งขันที่เปิดให้บริการในแต่ละช่วงเวลา",
+    menus: ["หลายชนิดกีฬา", "ตามฤดูกาล"],
     players: 2431,
     img: img3,
   },
   {
     rank: 6,
-    name: "ค่ายอื่นในระบบอีกหลายค่าย",
-    type: "ทุกค่ายเชื่อมผ่าน API แท้เหมือนกันหมด ไม่มีการปรับเรทระหว่างทาง เปิดเล่นได้จากยูสเดิม",
-    menus: ["API แท้", "ไม่ล็อกยูส"],
+    name: "หวยออนไลน์",
+    type: "หวยรัฐบาลไทย หวยลาว หวยหุ้น หวยยี่กี และตลาดอื่น ๆ ตามรอบที่ระบบกำหนด ตรวจเวลาเปิด-ปิดก่อนทำรายการ",
+    menus: ["เลือกตลาด", "ตามรอบ"],
     players: 2108,
     img: img1,
   },
@@ -40,15 +47,15 @@ const games = [
 const medal = (rank: number) => (rank === 1 ? "🥇" : rank === 2 ? "🥈" : rank === 3 ? "🥉" : null);
 ---
 
-<section aria-label="ค่ายเกมที่สมาชิก PIGAUTO เปิดเล่นบ่อย" class="mx-auto w-full max-w-[1300px] px-4 py-8 font-sans">
+<section aria-label="หมวดเกมที่สมาชิก AMD365 เปิดเล่นบ่อย" class="mx-auto w-full max-w-[1300px] px-4 py-8 font-sans">
   <div class="mb-8 flex w-full flex-col items-center justify-center gap-2 text-center">
     <span aria-hidden="true" class="text-2xl">🏆</span>
-    <p class="bg-gradient-to-r from-[#ffe08a] via-[#f5c542] to-[#d99e1f] bg-clip-text text-2xl font-black tracking-widest text-transparent uppercase">ค่ายเกมที่สมาชิก PIGAUTO เปิดเล่นบ่อยที่สุด</p>
-    <p class="max-w-3xl text-base leading-relaxed text-[#f7e4d4]">
-      ทุกค่ายในตารางนี้อยู่หลังยูสเดียวกันและเรียกเกมผ่าน API แท้จากค่ายผู้พัฒนาโดยตรง สลับจากค่ายที่คุ้นมือไปค่ายอื่นได้โดยไม่ต้องออกจากระบบ ลำดับความนิยมขยับตามคนที่เข้ามาใช้งานในแต่ละช่วง
-      ไม่ได้แปลว่าค่ายไหนให้อัตราจ่ายดีกว่าค่ายไหน ทุกเกมทำงานตามค่า RTP ที่ค่ายตั้งไว้ เลือกจากสไตล์ที่ถนัดแล้วเข้าเล่นต่อได้เลย
+    <p class="bg-gradient-to-r from-[#ffe9a8] via-[#fec93a] to-[#d4840e] bg-clip-text text-2xl font-black tracking-widest text-transparent uppercase">หมวดเกมที่สมาชิก AMD365 เปิดเล่นบ่อยที่สุด</p>
+    <p class="max-w-3xl text-base leading-relaxed text-[#f4e8d2]">
+      ทุกหมวดในตารางนี้อยู่หลังบัญชีสมาชิกเดียวกัน สลับจากสล็อตไปคาสิโนสด กีฬา หรือหวยได้โดยไม่ต้องสมัครยูสใหม่ ลำดับความนิยมขยับตามคนที่เข้ามาใช้งานในแต่ละช่วง
+      ไม่ได้แปลว่าหมวดไหนให้อัตราจ่ายดีกว่าหมวดไหน รายการที่เปิดให้บริการจริงให้ยึดตามหน้าเมมเบอร์ก่อนทำรายการทุกครั้ง
     </p>
-    <div class="mt-2 h-[3px] w-24 rounded-full bg-gradient-to-r from-transparent via-[#f5c542] to-transparent"></div>
+    <div class="mt-2 h-[3px] w-24 rounded-full bg-gradient-to-r from-transparent via-[#fec93a] to-transparent"></div>
   </div>
 
   <div class="flex flex-col gap-3">
@@ -59,12 +66,12 @@ const medal = (rank: number) => (rank === 1 ? "🥇" : rank === 2 ? "🥈" : ran
           <article
             class={`group relative flex items-center gap-3 overflow-hidden rounded-2xl border p-3 transition-all duration-300 hover:-translate-y-0.5 sm:gap-5 sm:p-4 ${
               top
-                ? "border-[#f5c542]/75 bg-gradient-to-r from-[#3a0808] via-[#2a0505] to-[#3a0808] shadow-[0_15px_40px_rgba(245,197,66,0.22)]"
-                : "border-[#f5c542]/35 bg-[#2a0505] shadow-[0_10px_30px_rgba(245,197,66,0.10)] hover:border-[#f5c542]/65 hover:shadow-[0_15px_40px_rgba(245,197,66,0.20)]"
+                ? "border-[#fec93a]/75 bg-gradient-to-r from-[#33220a] via-[#221703] to-[#33220a] shadow-[0_15px_40px_rgba(254,201,58,0.22)]"
+                : "border-[#fec93a]/35 bg-[#221703] shadow-[0_10px_30px_rgba(254,201,58,0.10)] hover:border-[#fec93a]/65 hover:shadow-[0_15px_40px_rgba(254,201,58,0.20)]"
             }`}>
             <div
               aria-hidden="true"
-              class="pointer-events-none absolute top-1/2 -left-10 h-24 w-24 -translate-y-1/2 rounded-full bg-[#f5c542]/12 blur-[40px] transition-all duration-500 group-hover:bg-[#d92121]/18"
+              class="pointer-events-none absolute top-1/2 -left-10 h-24 w-24 -translate-y-1/2 rounded-full bg-[#fec93a]/12 blur-[40px] transition-all duration-500 group-hover:bg-[#c9ccd4]/18"
             />
 
             <div class="relative z-10 flex w-8 shrink-0 flex-col items-center justify-center sm:w-12">
@@ -74,14 +81,14 @@ const medal = (rank: number) => (rank === 1 ? "🥇" : rank === 2 ? "🥈" : ran
                   <span class="sr-only">อันดับ {g.rank}</span>
                 </span>
               ) : (
-                <span class="text-xl font-black text-[#f5c542] sm:text-2xl">#{g.rank}</span>
+                <span class="text-xl font-black text-[#fec93a] sm:text-2xl">#{g.rank}</span>
               )}
             </div>
 
-            <div class={`relative z-10 h-14 w-14 shrink-0 overflow-hidden rounded-xl border sm:h-16 sm:w-16 ${top ? "border-[#f5c542]/75" : "border-[#b07d12]/55"}`}>
+            <div class={`relative z-10 h-14 w-14 shrink-0 overflow-hidden rounded-xl border sm:h-16 sm:w-16 ${top ? "border-[#fec93a]/75" : "border-[#a06a09]/55"}`}>
               <Picture
                 src={g.img}
-                alt={`ภาพหน้าปกเกมของค่าย ${g.name} บนกระดานค่ายเกมยอดนิยมของ PIGAUTO`}
+                alt={`ภาพหน้าปกเกมประกอบรายการ ${g.name} บนกระดานหมวดเกมยอดนิยมของ AMD365`}
                 formats={["avif", "webp"]}
                 fallbackFormat="webp"
                 loading="lazy"
@@ -96,23 +103,23 @@ const medal = (rank: number) => (rank === 1 ? "🥇" : rank === 2 ? "🥈" : ran
 
             <div class="relative z-10 min-w-0 flex-1">
               <div class="flex items-center gap-2">
-                <p class="truncate text-base font-black text-[#ffe08a] sm:text-lg">{g.name}</p>
+                <p class="truncate text-base font-black text-[#ffe9a8] sm:text-lg">{g.name}</p>
                 {top && (
-                  <span class="hidden shrink-0 rounded-full border border-[#f5c542]/55 bg-[#3a0808] px-2 py-0.5 text-[9px] font-black tracking-wider text-[#ffe08a] sm:inline">ยอดนิยมสูงสุด</span>
+                  <span class="hidden shrink-0 rounded-full border border-[#fec93a]/55 bg-[#33220a] px-2 py-0.5 text-[9px] font-black tracking-wider text-[#ffe9a8] sm:inline">ยอดนิยมสูงสุด</span>
                 )}
               </div>
-              <p class="truncate text-[11px] text-[#d7b9a4] sm:text-xs">{g.type}</p>
+              <p class="truncate text-[11px] text-[#cdbb93] sm:text-xs">{g.type}</p>
 
               <div class="mt-2 flex flex-wrap items-center gap-1.5">
                 {g.menus.map((m) => (
-                  <span class="rounded-full border border-[#b07d12]/55 bg-[#3a0808] px-2.5 py-0.5 text-[10px] font-bold text-[#ffe08a]">{m}</span>
+                  <span class="rounded-full border border-[#a06a09]/55 bg-[#33220a] px-2.5 py-0.5 text-[10px] font-bold text-[#ffe9a8]">{m}</span>
                 ))}
               </div>
             </div>
 
             <div class="relative z-10 hidden shrink-0 flex-col items-end gap-1 sm:flex">
-              <span class="flex items-center gap-1.5 text-[11px] text-[#d7b9a4]">
-                <span class="h-1.5 w-1.5 animate-pulse rounded-full bg-[#d92121] shadow-[0_0_6px_rgba(217,33,33,0.7)]" />
+              <span class="flex items-center gap-1.5 text-[11px] text-[#cdbb93]">
+                <span class="h-1.5 w-1.5 animate-pulse rounded-full bg-[#c9ccd4] shadow-[0_0_6px_rgba(201,204,212,0.7)]" />
                 <span class="tabular-nums" data-players data-base={g.players}>
                   {g.players.toLocaleString("en-US")}
                 </span>{" "}
@@ -122,8 +129,8 @@ const medal = (rank: number) => (rank === 1 ? "🥇" : rank === 2 ? "🥈" : ran
                 href="/register"
                 class={`rounded-full px-4 py-1.5 text-xs font-black transition-transform hover:scale-105 ${
                   top
-                    ? "bg-gradient-to-r from-[#ffe08a] via-[#f5c542] to-[#d99e1f] text-[#1f0303] shadow-[0_10px_30px_rgba(245,197,66,0.28)]"
-                    : "border border-[#b07d12]/60 bg-[#3a0808] text-[#ffe08a] hover:border-[#f5c542]/70 hover:bg-[#451010]"
+                    ? "bg-gradient-to-r from-[#ffe9a8] via-[#fec93a] to-[#d4840e] text-[#160e03] shadow-[0_10px_30px_rgba(254,201,58,0.28)]"
+                    : "border border-[#a06a09]/60 bg-[#33220a] text-[#ffe9a8] hover:border-[#fec93a]/70 hover:bg-[#3c2606]"
                 }`}>
                 สมัครเข้าเล่น
               </a>

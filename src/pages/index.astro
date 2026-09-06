@@ -1,82 +1,86 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
-import Announcement from "../components/Announcement6.astro";
+import Announcement from "../components/Announcement2.astro";
 import ContentBox from "../components/ContentBox.astro";
-import ContentBoxNeumorphism from "../components/ContentBoxNeumorphism.astro";
-import ContentBoxCyberCut from "../components/ContentBoxCyberCut.astro";
-import ContentBoxTwoCyberCut from "../components/ContentBoxTwoCyberCut.astro";
-import ContentBoxTwoNeumorphism from "../components/ContentBoxTwoNeumorphism.astro";
-import ContentBoxSevenThreeCyberCut from "../components/ContentBoxSevenThreeCyberCut.astro";
-import ContentBoxSevenThreeNeumorphism from "../components/ContentBoxSevenThreeNeumorphism.astro";
+import ContentBoxPremium from "../components/ContentBoxPremium.astro";
+import ContentBoxSpecial from "../components/ContentBoxSpecial.astro";
+import ContentBoxFloatingBadge from "../components/ContentBoxFloatingBadge.astro";
+import ContentBoxTwoPremium from "../components/ContentBoxTwoPremium.astro";
+import ContentBoxTwoFloatingBadge from "../components/ContentBoxTwoFloatingBadge.astro";
+import ContentBoxSevenThreePremium from "../components/ContentBoxSevenThreePremium.astro";
+import ContentBoxSevenThreeFloatingBadge from "../components/ContentBoxSevenThreeFloatingBadge.astro";
 import FeatureHighlights from "../components/FeatureHighlights.astro";
 import ProviderGrid from "../components/ProviderGrid.astro";
 import GameRankingBoard from "../components/GameRankingBoard.astro";
 import SmoothCarousel from "../components/SmoothCarousel.astro";
-import LatestWinners from "../components/LatestWinners.astro";
+import LatestWinners4 from "../components/LatestWinners4.astro";
 import LoginRtpSection from "../components/LoginRtpSection.astro";
 import ReviewCardSumo2 from "../components/ReviewCardSumo2.astro";
-import FaqHuay from "../components/FaqHuay.astro";
+import Faq from "../components/Faq.astro";
 import Navfoot from "../components/Navfoot.astro";
 
 import { Picture } from "astro:assets";
 import { pageGraph } from "../lib/schema";
-import imgWallet from "../assets/slide1.png";
-import imgNoMinimum from "../assets/slide2.png";
+import imgAllCategories from "../assets/slide2.png";
+import imgSlotGames from "../assets/slide4.png";
 
-const pageTitle = "PIGAUTO สล็อตหมูเว็บตรง แตกง่าย รับวอเลท ฝากถอนไม่มีขั้นต่ำ";
+const pageTitle = "AMD365 เว็บสล็อตครบทุกค่าย รวมคาสิโน กีฬา หวย ระบบออโต้โอนไว";
 
-const pageDescription = "PIGAUTO สล็อตหมูเว็บตรง ระบบออโต้ที่ไวที่สุด เกมแท้แตกง่าย โบนัสแตกดุเดือด ฝากถอนเร็ว ไม่มีขั้นต่ำ ปลอดภัย รองรับวอเลท สมัครเลย";
+const pageDescription = "AMD365 รวมสล็อต คาสิโนสด กีฬา หวย และเกมออนไลน์ไว้ในบัญชีเดียว ฝากถอนออโต้โอนไว มีทดลองเล่น โปรโมชั่นสมาชิก รองรับมือถือ คอม และแท็บเล็ต";
 
 const announcement =
-  "PIGAUTO สล็อตหมูเว็บตรง เชื่อมเกมลิขสิทธิ์ผ่าน API แท้จากค่ายผู้พัฒนาโดยตรง • ฝากถอนออโต้ภายใน 3 วินาที ยอดเข้าทันที ไม่ต้องส่งสลิป • รองรับทั้งบัญชีธนาคารและทรูมันนี่วอเลท ฝากได้ตั้งแต่ 1 บาท ไม่มีขั้นต่ำ • ไม่มีนโยบายล็อกยูส โบนัสและฟรีสปินออกตามค่ามาตรฐานของค่ายเกม • ระบบความปลอดภัยมาตรฐานเดียวกับแอปธนาคาร ข้อมูลสมาชิกถูกเก็บเป็นความลับ • ทีมงานซัพพอร์ต 24 ชั่วโมง แนะนำเกมและส่งเรื่องเข้าค่ายให้โดยตรง";
+  "AMD365 รวมสล็อต คาสิโนสด กีฬา eSports และหวยออนไลน์ไว้ในบัญชีสมาชิกเดียว เปลี่ยนหมวดเกมได้โดยไม่ต้องสมัครยูสใหม่ • ระบบฝากถอนออโต้เชื่อมอยู่กับหน้าเมมเบอร์ ตรวจยอดเครดิตและสถานะรายการได้เองทุกครั้ง • หมวดสล็อตรวมเกมจาก PG Slot, Pragmatic Play, Joker และค่ายอื่น ๆ ที่เปิดอยู่ในระบบ • คาสิโนสดมีบาคาร่า รูเล็ต ไฮโล แบล็กแจ็ก เลือกโต๊ะจากหน้าเดียวได้เลย • หมวดกีฬาไม่ได้มีแค่ฟุตบอล ยังมีบาสเกตบอล เทนนิส มวย และ eSports ตามรายการที่เปิดให้บริการ • หวยออนไลน์เลือกตลาดได้ตามรอบที่ระบบกำหนด ตรวจเวลาเปิด-ปิดของแต่ละตลาดก่อนทำรายการ • เกมที่รองรับ DEMO ลองดูฟีเจอร์และจังหวะเกมก่อนใช้เครดิตจริงได้";
 
-const walletAlt =
-  "ภาพโปรโมชั่น PIGAUTO ข้อความ รองรับวอเล็ท เต็มระบบ และ pig auto wallet ใช้ง่าย พรีเซนเตอร์หญิงในชุดกี่เพ้าสีแดงปักลายทอง ล้อมด้วยโคมไฟจีน พัดกระดาษสีทอง ไพ่ และเหรียญทอง มีโลโก้หมู PIGAUTO อยู่ด้านบน";
+const allCategoriesAlt =
+  "ภาพโปรโมชั่น AMD365 โลโก้ AMD365 ขนาดใหญ่ พร้อมข้อความ เว็บสล็อตครบทุกค่าย รวมคาสิโน กีฬา หวย ระบบออโต้โอนไว และไอคอนสี่หมวด SLOT CASINO SPORTS LOTTERY โดยมีพรีเซนเตอร์หญิงยื่นมือออกมาด้านข้าง";
 
-const noMinimumAlt =
-  "ภาพโปรโมชั่น PIGAUTO ข้อความ เว็บสล็อตออโต้ไม่มีขั้นต่ำ และ เล่นได้อย่างเป็นมิตร ปลอดภัยสูง พรีเซนเตอร์หญิงในชุดกี่เพ้าสีแดงยืนด้านขวา มีพัดทอง ชิปคาสิโน และเหรียญทองบนฉากหลังแดงทอง";
+const slotGamesAlt =
+  "ภาพโปรโมชั่น AMD365 ข้อความ สล็อตแตกง่าย ปั่นง่ายแตกไว ทุนหลักสิบแตกหลักแสน มีมาสคอตซูเปอร์ฮีโร่และตัวละครจากเกมสล็อต พร้อมหน้าจอมือถือแสดงยอด TotalWin 137,900.00 บนฉากหลังสีดำทอง";
 
-const apiPoints = [
+const providerPoints = [
   {
-    icon: "🔗",
-    title: "API แท้จากค่ายผู้พัฒนาโดยตรง",
-    description: "เกมทุกตัวเรียกผ่าน API ลิขสิทธิ์ของค่ายเอง ไม่มีคนกลางมาปรับเรทระหว่างทาง ค่าที่ค่ายตั้งไว้เป็นอย่างไร หน้าจอผู้เล่นก็เห็นอย่างนั้น",
+    icon: "📱",
+    title: "PG Slot เหมาะกับสายมือถือและเกมเข้าใจง่าย",
+    description:
+      "เกมจาก PG Slot มีจุดเด่นด้านภาพและรูปแบบการเล่นที่เรียนรู้ไม่ยาก หลายเกมถูกออกแบบให้เหมาะกับหน้าจอมือถือ จึงเหมาะกับสมาชิก AMD365 ที่ชอบเข้าเกมไวและต้องการเมนูไม่ซับซ้อน ทั้งสายเกมธีมเอเชีย เกมโบนัส หรือเกมที่มีฟีเจอร์พิเศษให้ลุ้นระหว่างทาง",
     accent: "gold" as const,
   },
   {
-    icon: "📱",
-    title: "เล่นลื่นทั้งมือถือและคอม",
-    description: "หน้าเว็บเปิดไวบนจอเล็ก ปุ่มอยู่ในระยะนิ้ว ย้ายไปเปิดบนคอมก็ได้ภาพชุดเดียวกัน ไม่ต้องโหลดแอปเพิ่มและไม่ต้องซูมหาปุ่ม",
-    accent: "crimson" as const,
+    icon: "🎁",
+    title: "Pragmatic Play เหมาะกับสายโบนัสและฟรีสปิน",
+    description:
+      "Pragmatic Play เป็นอีกค่ายที่มีเกมสล็อตหลายแนว โดยเฉพาะกลุ่มเกมที่มีฟรีสปิน ตัวคูณ และรอบโบนัสชัดเจน คนที่ชอบเกมซึ่งมีจังหวะเปลี่ยนระหว่างเกมหลักกับโบนัสจะมีตัวเลือกค่อนข้างหลากหลาย และสามารถเปลี่ยนไปลองเกมอื่นใน AMD365 ได้ตามความชอบ",
+    accent: "platinum" as const,
   },
   {
-    icon: "🔓",
-    title: "ไม่มีนโยบายล็อกยูส",
-    description: "ยูสของสมาชิกไม่ถูกจำกัดรอบเล่นหรือกันฟีเจอร์ใด ๆ โบนัสและฟรีสปินออกตามค่ามาตรฐานที่ค่ายเกมกำหนดไว้เท่านั้น",
+    icon: "🃏",
+    title: "Joker และค่ายอื่น ๆ เพิ่มทางเลือกให้สายชอบลองเกมใหม่",
+    description:
+      "สำหรับคนที่ไม่ชอบอยู่กับเกมเดิมนาน ๆ หมวดสล็อต AMD365 ยังมีเกมจาก Joker และผู้ให้บริการอื่น ๆ ให้สลับเล่นได้หลายรูปแบบ จุดสำคัญคือไม่จำเป็นต้องเลือกจากชื่อค่ายอย่างเดียว สามารถดูธีม ฟีเจอร์ และรูปแบบโบนัสก่อนตัดสินใจได้เช่นกัน",
     accent: "gold" as const,
   },
 ];
 
 const faqs = [
   {
-    q: "PIGAUTO คือเว็บอะไร?",
-    a: "PIGAUTO คือสล็อตหมูเว็บตรง API แท้ ที่รวมเกมลิขสิทธิ์จากค่ายดัง แตกง่าย ระบบออโต้เร็ว 3 วิ รองรับวอเลท ฝากถอนไม่มีขั้นต่ำ และจ่ายจริงทุกยอด",
+    q: "AMD365 มีเกมสล็อตและคาสิโนในบัญชีเดียวกันไหม",
+    a: "มีครับ AMD365 รวมสล็อต คาสิโนสด กีฬา หวย และหมวดเกมอื่น ๆ ไว้ภายใต้ระบบสมาชิกเดียว ทำให้สามารถเปลี่ยนหมวดโดยยังใช้บัญชีเดิมได้",
   },
   {
-    q: "PIGAUTO แตกง่ายจริงไหม?",
-    a: "แตกง่ายจริง เพราะเป็นระบบ API แท้จากค่ายเกมโดยตรง ไม่มีการปรับเรท ทำให้โบนัส Big Win, Mega Win และฟรีสปินออกตามค่ามาตรฐานของค่าย",
+    q: "AMD365 ทดลองเล่นสล็อตฟรีก่อนสมัครได้ไหม",
+    a: "AMD365 มีเกมที่รองรับโหมดทดลองเล่น ผู้ใช้สามารถดูรูปแบบเกมและฟีเจอร์ก่อนเลือกเล่นจริงได้ ทั้งนี้โหมด DEMO ขึ้นอยู่กับเกมและผู้ให้บริการแต่ละราย",
   },
   {
-    q: "ฝากถอนใช้เวลานานเท่าไหร่?",
-    a: "ระบบฝากถอนของ PIGAUTO ใช้เวลาเพียง 3 วินาที ไม่ต้องส่งสลิป รองรับทั้งธนาคารและวอเลท สามารถถอนยอดใหญ่ได้ทันทีไม่ดองบิล",
+    q: "AMD365 รองรับ iPhone และ Android หรือไม่",
+    a: "รองรับการใช้งานผ่านมือถือทั้ง iPhone และ Android รวมถึงแท็บเล็ตและคอมพิวเตอร์ โดยสามารถเข้าใช้งานผ่านเว็บเบราว์เซอร์ที่รองรับระบบ",
   },
   {
-    q: "เว็บนี้มีขั้นต่ำฝากถอนหรือไม่?",
-    a: "ไม่มีขั้นต่ำ 1 บาทก็ฝากได้ ถอนเท่าไหร่ก็ได้ เหมาะสำหรับผู้เล่นทุกทุน โดยเฉพาะผู้เล่นทุนน้อยที่ต้องการปั้นกำไรแบบค่อยเป็นค่อยไป",
+    q: "ระบบฝากถอนออโต้ AMD365 ใช้งานอย่างไร",
+    a: "สมาชิกเข้าสู่หน้าเมมเบอร์ของ AMD365 เลือกเมนูฝากหรือถอน จากนั้นทำรายการตามช่องทางที่ระบบเปิดให้บริการ พร้อมตรวจสอบเครดิตและสถานะรายการจากบัญชีของตัวเอง",
   },
   {
-    q: "ทีมงานช่วยเหลือผู้เล่นอย่างไร?",
-    a: "ทีมงาน PIGAUTO พร้อมซัพพอร์ต 24 ชั่วโมง ช่วยแก้ปัญหา แนะนำเกม และดูแลธุรกรรมทุกอย่าง รวมถึงดำเนินการติดต่อค่ายเกมให้เมื่อพบปัญหาในระบบ",
+    q: "AMD365 มีทั้งกีฬาและหวยออนไลน์หรือไม่",
+    a: "มีครับ AMD365 มีทั้งหมวดกีฬา eSports และหวยออนไลน์ควบคู่กับสล็อตและคาสิโน โดยรายการที่เปิดให้บริการสามารถเปลี่ยนแปลงตามช่วงเวลาและตารางของแต่ละหมวดได้",
   },
 ];
 
@@ -92,59 +96,18 @@ const graph = pageGraph(Astro, {
 
   <Announcement message={announcement} />
 
-  <ContentBoxNeumorphism as="h1" title="PIGAUTO สล็อตหมูเว็บตรง แตกง่าย รับวอเลท ฝากถอนไม่มีขั้นต่ำ">
-    <p class="mb-4 text-left text-base leading-relaxed">
-      PIGAUTO สล็อตหมูเว็บตรง แตกง่าย จ่ายจริง ฝากถอนเร็ว ไม่มีขั้นต่ำ รองรับวอเลท รวมเกมสล็อตยิงปลาและค่ายดัง พร้อมโปรโมชั่นแรงสุดคุ้มสำหรับสมาชิกใหม่
-    </p>
-
-    <p class="mb-4 text-left text-base leading-relaxed">
-      PIGAUTO เหมาะสำหรับผู้เล่นที่ต้องการเว็บตรงแท้ แตกง่าย โบนัสออกดุเดือด และมีระบบออโต้ที่เร็วพอจะทำให้ทุกขั้นตอน สมัคร ฝาก ถอน จบในไม่กี่วินาที
-    </p>
-
+  <ContentBoxPremium as="h1" title="AMD365 เว็บเกมออนไลน์ครบทุกความสนุก สล็อต คาสิโน กีฬา หวย ในบัญชีเดียว">
     <p class="text-left text-base leading-relaxed">
-      เว็บนี้ออกแบบมาสำหรับผู้เล่นไทยโดยเฉพาะ รองรับทั้งธนาคารและวอเลท ไม่มีขั้นต่ำ ทุนน้อยก็เริ่มได้ และที่สำคัญคือ จ่ายจริงตรงเวลาทุกยอด
+      AMD365 ออกแบบมาให้คนที่ชอบความสนุกหลายแบบเลือกได้จากบัญชีเดียว ไม่ว่าจะเป็นเกมสล็อต คาสิโนสด กีฬา eSports หรือหวยออนไลน์ ไม่ต้องเปลี่ยนเว็บตามประเภทเกมที่อยากเล่น ระบบสมาชิกเชื่อมเมนูเกม เครดิต
+      โปรโมชั่น และฝากถอนออโต้ไว้ด้วยกัน ทำให้เวลาอยากเปลี่ยนจากสล็อตไปดูบอล หรือกลับมาลองเกมใหม่ ก็จัดการข้อมูลบัญชีจากหน้าเมมเบอร์เดียว
     </p>
-  </ContentBoxNeumorphism>
+  </ContentBoxPremium>
 
-  <ContentBoxTwoCyberCut as="h2" title="ทำไมต้อง PIGAUTO สล็อตหมูเว็บตรง API แท้" titleright="สามจุดที่ API แท้ต่างจากเว็บทั่วไป">
-    <div slot="left" class="flex flex-col gap-4">
-      <p class="text-left text-base leading-relaxed">
-        เล่นสล็อตแบบหมู ๆ ที่ไว้ใจได้จริง PIGAUTO ไม่ได้เป็นเพียงเว็บสล็อตที่มีชื่อจำง่าย แต่เป็นแพลตฟอร์มที่เชื่อมต่อกับระบบเกมแบบ API แท้จากค่ายผู้พัฒนาโดยตรง
-      </p>
-
-      <p class="text-left text-base leading-relaxed">
-        ประสบการณ์ใช้งาน “หมู ๆ” แต่สเปกเว็บระดับมืออาชีพ ผู้เล่นรู้สึกว่าเล่นง่าย ไม่ต้องทำอะไรยุ่งยาก แต่เบื้องหลังคือระบบ API ที่รองรับอย่างเสถียรทั้งในมือถือและคอม
-      </p>
-
-      <p class="text-left text-base leading-relaxed">
-        ถ้าต้องการเว็บที่ “แตกง่ายตามจริง เล่นลื่น ไม่ล็อกยูส” เว็บที่ต้องเลือกคือเว็บที่ใช้ API แท้เท่านั้น และ PIGAUTO คือหนึ่งในเว็บที่ผ่านมาตรฐานนั้นอย่างแท้จริง
-      </p>
-    </div>
-
-    <FeatureHighlights slot="right" items={apiPoints} />
-  </ContentBoxTwoCyberCut>
-
-  <ProviderGrid />
-
-  <ContentBoxCyberCut as="h2" title="โบนัสแตกดุเดือด PIGAUTO เกมแท้แตกง่าย สูงที่สุด">
-    <p class="mb-4 text-left text-base leading-relaxed">
-      ไฮไลท์ของเว็บสล็อตหมู PIGAUTO คือความใจป๋าครับ เกมสล็อตแท้ล้วนเป็นเกมที่มีค่าความผันผวน (Volatility) เหมาะสม ทำให้โบนัสแตกดุเดือดสูงที่สุดแบบที่คุณคาดไม่ถึง
-    </p>
-
-    <p class="mb-4 text-left text-base leading-relaxed">
-      บทจะมาก็มาเป็นพายุ ทั้ง Big Win, Mega Win หรือฟีเจอร์ฟรีสปินที่เข้าง่ายจนน่าตกใจ เราไม่มีนโยบายล็อกยูสเซอร์ ความเฮงที่ PIGAUTO เกมแท้แตกง่าย เกิดขึ้นอย่างเป็นธรรมชาติและยุติธรรมที่สุด
-    </p>
-
-    <p class="text-left text-base leading-relaxed">เตรียมถุงใบใหญ่ ๆ มารอรับเงินได้เลย เพราะเมื่อไหร่ที่แจ็คพอตแตก มันจะไหลมาเทมาเหมือนกระปุกออมสินระเบิดเลยล่ะครับ</p>
-  </ContentBoxCyberCut>
-
-  <GameRankingBoard />
-
-  <ContentBoxSevenThreeCyberCut as="h2" titleright="ระบบ PIGAUTO อัจฉริยะ ฝากถอนเร็ว 3 วิ รองรับวอเลท">
+  <ContentBoxSevenThreePremium as="h2" title="AMD365 รวมสล็อต คาสิโน กีฬา และหวยไว้ด้วยกันสะดวกยังไง">
     <Picture
       slot="left"
-      src={imgWallet}
-      alt={walletAlt}
+      src={imgAllCategories}
+      alt={allCategoriesAlt}
       loading="lazy"
       fetchpriority="low"
       widths={[240, 346, 480, 692]}
@@ -153,94 +116,159 @@ const graph = pageGraph(Astro, {
       formats={["avif", "webp"]}
       fallbackFormat="webp"
       quality={70}
-      class="mx-auto h-auto w-full rounded-2xl border border-[#f5c542]/45 shadow-[0_10px_30px_rgba(245,197,66,0.20)]"
+      class="mx-auto h-auto w-full rounded-2xl border border-[#fec93a]/45 shadow-[0_10px_30px_rgba(254,201,58,0.20)]"
     />
 
     <div slot="right" class="flex flex-col gap-4">
       <p class="text-left text-base leading-relaxed">
-        เรื่องเงินทองต้องไวครับ ชื่อเราบอกอยู่แล้วว่า AUTO ดังนั้นระบบธุรกรรมของเราจึงต้องเร็วที่สุดในปฐพี ด้วยเทคโนโลยีอัจฉริยะที่ประมวลผลแม่นยำ ฝากถอนเร็วภายใน 3 วินาที ยอดเข้าทันทีไม่ต้องส่งสลิป
+        AMD365 รวมหมวดความบันเทิงหลักไว้ในระบบเดียว ตั้งแต่เกมสล็อต คาสิโนสด กีฬา eSports ไปจนถึงหวยออนไลน์ สมาชิกจึงสามารถเลือกเกมตามอารมณ์ในแต่ละวันได้โดยไม่ต้องสมัครบัญชีใหม่ทุกครั้ง
+        วันนี้อยากหมุนสล็อต พรุ่งนี้อยากเช็กคู่บอล หรืออยากเปลี่ยนบรรยากาศไปบาคาร่า ก็เลือกจากบัญชีเดิมได้เลย
       </p>
 
       <p class="text-left text-base leading-relaxed">
-        และเพื่อความสะดวกสูงสุด เราเปิดระบบให้รองรับวอเลท (True Money Wallet) เต็มรูปแบบ ใครไม่สะดวกใช้บัญชีธนาคาร ก็สามารถใช้แอปเป๋าตังค์เติมเข้ามาทุบกระปุกหมูได้เหมือนกัน
+        ข้อดีของการรวมหลายหมวดไม่ได้อยู่แค่คำว่า “ครบ” แต่คือการจัดการที่ต่อเนื่องกว่า เครดิต ประวัติรายการ โปรโมชั่น และข้อมูลสมาชิกยังอยู่ภายใต้บัญชี AMD365 เดิม
+        ทำให้การเปลี่ยนหมวดเป็นเรื่องของการเลือกเกม ไม่ใช่การเริ่มต้นระบบใหม่ตั้งแต่ศูนย์ทุกครั้ง
+      </p>
+    </div>
+  </ContentBoxSevenThreePremium>
+
+  <ContentBoxSevenThreeFloatingBadge as="h2" title="สล็อต AMD365 มีเกมและค่ายแบบไหนให้เลือก">
+    <Picture
+      slot="left"
+      src={imgSlotGames}
+      alt={slotGamesAlt}
+      loading="lazy"
+      fetchpriority="low"
+      widths={[240, 352, 480, 704]}
+      sizes="(max-width: 767px) calc(100vw - 96px), 352px"
+      decoding="async"
+      formats={["avif", "webp"]}
+      fallbackFormat="webp"
+      quality={70}
+      class="mx-auto h-auto w-full rounded-2xl border border-[#fec93a]/45 shadow-[0_10px_30px_rgba(254,201,58,0.20)]"
+    />
+
+    <div slot="right" class="flex flex-col gap-4">
+      <p class="text-left text-base leading-relaxed">
+        หมวดสล็อตของ AMD365 รวบรวมเกมจากผู้ให้บริการหลายค่าย มีทั้งเกมยอดนิยม เกมใหม่ สล็อตฟรีสปิน เกมที่เน้นตัวคูณ และเกมที่ออกแบบมาสำหรับการเล่นบนมือถือ
+        จากข้อมูลหน้าเว็บสามารถพบค่ายที่นักเล่นสล็อตคุ้นชื่อ เช่น PG Slot, Pragmatic Play, Joker และผู้ให้บริการอื่น ๆ ที่เปิดอยู่ในระบบ
       </p>
 
-      <p class="text-left text-base leading-relaxed">จ่ายจริงทุกบาททุกสตางค์ ไม่ว่าคุณจะถอนหลักร้อยหรือหลักล้าน เรามีสภาพคล่องสูงพร้อมโอนให้ทันทีครับ</p>
+      <p class="text-left text-base leading-relaxed">
+        แต่ละค่ายมีสไตล์ต่างกันอย่างชัดเจน บางค่ายภาพสวยและเล่นง่าย บางค่ายเด่นเรื่องโบนัส บางเกมจังหวะเร็วเหมาะกับคนชอบเปลี่ยนเกมบ่อย AMD365 จึงไม่ได้บังคับให้คนเล่นวิ่งตามคำว่าเกมฮิตเพียงอย่างเดียว
+        เพราะเกมที่สนุกที่สุดก็ควรเป็นเกมที่เข้ากับสไตล์ของคนเล่นด้วย
+      </p>
+
+      <FeatureHighlights items={providerPoints} />
     </div>
-  </ContentBoxSevenThreeCyberCut>
+  </ContentBoxSevenThreeFloatingBadge>
 
-  <LatestWinners />
+  <ProviderGrid />
 
-  <ContentBox as="h2" title="เว็บนี้ ปลอดภัย ระดับตู้เซฟ เก็บรักษาข้อมูลแน่นหนา">
+  <ContentBoxFloatingBadge as="h2" title="คาสิโนสด AMD365 ให้บรรยากาศเกมโต๊ะแบบไหน">
     <p class="mb-4 text-left text-base leading-relaxed">
-      ถึงเราจะดูสนุกสนาน แต่เรื่องความปลอดภัยเราจริงจังมากครับ PIGAUTO ใช้ระบบรักษาความปลอดภัยมาตรฐานเดียวกับแอปพลิเคชันธนาคารชั้นนำ
+      AMD365 คาสิโนสด เหมาะกับคนที่อยากเปลี่ยนจากสล็อตมาสัมผัสเกมโต๊ะมากขึ้น โดยมีหมวดอย่างบาคาร่า รูเล็ต ไฮโล แบล็กแจ็ก และเกม Live อื่น ๆ ตามรายการที่เปิดให้บริการ
+      สมาชิกสามารถเลือกโต๊ะและประเภทเกมจากหน้าเดียวโดยไม่ต้องเปลี่ยนบัญชีสมาชิก
     </p>
 
-    <p class="mb-4 text-left text-base leading-relaxed">เปรียบเสมือนตู้เซฟนิรภัยที่ล็อคหลายชั้น ข้อมูลส่วนตัวและบัญชีการเงินของคุณจะถูกเก็บเป็นความลับสุดยอด</p>
+    <p class="text-left text-base leading-relaxed">
+      ความสนุกของคาสิโนสดต่างจากสล็อตตรงที่มีจังหวะเกมและบรรยากาศโต๊ะเข้ามาเป็นส่วนหนึ่งของประสบการณ์ AMD365 จึงจัดหมวดให้ค้นหาเกมได้ง่ายทั้งบนมือถือและคอม คนที่มีเกมประจำก็เข้าโต๊ะเดิมได้เร็ว
+    </p>
+  </ContentBoxFloatingBadge>
+
+  <GameRankingBoard />
+
+  <ContentBox as="h2" title="กีฬา AMD365 มีอะไรให้เลือกนอกจากฟุตบอล">
+    <p class="mb-4 text-left text-base leading-relaxed">
+      หมวดกีฬาใน AMD365 ไม่ได้จำกัดอยู่เฉพาะฟุตบอล แต่สามารถพบตัวเลือกจากกีฬาหลายประเภทตามรายการแข่งขันที่เปิดให้บริการ เช่น บาสเกตบอล เทนนิส มวย และ eSports
+      ทำให้สมาชิกที่ติดตามหลายชนิดกีฬาไม่จำเป็นต้องเปลี่ยนแพลตฟอร์มตามฤดูกาลแข่งขัน
+    </p>
 
     <p class="text-left text-base leading-relaxed">
-      ไม่มีทางที่ข้อมูลจะรั่วไหล หรือโดนคนนอกเข้าถึงได้แน่นอน คุณสามารถโฟกัสกับการปั่นสล็อตและยิงปลาได้อย่างสบายใจ ปล่อยให้เรื่องความปลอดภัยเป็นหน้าที่ของทีมงานมืออาชีพของเราดูแลครับ
+      การรวมหมวดกีฬาไว้กับเกมประเภทอื่นทำให้ AMD365 เหมาะกับคนที่มีความสนใจมากกว่าหนึ่งอย่าง ช่วงก่อนแข่งอาจเปิดดูคู่กีฬา พอจบเกมก็กลับไปเล่นสล็อตหรือคาสิโนได้จากบัญชีเดิม
+      ระบบควรตามพฤติกรรมคนเล่นให้ทัน เพราะความสนุกไม่ได้มีตารางเวลาราชการ
+    </p>
+  </ContentBox>
+
+  <ContentBoxSpecial as="h2" title="หวยออนไลน์ AMD365 มีตลาดไหนให้เลือกบ้าง">
+    <div slot="left" class="flex flex-col gap-4">
+      <p class="text-left text-base leading-relaxed">
+        AMD365 หวยออนไลน์ เปิดทางเลือกให้สมาชิกที่ชอบลุ้นตัวเลขสามารถเลือกตลาดหวยจากระบบเดียวกับเกมประเภทอื่น โดยรายการที่เปิดให้บริการอาจมีทั้งหวยรัฐบาลไทย หวยลาว หวยหุ้น หวยยี่กี และตลาดอื่น ๆ
+        ตามรอบที่ระบบกำหนด
+      </p>
+    </div>
+
+    <div slot="right" class="flex flex-col gap-4">
+      <p class="text-left text-base leading-relaxed">
+        ข้อดีของการรวมหมวดหวยไว้ใน AMD365 คือสมาชิกสามารถดูรายการและจัดการบัญชีจากหน้าเมมเบอร์เดิม ไม่ต้องสร้างยูสอีกชุดเพียงเพราะเปลี่ยนจากสล็อตมาลุ้นเลข
+        สิ่งสำคัญคือควรตรวจรอบเปิด-ปิดและเงื่อนไขของแต่ละตลาดก่อนทำรายการทุกครั้ง เพราะแต่ละประเภทมีช่วงเวลาไม่เหมือนกัน
+      </p>
+    </div>
+  </ContentBoxSpecial>
+
+  <ContentBoxTwoPremium as="h2" title="ระบบฝากถอนออโต้ AMD365 โอนไวและใช้งานจากหน้าเมมเบอร์ยังไง" titleleft="ทำรายการจบในหน้าเมมเบอร์เดียว" titleright="โอนไวและแจ้งสถานะได้ชัดเจน">
+    <div slot="left" class="flex flex-col gap-4">
+      <p class="text-left text-base leading-relaxed">
+        ระบบฝากถอนออโต้ของ AMD365 เชื่อมอยู่กับบัญชีสมาชิกเพื่อช่วยลดขั้นตอนในการทำรายการ สมาชิกสามารถเลือกเมนูฝากหรือถอน ตรวจยอดเครดิต และดูสถานะรายการจากหน้าเมมเบอร์ได้โดยตรง
+        ไม่ต้องสลับไปหลายหน้าเพื่อทำเรื่องเดียวให้เสร็จ
+      </p>
+    </div>
+
+    <div slot="right" class="flex flex-col gap-4">
+      <p class="text-left text-base leading-relaxed">ออโต้โอนไว ของ AMD365 ทำงานที่ลดขั้นตอนและแจ้งสถานะได้ชัดเจน มากกว่าการโยนตัวเลขเวลาสวย ๆ มาโฆษณา</p>
+    </div>
+  </ContentBoxTwoPremium>
+
+  <LatestWinners4 />
+
+  <ContentBox as="h2" title="ทดลองเล่น AMD365 ช่วยเลือกเกมก่อนเริ่มเล่นจริงได้ยังไง">
+    <p class="text-left text-base leading-relaxed">
+      โหมดทดลองเล่นของ AMD365 เหมาะกับคนที่อยากทำความรู้จักเกมก่อนใช้เครดิตจริง เกมที่รองรับ DEMO สามารถใช้ดูหน้าตาเกม ระบบสัญลักษณ์ ฟรีสปิน โบนัส และจังหวะการเล่น
+      เพื่อช่วยตัดสินใจว่าเกมนั้นเข้ากับสไตล์ของตัวเองหรือไม่
     </p>
   </ContentBox>
 
   <SmoothCarousel />
 
-  <ContentBoxSevenThreeNeumorphism as="h2" title="PIGAUTO ไม่มีขั้นต่ำ เริ่มต้นกับสล็อตเว็บตรงง่ายๆ">
-    <Picture
-      slot="left"
-      src={imgNoMinimum}
-      alt={noMinimumAlt}
-      loading="lazy"
-      fetchpriority="low"
-      widths={[260, 382, 520, 764]}
-      sizes="(max-width: 767px) calc(100vw - 96px), 382px"
-      decoding="async"
-      formats={["avif", "webp"]}
-      fallbackFormat="webp"
-      quality={70}
-      class="mx-auto h-auto w-full rounded-2xl border border-[#f5c542]/45 shadow-[0_10px_30px_rgba(245,197,66,0.20)]"
-    />
+  <ContentBoxTwoFloatingBadge as="h2" title="AMD365 ดูแลเรื่องความปลอดภัยและมาตรฐานเกมอย่างไร" titleleft="การดูแลข้อมูลและที่มาของเกม" titleright="ความน่าเชื่อถือที่ตรวจสอบได้">
+    <div slot="left" class="flex flex-col gap-4">
+      <p class="text-left text-base leading-relaxed">
+        AMD365 ให้ความสำคัญกับการจัดการข้อมูลสมาชิกและการเชื่อมต่อของเว็บไซต์ผ่านระบบที่รองรับการเข้ารหัส รวมถึงเลือกใช้เกมจากผู้ให้บริการที่มีระบบเกมและมาตรฐานของตัวเอง
+        สมาชิกจึงควรตรวจสอบชื่อผู้ให้บริการเกมและข้อมูลที่แสดงในแต่ละหมวดก่อนใช้งาน
+      </p>
+    </div>
 
     <div slot="right" class="flex flex-col gap-4">
-      <p class="text-left text-base leading-relaxed">ที่ PIGAUTO ทุกคนเริ่มต้นกับสล็อตเว็บตรง ฝากถอนไม่มีขั้นต่ำ ฝากกี่บาทก็ได้ ระบบรองรับตั้งแต่ 1 บาท</p>
-
       <p class="text-left text-base leading-relaxed">
-        คุณไม่จำเป็นต้องมีทุนมากมายก็สามารถเข้ามาเริ่มต้นกับเว็บตรงของเราได้ตั้งแต่วันนี้ ถอนเท่าไหร่ก็ได้ ไม่มีบังคับยอดขั้นต่ำ ระบบออโต้ช่วยให้ทุกขั้นตอนทำได้เองแบบง่าย ๆ
+        ด้านความน่าเชื่อถือ AMD365 ควรสื่อสารจากสิ่งที่ตรวจสอบได้จริง เช่น ช่องทางติดต่อ ระบบสมาชิก ประวัติรายการ และข้อมูลเกม มากกว่าพึ่งคำว่า “ปลอดภัย 100%” เพียงอย่างเดียว
+        ความน่าเชื่อถือไม่ได้เกิดจากตัวหนังสือหนา ๆ แต่เกิดจากระบบที่ใช้งานแล้วข้อมูลตรงและติดต่อได้เมื่อมีปัญหา
       </p>
-
-      <p class="text-left text-base leading-relaxed">คุณสามารถลอง เริ่ม ลงมือ และต่อยอดได้ตามสไตล์ของคุณเอง นี่คือพื้นที่ของผู้เล่นที่ต้องการโอกาสและความยืดหยุ่นอย่างแท้จริง</p>
     </div>
-  </ContentBoxSevenThreeNeumorphism>
+  </ContentBoxTwoFloatingBadge>
 
   <LoginRtpSection />
 
-  <ContentBoxTwoNeumorphism as="h2" title="สมัครเลย ทีมงาน PIGAUTO พร้อมซัพพอร์ต 24 ชั่วโมง">
-    <div slot="left" class="flex flex-col gap-4">
-      <p class="text-left text-base leading-relaxed">
-        PIGAUTO พร้อมดูแลคุณทุกขั้นตอนตลอด 24 ชั่วโมง เป็นมิตรกับผู้เล่นใหม่ที่อยากเริ่มแต่ยังไม่แน่ใจว่าจะทำขั้นตอนไหนก่อน ทีมงานแนะนำวิธีสมัครและเริ่มต้นเล่นอย่างถูกต้องให้ตั้งแต่ต้น
-      </p>
+  <ContentBoxPremium as="h2" title="AMD365 เหมาะกับคนเล่นเกมออนไลน์แบบไหน">
+    <p class="mb-4 text-left text-base leading-relaxed">
+      AMD365 เหมาะกับคนที่ไม่ได้ยึดติดกับเกมประเภทเดียว โดยเฉพาะสายที่เล่นสล็อตเป็นหลักแต่บางวันอยากเปลี่ยนไปคาสิโน กีฬา หรือหวย รวมถึงคนที่ต้องการจัดการเกม เครดิต ฝากถอน
+      และโปรโมชั่นจากบัญชีสมาชิกเดียว
+    </p>
 
-      <p class="text-left text-base leading-relaxed">แนะนำเกมที่เหมาะกับทุน เช่น เกมแตกง่าย หรือเกมที่คนเล่นเยอะตอนนี้ ช่วยให้ผู้เล่นตัดสินใจง่ายขึ้น</p>
-    </div>
+    <p class="mb-6 text-left text-base leading-relaxed">
+      ถ้าคุณเป็นคนประเภทที่ “วันนี้เอาสล็อต พรุ่งนี้ค่อยว่ากัน” AMD365 วางตัวมาในทิศทางนั้นพอดี มีหลายหมวดให้เปลี่ยนอารมณ์โดยไม่ต้องเปลี่ยนระบบตาม และยังสามารถทดลองเกมที่รองรับก่อนเลือกเล่นจริงได้
+      เกมหลายแนวได้ แต่ขั้นตอนควรน้อยแนวไว้ก่อน แบบนี้ใช้งานสนุกกว่าเยอะ
+    </p>
 
-    <div slot="right" class="flex flex-col gap-4">
-      <p class="text-left text-base leading-relaxed">
-        ติดตามปัญหายาก ๆ เช่น บัคเกม หรือยอดไม่ปรับ ทีมงานสามารถส่งเรื่องเข้าระบบของค่ายเกมโดยตรง ทำให้แก้ไขได้เร็วกว่าเว็บทั่วไป
-      </p>
-
-      <p class="text-left text-base leading-relaxed">เว็บที่ดูแลดีไม่ได้วัดกันตอนทุกอย่างราบรื่น แต่วัดกันตอนมีอะไรติดขัดแล้วยังมีคนรับเรื่องอยู่จริง</p>
-
-      <a
-        href="/register"
-        class="inline-flex w-fit items-center gap-2 rounded-full bg-gradient-to-r from-[#ffe08a] via-[#f5c542] to-[#d99e1f] px-7 py-3 text-sm font-black tracking-widest text-[#1f0303] uppercase shadow-[0_10px_30px_rgba(245,197,66,0.30)] transition-transform duration-300 hover:scale-105">
-        <span aria-hidden="true">🐷</span> สมัครสมาชิก PIGAUTO
-      </a>
-    </div>
-  </ContentBoxTwoNeumorphism>
+    <a
+      href="/register"
+      class="inline-flex w-fit items-center gap-2 rounded-full bg-gradient-to-r from-[#ffe9a8] via-[#fec93a] to-[#d4840e] px-7 py-3 text-sm font-black tracking-widest text-[#160e03] uppercase shadow-[0_10px_30px_rgba(254,201,58,0.30)] transition-transform duration-300 hover:scale-105">
+      <span aria-hidden="true">🎲</span> สมัครสมาชิก AMD365
+    </a>
+  </ContentBoxPremium>
 
   <ReviewCardSumo2 />
 
-  <FaqHuay title="คำถามที่พบบ่อยเกี่ยวกับ PIGAUTO" faqs={faqs} />
+  <Faq title="FAQ คำถามที่พบบ่อยเกี่ยวกับ AMD365" faqs={faqs} />
 
   <Navfoot />
 </MainLayout>

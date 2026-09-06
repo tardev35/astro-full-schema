@@ -2,21 +2,22 @@
 import MainLayout from "../layouts/MainLayout.astro";
 import ContentBox from "../components/ContentBox.astro";
 import Navfoot from "../components/Navfoot.astro";
-import Announcement from "../components/Announcement6.astro";
+import Announcement from "../components/Announcement2.astro";
 
 import { Picture } from "astro:assets";
 
 import pro1 from "../assets/slide1.png";
 import pro2 from "../assets/slide2.png";
 import pro3 from "../assets/slide3.png";
+import pro4 from "../assets/slide4.png";
 import { pageGraph } from "../lib/schema";
 
-const pageTitle = "โปรโมชั่น PIGAUTO รวมสิทธิ์สมาชิกใหม่และสมาชิกเดิม สล็อตหมูเว็บตรง";
+const pageTitle = "โปรโมชั่น AMD365 รวมสิทธิ์สมาชิกสล็อต คาสิโน กีฬา และหวย";
 
-const pageHeading = "โปรโมชั่น PIGAUTO รวมสิทธิ์สำหรับสมาชิก";
+const pageHeading = "โปรโมชั่น AMD365 รวมสิทธิ์สมาชิกจากทุกหมวดไว้ในหน้าเดียว";
 
 const pageDescription =
-  "รวมภาพโปรโมชั่น PIGAUTO สล็อตหมูเว็บตรง ทั้งการรับวอเลท ฝากถอนออโต้ไม่มีขั้นต่ำ และสิทธิ์ของสมาชิกเดิม เงื่อนไขระบุบนภาพทุกใบ สมัครยูสเดียวรับสิทธิ์ได้เลย";
+  "รวมภาพโปรโมชั่น AMD365 ทั้งคืนยอดเสียสล็อต คืนยอดเสียคาสิโน และสิทธิ์สมาชิกที่ใช้ได้กับกีฬาและหวย ระบุยอดรับกับเงื่อนไขไว้บนภาพทุกใบ เลือกรับได้จากบัญชีเดียว";
 
 const graph = pageGraph(Astro, {
   name: pageTitle,
@@ -29,7 +30,7 @@ const graph = pageGraph(Astro, {
 });
 
 const promoClass =
-  "mx-auto h-auto w-full rounded-xl border border-[#f5c542]/45 object-contain shadow-[0_10px_30px_rgba(245,197,66,0.16)] transition-all duration-300 hover:-translate-y-1 hover:border-[#ffe08a]/80 hover:shadow-[0_15px_40px_rgba(245,197,66,0.26)]";
+  "mx-auto h-auto w-full rounded-xl border border-[#fec93a]/45 object-contain shadow-[0_10px_30px_rgba(254,201,58,0.16)] transition-all duration-300 hover:-translate-y-1 hover:border-[#ffe9a8]/80 hover:shadow-[0_15px_40px_rgba(254,201,58,0.26)]";
 ---
 
 <MainLayout title={pageTitle} description={pageDescription}>
@@ -38,18 +39,18 @@ const promoClass =
   <Announcement />
 
   <ContentBox title={pageHeading} as="h1">
-    <p class="mb-4 text-left text-base leading-relaxed text-[#f7e4d4]">
-      หากคุณกำลังมองหาสิทธิ์ที่ดูจบได้ในหน้าเดียว <strong class="text-[#ffe08a]">PIGAUTO</strong> พร้อมมอบโปรของสมาชิกไว้ครบในภาพด้านล่าง ทั้งการรับวอเลทเต็มระบบ ฝากถอนออโต้ไม่มีขั้นต่ำ และการสมัครที่จบได้จากมือถือ
+    <p class="mb-4 text-left text-base leading-relaxed text-[#f4e8d2]">
+      หากคุณกำลังมองหาสิทธิ์ที่ดูจบได้ในหน้าเดียว <strong class="text-[#ffe9a8]">AMD365</strong> พร้อมมอบโปรโมชั่นของสมาชิกไว้ครบในภาพด้านล่าง ทั้งคืนยอดเสียสล็อต คืนยอดเสียคาสิโน และสิทธิ์ที่ใช้ต่อได้กับหมวดกีฬาและหวย
     </p>
 
-    <p class="mb-8 text-left text-base leading-relaxed text-[#f7e4d4]">
-      ยอดรับและเงื่อนไขของแต่ละใบไม่เท่ากัน ระบุไว้บนภาพแล้วทุกใบ เลือกใบที่ตรงกับทุนของคุณ แล้วสมัครยูสเดียวรับสิทธิ์ต่อจากหน้าเมมเบอร์ เพื่อประสบการณ์การเล่นที่คุ้มค่าและต่อเนื่องกว่าที่เคย
+    <p class="mb-8 text-left text-base leading-relaxed text-[#f4e8d2]">
+      ยอดรับและเงื่อนไขของแต่ละใบไม่เท่ากัน ระบุไว้บนภาพครบทุกใบแล้ว เลือกใบที่ตรงกับสไตล์การเล่นของคุณ แล้วรับสิทธิ์ต่อจากหน้าเมมเบอร์ เพื่อประสบการณ์การเล่นที่คุ้มค่าและต่อเนื่องกว่าที่เคย
     </p>
 
     <div class="grid w-full grid-cols-1 gap-6 sm:grid-cols-2">
       <Picture
         src={pro1}
-        alt="ภาพโปรโมชั่น PIGAUTO ข้อความ รองรับวอเล็ท เต็มระบบ และ pig auto wallet ใช้ง่าย ด้านบนเป็นโลโก้หมูการ์ตูน PIGAUTO ตรงกลางเป็นพรีเซนเตอร์หญิงในชุดกี่เพ้าสีแดงปักลายทอง รายล้อมด้วยโคมไฟจีนสีแดง พัดกระดาษสีทอง ไพ่ และเหรียญทองบนฉากหลังผ้าไหมสีแดง"
+        alt="ภาพโปรโมชั่น AMD365 ข้อความ คืนยอดเสียคาสิโน ROLLING สูงสุดอัตโนมัติ 0.7% พร้อมอัตรา SLOT 0.5% CASINO 0.7% และ SPORT 0.5% มีพรีเซนเตอร์หญิงในชุดราตรีสีทองยืนคู่กับวงล้อรูเล็ต ชิปทองและลูกเต๋า โลโก้ AMD365 อยู่มุมบนซ้าย ด้านล่างเป็นแถบ ปลอดภัยมั่นคง 100% ฝาก-ถอนออโต้ 5 วินาที บริการตลอด 24 ชม. และสล็อตแท้จ่ายจริงไม่อั้น"
         loading="lazy"
         fetchpriority="low"
         widths={[200, 400, 600]}
@@ -63,7 +64,7 @@ const promoClass =
 
       <Picture
         src={pro2}
-        alt="ภาพโปรโมชั่น PIGAUTO ข้อความ เว็บสล็อตออโต้ไม่มีขั้นต่ำ และ เล่นได้อย่างเป็นมิตร ปลอดภัยสูง พรีเซนเตอร์หญิงในชุดกี่เพ้าสีแดงยืนอยู่ด้านขวาของภาพ รายล้อมด้วยพัดกระดาษสีทอง ชิปคาสิโน และเหรียญทองที่กระจายอยู่บนฉากหลังสีแดงสลับทอง"
+        alt="ภาพโปรโมชั่น AMD365 โลโก้ AMD365 ตัวใหญ่กลางภาพ พร้อมข้อความ เว็บสล็อตครบทุกค่าย รวมคาสิโน กีฬา หวย ระบบออโต้โอนไว ด้านล่างมีป้ายหมวดเกมสี่ช่อง SLOT CASINO SPORTS และ LOTTERY โดยมีพรีเซนเตอร์หญิงยื่นมือออกมาทางผู้ชมบนฉากหลังสีดำทอง"
         loading="lazy"
         fetchpriority="low"
         widths={[200, 400, 600]}
@@ -77,7 +78,21 @@ const promoClass =
 
       <Picture
         src={pro3}
-        alt="ภาพโปรโมชั่น PIGAUTO ตัวอักษรทองคำว่า PIGAUTO และข้อความ สมัครง่ายเหมือนเปิดมือถือ พรีเซนเตอร์หญิงในชุดกี่เพ้าสีแดงยืนอยู่ด้านซ้ายของภาพ มีโคมไฟจีนสีแดงแขวนอยู่ด้านบน พร้อมเหรียญทองและวงกลมลายจีนสีทองประดับรอบภาพ"
+        alt="ภาพโปรโมชั่น AMD365 ข้อความ คืนยอดเสียสล็อต CASHBACK คืนยอดเสีย SLOT สูงสุด 11% คืนไม่จำกัดตาม LEVEL มีรูปไฉ่ซิงเอี๊ยะเทพเจ้าแห่งโชคลาภยืนอยู่ข้างตู้สล็อตเลข 777 ท่ามกลางก้อนทองและเหรียญทองที่กองอยู่เต็มภาพ"
+        loading="lazy"
+        fetchpriority="low"
+        widths={[200, 400, 600]}
+        sizes="(max-width: 768px) 100vw, 50vw"
+        class={promoClass}
+        decoding="async"
+        formats={["avif", "webp"]}
+        fallbackFormat="webp"
+        quality={80}
+      />
+
+      <Picture
+        src={pro4}
+        alt="ภาพโปรโมชั่น AMD365 ข้อความ สล็อตแตกง่าย ปั่นง่ายแตกไว ทุนหลักสิบแตกหลักแสน มีตัวการ์ตูนฮีโร่ประจำค่าย PG และตัวละครเกมยืนเรียงกัน ข้างมือถือที่แสดงยอด TotalWin 137,900.00 บนฉากหลังสีดำประกายทอง"
         loading="lazy"
         fetchpriority="low"
         widths={[200, 400, 600]}
@@ -93,8 +108,8 @@ const promoClass =
     <div class="mt-12 flex justify-center pb-4">
       <a
         href="/register"
-        class="flex items-center justify-center rounded-lg border border-[#b07d12]/60 bg-gradient-to-r from-[#ffe08a] via-[#f5c542] to-[#d99e1f] px-10 py-3.5 text-lg font-black text-[#1f0303] shadow-[0_10px_30px_rgba(245,197,66,0.28)] transition-transform hover:scale-105 hover:shadow-[0_15px_40px_rgba(245,197,66,0.38)]">
-        สมัครสมาชิก PIGAUTO
+        class="flex items-center justify-center rounded-lg border border-[#a06a09]/60 bg-gradient-to-r from-[#ffe9a8] via-[#fec93a] to-[#d4840e] px-10 py-3.5 text-lg font-black text-[#160e03] shadow-[0_10px_30px_rgba(254,201,58,0.28)] transition-transform hover:scale-105 hover:shadow-[0_15px_40px_rgba(254,201,58,0.38)]">
+        สมัครสมาชิก AMD365
       </a>
     </div>
   </ContentBox>

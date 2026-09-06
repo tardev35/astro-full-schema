@@ -3,7 +3,7 @@ export interface FeatureItem {
   icon: string;
   title: string;
   description: string;
-  accent?: "gold" | "crimson";
+  accent?: "gold" | "platinum";
 }
 
 export interface Props {
@@ -17,26 +17,26 @@ const { items, as: HeadingTag = "h3" } = Astro.props;
 <div class="mt-4 flex flex-col gap-5">
   {
     items.map((item) => {
-      const isGold = item.accent !== "crimson";
+      const isGold = item.accent !== "platinum";
       return (
         <div
           class={`group flex flex-col items-start gap-4 rounded-2xl border p-6 transition-all duration-300 hover:-translate-y-1 sm:flex-row ${
             isGold
-              ? "border-[#b07d12]/55 bg-[#3a0808] hover:border-[#f5c542]/70 hover:bg-[#451010] hover:shadow-[0_10px_20px_rgba(245,197,66,0.20)]"
-              : "border-[#8c0f0f] bg-[#340707] hover:border-[#d92121]/70 hover:bg-[#451010] hover:shadow-[0_10px_20px_rgba(217,33,33,0.22)]"
+              ? "border-[#a06a09]/55 bg-[#33220a] hover:border-[#fec93a]/70 hover:bg-[#3c2606] hover:shadow-[0_10px_20px_rgba(254,201,58,0.20)]"
+              : "border-[#5c6472] bg-[#2b1d05] hover:border-[#c9ccd4]/70 hover:bg-[#3c2606] hover:shadow-[0_10px_20px_rgba(201,204,212,0.22)]"
           }`}>
           <div
             aria-hidden="true"
             class={`flex h-14 w-14 shrink-0 items-center justify-center rounded-xl text-3xl transition-transform duration-300 group-hover:scale-110 ${
               isGold
-                ? "border border-[#ffe08a]/55 bg-gradient-to-br from-[#ffe08a] via-[#f5c542] to-[#b07d12] shadow-[0_0_15px_rgba(245,197,66,0.35)] group-hover:rotate-3"
-                : "border border-[#f9a8c0]/45 bg-gradient-to-br from-[#d92121] via-[#b01818] to-[#8c0f0f] shadow-[0_0_15px_rgba(217,33,33,0.35)]"
+                ? "border border-[#ffe9a8]/55 bg-gradient-to-br from-[#ffe9a8] via-[#fec93a] to-[#a06a09] shadow-[0_0_15px_rgba(254,201,58,0.35)] group-hover:rotate-3"
+                : "border border-[#e6e8ee]/45 bg-gradient-to-br from-[#c9ccd4] via-[#8b93a3] to-[#5c6472] shadow-[0_0_15px_rgba(201,204,212,0.35)]"
             }`}>
             {item.icon}
           </div>
           <div class="flex flex-col gap-2 text-left">
-            <HeadingTag class={`text-xl leading-normal font-black tracking-wide ${isGold ? "text-[#ffe08a]" : "text-[#f9a8c0]"}`}>{item.title}</HeadingTag>
-            <p class="text-left text-base leading-relaxed text-[#f7e4d4] transition-colors group-hover:text-[#ffe08a]">{item.description}</p>
+            <HeadingTag class={`text-xl leading-normal font-black tracking-wide ${isGold ? "text-[#ffe9a8]" : "text-[#e6e8ee]"}`}>{item.title}</HeadingTag>
+            <p class="text-left text-base leading-relaxed text-[#f4e8d2] transition-colors group-hover:text-[#ffe9a8]">{item.description}</p>
           </div>
         </div>
       );

@@ -1,31 +1,31 @@
 ---
 const reviews = [
   {
-    name: "สมาชิกที่ย้ายมาจากเว็บเอเย่นต์",
-    role: "ดูว่าเกมเรียกผ่าน API แท้จริงไหม",
+    name: "สมาชิกที่เล่นหลายหมวดในวันเดียว",
+    role: "สลับสล็อต คาสิโน และกีฬาจากบัญชีเดิม",
     stars: 5,
-    tag: "API แท้",
+    tag: "บัญชีเดียวครบ",
     content:
-      "ผมเคยเจอเว็บที่เกมหน้าตาเหมือนกันแต่ฟีเจอร์ออกยากผิดปกติครับ ที่นี่เกมเรียกจากค่ายตรง ค่าที่ค่ายตั้งไว้เป็นอย่างไรก็เห็นอย่างนั้น รอบโบนัสกับฟรีสปินมาตามจังหวะของเกมเอง ไม่ได้ถูกกั๊กไว้เหมือนที่เก่า",
+      "เมื่อก่อนผมมียูสอยู่สามเว็บครับ เว็บหนึ่งไว้ปั่นสล็อต อีกเว็บไว้ดูบอล แล้วยังต้องจำรหัสอีกชุดตอนอยากลุ้นเลข ย้ายมาที่นี่แล้วเหลือบัญชีเดียว วันไหนอยากเปลี่ยนหมวดก็เลือกจากเมนู ไม่ต้องเริ่มสมัครใหม่ตั้งแต่ต้น",
     avatar: "🎰",
   },
   {
-    name: "สมาชิกที่ไม่ผูกบัญชีธนาคาร",
-    role: "เติมผ่านทรูมันนี่วอเลทอย่างเดียว",
+    name: "สมาชิกที่ทำรายการจากหน้าเมมเบอร์",
+    role: "ตรวจสถานะฝากถอนด้วยตัวเองทุกครั้ง",
     stars: 5,
-    tag: "รองรับวอเลท",
+    tag: "ฝากถอนออโต้",
     content:
-      "ไม่สะดวกผูกบัญชีธนาคารค่ะ เลยเติมจากวอเลททุกครั้ง ระบบรับเต็มระบบเลยไม่ต้องหาคนช่วยโอน ยอดเข้าไวมากไม่ต้องแคปสลิปไปส่งใคร วันไหนอยากทุบกระปุกหมูเล็ก ๆ ก็ใส่ไปหลักสิบก็เล่นได้ ไม่มีขั้นต่ำจริง",
-    avatar: "👛",
+      "ที่ชอบคือไม่ต้องสลับไปหลายหน้าเพื่อทำเรื่องเดียวค่ะ กดเมนูฝากหรือถอนจากหน้าเมมเบอร์ แล้วดูยอดเครดิตกับสถานะรายการได้เองในหน้าเดียวกัน เวลามีรายการค้างก็รู้ทันทีว่าค้างอยู่ขั้นไหน ไม่ต้องนั่งเดา",
+    avatar: "⏱️",
   },
   {
-    name: "สมาชิกที่ถอนยอดใหญ่ประจำ",
-    role: "จับเวลาระบบออโต้ทุกครั้งที่ถอน",
+    name: "สมาชิกที่ลองเกมก่อนใช้เครดิตจริง",
+    role: "เปิดโหมด DEMO ก่อนตัดสินใจเล่นจริง",
     stars: 5,
-    tag: "ออโต้ 3 วินาที",
+    tag: "ทดลองเล่น DEMO",
     content:
-      "ผมนับเวลาตอนกดถอนทุกรอบครับ ส่วนใหญ่จบก่อนที่ผมจะสลับหน้าจอกลับมาด้วยซ้ำ ถอนหลักหมื่นก็ไม่ถูกดองบิลให้รอข้ามวันเหมือนบางที่ ติดตรงไหนทักไลน์ตอนตีสองก็ยังมีคนตอบ",
-    avatar: "⏱️",
+      "ผมไม่ค่อยกดเข้าเกมใหม่ทันทีครับ เกมไหนรองรับโหมดทดลองก็เปิดดูสัญลักษณ์กับจังหวะฟรีสปินก่อน พอรู้ว่าเกมเดินแบบไหนค่อยตัดสินใจว่าจะเล่นจริงไหม บางเกมไม่มีให้ลอง อันนั้นก็ต้องอ่านข้อมูลของค่ายเอา",
+    avatar: "🕹️",
   },
 ];
 
@@ -33,61 +33,61 @@ const totalStars = reviews.reduce((sum, r) => sum + r.stars, 0);
 const average = (totalStars / reviews.length).toFixed(1);
 ---
 
-<section aria-label="เสียงจากสมาชิก PIGAUTO" class="relative z-10 mx-auto mb-12 w-full max-w-[1400px] px-4 font-sans">
+<section aria-label="เสียงจากสมาชิก AMD365" class="relative z-10 mx-auto mb-12 w-full max-w-[1400px] px-4 font-sans">
   <div class="mb-8 flex w-full flex-col items-center justify-center gap-2 text-center">
-    <p class="bg-gradient-to-r from-[#ffe08a] via-[#f5c542] to-[#d99e1f] bg-clip-text text-3xl font-black tracking-widest text-transparent uppercase">
-      เสียงจากสมาชิก <span class="text-[#f5c542]">PIGAUTO</span>
+    <p class="bg-gradient-to-r from-[#ffe9a8] via-[#fec93a] to-[#d4840e] bg-clip-text text-3xl font-black tracking-widest text-transparent uppercase">
+      เสียงจากสมาชิก <span class="text-[#fec93a]">AMD365</span>
     </p>
-    <div class="mt-2 h-[4px] w-24 rounded-full bg-gradient-to-r from-transparent via-[#f5c542] to-transparent"></div>
+    <div class="mt-2 h-[4px] w-24 rounded-full bg-gradient-to-r from-transparent via-[#fec93a] to-transparent"></div>
   </div>
 
-  <div class="mx-auto mb-8 flex max-w-md items-center justify-center gap-5 rounded-2xl border border-[#f5c542]/40 bg-[#2a0505] px-6 py-4 shadow-[0_10px_30px_rgba(245,197,66,0.14)]">
+  <div class="mx-auto mb-8 flex max-w-md items-center justify-center gap-5 rounded-2xl border border-[#fec93a]/40 bg-[#221703] px-6 py-4 shadow-[0_10px_30px_rgba(254,201,58,0.14)]">
     <div class="flex flex-col items-center">
-      <span class="bg-gradient-to-b from-[#ffe08a] to-[#d99e1f] bg-clip-text text-4xl leading-none font-black text-transparent">{average}</span>
-      <span class="mt-1 text-[10px] font-bold tracking-widest text-[#d7b9a4] uppercase">คะแนนเฉลี่ย</span>
+      <span class="bg-gradient-to-b from-[#ffe9a8] to-[#d4840e] bg-clip-text text-4xl leading-none font-black text-transparent">{average}</span>
+      <span class="mt-1 text-[10px] font-bold tracking-widest text-[#cdbb93] uppercase">คะแนนเฉลี่ย</span>
     </div>
-    <div class="h-12 w-px bg-[#b07d12]/55"></div>
+    <div class="h-12 w-px bg-[#a06a09]/55"></div>
     <div class="flex flex-col gap-1.5">
       <div aria-hidden="true" class="flex gap-1 text-lg">
-        {Array.from({ length: 5 }).map((_, i) => <span class={i < Math.round(Number(average)) ? "text-[#f5c542]" : "text-[#5a2a0a]"}>★</span>)}
+        {Array.from({ length: 5 }).map((_, i) => <span class={i < Math.round(Number(average)) ? "text-[#fec93a]" : "text-[#4b2c0c]"}>★</span>)}
       </div>
-      <span class="text-xs font-bold text-[#d7b9a4]">คะแนนเฉลี่ย {average} จาก 5 ดาว จากการใช้งานจริงของสมาชิก {reviews.length} ด้าน</span>
+      <span class="text-xs font-bold text-[#cdbb93]">คะแนนเฉลี่ย {average} จาก 5 ดาว จากการใช้งานจริงของสมาชิก {reviews.length} ด้าน</span>
     </div>
   </div>
 
   <div class="grid grid-cols-1 gap-6 md:grid-cols-3">
     {
       reviews.map((review) => (
-        <article class="group relative isolate flex flex-col gap-4 overflow-hidden rounded-2xl border border-[#f5c542]/40 bg-[#2a0505] p-6 text-left shadow-[0_10px_30px_rgba(245,197,66,0.12)] transition-all duration-300 hover:-translate-y-1 hover:border-[#f5c542]/70 hover:shadow-[0_15px_40px_rgba(245,197,66,0.22)]">
-          <span class="absolute inset-y-0 left-0 -z-10 w-1 bg-gradient-to-b from-[#f5c542] to-[#d92121] opacity-80 transition-opacity duration-300 group-hover:opacity-100" />
-          <span class="pointer-events-none absolute -top-14 -right-14 -z-10 h-32 w-32 rounded-full bg-[#f5c542]/12 blur-[50px] transition-all duration-300 group-hover:bg-[#d92121]/18" />
+        <article class="group relative isolate flex flex-col gap-4 overflow-hidden rounded-2xl border border-[#fec93a]/40 bg-[#221703] p-6 text-left shadow-[0_10px_30px_rgba(254,201,58,0.12)] transition-all duration-300 hover:-translate-y-1 hover:border-[#fec93a]/70 hover:shadow-[0_15px_40px_rgba(254,201,58,0.22)]">
+          <span class="absolute inset-y-0 left-0 -z-10 w-1 bg-gradient-to-b from-[#fec93a] to-[#c9ccd4] opacity-80 transition-opacity duration-300 group-hover:opacity-100" />
+          <span class="pointer-events-none absolute -top-14 -right-14 -z-10 h-32 w-32 rounded-full bg-[#fec93a]/12 blur-[50px] transition-all duration-300 group-hover:bg-[#c9ccd4]/18" />
 
           <div class="flex items-center justify-between gap-3">
-            <span class="inline-flex items-center gap-1.5 rounded-full border border-[#b07d12]/55 bg-[#3a0808] px-3 py-1 text-[10px] font-bold tracking-widest text-[#ffe08a] uppercase">
-              <span aria-hidden="true" class="h-1.5 w-1.5 animate-pulse rounded-full bg-[#d92121]" />
+            <span class="inline-flex items-center gap-1.5 rounded-full border border-[#a06a09]/55 bg-[#33220a] px-3 py-1 text-[10px] font-bold tracking-widest text-[#ffe9a8] uppercase">
+              <span aria-hidden="true" class="h-1.5 w-1.5 animate-pulse rounded-full bg-[#c9ccd4]" />
               {review.tag}
             </span>
             <span class="flex gap-0.5 text-sm">
               <span aria-hidden="true" class="flex gap-0.5">
                 {Array.from({ length: 5 }).map((_, i) => (
-                  <span class={i < review.stars ? "text-[#f5c542]" : "text-[#5a2a0a]"}>★</span>
+                  <span class={i < review.stars ? "text-[#fec93a]" : "text-[#4b2c0c]"}>★</span>
                 ))}
               </span>
               <span class="sr-only">ให้คะแนน {review.stars} จาก 5 ดาว</span>
             </span>
           </div>
 
-          <p class="text-left text-base leading-relaxed text-[#f7e4d4]">{review.content}</p>
+          <p class="text-left text-base leading-relaxed text-[#f4e8d2]">{review.content}</p>
 
-          <div class="mt-auto flex items-center gap-3 border-t border-[#b07d12]/45 pt-4">
+          <div class="mt-auto flex items-center gap-3 border-t border-[#a06a09]/45 pt-4">
             <span
               aria-hidden="true"
-              class="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl border border-[#ffe08a]/55 bg-gradient-to-br from-[#ffe08a] via-[#f5c542] to-[#b07d12] text-xl shadow-inner transition-transform duration-300 group-hover:scale-110">
+              class="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl border border-[#ffe9a8]/55 bg-gradient-to-br from-[#ffe9a8] via-[#fec93a] to-[#a06a09] text-xl shadow-inner transition-transform duration-300 group-hover:scale-110">
               {review.avatar}
             </span>
             <span class="flex flex-col">
-              <span class="text-sm font-black text-[#ffe08a] transition-colors group-hover:text-[#f5c542]">{review.name}</span>
-              <span class="text-[10px] font-bold tracking-wider text-[#d7b9a4] uppercase">{review.role}</span>
+              <span class="text-sm font-black text-[#ffe9a8] transition-colors group-hover:text-[#fec93a]">{review.name}</span>
+              <span class="text-[10px] font-bold tracking-wider text-[#cdbb93] uppercase">{review.role}</span>
             </span>
           </div>
         </article>

@@ -2,7 +2,7 @@
 import MainLayout from "../layouts/MainLayout.astro";
 import ContentBox from "../components/ContentBox.astro";
 import Navfoot from "../components/Navfoot.astro";
-import Announcement from "../components/Announcement6.astro";
+import Announcement from "../components/Announcement2.astro";
 
 import { Picture } from "astro:assets";
 import { itemList, pageGraph, schemaCtx } from "../lib/schema";
@@ -36,12 +36,12 @@ const demoGames = [
 
 const gameList = demoGames.map((game) => ({ name: game.name, imagePath: game.src.src }));
 
-const pageTitle = "ทดลองเล่นสล็อต PIGAUTO ลองหลายค่ายให้พอใจ ก่อนลงเครดิตจริง";
+const pageTitle = "ทดลองเล่นเกม AMD365 เปิดโหมด DEMO ลองหลายค่ายก่อนใช้เครดิตจริง";
 
-const pageHeading = "ทดลองเล่นสล็อตกับ PIGAUTO เลือกค่ายที่ชอบ แล้วลองให้พอใจก่อนลงเครดิตจริง";
+const pageHeading = "ทดลองเล่นเกมกับ AMD365 เลือกค่ายที่ชอบ แล้วลองให้พอใจก่อนใช้เครดิตจริง";
 
 const pageDescription =
-  "ทดลองเล่นสล็อตฟรีกับ PIGAUTO เลือกค่ายที่สนใจ สมัครยูสเดียวใช้เวลาไม่กี่นาที แล้วเข้าโหมดทดลองของค่ายนั้น ดูฟีเจอร์และเดิมพันต่อรอบให้พอใจก่อนลงเครดิตจริง";
+  "ทดลองเล่นเกมกับ AMD365 เลือกค่ายที่สนใจ สมัครยูสเดียวไม่กี่นาที แล้วเปิดโหมด DEMO ดูสัญลักษณ์ ฟรีสปิน โบนัส และจังหวะเกมให้พอใจก่อนใช้เครดิตจริงจากบัญชีเดียว";
 
 const ctx = schemaCtx(Astro);
 const graph = pageGraph(Astro, {
@@ -54,8 +54,8 @@ const graph = pageGraph(Astro, {
   ],
   extra: [
     itemList(ctx, {
-      name: "ทดลองเล่นเกมของ PIGAUTO",
-      alternateName: "PIGAUTO โหมดทดลองเล่นสล็อตลิขสิทธิ์แท้หลายค่ายบนมือถือก่อนลงเครดิตจริง",
+      name: "ทดลองเล่นเกมของ AMD365",
+      alternateName: "AMD365 โหมดทดลองเล่นเกมสล็อตหลายค่ายบนมือถือ ก่อนใช้เครดิตจริงในบัญชีสมาชิกเดียว",
       itemType: "Game",
       items: gameList,
     }),
@@ -69,27 +69,27 @@ const graph = pageGraph(Astro, {
   <Announcement />
 
   <ContentBox as="h1" title={pageHeading}>
-    <p class="mb-4 text-left text-base leading-relaxed text-[#f7e4d4]">
-      หากคุณกำลังมองหาเว็บที่ได้ลองก่อนตัดสินใจ <strong class="text-[#ffe08a]">PIGAUTO</strong> พร้อมมอบโหมดทดลองจากค่ายดังที่ต่อตรงผ่าน API แท้ ทั้ง PG Soft, JILI, JOKER, SlotXO และ Skywind
+    <p class="mb-4 text-left text-base leading-relaxed text-[#f4e8d2]">
+      หากคุณกำลังมองหาเว็บที่ได้ลองก่อนตัดสินใจ <strong class="text-[#ffe9a8]">AMD365</strong> พร้อมมอบโหมดทดลองจากค่ายที่เปิดอยู่ในระบบ ทั้ง PG Soft, JILI, JOKER, SlotXO และ Skywind
     </p>
 
-    <p class="mb-4 text-left text-base leading-relaxed text-[#f7e4d4]">
-      เลือกค่ายที่สนใจจากด้านล่าง สมัครยูสเดียวใช้เวลาไม่กี่นาที แล้วเข้าไปลองโหมดทดลองของค่ายนั้นต่อได้จากหน้าเมมเบอร์
+    <p class="mb-4 text-left text-base leading-relaxed text-[#f4e8d2]">
+      เลือกค่ายที่สนใจจากด้านล่าง สมัครยูสเดียวใช้เวลาไม่กี่นาที แล้วเข้าไปเปิดโหมด DEMO ของค่ายนั้นต่อได้จากหน้าเมมเบอร์
     </p>
 
-    <p class="text-left text-base leading-relaxed text-[#f7e4d4]">เปิดจากมือถือ แท็บเล็ต หรือคอมก็ได้เหมือนกัน ใช้ยูสเดิมตัวเดียวทุกเครื่อง</p>
+    <p class="text-left text-base leading-relaxed text-[#f4e8d2]">เปิดจากมือถือ แท็บเล็ต หรือคอมก็ได้เหมือนกัน ใช้ยูสเดิมตัวเดียวทุกเครื่อง</p>
   </ContentBox>
 
-  <ContentBox as="h2" title="ค่ายไหนสะดุดตา เลือกได้เลย PIGAUTO เปิดให้ลองครบทุกค่าย">
-    <p class="mb-4 text-left text-base leading-relaxed text-[#f7e4d4]">
-      ค่ายไหนก็ได้ที่ถูกตา เริ่มจากตรงนั้นเลย เพราะแต่ละค่ายมีจังหวะและฟีเจอร์เป็นของตัวเอง ทั้งสล็อตหมุนคลาสสิก เกมฟรีสปิน เกมโบนัส และยิงปลา
+  <ContentBox as="h2" title="ค่ายไหนสะดุดตาเลือกได้เลย AMD365 เปิดให้ลองหลายค่ายด้วยยูสเดียว">
+    <p class="mb-4 text-left text-base leading-relaxed text-[#f4e8d2]">
+      ค่ายไหนก็ได้ที่ถูกตา เริ่มจากตรงนั้นเลย เพราะแต่ละค่ายมีจังหวะและฟีเจอร์เป็นของตัวเอง ทั้งสล็อตหมุนคลาสสิก เกมฟรีสปิน เกมโบนัสหลายชั้น และเกมยิงปลา
     </p>
 
-    <p class="mb-4 text-left text-base leading-relaxed text-[#f7e4d4]">
-      กดที่ภาพค่ายที่สนใจเพื่อไปยังขั้นตอนสมัคร เปิดยูสเสร็จก็เข้าใช้งานค่ายนั้นได้ทันที ทุกเกมเชื่อมตรงจากค่ายผู้พัฒนา จึงออกโบนัสตามค่ามาตรฐานของค่ายจริง
+    <p class="mb-4 text-left text-base leading-relaxed text-[#f4e8d2]">
+      กดที่ภาพค่ายที่สนใจเพื่อไปยังขั้นตอนสมัคร เปิดยูสเสร็จก็เข้าใช้งานค่ายนั้นได้ทันที แล้วสลับไปคาสิโนสด กีฬา หรือหวยออนไลน์ต่อจากบัญชีเดิมได้ในหน้าเมมเบอร์เดียวกัน
     </p>
 
-    <p class="mb-8 text-left text-base leading-relaxed text-[#f7e4d4]">ยูสเดียวสลับได้ทุกค่าย ไม่ต้องเปิดบัญชีใหม่ทีละค่าย</p>
+    <p class="mb-8 text-left text-base leading-relaxed text-[#f4e8d2]">ยูสเดียวสลับได้ทุกค่าย ไม่ต้องเปิดบัญชีใหม่ทีละค่าย</p>
     <div class="mb-5 grid grid-cols-2 gap-5 sm:grid-cols-2 md:grid-cols-4">
       {
         demoGames.map((game) => (
@@ -101,7 +101,7 @@ const graph = pageGraph(Astro, {
               fetchpriority="low"
               widths={[200, 400, 600]}
               sizes="(max-width: 768px) 50vw, 25vw"
-              class="block h-auto w-full object-cover shadow-[0_10px_30px_rgba(245,197,66,0.16)] transition-transform duration-300 group-hover/game:scale-105"
+              class="block h-auto w-full object-cover shadow-[0_10px_30px_rgba(254,201,58,0.16)] transition-transform duration-300 group-hover/game:scale-105"
               decoding="async"
               formats={["avif", "webp"]}
               fallbackFormat="webp"
@@ -111,9 +111,9 @@ const graph = pageGraph(Astro, {
               href="/register"
               target="_blank"
               rel="noopener noreferrer"
-              aria-label={`สมัครสมาชิกเพื่อลองเล่น ${game.name} ที่ PIGAUTO`}
-              class="absolute inset-0 flex items-center justify-center bg-[#1f0303]/85 opacity-0 transition-opacity duration-300 group-hover/game:opacity-100 focus-visible:opacity-100">
-              <span class="rounded-full border border-[#b07d12]/60 bg-gradient-to-r from-[#ffe08a] via-[#f5c542] to-[#d99e1f] px-6 py-2 font-bold text-[#1f0303] shadow-[0_10px_30px_rgba(245,197,66,0.32)] transition-transform hover:scale-110">สมัครเพื่อลอง</span>
+              aria-label={`สมัครสมาชิกเพื่อลองเล่น ${game.name} ที่ AMD365`}
+              class="absolute inset-0 flex items-center justify-center bg-[#160e03]/85 opacity-0 transition-opacity duration-300 group-hover/game:opacity-100 focus-visible:opacity-100">
+              <span class="rounded-full border border-[#a06a09]/60 bg-gradient-to-r from-[#ffe9a8] via-[#fec93a] to-[#d4840e] px-6 py-2 font-bold text-[#160e03] shadow-[0_10px_30px_rgba(254,201,58,0.32)] transition-transform hover:scale-110">สมัครเพื่อลอง</span>
             </a>
           </div>
         ))
@@ -122,33 +122,33 @@ const graph = pageGraph(Astro, {
   </ContentBox>
 
   <ContentBox as="h2" title="ทดลองเล่นฟรีไม่จำกัดรอบ ลองให้พอใจก่อนใช้เครดิตจริง">
-    <p class="mb-4 text-left text-base leading-relaxed text-[#f7e4d4]">
+    <p class="mb-4 text-left text-base leading-relaxed text-[#f4e8d2]">
       เข้าโหมดทดลองแล้วหมุนได้ไม่จำกัดรอบ เพราะเป็นเครดิตสมมติล้วนๆ อยากลองผิดลองถูกกี่ครั้งก็ตามสบาย ไม่มีอะไรต้องเสี่ยงเลยสักบาท
     </p>
 
-    <p class="mb-4 text-left text-base leading-relaxed text-[#f7e4d4]">
-      ระหว่างลองก็ดูไปด้วยว่าเดิมพันต่อรอบเริ่มที่เท่าไร ฟีเจอร์เข้าง่ายแค่ไหน หนึ่งรอบกินเวลานานไหม แล้วเก็บไว้เป็นข้อมูลตอนเลือกเกมที่จะเล่นจริง
+    <p class="mb-4 text-left text-base leading-relaxed text-[#f4e8d2]">
+      ระหว่างลองก็ดูไปด้วยว่าเกมวางสัญลักษณ์ไว้แบบไหน ฟรีสปินกับโบนัสเข้ามาบ่อยแค่ไหน และจังหวะหนึ่งรอบยาวพอกับที่คุณชอบไหม แล้วเก็บไว้เป็นข้อมูลตอนเลือกเกมที่จะเล่นจริง
     </p>
 
-    <p class="mb-4 text-left text-base leading-relaxed text-[#f7e4d4]">เครดิตในโหมดทดลองถอนไม่ได้ และไม่นับเป็นยอดเทิร์นของโปรใดๆ</p>
+    <p class="mb-4 text-left text-base leading-relaxed text-[#f4e8d2]">เครดิตในโหมดทดลองถอนไม่ได้ และไม่นับเป็นยอดเทิร์นของโปรใดๆ</p>
 
-    <p class="text-left text-base leading-relaxed text-[#f7e4d4]">
-      อีกอย่างคือไม่ใช่ทุกเกมที่มีปุ่มทดลอง ถ้าเกมที่อยากลองยังไม่เปิดโหมดนี้ ทักทีมงานที่ดูแลอยู่ตลอด 24 ชั่วโมงให้ช่วยแนะนำเกมใกล้เคียงได้
+    <p class="text-left text-base leading-relaxed text-[#f4e8d2]">
+      อีกอย่างคือไม่ใช่ทุกเกมที่มีปุ่มทดลอง เพราะโหมด DEMO ขึ้นอยู่กับผู้ให้บริการแต่ละราย ถ้าเกมที่อยากลองยังไม่เปิดไว้ ทักทีมงานที่ดูแลอยู่ตลอด 24 ชั่วโมงให้ช่วยแนะนำเกมใกล้เคียงได้
     </p>
   </ContentBox>
 
-  <ContentBox as="h2" title="พร้อมเมื่อไหร่ สมัคร PIGAUTO ยูสเดียว เริ่มเล่นจริงได้ทันที">
-    <p class="mb-4 text-left text-base leading-relaxed text-[#f7e4d4]">
-      สมัครจบในไม่กี่นาที ไม่ต้องรอคุยกับแอดมิน แล้วได้ยูสเดียวที่ใช้ได้กับทุกค่ายในเว็บ
+  <ContentBox as="h2" title="พร้อมเมื่อไหร่ สมัคร AMD365 ยูสเดียว เล่นได้ทั้งสล็อต คาสิโน กีฬา และหวย">
+    <p class="mb-4 text-left text-base leading-relaxed text-[#f4e8d2]">
+      สมัครจบในไม่กี่นาที แล้วได้ยูสเดียวที่ใช้ได้กับทุกหมวดในเว็บ ทั้งสล็อต คาสิโนสด กีฬา eSports และหวยออนไลน์
     </p>
 
-    <p class="mb-4 text-left text-base leading-relaxed text-[#f7e4d4]">
-      ฝากถอนเป็นระบบออโต้ ยอดเข้าภายใน 3 วินาที ไม่ต้องส่งสลิป รองรับทั้งบัญชีธนาคารและทรูมันนี่วอเลท เริ่มได้ตั้งแต่ 1 บาท ไม่มีขั้นต่ำ
+    <p class="mb-4 text-left text-base leading-relaxed text-[#f4e8d2]">
+      ฝากถอนเป็นระบบออโต้ที่เชื่อมอยู่กับหน้าเมมเบอร์ เลือกเมนูฝากหรือถอน ตรวจยอดเครดิต และดูสถานะรายการของตัวเองได้จบจากหน้าเดียว
     </p>
 
-    <p class="mb-4 text-left text-base leading-relaxed text-[#f7e4d4]">อีกอย่างที่ควรติดตัวไว้เสมอ อย่าบอกรหัสผ่านหรือรหัส OTP ให้ใครทั้งนั้น</p>
+    <p class="mb-4 text-left text-base leading-relaxed text-[#f4e8d2]">อีกอย่างที่ควรติดตัวไว้เสมอ อย่าบอกรหัสผ่านหรือรหัส OTP ให้ใครทั้งนั้น</p>
 
-    <p class="text-left text-base leading-relaxed text-[#f7e4d4]">
+    <p class="text-left text-base leading-relaxed text-[#f4e8d2]">
       เลือกค่ายที่ถูกใจแล้วเริ่มได้เลย เกมที่คุณคุ้นมือวันนี้ คือเกมที่พร้อมลงเครดิตจริงในรอบถัดไป เพื่อประสบการณ์การเล่นที่คุ้มค่าและต่อเนื่องกว่าที่เคย
     </p>
   </ContentBox>

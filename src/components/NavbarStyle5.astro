@@ -22,36 +22,36 @@ const links = [
 ---
 
 <header class="sticky top-0 z-50 w-full font-sans shadow-[0_4px_20px_rgba(0,0,0,0.8)]">
-  <div class="hidden items-center justify-between border-b border-[#6b4310]/60 bg-[#160f07] px-6 py-1.5 text-xs font-medium tracking-wide lg:flex xl:px-10">
-    <div class="flex items-center gap-2 text-[#d8cdb6]">
-      <span aria-hidden="true" class="text-sm text-[#e0aa2e]">✦</span>
-      ยินดีต้อนรับสู่ NORWAY89 เว็บตรงรวมบาคาร่า สล็อต บอล หวย ฝากถอนออโต้ครบในบัญชีเดียว
+  <div class="hidden items-center justify-between border-b border-[#4b2c0c]/60 bg-[#160e03] px-6 py-1.5 text-xs font-medium tracking-wide lg:flex xl:px-10">
+    <div class="flex items-center gap-2 text-[#cdbb93]">
+      <span aria-hidden="true" class="text-sm text-[#fec93a]">✦</span>
+      AMD365 รวมสล็อต คาสิโนสด กีฬา และหวยออนไลน์ไว้ในบัญชีเดียว ฝากถอนออโต้โอนไวจากหน้าเมมเบอร์
     </div>
     <div class="flex items-center gap-5">
-      <a href="/login" class="flex items-center gap-1 text-[#d8cdb6] transition-colors hover:text-[#f5d488]"><span aria-hidden="true">🔑</span> เข้าสู่ระบบ</a>
-      <a href="/register" class="flex items-center gap-1 font-bold text-[#f5d488] drop-shadow-[0_0_5px_rgba(224,170,46,0.6)] transition-colors hover:text-[#ffeec2]">
+      <a href="/login" class="flex items-center gap-1 text-[#cdbb93] transition-colors hover:text-[#ffe9a8]"><span aria-hidden="true">🔑</span> เข้าสู่ระบบ</a>
+      <a href="/register" class="flex items-center gap-1 font-bold text-[#ffe9a8] drop-shadow-[0_0_5px_rgba(254,201,58,0.6)] transition-colors hover:text-[#fff8e6]">
         <span aria-hidden="true">📝</span> สมัครสมาชิก ระบบฝากถอนออโต้
       </a>
     </div>
   </div>
 
-  <nav class="relative z-[70] flex h-[70px] w-full items-center justify-between border-b border-[#6b4310]/50 bg-[#0a0704]/95 px-4 shadow-xl backdrop-blur-md xl:px-10">
+  <nav class="relative z-[70] flex h-[70px] w-full items-center justify-between border-b border-[#4b2c0c]/50 bg-[#120c02]/95 px-4 shadow-xl backdrop-blur-md xl:px-10">
     <a href="/" class="z-50 flex-shrink-0 transition-transform hover:scale-105">
       {
         mainLogo ? (
           <Picture
             src={mainLogo}
-            alt="โลโก้ NORWAY89 ตราวงกลมสีทองสลักภาพเมืองและสะพาน มีวงเวียนเขียนแบบอยู่ด้านบนและล่าง ตรงกลางเป็นตัวอักษร NORWAY เหนือเลข 89"
+            alt="โลโก้ AMD365 ตัวอักษร Amd365 แบบเอียงมีตัว A และเลข 365 เป็นสีทองเงาวาว ตัว md เป็นสีเงินโครม มีเส้นโค้งทองลากใต้ตัวอักษร และลูกเต๋าสีทองวางอยู่มุมขวาบน"
             loading="eager"
             fetchpriority="high"
             widths={[80, 160, 240]}
             sizes="80px"
-            class="h-[35px] w-auto drop-shadow-[0_0_10px_rgba(224,170,46,0.45)] xl:h-[40px]"
+            class="h-[35px] w-auto drop-shadow-[0_0_10px_rgba(254,201,58,0.45)] xl:h-[40px]"
             formats={["avif", "webp"]}
             fallbackFormat="webp"
           />
         ) : (
-          <span class="bg-gradient-to-b from-[#f5d488] via-[#e0aa2e] to-[#6b4310] bg-clip-text text-3xl font-black tracking-widest text-transparent drop-shadow-[0_0_8px_rgba(224,170,46,0.5)]">NORWAY89</span>
+          <span class="bg-gradient-to-b from-[#ffe9a8] via-[#fec93a] to-[#4b2c0c] bg-clip-text text-3xl font-black tracking-widest text-transparent drop-shadow-[0_0_8px_rgba(254,201,58,0.5)]">AMD365</span>
         )
       }
     </a>
@@ -61,13 +61,13 @@ const links = [
         links.map((item) => (
           <a
             href={item.path}
-            class={`group relative flex h-full items-center gap-1.5 text-[13px] font-bold transition-colors xl:text-[15px] ${isActive(item.path) ? "text-[#f5d488] drop-shadow-[0_0_8px_rgba(224,170,46,0.5)]" : "text-[#d8cdb6] hover:text-[#f5d488]"}`}>
+            class={`group relative flex h-full items-center gap-1.5 text-[13px] font-bold transition-colors xl:text-[15px] ${isActive(item.path) ? "text-[#ffe9a8] drop-shadow-[0_0_8px_rgba(254,201,58,0.5)]" : "text-[#cdbb93] hover:text-[#ffe9a8]"}`}>
             <span aria-hidden="true" class="text-sm">
               {item.icon}
             </span>
             <span>{item.name}</span>
             <div
-              class={`absolute bottom-[-1px] left-0 h-[3px] w-full origin-left bg-gradient-to-r from-[#b87814] to-[#f5d488] transition-transform duration-300 ${isActive(item.path) ? "scale-x-100" : "scale-x-0 group-hover:scale-x-100"}`}
+              class={`absolute bottom-[-1px] left-0 h-[3px] w-full origin-left bg-gradient-to-r from-[#c9ccd4] via-[#fec93a] to-[#ffe9a8] transition-transform duration-300 ${isActive(item.path) ? "scale-x-100" : "scale-x-0 group-hover:scale-x-100"}`}
             />
           </a>
         ))
@@ -77,24 +77,24 @@ const links = [
     <div class="z-50 flex items-center gap-4">
       <a
         href="/register"
-        class="hidden items-center justify-center rounded-full bg-gradient-to-r from-[#b87814] via-[#e0aa2e] to-[#6b4310] px-6 py-2 text-sm font-extrabold text-[#120b04] shadow-[0_0_15px_rgba(224,170,46,0.45)] transition-all hover:scale-105 lg:flex">
+        class="hidden items-center justify-center rounded-full bg-gradient-to-r from-[#a06a09] via-[#fec93a] to-[#4b2c0c] px-6 py-2 text-sm font-extrabold text-[#0e0902] shadow-[0_0_15px_rgba(254,201,58,0.45)] transition-all hover:scale-105 lg:flex">
         สมัครสมาชิก
       </a>
 
       <button id="hamburger-btn" class="relative flex h-[40px] w-[40px] flex-col items-end justify-center gap-[6px] p-2 lg:hidden" aria-label="เปิดเมนู">
-        <span class="line-1 h-[2px] w-6 origin-center rounded-full bg-[#e0aa2e] shadow-sm transition-all duration-300"></span>
-        <span class="line-2 h-[2px] w-4 origin-center rounded-full bg-[#e0aa2e] shadow-sm transition-all duration-300"></span>
+        <span class="line-1 h-[2px] w-6 origin-center rounded-full bg-[#fec93a] shadow-sm transition-all duration-300"></span>
+        <span class="line-2 h-[2px] w-4 origin-center rounded-full bg-[#fec93a] shadow-sm transition-all duration-300"></span>
       </button>
     </div>
   </nav>
 
-  <div id="fullscreen-menu" class="pointer-events-none fixed inset-0 z-[60] flex flex-col items-center justify-center bg-[#0a0704]/98 opacity-0 backdrop-blur-2xl transition-opacity duration-500">
+  <div id="fullscreen-menu" class="pointer-events-none fixed inset-0 z-[60] flex flex-col items-center justify-center bg-[#120c02]/98 opacity-0 backdrop-blur-2xl transition-opacity duration-500">
     <div class="flex w-full flex-col items-center space-y-5 px-6">
       {
         links.map((item) => (
           <a
             href={item.path}
-            class={`fs-item flex items-center gap-3 text-2xl font-black tracking-widest transition-all duration-300 ${isActive(item.path) ? "text-[#f5d488] drop-shadow-[0_0_10px_rgba(224,170,46,0.6)]" : "text-[#d8cdb6] hover:text-[#f5d488]"}`}>
+            class={`fs-item flex items-center gap-3 text-2xl font-black tracking-widest transition-all duration-300 ${isActive(item.path) ? "text-[#ffe9a8] drop-shadow-[0_0_10px_rgba(254,201,58,0.6)]" : "text-[#cdbb93] hover:text-[#ffe9a8]"}`}>
             <span aria-hidden="true" class="text-xl">
               {item.icon}
             </span>
@@ -106,12 +106,12 @@ const links = [
       <div class="fs-item mt-4 flex w-full max-w-[250px] flex-col gap-4 pt-8">
         <a
           href="/register"
-          class="flex w-full items-center justify-center rounded-full bg-gradient-to-r from-[#b87814] to-[#f5d488] py-3.5 text-lg font-extrabold text-[#120b04] shadow-[0_0_20px_rgba(224,170,46,0.45)]">
+          class="flex w-full items-center justify-center rounded-full bg-gradient-to-r from-[#c9ccd4] via-[#fec93a] to-[#ffe9a8] py-3.5 text-lg font-extrabold text-[#0e0902] shadow-[0_0_20px_rgba(254,201,58,0.45)]">
           สมัครสมาชิก
         </a>
         <a
           href="/login"
-          class="flex w-full items-center justify-center rounded-full border-2 border-[#e0aa2e]/50 py-3.5 text-lg font-bold text-[#f5d488] transition-colors hover:bg-[#e0aa2e]/10">
+          class="flex w-full items-center justify-center rounded-full border-2 border-[#fec93a]/50 py-3.5 text-lg font-bold text-[#ffe9a8] transition-colors hover:bg-[#fec93a]/10">
           เข้าสู่ระบบ
         </a>
       </div>

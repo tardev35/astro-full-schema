@@ -8,15 +8,15 @@ import slide3 from "../assets/slide3.png";
 const images = [
   {
     src: slide1,
-    alt: "ภาพโปรโมชั่น PIGAUTO ข้อความ รองรับวอเล็ท เต็มระบบ และ pig auto wallet ใช้ง่าย พรีเซนเตอร์หญิงในชุดกี่เพ้าสีแดงปักลายทอง ล้อมด้วยโคมไฟจีน พัดกระดาษสีทอง ไพ่ และเหรียญทอง มีโลโก้หมู PIGAUTO อยู่ด้านบน",
+    alt: "ภาพโปรโมชั่น AMD365 ข้อความ คืนยอดเสียคาสิโน ROLLING สูงสุดอัตโนมัติ 0.7% พร้อมอัตรา SLOT 0.5% CASINO 0.7% และ SPORT 0.5% มีพรีเซนเตอร์หญิงในชุดราตรีสีทอง วงล้อรูเล็ตและกองชิปทอง โลโก้ AMD365 อยู่มุมบนซ้าย",
   },
   {
     src: slide2,
-    alt: "ภาพโปรโมชั่น PIGAUTO ข้อความ เว็บสล็อตออโต้ไม่มีขั้นต่ำ และ เล่นได้อย่างเป็นมิตร ปลอดภัยสูง พรีเซนเตอร์หญิงในชุดกี่เพ้าสีแดงยืนด้านขวา มีพัดทอง ชิปคาสิโน และเหรียญทองบนฉากหลังแดงทอง",
+    alt: "ภาพโปรโมชั่น AMD365 โลโก้ AMD365 ขนาดใหญ่ พร้อมข้อความ เว็บสล็อตครบทุกค่าย รวมคาสิโน กีฬา หวย ระบบออโต้โอนไว และไอคอนสี่หมวด SLOT CASINO SPORTS LOTTERY โดยมีพรีเซนเตอร์หญิงยื่นมือออกมาด้านข้าง",
   },
   {
     src: slide3,
-    alt: "ภาพโปรโมชั่น PIGAUTO ข้อความ PIGAUTO และ สมัครง่ายเหมือนเปิดมือถือ พรีเซนเตอร์หญิงในชุดกี่เพ้าสีแดงยืนด้านซ้าย มีโคมไฟจีน เหรียญทอง และวงกลมลายจีนสีทองเป็นฉากหลัง",
+    alt: "ภาพโปรโมชั่น AMD365 ข้อความ คืนยอดเสียสล็อต CASHBACK คืนยอดเสีย SLOT สูงสุด 11% คืนไม่จำกัดตาม LEVEL มีไฉ่ซิงเอี๊ยะ ตู้สล็อตเลข 777 และกองเหรียญทองบนฉากหลังสีดำทอง",
   },
 ];
 
@@ -28,7 +28,7 @@ const slides = Array.from({ length: COPIES }, () => images).flat();
   <input id="carousel-pause" type="checkbox" class="peer sr-only" />
   <label
     for="carousel-pause"
-    class="sr-only cursor-pointer peer-focus-visible:not-sr-only peer-focus-visible:mb-3 peer-focus-visible:inline-block peer-focus-visible:rounded-full peer-focus-visible:border peer-focus-visible:border-[#f5c542]/70 peer-focus-visible:bg-[#2a0505] peer-focus-visible:px-4 peer-focus-visible:py-2 peer-focus-visible:text-sm peer-focus-visible:font-bold peer-focus-visible:text-[#ffe08a]">
+    class="sr-only cursor-pointer peer-focus-visible:not-sr-only peer-focus-visible:mb-3 peer-focus-visible:inline-block peer-focus-visible:rounded-full peer-focus-visible:border peer-focus-visible:border-[#fec93a]/70 peer-focus-visible:bg-[#221703] peer-focus-visible:px-4 peer-focus-visible:py-2 peer-focus-visible:text-sm peer-focus-visible:font-bold peer-focus-visible:text-[#ffe9a8]">
     หยุด / เล่นสไลด์ภาพ
   </label>
 
@@ -41,7 +41,7 @@ const slides = Array.from({ length: COPIES }, () => images).flat();
             <Picture
               src={slide.src}
               alt={isDuplicate ? "" : slide.alt}
-              class="block w-full rounded-xl border border-[#f5c542]/45 object-cover shadow-[0_10px_30px_rgba(245,197,66,0.18)]"
+              class="block w-full rounded-xl border border-[#fec93a]/45 object-cover shadow-[0_10px_30px_rgba(254,201,58,0.18)]"
               width={slide.src.width}
               height={slide.src.height}
               loading="lazy"

@@ -75,7 +75,7 @@ export default defineConfig({
     "/line": "https://tinyurl.com/suhng",
   },
 
-  site: "https://pigauto-main.net",
+  site: "https://amd365-brand.com",
   integrations: [
     sitemap({
       // /login, /register and /line are forwarding pages that all ship

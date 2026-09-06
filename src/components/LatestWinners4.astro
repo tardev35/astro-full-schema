@@ -24,11 +24,11 @@ const initialRows = Array.from({ length: 8 }, (_, i) => ({
 
 <div class="mx-auto w-full max-w-[1000px] p-4 font-sans">
   <section
-    aria-label="รายการถอนเงินล่าสุดของสมาชิก WON22"
-    class="relative overflow-hidden rounded-[30px] border-2 border-[#f97316]/45 bg-[#241004]/90 px-4 py-8 shadow-[0_15px_40px_rgba(249,115,22,0.24)] backdrop-blur-md">
+    aria-label="รายการถอนเงินล่าสุดของสมาชิก AMD365"
+    class="relative overflow-hidden rounded-[30px] border-2 border-[#d4840e]/45 bg-[#221703]/90 px-4 py-8 shadow-[0_15px_40px_rgba(212,132,14,0.24)] backdrop-blur-md">
     <div class="mb-6 text-center">
-      <p class="bg-gradient-to-b from-[#fde68a] to-[#b45309] bg-clip-text text-xl font-black text-transparent md:text-2xl">
-        <span aria-hidden="true">🎫</span> WON22 ถอนง่าย ยอดเข้าบัญชีสมาชิกตามรายการที่ส่งไว้
+      <p class="bg-gradient-to-b from-[#ffe9a8] to-[#a06a09] bg-clip-text text-xl font-black text-transparent md:text-2xl">
+        <span aria-hidden="true">🎫</span> AMD365 ถอนออโต้จากหน้าเมมเบอร์ ยอดเข้าตามรายการที่ส่งไว้
       </p>
     </div>
 
@@ -36,14 +36,14 @@ const initialRows = Array.from({ length: 8 }, (_, i) => ({
       {
         initialRows.map((row) => (
           <div data-winner-row class="winner-pill transition-all duration-500 ease-out">
-            <div class="flex items-center gap-3 rounded-full border border-[#fbbf24]/35 bg-[#331608] py-1.5 pr-4 pl-1.5 shadow-[0_0_10px_rgba(251,191,36,0.20)] hover:border-[#fde68a]/60">
+            <div class="flex items-center gap-3 rounded-full border border-[#fec93a]/35 bg-[#33220a] py-1.5 pr-4 pl-1.5 shadow-[0_0_10px_rgba(254,201,58,0.20)] hover:border-[#ffe9a8]/60">
               <div data-winner-bank class={`flex h-8 w-8 shrink-0 items-center justify-center rounded-full ${row.bank.color}`}>
                 <img data-winner-icon src={row.bank.icon} alt="" width="16" height="16" loading="lazy" decoding="async" class="h-4 w-4 object-contain" />
               </div>
-              <div data-winner-user class="text-sm font-bold text-[#f8e3d2]">
+              <div data-winner-user class="text-sm font-bold text-[#f4e8d2]">
                 {row.user}
               </div>
-              <div class="text-sm font-black text-[#fbbf24] drop-shadow-sm">
+              <div class="text-sm font-black text-[#fec93a] drop-shadow-sm">
                 +<span data-winner-amount>{row.amount}</span> ฿
               </div>
             </div>

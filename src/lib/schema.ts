@@ -33,6 +33,7 @@
 // valid — @id is an opaque identifier and @graph is unordered.
 
 import { BRAND_NAME, brandPick, orderForBrand } from "./brandProfile";
+import { SITE_AUTHOR, authorSameAs, hasAuthor } from "./author";
 
 export interface SchemaCtx {
   /** The site's origin, from astro.config.mjs. */
@@ -43,7 +44,7 @@ export interface SchemaCtx {
   frag: Record<FragKind, string>;
 }
 
-export type FragKind = "site" | "org" | "page" | "crumb";
+export type FragKind = "site" | "org" | "page" | "crumb" | "author";
 
 /** Equally valid spellings for each anchor — @id is an opaque identifier, so
  *  nothing downstream can tell these apart. */
@@ -51,6 +52,7 @@ const FRAG_CHOICES: Record<FragKind, readonly string[]> = {
   site: ["website", "site", "w"],
   org: ["organization", "org", "publisher"],
   page: ["webpage", "page", "primary"],
+  author: ["author", "person", "writer"],
   crumb: ["breadcrumb", "crumbs", "trail"],
 };
 
@@ -143,7 +145,30 @@ export function organization(ctx: SchemaCtx, opts: OrgOptions = {}): Node {
     }));
   }
   // No `sameAs`. Declaring shared social profiles across unrelated brands is
-  // exactly the cross-portfolio link brandProfile.ts exists to prevent.
+  // exactly the cross-portfolio link brandProfile.ts exists to prevent. The
+  // Person below is the one sanctioned exception: the operator opts in per
+  // brand by filling src/lib/author.ts, and setting linkProfile there to false
+  // keeps the byline while leaving the profile URL out of the markup.
+  return node;
+}
+
+export interface PersonOptions {
+  /** Path to a self-hosted avatar. Never a gravatar.com URL — the avatar hash
+   *  is derived from the author's email, so the same string would appear on
+   *  every brand and make the portfolio trivially enumerable. */
+  imagePath?: string;
+}
+
+export function person(ctx: SchemaCtx, opts: PersonOptions = {}): Node {
+  const node: Node = {
+    "@type": "Person",
+    "@id": nodeId(ctx, "/", "author"),
+    name: SITE_AUTHOR.name,
+  };
+  if (SITE_AUTHOR.jobTitle) node.jobTitle = SITE_AUTHOR.jobTitle;
+  if (SITE_AUTHOR.bio) node.description = SITE_AUTHOR.bio;
+  if (opts.imagePath) node.image = abs(ctx, opts.imagePath);
+  if (authorSameAs.length) node.sameAs = [...authorSameAs];
   return node;
 }
 
@@ -200,6 +225,9 @@ export function webPage(ctx: SchemaCtx, opts: WebPageOptions): Node {
   }
   if (opts.hasBreadcrumb) {
     node.breadcrumb = { "@id": nodeId(ctx, ctx.path, "crumb") };
+  }
+  if (hasAuthor) {
+    node.author = { "@id": nodeId(ctx, "/", "author") };
   }
   if (opts.faqs?.length) {
     node.mainEntity = opts.faqs.map((f) => ({
@@ -271,6 +299,9 @@ export interface PageGraphOptions extends Omit<WebPageOptions, "hasBreadcrumb"> 
   org?: OrgOptions;
   /** Extra options for the WebSite node. */
   website?: { alternateName?: string[] };
+  /** Self-hosted avatar for the Person node, e.g. the hashed path Astro emits
+   *  for src/assets/author.webp. */
+  authorImagePath?: string;
   /** Additional nodes, built with the exported builders above so they still
    *  go through abs(). */
   extra?: readonly Node[];
@@ -286,13 +317,14 @@ export interface PageGraphOptions extends Omit<WebPageOptions, "hasBreadcrumb"> 
  */
 export function pageGraph(astro: AstroLike, opts: PageGraphOptions): string {
   const ctx = schemaCtx(astro);
-  const { breadcrumb: trail, org, website: siteOpts, extra, ...pageOpts } = opts;
+  const { breadcrumb: trail, org, website: siteOpts, extra, authorImagePath, ...pageOpts } = opts;
 
   const nodes: Node[] = [
     website(ctx, siteOpts ?? {}),
     organization(ctx, org ?? {}),
     webPage(ctx, { ...pageOpts, hasBreadcrumb: Boolean(trail?.length) }),
   ];
+  if (hasAuthor) nodes.push(person(ctx, { imagePath: authorImagePath }));
   if (trail?.length) nodes.push(breadcrumb(ctx, trail));
   if (extra?.length) nodes.push(...extra);
 

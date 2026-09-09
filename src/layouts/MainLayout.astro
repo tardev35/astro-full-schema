@@ -4,8 +4,8 @@ import bgConfig from "../assets/bg.json";
 import "../styles/global.css";
 import { BRAND_NAME, BRAND_TEXT, brandProfile, fontStack, iconVersion } from "../lib/brandProfile";
 import { canonicalFor } from "../lib/schema";
-import Navbar from "../components/NavbarStyle8.astro";
-import Footer from "../components/FooterStyle3.astro";
+import Navbar from "../components/NavbarPremium.astro";
+import Footer from "../components/FooterPremium.astro";
 
 // Only banner1 is ever rendered, so only banner1 is imported.
 //
@@ -54,8 +54,8 @@ const mobileBannerImg = mobileBanner
   : null;
 
 const {
-  title = "PAYDAY24 เว็บสล็อตมั่นคง คาสิโนสดออนไลน์ มีกิจกรรมรับเครดิตทุกวัน",
-  description = "PAYDAY24 เว็บสล็อตมั่นคง รวมบริการ คาสิโนสด บาคาร่า หวย และกีฬาออนไลน์ มีกิจกรรมรับเครดิตทุกวัน คืนยอดเสีย เช็กอิน กงล้อ ฝากถอนออโต้ รองรับ True Wallet",
+  title = "TOPGAMEVIP เว็บตรงเกมสล็อต สมัคร ฝาก ถอน ระบบออโต้",
+  description = "TOPGAMEVIP เว็บตรงเกมสล็อต ลิขสิทธิ์แท้ เล่นได้อย่างมั่นใจ ฝากเงินเล่น ไม่มีขั้นต่ำ ถอนเงิน โอนไว ปลอดภัย ระบบออโต้ สมัคร ทำได้ง่าย มี AI ช่วยวิเคราะห์เกม",
   robots = "index, follow",
 } = Astro.props;
 
@@ -207,7 +207,7 @@ const profile = brandProfile(Astro.site);
         background-attachment: fixed;
         background-repeat: no-repeat;
         margin: 0;
-        background-color: #0d0416;
+        background-color: #ffffff;
         font-weight: 400;
         font-family: var(--font-sans) !important;
       }
@@ -260,7 +260,7 @@ const profile = brandProfile(Astro.site);
         }
         <Image
           src={mainBanner}
-          alt="แบนเนอร์ PAYDAY24 พื้นหลังสีดำม่วงมีเส้นแสงสีม่วงและประกายทอง ด้านซ้ายบนเป็นโลโก้ PayDay24 พร้อมมงกุฎทองและคำว่า PLAY MORE WIN BIGGER ถัดลงมาเป็นข้อความทองขนาดใหญ่ว่า PAYDAY24 เว็บสล็อตมั่นคง และบรรทัดล่างว่า คาสิโนสดออนไลน์ มีกิจกรรมรับเครดิตทุกวัน ใต้ข้อความเป็นแถบไอคอนสองแถว แถวบนเขียนว่า คาสิโนสด บาคาร่า หวย กีฬา แถวล่างเขียนว่า คืนยอดเสีย เช็กอิน กงล้อ ฝากถอนออโต้ True Wallet ถัดลงมาเป็นปุ่มทองว่า สมัครสมาชิก ด้านขวาเป็นพรีเซนเตอร์หญิงในชุดราตรีสีม่วงนั่งอยู่ข้างวงล้อรูเล็ต ไพ่ ชิปคาสิโน เหรียญทอง ลูกบอล และป้าย BIG WIN"
+          alt="แบนเนอร์ TOPGAMEVIP พื้นหลังสีขาวมีคลื่นสีแดงพาดโค้งทั้งซ้ายและขวา มีเหรียญทองลอยกระจายและลายจุดสีแดงเป็นตาราง ด้านซ้ายเป็นพรีเซนเตอร์หญิงในชุดกี่เพ้าสีดำแต่งทอง มือขวาถือไพ่ที่คลี่ออกเป็นรูปพัด บนชุดมีโลโก้ TOPGAMEVIP ด้านขวาเป็นข้อความสีแดงตัวใหญ่ขอบขาวว่า TOPGAMEVIP และบรรทัดล่างเป็นตัวอักษรสีเข้มว่า เว็บเกมสล็อตแท้ ระบบฝากถอน AUTO"
           loading="eager"
           fetchpriority="high"
           widths={[412, 640, 828, 1024, 1280, 1600, 1900]}

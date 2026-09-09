@@ -19,10 +19,10 @@ const pick = (salt: string, n: number) => brandPick(Astro.site, salt, n);
 const digits = (salt: string, n: number) => Array.from({ length: n }, (_, d) => pick(`${salt}-${d}`, 10)).join("");
 
 const initialRows = Array.from({ length: 5 }, (_, i) => {
-  const amount = AMOUNT_MIN + pick(`ving999-amount-${i}`, AMOUNT_MAX - AMOUNT_MIN + 1);
+  const amount = AMOUNT_MIN + pick(`topgamevip-amount-${i}`, AMOUNT_MAX - AMOUNT_MIN + 1);
   return {
-    bank: bankPool[pick(`ving999-bank-${i}`, bankPool.length)],
-    user: `0${pick(`ving999-p-${i}`, 2) === 0 ? "8" : "9"}***${digits(`ving999-u${i}`, 4)}`,
+    bank: bankPool[pick(`topgamevip-bank-${i}`, bankPool.length)],
+    user: `0${pick(`topgamevip-p-${i}`, 2) === 0 ? "8" : "9"}***${digits(`topgamevip-u${i}`, 4)}`,
     amount,
     big: amount > BIG_WIN,
   };
@@ -30,48 +30,48 @@ const initialRows = Array.from({ length: 5 }, (_, i) => {
 
 const seedTotal = initialRows.reduce((sum, row) => sum + row.amount, 0);
 
-const ROW_NORMAL = "border-[#5a1a1e]";
-const ROW_BIG = "border-[#bdcad2]/60 shadow-[0_0_15px_rgba(189,202,210,0.28)]";
-const STATUS_NORMAL = "text-green-400 font-bold";
-const STATUS_BIG = "text-[#f2f5f7] font-black";
+const ROW_NORMAL = "border-[#f6c9c6]";
+const ROW_BIG = "border-[#d4a017] shadow-[0_0_15px_rgba(212,160,23,0.35)]";
+const STATUS_NORMAL = "text-green-700 font-bold";
+const STATUS_BIG = "text-[#8a6410] font-black";
 ---
 
 <div class="relative z-10 mx-auto mb-10 w-full max-w-[1400px] px-4 font-sans">
-  <section aria-label="รายการถอนเงินล่าสุดของสมาชิก VING999" class="relative overflow-hidden rounded-3xl border border-[#5a1a1e] bg-[#170a0b] shadow-[0_10px_40px_rgba(0,0,0,0.85)]">
-    <div class="relative z-10 flex flex-col gap-4 border-b border-[#5a1a1e] px-5 py-5 sm:flex-row sm:items-center sm:justify-between md:px-8">
+  <section aria-label="รายการถอนเงินล่าสุดของสมาชิก TOPGAMEVIP" class="relative overflow-hidden rounded-3xl border border-[#f6c9c6] bg-white shadow-[0_10px_30px_rgba(230,0,18,0.12)]">
+    <div class="relative z-10 flex flex-col gap-4 border-b border-[#f6c9c6] px-5 py-5 sm:flex-row sm:items-center sm:justify-between md:px-8">
       <div class="flex items-center gap-3">
-        <span aria-hidden="true" class="flex h-10 w-10 items-center justify-center rounded-full border border-[#e01b2d]/45 bg-[#220d0f] text-2xl text-[#bdcad2]">🏆</span>
+        <span aria-hidden="true" class="flex h-10 w-10 items-center justify-center rounded-full border border-[#e60012]/45 bg-[#ffe9e7] text-2xl">🏆</span>
         <div class="flex flex-col">
-          <p class="text-2xl font-black tracking-widest text-[#f2f5f7] drop-shadow-sm">
-            รายการถอนเงินล่าสุด VING<span class="text-[#e01b2d]">999</span>
+          <p class="text-2xl font-black tracking-widest text-[#8a0208]">
+            รายการถอนเงินล่าสุด TOPGAME<span class="text-[#e60012]">VIP</span>
           </p>
-          <span class="text-[11px] font-medium tracking-wide text-[#b3bec6]">ระบบฝากถอนออโต้ ทำรายการเองจากหน้าเมมเบอร์ รองรับทั้งบัญชีธนาคารและ TrueWallet ตามสถานะรายการของตัวเองได้ตลอด</span>
+          <span class="text-[11px] font-medium tracking-wide text-[#6f4b4d]">ระบบถอนเงินออโต้ ทำรายการเองได้ตลอด 24 ชั่วโมง ไม่ต้องส่งสลิป ไม่ต้องรอคนกลางตรวจสอบ ดูสถานะรายการของตัวเองได้จากหน้าเมมเบอร์</span>
         </div>
       </div>
-      <div class="flex items-center gap-2 self-start rounded-full border border-green-500/40 bg-green-900/20 px-3 py-1.5 sm:self-auto">
-        <span class="h-1.5 w-1.5 animate-pulse rounded-full bg-green-400 shadow-[0_0_8px_rgba(74,222,128,0.8)]"></span>
-        <span class="text-[10px] font-bold tracking-widest text-green-400 uppercase">Live</span>
+      <div class="flex items-center gap-2 self-start rounded-full border border-green-600/40 bg-green-50 px-3 py-1.5 sm:self-auto">
+        <span class="h-1.5 w-1.5 animate-pulse rounded-full bg-green-600 shadow-[0_0_8px_rgba(22,163,74,0.6)]"></span>
+        <span class="text-[10px] font-bold tracking-widest text-green-700 uppercase">Live</span>
       </div>
     </div>
 
-    <div class="relative z-10 grid grid-cols-2 gap-px overflow-hidden border-b border-[#5a1a1e] bg-[#2a1113] sm:grid-cols-3">
-      <div class="flex flex-col items-center gap-1 bg-[#170a0b] px-4 py-4">
-        <span class="text-[11px] font-medium tracking-wide text-[#b3bec6]">ยอดถอนรวมวันนี้</span>
-        <span data-winners-total data-prefix="฿" data-seed={seedTotal} class="bg-gradient-to-r from-[#f2f5f7] to-[#7d8b95] bg-clip-text font-mono text-lg font-black text-transparent sm:text-xl">
+    <div class="relative z-10 grid grid-cols-2 gap-px overflow-hidden border-b border-[#f6c9c6] bg-[#f6c9c6] sm:grid-cols-3">
+      <div class="flex flex-col items-center gap-1 bg-white px-4 py-4">
+        <span class="text-[11px] font-medium tracking-wide text-[#6f4b4d]">ยอดถอนรวมวันนี้</span>
+        <span data-winners-total data-prefix="฿" data-seed={seedTotal} class="bg-gradient-to-r from-[#b30009] to-[#8a0208] bg-clip-text font-mono text-lg font-black text-transparent sm:text-xl">
           ฿{seedTotal.toLocaleString("en-US")}
         </span>
       </div>
-      <div class="flex flex-col items-center gap-1 bg-[#170a0b] px-4 py-4">
-        <span class="text-[11px] font-medium tracking-wide text-[#b3bec6]">รายการสำเร็จวันนี้</span>
-        <span data-winners-count data-seed={initialRows.length} class="font-mono text-lg font-black text-[#dce3e8] sm:text-xl">{initialRows.length}</span>
+      <div class="flex flex-col items-center gap-1 bg-white px-4 py-4">
+        <span class="text-[11px] font-medium tracking-wide text-[#6f4b4d]">รายการสำเร็จวันนี้</span>
+        <span data-winners-count data-seed={initialRows.length} class="font-mono text-lg font-black text-[#8a0208] sm:text-xl">{initialRows.length}</span>
       </div>
-      <div class="col-span-2 flex flex-col items-center gap-1 bg-[#170a0b] px-4 py-4 sm:col-span-1">
-        <span class="text-[11px] font-medium tracking-wide text-[#b3bec6]">ถอนได้ต่อรายการ</span>
-        <span class="font-mono text-lg font-black text-[#dce3e8] sm:text-xl">฿{AMOUNT_MIN.toLocaleString("en-US")}–{AMOUNT_MAX.toLocaleString("en-US")}</span>
+      <div class="col-span-2 flex flex-col items-center gap-1 bg-white px-4 py-4 sm:col-span-1">
+        <span class="text-[11px] font-medium tracking-wide text-[#6f4b4d]">ถอนได้ต่อรายการ</span>
+        <span class="font-mono text-lg font-black text-[#8a0208] sm:text-xl">฿{AMOUNT_MIN.toLocaleString("en-US")}–{AMOUNT_MAX.toLocaleString("en-US")}</span>
       </div>
     </div>
 
-    <div class="relative z-10 hidden grid-cols-[2fr_1.3fr_1fr_0.8fr] gap-4 px-8 pt-4 text-[11px] font-bold tracking-widest text-[#b3bec6] uppercase sm:grid">
+    <div class="relative z-10 hidden grid-cols-[2fr_1.3fr_1fr_0.8fr] gap-4 px-8 pt-4 text-[11px] font-bold tracking-widest text-[#6f4b4d] uppercase sm:grid">
       <span>ผู้ใช้งาน</span>
       <span>สถานะ</span>
       <span class="text-right">จำนวนเงิน</span>
@@ -94,12 +94,12 @@ const STATUS_BIG = "text-[#f2f5f7] font-black";
               data-winner-big
               data-normal-class={ROW_NORMAL}
               data-big-class={ROW_BIG}
-              class={`grid grid-cols-[auto_1fr] items-center gap-4 rounded-xl border bg-[#220d0f] p-3.5 shadow-sm transition-colors duration-300 hover:border-[#e01b2d]/70 hover:bg-[#2a1113] sm:grid-cols-[2fr_1.3fr_1fr_0.8fr] ${row.big ? ROW_BIG : ROW_NORMAL}`}>
+              class={`grid grid-cols-[auto_1fr] items-center gap-4 rounded-xl border bg-[#fff7f6] p-3.5 shadow-sm transition-colors duration-300 hover:border-[#e60012]/45 hover:bg-[#ffe9e7] sm:grid-cols-[2fr_1.3fr_1fr_0.8fr] ${row.big ? ROW_BIG : ROW_NORMAL}`}>
               <div class="col-span-2 flex items-center gap-3 sm:col-span-1">
-                <div data-winner-bank class={`flex h-9 w-9 shrink-0 items-center justify-center rounded-full border border-white/10 shadow-inner ${row.bank.color}`}>
+                <div data-winner-bank class={`flex h-9 w-9 shrink-0 items-center justify-center rounded-full border border-black/10 shadow-inner ${row.bank.color}`}>
                   <img data-winner-icon src={row.bank.icon} alt="" width="20" height="20" loading="lazy" decoding="async" class="h-5 w-5 object-contain grayscale" />
                 </div>
-                <span data-winner-user class="font-mono text-sm font-bold text-[#dce3e8]">
+                <span data-winner-user class="font-mono text-sm font-bold text-[#2d1214]">
                   {row.user}
                 </span>
               </div>
@@ -111,10 +111,10 @@ const STATUS_BIG = "text-[#f2f5f7] font-black";
                   {row.big ? "ยอดใหญ่ ทำรายการสำเร็จ" : "ทำรายการสำเร็จ"}
                 </span>
               </div>
-              <div class="bg-gradient-to-r from-[#f2f5f7] to-[#7d8b95] bg-clip-text text-right font-mono text-base font-black text-transparent sm:text-lg">
+              <div class="bg-gradient-to-r from-[#b30009] to-[#8a0208] bg-clip-text text-right font-mono text-base font-black text-transparent sm:text-lg">
                 ฿<span data-winner-amount>{row.amount.toLocaleString("en-US")}</span>
               </div>
-              <div class="text-right text-[11px] font-medium text-[#b3bec6] sm:text-xs">เมื่อสักครู่</div>
+              <div class="text-right text-[11px] font-medium text-[#6f4b4d] sm:text-xs">เมื่อสักครู่</div>
             </div>
           </div>
         ))

@@ -75,7 +75,7 @@ export default defineConfig({
     "/line": "https://tinyurl.com/suhng",
   },
 
-  site: "https://payday24.org",
+  site: "https://topgamevip-homepage.net",
   integrations: [
     sitemap({
       // /login, /register and /line are forwarding pages that all ship

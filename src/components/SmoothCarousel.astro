@@ -4,19 +4,24 @@ import { Picture } from "astro:assets";
 import slide1 from "../assets/slide1.png";
 import slide2 from "../assets/slide2.png";
 import slide3 from "../assets/slide3.png";
+import slide4 from "../assets/slide4.png";
 
 const images = [
   {
     src: slide1,
-    alt: "ภาพโปรโมชั่น PAYDAY24 ข้อความ ฝากถอนออโต้ รองรับ True Wallet คล่องตัว รวดเร็ว ใช้งานง่าย มีพรีเซนเตอร์ถือมือถือที่เปิดแอป True Wallet กระเป๋าเงิน หน้าจอทำรายการสำเร็จ เหรียญทอง และนาฬิกา 24 ชั่วโมง บนฉากหลังม่วงทอง",
+    alt: "ภาพโปรโมชั่น TOPGAMEVIP พื้นขาวแดง มีพรีเซนเตอร์หญิงชุดดำเหลือง ข้อความ COMMISSION คืนทุกยอดเล่นตลอดทั้งวัน 0.3% เล่นถึง 50% ถอนได้เลย สามารถกดรับง่ายๆ ที่หน้าเว็บได้เลยค่ะ รับสิทธิ์ก่อน 23.59 น. ของทุกวัน ยิ่งเล่นเยอะ ยิ่งได้เยอะ",
   },
   {
     src: slide2,
-    alt: "ภาพโปรโมชั่น PAYDAY24 ข้อความ รวมบริการครบใน PAYDAY24 ค่ายชั้นนำในระบบเดียว มีพรีเซนเตอร์หญิงในชุดราตรีสีม่วง มือถือแสดงหน้าเว็บ PAYDAY24 ป้าย LIVE CASINO BACCARAT LOTTERY นักฟุตบอล ลูกบอลหวย ไพ่ และกองชิป พร้อมแถบหมวด คาสิโนสด บาคาร่า หวย กีฬา",
+    alt: "ภาพโปรโมชั่น TOPGAMEVIP พื้นขาวแดง โลโก้ TOPGAMEVIP ซ้ายบน พรีเซนเตอร์หญิงชุดหนังดำด้านขวาบน ข้อความ แนะนำเพื่อน รับโบนัส 0.8% สร้างรายได้ 100,000 ต่อเดือน",
   },
   {
     src: slide3,
-    alt: "ภาพโปรโมชั่น PAYDAY24 ข้อความ กิจกรรมเครดิตทุกวัน เล่นทุกวัน มีสีสันทุกวัน ไม่ใช่แค่เข้าเกมแล้วจบ มีการ์ดเช็คอินรับเครดิตรายสัปดาห์ตั้งแต่วันจันทร์ถึงวันอาทิตย์ กล่องของขวัญ DAILY REWARDS และพรีเซนเตอร์ในชุดสีม่วง",
+    alt: "ภาพโปรโมชั่น TOPGAMEVIP พื้นขาวแดง ป้ายดำเรียงด้านซ้าย หวย บอล บาคาร่า สล็อต พรีเซนเตอร์หญิงชุดดำกลางภาพ โลโก้ TOPGAMEVIP ขวาบน ข้อความล่าง ครบจบในที่เดียว และแถบติ๊กถูก บอล คาสิโน สล็อต ยิงปลา โก๋เซน มวย ไฮโล รูเล็ต",
+  },
+  {
+    src: slide4,
+    alt: "ภาพโปรโมชั่น TOPGAMEVIP พื้นขาวแดง โลโก้ TOPGAMEVIP ซ้ายบน พรีเซนเตอร์หญิงด้านขวาบน ข้อความ หวย อัตราจ่ายที่ดีที่สุด 3 ตัว บาทละ 1000 2 ตัว บาทละ 100 ถูกตรง จ่ายจริง รับเงินรางวัล หลักล้าน ครบจบเรื่องหวย ในเว็บเดียว รัฐบาล ลาว ฮานอย หุ้น ยี่กี",
   },
 ];
 
@@ -28,7 +33,7 @@ const slides = Array.from({ length: COPIES }, () => images).flat();
   <input id="carousel-pause" type="checkbox" class="peer sr-only" />
   <label
     for="carousel-pause"
-    class="sr-only cursor-pointer peer-focus-visible:not-sr-only peer-focus-visible:mb-3 peer-focus-visible:inline-block peer-focus-visible:rounded-full peer-focus-visible:border peer-focus-visible:border-[#fdc700]/70 peer-focus-visible:bg-[#1c0a30] peer-focus-visible:px-4 peer-focus-visible:py-2 peer-focus-visible:text-sm peer-focus-visible:font-bold peer-focus-visible:text-[#ffe680]">
+    class="sr-only cursor-pointer peer-focus-visible:not-sr-only peer-focus-visible:mb-3 peer-focus-visible:inline-block peer-focus-visible:rounded-full peer-focus-visible:border peer-focus-visible:border-[#e60012]/45 peer-focus-visible:bg-white peer-focus-visible:px-4 peer-focus-visible:py-2 peer-focus-visible:text-sm peer-focus-visible:font-bold peer-focus-visible:text-[#8a0208]">
     หยุด / เล่นสไลด์ภาพ
   </label>
 
@@ -41,7 +46,7 @@ const slides = Array.from({ length: COPIES }, () => images).flat();
             <Picture
               src={slide.src}
               alt={isDuplicate ? "" : slide.alt}
-              class="block w-full rounded-xl border border-[#fdc700]/45 object-cover shadow-[0_10px_30px_rgba(253,199,0,0.18)]"
+              class="block w-full rounded-xl border border-[#f6c9c6] object-cover shadow-[0_10px_30px_rgba(230,0,18,0.14)]"
               width={slide.src.width}
               height={slide.src.height}
               loading="lazy"
@@ -64,14 +69,14 @@ const slides = Array.from({ length: COPIES }, () => images).flat();
   .marquee {
     --gap: 12px;
     --per-view: 1;
-    --shift: calc(-300% - 36px);
+    --shift: calc(-400% - 48px);
   }
 
   @media (min-width: 768px) {
     .marquee {
       --gap: 16px;
       --per-view: 2;
-      --shift: calc(-150% - 24px);
+      --shift: calc(-200% - 32px);
     }
   }
 
@@ -79,14 +84,14 @@ const slides = Array.from({ length: COPIES }, () => images).flat();
     .marquee {
       --gap: 20px;
       --per-view: 3;
-      --shift: calc(-100% - 20px);
+      --shift: calc(-133.3333% - 26.6667px);
     }
   }
 
   .marquee-track {
     gap: var(--gap);
     width: 100%;
-    animation: carousel-scroll 30s linear infinite;
+    animation: carousel-scroll 40s linear infinite;
     will-change: transform;
   }
 

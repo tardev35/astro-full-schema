@@ -2,21 +2,22 @@
 import MainLayout from "../layouts/MainLayout.astro";
 import ContentBox from "../components/ContentBox.astro";
 import Navfoot from "../components/Navfoot.astro";
-import Announcement from "../components/Announcement5.astro";
+import Announcement from "../components/Announcement3.astro";
 
 import { Picture } from "astro:assets";
 
 import pro1 from "../assets/slide1.png";
 import pro2 from "../assets/slide2.png";
 import pro3 from "../assets/slide3.png";
+import pro4 from "../assets/slide4.png";
 import { pageGraph } from "../lib/schema";
 
-const pageTitle = "โปรโมชั่น PAYDAY24 รวมกิจกรรมรับเครดิตและคืนยอดเสียไว้ในหน้าเดียว";
+const pageTitle = "โปรโมชั่น - TOPGAMEVIP";
 
-const pageHeading = "โปรโมชั่น PAYDAY24 รวมกิจกรรมรับเครดิตและสิทธิ์สมาชิกไว้ในหน้าเดียว";
+const pageHeading = "โปรโมชั่นและสิทธิ์สมาชิก TOPGAMEVIP";
 
 const pageDescription =
-  "รวมภาพโปรโมชั่นและกิจกรรมรับเครดิตของ PAYDAY24 ทั้งคืนยอดเสีย เช็กอินประจำวัน กงล้อ และเครดิตฟรี ดูยอดรับกับเงื่อนไขที่ระบุบนภาพ แล้วรับสิทธิ์จากหน้าเมมเบอร์";
+  "รวมภาพโปรโมชั่นและสิทธิ์สมาชิกของ TOPGAMEVIP ทั้งคืนยอดเล่นรายวัน โบนัสแนะนำเพื่อน และอัตราจ่ายหวย ดูเงื่อนไขที่ระบุบนภาพแล้วกดรับสิทธิ์จากหน้าเว็บได้เลย";
 
 const graph = pageGraph(Astro, {
   name: pageTitle,
@@ -29,7 +30,7 @@ const graph = pageGraph(Astro, {
 });
 
 const promoClass =
-  "mx-auto h-auto w-full rounded-xl border border-[#fdc700]/45 object-contain shadow-[0_10px_30px_rgba(253,199,0,0.16)] transition-all duration-300 hover:-translate-y-1 hover:border-[#ffe680]/80 hover:shadow-[0_15px_40px_rgba(253,199,0,0.26)]";
+  "mx-auto h-auto w-full rounded-xl border border-[#f6c9c6] object-contain shadow-[0_10px_30px_rgba(230,0,18,0.12)] transition-all duration-300 hover:-translate-y-1 hover:border-[#e60012]/45 hover:shadow-[0_15px_40px_rgba(230,0,18,0.20)]";
 ---
 
 <MainLayout title={pageTitle} description={pageDescription}>
@@ -38,18 +39,18 @@ const promoClass =
   <Announcement />
 
   <ContentBox title={pageHeading} as="h1">
-    <p class="mb-4 text-left text-base leading-relaxed text-[#ede4fb]">
-      หากคุณกำลังมองหาโปรโมชั่นและกิจกรรมรับเครดิตที่ดูจบได้ในหน้าเดียว <strong class="text-[#ffe680]">PAYDAY24</strong> พร้อมมอบสิทธิ์ของสมาชิกไว้ครบในภาพด้านล่างนี้
+    <p class="mb-4 text-left text-base leading-relaxed">
+      ถ้าคุณกำลังมองหาสิทธิ์ที่กดรับเองได้จากหน้าเว็บ ไม่ต้องรอแอดมินอนุมัติ <strong class="text-[#8a0208]">TOPGAMEVIP</strong> รวมโปรโมชั่นของสมาชิกไว้ในภาพด้านล่างนี้ครบแล้ว
     </p>
 
-    <p class="mb-8 text-left text-base leading-relaxed text-[#ede4fb]">
-      เงื่อนไขของแต่ละกิจกรรมไม่เหมือนกัน ระบุไว้บนภาพครบทุกใบแล้ว เลือกใบที่ตรงกับสไตล์การเล่นของคุณ แล้วกดรับสิทธิ์ต่อจากหน้าเมมเบอร์ เพื่อให้ทุกวันที่เข้าเล่นมีอะไรให้ลุ้นเพิ่ม
+    <p class="mb-8 text-left text-base leading-relaxed">
+      ทั้งคืนยอดเล่นรายวัน โบนัสแนะนำเพื่อน และอัตราจ่ายหวย เงื่อนไขระบุไว้บนภาพครบทุกใบ เลือกใบที่ตรงกับสไตล์การเล่นของคุณ แล้วกดรับสิทธิ์ต่อได้ทันที
     </p>
 
     <div class="grid w-full grid-cols-1 gap-6 sm:grid-cols-2">
       <Picture
         src={pro1}
-        alt="ภาพโปรโมชั่น PAYDAY24 ข้อความ ฝากถอนออโต้ รองรับ True Wallet คล่องตัว รวดเร็ว ใช้งานง่าย มีป้ายคุณสมบัติสามช่อง รวดเร็ว ปลอดภัย และ ใช้งานง่าย พรีเซนเตอร์หญิงในชุดสีม่วงชี้ไปที่มือถือซึ่งเปิดแอป True Wallet ข้างปุ่มลูกศร ฝากเงิน และ ถอนเงิน หน้าจอมือถืออีกเครื่องแสดงเครื่องหมายถูกสีเขียวกับข้อความ ทำรายการสำเร็จ กระเป๋าสตางค์ True Wallet เหรียญทอง และนาฬิกา 24h ด้านล่างเป็นแถบ รองรับ True Wallet ฝากถอนออโต้ 24 ชั่วโมง ปลอดภัยเชื่อถือได้ และ พร้อมดูแลตลอด 24 ชม."
+        alt="ภาพโปรโมชั่น TOPGAMEVIP พื้นขาวสลับแดง ด้านบนเป็นโลโก้ TOPGAMEVIP มีพรีเซนเตอร์หญิงสวมชุดสีดำสลับเหลืองยืนอยู่ ข้อความบนภาพเขียนว่า COMMISSION คืนทุกยอดเล่นตลอดทั้งวัน 0.3% เล่นถึง 50% ถอนได้เลย สามารถกดรับง่ายๆ ที่หน้าเว็บได้เลยค่ะ รับสิทธิ์ก่อน 23.59 น. ของทุกวัน และ ยิ่งเล่นเยอะ ยิ่งได้เยอะ"
         loading="lazy"
         fetchpriority="low"
         widths={[200, 400, 600]}
@@ -63,7 +64,7 @@ const promoClass =
 
       <Picture
         src={pro2}
-        alt="ภาพโปรโมชั่น PAYDAY24 ข้อความ รวมบริการครบใน PAYDAY24 ค่ายชั้นนำในระบบเดียว และ มากกว่าการเล่น คือทุกความมั่นคง มีแถบหมวดบริการสี่ช่อง คาสิโนสด บาคาร่า หวย และ กีฬา พรีเซนเตอร์หญิงในชุดราตรีสีม่วงยืนกลางภาพ ล้อมด้วยป้าย LIVE CASINO ป้าย BACCARAT พร้อมไพ่ ป้าย LOTTERY พร้อมลูกบอลตัวเลข นักฟุตบอลกำลังเลี้ยงบอล ชิปคาสิโนลายโลโก้ PAYDAY24 และมือถือที่เปิดหน้าเว็บ PAYDAY24 พร้อมปุ่ม สมัครสมาชิก"
+        alt="ภาพโปรโมชั่น TOPGAMEVIP พื้นขาวสลับแดง โลโก้ TOPGAMEVIP อยู่มุมซ้ายบน พรีเซนเตอร์หญิงสวมชุดหนังสีดำอยู่มุมขวาบน ข้อความบนภาพเขียนว่า แนะนำเพื่อน รับโบนัส 0.8% และ สร้างรายได้ 100,000 ต่อเดือน"
         loading="lazy"
         fetchpriority="low"
         widths={[200, 400, 600]}
@@ -77,7 +78,21 @@ const promoClass =
 
       <Picture
         src={pro3}
-        alt="ภาพโปรโมชั่น PAYDAY24 ข้อความ กิจกรรมเครดิตทุกวัน เล่นทุกวัน มีสีสันทุกวัน ไม่ใช่แค่เข้าเกมแล้วจบ มีการ์ดปฏิทิน เช็คอินรับเครดิต ที่ติ๊กครบตั้งแต่วันจันทร์ถึงวันอาทิตย์ กล่องของขวัญ DAILY REWARDS และพรีเซนเตอร์หญิงในชุดสีม่วงถือกล่องของขวัญสีดำทองที่มีโลโก้ PAYDAY24 ด้านล่างเป็นแถบ SAFE FAST FAIR PLAY ANYTIME"
+        alt="ภาพโปรโมชั่น TOPGAMEVIP พื้นขาวสลับแดง มีป้ายสีดำเรียงกันสี่อันทางซ้าย หวย บอล บาคาร่า และ สล็อต พรีเซนเตอร์หญิงชุดดำยืนอยู่กลางภาพ โลโก้ TOPGAMEVIP อยู่มุมขวาบน ข้อความด้านล่างเขียนว่า ครบจบในที่เดียว พร้อมแถบเครื่องหมายถูก บอล คาสิโน สล็อต ยิงปลา โก๋เซน มวย ไฮโล รูเล็ต"
+        loading="lazy"
+        fetchpriority="low"
+        widths={[200, 400, 600]}
+        sizes="(max-width: 768px) 100vw, 50vw"
+        class={promoClass}
+        decoding="async"
+        formats={["avif", "webp"]}
+        fallbackFormat="webp"
+        quality={80}
+      />
+
+      <Picture
+        src={pro4}
+        alt="ภาพโปรโมชั่น TOPGAMEVIP พื้นขาวสลับแดง โลโก้ TOPGAMEVIP อยู่มุมซ้ายบน พรีเซนเตอร์หญิงอยู่มุมขวาบน ข้อความบนภาพเขียนว่า หวย อัตราจ่ายที่ดีที่สุด 3 ตัว บาทละ 1000 2 ตัว บาทละ 100 ถูกตรง จ่ายจริง รับเงินรางวัล หลักล้าน และ ครบจบเรื่องหวย ในเว็บเดียว รัฐบาล ลาว ฮานอย หุ้น ยี่กี"
         loading="lazy"
         fetchpriority="low"
         widths={[200, 400, 600]}
@@ -93,8 +108,8 @@ const promoClass =
     <div class="mt-12 flex justify-center pb-4">
       <a
         href="/register"
-        class="flex items-center justify-center rounded-lg border border-[#a86f00]/60 bg-gradient-to-r from-[#ffe680] via-[#fdc700] to-[#d99400] px-10 py-3.5 text-lg font-black text-[#150726] shadow-[0_10px_30px_rgba(253,199,0,0.28)] transition-transform hover:scale-105 hover:shadow-[0_15px_40px_rgba(253,199,0,0.38)]">
-        สมัครสมาชิก PAYDAY24
+        class="flex items-center justify-center rounded-lg border border-[#8a6410] bg-gradient-to-r from-[#ffe9a8] via-[#f5c542] to-[#d4a017] px-10 py-3.5 text-lg font-black text-[#2a0709] shadow-[0_10px_30px_rgba(212,160,23,0.24)] transition-transform hover:scale-105 hover:shadow-[0_15px_40px_rgba(212,160,23,0.34)]">
+        สมัครสมาชิก TOPGAMEVIP
       </a>
     </div>
   </ContentBox>

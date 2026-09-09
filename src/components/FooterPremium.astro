@@ -6,13 +6,12 @@ const images = import.meta.glob<{ default: ImageMetadata }>("../assets/logo.{png
 const imagePaths = Object.keys(images);
 const mainLogo = imagePaths.length > 0 ? images[imagePaths[0]].default : null;
 
-const logoAlt =
-  "โลโก้ PIGAUTO รูปหมูการ์ตูนสีชมพูยิ้มอยู่กลางวงเฟืองสีเงิน มีเส้นความเร็วสีขาวสองข้าง ใต้ภาพเป็นตัวอักษร PIGAUTO สีขาวขอบดำ";
+const logoAlt = "โลโก้ TOPGAMEVIP โล่หกเหลี่ยมสีดำขอบทอง มีมงกุฎทองด้านบน ตรงกลางเป็นจอยเกมสีทอง ใต้โล่เป็นตัวอักษรสีทองว่า TOPGAMEVIP";
 ---
 
 <footer
-  class="relative mt-16 w-full overflow-hidden rounded-t-[3rem] border-t border-[#ef4444]/45 bg-[#280707] pt-16 pb-8 font-sans text-[#f7e2d6] shadow-[0_-15px_40px_rgba(239,68,68,0.3)]">
-  <div class="pointer-events-none absolute inset-x-0 -top-20 mx-auto h-[250px] w-full max-w-4xl rounded-full bg-[#ef4444]/25 blur-[100px]"></div>
+  class="relative mt-16 w-full overflow-hidden rounded-t-[3rem] border-t-2 border-[#e60012] bg-[#1c0405] pt-16 pb-8 font-sans text-[#fbeceb] shadow-[0_-15px_40px_rgba(230,0,18,0.28)]">
+  <div class="pointer-events-none absolute inset-x-0 -top-20 mx-auto h-[250px] w-full max-w-4xl rounded-full bg-[#e60012]/30 blur-[100px]"></div>
 
   <div class="relative z-10 mx-auto w-full max-w-[1200px] px-6">
     <div class="mb-12 grid grid-cols-1 gap-12 md:grid-cols-12">
@@ -25,30 +24,31 @@ const logoAlt =
                 alt={logoAlt}
                 widths={[130, 260, 390]}
                 sizes="130px"
-                class="h-[65px] w-auto drop-shadow-[0_5px_15px_rgba(239,68,68,0.4)]"
+                class="h-[65px] w-auto drop-shadow-[0_5px_15px_rgba(230,0,18,0.45)]"
                 formats={["avif", "webp"]}
                 fallbackFormat="webp"
               />
             ) : (
               <span class="bg-gradient-to-r from-[#ffe9a8] to-[#f5c542] bg-clip-text text-4xl font-black tracking-widest text-transparent">
-                PIG<span class="bg-gradient-to-r from-[#fbbccc] to-[#ef4444] bg-clip-text text-transparent">AUTO</span>
+                TOPGAME<span class="bg-gradient-to-r from-[#ff4b41] to-[#e60012] bg-clip-text text-transparent">VIP</span>
               </span>
             )
           }
         </a>
-        <p class="border-l-2 border-[#ef4444]/55 pl-4 text-sm leading-relaxed text-[#f7e2d6]/70">
-          PIGAUTO เว็บสล็อตออโต้ไม่มีขั้นต่ำ รวมเกมลิขสิทธิ์แท้จาก PG Soft, Joker, Pragmatic Play และ JILI ไว้ในยูสเดียว ทุกเกมทำงานตามค่า RTP จริงของค่าย ระบบฝากถอนตรงเป็นออโต้เต็มระบบ ไม่ผ่านคนกลาง รองรับทั้งบัญชีธนาคารและ True Wallet ทำรายการเองได้จากหน้าเมมเบอร์ตลอด 24 ชั่วโมง
+        <p class="border-l-2 border-[#e60012] pl-4 text-sm leading-relaxed text-[#fbeceb]/70">
+          TOPGAMEVIP เว็บตรงเกมสล็อต ลิขสิทธิ์แท้จากค่ายผู้พัฒนาโดยตรง ค่า RTP เดินตามเกณฑ์ของค่าย ไม่มีล็อกยูส ไม่ปรับจูนหลังบ้าน ระบบสมัคร ฝาก ถอน เป็นออโต้เต็มระบบ ไม่มีขั้นต่ำ
+          ทำรายการเองได้จากหน้าเมมเบอร์ตลอด 24 ชั่วโมง พร้อมระบบ AI ที่ช่วยสรุปข้อมูลการเล่นให้อ่านจังหวะเกมได้ง่ายขึ้น
         </p>
         <div class="mt-4 flex gap-3">
-          <span class="rounded-full border border-[#ef8fae]/45 bg-[#ef8fae]/20 px-4 py-1 text-xs font-medium text-[#fbbccc] backdrop-blur-sm">ลิขสิทธิ์แท้</span>
-          <span class="rounded-full border border-[#f5c542]/35 bg-[#ef4444]/20 px-4 py-1 text-xs font-medium text-[#f5c542] backdrop-blur-sm">ไม่มีขั้นต่ำ</span>
+          <span class="rounded-full border border-[#f5c542]/45 bg-[#f5c542]/15 px-4 py-1 text-xs font-medium text-[#ffe9a8]">ลิขสิทธิ์แท้</span>
+          <span class="rounded-full border border-[#ff4b41]/45 bg-[#e60012]/20 px-4 py-1 text-xs font-medium text-[#ffc9c5]">ไม่มีขั้นต่ำ</span>
         </div>
       </div>
 
       <nav class="flex flex-col gap-4 md:col-span-3 lg:pl-8">
         <p class="text-lg font-black tracking-widest text-[#ffe9a8] uppercase drop-shadow-sm">เมนูลัด</p>
-        <div class="h-[1px] w-12 bg-[#ef4444]"></div>
-        <ul class="flex flex-col gap-3 text-sm font-medium text-[#f7e2d6]/70">
+        <div class="h-[1px] w-12 bg-[#e60012]"></div>
+        <ul class="flex flex-col gap-3 text-sm font-medium text-[#fbeceb]/70">
           <li><a href="/" class="transition-colors hover:text-[#f5c542]">หน้าหลัก</a></li>
           <li><a href="/promotion" class="transition-colors hover:text-[#f5c542]">โปรโมชั่น</a></li>
           <li><a href="/register" class="transition-colors hover:text-[#f5c542]">สมัครสมาชิก</a></li>
@@ -62,7 +62,7 @@ const logoAlt =
 
       <div class="flex flex-col gap-5 md:col-span-4">
         <p class="text-lg font-black tracking-widest text-[#ffe9a8] uppercase drop-shadow-sm">ฝ่ายดูแลสมาชิก</p>
-        <div class="h-[1px] w-12 bg-[#ef4444]"></div>
+        <div class="h-[1px] w-12 bg-[#e60012]"></div>
 
         <a
           href="/line"
@@ -90,12 +90,12 @@ const logoAlt =
           )
         }
 
-        <div class="mt-4 text-xs font-medium tracking-widest text-[#d9b7ab]/60 uppercase">ช่องทางฝากถอนที่รองรับ</div>
+        <div class="mt-4 text-xs font-medium tracking-widest text-[#fbeceb]/60 uppercase">ช่องทางฝากถอนที่รองรับ</div>
         <BankStrip size={30} />
       </div>
     </div>
 
-    <div class="flex flex-col items-center justify-between border-t border-[#7f1d1d] pt-8 text-xs font-medium tracking-wide text-[#f7e2d6]/50 md:flex-row">
+    <div class="flex flex-col items-center justify-between border-t border-[#8a0208] pt-8 text-xs font-medium tracking-wide text-[#fbeceb]/50 md:flex-row">
       <p>COPYRIGHT &copy; {new Date().getFullYear()} {BRAND_NAME}. ALL RIGHTS RESERVED.</p>
       <div class="mt-4 flex gap-4 md:mt-0">
         <a href="/terms/" class="transition-colors hover:text-[#f5c542]">TERMS &amp; CONDITIONS</a>

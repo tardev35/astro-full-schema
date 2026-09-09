@@ -1,81 +1,83 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
-import Announcement from "../components/Announcement5.astro";
+import Announcement from "../components/Announcement3.astro";
 import ContentBox from "../components/ContentBox.astro";
-import ContentBoxCyberCut from "../components/ContentBoxCyberCut.astro";
-import ContentBoxTwoNeumorphism from "../components/ContentBoxTwoNeumorphism.astro";
-import ContentBoxSevenThreeCyberCut from "../components/ContentBoxSevenThreeCyberCut.astro";
-import ContentBoxSevenThreeNeumorphism from "../components/ContentBoxSevenThreeNeumorphism.astro";
+import ContentBoxPremium from "../components/ContentBoxPremium.astro";
+import ContentBoxFloatingBadge from "../components/ContentBoxFloatingBadge.astro";
+import ContentBoxTwoPremium from "../components/ContentBoxTwoPremium.astro";
+import ContentBoxSpecial from "../components/ContentBoxSpecial.astro";
+import ContentBox3ThreePremium from "../components/ContentBox3ThreePremium.astro";
+import ContentBoxSevenThreePremium from "../components/ContentBoxSevenThreePremium.astro";
+import ContentBoxSevenThreeFloatingBadge from "../components/ContentBoxSevenThreeFloatingBadge.astro";
 import FeatureHighlights from "../components/FeatureHighlights.astro";
 import ProviderGrid from "../components/ProviderGrid.astro";
 import GameRankingBoard from "../components/GameRankingBoard.astro";
 import SmoothCarousel from "../components/SmoothCarousel.astro";
-import LatestWinnersCyber from "../components/LatestWinnersCyber.astro";
+import LatestWinnersPremium from "../components/LatestWinnersPremium.astro";
 import LoginRtpSection from "../components/LoginRtpSection.astro";
 import ReviewCardSumo2 from "../components/ReviewCardSumo2.astro";
-import Faq3 from "../components/Faq3.astro";
+import Faq2 from "../components/Faq2.astro";
 import Navfoot from "../components/Navfoot.astro";
 
 import { Picture } from "astro:assets";
 import { pageGraph } from "../lib/schema";
-import imgAllServices from "../assets/slide2.png";
-import imgAutoWallet from "../assets/slide1.png";
+import imgServices from "../assets/slide3.png";
+import imgWithdraw from "../assets/slide1.png";
 
-const pageTitle = "PAYDAY24 เว็บสล็อตมั่นคง คาสิโนสดออนไลน์ มีกิจกรรมรับเครดิตทุกวัน";
+const pageTitle = "TOPGAMEVIP เว็บตรงเกมสล็อต สมัคร ฝาก ถอน ระบบออโต้";
 
-const pageDescription = "PAYDAY24 เว็บสล็อตมั่นคง รวมบริการ คาสิโนสด บาคาร่า หวย และกีฬาออนไลน์ มีกิจกรรมรับเครดิตทุกวัน คืนยอดเสีย เช็กอิน กงล้อ ฝากถอนออโต้ รองรับ True Wallet";
+const pageDescription = "TOPGAMEVIP เว็บตรงเกมสล็อต ลิขสิทธิ์แท้ เล่นได้อย่างมั่นใจ ฝากเงินเล่น ไม่มีขั้นต่ำ ถอนเงิน โอนไว ปลอดภัย ระบบออโต้ สมัคร ทำได้ง่าย มี AI ช่วยวิเคราะห์เกม";
 
 const announcement =
-  "PAYDAY24 เว็บสล็อตมั่นคง เว็บตรงลิขสิทธิ์แท้ จ่ายจริง 100% รวมสล็อตแตกง่าย แตกบ่อย จาก PG Slot, Joker Gaming และ Jili ไว้ในยูสเดียว • คาสิโนสดส่งตรงจากสตูดิโอชั้นนำอย่าง SA Gaming มีบาคาร่าและโต๊ะสดให้เลือกจากหน้าเดียว • หวยออนไลน์อัปเดตทุกงวด เลือกตลาดได้ตามรอบที่ระบบกำหนด • แทงบอลออนไลน์ในราคานับบอลที่ดีที่สุด ตามรายการแข่งขันที่เปิดให้บริการ • กิจกรรมรับเครดิตทุกวัน ทั้งเช็กอินประจำวัน กงล้อ กรอกโค้ด และเครดิตฟรีตามช่วงเวลา • คืนยอดเสียเป็นสิทธิ์ที่อิงเงื่อนไขการใช้งานของบัญชี เช็กหน้ากิจกรรมรับเครดิตก่อนเริ่มเล่นทุกครั้ง • ฝากถอนออโต้รองรับ True Wallet ทำรายการและดูสถานะได้เองจากหน้าเมมเบอร์ตลอด 24 ชั่วโมง";
+  "TOPGAMEVIP เว็บตรงเกมสล็อต ลิขสิทธิ์แท้จากค่ายผู้พัฒนาโดยตรง ไม่ผ่านเอเย่นต์ ไม่มีล็อกยูส ไม่ปรับจูนระบบหลังบ้าน • สมัครเองผ่านหน้าเว็บ กรอกข้อมูลพื้นฐานแล้วรับยูสเซอร์เนมภายในไม่กี่วินาที ไม่ต้องฝากก่อนเปิดยูส • ฝากเงินเล่นไม่มีขั้นต่ำ ทุนหลักสิบหลักร้อยก็เริ่มได้ เครดิตเข้าทันทีโดยไม่ต้องรอแอดมินอนุมัติ • ถอนเงินด้วยตัวเองได้ตลอด 24 ชั่วโมง ระบบออโต้ประมวลผลทันที ไม่ต้องส่งสลิป ไม่ต้องผ่านคนกลาง • ระบบ AI ช่วยสรุปรูปแบบการออกฟีเจอร์และความถี่ของโบนัส ให้อ่านจังหวะเกมได้ง่ายขึ้นโดยไม่แตะตัวเกมและไม่ปรับเรท • ทุกเกมเดินตามค่า RTP ต้นฉบับของค่าย ระบบนิ่ง ไม่สะดุด เล่นต่อเนื่องได้ทั้งบนมือถือและคอมพิวเตอร์";
 
-const allServicesAlt =
-  "ภาพโปรโมชั่น PAYDAY24 ข้อความ รวมบริการครบใน PAYDAY24 ค่ายชั้นนำในระบบเดียว มีพรีเซนเตอร์หญิงในชุดราตรีสีม่วง มือถือแสดงหน้าเว็บ PAYDAY24 ป้าย LIVE CASINO BACCARAT LOTTERY นักฟุตบอล ลูกบอลหวย ไพ่ และกองชิป พร้อมแถบหมวด คาสิโนสด บาคาร่า หวย กีฬา";
+const servicesAlt =
+  "ภาพโปรโมชั่น TOPGAMEVIP พื้นขาวแดง มีป้ายสีดำเรียงด้านซ้าย หวย บอล บาคาร่า สล็อต พรีเซนเตอร์หญิงชุดดำอยู่กลางภาพ โลโก้ TOPGAMEVIP ขวาบน ข้อความด้านล่าง ครบจบในที่เดียว และแถบติ๊กถูก บอล คาสิโน สล็อต ยิงปลา โก๋เซน มวย ไฮโล รูเล็ต";
 
-const autoWalletAlt =
-  "ภาพโปรโมชั่น PAYDAY24 ข้อความ ฝากถอนออโต้ รองรับ True Wallet คล่องตัว รวดเร็ว ใช้งานง่าย มีพรีเซนเตอร์ถือมือถือที่เปิดแอป True Wallet กระเป๋าเงิน หน้าจอทำรายการสำเร็จ เหรียญทอง นาฬิกา 24 ชั่วโมง และแถบข้อความ รองรับ True Wallet ฝากถอนออโต้ 24 ชั่วโมง ปลอดภัยเชื่อถือได้ พร้อมดูแลตลอด 24 ชม.";
+const withdrawAlt =
+  "ภาพโปรโมชั่น TOPGAMEVIP พื้นขาวแดง มีพรีเซนเตอร์หญิงชุดดำเหลือง โลโก้ TOPGAMEVIP ด้านบน ข้อความ COMMISSION คืนทุกยอดเล่นตลอดทั้งวัน 0.3% เล่นถึง 50% ถอนได้เลย สามารถกดรับง่ายๆ ที่หน้าเว็บได้เลยค่ะ รับสิทธิ์ก่อน 23.59 น. ของทุกวัน ยิ่งเล่นเยอะ ยิ่งได้เยอะ";
 
-const activityPoints = [
+const aiPoints = [
   {
-    icon: "💸",
-    title: "คืนยอดเสีย สิทธิ์ที่อิงเงื่อนไขการใช้งานของบัญชี",
-    description:
-      "คืนยอดเสียของ PAYDAY24 ไม่ใช่ของแจกที่ทุกบัญชีกดรับได้เหมือนกันหมด แต่เป็นสิทธิ์ที่ผูกกับเงื่อนไขการใช้งานและโปรที่เปิดอยู่ ณ เวลานั้น สมาชิกที่เข้าเกณฑ์จึงจะได้รับ ควรอ่านรายละเอียดของโปรแต่ละตัวก่อนเริ่มเล่น",
+    icon: "📈",
+    title: "อ่านจังหวะเกมจากข้อมูลจริง",
+    description: "ระบบสรุปรูปแบบการออกฟีเจอร์และความถี่ของโบนัสในช่วงเวลาต่าง ๆ ให้เห็นเป็นภาพเดียว แทนที่ผู้เล่นจะต้องนั่งจำเองทีละรอบ",
+    accent: "red" as const,
+  },
+  {
+    icon: "🤖",
+    title: "สัญญาณเชิงแนวโน้ม ไม่ใช่คำสั่ง",
+    description: "สิ่งที่ได้คือข้อมูลประกอบการตัดสินใจ ผู้เล่นยังเป็นคนเลือกเองว่าจะลงเมื่อไหร่ หยุดเมื่อไหร่ และจะเล่นเกมไหนต่อ",
     accent: "gold" as const,
   },
   {
-    icon: "📅",
-    title: "เช็กอิน สิทธิ์ของคนที่กลับเข้ามาตามรอบ",
-    description: "เช็กอินประจำวันเน้นการกลับเข้ามารับสิทธิ์ตามรอบมากกว่าจำนวนเงินที่เล่น บางรายการอิงจำนวนวันเข้าใช้งาน จึงเหมาะกับสมาชิกที่เข้าระบบเป็นประจำอยู่แล้ว มากกว่าคนที่นาน ๆ เปิดเว็บที",
-    accent: "purple" as const,
-  },
-  {
-    icon: "🎡",
-    title: "กงล้อ จังหวะลุ้นสั้น ๆ ระหว่างวัน",
-    description: "กงล้อเพิ่มความสนุกด้วยการลุ้นของรางวัลหรือเครดิตจากกิจกรรม เป็นจังหวะลุ้นแบบสั้น ๆ ที่ไม่กินเวลา ทำหน้าที่คนละอย่างกับคืนยอดเสียและเช็กอิน ไม่ใช่โบนัสก้อนเดียวที่เปลี่ยนชื่อไปมา",
-    accent: "gold" as const,
+    icon: "🔍",
+    title: "ไม่แตะตัวเกม ไม่ปรับเรท",
+    description: "AI ทำงานอยู่นอกตัวเกม จึงไม่เปลี่ยนอัตราจ่ายและไม่ลดความโปร่งใส ทุกผลลัพธ์ยังเดินตามกลไกของค่ายเกมตามเดิม",
+    accent: "red" as const,
   },
 ];
 
 const faqs = [
   {
-    q: "PAYDAY24 มีเกมสล็อตจากค่ายไหนให้เลือกบ้าง",
-    a: "PAYDAY24 เป็นเว็บตรงลิขสิทธิ์แท้ที่รวมเกมสล็อตแตกง่าย แตกบ่อย จากค่ายชั้นนำอย่าง PG Slot, Joker Gaming และ Jili ไว้ในยูสเดียว สลับค่ายและเปลี่ยนเกมได้จากเมนูเดิมโดยไม่ต้องสมัครยูสใหม่",
+    q: "TOPGAMEVIP เป็นเว็บตรงเกมสล็อตแบบไหน",
+    a: "TOPGAMEVIP คือเว็บตรงเกมสล็อตแท้ ไม่ผ่านเอเย่นต์ เน้นความโปร่งใส ไม่มีล็อกยูส ระบบเสถียร เหมาะกับผู้เล่นยุคใหม่ที่ต้องการวัดผลด้วยฝีมือครับ",
   },
   {
-    q: "นอกจากสล็อตแล้ว PAYDAY24 มีคาสิโนสด หวย และกีฬาไหม",
-    a: "มีครับ PAYDAY24 ให้บริการคาสิโนสดส่งตรงจากสตูดิโอชั้นนำ เช่น SA Gaming ที่มีบาคาร่าเสมือนจริง พร้อมหวยออนไลน์ที่มีให้อัปเดตทุกงวด และแทงบอลออนไลน์ในราคานับบอลที่ดีที่สุด",
+    q: "สมัครสมาชิก TOPGAMEVIP ยากไหม ต้องทำอย่างไร",
+    a: "สมัครง่ายมากครับ ทำรายการผ่านระบบออโต้หน้าเว็บไซต์ได้ทันที เพียงกรอกข้อมูลพื้นฐาน ไม่ซับซ้อน และไม่บังคับเงื่อนไขผูกมัดใด ๆ ครับ",
   },
   {
-    q: "กิจกรรมรับเครดิตของ PAYDAY24 มีอะไรบ้าง",
-    a: "มีทั้งเช็กอินประจำวัน กงล้อ กรอกโค้ด โปรโมชั่น เครดิตฟรี และกิจกรรมพิเศษตามช่วงเวลา แต่ละแบบใช้เงื่อนไขไม่เหมือนกัน วิธีที่ง่ายที่สุดคือเข้าสู่ระบบแล้วเช็กหน้ากิจกรรมรับเครดิตก่อนเริ่มเล่น",
+    q: "ฝากเงินเล่น TOPGAMEVIP ขั้นต่ำเท่าไหร่",
+    a: "ที่ TOPGAMEVIP ฝากเงินไม่มีขั้นต่ำครับ ทุนน้อยก็เริ่มได้ ระบบออโต้ทำงานไว เครดิตเข้าทันทีโดยไม่ต้องรอแอดมินอนุมัติครับ",
   },
   {
-    q: "คืนยอดเสีย เช็กอิน และกงล้อ ต่างกันอย่างไร",
-    a: "คืนยอดเสียเป็นสิทธิ์ที่เชื่อมกับเงื่อนไขการใช้งานของสมาชิก เช็กอินเน้นการกลับเข้ามารับสิทธิ์ตามรอบ ส่วนกงล้อเป็นการลุ้นของรางวัลหรือเครดิตแบบสั้น ๆ ทั้งสามอย่างมีหน้าที่คนละแบบ ไม่ได้เป็นโบนัสก้อนเดียวเปลี่ยนชื่อไปมา",
+    q: "ระบบถอนเงินของ TOPGAMEVIP เชื่อถือได้ไหม",
+    a: "เชื่อถือได้ 100% ครับ เราใช้ระบบถอนเงินออโต้ที่แม่นยำและปลอดภัย โอนไว ตรงเวลา ครบทุกบาททุกสตางค์ ตลอด 24 ชั่วโมงครับ",
   },
   {
-    q: "PAYDAY24 ฝากถอนออโต้และรองรับ True Wallet หรือไม่",
-    a: "รองรับครับ สมาชิกทำรายการฝากถอนได้เองจากหน้าเมมเบอร์ ทั้งผ่าน True Wallet และบัญชีธนาคาร ความเร็วของแต่ละรายการขึ้นอยู่กับช่องทาง เวลา และสถานะของระบบในขณะนั้น จึงไม่ได้กำหนดเป็นเลขวินาทีตายตัว",
+    q: "ระบบวิเคราะห์เกมด้วย AI ของ TOPGAMEVIP คืออะไร",
+    a: "คือระบบช่วยอ่านจังหวะเกมครับ โดย AI จะวิเคราะห์ข้อมูลเรียลไทม์เพื่อชี้เป้าโอกาสโบนัส ช่วยให้ผู้เล่นตัดสินใจได้แม่นยำขึ้น โดยไม่แทรกแซงตัวเกมครับ",
   },
 ];
 
@@ -91,118 +93,186 @@ const graph = pageGraph(Astro, {
 
   <Announcement message={announcement} />
 
-  <ContentBoxCyberCut as="h1" title="PAYDAY24 เว็บสล็อตมั่นคง ที่มีทั้งเกมออนไลน์และกิจกรรมเครดิต ทุกวัน เล่นได้ไม่มีเบื่อ">
-    <p class="mb-4 text-left text-base leading-relaxed">
-      PAYDAY24 เว็บสล็อตมั่นคง ทางเข้าเล่นคาสิโนออนไลน์ และเว็บสล็อตอันดับ 1 เราคือเว็บตรงลิขสิทธิ์แท้ที่มั่นคง ปลอดภัย และจ่ายจริง 100% เต็มอิ่มไปกับเกมสล็อตแตกง่าย แตกบ่อย จากค่ายเกมชั้นนำ PG Slot,
-      Joker Gaming และ Jili ที่มาพร้อมกับระบบสล็อต RTP สูง ทุกบริการด้วยระบบฝากถอนออโต้ที่รวดเร็วทันใจ
-    </p>
+  <ContentBoxPremium as="h1" title="TOPGAMEVIP เว็บตรงเกมสล็อต สมัคร ฝาก ถอน ระบบออโต้">
+    <div class="flex flex-col gap-4">
+      <p class="text-left text-base leading-relaxed">
+        TOPGAMEVIP เว็บตรงเกมสล็อต ที่ออกแบบระบบสมัคร ฝาก ถอน แบบออโต้ ใช้งานง่ายสุด ๆ รองรับผู้เล่นที่ต้องการความเร็ว ความเสถียร และการจัดการเงินด้วยตัวเองผ่านมือถือ
+      </p>
 
-    <p class="text-left text-base leading-relaxed">
-      พิเศษสุด! สมัครสมาชิกใหม่วันนี้ รับโปรโมชั่นสุดคุ้ม พร้อมเครดิตฟรี และระบบคืนยอดเสียคอยซัพพอร์ต คลิกเลยที่ payday24.org เว็บตรงไม่ผ่านเอเย่นต์ที่คุณไว้วางใจ
-    </p>
-  </ContentBoxCyberCut>
+      <p class="text-left text-base leading-relaxed">
+        ทุกเกมเป็นลิขสิทธิ์แท้จากค่ายใหญ่ ระบบนิ่ง ไม่มีขั้นต่ำ เหมาะทั้งผู้เริ่มต้นที่เพิ่งเปิดยูสแรก และผู้เล่นที่มองหาเว็บไว้ใช้งานยาว ๆ
+      </p>
+
+      <p class="text-left text-base leading-relaxed">TOPGAMEVIP ลิงก์ทางเข้าสุดเสถียร ใช้งานสะดวก ปลอดภัย พร้อมมาตรฐานเว็บระดับ VIP ตั้งแต่หน้าสมัครไปจนถึงรายการถอนสุดท้ายของวัน</p>
+    </div>
+  </ContentBoxPremium>
 
   <ProviderGrid />
 
-  <ContentBoxSevenThreeCyberCut as="h2" titleright="PAYDAY24 รวมคาสิโนสด บาคาร่า หวย และกีฬาออนไลน์ จากค่ายชั้นนำ">
+  <ContentBoxSevenThreePremium as="h2" titleright="TOPGAMEVIP คือ เว็บตรงเกมสล็อต แบบไหน เหมาะกับใคร">
     <Picture
       slot="left"
-      src={imgAllServices}
-      alt={allServicesAlt}
+      src={imgServices}
+      alt={servicesAlt}
       loading="lazy"
       fetchpriority="low"
-      widths={[240, 346, 480, 692]}
-      sizes="(max-width: 767px) calc(100vw - 96px), 346px"
+      widths={[240, 348, 480, 696]}
+      sizes="(max-width: 767px) calc(100vw - 96px), 348px"
       decoding="async"
       formats={["avif", "webp"]}
       fallbackFormat="webp"
       quality={70}
-      class="mx-auto h-auto w-full rounded-2xl border border-[#fdc700]/45 shadow-[0_10px_30px_rgba(253,199,0,0.20)]"
+      class="mx-auto h-auto w-full rounded-2xl border border-[#f6c9c6] shadow-[0_10px_30px_rgba(230,0,18,0.14)]"
     />
 
     <div slot="right" class="flex flex-col gap-4">
       <p class="text-left text-base leading-relaxed">
-        นอกจากเกมสล็อตแล้ว PAYDAY24 ยังให้บริการคาสิโนสดส่งตรงจากสตูดิโอชั้นนำ เช่น SA Gaming มอบประสบการณ์เล่นบาคาร่าเสมือนจริง ตลอดจนบริการแทงบอลออนไลน์ในราคานับบอลที่ดีที่สุด
-        สนุกไปกับหวยออนไลน์ที่มีให้อัปเดตทุกงวด
+        TOPGAMEVIP คือเว็บเกมสล็อตแท้ ที่สร้างมาเพื่อตอบโจทย์ผู้เล่นยุคใหม่โดยเฉพาะ คือกลุ่มคนที่มองหาความจริงใจ และเบื่อหน่ายกับลูกไม้เดิม ๆ ของเว็บทั่วไป
       </p>
 
       <p class="text-left text-base leading-relaxed">
-        จุดเด่นของ PAYDAY24 จึงอยู่ที่ความหลากหลายมากกว่าการบังคับให้เล่นเกมแบบเดียว วันไหนสล็อตไม่ใช่อารมณ์ ก็ยังมีโต๊ะสด หวย หรือกีฬาให้เปลี่ยนบรรยากาศได้ทันที
+        ที่นี่เน้นความโปร่งใสในทุกขั้นตอนการบริการ เหมาะกับผู้เล่นที่ต้องการวัดผลด้วยฝีมือและดวงล้วน ๆ เพราะไม่มีล็อกยูส และไม่มีการปรับจูนระบบหลังบ้านเพื่อเอาเปรียบสมาชิก
+      </p>
+
+      <p class="text-left text-base leading-relaxed">
+        ตัวเกมทำงานด้วยระบบที่เสถียร ราบรื่น ไม่มีการสะดุดหรือเด้งออกให้เสียอารมณ์ TOPGAMEVIP จึงเป็นเว็บเกมสล็อตที่ปลอดภัย และรองรับทุกสไตล์การเล่นของคุณ
       </p>
     </div>
-  </ContentBoxSevenThreeCyberCut>
+  </ContentBoxSevenThreePremium>
 
-  <GameRankingBoard />
+  <ContentBox as="h2" title="สมัคร TOPGAMEVIP เว็บตรงเกมสล็อต ทำได้ง่ายมาก">
+    <div class="flex flex-col gap-4">
+      <p class="text-left text-base leading-relaxed">
+        การเริ่มต้นความสนุกระดับพรีเมียมไม่ควรเป็นเรื่องยาก TOPGAMEVIP จึงออกแบบขั้นตอนการสมัครสมาชิกให้กระชับที่สุด เข้าถึงบริการได้ทันทีโดยไม่ซับซ้อน
+      </p>
 
-  <ContentBoxTwoNeumorphism
-    as="h2"
-    title="กิจกรรมเครดิต PAYDAY24 เติมสีสันให้ทุกวัน ไม่ได้มีแค่เข้าเกมแล้วจบ"
-    titleleft="กิจกรรมที่เปิดให้เก็บระหว่างวัน"
-    titleright="เช็กหน้ากิจกรรมก่อนเริ่มเล่นทุกครั้ง">
-    <p slot="left" class="text-left text-base leading-relaxed">
-      ทุกครั้งที่เข้าสู่ระบบเล่น โปรดอย่าลืมเช็กอินประจำวัน กงล้อ กรอกโค้ด โปรโมชั่น เครดิตฟรี หรือกิจกรรมพิเศษตามช่วงเวลา กิจกรรมแต่ละแบบของ PAYDAY24 ไม่ได้ใช้เงื่อนไขเหมือนกันทั้งหมด
-    </p>
+      <p class="text-left text-base leading-relaxed">
+        เพียงกรอกข้อมูลพื้นฐานผ่านหน้าเว็บไซต์ ก็รับยูสเซอร์เนมได้ด้วยตัวเองภายในเวลาไม่กี่วินาที ทุกขั้นตอนใช้ระบบออโต้ที่มีความแม่นยำและรวดเร็ว
+      </p>
 
-    <p slot="right" class="text-left text-base leading-relaxed">
-      บางรายการอาจอิงจำนวนวันเข้าใช้งาน บางกิจกรรมต้องกดรับสิทธิ์หรือกรอกข้อมูลก่อน และบางโปรเปิดเฉพาะช่วงที่กำหนด วิธีที่ง่ายที่สุดคือเข้าสู่ระบบแล้วเช็กหน้ากิจกรรมรับเครดิตก่อนเริ่มเล่น
-      เพราะสิทธิ์ที่บัญชีมีวันนี้อาจไม่เหมือนเมื่อวาน
-    </p>
-  </ContentBoxTwoNeumorphism>
-
-  <ContentBox as="h2" title="คืนยอดเสีย เช็กอิน และกงล้อ 3 กิจกรรมที่ให้สมาชิกได้ลุ้นสิทธิ์ต่างกัน">
-    <p class="mb-4 text-left text-base leading-relaxed">
-      คืนยอดเสีย PAYDAY24 เป็นสิทธิ์ที่เชื่อมกับเงื่อนไขการใช้งานของสมาชิก ขณะที่เช็กอินเน้นการกลับเข้ามารับสิทธิ์ตามรอบ ส่วนกงล้อเพิ่มความสนุกด้วยการลุ้นของรางวัลหรือเครดิตจากกิจกรรม
-      แต่ละแบบจึงมีหน้าที่คนละอย่าง ไม่ได้เป็นโบนัสก้อนเดียวเปลี่ยนชื่อไปมา
-    </p>
-
-    <p class="text-left text-base leading-relaxed">
-      เสน่ห์ของ 3 กิจกรรมนี้อยู่ตรงที่ทำให้ PAYDAY24 มีอะไรให้ทำมากกว่าการเปิดเกมแล้วออก เช็กอินเหมาะกับคนที่เข้าระบบเป็นประจำ กงล้อเพิ่มจังหวะลุ้นแบบสั้น ๆ
-      ส่วนคืนยอดเสียเป็นอีกสิทธิ์สำหรับบัญชีที่เข้าเกณฑ์ตามโปร ณ เวลานั้น
-    </p>
-
-    <FeatureHighlights items={activityPoints} />
+      <p class="text-left text-base leading-relaxed">
+        ข้อมูลของท่านถูกบันทึกอย่างปลอดภัยโดยไม่ต้องรอเจ้าหน้าที่อนุมัติ และที่สำคัญที่สุดคือเราไม่บังคับเงื่อนไขผูกมัดใด ๆ ไม่ต้องฝากเงินก่อนเพื่อเปิดยูส ไม่ต้องแชร์ หรือทำกิจกรรมแลกเข้า
+      </p>
+    </div>
   </ContentBox>
-
-  <ContentBoxSevenThreeNeumorphism as="h2" title="เมื่อมีระบบออโต้และ True Wallet ช่วยให้ ฝากถอนคล่องตัว ได้ไวแค่ไหน">
-    <Picture
-      slot="left"
-      src={imgAutoWallet}
-      alt={autoWalletAlt}
-      loading="lazy"
-      fetchpriority="low"
-      widths={[240, 384, 480, 768]}
-      sizes="(max-width: 767px) calc(100vw - 96px), 384px"
-      decoding="async"
-      formats={["avif", "webp"]}
-      fallbackFormat="webp"
-      quality={70}
-      class="mx-auto h-auto w-full rounded-2xl border border-[#fdc700]/45 shadow-[0_10px_30px_rgba(253,199,0,0.20)]"
-    />
-
-    <div slot="right" class="flex flex-col gap-4">
-      <p class="text-left text-base leading-relaxed">
-        ความเร็วของรายการ PAYDAY24 อาจแตกต่างกันตามช่องทาง เวลา และสถานะของระบบในขณะนั้น ดังนั้นคำว่า “โอนไว” ไม่ควรหมายถึงเลขวินาทีตายตัว แต่หมายถึงการลดขั้นตอนที่ไม่จำเป็นให้น้อยลง
-      </p>
-
-      <p class="text-left text-base leading-relaxed">สมาชิกฝาก ถอน และกลับไปเลือกเกมได้ต่อเนื่องกว่าเดิม เงินควรเดินตามเกมให้ทัน ไม่ใช่ให้คนเล่นนั่งเฝ้าหน้าจอรอจนความสนุกหมดก่อนครับ</p>
-
-      <a
-        href="/register"
-        class="inline-flex w-fit items-center gap-2 rounded-full bg-gradient-to-r from-[#ffe680] via-[#fdc700] to-[#d99400] px-7 py-3 text-sm font-black tracking-widest text-[#150726] uppercase shadow-[0_10px_30px_rgba(253,199,0,0.30)] transition-transform duration-300 hover:scale-105">
-        <span aria-hidden="true">🎲</span> สมัครสมาชิก PAYDAY24
-      </a>
-    </div>
-  </ContentBoxSevenThreeNeumorphism>
-
-  <SmoothCarousel />
-
-  <LatestWinnersCyber />
 
   <LoginRtpSection />
 
+  <ContentBoxTwoPremium as="h2" title="ฝากเงินเล่น TOPGAMEVIP ไม่มีขั้นต่ำ เริ่มได้ทุกงบ" titleleft="ทุนน้อยก็เริ่มได้ทันที" titleright="ระบบออโต้ทำงานไว ไม่ต้องรออนุมัติ">
+    <div slot="left" class="flex flex-col gap-4">
+      <p class="text-left text-base leading-relaxed">
+        TOPGAMEVIP เปิดอิสระทางการเงินให้คุณอย่างเต็มที่ เราเข้าใจผู้เล่นทุกกลุ่ม จึงออกแบบระบบมาให้รองรับการฝากถอนแบบไม่มีขั้นต่ำ เพื่อให้เริ่มต้นได้อย่างสบายใจที่สุด
+      </p>
+
+      <p class="text-left text-base leading-relaxed">ไม่ว่าจะมีงบเท่าไหร่ ทุนน้อยก็เริ่มได้ทันที จะหลักสิบหรือหลักร้อยก็สนุกกับเกมลิขสิทธิ์แท้ตัวเดียวกับที่คนทุนหนาเล่นอยู่</p>
+    </div>
+
+    <div slot="right" class="flex flex-col gap-4">
+      <p class="text-left text-base leading-relaxed">ระบบออโต้ของเราทำงานไว ทำรายการปุ๊บเครดิตเข้าปั๊บ ไม่ต้องรออนุมัติจากแอดมินให้เสียเวลา และไม่ต้องส่งสลิปให้ใครตรวจก่อน</p>
+
+      <p class="text-left text-base leading-relaxed">
+        จึงตอบโจทย์ทั้งมือใหม่สายทดลองที่อยากลองด้วยงบน้อยก่อน และมือโปรที่ต้องการความรวดเร็วในการล่ารางวัลโดยไม่ต้องหยุดรอกลางทาง
+      </p>
+    </div>
+  </ContentBoxTwoPremium>
+
+  <ContentBoxSevenThreeFloatingBadge as="h2" title="ถอนเงิน TOPGAMEVIP โอนไว ตรงเวลา รวดเร็ว ปลอดภัย">
+    <Picture
+      slot="left"
+      src={imgWithdraw}
+      alt={withdrawAlt}
+      loading="lazy"
+      fetchpriority="low"
+      widths={[240, 353, 480, 706]}
+      sizes="(max-width: 767px) calc(100vw - 96px), 353px"
+      decoding="async"
+      formats={["avif", "webp"]}
+      fallbackFormat="webp"
+      quality={70}
+      class="mx-auto h-auto w-full rounded-2xl border border-[#f6c9c6] shadow-[0_10px_30px_rgba(230,0,18,0.14)]"
+    />
+
+    <div slot="right" class="flex flex-col gap-4">
+      <p class="text-left text-base leading-relaxed">
+        ยกระดับการบริการด้วยระบบถอนเงินผ่านระบบออโต้ที่ทันสมัยที่สุด ทุกยอดเงินที่คุณทำได้จะถูกส่งตรงเข้าบัญชีอย่างรวดเร็วและแม่นยำภายในไม่กี่วินาที
+      </p>
+
+      <p class="text-left text-base leading-relaxed">
+        ไม่ต้องผ่านขั้นตอนการตรวจสอบจากคนกลางให้ล่าช้า คุณทำรายการถอนได้ด้วยตัวเองตลอด 24 ชั่วโมง ไม่ว่าจะถอนหลักร้อยหรือหลักแสน
+      </p>
+
+      <p class="text-left text-base leading-relaxed">ระบบ AI ของเราพร้อมประมวลผลทันทีและปลอดภัยสูงสุด มั่นใจได้เลยว่าเงินเข้าชัวร์ ครบทุกบาททุกสตางค์ ตรงเวลาทุกรายการ</p>
+
+      <a
+        href="/register"
+        class="inline-flex w-fit items-center gap-2 rounded-full bg-gradient-to-r from-[#ff4b41] via-[#e60012] to-[#b30009] px-7 py-3 text-sm font-black tracking-widest text-white uppercase shadow-[0_10px_30px_rgba(230,0,18,0.30)] transition-transform duration-300 hover:scale-105">
+        <span aria-hidden="true">🎰</span> สมัครสมาชิก TOPGAMEVIP
+      </a>
+    </div>
+  </ContentBoxSevenThreeFloatingBadge>
+
+  <LatestWinnersPremium />
+
+  <ContentBoxSpecial as="h2" title="ระบบออโต้ของ TOPGAMEVIP ทำงานอย่างไร">
+    <div slot="left" class="flex min-w-0 flex-1 flex-col gap-4">
+      <p class="text-left text-base leading-relaxed">ระบบออโต้ของ TOPGAMEVIP ให้ผู้เล่นจัดการทุกขั้นตอนด้วยตัวเองอย่างราบรื่น ตั้งแต่สมัคร ฝาก ไปจนถึงถอนเงิน</p>
+
+      <p class="text-left text-base leading-relaxed">ทุกกระบวนการเป็นแบบฝากถอนออโต้ที่ทำงานตรงผ่านระบบ ไม่ต้องรอแอดมิน และไม่ต้องส่งสลิปให้เสียจังหวะการเล่น</p>
+    </div>
+
+    <div slot="right" class="flex min-w-0 flex-1 flex-col gap-4">
+      <p class="text-left text-base leading-relaxed">ระบบจะประมวลผลคำสั่งตามลำดับอย่างเป็นระบบ ลดความคลาดเคลื่อนที่อาจเกิดจากคนกลาง หัวใจของระบบนี้คือความแม่นยำและเสถียร</p>
+
+      <p class="text-left text-base leading-relaxed">ทุกคำสั่งถูกตรวจสอบและยืนยันแบบอัตโนมัติ ทำให้การใช้งานต่อเนื่อง ไม่สะดุด และไม่สร้างความกังวลระหว่างเล่น</p>
+
+      <p class="text-left text-base leading-relaxed">TOPGAMEVIP วางระบบให้นิ่งเพื่อให้คุณโฟกัสกับการเล่นได้เต็มที่ โดยไม่ต้องคอยพะวงกับขั้นตอนหลังบ้าน</p>
+    </div>
+  </ContentBoxSpecial>
+
+  <ContentBoxFloatingBadge as="h2" title="ระบบวิเคราะห์เกมด้วย AI ของ TOPGAMEVIP ช่วยอะไรผู้เล่น">
+    <div class="flex flex-col gap-4">
+      <p class="text-left text-base leading-relaxed">
+        TOPGAMEVIP พัฒนาประสบการณ์การเล่นให้ก้าวไปอีกขั้นด้วยแนวคิดการสูตรเล่นด้วย AI ซึ่งถูกออกแบบมาเพื่อช่วยผู้เล่นอ่านจังหวะเกมได้ดีขึ้น ไม่ใช่การคุมผลหรือปรับอัตราการชนะ
+      </p>
+
+      <p class="text-left text-base leading-relaxed">
+        ระบบจะทำหน้าที่วิเคราะห์ข้อมูลการเล่นแบบเรียลไทม์ เช่น รูปแบบการออกฟีเจอร์ และความถี่ของโบนัสในช่วงเวลาต่าง ๆ แล้วสรุปออกมาเป็นสัญญาณเชิงแนวโน้มให้ผู้เล่นใช้ประกอบการตัดสินใจ
+      </p>
+
+      <p class="text-left text-base leading-relaxed">
+        สิ่งสำคัญคือ ระบบ AI ของ TOPGAMEVIP ไม่ยุ่งกับตัวเกม ไม่ปรับเรท และไม่ลดความโปร่งใส แต่ทำหน้าที่เหมือนผู้ช่วยส่วนตัวที่ช่วยจัดระเบียบข้อมูลให้เข้าใจง่าย เล่นได้อย่างมีเหตุผลมากขึ้น
+      </p>
+
+      <FeatureHighlights items={aiPoints} />
+    </div>
+  </ContentBoxFloatingBadge>
+
+  <ContentBox3ThreePremium
+    as="h2"
+    title="เกมสล็อต ลิขสิทธิ์แท้ ค่า RTP เว็บตรง เล่นได้อย่างมั่นใจ"
+    titleleft="ลิขสิทธิ์แท้จากค่ายโดยตรง"
+    titlecenter="ค่า RTP เว็บตรงที่เที่ยงตรง"
+    titleright="เล่นได้อย่างมั่นใจ">
+    <p slot="left" class="text-left text-base leading-relaxed">
+      ทุกเกมภายในเว็บ TOPGAMEVIP เป็นเกมสล็อตลิขสิทธิ์แท้จากค่ายผู้พัฒนาชั้นนำโดยตรง เพื่อให้คุณได้สัมผัสมาตรฐานระดับโลกอย่างแท้จริง
+    </p>
+
+    <p slot="center" class="text-left text-base leading-relaxed">
+      ทุกเกมทำงานด้วยระบบที่ถูกต้องตามต้นฉบับ ค่า RTP เว็บตรง หรืออัตราการจ่ายเงินคืนผู้เล่น จึงเสถียรและเที่ยงตรงที่สุดตามเกณฑ์ที่บริษัทแม่กำหนดไว้
+    </p>
+
+    <p slot="right" class="text-left text-base leading-relaxed">
+      ไม่มีการปรับแต่งเปอร์เซ็นต์แพ้ชนะให้เสียมาตรฐาน ทุกจังหวะการเข้าถึงโบนัสจึงเป็นไปตามกลไกของระบบจริงที่ยุติธรรม โปร่งใส และให้ประสบการณ์การเล่นที่ดีที่สุด
+    </p>
+  </ContentBox3ThreePremium>
+
+  <GameRankingBoard />
+
+  <SmoothCarousel />
+
   <ReviewCardSumo2 />
 
-  <Faq3 title="FAQ คำถามที่พบบ่อยเกี่ยวกับ PAYDAY24" faqs={faqs} />
+  <Faq2 title="คำถามที่พบบ่อยเกี่ยวกับ TOPGAMEVIP" faqs={faqs} />
 
   <Navfoot />
 </MainLayout>

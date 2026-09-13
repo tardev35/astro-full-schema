@@ -72,10 +72,10 @@ export default defineConfig({
   },
 
   redirects: {
-    "/line": "https://tinyurl.com/suhng",
+    "/line": "https://tinyurl.com/amb66",
   },
 
-  site: "https://topgamevip-homepage.net",
+  site: "https://ambheng88.org",
   integrations: [
     sitemap({
       // /login, /register and /line are forwarding pages that all ship

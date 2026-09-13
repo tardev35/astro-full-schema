@@ -8,38 +8,38 @@ const { title, as: HeadingTag = "h2" } = Astro.props;
 
 <section class="relative z-10 mx-auto mb-10 w-full max-w-[1400px] px-4 font-sans">
   <div
-    class="group relative isolate w-full overflow-hidden rounded-3xl border border-[#f6c9c6] bg-white p-6 text-[#2d1214] shadow-[0_10px_30px_rgba(230,0,18,0.12)] transition-all duration-500 hover:border-[#e60012]/45 md:p-10">
+    class="group relative isolate w-full overflow-hidden rounded-3xl border border-[#4a1030] bg-[#170512] p-6 text-[#f3e3ee] shadow-[0_10px_30px_rgba(255,45,142,0.16)] transition-all duration-500 hover:border-[#ff2d8e]/55 md:p-10">
     <div
       aria-hidden="true"
-      class="pointer-events-none absolute top-0 left-1/2 -z-10 h-[3px] w-1/2 -translate-x-1/2 bg-gradient-to-r from-transparent via-[#e60012] to-transparent opacity-60 transition-opacity duration-500 group-hover:opacity-100">
+      class="pointer-events-none absolute top-0 left-1/2 -z-10 h-[3px] w-1/2 -translate-x-1/2 bg-gradient-to-r from-transparent via-[#ff2d8e] to-transparent opacity-60 transition-opacity duration-500 group-hover:opacity-100">
     </div>
 
     {
       title && (
-        <header class="mb-8 flex items-center gap-4 border-b border-[#f6c9c6] pb-4">
-          <div aria-hidden="true" class="h-8 w-1.5 shrink-0 rounded-full bg-gradient-to-b from-[#e60012] to-[#d4a017] shadow-[0_0_10px_rgba(230,0,18,0.35)]" />
-          <HeadingTag class="bg-gradient-to-r from-[#8a0208] via-[#e60012] to-[#8a6410] bg-clip-text text-2xl leading-normal font-black tracking-widest text-transparent uppercase">{title}</HeadingTag>
+        <header class="mb-8 flex items-center gap-4 border-b border-[#4a1030] pb-4">
+          <div aria-hidden="true" class="h-8 w-1.5 shrink-0 rounded-full bg-gradient-to-b from-[#ff2d8e] to-[#ffe814] shadow-[0_0_10px_rgba(255,45,142,0.45)]" />
+          <HeadingTag class="bg-gradient-to-r from-[#ff74b6] via-[#ff2d8e] to-[#ffe814] bg-clip-text text-2xl leading-normal font-black tracking-widest text-transparent uppercase">{title}</HeadingTag>
         </header>
       )
     }
 
     <div class="grid grid-cols-1 gap-6 lg:grid-cols-2 lg:gap-10">
       <article
-        class="relative flex gap-4 rounded-2xl border border-[#f6c9c6] bg-[#fff7f6] p-6 text-left text-base leading-relaxed text-[#2d1214] transition-all duration-300 hover:-translate-y-2 hover:border-[#e60012]/45 hover:bg-[#ffe9e7] hover:shadow-[0_15px_40px_rgba(230,0,18,0.16)]">
+        class="relative flex gap-4 rounded-2xl border border-[#4a1030] bg-[#280a1c] p-6 text-left text-base leading-relaxed text-[#f3e3ee] transition-all duration-300 hover:-translate-y-2 hover:border-[#ff2d8e]/55 hover:bg-[#4a1030] hover:shadow-[0_15px_40px_rgba(255,45,142,0.24)]">
         <div
           aria-hidden="true"
-          class="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl border border-[#b30009]/40 bg-gradient-to-br from-[#ff4b41] via-[#e60012] to-[#b30009] text-2xl shadow-[0_5px_15px_rgba(230,0,18,0.28)]">
-          ⚙️
+          class="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl border border-[#7d0b46] bg-gradient-to-br from-[#ff74b6] via-[#ff2d8e] to-[#c20e6a] text-2xl shadow-[0_5px_15px_rgba(255,45,142,0.35)]">
+          💥
         </div>
         <slot name="left" />
       </article>
 
       <article
-        class="relative flex gap-4 rounded-2xl border border-[#f6c9c6] bg-[#fff7f6] p-6 text-left text-base leading-relaxed text-[#2d1214] transition-all duration-300 hover:-translate-y-2 hover:border-[#d4a017]/60 hover:bg-[#ffe9e7] hover:shadow-[0_15px_40px_rgba(212,160,23,0.20)]">
+        class="relative flex gap-4 rounded-2xl border border-[#4a1030] bg-[#280a1c] p-6 text-left text-base leading-relaxed text-[#f3e3ee] transition-all duration-300 hover:-translate-y-2 hover:border-[#ffe814]/60 hover:bg-[#4a1030] hover:shadow-[0_15px_40px_rgba(255,232,20,0.22)]">
         <div
           aria-hidden="true"
-          class="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl border border-[#8a6410]/40 bg-gradient-to-br from-[#ffe9a8] via-[#f5c542] to-[#d4a017] text-2xl shadow-[0_5px_15px_rgba(212,160,23,0.28)]">
-          🎯
+          class="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl border border-[#c9a800] bg-gradient-to-br from-[#fff27a] via-[#ffe814] to-[#c9a800] text-2xl shadow-[0_5px_15px_rgba(255,232,20,0.30)]">
+          🏦
         </div>
         <slot name="right" />
       </article>

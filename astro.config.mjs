@@ -72,10 +72,10 @@ export default defineConfig({
   },
 
   redirects: {
-    "/line": "https://tinyurl.com/amb66",
+    "/line": "https://tinyurl.com/sak66",
   },
 
-  site: "https://ambheng88.org",
+  site: "https://babyshark8899-brand.com",
   integrations: [
     sitemap({
       // /login, /register and /line are forwarding pages that all ship

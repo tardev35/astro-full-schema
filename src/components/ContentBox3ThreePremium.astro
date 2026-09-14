@@ -11,22 +11,22 @@ const { title, as: HeadingTag = "h2", titleleft, titlecenter, titleright } = Ast
 
 <section class="relative z-10 mx-auto mb-8 w-full max-w-7xl px-4 font-sans">
   <div
-    class="group relative w-full overflow-hidden rounded-3xl border border-[#f6c9c6] bg-white p-8 text-[#2d1214] shadow-[0_10px_30px_rgba(230,0,18,0.12)] transition-all duration-500 hover:border-[#e60012]/45 hover:shadow-[0_15px_40px_rgba(230,0,18,0.20)] md:p-10">
+    class="group relative w-full overflow-hidden rounded-3xl border border-[#123a7d] bg-[#04143c] p-8 text-[#dbe9ff] shadow-[0_10px_30px_rgba(11,131,250,0.16)] transition-all duration-500 hover:border-[#0b83fa]/55 hover:shadow-[0_15px_40px_rgba(11,131,250,0.28)] md:p-10">
     {
       title && (
-        <header class="mb-8 flex items-center gap-4 border-b border-[#f6c9c6] pb-4">
-          <span aria-hidden="true" class="h-8 w-1.5 shrink-0 rounded-full bg-gradient-to-b from-[#e60012] via-[#b30009] to-[#d4a017] shadow-[0_0_10px_rgba(230,0,18,0.35)]" />
-          <HeadingTag class="bg-gradient-to-r from-[#8a0208] via-[#e60012] to-[#8a6410] bg-clip-text text-2xl leading-normal font-black tracking-widest text-transparent uppercase">{title}</HeadingTag>
+        <header class="mb-8 flex items-center gap-4 border-b border-[#123a7d] pb-4">
+          <span aria-hidden="true" class="h-8 w-1.5 shrink-0 rounded-full bg-gradient-to-b from-[#0b83fa] via-[#0057c7] to-[#e8202a] shadow-[0_0_10px_rgba(11,131,250,0.45)]" />
+          <HeadingTag class="bg-gradient-to-r from-[#9ed4ff] via-[#38a9ff] to-[#ff8080] bg-clip-text text-2xl leading-normal font-black tracking-widest text-transparent uppercase">{title}</HeadingTag>
         </header>
       )
     }
 
     <div class="relative z-10 grid grid-cols-1 gap-8 md:grid-cols-3">
-      <article class="flex flex-col gap-3 border-b border-[#f6c9c6] pb-8 text-left text-base leading-relaxed text-[#2d1214] md:border-r md:border-b-0 md:pr-8 md:pb-0">
+      <article class="flex flex-col gap-3 border-b border-[#123a7d] pb-8 text-left text-base leading-relaxed text-[#dbe9ff] md:border-r md:border-b-0 md:pr-8 md:pb-0">
         {
           titleleft && (
-            <p class="flex items-center gap-2 text-lg leading-normal font-black tracking-widest text-[#8a0208] uppercase">
-              <span aria-hidden="true" class="h-2 w-2 shrink-0 rounded-full bg-[#e60012] shadow-[0_0_8px_rgba(230,0,18,0.55)]" />
+            <p class="flex items-center gap-2 text-lg leading-normal font-black tracking-widest text-[#6cc5ff] uppercase">
+              <span aria-hidden="true" class="h-2 w-2 shrink-0 rounded-full bg-[#0b83fa] shadow-[0_0_8px_rgba(11,131,250,0.65)]" />
               {titleleft}
             </p>
           )
@@ -34,11 +34,11 @@ const { title, as: HeadingTag = "h2", titleleft, titlecenter, titleright } = Ast
         <slot name="left" />
       </article>
 
-      <article class="flex flex-col gap-3 border-b border-[#f6c9c6] pb-8 text-left text-base leading-relaxed text-[#2d1214] md:border-r md:border-b-0 md:px-4 md:pb-0">
+      <article class="flex flex-col gap-3 border-b border-[#123a7d] pb-8 text-left text-base leading-relaxed text-[#dbe9ff] md:border-r md:border-b-0 md:px-4 md:pb-0">
         {
           titlecenter && (
-            <p class="flex items-center gap-2 text-lg leading-normal font-black tracking-widest text-[#8a0208] uppercase">
-              <span aria-hidden="true" class="h-2 w-2 shrink-0 rounded-full bg-[#d4a017] shadow-[0_0_8px_rgba(212,160,23,0.55)]" />
+            <p class="flex items-center gap-2 text-lg leading-normal font-black tracking-widest text-[#ff8080] uppercase">
+              <span aria-hidden="true" class="h-2 w-2 shrink-0 rounded-full bg-[#e8202a] shadow-[0_0_8px_rgba(232,32,42,0.65)]" />
               {titlecenter}
             </p>
           )
@@ -46,11 +46,11 @@ const { title, as: HeadingTag = "h2", titleleft, titlecenter, titleright } = Ast
         <slot name="center" />
       </article>
 
-      <article class="flex flex-col gap-3 text-left text-base leading-relaxed text-[#2d1214] md:pl-8">
+      <article class="flex flex-col gap-3 text-left text-base leading-relaxed text-[#dbe9ff] md:pl-8">
         {
           titleright && (
-            <p class="flex items-center gap-2 text-lg leading-normal font-black tracking-widest text-[#8a0208] uppercase">
-              <span aria-hidden="true" class="h-2 w-2 shrink-0 rounded-full bg-[#b30009] shadow-[0_0_8px_rgba(179,0,9,0.55)]" />
+            <p class="flex items-center gap-2 text-lg leading-normal font-black tracking-widest text-[#9ed4ff] uppercase">
+              <span aria-hidden="true" class="h-2 w-2 shrink-0 rounded-full bg-[#6cc5ff] shadow-[0_0_8px_rgba(108,197,255,0.65)]" />
               {titleright}
             </p>
           )

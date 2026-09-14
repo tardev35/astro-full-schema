@@ -25,19 +25,19 @@ const initialRows = Array.from({ length: 4 }, (_, i) => ({
   pending: brandFlag(Astro.site, `card-pending-${i}`),
 }));
 
-const PENDING_CLASS = "text-[#ffdd8a] bg-[#0f241d] border border-[#12c48f]/60 animate-pulse";
-const DONE_CLASS = "text-[#03251c] bg-gradient-to-r from-[#ffdd8a] via-[#e8b52c] to-[#8a6314] border border-[#e8b52c]/40 font-black shadow-md";
+const PENDING_CLASS = "text-[#12c48f] bg-[#001a3f] border border-[#12c48f]/60 animate-pulse";
+const DONE_CLASS = "text-[#000b24] bg-gradient-to-r from-[#9ed4ff] via-[#38a9ff] to-[#0057c7] border border-[#0b83fa]/40 font-black shadow-md";
 ---
 
 <div class="mx-auto w-full max-w-[1300px] p-4 font-sans">
   <section
-    aria-label="รายการถอนเงินล่าสุดของสมาชิก OSIRIS168"
-    class="relative overflow-hidden rounded-[30px] border-2 border-[#12c48f]/25 bg-[#0a1a15]/92 px-4 py-8 shadow-[0_10px_30px_rgba(18,196,143,0.20)] backdrop-blur-md md:p-10">
-    <div aria-hidden="true" class="pointer-events-none absolute -top-10 left-1/2 h-32 w-64 -translate-x-1/2 rounded-full bg-[#12c48f]/35 blur-[50px]"></div>
+    aria-label="รายการถอนเงินล่าสุดของสมาชิก BABYSHARK8899"
+    class="relative overflow-hidden rounded-[30px] border-2 border-[#0b83fa]/30 bg-[#04143c]/92 px-4 py-8 shadow-[0_10px_30px_rgba(11,131,250,0.22)] backdrop-blur-md md:p-10">
+    <div aria-hidden="true" class="pointer-events-none absolute -top-10 left-1/2 h-32 w-64 -translate-x-1/2 rounded-full bg-[#0b83fa]/35 blur-[50px]"></div>
 
     <div class="relative z-10 mb-8 flex items-center justify-center gap-3">
       <span aria-hidden="true" class="text-2xl">🏆</span>
-      <p class="bg-gradient-to-r from-[#ffdd8a] via-[#e8b52c] to-[#4ff0bb] bg-clip-text text-xl font-black tracking-wide text-transparent md:text-3xl">รายการถอนเงินล่าสุดของสมาชิก OSIRIS168</p>
+      <p class="bg-gradient-to-r from-[#9ed4ff] via-[#38a9ff] to-[#ff8080] bg-clip-text text-xl font-black tracking-wide text-transparent md:text-3xl">รายการถอนเงินล่าสุดของสมาชิก BABYSHARK8899</p>
       <span aria-hidden="true" class="text-2xl">🏆</span>
     </div>
 
@@ -54,7 +54,7 @@ const DONE_CLASS = "text-[#03251c] bg-gradient-to-r from-[#ffdd8a] via-[#e8b52c]
       {
         initialRows.map((row) => (
           <div data-winner-row class="winner-card transition-all duration-500 ease-out">
-            <div class="flex flex-col rounded-[20px] border border-[#064c39] bg-[#050d0b]/95 p-5 shadow-sm transition-all hover:border-[#e8b52c]/50 hover:bg-[#0f241d]/95">
+            <div class="flex flex-col rounded-[20px] border border-[#0a2258] bg-[#000b24]/95 p-5 shadow-sm transition-all hover:border-[#0b83fa]/50 hover:bg-[#001a3f]/95">
               <div class="mb-4 flex items-start justify-between">
                 <div data-winner-bank class={`flex h-10 w-10 items-center justify-center rounded-full border border-white/10 shadow-inner ${row.bank.color}`}>
                   <img data-winner-icon src={row.bank.icon} alt="" width="24" height="24" loading="lazy" decoding="async" class="h-6 w-6 object-contain" />
@@ -70,14 +70,14 @@ const DONE_CLASS = "text-[#03251c] bg-gradient-to-r from-[#ffdd8a] via-[#e8b52c]
                 </div>
               </div>
               <div>
-                <div class="text-sm text-[#b9d6c9]">
+                <div class="text-sm text-[#9fb8dc]">
                   ยูสเซอร์:{" "}
-                  <span data-winner-user class="font-bold text-[#dfeee6]">
+                  <span data-winner-user class="font-bold text-[#dbe9ff]">
                     {row.user}
                   </span>
                 </div>
-                <div class="mt-1 text-2xl font-black text-[#e8b52c]">
-                  <span data-winner-amount>{row.amount}</span> <span class="text-xs text-[#b9d6c9]">THB</span>
+                <div class="mt-1 text-2xl font-black text-[#38a9ff]">
+                  <span data-winner-amount>{row.amount}</span> <span class="text-xs text-[#9fb8dc]">THB</span>
                 </div>
               </div>
             </div>
@@ -86,8 +86,8 @@ const DONE_CLASS = "text-[#03251c] bg-gradient-to-r from-[#ffdd8a] via-[#e8b52c]
       }
     </div>
 
-    <p class="relative z-10 mt-6 text-center text-[11px] tracking-wide text-[#b9d6c9]">
-      ระบบออโต้ของ OSIRIS168 เชื่อมการฝากถอนเข้ากับหน้าเมมเบอร์ ส่งรายการและเช็กสถานะได้จากจุดเดียว หากรายการยังประมวลผลอยู่ไม่ควรกดซ้ำทันที รอให้ระบบอัปเดตก่อนแล้วค่อยกลับไปเล่นต่อ
+    <p class="relative z-10 mt-6 text-center text-[11px] tracking-wide text-[#9fb8dc]">
+      ระบบฝากถอนออโต้ของ BABYSHARK8899 รับคำขอและอัปเดตสถานะรายการในบัญชีสมาชิกให้เอง จ่ายเต็มทุกยอดทุกบิลโดยไม่ลดทอน หากยอดยังไม่อัปเดตหรือรายการค้าง ให้รอระบบประมวลผลตามเวลามาตรฐานก่อน แล้วค่อยกลับไปเล่นต่อ
     </p>
 
     <script type="application/json" data-winners-banks set:html={JSON.stringify(bankPool)} />

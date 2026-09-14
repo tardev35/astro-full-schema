@@ -16,16 +16,16 @@ const links = [
   { name: "สมัครสมาชิก", path: "/register", icon: "📝" },
   { name: "เข้าสู่ระบบ", path: "/login", icon: "🔑" },
   { name: "ทดลองเล่น", path: "/ทดลองเล่น", icon: "🎰" },
-  { name: "เกี่ยวกับเรา", path: "/about-us", icon: "🏁" },
+  { name: "เกี่ยวกับเรา", path: "/about-us", icon: "🦈" },
   { name: "ติดต่อเรา", path: "/contact-us", icon: "💬" },
 ];
 
-const logoAlt = "โลโก้ PAYDAY24 ตัวอักษร PayDay แบบเอียงสามมิติ คำว่า Pay เป็นสีขาวขอบดำ คำว่า Day เป็นสีทองไล่เฉด มีมงกุฎทองวางอยู่เหนือตัว D และมีแถบเฉียงสีทองสามแถบต่อท้าย";
+const logoAlt = "โลโก้ BABYSHARK8899 หัวฉลามการ์ตูนสีฟ้าฟันแหลมอยู่ในวงกลมสีแดง ตัวอักษร BABY สีแดง SHARK สีขาวเงิน และเลข 8899 สีฟ้าขอบดำ มีสายฟ้าสีเหลืองประกอบสองข้าง";
 ---
 
 <header class="sticky top-0 z-50 w-full font-sans">
-  <nav class="relative z-40 w-full bg-[#150726]/95 shadow-[0_4px_20px_rgba(0,0,0,0.55)]">
-    <div class="bg-theme-oklab absolute bottom-0 left-0 h-[2px] w-full opacity-80"></div>
+  <nav class="relative z-40 w-full bg-[#000b24]/95 shadow-[0_4px_20px_rgba(0,0,0,0.55)]">
+    <div class="absolute bottom-0 left-0 h-[2px] w-full bg-gradient-to-r from-[#00397f] via-[#0b83fa] to-[#38a9ff] opacity-80"></div>
 
     <div class="flex h-[65px] w-full items-center justify-between px-3 md:px-6 lg:h-[80px]">
       <div class="flex items-center">
@@ -39,12 +39,12 @@ const logoAlt = "โลโก้ PAYDAY24 ตัวอักษร PayDay แบ
                 sizes="140px"
                 loading="eager"
                 fetchpriority="high"
-                class="h-[35px] w-auto drop-shadow-[0_0_10px_rgba(253,199,0,0.5)] lg:h-[45px]"
+                class="h-[35px] w-auto drop-shadow-[0_0_10px_rgba(11,131,250,0.55)] lg:h-[45px]"
                 formats={["avif", "webp"]}
                 fallbackFormat="webp"
               />
             ) : (
-              <span class="bg-gradient-to-b from-[#ffe680] to-[#fdc700] bg-clip-text text-2xl font-black tracking-widest text-transparent">PAYDAY24</span>
+              <span class="bg-gradient-to-b from-[#6cc5ff] to-[#0b83fa] bg-clip-text text-2xl font-black tracking-widest text-transparent">BABYSHARK8899</span>
             )
           }
         </a>
@@ -57,10 +57,10 @@ const logoAlt = "โลโก้ PAYDAY24 ตัวอักษร PayDay แบ
               <span aria-hidden="true" class="text-base transition-transform duration-300 group-hover:-translate-y-0.5">
                 {link.icon}
               </span>
-              <span class={`transition-colors duration-300 ${isActive(link.path) ? "text-[#f3e9ff] drop-shadow-[0_0_8px_rgba(168,85,247,0.7)]" : "text-[#ede4fb]/85 group-hover:text-[#ffe680]"}`}>
+              <span class={`transition-colors duration-300 ${isActive(link.path) ? "text-[#e6f2ff] drop-shadow-[0_0_8px_rgba(11,131,250,0.75)]" : "text-[#dbe9ff]/85 group-hover:text-[#6cc5ff]"}`}>
                 {link.name}
               </span>
-              {isActive(link.path) && <div class="absolute bottom-0 left-0 h-[3px] w-full rounded-t-md bg-[#fdc700] shadow-[0_-2px_10px_rgba(253,199,0,0.9)]" />}
+              {isActive(link.path) && <div class="absolute bottom-0 left-0 h-[3px] w-full rounded-t-md bg-[#0b83fa] shadow-[0_-2px_10px_rgba(11,131,250,0.9)]" />}
             </a>
           ))
         }
@@ -69,39 +69,39 @@ const logoAlt = "โลโก้ PAYDAY24 ตัวอักษร PayDay แบ
       <div class="z-50 flex items-center gap-2 md:gap-4">
         <a
           href="/login"
-          class="hidden items-center justify-center gap-1.5 rounded border border-[#a855f7]/60 px-6 py-2 text-sm font-bold text-[#ede4fb] transition-all hover:bg-[#2c1247]/70 hover:shadow-[0_0_15px_rgba(168,85,247,0.35)] lg:flex">
+          class="hidden items-center justify-center gap-1.5 rounded border border-[#0b83fa]/60 px-6 py-2 text-sm font-bold text-[#dbe9ff] transition-all hover:bg-[#0a2258]/70 hover:shadow-[0_0_15px_rgba(11,131,250,0.4)] lg:flex">
           <span aria-hidden="true">🔑</span> เข้าสู่ระบบ
         </a>
         <a
           href="/register"
-          class="bg-theme-oklab hidden items-center justify-center gap-1.5 rounded px-6 py-2 text-sm font-extrabold text-[#150726] shadow-[0_0_20px_rgba(253,199,0,0.5)] transition-all hover:brightness-110 lg:flex">
+          class="bg-theme-oklab hidden items-center justify-center gap-1.5 rounded px-6 py-2 text-sm font-extrabold text-white shadow-[0_0_20px_rgba(232,32,42,0.55)] transition-all hover:brightness-110 lg:flex">
           <span aria-hidden="true">🎫</span> สมัครสมาชิก
         </a>
 
         <div class="flex items-center gap-2 lg:hidden">
           <a
             href="/register"
-            class="bg-theme-oklab flex items-center justify-center rounded px-3 py-1.5 text-[11px] font-bold text-[#150726] shadow-[0_0_10px_rgba(253,199,0,0.5)] md:px-4 md:text-xs">
+            class="bg-theme-oklab flex items-center justify-center rounded px-3 py-1.5 text-[11px] font-bold text-white shadow-[0_0_10px_rgba(232,32,42,0.55)] md:px-4 md:text-xs">
             สมัครสมาชิก
           </a>
-          <button id="hamburger-btn" class="flex flex-col items-center justify-center space-y-1.5 rounded border border-[#fdc700]/45 bg-[#2c1247]/50 p-1.5" aria-label="เปิดเมนู">
-            <span class="hamburger-line h-[2px] w-5 origin-center rounded-full bg-[#f3e9ff] transition-all duration-300"></span>
-            <span class="hamburger-line h-[2px] w-5 rounded-full bg-[#f3e9ff] transition-all duration-300"></span>
-            <span class="hamburger-line h-[2px] w-5 origin-center rounded-full bg-[#f3e9ff] transition-all duration-300"></span>
+          <button id="hamburger-btn" class="flex flex-col items-center justify-center space-y-1.5 rounded border border-[#0b83fa]/45 bg-[#0a2258]/50 p-1.5" aria-label="เปิดเมนู">
+            <span class="hamburger-line h-[2px] w-5 origin-center rounded-full bg-[#e6f2ff] transition-all duration-300"></span>
+            <span class="hamburger-line h-[2px] w-5 rounded-full bg-[#e6f2ff] transition-all duration-300"></span>
+            <span class="hamburger-line h-[2px] w-5 origin-center rounded-full bg-[#e6f2ff] transition-all duration-300"></span>
           </button>
         </div>
       </div>
     </div>
   </nav>
 
-  <div id="mobile-overlay" class="pointer-events-none fixed inset-0 z-40 bg-[#150726]/80 opacity-0 transition-opacity duration-300 lg:hidden"></div>
+  <div id="mobile-overlay" class="pointer-events-none fixed inset-0 z-40 bg-[#000617]/80 opacity-0 transition-opacity duration-300 lg:hidden"></div>
 
   <div
     id="mobile-sidebar"
-    class="fixed top-0 right-0 z-50 h-screen w-[260px] translate-x-full transform overflow-y-auto border-l border-[#fdc700]/40 bg-[#150726] shadow-[-10px_0_30px_rgba(0,0,0,0.85)] transition-transform duration-400 ease-[cubic-bezier(0.3,1,0.3,1)] lg:hidden">
+    class="fixed top-0 right-0 z-50 h-screen w-[260px] translate-x-full transform overflow-y-auto border-l border-[#0b83fa]/40 bg-[#000b24] shadow-[-10px_0_30px_rgba(0,0,0,0.85)] transition-transform duration-400 ease-[cubic-bezier(0.3,1,0.3,1)] lg:hidden">
     <div class="flex items-center justify-between border-b border-white/5 px-5 py-5">
-      <span class="text-sm font-extrabold tracking-wider text-[#ede4fb]">เมนู</span>
-      <button id="close-sidebar-btn" class="p-1 text-xl text-[#ffe680] hover:text-white" aria-label="ปิดเมนู">✕</button>
+      <span class="text-sm font-extrabold tracking-wider text-[#dbe9ff]">เมนู</span>
+      <button id="close-sidebar-btn" class="p-1 text-xl text-[#ff8080] hover:text-white" aria-label="ปิดเมนู">✕</button>
     </div>
 
     <div class="flex flex-col space-y-2 px-4 pt-4 pb-8">
@@ -109,7 +109,7 @@ const logoAlt = "โลโก้ PAYDAY24 ตัวอักษร PayDay แบ
         links.map((link) => (
           <a
             href={link.path}
-            class={`sidebar-item flex items-center rounded-lg border px-4 py-3.5 transition-all ${isActive(link.path) ? "border-[#fdc700]/60 bg-[#2c1247]/70 text-[#f3e9ff]" : "border-transparent bg-white/5 text-[#ede4fb]/85 hover:bg-white/10"}`}>
+            class={`sidebar-item flex items-center rounded-lg border px-4 py-3.5 transition-all ${isActive(link.path) ? "border-[#0b83fa]/60 bg-[#0a2258]/70 text-[#e6f2ff]" : "border-transparent bg-white/5 text-[#dbe9ff]/85 hover:bg-white/10"}`}>
             <span aria-hidden="true" class="mr-3 text-xl">
               {link.icon}
             </span>
@@ -118,10 +118,10 @@ const logoAlt = "โลโก้ PAYDAY24 ตัวอักษร PayDay แบ
         ))
       }
 
-      <div class="mt-6 flex flex-col gap-3 border-t border-[#fdc700]/40 pt-6">
+      <div class="mt-6 flex flex-col gap-3 border-t border-[#0b83fa]/40 pt-6">
         <a
           href="/login"
-          class="sidebar-item hover:bg-theme-oklab flex items-center justify-center gap-2 rounded-lg border border-[#a855f7]/70 bg-transparent py-3.5 text-sm font-bold text-[#f3e9ff] transition-colors hover:border-transparent hover:text-[#150726]">
+          class="sidebar-item hover:bg-theme-oklab flex items-center justify-center gap-2 rounded-lg border border-[#0b83fa]/70 bg-transparent py-3.5 text-sm font-bold text-[#e6f2ff] transition-colors hover:border-transparent hover:text-white">
           <span aria-hidden="true">🔑</span> เข้าสู่ระบบ
         </a>
       </div>
@@ -131,7 +131,7 @@ const logoAlt = "โลโก้ PAYDAY24 ตัวอักษร PayDay แบ
 
 <style is:global>
   .bg-theme-oklab {
-    background-image: linear-gradient(in oklab to right, #a86f00, #fdc700, #ffe680);
+    background-image: linear-gradient(in oklab to right, #b0121a, #e8202a, #ff4d4d);
   }
 
   #hamburger-btn.active .hamburger-line:nth-child(1) {

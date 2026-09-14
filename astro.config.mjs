@@ -75,7 +75,7 @@ export default defineConfig({
     "/line": "https://tinyurl.com/amb66",
   },
 
-  site: "https://ambheng88.org",
+  site: "https://ambheng88-brand.com",
   integrations: [
     sitemap({
       // /login, /register and /line are forwarding pages that all ship

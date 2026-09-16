@@ -13,12 +13,12 @@ import pro4 from "../assets/slide4.png";
 import pro5 from "../assets/slide5.png";
 import { pageGraph } from "../lib/schema";
 
-const pageTitle = "โปรโมชั่น AMBHENG88 โบนัสฝาก ฝากรับเพิ่ม และสิทธิ์แนะนำเพื่อน";
+const pageTitle = "โปรโมชั่น AMBHENG88 รวมโปรสายเฮง โบนัสฝาก ค่าคอม พร้อมวิธีคำนวณ";
 
-const pageHeading = "โปรโมชั่นและสิทธิ์สมาชิก AMBHENG88";
+const pageHeading = "โปรโมชั่น AMBHENG88 รวมโปรสายเฮง เลือกให้เป็น คำนวณให้คุ้ม";
 
 const pageDescription =
-  "รวมภาพโปรโมชั่นของ AMBHENG88 ทั้งโบนัสฝาก 50% ฝากรับเพิ่ม 10% และสิทธิ์แนะนำเพื่อน ดูยอดรับ เงื่อนไขเทิร์น และยอดถอนสูงสุดที่ระบุบนภาพได้ครบในหน้าเดียว";
+  "โปรโมชั่น AMBHENG88 รวมโบนัสฝาก โปรนาทีทอง ค่าคอม และแนะนำเพื่อน พร้อมสอนวิธีคำนวณโบนัส เทิร์น และยอดถอนก่อนกดรับสิทธิ์ พร้อมตัวอย่างคำนวณจากยอดฝากจริง";
 
 const graph = pageGraph(Astro, {
   name: pageTitle,
@@ -119,6 +119,119 @@ const promoClass =
         quality={80}
       />
     </div>
+
+    <p class="mt-10 mb-4 text-left text-base leading-relaxed">
+      โปรโมชั่น AMBHENG88 มีหลายรูปแบบ ทั้งโบนัสฝาก โปรช่วงเวลา ค่าคอมจากยอดเล่น และสิทธิ์แนะนำเพื่อน แต่ละโปรไม่ได้เหมาะกับทุกคนเหมือนกัน สายเฮงที่อยากใช้โบนัสให้คุ้มควรดูให้ครบทั้งเปอร์เซ็นต์ที่ได้รับ ยอดฝากขั้นต่ำ เทิร์นโอเวอร์ และเพดานถอน ไม่ใช่เลือกจากตัวเลขโบนัสที่ดูสูงเพียงอย่างเดียว
+    </p>
+    <p class="text-left text-base leading-relaxed">
+      โปรโมชั่นบางรายการอาจเปิดเฉพาะบางช่วงเวลา หรือมีการปรับเงื่อนไขตามรอบแคมเปญ หากข้อมูลหน้าเว็บกับหน้ารับโปรไม่ตรงกัน แนะนำให้สอบถามแอดมินผ่านหน้าติดต่อก่อนฝากทุกครั้ง เพราะโปรจริงในระบบอาจเปลี่ยนเร็วกว่าการอัปเดตหน้าเว็บ โดยรายละเอียดด้านล่างเป็นชุดโปรโมชั่นล่าสุดที่นำมาใช้เป็นแนวทางคำนวณได้
+    </p>
+  </ContentBox>
+
+  <ContentBox title="โปรฝาก AMBHENG88 รับเพิ่ม 10% สายเฮงต้องฝากเท่าไรถึงได้โบนัสเท่าไร" as="h2">
+    <p class="mb-4 text-left text-base leading-relaxed">
+      โปรฝากเพิ่ม 10% เหมาะกับสมาชิก AMBHENG88 ที่อยากเพิ่มทุนจากยอดฝากแบบคำนวณง่าย เริ่มต้นจากยอดฝากขั้นต่ำตามที่ระบบกำหนด และรับโบนัสได้สูงสุด 500 บาท สิ่งที่ควรดูไม่ใช่แค่คำว่า “ได้เพิ่ม 10%” แต่ต้องเช็กด้วยว่าโบนัสที่รับมานั้นมีเทิร์นและเพดานถอนเท่าไร
+    </p>
+    <h3 class="mt-8 mb-3 text-lg font-extrabold tracking-wide text-[#ff74b6]">วิธีคำนวณโบนัสฝาก 10%</h3>
+    <p class="mb-4 text-left text-base leading-relaxed">
+      สูตรง่าย ๆ คือ
+    </p>
+    <p class="mb-4 rounded-xl border border-[#4a1030] bg-[#280a1c]/60 px-5 py-4 text-center text-base font-bold tracking-wide text-[#ffe814]">ยอดฝาก × 10% = โบนัสที่ได้รับ</p>
+    <p class="mb-4 text-left text-base leading-relaxed">
+      ตัวอย่าง
+    </p>
+    <ul class="mb-4 list-inside list-disc space-y-1 text-base leading-relaxed marker:text-[#ff2d8e]">
+      <li>ฝาก 100 บาท → โบนัส 10 บาท</li>
+      <li>ฝาก 500 บาท → โบนัส 50 บาท</li>
+      <li>ฝาก 1,000 บาท → โบนัส 100 บาท</li>
+      <li>ฝาก 5,000 บาท → โบนัส 500 บาท</li>
+    </ul>
+    <p class="mb-4 text-left text-base leading-relaxed">
+      ถ้าโบนัสสูงสุดกำหนดไว้ที่ 500 บาท ต่อให้ฝากมากกว่านั้น โบนัสก็จะไม่เพิ่มเกินเพดานที่ระบบกำหนด
+    </p>
+    <h3 class="mt-8 mb-3 text-lg font-extrabold tracking-wide text-[#ff74b6]">วิธีดูว่าโปรนี้คุ้มกับเราหรือไม่</h3>
+    <p class="mb-4 text-left text-base leading-relaxed">
+      อย่าดูแค่โบนัส ให้ดูพร้อมกัน 3 จุด
+    </p>
+    <p class="mb-4 rounded-xl border border-[#4a1030] bg-[#280a1c]/60 px-5 py-4 text-center text-base font-bold tracking-wide text-[#ffe814]">เงินฝาก + โบนัส / เทิร์นที่ต้องทำ / ยอดถอนสูงสุด</p>
+    <p class="text-left text-base leading-relaxed">
+      เช่น ฝาก 1,000 บาท ได้โบนัส 100 บาท เงินรวมเป็น 1,100 บาท ถ้าโปรกำหนดเทิร์น 8 เท่า สมาชิกควรคำนวณภาระยอดเล่นก่อนรับสิทธิ์ เพื่อดูว่าเหมาะกับสไตล์การเล่นของตัวเองหรือไม่
+    </p>
+  </ContentBox>
+
+  <ContentBox title="นาทีทอง AMBHENG88 ฝากถูกเวลา รับเพิ่ม 10% เช้า–เย็น" as="h2">
+    <p class="mb-4 text-left text-base leading-relaxed">
+      สำหรับสายเฮงที่ชอบเลือกจังหวะฝาก โปรนาทีทองผ่าน AutoPeer แบ่งช่วงรับสิทธิ์เป็นรอบเช้าและรอบเย็น โดยรับโบนัสเพิ่ม 10% ตามยอดฝาก และมีเพดานโบนัสตามที่ระบบกำหนด จุดสำคัญคือ ฝากถูกช่องทางแต่ผิดเวลา หรือถูกเวลาแต่ผิดช่องทาง ก็อาจไม่ได้รับสิทธิ์
+    </p>
+    <h3 class="mt-8 mb-3 text-lg font-extrabold tracking-wide text-[#ff74b6]">วิธีเช็กโปรนาทีทองก่อนฝาก</h3>
+    <p class="mb-4 text-left text-base leading-relaxed">
+      ก่อนกดยืนยัน ให้เช็ก 3 อย่าง
+    </p>
+    <p class="mb-4 rounded-xl border border-[#4a1030] bg-[#280a1c]/60 px-5 py-4 text-center text-base font-bold tracking-wide text-[#ffe814]">เวลา → ช่องทาง AutoPeer → สถานะโปรโมชั่น</p>
+    <p class="mb-4 text-left text-base leading-relaxed">
+      ช่วงเวลาที่ใช้อยู่ล่าสุดคือรอบเช้า 09.00–13.00 น. และรอบเย็น 18.00–22.00 น. แต่เนื่องจากโปรประเภทนี้เปลี่ยนตามแคมเปญได้ จึงควรตรวจสอบในระบบหรือสอบถามแอดมินอีกครั้งก่อนฝาก
+    </p>
+    <h3 class="mt-8 mb-3 text-lg font-extrabold tracking-wide text-[#ff74b6]">ฝากนาทีทองเท่าไร ได้เพิ่มเท่าไร</h3>
+    <p class="mb-4 text-left text-base leading-relaxed">
+      ใช้สูตรเดียวกัน
+    </p>
+    <p class="mb-4 rounded-xl border border-[#4a1030] bg-[#280a1c]/60 px-5 py-4 text-center text-base font-bold tracking-wide text-[#ffe814]">ยอดฝาก × 10% = โบนัส</p>
+    <p class="text-left text-base leading-relaxed">
+      ตัวอย่าง ฝาก 300 บาท ได้เพิ่ม 30 บาท หรือฝาก 1,000 บาท ได้เพิ่ม 100 บาท โดยยอดโบนัสจริงต้องไม่เกินเพดานที่โปรโมชั่นกำหนด
+    </p>
+  </ContentBox>
+
+  <ContentBox title="แนะนำเพื่อน AMBHENG88 รับค่าคอมสูงสุด 0.8% ยิ่งเพื่อนเล่นยิ่งมีสิทธิ์รับเพิ่ม" as="h2">
+    <p class="mb-4 text-left text-base leading-relaxed">
+      โปรแนะนำเพื่อนต่างจากโบนัสฝากตรงที่ไม่ได้รับจากยอดฝากของตัวเอง แต่คำนวณจากยอดเดิมพันของเพื่อนที่สมัครผ่านลิงก์แนะนำและทำตามเงื่อนไขครบ ระบบจึงจะนำยอดที่เข้าเกณฑ์มาคิดค่าคอมให้
+    </p>
+    <h3 class="mt-8 mb-3 text-lg font-extrabold tracking-wide text-[#ff74b6]">วิธีคำนวณค่าคอมแนะนำเพื่อน 0.8%</h3>
+    <p class="mb-4 text-left text-base leading-relaxed">
+      สูตร
+    </p>
+    <p class="mb-4 rounded-xl border border-[#4a1030] bg-[#280a1c]/60 px-5 py-4 text-center text-base font-bold tracking-wide text-[#ffe814]">ยอดเดิมพันที่เข้าเกณฑ์ × 0.8% = ค่าคอม</p>
+    <p class="mb-4 text-left text-base leading-relaxed">
+      ตัวอย่าง
+    </p>
+    <ul class="mb-4 list-inside list-disc space-y-1 text-base leading-relaxed marker:text-[#ff2d8e]">
+      <li>ยอดเล่น 1,000 บาท → 8 บาท</li>
+      <li>ยอดเล่น 10,000 บาท → 80 บาท</li>
+      <li>ยอดเล่น 100,000 บาท → 800 บาท</li>
+    </ul>
+    <p class="text-left text-base leading-relaxed">
+      ตัวเลขนี้เป็นการคำนวณตามอัตราสูงสุด 0.8% หากระบบแบ่งระดับสมาชิกหรือมีเงื่อนไขอื่น ควรเช็กอัตราจริงก่อนนำไปคำนวณ
+    </p>
+  </ContentBox>
+
+  <ContentBox title="ค่าคอม AMBHENG88 0.3% สายเล่นต่อเนื่องคำนวณยอดคืนได้เอง" as="h2">
+    <p class="mb-4 text-left text-base leading-relaxed">
+      สำหรับสมาชิกที่มีรอบเล่นต่อเนื่อง ค่าคอม 0.3% เป็นอีกสิทธิ์ที่ควรดู เพราะคำนวณจากยอดเดิมพันที่มีผล ไม่ได้ดูว่ารอบนั้นชนะหรือแพ้เพียงอย่างเดียว เมื่อระบบตัดยอดแล้ว สมาชิกสามารถตรวจสอบเครดิตที่ได้รับตามช่วงเวลาที่กำหนด
+    </p>
+    <h3 class="mt-8 mb-3 text-lg font-extrabold tracking-wide text-[#ff74b6]">วิธีคำนวณค่าคอม 0.3%</h3>
+    <p class="mb-4 text-left text-base leading-relaxed">
+      สูตร
+    </p>
+    <p class="mb-4 rounded-xl border border-[#4a1030] bg-[#280a1c]/60 px-5 py-4 text-center text-base font-bold tracking-wide text-[#ffe814]">ยอดเดิมพันที่มีผล × 0.3% = ค่าคอมที่ได้รับ</p>
+    <p class="mb-4 text-left text-base leading-relaxed">
+      ตัวอย่าง
+    </p>
+    <ul class="mb-4 list-inside list-disc space-y-1 text-base leading-relaxed marker:text-[#ff2d8e]">
+      <li>ยอดเล่น 10,000 บาท → 30 บาท</li>
+      <li>ยอดเล่น 100,000 บาท → 300 บาท</li>
+      <li>ยอดเล่น 1,000,000 บาท → 3,000 บาท</li>
+    </ul>
+    <p class="text-left text-base leading-relaxed">
+      ตรงนี้ทำให้สมาชิกประเมินได้ตั้งแต่ก่อนกดรับว่า ยอดเล่นระดับไหนจะได้เครดิตคืนประมาณเท่าไร
+    </p>
+  </ContentBox>
+
+  <ContentBox title="สายเฮงเลือกโปรอย่างไร ไม่ให้โบนัสเยอะแต่เงื่อนไขหนักเกินไป" as="h2">
+    <p class="mb-4 text-left text-base leading-relaxed">
+      โปรที่ให้เปอร์เซ็นต์สูงไม่ได้แปลว่าคุ้มที่สุดเสมอไป ก่อนรับโปรโมชั่น AMBHENG88 ควรเทียบโบนัสที่ได้ เทิร์นที่ต้องทำ เพดานถอน จำนวนครั้งที่รับได้ และเวลาที่เปิดรับสิทธิ์พร้อมกัน เพราะบางคนเหมาะกับโบนัสฝาก ขณะที่บางคนเล่นต่อเนื่องแล้วคุ้มกว่ากับค่าคอม
+    </p>
+    <p class="text-left text-base leading-relaxed">
+      วิธีง่ายที่สุดคือคำนวณออกมาเป็นตัวเลขก่อนรับ เช่น “ฝาก 1,000 ได้เพิ่มเท่าไร ต้องทำยอดเท่าไร และถอนสูงสุดเท่าไร” ถ้าคำตอบตรงกับรูปแบบการเล่นของตัวเองจึงค่อยเลือกรับ โปรจะกลายเป็นตัวช่วยเพิ่มความคุ้ม ไม่ใช่เงื่อนไขที่ต้องมานั่งแก้ทีหลัง
+    </p>
 
     <div class="mt-12 flex justify-center pb-4">
       <a

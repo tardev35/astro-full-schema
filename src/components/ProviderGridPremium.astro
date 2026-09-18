@@ -8,31 +8,31 @@ import img5 from "../assets/providers/game5.avif";
 import img6 from "../assets/providers/game6.avif";
 
 const providers = [
-  { name: "PG Soft", users: "4,592", isHot: true, img: img1 },
-  { name: "Joker Gaming", users: "2,184", isHot: true, img: img2 },
-  { name: "JILI", users: "3,845", isHot: true, img: img3 },
-  { name: "Pragmatic Play", users: "2,901", isHot: true, img: img4 },
-  { name: "Habanero", users: "1,754", isHot: false, img: img5 },
-  { name: "Nolimit City", users: "3,245", isHot: true, img: img6 },
+  { name: "PG SOFT", users: "4,592", isHot: true, img: img1 },
+  { name: "Pragmatic Play", users: "3,845", isHot: true, img: img2 },
+  { name: "JILI", users: "2,901", isHot: true, img: img3 },
+  { name: "Joker", users: "2,184", isHot: true, img: img4 },
+  { name: "CQ9", users: "1,754", isHot: false, img: img5 },
+  { name: "Relax Gaming", users: "3,245", isHot: true, img: img6 },
 ];
 ---
 
-<section aria-label="ค่ายเกมสล็อตที่ SCLASS88 รวมไว้ให้เลือกจากบัญชีเดียว" class="mx-auto w-full max-w-[1300px] px-4 py-8 font-sans sm:px-6 lg:px-8">
+<section aria-label="ค่ายเกมพรีเมียมที่ SUPERCLUB168 รวมไว้ในกระเป๋าเดียว" class="mx-auto w-full max-w-[1300px] px-4 py-8 font-sans sm:px-6 lg:px-8">
   <div class="mb-8 flex w-full flex-col items-center justify-center gap-2 text-center">
-    <span aria-hidden="true" class="text-2xl drop-shadow-[0_0_10px_rgba(245,197,66,0.8)]">🎰</span>
-    <p class="bg-gradient-to-r from-[#ffe9a8] via-[#f5c542] to-[#bc7b14] bg-clip-text text-3xl font-black tracking-widest text-transparent uppercase drop-shadow-sm">
-      ค่ายเกมที่ <span class="text-[#f5c542]">SCLASS88</span> รวมไว้ในบัญชีเดียว
+    <span aria-hidden="true" class="text-2xl drop-shadow-[0_0_10px_rgba(247,208,70,0.8)]">🎰</span>
+    <p class="bg-gradient-to-r from-[#ffeeb8] via-[#f7d046] to-[#c99a17] bg-clip-text text-3xl font-black tracking-widest text-transparent uppercase drop-shadow-sm">
+      ค่ายเกมพรีเมียมที่ <span class="text-[#f7d046]">SUPERCLUB168</span> รวมไว้ในกระเป๋าเดียว
     </p>
-    <div class="mt-2 h-[2px] w-24 rounded-full bg-gradient-to-r from-transparent via-[#f5c542] to-transparent"></div>
+    <div class="mt-2 h-[2px] w-24 rounded-full bg-gradient-to-r from-transparent via-[#f7d046] to-transparent"></div>
   </div>
 
   <div class="grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-6 lg:gap-6">
     {
       providers.map((p) => (
-        <div class="group relative flex flex-col overflow-hidden rounded-2xl bg-[#0d0904] shadow-[0_5px_15px_rgba(0,0,0,0.55)] transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_15px_40px_rgba(245,197,66,0.28)]">
-          <div class="pointer-events-none absolute inset-0 z-20 rounded-2xl border border-[#a3610c]/50 transition-all duration-500 group-hover:border-[#f5c542]/60 group-hover:shadow-[inset_0_0_20px_rgba(245,197,66,0.15)]" />
+        <div class="group relative flex flex-col overflow-hidden rounded-2xl bg-[#03091f] shadow-[0_5px_15px_rgba(0,0,0,0.55)] transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_15px_40px_rgba(247,208,70,0.28)]">
+          <div class="pointer-events-none absolute inset-0 z-20 rounded-2xl border border-[#16305f]/50 transition-all duration-500 group-hover:border-[#f7d046]/60 group-hover:shadow-[inset_0_0_20px_rgba(247,208,70,0.15)]" />
 
-          <div class="absolute top-0 left-0 z-10 flex items-center gap-1.5 rounded-br-xl border-r border-b border-[#a3610c]/50 bg-[#161006]/85 px-3 py-1.5 text-[10px] font-medium text-[#c2ac7f] backdrop-blur-md transition-colors group-hover:text-[#ffe9a8]">
+          <div class="absolute top-0 left-0 z-10 flex items-center gap-1.5 rounded-br-xl border-r border-b border-[#16305f]/50 bg-[#071230]/85 px-3 py-1.5 text-[10px] font-medium text-[#cdb888] backdrop-blur-md transition-colors group-hover:text-[#ffeeb8]">
             <svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
               <path fill-rule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clip-rule="evenodd" />
             </svg>
@@ -40,7 +40,7 @@ const providers = [
           </div>
 
           {p.isHot && (
-            <div class="absolute top-0 right-0 z-10 flex items-center gap-1 rounded-bl-xl border-b border-l border-[#ffe9a8]/50 bg-gradient-to-r from-[#bc7b14] to-[#ffd75e] px-3 py-1.5 text-[10px] font-black tracking-wide text-[#1a1206] shadow-md">
+            <div class="absolute top-0 right-0 z-10 flex items-center gap-1 rounded-bl-xl border-b border-l border-[#ffeeb8]/50 bg-gradient-to-r from-[#c99a17] to-[#ffd95e] px-3 py-1.5 text-[10px] font-black tracking-wide text-[#03091f] shadow-md">
               <span aria-hidden="true" class="animate-pulse">
                 🔥
               </span>{" "}
@@ -50,7 +50,7 @@ const providers = [
 
           <Picture
             src={p.img}
-            alt={`ภาพหน้าปกเกมสล็อตของค่าย ${p.name} ในตารางค่ายเกมของ SCLASS88`}
+            alt={`ภาพหน้าปกเกมสล็อตของค่าย ${p.name} ในตารางค่ายเกมของ SUPERCLUB168`}
             formats={["avif", "webp"]}
             fallbackFormat="webp"
             loading="lazy"
@@ -61,11 +61,11 @@ const providers = [
             class="block aspect-square w-full object-cover opacity-90 transition-transform duration-700 group-hover:scale-110 group-hover:opacity-100"
           />
 
-          <p class="relative z-10 border-t border-[#a3610c]/50 px-3 py-2 text-center text-xs font-bold text-[#efe1c2] transition-colors group-hover:text-[#ffe9a8]">{p.name}</p>
+          <p class="relative z-10 border-t border-[#16305f]/50 px-3 py-2 text-center text-xs font-bold text-[#f5e7c2] transition-colors group-hover:text-[#ffeeb8]">{p.name}</p>
 
           <div
             aria-hidden="true"
-            class="pointer-events-none absolute bottom-9 left-0 h-20 w-full bg-gradient-to-t from-[#bc7b14]/45 to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-100"
+            class="pointer-events-none absolute bottom-9 left-0 h-20 w-full bg-gradient-to-t from-[#c99a17]/45 to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-100"
           />
         </div>
       ))

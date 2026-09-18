@@ -6,12 +6,13 @@ const images = import.meta.glob<{ default: ImageMetadata }>("../assets/logo.{png
 const imagePaths = Object.keys(images);
 const mainLogo = imagePaths.length > 0 ? images[imagePaths[0]].default : null;
 
-const logoAlt = "โลโก้ TOPGAMEVIP โล่หกเหลี่ยมสีดำขอบทอง มีมงกุฎทองด้านบน ตรงกลางเป็นจอยเกมสีทอง ใต้โล่เป็นตัวอักษรสีทองว่า TOPGAMEVIP";
+const logoAlt =
+  "โลโก้ SUPERCLUB168 ตราวงกลมสีน้ำเงินกรมท่าขอบทอง มีดาวทองเรียงรอบวง ตรงกลางเป็นตัวอักษร S สีทอง ด้านล่างเป็นริบบิ้นทองเขียนว่า SUPERCLUB168";
 ---
 
 <footer
-  class="relative mt-16 w-full overflow-hidden rounded-t-[3rem] border-t-2 border-[#e60012] bg-[#1c0405] pt-16 pb-8 font-sans text-[#fbeceb] shadow-[0_-15px_40px_rgba(230,0,18,0.28)]">
-  <div class="pointer-events-none absolute inset-x-0 -top-20 mx-auto h-[250px] w-full max-w-4xl rounded-full bg-[#e60012]/30 blur-[100px]"></div>
+  class="relative mt-16 w-full overflow-hidden rounded-t-[3rem] border-t-2 border-[#f7d046] bg-[#03091f] pt-16 pb-8 font-sans text-[#f5e7c2] shadow-[0_-15px_40px_rgba(247,208,70,0.22)]">
+  <div class="pointer-events-none absolute inset-x-0 -top-20 mx-auto h-[250px] w-full max-w-4xl rounded-full bg-[#f7d046]/20 blur-[100px]"></div>
 
   <div class="relative z-10 mx-auto w-full max-w-[1200px] px-6">
     <div class="mb-12 grid grid-cols-1 gap-12 md:grid-cols-12">
@@ -24,45 +25,45 @@ const logoAlt = "โลโก้ TOPGAMEVIP โล่หกเหลี่ยม
                 alt={logoAlt}
                 widths={[130, 260, 390]}
                 sizes="130px"
-                class="h-[65px] w-auto drop-shadow-[0_5px_15px_rgba(230,0,18,0.45)]"
+                class="h-[65px] w-auto drop-shadow-[0_5px_15px_rgba(247,208,70,0.45)]"
                 formats={["avif", "webp"]}
                 fallbackFormat="webp"
               />
             ) : (
-              <span class="bg-gradient-to-r from-[#ffe9a8] to-[#f5c542] bg-clip-text text-4xl font-black tracking-widest text-transparent">
-                TOPGAME<span class="bg-gradient-to-r from-[#ff4b41] to-[#e60012] bg-clip-text text-transparent">VIP</span>
+              <span class="bg-gradient-to-r from-[#ffeeb8] to-[#f7d046] bg-clip-text text-4xl font-black tracking-widest text-transparent">
+                SUPERCLUB<span class="bg-gradient-to-r from-[#ffe89a] to-[#c99a17] bg-clip-text text-transparent">168</span>
               </span>
             )
           }
         </a>
-        <p class="border-l-2 border-[#e60012] pl-4 text-sm leading-relaxed text-[#fbeceb]/70">
-          TOPGAMEVIP เว็บตรงเกมสล็อต ลิขสิทธิ์แท้จากค่ายผู้พัฒนาโดยตรง ค่า RTP เดินตามเกณฑ์ของค่าย ไม่มีล็อกยูส ไม่ปรับจูนหลังบ้าน ระบบสมัคร ฝาก ถอน เป็นออโต้เต็มระบบ ไม่มีขั้นต่ำ
-          ทำรายการเองได้จากหน้าเมมเบอร์ตลอด 24 ชั่วโมง พร้อมระบบ AI ที่ช่วยสรุปข้อมูลการเล่นให้อ่านจังหวะเกมได้ง่ายขึ้น
+        <p class="border-l-2 border-[#f7d046] pl-4 text-sm leading-relaxed text-[#f5e7c2]/70">
+          SUPERCLUB168 สล็อตเว็บตรง API แท้ เชื่อมตรงจากเซิร์ฟเวอร์ค่ายแม่ ค่า RTP เดินเต็มตามมาตรฐานของค่าย ไม่ปรับเรท ไม่ล็อกยูส ระบบสมัคร ฝาก ถอน เป็นออโต้เต็มระบบ
+          ไม่มีขั้นต่ำ เริ่มได้ตั้งแต่ 1 บาท ทำรายการเองได้จากหน้าเมมเบอร์ตลอด 24 ชั่วโมง รองรับทั้งแอปธนาคารไทยและ True Money Wallet
         </p>
         <div class="mt-4 flex gap-3">
-          <span class="rounded-full border border-[#f5c542]/45 bg-[#f5c542]/15 px-4 py-1 text-xs font-medium text-[#ffe9a8]">ลิขสิทธิ์แท้</span>
-          <span class="rounded-full border border-[#ff4b41]/45 bg-[#e60012]/20 px-4 py-1 text-xs font-medium text-[#ffc9c5]">ไม่มีขั้นต่ำ</span>
+          <span class="rounded-full border border-[#f7d046]/45 bg-[#f7d046]/15 px-4 py-1 text-xs font-medium text-[#ffeeb8]">API แท้</span>
+          <span class="rounded-full border border-[#e12b27]/45 bg-[#e12b27]/20 px-4 py-1 text-xs font-medium text-[#ff9a7a]">ไม่มีขั้นต่ำ</span>
         </div>
       </div>
 
       <nav class="flex flex-col gap-4 md:col-span-3 lg:pl-8">
-        <p class="text-lg font-black tracking-widest text-[#ffe9a8] uppercase drop-shadow-sm">เมนูลัด</p>
-        <div class="h-[1px] w-12 bg-[#e60012]"></div>
-        <ul class="flex flex-col gap-3 text-sm font-medium text-[#fbeceb]/70">
-          <li><a href="/" class="transition-colors hover:text-[#f5c542]">หน้าหลัก</a></li>
-          <li><a href="/promotion" class="transition-colors hover:text-[#f5c542]">โปรโมชั่น</a></li>
-          <li><a href="/register" class="transition-colors hover:text-[#f5c542]">สมัครสมาชิก</a></li>
-          <li><a href="/login" class="transition-colors hover:text-[#f5c542]">เข้าสู่ระบบ</a></li>
-          <li><a href="/ทางเข้า" class="transition-colors hover:text-[#f5c542]">ทางเข้า</a></li>
-          <li><a href="/ทดลองเล่น" class="transition-colors hover:text-[#f5c542]">ทดลองเล่น</a></li>
-          <li><a href="/about-us" class="transition-colors hover:text-[#f5c542]">เกี่ยวกับเรา</a></li>
-          <li><a href="/contact-us" class="transition-colors hover:text-[#f5c542]">ติดต่อเรา</a></li>
+        <p class="text-lg font-black tracking-widest text-[#ffeeb8] uppercase drop-shadow-sm">เมนูลัด</p>
+        <div class="h-[1px] w-12 bg-[#f7d046]"></div>
+        <ul class="flex flex-col gap-3 text-sm font-medium text-[#f5e7c2]/70">
+          <li><a href="/" class="transition-colors hover:text-[#f7d046]">หน้าหลัก</a></li>
+          <li><a href="/promotion" class="transition-colors hover:text-[#f7d046]">โปรโมชั่น</a></li>
+          <li><a href="/register" class="transition-colors hover:text-[#f7d046]">สมัครสมาชิก</a></li>
+          <li><a href="/login" class="transition-colors hover:text-[#f7d046]">เข้าสู่ระบบ</a></li>
+          <li><a href="/ทางเข้า" class="transition-colors hover:text-[#f7d046]">ทางเข้า</a></li>
+          <li><a href="/ทดลองเล่น" class="transition-colors hover:text-[#f7d046]">ทดลองเล่น</a></li>
+          <li><a href="/about-us" class="transition-colors hover:text-[#f7d046]">เกี่ยวกับเรา</a></li>
+          <li><a href="/contact-us" class="transition-colors hover:text-[#f7d046]">ติดต่อเรา</a></li>
         </ul>
       </nav>
 
       <div class="flex flex-col gap-5 md:col-span-4">
-        <p class="text-lg font-black tracking-widest text-[#ffe9a8] uppercase drop-shadow-sm">ฝ่ายดูแลสมาชิก</p>
-        <div class="h-[1px] w-12 bg-[#e60012]"></div>
+        <p class="text-lg font-black tracking-widest text-[#ffeeb8] uppercase drop-shadow-sm">ฝ่ายดูแลสมาชิก</p>
+        <div class="h-[1px] w-12 bg-[#f7d046]"></div>
 
         <a
           href="/line"
@@ -90,16 +91,16 @@ const logoAlt = "โลโก้ TOPGAMEVIP โล่หกเหลี่ยม
           )
         }
 
-        <div class="mt-4 text-xs font-medium tracking-widest text-[#fbeceb]/60 uppercase">ช่องทางฝากถอนที่รองรับ</div>
+        <div class="mt-4 text-xs font-medium tracking-widest text-[#f5e7c2]/60 uppercase">ช่องทางฝากถอนที่รองรับ</div>
         <BankStrip size={30} />
       </div>
     </div>
 
-    <div class="flex flex-col items-center justify-between border-t border-[#8a0208] pt-8 text-xs font-medium tracking-wide text-[#fbeceb]/50 md:flex-row">
+    <div class="flex flex-col items-center justify-between border-t border-[#16305f] pt-8 text-xs font-medium tracking-wide text-[#f5e7c2]/50 md:flex-row">
       <p>COPYRIGHT &copy; {new Date().getFullYear()} {BRAND_NAME}. ALL RIGHTS RESERVED.</p>
       <div class="mt-4 flex gap-4 md:mt-0">
-        <a href="/terms/" class="transition-colors hover:text-[#f5c542]">TERMS &amp; CONDITIONS</a>
-        <a href="/privacy/" class="transition-colors hover:text-[#f5c542]">PRIVACY POLICY</a>
+        <a href="/terms/" class="transition-colors hover:text-[#f7d046]">TERMS &amp; CONDITIONS</a>
+        <a href="/privacy/" class="transition-colors hover:text-[#f7d046]">PRIVACY POLICY</a>
       </div>
     </div>
   </div>

@@ -22,21 +22,21 @@ const { items, as: HeadingTag = "h3" } = Astro.props;
         <div
           class={`group flex flex-col items-start gap-4 rounded-2xl border p-6 transition-all duration-300 hover:-translate-y-1 sm:flex-row ${
             isRed
-              ? "border-[#0a2258] bg-[#000b24] hover:border-[#e8202a]/60 hover:bg-[#0a2258] hover:shadow-[0_10px_20px_rgba(232,32,42,0.24)]"
-              : "border-[#0a2258] bg-[#000b24] hover:border-[#0b83fa]/60 hover:bg-[#0a2258] hover:shadow-[0_10px_20px_rgba(11,131,250,0.26)]"
+              ? "border-[#0e2150] bg-[#03091f] hover:border-[#e12b27]/60 hover:bg-[#0e2150] hover:shadow-[0_10px_20px_rgba(225,43,39,0.24)]"
+              : "border-[#0e2150] bg-[#03091f] hover:border-[#f7d046]/60 hover:bg-[#0e2150] hover:shadow-[0_10px_20px_rgba(247,208,70,0.26)]"
           }`}>
           <div
             aria-hidden="true"
             class={`flex h-14 w-14 shrink-0 items-center justify-center rounded-xl text-3xl transition-transform duration-300 group-hover:scale-110 ${
               isRed
-                ? "border border-[#6e0a10] bg-gradient-to-br from-[#ff8080] via-[#e8202a] to-[#b0121a] shadow-[0_5px_15px_rgba(232,32,42,0.34)] group-hover:rotate-3"
-                : "border border-[#00397f] bg-gradient-to-br from-[#9ed4ff] via-[#38a9ff] to-[#0057c7] shadow-[0_5px_15px_rgba(11,131,250,0.36)]"
+                ? "border border-[#63120a] bg-gradient-to-br from-[#ff9a7a] via-[#e12b27] to-[#a31a12] shadow-[0_5px_15px_rgba(225,43,39,0.34)] group-hover:rotate-3"
+                : "border border-[#8f6a08] bg-gradient-to-br from-[#ffeeb8] via-[#ffd95e] to-[#c99a17] shadow-[0_5px_15px_rgba(247,208,70,0.36)]"
             }`}>
             {item.icon}
           </div>
           <div class="flex flex-col gap-2 text-left">
-            <HeadingTag class={`text-xl leading-normal font-black tracking-wide ${isRed ? "text-[#ff8080]" : "text-[#6cc5ff]"}`}>{item.title}</HeadingTag>
-            <p class="text-left text-base leading-relaxed text-[#dbe9ff]">{item.description}</p>
+            <HeadingTag class={`text-xl leading-normal font-black tracking-wide ${isRed ? "text-[#ff9a7a]" : "text-[#ffe38a]"}`}>{item.title}</HeadingTag>
+            <p class="text-left text-base leading-relaxed text-[#f5e7c2]">{item.description}</p>
           </div>
         </div>
       );

@@ -13,24 +13,24 @@ const sectionLabel = label ?? title ?? titleleft ?? titleright ?? "ข้อม�
 
 <section aria-label={sectionLabel} class="relative z-10 mx-auto mb-8 w-full max-w-7xl px-4 font-sans">
   <div
-    class="group relative isolate w-full overflow-hidden rounded-3xl border border-[#123a7d] bg-[#000b24] p-8 text-[#dbe9ff] shadow-[0_10px_30px_rgba(11,131,250,0.16)] transition-all duration-500 hover:border-[#0b83fa]/55 hover:shadow-[0_15px_40px_rgba(11,131,250,0.28)] md:p-10">
-    <div aria-hidden="true" class="pointer-events-none absolute inset-0 -z-10 bg-gradient-to-br from-[#04143c] to-transparent"></div>
+    class="group relative isolate w-full overflow-hidden rounded-3xl border border-[#16305f] bg-[#03091f] p-8 text-[#f5e7c2] shadow-[0_10px_30px_rgba(247,208,70,0.16)] transition-all duration-500 hover:border-[#f7d046]/55 hover:shadow-[0_15px_40px_rgba(247,208,70,0.28)] md:p-10">
+    <div aria-hidden="true" class="pointer-events-none absolute inset-0 -z-10 bg-gradient-to-br from-[#071230] to-transparent"></div>
 
     {
       title && (
-        <header class="mb-8 flex items-center gap-4 border-b border-[#123a7d] pb-4">
-          <span aria-hidden="true" class="h-8 w-1.5 shrink-0 rounded-full bg-gradient-to-b from-[#0b83fa] via-[#0057c7] to-[#e8202a] shadow-[0_0_10px_rgba(11,131,250,0.45)]" />
-          <HeadingTag class="bg-gradient-to-r from-[#9ed4ff] via-[#38a9ff] to-[#ff8080] bg-clip-text text-2xl leading-normal font-black tracking-widest text-transparent uppercase">{title}</HeadingTag>
+        <header class="mb-8 flex items-center gap-4 border-b border-[#16305f] pb-4">
+          <span aria-hidden="true" class="h-8 w-1.5 shrink-0 rounded-full bg-gradient-to-b from-[#f7d046] via-[#c99a17] to-[#e12b27] shadow-[0_0_10px_rgba(247,208,70,0.45)]" />
+          <HeadingTag class="bg-gradient-to-r from-[#ffeeb8] via-[#ffd95e] to-[#ff9a7a] bg-clip-text text-2xl leading-normal font-black tracking-widest text-transparent uppercase">{title}</HeadingTag>
         </header>
       )
     }
 
     <div class="grid grid-cols-1 gap-10 md:grid-cols-2">
-      <article class="flex flex-col gap-4 text-left text-base leading-relaxed text-[#dbe9ff]">
+      <article class="flex flex-col gap-4 text-left text-base leading-relaxed text-[#f5e7c2]">
         {
           titleleft && (
-            <p class="flex items-center gap-3 border-b border-[#123a7d] pb-3 text-xl leading-normal font-black tracking-widest text-[#6cc5ff] uppercase">
-              <span aria-hidden="true" class="h-6 w-1.5 shrink-0 rounded-full bg-gradient-to-b from-[#0b83fa] to-[#0057c7] shadow-[0_0_10px_rgba(11,131,250,0.45)]" />
+            <p class="flex items-center gap-3 border-b border-[#16305f] pb-3 text-xl leading-normal font-black tracking-widest text-[#ffe38a] uppercase">
+              <span aria-hidden="true" class="h-6 w-1.5 shrink-0 rounded-full bg-gradient-to-b from-[#f7d046] to-[#c99a17] shadow-[0_0_10px_rgba(247,208,70,0.45)]" />
               {titleleft}
             </p>
           )
@@ -38,11 +38,11 @@ const sectionLabel = label ?? title ?? titleleft ?? titleright ?? "ข้อม�
         <slot name="left" />
       </article>
 
-      <article class="flex flex-col gap-4 text-left text-base leading-relaxed text-[#dbe9ff] md:border-l md:border-[#123a7d] md:pl-10">
+      <article class="flex flex-col gap-4 text-left text-base leading-relaxed text-[#f5e7c2] md:border-l md:border-[#16305f] md:pl-10">
         {
           titleright && (
-            <p class="flex items-center gap-3 border-b border-[#123a7d] pb-3 text-xl leading-normal font-black tracking-widest text-[#ff8080] uppercase">
-              <span aria-hidden="true" class="h-6 w-1.5 shrink-0 rounded-full bg-gradient-to-b from-[#e8202a] to-[#6e0a10] shadow-[0_0_10px_rgba(232,32,42,0.45)]" />
+            <p class="flex items-center gap-3 border-b border-[#16305f] pb-3 text-xl leading-normal font-black tracking-widest text-[#ff9a7a] uppercase">
+              <span aria-hidden="true" class="h-6 w-1.5 shrink-0 rounded-full bg-gradient-to-b from-[#e12b27] to-[#63120a] shadow-[0_0_10px_rgba(225,43,39,0.45)]" />
               {titleright}
             </p>
           )

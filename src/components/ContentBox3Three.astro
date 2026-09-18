@@ -1,39 +1,69 @@
 ---
-const { titleleft, titlecenter, titleright } = Astro.props;
+export interface Props {
+  title?: string;
+  as?: "h1" | "h2" | "h3" | "h4" | "h5" | "h6";
+  titleleft?: string;
+  titlecenter?: string;
+  titleright?: string;
+  label?: string;
+}
+const { title, as: HeadingTag = "h2", titleleft, titlecenter, titleright, label } = Astro.props;
+
+const sectionLabel = label ?? title ?? titleleft ?? "ข้อมูลประกอบ";
 ---
 
-<section class="relative z-10 mx-auto mb-10 w-full max-w-[1400px] px-4 font-sans">
+<section aria-label={sectionLabel} class="relative z-10 mx-auto mb-10 w-full max-w-[1400px] px-4 font-sans">
   <div
-    class="group relative w-full overflow-hidden rounded-3xl border border-emerald-500/30 bg-[#021207]/80 p-8 text-white/90 shadow-[0_10px_30px_rgba(0,0,0,0.8)] backdrop-blur-xl transition-all duration-500 hover:border-emerald-400/50 md:p-10">
-    <div class="relative z-10 grid grid-cols-1 gap-8 md:grid-cols-3">
-      <article class="flex flex-col gap-3 text-left text-base leading-relaxed text-gray-400 border-b border-emerald-900/50 pb-8 transition-all hover:-translate-y-1 md:border-r md:border-b-0 md:pr-8 md:pb-0">
+    class="group relative isolate w-full overflow-hidden rounded-3xl border border-[#16305f] bg-[#03091f]/85 p-8 text-left text-base leading-relaxed text-[#f5e7c2] shadow-[0_10px_30px_rgba(0,0,0,0.8)] backdrop-blur-xl transition-all duration-500 hover:border-[#f7d046]/50 md:p-10">
+    <div aria-hidden="true" class="pointer-events-none absolute -top-24 left-1/2 -z-10 h-48 w-48 -translate-x-1/2 rounded-full bg-[#f7d046]/14 blur-[70px]"></div>
+
+    {
+      title && (
+        <header class="mb-8 flex items-center gap-4 border-b border-[#16305f] pb-4">
+          <span aria-hidden="true" class="h-8 w-1.5 shrink-0 rounded-full bg-gradient-to-b from-[#f7d046] to-[#c99a17] shadow-[0_0_10px_rgba(247,208,70,0.45)]" />
+          <HeadingTag class="text-2xl leading-normal font-black tracking-widest text-[#ffe38a] uppercase">{title}</HeadingTag>
+        </header>
+      )
+    }
+
+    <div class="grid grid-cols-1 gap-8 md:grid-cols-3">
+      <article class="flex flex-col gap-3 border-b border-[#16305f] pb-8 text-left text-base leading-relaxed text-[#f5e7c2] transition-all hover:-translate-y-1 md:border-r md:border-b-0 md:pr-8 md:pb-0">
         {
           titleleft && (
-            <h2 class="flex items-center gap-2 text-lg font-black leading-normal tracking-widest text-emerald-400 uppercase">
-              <span aria-hidden="true" class="text-2xl drop-shadow-[0_0_8px_rgba(16,185,129,0.8)]">🎯</span> {titleleft}
-            </h2>
+            <p class="flex items-center gap-2 text-lg leading-normal font-black tracking-widest text-[#ffe38a] uppercase">
+              <span aria-hidden="true" class="text-2xl drop-shadow-[0_0_8px_rgba(247,208,70,0.8)]">
+                🎯
+              </span>{" "}
+              {titleleft}
+            </p>
           )
         }
         <slot name="left" />
       </article>
 
-      <article class="flex flex-col gap-3 text-left text-base leading-relaxed text-gray-400 border-b border-emerald-900/50 pb-8 transition-all hover:-translate-y-1 md:border-r md:border-b-0 md:px-4 md:pb-0">
+      <article class="flex flex-col gap-3 border-b border-[#16305f] pb-8 text-left text-base leading-relaxed text-[#f5e7c2] transition-all hover:-translate-y-1 md:border-r md:border-b-0 md:px-4 md:pb-0">
         {
           titlecenter && (
-            <h2 class="flex items-center gap-2 text-lg font-black leading-normal tracking-widest text-emerald-400 uppercase">
-              <span aria-hidden="true" class="text-2xl drop-shadow-[0_0_8px_rgba(16,185,129,0.8)]">⚡</span> {titlecenter}
-            </h2>
+            <p class="flex items-center gap-2 text-lg leading-normal font-black tracking-widest text-[#ffe38a] uppercase">
+              <span aria-hidden="true" class="text-2xl drop-shadow-[0_0_8px_rgba(247,208,70,0.8)]">
+                ⚡
+              </span>{" "}
+              {titlecenter}
+            </p>
           )
         }
         <slot name="center" />
       </article>
 
-      <article class="flex flex-col gap-3 text-left text-base leading-relaxed text-gray-400 transition-all hover:-translate-y-1 md:pl-8">
+      <article class="flex flex-col gap-3 text-left text-base leading-relaxed text-[#f5e7c2] transition-all hover:-translate-y-1 md:pl-8">
         {
           titleright && (
-            <h2 class="flex items-center gap-2 text-lg font-black leading-normal tracking-widest text-emerald-400 uppercase">
-              <span aria-hidden="true" class="text-2xl drop-shadow-[0_0_8px_rgba(16,185,129,0.8)]">🚀</span> {titleright}
-            </h2>
+            <p class="flex items-center gap-2 text-lg leading-normal font-black tracking-widest text-[#ffe38a] uppercase">
+              <span aria-hidden="true" class="text-2xl drop-shadow-[0_0_8px_rgba(247,208,70,0.8)]">
+                🚀
+              </span>{" "}
+              {titleright}
+            </p>
           )
         }
         <slot name="right" />
@@ -41,4 +71,3 @@ const { titleleft, titlecenter, titleright } = Astro.props;
     </div>
   </div>
 </section>
-

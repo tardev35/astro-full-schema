@@ -4,8 +4,8 @@ import bgConfig from "../assets/bg.json";
 import "../styles/global.css";
 import { BRAND_NAME, BRAND_TEXT, brandProfile, fontStack, iconVersion } from "../lib/brandProfile";
 import { canonicalFor } from "../lib/schema";
-import Navbar from "../components/NavbarStyle8.astro";
-import Footer from "../components/FooterStyle2.astro";
+import Navbar from "../components/NavbarPremium.astro";
+import Footer from "../components/FooterPremium.astro";
 
 // Only banner1 is ever rendered, so only banner1 is imported.
 //
@@ -54,8 +54,8 @@ const mobileBannerImg = mobileBanner
   : null;
 
 const {
-  title = "BABYSHARK8899 | เว็บนอกลิขสิทธิ์แท้ จ่ายเต็มทุกบิล ปลอดภัย 100%",
-  description = "BABYSHARK8899 เว็บนอกลิขสิทธิ์แท้ มั่นใจได้ทุกการถอน จ่ายเต็มทุกบิล ผ่านมาตรฐาน ปลอดภัย 100% สามารถใช้งานได้ทุกอุปกรณ์ เข้าถึงระบบได้อย่างสะดวก รวดเร็ว",
+  title = "SUPERCLUB168 สล็อตเว็บตรงAPIแท้ แตกบ่อย โบนัสระดับซุปเปอร์เมกะ",
+  description = "SUPERCLUB168 สล็อตเว็บตรงAPIแท้ รวมค่ายเกมพรีเมียม แตกบ่อย จ่ายหนักตรงเวลา โบนัสระดับซุปเปอร์เมกะ ฝากถอนโอนไว ไม่มีขั้นต่ำ สมัครสมาชิกฟรี",
   robots = "index, follow",
 } = Astro.props;
 
@@ -207,7 +207,7 @@ const profile = brandProfile(Astro.site);
         background-attachment: fixed;
         background-repeat: no-repeat;
         margin: 0;
-        background-color: #000617;
+        background-color: #020614;
         font-weight: 400;
         font-family: var(--font-sans) !important;
       }
@@ -260,7 +260,7 @@ const profile = brandProfile(Astro.site);
         }
         <Image
           src={mainBanner}
-          alt="แบนเนอร์ BABYSHARK8899 ฉากคาสิโนนีออนสีน้ำเงินและแดงบนพื้นดำ กลางภาพเป็นโลโก้ BABY SHARK 8899 หัวฉลามการ์ตูนสีฟ้าในวงกลมสีแดง ตัวอักษร BABY สีแดง SHARK สีขาว และเลข 8899 สีฟ้า ใต้โลโก้เป็นข้อความไทยตัวใหญ่ว่า สล็อตเว็บแท้อันดับหนึ่ง แจ็คพอตแตกดี ไม่มีกั๊ก ขนาบสองข้างด้วยพรีเซนเตอร์หญิงสวมชุดกีฬาสีน้ำเงิน-แดงพิมพ์คำว่า BABYSHARK8899 รอบตัวมีตู้สล็อตเลข 777 เหรียญทอง ชิปคาสิโน ป้าย JACKPOT และหีบสมบัติ"
+          alt="แบนเนอร์ SUPERCLUB168 พื้นหลังสีดำประกายด้วยประกายทอง ซ้ายมือเป็นตัวอักษรขนาดใหญ่สีแดงขอบทองว่า SUPERCLUB168 ใต้ชื่อเป็นข้อความไทยว่า ซุปเปอร์สล็อต API แท้ ทั้งระบบ ขวามือเป็นพรีเซนเตอร์หญิงในชุดราตรีเลื่อมทอง รอบตัวมีเหรียญทอง ชิปคาสิโน ไพ่โป๊กเกอร์ และประกายทองกระจายทั่วภาพ"
           loading="eager"
           fetchpriority="high"
           widths={[412, 640, 828, 1024, 1280, 1600, 1900]}

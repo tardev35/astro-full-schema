@@ -53,13 +53,13 @@ const mainLogo = imagePaths.length > 0 ? images[imagePaths[0]].default : null;
           {
             [
               { name: "หน้าแรก", path: "/" },
-              { name: "โปรโมชั่น", path: "/promotion" },
-              { name: "สมัครสมาชิก", path: "/register" },
-              { name: "เข้าสู่ระบบ", path: "/login" },
-              { name: "ทางเข้า", path: "/ทางเข้า" },
-              { name: "ทดลองเล่น", path: "/ทดลองเล่น" },
-              { name: "เกี่ยวกับเรา", path: "/about-us" },
-              { name: "ติดต่อเรา", path: "/contact-us" },
+              { name: "โปรโมชั่น", path: "/promotion/" },
+              { name: "สมัครสมาชิก", path: "/register/" },
+              { name: "เข้าสู่ระบบ", path: "/login/" },
+              { name: "ทางเข้า", path: "/ทางเข้า/" },
+              { name: "ทดลองเล่น", path: "/ทดลองเล่น/" },
+              { name: "เกี่ยวกับเรา", path: "/about-us/" },
+              { name: "ติดต่อเรา", path: "/contact-us/" },
             ].map((link) => (
               <li>
                 <a href={link.path} class="group flex items-center text-[#9fb8dc] transition-all hover:text-[#9ed4ff]">
@@ -82,7 +82,7 @@ const mainLogo = imagePaths.length > 0 ? images[imagePaths[0]].default : null;
           {
             ["สล็อตออนไลน์ (Slot)", "คาสิโนสด (Live Casino)", "ยิงปลา (Fishing)", "เว็บนอกลิขสิทธิ์แท้ (Direct)", "ฝากถอนออโต้ (Auto)"].map((game) => (
               <li>
-                <a href="/register" class="group flex items-center text-[#9fb8dc] transition-all hover:text-[#9ed4ff]">
+                <a href="/register/" class="group flex items-center text-[#9fb8dc] transition-all hover:text-[#9ed4ff]">
                   <span aria-hidden="true" class="mr-3 h-1.5 w-1.5 rounded-full bg-[#00397f] transition-colors group-hover:bg-[#0b83fa] group-hover:shadow-[0_0_8px_rgba(11,131,250,0.8)]" />
                   {game}
                 </a>
@@ -98,7 +98,7 @@ const mainLogo = imagePaths.length > 0 ? images[imagePaths[0]].default : null;
         </p>
 
         <a
-          href="/line"
+          href="/line/"
           class="flex w-full items-center justify-center gap-2 rounded-lg bg-[#00B900] py-3 font-bold text-white shadow-[0_0_15px_rgba(0,185,0,0.3)] transition-transform hover:scale-105">
           <span class="text-xl font-black">LINE</span> @BABYSHARK8899
         </a>

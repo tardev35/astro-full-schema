@@ -21,12 +21,12 @@ const isActive = (path: string) => isActivePath(currentPath, path);
 // and not the other.
 const links = [
   { name: "หน้าแรก", path: "/", icon: "🏛️" },
-  { name: "โปรโมชั่น", path: "/promotion", icon: "🎁" },
-  { name: "สมัครสมาชิก", path: "/register", icon: "📝" },
-  { name: "เข้าสู่ระบบ", path: "/login", icon: "🔑" },
-  { name: "ทดลองเล่น", path: "/ทดลองเล่น", icon: "🎰" },
-  { name: "เกี่ยวกับเรา", path: "/about-us", icon: "📜" },
-  { name: "ติดต่อเรา", path: "/contact-us", icon: "📞" },
+  { name: "โปรโมชั่น", path: "/promotion/", icon: "🎁" },
+  { name: "สมัครสมาชิก", path: "/register/", icon: "📝" },
+  { name: "เข้าสู่ระบบ", path: "/login/", icon: "🔑" },
+  { name: "ทดลองเล่น", path: "/ทดลองเล่น/", icon: "🎰" },
+  { name: "เกี่ยวกับเรา", path: "/about-us/", icon: "📜" },
+  { name: "ติดต่อเรา", path: "/contact-us/", icon: "📞" },
 ];
 
 const ctaPaths = new Set(["/register", "/login"]);
@@ -81,12 +81,12 @@ const logoAlt =
 
     <div class="z-[110] flex items-center gap-3">
       <a
-        href="/login"
+        href="/login/"
         class="hidden rounded-full border border-[#12c48f]/50 bg-[#0f241d]/70 px-6 py-2.5 text-sm font-bold text-[#4ff0bb] shadow-inner transition-all hover:border-[#4ff0bb] hover:bg-[#064c39]/80 lg:flex">
         เข้าสู่ระบบ
       </a>
       <a
-        href="/register"
+        href="/register/"
         class="hidden rounded-full border border-[#ffdd8a]/50 bg-gradient-to-r from-[#e8b52c] to-[#8a6314] px-6 py-2.5 text-sm font-black text-[#0a1a15] shadow-[0_4px_15px_rgba(232,181,44,0.4)] transition-all hover:scale-105 hover:shadow-[0_6px_20px_rgba(232,181,44,0.6)] lg:flex">
         สมัครสมาชิก
       </a>
@@ -121,11 +121,11 @@ const logoAlt =
     </div>
     <div class="mt-6 flex flex-col gap-3">
       <a
-        href="/register"
+        href="/register/"
         class="flex w-full justify-center rounded-full border border-[#ffdd8a]/50 bg-gradient-to-r from-[#e8b52c] to-[#8a6314] py-3.5 text-lg font-black text-[#0a1a15] shadow-md">
         สมัครสมาชิก
       </a>
-      <a href="/login" class="flex w-full justify-center rounded-full border border-[#12c48f]/50 bg-[#0f241d]/70 py-3.5 text-lg font-bold text-[#4ff0bb]">เข้าสู่ระบบ</a>
+      <a href="/login/" class="flex w-full justify-center rounded-full border border-[#12c48f]/50 bg-[#0f241d]/70 py-3.5 text-lg font-bold text-[#4ff0bb]">เข้าสู่ระบบ</a>
     </div>
   </div>
 </header>

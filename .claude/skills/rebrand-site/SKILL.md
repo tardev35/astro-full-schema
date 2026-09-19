@@ -286,6 +286,14 @@ by `src/pages/robots.txt.ts` from `site:`, so it follows the domain on
 its own. **Do not re-create `public/robots.txt`** — a static file there
 would silently win over the generated route.
 
+**The generated file must carry exactly one `Sitemap:` line, pointing at this
+brand's own `/sitemap-index.xml`.** `buildRobotsTxt` in `src/lib/brandProfile.ts`
+writes that line from `site:`, so a wrong `site:` costs twice: the canonical and
+the Sitemap line both send crawlers to the previous brand. A robots file with no
+Sitemap line at all — which is what a stray static `public/robots.txt` produces —
+leaves Google to discover the sitemap by guessing. Phase 5 checks both cases; the
+rendered pages never show either one.
+
 The **contact address** on `/contact-us` does **not** work this way and needs
 nothing from the prompt: it is derived from `BRAND_NAME` against the real
 77-province table in `src/lib/thaiProvinces.ts`, so setting the brand sets the
@@ -1864,6 +1872,11 @@ pointing at a `public/` path during a rebrand, repoint it to the
      at a hashed `/_astro/slide1.*` asset (the current brand's slide1),
      **not** a bare `/slide*.webp` — a `public/` path here means the OG
      image is a stale leftover (see the OG note in Phase 4)
+   - **`grep -i '^sitemap' dist/robots.txt` must print exactly one line**, and
+     it must read `Sitemap: https://<this brand's domain>/sitemap-index.xml`.
+     No line means a static `public/robots.txt` shadowed the generated route;
+     the previous brand's domain there means `site:` was never changed. Neither
+     failure is visible in any rendered page, so this grep is the only check.
    - grep for `undefined`, `NaN`, `[object Object]` as a cheap check
      for broken prop plumbing
    - **contact address**: `grep -o '<address[^>]*>.*</address>'

@@ -1,93 +1,72 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
-import Announcement from "../components/AnnouncementPremium.astro";
+import Announcement from "../components/Announcement3.astro";
 import ContentBox from "../components/ContentBox.astro";
-import ContentBoxCyberCut from "../components/ContentBoxCyberCut.astro";
-import ContentBoxSpecial from "../components/ContentBoxSpecial.astro";
-import ContentBox3Three from "../components/ContentBox3Three.astro";
-import ContentBoxSevenThree from "../components/ContentBoxSevenThree.astro";
-import ContentBoxSevenThreeCyberCut from "../components/ContentBoxSevenThreeCyberCut.astro";
-import FeatureHighlights from "../components/FeatureHighlights.astro";
-import ProviderGridPremium from "../components/ProviderGridPremium.astro";
+import ContentBoxPremium from "../components/ContentBoxPremium.astro";
+import ContentBoxFloatingBadge from "../components/ContentBoxFloatingBadge.astro";
+import ContentBoxNeumorphism from "../components/ContentBoxNeumorphism.astro";
+import ContentBoxTwoPremium from "../components/ContentBoxTwoPremium.astro";
+import ContentBoxSevenThreePremium from "../components/ContentBoxSevenThreePremium.astro";
+import ContentBoxSevenThreeNeumorphism from "../components/ContentBoxSevenThreeNeumorphism.astro";
+import ProviderGrid from "../components/ProviderGrid.astro";
 import GameRankingBoard from "../components/GameRankingBoard.astro";
 import SmoothCarousel from "../components/SmoothCarousel.astro";
-import LatestWinnersPremium from "../components/LatestWinnersPremium.astro";
+import LatestWinnersCyber from "../components/LatestWinnersCyber.astro";
 import LoginRtpSection from "../components/LoginRtpSection.astro";
 import ReviewCardSumo2 from "../components/ReviewCardSumo2.astro";
-import Faq4 from "../components/Faq4.astro";
+import Faq2 from "../components/Faq2.astro";
 import Navfoot from "../components/Navfoot.astro";
 
 import { Picture } from "astro:assets";
 import { pageGraph } from "../lib/schema";
-import imgBonus from "../assets/slide1.png";
-import imgProviders from "../assets/slide3.png";
+import imgCommission from "../assets/slide4.png";
+import imgAllInOne from "../assets/slide1.png";
 
-const pageTitle = "SUPERCLUB168 สล็อตเว็บตรงAPIแท้ แตกบ่อย โบนัสระดับซุปเปอร์เมกะ";
+const pageTitle = "GGHENG | สล็อตเว็บตรงสายเฮง ระบบแท้100% แตกง่าย จ่ายไม่อั้น";
 
-const pageDescription =
-  "SUPERCLUB168 สล็อตเว็บตรงAPIแท้ รวมค่ายเกมพรีเมียม แตกบ่อย จ่ายหนักตรงเวลา โบนัสระดับซุปเปอร์เมกะ ฝากถอนโอนไว ไม่มีขั้นต่ำ สมัครสมาชิกฟรี";
+const pageDescription = "GGHENG สล็อตเว็บตรงสายเฮง ไม่มีขั้นต่ำ ระบบแท้100% เล่นลื่นไหล แตกง่าย ค่าRTP มาตรฐาน ฝากถอน True Wallet หลักล้านก็โอน จ่ายไม่อั้น";
 
-const bonusAlt =
-  "ภาพโปรโมชั่นพื้นดำ-ทอง ตราวงกลม SUPERCLUB168 ด้านบน หัวข้อ COMMISSION คืนทุกยอดเล่นตลอดทั้งวัน 0.3% ระบุเล่นถึง 50% ถอนได้เลย กดรับง่ายๆ ที่หน้าเว็บได้เลย รับสิทธิ์ก่อน 23.59 น. ของทุกวัน ปิดท้ายด้วยข้อความ ยิ่งเล่นเยอะ ยิ่งได้เยอะ ด้านซ้ายเป็นพรีเซนเตอร์หญิงสวมชุดเลื่อมสีทอง";
+const commissionAlt =
+  "ภาพโปรโมชั่น โลโก้ GGHENG หัวข้อ COMMISSION คืนทุกยอดเล่นตลอดทั้งวัน 0.3% เล่นถึง 50% ถอนได้เลย สามารถกดรับง่ายๆ ที่หน้าเว็บได้เลยค่ะ รับสิทธิ์ก่อน 23.59 น. ของทุกวัน ยิ่งเล่นเยอะ ยิ่งได้เยอะ";
 
-const providersAlt =
-  "ภาพโปรโมชั่นพื้นดำ-ทอง ตราวงกลม SUPERCLUB168 มุมขวาบน ปุ่มเรียงด้านซ้ายระบุ หวย บอล บาคาร่า สล็อต ข้อความใหญ่ ครบจบในที่เดียว และแถบรายการด้านล่าง บอล คาสิโน สล็อต ยิงปลา ไก่ชน มวย ไฮโล รูเล็ต ตรงกลางเป็นพรีเซนเตอร์หญิงสวมชุดเลื่อมสีทอง";
+const allInOneAlt =
+  "ภาพโปรโมชั่นพื้นแดงเข้มประกายไฟ โลโก้ปีกสีแดงทอง GGHENG มุมขวาบน ปุ่มเรียงด้านซ้าย หวย บอล บาคาร่า สล็อต ข้อความทองขนาดใหญ่ ครบจบในที่เดียว แถบล่าง บอล คาสิโน สล็อต ยิงปลา ไก่ชน มวย ไฮโล รูเล็ต กลางภาพเป็นพรีเซนเตอร์หญิงชุดเลื่อมสีดำทอง";
 
-const providerPoints = [
-  {
-    icon: "🎨",
-    title: "PG SOFT",
-    description: "ภาพสวย แตกไว ฟีลพรีเมียม เป็นค่ายที่สมาชิกเปิดบ่อยที่สุดในไลน์อัพของเรา",
-    accent: "blue" as const,
-  },
-  {
-    icon: "🎁",
-    title: "Pragmatic Play",
-    description: "ซื้อฟรีสปินจัดจ้าน โบนัสแรง เหมาะกับสายที่อยากเข้าฟีเจอร์ใหญ่โดยไม่ต้องรอรอบ",
-    accent: "red" as const,
-  },
-  {
-    icon: "🔥",
-    title: "JILI / Joker / CQ9 / Relax Gaming / Hacksaw",
-    description: "ทุกค่ายเกมที่ถูกเลือกมาคือ “ค่ายที่แตกถี่ แตกบ่อยและได้รับความนิยมสูงสุดในตลาดจริง”",
-    accent: "blue" as const,
-  },
-  {
-    icon: "👛",
-    title: "กระเป๋าเดียว ไม่ต้องโยกเงิน",
-    description: "คุณไม่ต้องโยกเงิน ไม่ต้องย้ายกระเป๋า เว็บนี้ใช้ระบบ กระเป๋าเดียว เลือกเกมแล้วลุยได้ทันทีทุกเกมทุกค่าย ทุกประเภท",
-    accent: "red" as const,
-  },
+const walletPoints = [
+  { icon: "👛", text: "รองรับ True Money Wallet แบบเต็มรูปแบบ" },
+  { icon: "🏦", text: "ไม่สะดวกใช้บัญชีธนาคาร ก็ฝาก-ถอนผ่านวอเลทได้ทันที" },
+  { icon: "⚡", text: "ระบบออโต้ทำงานไวเหมือนกันทุกช่องทาง" },
+  { icon: "🔎", text: "ปลอดภัย แม่นยำ ตรวจสอบได้ทุกยอดธุรกรรม" },
 ];
 
 const faqs = [
   {
-    q: "SUPERCLUB168 เป็นสล็อตเว็บตรง API แท้ อย่างไร?",
-    a: "SUPERCLUB168 เชื่อมต่อ API แท้ จากเซิร์ฟเวอร์หลักของผู้พัฒนาเกมโดยตรง ไม่ผ่านตัวกลาง ผลคือเล่นได้แบบ Real-time ไม่มีดีเลย์ ภาพสวยเสียงชัด และค่า RTP เป็นของจริง ไม่มีการปรับลดเปอร์เซ็นต์",
+    q: "GGHENG เป็นสล็อตเว็บตรงหรือเว็บเอเย่นต์?",
+    a: "GGHENG เป็นสล็อตเว็บตรงสายเฮง ใช้ระบบแท้ 100% จากต่างประเทศ ไม่ใช่เว็บเอเย่นต์ เกมทุกเกมเป็นลิขสิทธิ์แท้จากค่ายแม่โดยตรง",
   },
   {
-    q: "ทำไม SUPERCLUB168 ถึงแตกบ่อยกว่าเว็บทั่วไป?",
-    a: "เพราะเกมเชื่อมตรงจากค่ายแม่ ค่า RTP เต็มระบบ ไม่มีการปรับเรท ไม่มีล็อกยูส โบนัสจึงออกถี่และสม่ำเสมอตามมาตรฐานของแต่ละเกม ไม่ได้ขึ้นกับช่วงเวลาที่คุณเข้ามาเล่น",
+    q: "GGHENG มีการล็อกยูสหรือปรับอัตราแพ้ชนะหรือไม่?",
+    a: "ไม่มี เราทำเว็บแบบจริงจังระยะยาว จึงไม่ยุ่งกับค่าแพ้ชนะหรือปรับอัตราใด ๆ (Lock User) ทุกเกมรันด้วยค่า RTP (Return to Player) มาตรฐานสากลจากค่ายแม่โดยตรง วัดกันที่ดวงและจังหวะของผู้เล่น",
   },
   {
-    q: "โบนัสระดับซุปเปอร์เมกะ ต้องรอช่วงเวลาไหม?",
-    a: "ไม่ต้องรอ ที่ SUPERCLUB168 ทุกนาทีเสถียรเท่ากัน ทุกการสปินมีสิทธิเข้าฟีเจอร์ใหญ่และแตะซุปเปอร์เมกะ (Super Mega Win) ได้เหมือนกันหมด จะปั่นเบทเบาหรือกดหนักต่อเนื่องก็รองรับแบบแฟร์ 100%",
+    q: "เล่น GGHENG ได้บนอุปกรณ์อะไรบ้าง ต้องโหลดแอปไหม?",
+    a: "รองรับทุกแพลตฟอร์ม ทั้งไอแพด มือถือ และคอมพิวเตอร์ ใช้ยูสเซอร์เดียวเข้าเล่นได้ทันที ระบบเสถียร ลื่นไหล ไม่กินเน็ต และไม่ต้องโหลดแอปให้รกเครื่อง",
   },
   {
-    q: "ฝากถอนของ SUPERCLUB168 ใช้เวลานานแค่ไหน?",
-    a: "ระบบฝากถอน Auto ใช้เวลาเฉลี่ยเพียง 1–3 วินาที ทำรายการได้ 24 ชั่วโมง รองรับทั้งแอปธนาคารไทยและ True Money Wallet ฝากแล้วเครดิตเข้าทันที ถอนแล้วเงินเด้งเข้าบัญชี",
+    q: "ถอนเงินยอดใหญ่ที่ GGHENG ได้ครบไหม มีค่าธรรมเนียมหรือเปล่า?",
+    a: "GGHENG จ่ายไม่อั้น ไม่ว่าจะแตกหลักแสนหรือหลักล้านก็โอนให้ครบทุกบาททุกสตางค์ ไม่มีผ่อนจ่าย และไม่หักค่าธรรมเนียมใดๆ ทั้งสิ้น",
   },
   {
-    q: "SUPERCLUB168 มีขั้นต่ำในการฝากถอนหรือไม่?",
-    a: "ไม่มีขั้นต่ำทั้งฝากและถอน เริ่มต้นได้ตั้งแต่ 1 บาท จะมีทุนร้อยหรือทุนล้านก็ได้รับการดูแลรวดเร็วเท่าเทียมกัน และถอนยอดได้เต็มจำนวน ไม่อั้น ไม่จำกัดรอบ",
+    q: "GGHENG มีขั้นต่ำในการฝากหรือไม่?",
+    a: "ไม่มีขั้นต่ำ ไม่ว่าทุนจะมากหรือน้อยก็เริ่มต้นได้ จะฝากหลักสิบหรือหลักร้อยก็เข้าเล่นได้เหมือนสมาชิกทุกคน",
   },
   {
-    q: "สมัครสมาชิก SUPERCLUB168 ต้องฝากเงินก่อนไหม?",
-    a: "ไม่ต้องฝากก่อน สมัครฟรี 100% กรอกข้อมูลน้อย ใช้เวลาไม่เกิน 10 วินาที ก็ได้ยูสเข้าดูเกม ทดลองระบบ และสำรวจบรรยากาศคลับก่อนตัดสินใจเติมจริงแบบไม่ผูกมัด",
+    q: "GGHENG มีเกมสล็อตจากค่ายไหนบ้าง?",
+    a: "เรารวบรวมค่ายเกมชั้นนำระดับโลกอย่าง PG SOFT, Pragmatic Play, Joker Gaming และอีกหลายค่ายมาไว้ในที่เดียว ทุกเกมเป็นลิขสิทธิ์แท้ ภาพสวย เสียงชัด เล่นลื่นไหล และอัปเดตเกมใหม่ก่อนใคร",
   },
   {
-    q: "SUPERCLUB168 มีค่ายเกมอะไรบ้าง และต้องโยกเงินไหม?",
-    a: "ไลน์อัพครอบคลุม PG SOFT, Pragmatic Play, JILI, Joker, CQ9, Relax Gaming และ Hacksaw ทั้งหมดอยู่ในระบบกระเป๋าเดียว จึงเลือกเกมแล้วลุยได้ทันที ไม่ต้องโยกเงินหรือย้ายกระเป๋าระหว่างค่าย",
+    q: "ฝากถอนผ่าน True Wallet ที่ GGHENG ได้ไหม?",
+    a: "ได้ ระบบการเงินรองรับ True Money Wallet แบบเต็มรูปแบบ สำหรับผู้ที่ไม่สะดวกใช้บัญชีธนาคารก็ฝาก-ถอนผ่านวอเลทได้ทันที ระบบออโต้ทำงานเหมือนกัน ปลอดภัย แม่นยำ และตรวจสอบได้ทุกยอดธุรกรรม",
   },
 ];
 
@@ -103,156 +82,122 @@ const graph = pageGraph(Astro, {
 
   <Announcement />
 
-  <ContentBoxCyberCut as="h1" title="SUPERCLUB168 สล็อตเว็บตรงAPIแท้ แตกถี่ โบนัสระดับซุปเปอร์เมกะ">
-    <div class="flex flex-col gap-4">
-      <p class="text-left text-base leading-relaxed">
-        SUPERCLUB168 เปิดประตูต้อนรับคุณเข้าสู่อาณาจักรเดิมพันระดับ VVIP ที่ซึ่งคำว่า “แตกบ่อย” เป็นเรื่องปกติ และคำว่า “รางวัลใหญ่” คือมาตรฐานที่คุณคู่ควร
-      </p>
-
-      <p class="text-left text-base leading-relaxed">
-        เราคือ สล็อตเว็บตรง API แท้ ที่ส่งตรงความแรงจากค่ายเกมระดับโลก มอบความเสถียรลื่นไหลให้คุณล่า โบนัสระดับซุปเปอร์เมกะ เราเตรียมแจ็คพอตก้อนโตและความสนุกสุดเหวี่ยงไว้รอเสิร์ฟตลอด 24 ชั่วโมง
-        เข้ามาสัมผัสความ “SUPERCLUB168” ด้วยตัวคุณเอง
-      </p>
-    </div>
-  </ContentBoxCyberCut>
+  <ContentBoxPremium as="h1" title="GGHENG สล็อตเว็บตรงสายเฮง ระบบแท้100% แตกง่าย จ่ายไม่อั้น">
+    <p class="text-left text-base leading-relaxed">
+      GGHENG (จีจีเฮง) ต้อนรับว่าที่เศรษฐีใหม่ทุกท่าน ที่นี่ไม่ใช่แค่เว็บสล็อตธรรมดา แต่คือ สล็อตเว็บตรงสายเฮง การันตีด้วยเกียรติของเจ้าของเว็บ เราใช้ ระบบแท้100% จากต่างประเทศ สัมผัส เกมสล็อต
+      แตกง่าย ในแบบที่ควรจะเป็น และเมื่อได้เงินรางวัล ไม่ว่าจะยอดเท่าไหร่ GGHENG พร้อม จ่ายไม่อั้น เงินทั้งหมดของเว็บ เตรียมไว้แจกพวกคุณเหล่าสมาชิกโดยเฉพาะ เข้ามาเลยครับ
+      มาร่วมสนุกและโกยเงินทุกวัน
+    </p>
+  </ContentBoxPremium>
 
   <SmoothCarousel />
 
-  <ContentBox as="h2" title="ทำไมต้อง SUPERCLUB168 สล็อตเว็บตรงAPIแท้ ที่เสถียรที่สุด">
-    <div class="flex flex-col gap-4">
-      <p class="text-left text-base leading-relaxed">
-        SUPERCLUB168 เลือกใช้ระบบโครงสร้างพื้นฐานที่ดีที่สุด โดยการเชื่อมต่อ API แท้ จากเซิร์ฟเวอร์หลักของผู้พัฒนาเกมโดยตรง ผลลัพธ์คือความลื่นไหลระดับหัวแตก!
-      </p>
+  <ContentBoxFloatingBadge as="h2" title="GGHENG สล็อตเว็บตรงสายเฮง ส่งตรงความรวย เข้าได้ทุกแพลตฟอร์ม">
+    <p class="text-left text-base leading-relaxed">
+      สล็อตเว็บตรงสายเฮง ไม่ได้ถูกกำกัดการเล่นที่ใด หรือแพลตฟอร์มใดแพลตฟอร์มหนึ่ง GGHENG รองรับการใช้งานทุกรูปแบบ ไม่ว่าคุณจะนั่งจิบกาแฟใช้ไอแพด นอนเล่นบนโซฟาด้วยมือถือ
+      หรือนั่งทำงานหน้าคอมพิวเตอร์ ใช้ยูสเซอร์เดียวสามารถเข้าถึงความเฮงๆได้ทันที เว็บไซต์ GGHENG เราทำระบบมาให้เสถียร ลื่นไหล ไม่กินเน็ต ไม่ต้องโหลดแอปให้รกเครื่อง
+      แค่คลิกเดียวก็เหมือนวาร์ปเข้ามาอยู่ในคาสิโนระดับโลก ส่งตรงความเฮงๆ ให้คุณทุกที่
+    </p>
+  </ContentBoxFloatingBadge>
 
-      <p class="text-left text-base leading-relaxed">
-        คุณจะเล่นเกมได้แบบ Real-time ไม่มีดีเลย์ รักษาคุณภาพภาพสวยเสียงชัด และที่สำคัญคือค่า RTP (อัตราการชนะ) ที่เป็นของจริง ไม่มีการปรับลดเปอร์เซ็นต์
-      </p>
-    </div>
-  </ContentBox>
+  <ContentBoxNeumorphism as="h3" title="เล่นสล็อตที่ GGHENG แตกง่าย ค่าRTP มาตรฐานสากล">
+    <p class="text-left text-base leading-relaxed">
+      เราเลือกทำเว็บนี้แบบจริงจังระยะยาว ไม่ใช่เว็บที่หวังผลชั่วคราว จึงไม่มีความจำเป็นต้องไปยุ่งกับค่าแพ้ชนะหรือปรับอัตราใด ๆ (Lock User) ให้เสียชื่อ ทุกอย่างที่คุณเล่นคือระบบตรง 100%
+      เกมทุกเกมในบ้านหลังนี้ รันด้วยค่า RTP (Return to Player) มาตรฐานสากลจากค่ายแม่โดยตรง นี่คือเหตุผลที่ว่าทำไมเล่นที่นี่ถึง แตกง่าย กว่าเว็บเอเย่นต์ทั่วไป ความเฮงที่ GGHENG เกิดจาก
+      “ความแฟร์” ล้วนๆ ครับ วัดกันที่ดวงและจังหวะของคุณจริงๆ ไม่มีระบบผีผลักหรือกลโกงใดๆ ให้ระคายเคืองใจแน่นอน
+    </p>
+  </ContentBoxNeumorphism>
 
-  <ContentBoxSpecial as="h2" title="SUPERCLUB168 แตกบ่อย จ่ายหนักตรงเวลา ไม่อั้นถอน">
-    <div slot="left" class="flex flex-col gap-3">
-      <p class="text-left text-base leading-relaxed">
-        แตกจริง จ่ายจริง ตรงเวลาไม่มีกั๊ก SUPERCLUB168 นี่แหละเว็บใหญ่ของจริง ที่นี่แตกถี่เพราะเกมเชื่อมตรงจากค่ายแม่ ค่า RTP เต็มระบบ โบนัสแรง ยอดเท่าไหร่ เราจ่ายทันที ไม่แบ่งจ่าย
-      </p>
-    </div>
+  <LoginRtpSection />
 
-    <div slot="right" class="flex flex-col gap-3">
-      <p class="text-left text-base leading-relaxed">ถอนหลักร้อยหลักพัน ก็เด้งไวเหมือนเดิม ถอนหลักหมื่นหลักแสน ก็ไม่มีอาการสะดุด หรือทำทีว่าระบบขัดข้อง</p>
-
-      <p class="text-left text-base leading-relaxed">ยอดใหญ่แค่ไหนก็กดถอนได้เต็มจำนวน ไม่อั้น ไม่จำกัดรอบ</p>
-    </div>
-  </ContentBoxSpecial>
-
-  <LatestWinnersPremium />
-
-  <ContentBoxSevenThree as="h2" titleright="โบนัสระดับซุปเปอร์เมกะ ได้ทุกการสปิน ทำได้ตลอดทั้งวัน">
+  <ContentBoxSevenThreeNeumorphism as="h2" titleright="GGHENG จ่ายไม่อั้น ถอนหลักล้านก็โอนครบทุกบาท">
     <Picture
       slot="left"
-      src={imgBonus}
-      alt={bonusAlt}
+      src={imgCommission}
+      alt={commissionAlt}
       loading="lazy"
       fetchpriority="low"
-      widths={[240, 353, 480, 706]}
-      sizes="(max-width: 767px) calc(100vw - 96px), 353px"
+      widths={[240, 382, 480, 764]}
+      sizes="(max-width: 767px) calc(100vw - 96px), 382px"
       decoding="async"
       formats={["avif", "webp"]}
       fallbackFormat="webp"
       quality={70}
-      class="mx-auto h-auto w-full rounded-2xl border border-[#16305f] shadow-[0_10px_30px_rgba(247,208,70,0.22)]"
+      class="mx-auto h-auto w-full rounded-2xl border border-[#5c0b13] shadow-[0_10px_30px_rgba(245,197,66,0.22)]"
     />
 
-    <div slot="right" class="flex flex-col gap-4">
-      <p class="text-left text-base leading-relaxed">
-        ลืมคำว่า “ช่วงเวลาโบนัส” แบบเดิมๆ ที่ต้องมารอนั่งเฝ้าหน้าจอไปได้เลยครับ! เพราะที่ SUPERCLUB168 เราปลดล็อกขีดจำกัดให้ทุกนาทีกลายเป็นนาทีทองของคุณ
-      </p>
-
-      <p class="text-left text-base leading-relaxed">
-        ทำให้โอกาสในการคว้า โบนัสระดับซุปเปอร์เมกะ (Super Mega Win) เกิดขึ้นได้จริงใน ทุกการสปิน เสถียรเท่ากันทุกชั่วโมง ทุกการสปินมีสิทธิเข้าฟีเจอร์ใหญ่ ได้รางวัลหนัก
-        และแตะซุปเปอร์เมกะได้เหมือนกันหมด
-      </p>
-
-      <p class="text-left text-base leading-relaxed">จะปั่นเบทเบา ๆ ก็มีลุ้น จะกดหนักต่อเนื่องก็แตกหนักสะใจ ทุกแนวการเล่นเรารองรับแบบแฟร์ 100% ไม่มีล็อกยูส ไม่มีแบ่งช่วง</p>
-    </div>
-  </ContentBoxSevenThree>
-
-  <ContentBox3Three
-    as="h2"
-    title="ฝากถอนโอนไว ออโต้ ไม่มีขั้นต่ำ อิสระที่คุณเลือกได้"
-    titleleft="ออโต้ไวเหมือนแสง"
-    titlecenter="ไม่มีขั้นต่ำ ทุนเท่าไหร่ก็เริ่มได้"
-    titleright="ธนาคารไทยและ True Money Wallet">
-    <p slot="left" class="text-left text-base leading-relaxed">
-      ระบบการเงินของ SUPERCLUB168 ทำงานด้วยระบบ AI อัจฉริยะที่ประมวลผลไวเหมือนแสง ฝากปุ๊บเครดิตเข้าปั๊บ ถอนปุ๊บเงินเด้งเข้าบัญชี
+    <p slot="right" class="text-left text-base leading-relaxed">
+      เล่นได้เงินแล้วต้องได้ถอน! ที่ GGHENG เรามีสภาพคล่องทางการเงินระดับมหาศาล พร้อมเปย์ไม่อั้น ไม่ว่าคุณจะฟลุ๊คแตกแจ็คพอตหลักแสน หรือดวงเฮงสุดขีดได้หลักล้าน
+      ผมโอนให้ครบทุกบาททุกสตางค์ทันทีภายในไม่กี่วินาที ไม่มีดึงเชง ไม่มีผ่อนจ่าย และไม่หักค่าธรรมเนียมใดๆ ทั้งสิ้น เงินของคุณ คุณต้องได้ใช้ทันทีครับ
     </p>
+  </ContentBoxSevenThreeNeumorphism>
 
-    <p slot="center" class="text-left text-base leading-relaxed">
-      สมาชิกทุกคนบริหารเงินทุนได้อย่างอิสระ ไม่มีขั้นต่ำ ในการฝากถอน จะมีทุนร้อยหรือทุนล้าน ก็ได้รับการดูแลรวดเร็วเท่าเทียมกัน
-    </p>
+  <LatestWinnersCyber />
 
-    <p slot="right" class="text-left text-base leading-relaxed">จะใช้แอปธนาคารหรือ True Money Wallet ก็สะดวก ตอบโจทย์ไลฟ์สไตล์คนรุ่นใหม่ที่ชอบความรวดเร็วและง่ายดาย</p>
-  </ContentBox3Three>
-
-  <ContentBox as="h2" title="สมัครสมาชิกฟรี เข้าคลับได้ทันที ไม่ต้องเติมเงินก่อน">
+  <ContentBox as="h2" title="คนทุนน้อยก็เฮงได้ เพราะ GGHENG ไม่มีขั้นต่ำ">
     <div class="flex flex-col gap-4">
-      <p class="text-left text-base leading-relaxed">สมัคร SUPERCLUB168 “ประตูคลับ” ให้ทุกคนฟรี ไม่ต้องเติมเงินก่อน ไม่ต้องใช้ข้อมูลส่วนตัวเยอะ</p>
-
       <p class="text-left text-base leading-relaxed">
-        เพียงกรอกข้อมูลเบื้องต้น คุณจะได้ยูสพร้อมเข้าดูเกม ทดลองระบบ หรือสำรวจบรรยากาศคลับของเราก่อนตัดสินใจเติมจริง เพราะเรามั่นใจในคุณภาพ เลยยินดีให้คุณทดลองก่อนแบบไม่ผูกมัด
+        ไม่ว่าทุนคุณจะมากหรือน้อย ทีมงานเราเชื่อว่าความเฮงมันสร้างกันได้ครับ GGHENG จึงเปิดให้ทุกคนเริ่มต้นแบบ ไม่มีขั้นต่ำ ฝากหลักสิบ หรือหลักร้อย
+        ก็มีสิทธิ์ไปแตะหลักหมื่นหลักแสนเหมือนสมาชิกหลายคนในคลับของผมมาแล้ว ผมต้อนรับทุกคนเสมอ มาลองเริ่มต้นก้าวแรกที่นี่ด้วยกันนะครับ
       </p>
 
       <a
         href="/register/"
-        class="inline-flex w-fit items-center gap-2 rounded-full bg-gradient-to-r from-[#ffeeb8] via-[#ffd95e] to-[#c99a17] px-7 py-3 text-sm font-black tracking-widest text-[#03091f] shadow-[0_10px_30px_rgba(247,208,70,0.34)] transition-transform duration-300 hover:scale-105">
-        <span aria-hidden="true">👑</span> สมัครสมาชิก SUPERCLUB168
+        class="inline-flex w-fit items-center gap-2 rounded-full bg-gradient-to-r from-[#ffe9a3] via-[#f5c542] to-[#c8901a] px-7 py-3 text-sm font-black tracking-widest text-[#2a0203] shadow-[0_10px_30px_rgba(245,197,66,0.34)] transition-transform duration-300 hover:scale-105">
+        <span aria-hidden="true">🧧</span> สมัครสมาชิก GGHENG
       </a>
     </div>
   </ContentBox>
 
-  <LoginRtpSection />
-
-  <ContentBoxSevenThreeCyberCut as="h2" titleright="SUPERCLUB168 รวมค่ายเกมพรีเมียม ชั้นนำครบวงจร ระดับโลก">
+  <ContentBoxSevenThreePremium as="h2" titleright="รวมเกมสล็อตค่ายดัง ระบบแท้100% เล่นลื่นไหล รับโชคใหญ่ได้ทุกเกม">
     <Picture
       slot="left"
-      src={imgProviders}
-      alt={providersAlt}
+      src={imgAllInOne}
+      alt={allInOneAlt}
       loading="lazy"
       fetchpriority="low"
-      widths={[240, 346, 480, 692]}
-      sizes="(max-width: 767px) calc(100vw - 96px), 346px"
+      widths={[240, 338, 480, 676]}
+      sizes="(max-width: 767px) calc(100vw - 96px), 338px"
       decoding="async"
       formats={["avif", "webp"]}
       fallbackFormat="webp"
       quality={70}
-      class="mx-auto h-auto w-full rounded-2xl border border-[#16305f] shadow-[0_10px_30px_rgba(247,208,70,0.22)]"
+      class="mx-auto h-auto w-full rounded-2xl border border-[#5c0b13] shadow-[0_10px_30px_rgba(245,197,66,0.22)]"
     />
 
-    <div slot="right" class="flex flex-col gap-4">
-      <p class="text-left text-base leading-relaxed">SUPERCLUB168 รวบรวมค่ายเกมตัวท็อปมาเต็มไลน์อัพ เช่น</p>
+    <p slot="right" class="text-left text-base leading-relaxed">
+      สมาชิกเว็บ GGHENG ต้องได้เล่นสล็อตของดีมีคุณภาพเท่านั้นครับเรารวบรวมค่ายเกมชั้นนำระดับโลกอย่าง PG SOFT, Pragmatic Play, Joker Gaming และอีกเพียบ มาไว้ให้ครบจบในที่เดียว
+      ทุกเกมเป็นลิขสิทธิ์แท้ ภาพสวย เสียงชัด เล่นลื่นไหลไม่มีสะดุด ฟีเจอร์มาเต็ม อัปเดตเกมใหม่ก่อนใคร รับรองว่าเล่นเพลินจนลืมเวลา และทุกช่วงเวลา มีโบนัสแตก รับโชคใหญ่ได้ทุกเกม
+    </p>
+  </ContentBoxSevenThreePremium>
 
-      <FeatureHighlights items={providerPoints} />
-
-      <p class="text-left text-base leading-relaxed">
-        SUPERCLUB168 คือสล็อตเว็บตรง API แท้ ส่งตรงระบบจากค่ายเกมหลักระดับโลก ให้ความเสถียรสูง แตกบ่อย จ่ายหนัก พร้อมโบนัสซุปเปอร์เมกะได้ทุกการสปิน
-      </p>
-
-      <p class="text-left text-base leading-relaxed">แตกบ่อยจริงเพราะเชื่อม API แท้จากค่ายแม่ ไม่มีการปรับเรท ไม่มีล็อกยูส ค่า RTP ถูกต้องตามมาตรฐาน ทำให้โบนัสออกถี่และสม่ำเสมอ</p>
-
-      <p class="text-left text-base leading-relaxed">ระบบฝากถอน Auto ของ SUPERCLUB168 ใช้เวลาเฉลี่ยเพียง 1–3 วินาที รองรับธนาคารไทยและทรูวอเล็ท ทำรายการได้ 24 ชั่วโมง</p>
-
-      <p class="text-left text-base leading-relaxed">SUPERCLUB168 ไม่มีขั้นต่ำในการฝากและถอน ผู้เล่นสามารถเริ่มต้นได้ตั้งแต่ 1 บาท และถอนยอดได้เต็มจำนวนไม่อั้น</p>
-
-      <p class="text-left text-base leading-relaxed">สมัครสมาชิก SUPERCLUB168 ฟรี 100% ไม่ต้องฝากก่อน กรอกข้อมูลน้อย ใช้เวลาไม่เกิน 10 วินาที พร้อมรับยูสเข้าเล่นได้ทันที</p>
-    </div>
-  </ContentBoxSevenThreeCyberCut>
-
-  <ProviderGridPremium />
+  <ProviderGrid />
 
   <GameRankingBoard />
 
-  <ReviewCardSumo2 />
+  <ContentBoxTwoPremium as="h2" title="ฝากถอน โอนผ่าน True Wallet ได้เต็มระบบเหมือนธนาคาร">
+    <p slot="left" class="text-left text-base leading-relaxed">
+      เพื่อความสะดวกสูงสุด เราอัปเกรดระบบการเงินให้รองรับ True Money Wallet แบบเต็มรูปแบบ สำหรับใครที่ไม่สะดวกใช้บัญชีธนาคาร ก็สามารถฝาก-ถอนผ่านวอเลทได้ทันที
+      ระบบออโต้ทำงานไวไฟเหมือนกันเป๊ะ ปลอดภัย แม่นยำ ตรวจสอบได้ทุกยอดธุรกรรม จะช่องทางไหนก็รับทรัพย์ได้เหมือนกัน ที่ GGHENG เรื่องเงินเรื่องง่ายเสมอ!
+    </p>
 
-  <Faq4 title="คำถามที่พบบ่อยเกี่ยวกับ SUPERCLUB168" faqs={faqs} />
+    <ul slot="right" class="flex flex-col gap-3">
+      {
+        walletPoints.map((point) => (
+          <li class="flex items-center gap-3 rounded-xl border border-[#5c0b13] bg-[#1f0405] px-4 py-3 text-left text-base leading-relaxed">
+            <span aria-hidden="true" class="shrink-0 text-xl">
+              {point.icon}
+            </span>
+            <span>{point.text}</span>
+          </li>
+        ))
+      }
+    </ul>
+  </ContentBoxTwoPremium>
+
+  <ReviewCardSumo2 title="เสียงตอบรับจาก ผู้ใช้งานจริง" />
+
+  <Faq2 title="คำถามที่พบบ่อยเกี่ยวกับ GGHENG" faqs={faqs} />
 
   <Navfoot />
 </MainLayout>

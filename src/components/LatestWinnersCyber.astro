@@ -27,15 +27,15 @@ const initialRows = Array.from({ length: 5 }, (_, i) => ({
 
 <div class="mx-auto w-full max-w-[1300px] p-4">
   <section
-    aria-label="รายการเติมถอนออโต้ล่าสุดของสมาชิก AMBHENG88"
-    class="relative border-r-4 border-l-4 border-[#ff2d8e] bg-[#170512] px-4 py-8 shadow-[0_10px_30px_rgba(255,45,142,0.18)] md:p-10"
+    aria-label="รายการเติมถอนออโต้ล่าสุดของสมาชิก GGHENG"
+    class="relative border-r-4 border-l-4 border-[#e11d1d] bg-[#140202] px-4 py-8 shadow-[0_10px_30px_rgba(225,29,29,0.18)] md:p-10"
     style="clip-path: polygon(20px 0, calc(100% - 20px) 0, 100% 20px, 100% calc(100% - 20px), calc(100% - 20px) 100%, 20px 100%, 0 calc(100% - 20px), 0 20px);">
-    <div aria-hidden="true" class="absolute top-0 left-0 h-[1px] w-full bg-gradient-to-r from-transparent via-[#ff2d8e] to-transparent"></div>
-    <div aria-hidden="true" class="absolute bottom-0 left-0 h-[1px] w-full bg-gradient-to-r from-transparent via-[#ffe814] to-transparent"></div>
+    <div aria-hidden="true" class="absolute top-0 left-0 h-[1px] w-full bg-gradient-to-r from-transparent via-[#e11d1d] to-transparent"></div>
+    <div aria-hidden="true" class="absolute bottom-0 left-0 h-[1px] w-full bg-gradient-to-r from-transparent via-[#f5c542] to-transparent"></div>
 
-    <div class="relative z-10 mb-8 flex items-center justify-between border-b border-[#7d0b46] pb-4">
-      <p class="text-xl font-black tracking-[0.2em] text-[#ffe814]">/// AMBHENG88_AUTO_WALLET</p>
-      <span class="animate-pulse border border-[#ff74b6]/60 px-2 py-1 text-xs font-bold tracking-widest text-[#ff74b6]">24 ชม.</span>
+    <div class="relative z-10 mb-8 flex items-center justify-between border-b border-[#5a0a0a] pb-4">
+      <p class="text-xl font-black tracking-[0.2em] text-[#f5c542]">/// GGHENG_AUTO_WALLET</p>
+      <span class="animate-pulse border border-[#ff8a70]/60 px-2 py-1 text-xs font-bold tracking-widest text-[#ff8a70]">24 ชม.</span>
     </div>
 
     <div
@@ -51,14 +51,14 @@ const initialRows = Array.from({ length: 5 }, (_, i) => ({
       {
         initialRows.map((row) => (
           <div data-winner-row class="winner-row origin-left transform transition-all duration-500 ease-out">
-            <div class="flex items-center justify-between border-l-2 border-[#ff2d8e] bg-gradient-to-r from-[#280a1c] to-transparent p-3 transition-colors hover:bg-[#4a1030]">
+            <div class="flex items-center justify-between border-l-2 border-[#e11d1d] bg-gradient-to-r from-[#1f0405] to-transparent p-3 transition-colors hover:bg-[#3a0a0d]">
               <div class="flex items-center gap-4">
-                <div data-winner-bank class={`flex h-8 w-8 items-center justify-center border border-[#7d0b46] ${row.bank.color}`}>
+                <div data-winner-bank class={`flex h-8 w-8 items-center justify-center border border-[#5a0a0a] ${row.bank.color}`}>
                   <img data-winner-icon src={row.bank.icon} alt="" width="20" height="20" loading="lazy" decoding="async" class="h-5 w-5 object-contain" />
                 </div>
-                <div class="font-mono text-sm text-[#f3e3ee]">
+                <div class="font-mono text-sm text-[#f7e6d0]">
                   USR_ID:{" "}
-                  <span data-winner-user class="font-bold text-[#ffe814]">
+                  <span data-winner-user class="font-bold text-[#f5c542]">
                     {row.user}
                   </span>
                 </div>
@@ -71,8 +71,8 @@ const initialRows = Array.from({ length: 5 }, (_, i) => ({
                   class={`winner-status font-mono text-[10px] tracking-widest ${row.pending ? "is-pending" : "is-verified"}`}>
                   {row.pending ? "[กำลังทำรายการ]" : "[ทำรายการสำเร็จ]"}
                 </div>
-                <div class="font-mono text-xl font-black text-[#ffe814]">
-                  <span data-winner-amount>{row.amount}</span> <span class="text-xs text-[#c49ab6]">THB</span>
+                <div class="font-mono text-xl font-black text-[#f5c542]">
+                  <span data-winner-amount>{row.amount}</span> <span class="text-xs text-[#d4b59a]">THB</span>
                 </div>
               </div>
             </div>
@@ -81,8 +81,8 @@ const initialRows = Array.from({ length: 5 }, (_, i) => ({
       }
     </div>
 
-    <p class="relative z-10 mt-6 text-left text-[11px] leading-relaxed tracking-wide text-[#c49ab6]">
-      รายการที่แสดงเป็นตัวอย่างการเติม ฝาก ถอนออโต้ของสมาชิก AMBHENG88 ทั้งผ่านทรูมันนี่วอลเล็ทและบัญชีธนาคาร ซึ่งส่งรายการเองได้จากหน้าเมมเบอร์ตลอด 24 ชั่วโมง
+    <p class="relative z-10 mt-6 text-left text-[11px] leading-relaxed tracking-wide text-[#d4b59a]">
+      รายการที่แสดงเป็นตัวอย่างการเติม ฝาก ถอนออโต้ของสมาชิก GGHENG ทั้งผ่านทรูมันนี่วอลเล็ทและบัญชีธนาคาร ซึ่งส่งรายการเองได้จากหน้าเมมเบอร์ตลอด 24 ชั่วโมง
       ความเร็วของแต่ละรายการขึ้นอยู่กับช่องทางและสถานะระบบในขณะนั้น สถานะจริงให้ยึดตามหน้าเมมเบอร์ของตัวเอง
     </p>
 
@@ -102,8 +102,8 @@ const initialRows = Array.from({ length: 5 }, (_, i) => ({
   }
 
   .winner-status.is-pending {
-    color: #ffe814;
-    border-color: #ff2d8e;
+    color: #f5c542;
+    border-color: #e11d1d;
   }
   .winner-status.is-verified {
     color: #4ade80;

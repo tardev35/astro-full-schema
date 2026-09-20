@@ -2,7 +2,7 @@
 import MainLayout from "../layouts/MainLayout.astro";
 import ContentBox from "../components/ContentBox.astro";
 import Navfoot from "../components/Navfoot.astro";
-import Announcement from "../components/AnnouncementPremium.astro";
+import Announcement from "../components/Announcement3.astro";
 
 import { Picture } from "astro:assets";
 import { itemList, pageGraph, schemaCtx } from "../lib/schema";
@@ -36,12 +36,12 @@ const demoGames = [
 
 const gameList = demoGames.map((game) => ({ name: game.name, imagePath: game.src.src }));
 
-const pageTitle = "ทดลองเล่น - SUPERCLUB168 เลือกค่ายที่ชอบ ลองก่อนลงเครดิตจริง";
+const pageTitle = "ทดลองเล่นสล็อต GGHENG";
 
-const pageHeading = "ทดลองเล่นสล็อต SUPERCLUB168 เลือกค่ายที่ชอบ ลองให้พอใจก่อนลงเครดิตจริง";
+const pageHeading = "ทดลองเล่นสล็อต GGHENG เลือกค่ายที่ชอบ ลองให้พอใจก่อนลงเครดิตจริง";
 
 const pageDescription =
-  "หากคุณกำลังมองหาที่ลองเกมก่อนลงเครดิตจริง SUPERCLUB168 รวมโหมดทดลองจากค่ายดังอย่าง PG SOFT, JILI และ Joker ให้เลือกค่ายที่ชอบ เปิดยูสแล้วลองจนพอใจก่อนเล่นจริง";
+  "ทดลองเล่น GGHENG สล็อตเว็บตรงสายเฮง รวมโหมดทดลองจากค่ายดังอย่าง PG SOFT, Pragmatic Play และ Joker Gaming เลือกค่ายที่ชอบ เปิดยูสเดียวแล้วลองจนพอใจก่อนเล่นจริง";
 
 const ctx = schemaCtx(Astro);
 const graph = pageGraph(Astro, {
@@ -54,8 +54,8 @@ const graph = pageGraph(Astro, {
   ],
   extra: [
     itemList(ctx, {
-      name: "ทดลองเล่นเกมของ SUPERCLUB168",
-      alternateName: "SUPERCLUB168 โหมดทดลองเล่นเกมสล็อตหลายค่ายบนมือถือ ก่อนใช้เครดิตจริงในบัญชีสมาชิกเดียว",
+      name: "ทดลองเล่นเกมของ GGHENG",
+      alternateName: "GGHENG โหมดทดลองเล่นเกมสล็อตหลายค่ายบนมือถือ ก่อนใช้เครดิตจริงด้วยยูสเซอร์เดียว",
       itemType: "Game",
       items: gameList,
     }),
@@ -70,30 +70,30 @@ const graph = pageGraph(Astro, {
 
   <ContentBox as="h1" title={pageHeading}>
     <p class="mb-4 text-left text-base leading-relaxed">
-      หากคุณกำลังมองหาที่ลองเกมให้ชัดก่อนลงเครดิตจริง <strong class="text-[#ffe38a]">SUPERCLUB168</strong> พร้อมมอบโหมดทดลองจากค่ายที่เปิดอยู่ในระบบ เพื่อให้คุณรู้จักจังหวะของเกมก่อนตัดสินใจ
+      หากคุณกำลังมองหาที่ลองเกมให้ชัดก่อนลงเครดิตจริง <strong class="text-[#ffdf80]">GGHENG</strong> สล็อตเว็บตรงสายเฮง พร้อมมอบโหมดทดลองจากค่ายที่เปิดอยู่ในระบบ เพื่อให้คุณรู้จักจังหวะของเกมก่อนตัดสินใจ
     </p>
-
     <p class="mb-4 text-left text-base leading-relaxed">
       ขั้นตอนสั้นกว่าที่คิด เลือกค่ายที่สะดุดตาจากด้านล่าง กดที่ภาพเพื่อเปิดยูสก่อนหนึ่งครั้ง จากนั้นเข้าโหมดทดลองของค่ายนั้นต่อได้เลยจากหน้าสมาชิก
     </p>
-
-    <p class="text-left text-base leading-relaxed">เปิดจากมือถือ แท็บเล็ต หรือคอมก็เหมือนกัน ใช้ยูสตัวเดิมได้ทุกเครื่อง ไม่ต้องโหลดแอปเพิ่มและไม่ต้องจำรหัสหลายชุด</p>
+    <p class="text-left text-base leading-relaxed">
+      เปิดจากมือถือ ไอแพด หรือคอมพิวเตอร์ก็เหมือนกัน ใช้ยูสเซอร์เดิมได้ทุกเครื่อง ไม่ต้องโหลดแอปให้รกเครื่องและไม่ต้องจำรหัสหลายชุด
+    </p>
   </ContentBox>
 
-  <ContentBox as="h2" title="เลือกค่ายที่ถูกใจ แล้วเปิดยูส SUPERCLUB168 ใบเดียวใช้ได้ครบทุกค่าย">
+  <ContentBox as="h2" title="เลือกค่ายที่ถูกใจ แล้วเปิดยูส GGHENG ยูสเดียวลองได้ทุกค่าย">
     <p class="mb-4 text-left text-base leading-relaxed">
-      ค่ายไหนถูกตาเริ่มจากค่ายนั้นได้เลยครับ เพราะแต่ละค่ายวางจังหวะและฟีเจอร์ไว้ไม่เหมือนกัน ทั้งสล็อตหมุนคลาสสิก เกมฟรีสปิน เกมโบนัสหลายชั้น และเกมยิงปลา
+      ค่ายไหนถูกตาเริ่มจากค่ายนั้นได้เลยครับ เพราะแต่ละค่ายวางจังหวะและฟีเจอร์ไว้ไม่เหมือนกัน ทั้งสล็อตหมุนคลาสสิก เกมฟรีสปิน และเกมโบนัสหลายชั้น ทุกเกมเป็นลิขสิทธิ์แท้จากค่ายโดยตรง
     </p>
-
     <p class="mb-4 text-left text-base leading-relaxed">
-      ปุ่มบนภาพเขียนว่าสมัครเพื่อลอง เพราะมันพาไปที่ขั้นตอนเปิดยูสก่อน สมัครฟรีไม่ต้องฝาก พอได้ยูสแล้วค่อยเข้าโหมดทดลองของค่ายนั้นต่อในหน้าสมาชิกเดียวกัน
+      ปุ่มบนภาพเขียนว่าสมัครเพื่อลอง เพราะมันพาไปที่ขั้นตอนเปิดยูสก่อน พอได้ยูสแล้วค่อยเข้าโหมดทดลองของค่ายนั้นต่อในหน้าสมาชิกเดียวกัน
     </p>
-
-    <p class="mb-8 text-left text-base leading-relaxed">SUPERCLUB168 ใช้ระบบกระเป๋าเดียว ยูสเดียวสลับได้ทุกค่าย ไม่ต้องเปิดบัญชีใหม่ทีละค่าย และไม่ต้องโยกเครดิตไปมาให้เสียจังหวะตอนกำลังสนุก</p>
+    <p class="mb-8 text-left text-base leading-relaxed">
+      GGHENG ใช้ระบบแท้100% ยูสเซอร์เดียวสลับได้ทุกค่าย ไม่ต้องเปิดบัญชีใหม่ทีละค่าย ความเฮงจะมาจากเกมไหนก็ไม่ต้องเสียจังหวะตอนกำลังสนุก
+    </p>
     <div class="mb-5 grid grid-cols-2 gap-5 sm:grid-cols-2 md:grid-cols-4">
       {
         demoGames.map((game) => (
-          <div class="group/game relative mx-auto w-full max-w-[400px] overflow-hidden rounded-xl border border-[#0e2150]">
+          <div class="group/game relative mx-auto w-full max-w-[400px] overflow-hidden rounded-xl border border-[#5c0b13]">
             <Picture
               src={game.src}
               alt={game.alt}
@@ -101,7 +101,7 @@ const graph = pageGraph(Astro, {
               fetchpriority="low"
               widths={[200, 400, 600]}
               sizes="(max-width: 768px) 50vw, 25vw"
-              class="block h-auto w-full object-cover shadow-[0_10px_30px_rgba(247,208,70,0.18)] transition-transform duration-300 group-hover/game:scale-105"
+              class="block h-auto w-full object-cover shadow-[0_10px_30px_rgba(245,197,66,0.18)] transition-transform duration-300 group-hover/game:scale-105"
               decoding="async"
               formats={["avif", "webp"]}
               fallbackFormat="webp"
@@ -111,9 +111,9 @@ const graph = pageGraph(Astro, {
               href="/register/"
               target="_blank"
               rel="noopener noreferrer"
-              aria-label={`สมัครสมาชิกเพื่อลองเล่น ${game.name} ที่ SUPERCLUB168`}
-              class="absolute inset-0 flex items-center justify-center bg-[#03091f]/85 opacity-0 transition-opacity duration-300 group-hover/game:opacity-100 focus-visible:opacity-100">
-              <span class="rounded-full border border-[#8f6a08]/60 bg-gradient-to-r from-[#ffe89a] via-[#f7d046] to-[#c99a17] px-6 py-2 font-bold text-[#03091f] shadow-[0_10px_30px_rgba(247,208,70,0.35)] transition-transform hover:scale-110">สมัครเพื่อลอง</span>
+              aria-label={`สมัครสมาชิกเพื่อลองเล่น ${game.name} ที่ GGHENG`}
+              class="absolute inset-0 flex items-center justify-center bg-[#140202]/85 opacity-0 transition-opacity duration-300 group-hover/game:opacity-100 focus-visible:opacity-100">
+              <span class="rounded-full border border-[#8a6208]/60 bg-gradient-to-r from-[#ffe9a3] via-[#f5c542] to-[#c8901a] px-6 py-2 font-bold text-[#2a0203] shadow-[0_10px_30px_rgba(245,197,66,0.35)] transition-transform hover:scale-110">สมัครเพื่อลอง</span>
             </a>
           </div>
         ))
@@ -125,35 +125,33 @@ const graph = pageGraph(Astro, {
     <p class="mb-4 text-left text-base leading-relaxed">
       เข้าโหมดทดลองแล้วหมุนได้ไม่จำกัดรอบ เพราะเป็นเครดิตสมมติล้วน ๆ อยากลองผิดลองถูกกี่ครั้งก็ตามสบาย ไม่มีอะไรต้องเสี่ยงสักบาท
     </p>
-
     <p class="mb-4 text-left text-base leading-relaxed">
-      ระหว่างลองก็ดูไปด้วยว่าเกมวางสัญลักษณ์ไว้แบบไหน ฟรีสปินกับโบนัสเข้ามาบ่อยแค่ไหน และจังหวะหนึ่งรอบยาวพอกับที่คุณชอบไหม เก็บไว้เป็นข้อมูลตอนเลือกเกมที่จะเล่นจริง
+      ระหว่างลองก็ดูไปด้วยว่าเกมวางสัญลักษณ์ไว้แบบไหน ฟรีสปินกับโบนัสเข้ามาในจังหวะไหน และหนึ่งรอบยาวพอกับที่คุณชอบไหม เก็บไว้เป็นข้อมูลตอนเลือกเกมที่จะเล่นจริง
     </p>
-
-    <p class="mb-4 text-left text-base leading-relaxed">กลไกที่คุณเห็นในโหมดทดลองคือชุดเดียวกับตอนเล่นจริง ต่างกันแค่เครดิตที่ใช้หมุน เกมที่คุ้นมือแล้วจึงไม่ต้องเริ่มทำความรู้จักกันใหม่</p>
-
-    <p class="mb-4 text-left text-base leading-relaxed">เรื่องที่ต้องบอกให้ชัดตั้งแต่แรก เครดิตในโหมดทดลองถอนไม่ได้ และไม่นับเป็นยอดเทิร์นของโปรโมชั่นใด ๆ ทั้งสิ้น เอาไว้ทำความรู้จักเกมอย่างเดียว</p>
-
+    <p class="mb-4 text-left text-base leading-relaxed">
+      เกมบน GGHENG รันด้วยค่า RTP มาตรฐานสากลจากค่ายแม่ ไม่มีการล็อกยูส กลไกที่คุณเห็นในโหมดทดลองจึงเป็นชุดเดียวกับตอนเล่นจริง ต่างกันแค่เครดิตที่ใช้หมุน
+    </p>
+    <p class="mb-4 text-left text-base leading-relaxed">
+      เรื่องที่ต้องบอกให้ชัดตั้งแต่แรก เครดิตในโหมดทดลองถอนไม่ได้ และไม่นับเป็นยอดเทิร์นของโปรโมชั่นใด ๆ ทั้งสิ้น เอาไว้ทำความรู้จักเกมอย่างเดียว
+    </p>
     <p class="text-left text-base leading-relaxed">
-      อีกอย่างคือไม่ใช่ทุกเกมที่มีปุ่มทดลอง เพราะโหมดนี้ขึ้นอยู่กับผู้ให้บริการแต่ละราย ถ้าเกมที่อยากลองยังไม่เปิดไว้ ทักทีมงานที่ดูแลตลอด 24 ชั่วโมงให้ช่วยแนะนำเกมใกล้เคียงได้
+      อีกอย่างคือไม่ใช่ทุกเกมที่มีปุ่มทดลอง เพราะโหมดนี้ขึ้นอยู่กับผู้ให้บริการแต่ละราย ถ้าเกมที่อยากลองยังไม่เปิดไว้ ทักทีมงานให้ช่วยแนะนำเกมใกล้เคียงได้
     </p>
   </ContentBox>
 
-  <ContentBox as="h2" title="พร้อมเมื่อไหร่ สมัคร SUPERCLUB168 ฟรี แล้วเริ่มเล่นจริงได้ทันที">
+  <ContentBox as="h2" title="พร้อมเมื่อไหร่ สมัคร GGHENG แล้วเริ่มเล่นจริงได้ทันที ไม่มีขั้นต่ำ">
     <p class="mb-4 text-left text-base leading-relaxed">
-      สมัครฟรี 100% ไม่ต้องฝากก่อน กรอกข้อมูลน้อยใช้เวลาไม่เกินสิบวินาที แล้วได้ยูสเดียวที่ใช้ได้กับทุกหมวดในเว็บ ทั้งสล็อต คาสิโนสด บาคาร่า และเกมยิงปลา
+      พอเจอเกมที่ใช่แล้ว เริ่มเล่นจริงได้เลยด้วยยูสเซอร์เดิม GGHENG ไม่มีขั้นต่ำ ทุนมากหรือน้อยก็เริ่มได้เท่ากัน จะฝากหลักสิบหรือหลักร้อยก็เข้าเล่นได้ทุกเกม
     </p>
-
     <p class="mb-4 text-left text-base leading-relaxed">
-      ฝากถอนเป็นระบบออโต้ เฉลี่ยเพียง 1–3 วินาที ทำรายการได้ 24 ชั่วโมง รองรับแอปธนาคารไทยและทรูมันนี่วอลเล็ท ไม่มีขั้นต่ำ เริ่มได้ตั้งแต่ 1 บาท
+      ฝากถอนเป็นระบบออโต้ รองรับทั้งบัญชีธนาคารและ True Money Wallet แบบเต็มรูปแบบ ใครไม่สะดวกใช้ธนาคารก็ทำรายการผ่านวอลเล็ตได้ทันที ตรวจสอบได้ทุกยอดธุรกรรม
     </p>
-
     <p class="mb-4 text-left text-base leading-relaxed">
-      ยอดที่ถอนจ่ายเต็มจำนวน ไม่อั้น ไม่จำกัดรอบ ส่วนเงื่อนไขของโปรโมชั่นที่กำลังใช้อยู่ระบุไว้ครบในหน้าสมาชิก อ่านให้จบก่อนกดยืนยันทุกครั้ง
+      เล่นได้แล้วต้องได้ถอน GGHENG จ่ายไม่อั้น ถอนหลักแสนหรือหลักล้านก็โอนครบทุกบาท ไม่มีผ่อนจ่ายและไม่หักค่าธรรมเนียม ส่วนเงื่อนไขของโปรโมชั่นที่ใช้อยู่ อ่านให้จบก่อนกดยืนยันทุกครั้ง
     </p>
-
-    <p class="mb-4 text-left text-base leading-relaxed">อีกอย่างที่ควรติดตัวไว้เสมอ อย่าบอกรหัสผ่านหรือรหัส OTP กับใครทั้งนั้น แม้คนนั้นจะอ้างว่าเป็นทีมงานก็ตาม เพราะทีมงานจริงไม่มีเหตุต้องขอ</p>
-
+    <p class="mb-4 text-left text-base leading-relaxed">
+      อีกอย่างที่ควรติดตัวไว้เสมอ อย่าบอกรหัสผ่านหรือรหัส OTP กับใครทั้งนั้น แม้คนนั้นจะอ้างว่าเป็นทีมงานก็ตาม เพราะทีมงานจริงไม่มีเหตุต้องขอ
+    </p>
     <p class="text-left text-base leading-relaxed">
       เลือกค่ายที่ถูกใจแล้วเริ่มได้เลยครับ เกมที่คุณคุ้นมือจากโหมดทดลองวันนี้ คือเกมที่พร้อมให้ลงเครดิตจริงในรอบถัดไปแบบไม่ต้องเดา
     </p>

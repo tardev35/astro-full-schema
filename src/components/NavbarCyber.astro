@@ -9,11 +9,11 @@ const isActive = (path: string) => isActivePath(currentPath, path);
 
 const links = [
   { name: "หน้าแรก", path: "/", icon: "🏠" },
-  { name: "โปรโมชั่น", path: "/promotion", icon: "🎁" },
-  { name: "ทดลองเล่น", path: "/ทดลองเล่น", icon: "🎰" },
-  { name: "ทางเข้า", path: "/ทางเข้า", icon: "🔑" },
-  { name: "ติดต่อเรา", path: "/contact-us", icon: "💬" },
-  { name: "เกี่ยวกับเรา", path: "/about-us" },
+  { name: "โปรโมชั่น", path: "/promotion/", icon: "🎁" },
+  { name: "ทดลองเล่น", path: "/ทดลองเล่น/", icon: "🎰" },
+  { name: "ทางเข้า", path: "/ทางเข้า/", icon: "🔑" },
+  { name: "ติดต่อเรา", path: "/contact-us/", icon: "💬" },
+  { name: "เกี่ยวกับเรา", path: "/about-us/" },
 ];
 ---
 
@@ -58,13 +58,13 @@ const links = [
 
     <div class="z-[110] flex items-center gap-4">
       <a
-        href="/login"
+        href="/login/"
         class="hidden items-center justify-center border border-[#a3e635]/70 bg-transparent px-6 py-2 text-sm font-bold text-[#a3e635] transition-all hover:bg-[#1f3a08]/60 lg:flex"
         style="clip-path: polygon(10px 0, 100% 0, 100% calc(100% - 10px), calc(100% - 10px) 100%, 0 100%, 0 10px);">
         เข้าระบบ
       </a>
       <a
-        href="/register"
+        href="/register/"
         class="hidden items-center justify-center bg-gradient-to-r from-[#f5cf4d] to-[#d4a017] px-6 py-2 text-sm font-black text-[#0f1a06] shadow-[0_0_15px_rgba(212,160,23,0.45)] transition-all hover:scale-105 lg:flex"
         style="clip-path: polygon(10px 0, 100% 0, 100% calc(100% - 10px), calc(100% - 10px) 100%, 0 100%, 0 10px);">
         สมัครสมาชิก
@@ -99,13 +99,13 @@ const links = [
     </div>
     <div class="mt-6 flex flex-col gap-4">
       <a
-        href="/register"
+        href="/register/"
         class="flex w-full justify-center bg-gradient-to-r from-[#f5cf4d] to-[#d4a017] py-3.5 text-lg font-black text-[#0f1a06] shadow-[0_0_15px_rgba(212,160,23,0.45)]"
         style="clip-path: polygon(15px 0, 100% 0, 100% calc(100% - 15px), calc(100% - 15px) 100%, 0 100%, 0 15px);">
         สมัครสมาชิก
       </a>
       <a
-        href="/login"
+        href="/login/"
         class="flex w-full justify-center border border-[#a3e635]/70 bg-transparent py-3.5 text-lg font-bold text-[#a3e635]"
         style="clip-path: polygon(15px 0, 100% 0, 100% calc(100% - 15px), calc(100% - 15px) 100%, 0 100%, 0 15px);">
         เข้าระบบ

@@ -12,10 +12,10 @@ const isActive = (path: string) => isActivePath(currentPath, path);
 
 const links = [
   { name: "หน้าแรก", path: "/", icon: "🏠" },
-  { name: "โปรโมชั่น", path: "/promotion", icon: "🎁" },
-  { name: "ทดลองเล่น", path: "/ทดลองเล่น", icon: "🎰" },
-  { name: "ทางเข้า", path: "/ทางเข้า", icon: "🌐" },
-  { name: "ติดต่อเรา", path: "/contact-us", icon: "📞" },
+  { name: "โปรโมชั่น", path: "/promotion/", icon: "🎁" },
+  { name: "ทดลองเล่น", path: "/ทดลองเล่น/", icon: "🎰" },
+  { name: "ทางเข้า", path: "/ทางเข้า/", icon: "🌐" },
+  { name: "ติดต่อเรา", path: "/contact-us/", icon: "📞" },
 ];
 ---
 
@@ -56,12 +56,12 @@ const links = [
 
       <div class="flex items-center gap-3 md:gap-4">
         <a
-          href="/login"
+          href="/login/"
           class="hidden items-center justify-center rounded-full border border-amber-400/70 px-6 py-2.5 text-sm font-bold text-amber-300 shadow-[0_0_10px_rgba(212,175,90,0.2)] transition-all hover:bg-amber-400 hover:text-[#140f05] lg:flex">
           เข้าสู่ระบบ
         </a>
         <a
-          href="/register"
+          href="/register/"
           class="hidden items-center justify-center rounded-full bg-gradient-to-r from-[#f6e4b4] via-[#e0bd72] to-[#b1873a] px-6 py-2.5 text-sm font-extrabold text-[#140f05] shadow-[0_0_20px_rgba(212,175,90,0.4)] transition-all hover:scale-105 hover:brightness-110 lg:flex">
           สมัครสมาชิก
         </a>
@@ -94,11 +94,11 @@ const links = [
 
       <div class="menu-item mt-4 flex w-full max-w-[280px] flex-col gap-4 border-t border-amber-800/50 pt-8 opacity-0">
         <a
-          href="/register"
+          href="/register/"
           class="flex w-full items-center justify-center rounded-full bg-gradient-to-r from-[#f6e4b4] via-[#e0bd72] to-[#b1873a] py-3.5 text-lg font-extrabold text-[#140f05] shadow-[0_0_20px_rgba(212,175,90,0.4)]">
           <span aria-hidden="true">🔥</span> สมัครสมาชิก
         </a>
-        <a href="/login" class="flex w-full items-center justify-center rounded-full border border-amber-400/50 py-3.5 text-lg font-bold text-amber-300 hover:bg-amber-400/10">เข้าสู่ระบบ</a>
+        <a href="/login/" class="flex w-full items-center justify-center rounded-full border border-amber-400/50 py-3.5 text-lg font-bold text-amber-300 hover:bg-amber-400/10">เข้าสู่ระบบ</a>
       </div>
     </div>
   </div>

@@ -14,12 +14,12 @@ const logoAlt = "โลโก้ BUNNY555 ตัวอักษร BUNNY เป�
 
 const links = [
   { name: "หน้าแรก", path: "/", icon: "🏠" },
-  { name: "โปรโมชั่น", path: "/promotion", icon: "🎁" },
-  { name: "สมัครสมาชิก", path: "/register", icon: "📝" },
-  { name: "เข้าสู่ระบบ", path: "/login", icon: "🔑" },
-  { name: "ทดลองเล่น", path: "/ทดลองเล่น", icon: "🎰" },
-  { name: "เกี่ยวกับเรา", path: "/about-us", icon: "🐰" },
-  { name: "ติดต่อเรา", path: "/contact-us", icon: "💬" },
+  { name: "โปรโมชั่น", path: "/promotion/", icon: "🎁" },
+  { name: "สมัครสมาชิก", path: "/register/", icon: "📝" },
+  { name: "เข้าสู่ระบบ", path: "/login/", icon: "🔑" },
+  { name: "ทดลองเล่น", path: "/ทดลองเล่น/", icon: "🎰" },
+  { name: "เกี่ยวกับเรา", path: "/about-us/", icon: "🐰" },
+  { name: "ติดต่อเรา", path: "/contact-us/", icon: "💬" },
 ];
 ---
 
@@ -67,7 +67,7 @@ const links = [
     </a>
 
     <a
-      href="/login"
+      href="/login/"
       class="flex h-[32px] items-center justify-center rounded border border-[#be185d]/60 bg-gradient-to-r from-[#f472b6] to-[#be185d] px-4 text-xs font-bold text-white shadow-[0_0_12px_rgba(236,72,153,0.3)] transition-transform active:scale-95">
       เข้าสู่ระบบ
     </a>
@@ -94,7 +94,7 @@ const links = [
 
       <div class="mt-5 flex flex-col gap-2 border-t border-[#f9c2d9] pt-5">
         <a
-          href="/register"
+          href="/register/"
           class="sidebar-item flex justify-center gap-2 rounded border border-[#be185d]/60 bg-gradient-to-r from-[#f472b6] via-[#ec4899] to-[#be185d] py-3 text-sm font-bold text-white shadow-md transition-transform active:scale-95">
           <span aria-hidden="true">🐰</span> สมัครสมาชิกใหม่
         </a>
@@ -104,12 +104,12 @@ const links = [
 
   <div class="fixed top-4 right-6 z-50 hidden items-center gap-3 lg:flex">
     <a
-      href="/login"
+      href="/login/"
       class="group flex items-center gap-1.5 rounded border border-[#ec4899]/60 bg-[#ffffff]/92 px-6 py-2 text-sm font-bold text-[#9d174d] shadow-md backdrop-blur-sm transition-all hover:border-[#ec4899] hover:bg-[#ffe4f0]/92">
       <span aria-hidden="true">🔒</span> เข้าสู่ระบบ
     </a>
     <a
-      href="/register"
+      href="/register/"
       class="group flex items-center gap-1.5 rounded border border-[#be185d]/60 bg-gradient-to-r from-[#f472b6] via-[#ec4899] to-[#be185d] px-6 py-2 text-sm font-bold text-white shadow-[0_0_15px_rgba(236,72,153,0.3)] transition-all hover:scale-105">
       <span aria-hidden="true">👤</span> สมัครสมาชิก
     </a>

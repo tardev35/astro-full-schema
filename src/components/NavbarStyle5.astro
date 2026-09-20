@@ -12,12 +12,12 @@ const isActive = (path: string) => isActivePath(currentPath, path);
 
 const links = [
   { name: "หน้าแรก", path: "/", icon: "🏠" },
-  { name: "โปรโมชั่น", path: "/promotion", icon: "🎁" },
-  { name: "สมัครสมาชิก", path: "/register", icon: "📝" },
-  { name: "เข้าสู่ระบบ", path: "/login", icon: "🔑" },
-  { name: "ทดลองเล่น", path: "/ทดลองเล่น", icon: "🎰" },
-  { name: "เกี่ยวกับเรา", path: "/about-us", icon: "🏛️" },
-  { name: "ติดต่อเรา", path: "/contact-us", icon: "💬" },
+  { name: "โปรโมชั่น", path: "/promotion/", icon: "🎁" },
+  { name: "สมัครสมาชิก", path: "/register/", icon: "📝" },
+  { name: "เข้าสู่ระบบ", path: "/login/", icon: "🔑" },
+  { name: "ทดลองเล่น", path: "/ทดลองเล่น/", icon: "🎰" },
+  { name: "เกี่ยวกับเรา", path: "/about-us/", icon: "🏛️" },
+  { name: "ติดต่อเรา", path: "/contact-us/", icon: "💬" },
 ];
 ---
 
@@ -28,8 +28,8 @@ const links = [
       AMD365 รวมสล็อต คาสิโนสด กีฬา และหวยออนไลน์ไว้ในบัญชีเดียว ฝากถอนออโต้โอนไวจากหน้าเมมเบอร์
     </div>
     <div class="flex items-center gap-5">
-      <a href="/login" class="flex items-center gap-1 text-[#cdbb93] transition-colors hover:text-[#ffe9a8]"><span aria-hidden="true">🔑</span> เข้าสู่ระบบ</a>
-      <a href="/register" class="flex items-center gap-1 font-bold text-[#ffe9a8] drop-shadow-[0_0_5px_rgba(254,201,58,0.6)] transition-colors hover:text-[#fff8e6]">
+      <a href="/login/" class="flex items-center gap-1 text-[#cdbb93] transition-colors hover:text-[#ffe9a8]"><span aria-hidden="true">🔑</span> เข้าสู่ระบบ</a>
+      <a href="/register/" class="flex items-center gap-1 font-bold text-[#ffe9a8] drop-shadow-[0_0_5px_rgba(254,201,58,0.6)] transition-colors hover:text-[#fff8e6]">
         <span aria-hidden="true">📝</span> สมัครสมาชิก ระบบฝากถอนออโต้
       </a>
     </div>
@@ -76,7 +76,7 @@ const links = [
 
     <div class="z-50 flex items-center gap-4">
       <a
-        href="/register"
+        href="/register/"
         class="hidden items-center justify-center rounded-full bg-gradient-to-r from-[#a06a09] via-[#fec93a] to-[#4b2c0c] px-6 py-2 text-sm font-extrabold text-[#0e0902] shadow-[0_0_15px_rgba(254,201,58,0.45)] transition-all hover:scale-105 lg:flex">
         สมัครสมาชิก
       </a>
@@ -105,12 +105,12 @@ const links = [
 
       <div class="fs-item mt-4 flex w-full max-w-[250px] flex-col gap-4 pt-8">
         <a
-          href="/register"
+          href="/register/"
           class="flex w-full items-center justify-center rounded-full bg-gradient-to-r from-[#c9ccd4] via-[#fec93a] to-[#ffe9a8] py-3.5 text-lg font-extrabold text-[#0e0902] shadow-[0_0_20px_rgba(254,201,58,0.45)]">
           สมัครสมาชิก
         </a>
         <a
-          href="/login"
+          href="/login/"
           class="flex w-full items-center justify-center rounded-full border-2 border-[#fec93a]/50 py-3.5 text-lg font-bold text-[#ffe9a8] transition-colors hover:bg-[#fec93a]/10">
           เข้าสู่ระบบ
         </a>

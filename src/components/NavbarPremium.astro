@@ -12,12 +12,12 @@ const logoAlt =
 
 const links = [
   { name: "หน้าแรก", path: "/", icon: "🏠" },
-  { name: "โปรโมชั่น", path: "/promotion", icon: "🎁" },
-  { name: "สมัครสมาชิก", path: "/register", icon: "📝" },
-  { name: "เข้าสู่ระบบ", path: "/login", icon: "🔑" },
-  { name: "ทดลองเล่น", path: "/ทดลองเล่น", icon: "🎰" },
-  { name: "เกี่ยวกับเรา", path: "/about-us", icon: "⭐" },
-  { name: "ติดต่อเรา", path: "/contact-us", icon: "💬" },
+  { name: "โปรโมชั่น", path: "/promotion/", icon: "🎁" },
+  { name: "สมัครสมาชิก", path: "/register/", icon: "📝" },
+  { name: "เข้าสู่ระบบ", path: "/login/", icon: "🔑" },
+  { name: "ทดลองเล่น", path: "/ทดลองเล่น/", icon: "🎰" },
+  { name: "เกี่ยวกับเรา", path: "/about-us/", icon: "⭐" },
+  { name: "ติดต่อเรา", path: "/contact-us/", icon: "💬" },
 ];
 ---
 
@@ -65,12 +65,12 @@ const links = [
 
     <div class="z-[110] flex items-center gap-4">
       <a
-        href="/login"
+        href="/login/"
         class="hidden items-center justify-center rounded-full border border-[#f5c542]/55 bg-[#2a0709] px-7 py-2.5 text-sm font-bold text-[#fbeceb] transition-all duration-300 hover:bg-[#b30009] hover:text-white hover:shadow-[0_0_15px_rgba(245,197,66,0.4)] lg:flex">
         เข้าสู่ระบบ
       </a>
       <a
-        href="/register"
+        href="/register/"
         class="hidden items-center justify-center rounded-full bg-gradient-to-r from-[#ff4b41] via-[#e60012] to-[#b30009] px-7 py-2.5 text-sm font-black text-white shadow-[0_4px_15px_rgba(230,0,18,0.45)] transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_8px_25px_rgba(230,0,18,0.65)] lg:flex">
         สมัครสมาชิก
       </a>
@@ -105,11 +105,11 @@ const links = [
     </div>
     <div class="mt-6 flex flex-col gap-4">
       <a
-        href="/register"
+        href="/register/"
         class="flex w-full justify-center rounded-full bg-gradient-to-r from-[#ff4b41] to-[#b30009] py-3.5 text-lg font-black text-white shadow-[0_5px_15px_rgba(230,0,18,0.4)]">
         สมัครสมาชิก
       </a>
-      <a href="/login" class="flex w-full justify-center rounded-full border border-[#f5c542]/55 bg-[#2a0709] py-3.5 text-lg font-bold text-[#fbeceb]">เข้าสู่ระบบ</a>
+      <a href="/login/" class="flex w-full justify-center rounded-full border border-[#f5c542]/55 bg-[#2a0709] py-3.5 text-lg font-bold text-[#fbeceb]">เข้าสู่ระบบ</a>
     </div>
   </div>
 </header>

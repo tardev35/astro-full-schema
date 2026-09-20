@@ -29,6 +29,7 @@
 @source not "../components/ContentBoxSevenThreeCyberCut.astro";
 @source not "../components/ContentBoxSevenThreeHuay.astro";
 @source not "../components/ContentBoxSevenThreeNeumorphism.astro";
+@source not "../components/ContentBoxSpecial.astro";
 @source not "../components/ContentBoxTwoCyberCut.astro";
 @source not "../components/ContentBoxTwoFloatingBadge.astro";
 @source not "../components/ContentBoxTwoHuay.astro";
@@ -37,6 +38,7 @@
 @source not "../components/Faq3.astro";
 @source not "../components/Faq4.astro";
 @source not "../components/FaqHuay.astro";
+@source not "../components/FeatureHighlights.astro";
 @source not "../components/FeaturedGames.astro";
 @source not "../components/Footer.astro";
 @source not "../components/FooterCyber.astro";

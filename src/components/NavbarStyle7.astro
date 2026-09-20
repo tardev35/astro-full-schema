@@ -12,12 +12,12 @@ const isActive = (path: string) => isActivePath(currentPath, path);
 
 const links = [
   { name: "หน้าแรก", path: "/", icon: "🏠" },
-  { name: "โปรโมชั่น", path: "/promotion", icon: "🎁" },
-  { name: "สมัครสมาชิก", path: "/register", icon: "📝" },
-  { name: "เข้าสู่ระบบ", path: "/login", icon: "🔑" },
-  { name: "ทดลองเล่น", path: "/ทดลองเล่น", icon: "🎰" },
-  { name: "เกี่ยวกับเรา", path: "/about-us", icon: "📘" },
-  { name: "ติดต่อเรา", path: "/contact-us", icon: "📞" },
+  { name: "โปรโมชั่น", path: "/promotion/", icon: "🎁" },
+  { name: "สมัครสมาชิก", path: "/register/", icon: "📝" },
+  { name: "เข้าสู่ระบบ", path: "/login/", icon: "🔑" },
+  { name: "ทดลองเล่น", path: "/ทดลองเล่น/", icon: "🎰" },
+  { name: "เกี่ยวกับเรา", path: "/about-us/", icon: "📘" },
+  { name: "ติดต่อเรา", path: "/contact-us/", icon: "📞" },
 ];
 
 // แถบเดสก์ท็อปมีปุ่ม "เข้าสู่ระบบ" และ "สมัครสมาชิก" อยู่ทางขวาแล้ว
@@ -82,12 +82,12 @@ const logoAlt =
 
       <div class="flex items-center gap-3">
         <a
-          href="/login"
+          href="/login/"
           class="hidden items-center justify-center rounded-full border border-white/35 bg-white/10 px-6 py-2.5 text-sm font-bold text-white transition-all hover:border-white hover:bg-white/20 md:flex">
           เข้าสู่ระบบ
         </a>
         <a
-          href="/register"
+          href="/register/"
           style="background-image: linear-gradient(in oklab to right, #16a34a, #31c96b, #16a34a);"
           class="flex items-center justify-center rounded-full px-5 py-2 text-xs font-extrabold text-white shadow-[0_0_20px_rgba(22,163,74,0.40)] transition-all hover:shadow-[0_0_25px_rgba(22,163,74,0.6)] hover:brightness-110 lg:px-7 lg:py-2.5 lg:text-sm">
           สมัครสมาชิก
@@ -123,9 +123,9 @@ const logoAlt =
       }
 
       <div class="mt-2 grid grid-cols-2 gap-3 border-t border-white/10 pt-4">
-        <a href="/login" class="flex items-center justify-center rounded-xl border border-white/35 bg-white/10 py-3.5 text-sm font-bold text-white">เข้าสู่ระบบ</a>
+        <a href="/login/" class="flex items-center justify-center rounded-xl border border-white/35 bg-white/10 py-3.5 text-sm font-bold text-white">เข้าสู่ระบบ</a>
         <a
-          href="/register"
+          href="/register/"
           style="background-image: linear-gradient(in oklab to right, #16a34a, #31c96b, #16a34a);"
           class="flex items-center justify-center rounded-xl py-3.5 text-sm font-extrabold text-white shadow-[0_0_15px_rgba(22,163,74,0.45)]">
           สมัครสมาชิก

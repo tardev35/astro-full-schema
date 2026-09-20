@@ -12,12 +12,12 @@ const isActive = (path: string) => isActivePath(currentPath, path);
 
 const links = [
   { name: "หน้าแรก", path: "/", icon: "🏠" },
-  { name: "โปรโมชั่น", path: "/promotion", icon: "🎁" },
-  { name: "สมัครสมาชิก", path: "/register", icon: "📝" },
-  { name: "เข้าสู่ระบบ", path: "/login", icon: "🔑" },
-  { name: "ทดลองเล่น", path: "/ทดลองเล่น", icon: "🎰" },
-  { name: "เกี่ยวกับเรา", path: "/about-us", icon: "🏁" },
-  { name: "ติดต่อเรา", path: "/contact-us", icon: "💬" },
+  { name: "โปรโมชั่น", path: "/promotion/", icon: "🎁" },
+  { name: "สมัครสมาชิก", path: "/register/", icon: "📝" },
+  { name: "เข้าสู่ระบบ", path: "/login/", icon: "🔑" },
+  { name: "ทดลองเล่น", path: "/ทดลองเล่น/", icon: "🎰" },
+  { name: "เกี่ยวกับเรา", path: "/about-us/", icon: "🏁" },
+  { name: "ติดต่อเรา", path: "/contact-us/", icon: "💬" },
 ];
 
 const logoAlt = "โลโก้ PAYDAY24 ตัวอักษร PayDay แบบเอียงสามมิติ คำว่า Pay เป็นสีขาวขอบดำ คำว่า Day เป็นสีทองไล่เฉด มีมงกุฎทองวางอยู่เหนือตัว D และมีแถบเฉียงสีทองสามแถบต่อท้าย";
@@ -68,19 +68,19 @@ const logoAlt = "โลโก้ PAYDAY24 ตัวอักษร PayDay แบ
 
       <div class="z-50 flex items-center gap-2 md:gap-4">
         <a
-          href="/login"
+          href="/login/"
           class="hidden items-center justify-center gap-1.5 rounded border border-[#a855f7]/60 px-6 py-2 text-sm font-bold text-[#ede4fb] transition-all hover:bg-[#2c1247]/70 hover:shadow-[0_0_15px_rgba(168,85,247,0.35)] lg:flex">
           <span aria-hidden="true">🔑</span> เข้าสู่ระบบ
         </a>
         <a
-          href="/register"
+          href="/register/"
           class="bg-theme-oklab hidden items-center justify-center gap-1.5 rounded px-6 py-2 text-sm font-extrabold text-[#150726] shadow-[0_0_20px_rgba(253,199,0,0.5)] transition-all hover:brightness-110 lg:flex">
           <span aria-hidden="true">🎫</span> สมัครสมาชิก
         </a>
 
         <div class="flex items-center gap-2 lg:hidden">
           <a
-            href="/register"
+            href="/register/"
             class="bg-theme-oklab flex items-center justify-center rounded px-3 py-1.5 text-[11px] font-bold text-[#150726] shadow-[0_0_10px_rgba(253,199,0,0.5)] md:px-4 md:text-xs">
             สมัครสมาชิก
           </a>
@@ -120,7 +120,7 @@ const logoAlt = "โลโก้ PAYDAY24 ตัวอักษร PayDay แบ
 
       <div class="mt-6 flex flex-col gap-3 border-t border-[#fdc700]/40 pt-6">
         <a
-          href="/login"
+          href="/login/"
           class="sidebar-item hover:bg-theme-oklab flex items-center justify-center gap-2 rounded-lg border border-[#a855f7]/70 bg-transparent py-3.5 text-sm font-bold text-[#f3e9ff] transition-colors hover:border-transparent hover:text-[#150726]">
           <span aria-hidden="true">🔑</span> เข้าสู่ระบบ
         </a>

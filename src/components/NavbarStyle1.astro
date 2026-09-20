@@ -12,10 +12,10 @@ const isActive = (path: string) => isActivePath(currentPath, path);
 
 const links = [
   { name: "หน้าแรก", path: "/", icon: "🏠" },
-  { name: "โปรโมชั่น", path: "/promotion", icon: "⭐" },
-  { name: "ทดลองเล่น", path: "/ทดลองเล่น", icon: "🎮" },
-  { name: "ทางเข้า", path: "/ทางเข้า", icon: "🌐" },
-  { name: "ติดต่อเรา", path: "/contact-us", icon: "💬" },
+  { name: "โปรโมชั่น", path: "/promotion/", icon: "⭐" },
+  { name: "ทดลองเล่น", path: "/ทดลองเล่น/", icon: "🎮" },
+  { name: "ทางเข้า", path: "/ทางเข้า/", icon: "🌐" },
+  { name: "ติดต่อเรา", path: "/contact-us/", icon: "💬" },
 ];
 ---
 
@@ -64,12 +64,12 @@ const links = [
     <div class="z-10 flex items-center gap-2.5">
       <div class="hidden items-center gap-2.5 xl:flex">
         <a
-          href="/register"
+          href="/register/"
           class="flex h-[44px] items-center gap-1.5 rounded-xl border border-[#ff8ec4]/30 bg-gradient-to-r from-[#ff3d9a] to-[#c21a70] px-6 text-base font-bold text-[#fdeaf4] shadow-md shadow-[#ff3d9a]/35 transition-all hover:brightness-110">
           <span aria-hidden="true">👤</span> สมัครสมาชิก
         </a>
         <a
-          href="/login"
+          href="/login/"
           class="flex h-[44px] items-center gap-1.5 rounded-xl border border-[#22d3ee]/40 bg-gradient-to-b from-[#230a19] to-[#12040c] px-6 text-base font-bold text-[#8fe8f2] shadow-md transition-all hover:border-[#22d3ee]/70 hover:bg-[#3a1229]">
           <span aria-hidden="true">🔒</span> เข้าสู่ระบบ
         </a>
@@ -98,12 +98,12 @@ const links = [
 
       <div class="mt-4 flex flex-col space-y-3 border-t border-[#ff3d9a]/15 pt-6">
         <a
-          href="/register"
+          href="/register/"
           class="menu-item relative flex w-full items-center justify-center rounded-xl bg-gradient-to-r from-[#ff3d9a] to-[#c21a70] px-4 py-3.5 text-sm font-bold text-[#fdeaf4] shadow-[0_4px_20px_-4px_rgba(255,61,154,0.5)] transition-all duration-300 hover:-translate-y-0.5 hover:brightness-110 hover:shadow-[0_6px_25px_-4px_rgba(255,61,154,0.6)]">
           <span aria-hidden="true" class="mr-2">🎁</span> สมัครสมาชิก
         </a>
         <a
-          href="/login"
+          href="/login/"
           class="menu-item flex w-full items-center justify-center rounded-xl border border-[#22d3ee]/30 bg-[#22d3ee]/5 px-4 py-3.5 text-sm font-bold text-[#8fe8f2] backdrop-blur-sm transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#22d3ee]/10 hover:text-[#fdeaf4]">
           <span aria-hidden="true" class="mr-2">🔒</span> เข้าสู่ระบบ
         </a>

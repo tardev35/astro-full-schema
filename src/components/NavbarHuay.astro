@@ -10,9 +10,9 @@ const isActive = (path: string) => isActivePath(currentPath, path);
 
 const menu = [
   { name: "หน้าแรก", path: "/" },
-  { name: "ทางเข้า", path: "/ทางเข้า" },
-  { name: "โปรโมชั่น", path: "/promotion" },
-  { name: "ติดต่อเรา", path: "/contact-us" },
+  { name: "ทางเข้า", path: "/ทางเข้า/" },
+  { name: "โปรโมชั่น", path: "/promotion/" },
+  { name: "ติดต่อเรา", path: "/contact-us/" },
 ];
 ---
 
@@ -47,12 +47,12 @@ const menu = [
 
     <div class="z-[110] flex items-center gap-4">
       <a
-        href="/login"
+        href="/login/"
         class="hidden rounded-full border-2 border-amber-300/30 bg-black/25 px-6 py-2.5 text-sm font-bold text-white backdrop-blur-md transition-all hover:border-amber-300/60 hover:bg-amber-100/10 lg:flex">
         เข้าสู่ระบบ
       </a>
       <a
-        href="/register"
+        href="/register/"
         class="hidden rounded-full bg-gradient-to-r from-amber-200 via-amber-400 to-amber-500 px-6 py-2.5 text-sm font-black text-[#5f0914] shadow-[0_4px_15px_rgba(251,191,36,0.45)] transition-all hover:-translate-y-0.5 hover:shadow-[0_8px_20px_rgba(251,191,36,0.65)] lg:flex">
         สมัครสมาชิก
       </a>
@@ -81,11 +81,11 @@ const menu = [
     </div>
     <div class="mt-6 flex flex-col gap-4">
       <a
-        href="/register"
+        href="/register/"
         class="flex w-full justify-center rounded-full bg-gradient-to-r from-amber-200 via-amber-400 to-amber-500 py-3.5 text-lg font-black text-[#5f0914] shadow-[0_5px_15px_rgba(251,191,36,0.45)]">
         สมัครสมาชิก
       </a>
-      <a href="/login" class="flex w-full justify-center rounded-full border-2 border-amber-300/30 bg-black/25 py-3.5 text-lg font-bold text-white">เข้าสู่ระบบ</a>
+      <a href="/login/" class="flex w-full justify-center rounded-full border-2 border-amber-300/30 bg-black/25 py-3.5 text-lg font-bold text-white">เข้าสู่ระบบ</a>
     </div>
   </div>
 </header>

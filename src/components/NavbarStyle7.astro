@@ -47,7 +47,7 @@ const isActive = (path: string) => {
           </div>
         </a>
 
-        <a href="/promotion" class="group relative flex h-full flex-col items-center justify-center text-sm font-bold transition-all xl:text-base">
+        <a href="/promotion/" class="group relative flex h-full flex-col items-center justify-center text-sm font-bold transition-all xl:text-base">
           <span class={`transition-colors duration-300 ${isActive("/promotion") ? "text-amber-400 drop-shadow-[0_0_8px_rgba(245,158,11,0.5)]" : "text-gray-400 group-hover:text-amber-200"}`}>
             โปรโมชั่น
           </span>
@@ -56,7 +56,7 @@ const isActive = (path: string) => {
           </div>
         </a>
 
-        <a href="/ทดลองเล่น" class="group relative flex h-full flex-col items-center justify-center text-sm font-bold transition-all xl:text-base">
+        <a href="/ทดลองเล่น/" class="group relative flex h-full flex-col items-center justify-center text-sm font-bold transition-all xl:text-base">
           <span class={`transition-colors duration-300 ${isActive("/ทดลองเล่น") ? "text-amber-400 drop-shadow-[0_0_8px_rgba(245,158,11,0.5)]" : "text-gray-400 group-hover:text-amber-200"}`}>
             ทดลองเล่น
           </span>
@@ -65,7 +65,7 @@ const isActive = (path: string) => {
           </div>
         </a>
 
-        <a href="/ทางเข้า" class="group relative flex h-full flex-col items-center justify-center text-sm font-bold transition-all xl:text-base">
+        <a href="/ทางเข้า/" class="group relative flex h-full flex-col items-center justify-center text-sm font-bold transition-all xl:text-base">
           <span class={`transition-colors duration-300 ${isActive("/ทางเข้า") ? "text-amber-400 drop-shadow-[0_0_8px_rgba(245,158,11,0.5)]" : "text-gray-400 group-hover:text-amber-200"}`}>
             ทางเข้า
           </span>
@@ -74,7 +74,7 @@ const isActive = (path: string) => {
           </div>
         </a>
 
-        <a href="/contact-us" class="group relative flex h-full flex-col items-center justify-center text-sm font-bold transition-all xl:text-base">
+        <a href="/contact-us/" class="group relative flex h-full flex-col items-center justify-center text-sm font-bold transition-all xl:text-base">
           <span class={`transition-colors duration-300 ${isActive("/contact-us") ? "text-amber-400 drop-shadow-[0_0_8px_rgba(245,158,11,0.5)]" : "text-gray-400 group-hover:text-amber-200"}`}>
             ติดต่อเรา
           </span>
@@ -86,12 +86,12 @@ const isActive = (path: string) => {
 
       <div class="flex items-center gap-3">
         <a
-          href="/login"
+          href="/login/"
           class="hidden items-center justify-center rounded-full border border-amber-500/30 bg-transparent px-6 py-2.5 text-sm font-bold text-amber-500 transition-all hover:bg-amber-500/10 md:flex">
           เข้าสู่ระบบ
         </a>
         <a
-          href="/register"
+          href="/register/"
           style="background-image: linear-gradient(in oklab to right, #4a0000, #ef4444, #4a0000);"
           class="flex items-center justify-center rounded-full px-5 py-2 text-xs font-extrabold text-white shadow-[0_0_20px_rgba(239,68,68,0.3)] transition-all hover:shadow-[0_0_25px_rgba(239,68,68,0.5)] hover:brightness-110 lg:px-7 lg:py-2.5 lg:text-sm">
           สมัครสมาชิก
@@ -120,37 +120,37 @@ const isActive = (path: string) => {
       </a>
 
       <a
-        href="/promotion"
+        href="/promotion/"
         class={`sheet-item flex items-center justify-between px-5 py-4 rounded-2xl transition-all ${isActive("/promotion") ? "bg-gradient-to-r from-amber-500/20 to-transparent border border-amber-500/30 text-amber-400" : "bg-white/5 border-transparent text-gray-400"}`}>
         <div class="flex items-center gap-4"><span class="text-2xl drop-shadow-lg">🎁</span><span class="text-base font-bold tracking-wide">โปรโมชั่น</span></div>
         {isActive("/promotion") && <span class="h-2 w-2 rounded-full bg-amber-400 shadow-[0_0_8px_rgba(245,158,11,1)]" />}
       </a>
 
       <a
-        href="/ทดลองเล่น"
+        href="/ทดลองเล่น/"
         class={`sheet-item flex items-center justify-between px-5 py-4 rounded-2xl transition-all ${isActive("/ทดลองเล่น") ? "bg-gradient-to-r from-amber-500/20 to-transparent border border-amber-500/30 text-amber-400" : "bg-white/5 border-transparent text-gray-400"}`}>
         <div class="flex items-center gap-4"><span class="text-2xl drop-shadow-lg">🎰</span><span class="text-base font-bold tracking-wide">ทดลองเล่น</span></div>
         {isActive("/ทดลองเล่น") && <span class="h-2 w-2 rounded-full bg-amber-400 shadow-[0_0_8px_rgba(245,158,11,1)]" />}
       </a>
 
       <a
-        href="/ทางเข้า"
+        href="/ทางเข้า/"
         class={`sheet-item flex items-center justify-between px-5 py-4 rounded-2xl transition-all ${isActive("/ทางเข้า") ? "bg-gradient-to-r from-amber-500/20 to-transparent border border-amber-500/30 text-amber-400" : "bg-white/5 border-transparent text-gray-400"}`}>
         <div class="flex items-center gap-4"><span class="text-2xl drop-shadow-lg">🌐</span><span class="text-base font-bold tracking-wide">ทางเข้า</span></div>
         {isActive("/ทางเข้า") && <span class="h-2 w-2 rounded-full bg-amber-400 shadow-[0_0_8px_rgba(245,158,11,1)]" />}
       </a>
 
       <a
-        href="/contact-us"
+        href="/contact-us/"
         class={`sheet-item flex items-center justify-between px-5 py-4 rounded-2xl transition-all ${isActive("/contact-us") ? "bg-gradient-to-r from-amber-500/20 to-transparent border border-amber-500/30 text-amber-400" : "bg-white/5 border-transparent text-gray-400"}`}>
         <div class="flex items-center gap-4"><span class="text-2xl drop-shadow-lg">📞</span><span class="text-base font-bold tracking-wide">ติดต่อเรา</span></div>
         {isActive("/contact-us") && <span class="h-2 w-2 rounded-full bg-amber-400 shadow-[0_0_8px_rgba(245,158,11,1)]" />}
       </a>
 
       <div class="mt-2 grid grid-cols-2 gap-3 border-t border-white/5 pt-4">
-        <a href="/login" class="flex items-center justify-center rounded-xl border border-amber-500/30 bg-amber-500/5 py-3.5 text-sm font-bold text-amber-500">เข้าสู่ระบบ</a>
+        <a href="/login/" class="flex items-center justify-center rounded-xl border border-amber-500/30 bg-amber-500/5 py-3.5 text-sm font-bold text-amber-500">เข้าสู่ระบบ</a>
         <a
-          href="/register"
+          href="/register/"
           style="background-image: linear-gradient(in oklab to right, #4a0000, #ef4444, #4a0000);"
           class="flex items-center justify-center rounded-xl py-3.5 text-sm font-extrabold text-white shadow-[0_0_15px_rgba(239,68,68,0.4)]">
           สมัครสมาชิก

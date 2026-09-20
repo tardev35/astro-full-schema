@@ -1,247 +1,230 @@
----
-import MainLayout from "../layouts/MainLayout.astro";
-import ContentBox from "../components/ContentBox.astro";
-import ContentBoxTwo from "../components/ContentBoxTwo.astro";
-import ContentBoxSevenThree from "../components/ContentBoxSevenThree.astro";
-import ContentBoxThreeColums from "../components/ContentBox3Three.astro";
-import ContentBoxSpecial from "../components/ContentBoxSpecial.astro";
-import Announcement from "../components/Announcement6.astro";
-import ProviderGrid from "../components/ProviderGrid.astro";
-import LatestWinners from "../components/LatestWinnersPremium.astro";
-import SmoothCarousel from "../components/SmoothCarousel.astro";
-import ReviewCardSumo from "../components/ReviewCardSumo2.astro";
-import Navfoot from "../components/Navfoot.astro";
-import Faq from "../components/FaqHuay.astro";
-const currentPath = Astro.url.pathname;
-const homePage = Astro.url.origin;
-const logoUrl = homePage + "/logo.webp";
-
-const webPageSchema = {
-  "@context": "https://schema.org",
-  "@type": "WebPage",
-  name: "SUMOHENG เว็บหลัก ทางเข้า ซูโม่เฮง เกมสล็อตแท้ ฝากถอนออโต้",
-  description: "SUMOHENG เว็บหลัก ซูโม่เฮง บริการ เกมสล็อตแท้ ทุกค่าย ทางเข้า เดียว เชื่อมต่อทุกฟังก์ชัน ฝากถอนออโต้ ด้วยความแม่นยำ สมัครสมาชิก เพื่อติดตาม โปรโมชั่น",
-  url: homePage + currentPath,
-};
-const webSiteSchema = {
-  "@context": "https://schema.org",
-  "@type": "WebSite",
-  name: "SUMOHENG",
-  alternateName: ["SUMOHENG", "SUMOHENG สล็อตออนไลน์"],
-  url: homePage + "/",
-};
-const orgSchema = {
-  "@context": "https://schema.org",
-  "@type": "Organization",
-  name: "SUMOHENG",
-  logo: logoUrl,
-  url: homePage,
-};
-const allSchemas = [webPageSchema, orgSchema, webSiteSchema];
-
-import { Picture } from "astro:assets";
-import image1 from "../assets/slide1.png";
-import image2 from "../assets/banner1.webp";
----
-
+---
+import MainLayout from "../layouts/MainLayout.astro";
+import ContentBox from "../components/ContentBox.astro";
+import ContentBoxTwo from "../components/ContentBoxTwo.astro";
+import ContentBoxSevenThree from "../components/ContentBoxSevenThree.astro";
+import ContentBoxThreeColums from "../components/ContentBox3Three.astro";
+import ContentBoxSpecial from "../components/ContentBoxSpecial.astro";
+import Announcement from "../components/Announcement6.astro";
+import ProviderGrid from "../components/ProviderGrid.astro";
+import LatestWinners from "../components/LatestWinnersPremium.astro";
+import SmoothCarousel from "../components/SmoothCarousel.astro";
+import ReviewCardSumo from "../components/ReviewCardSumo2.astro";
+import Navfoot from "../components/Navfoot.astro";
+import Faq from "../components/FaqHuay.astro";
+const currentPath = Astro.url.pathname;
+const homePage = Astro.url.origin;
+const logoUrl = homePage + "/logo.webp";
+
+const webPageSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  name: "SUMOHENG | เว็บหลัก ทางเข้าเล่น เข้าสู่ระบบ และสมัครสมาชิกใหม่",
+  description: "SUMOHENG เว็บหลัก สำหรับสมัคร ทางเข้าเล่น สล็อต คาสิโน ค่ายชั้นนำผ่าน Super API เข้าสู่ระบบ สมาชิกใหม่ SUMO HENG พร้อมฝากถอนออโต้ ปลอดภัย",
+  url: homePage + currentPath,
+};
+const webSiteSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  name: "SUMOHENG",
+  alternateName: ["SUMOHENG", "SUMOHENG สล็อตออนไลน์"],
+  url: homePage + "/",
+};
+const orgSchema = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  name: "SUMOHENG",
+  logo: logoUrl,
+  url: homePage,
+};
+const allSchemas = [webPageSchema, orgSchema, webSiteSchema];
+
+import { Picture } from "astro:assets";
+import image1 from "../assets/slide1.png";
+import image2 from "../assets/banner1.webp";
+---
+
 <MainLayout
-  title="SUMOHENG เว็บหลัก ทางเข้า ซูโม่เฮง เกมสล็อตแท้ ฝากถอนออโต้"
-  description="SUMOHENG เว็บหลัก ซูโม่เฮง บริการ เกมสล็อตแท้ ทุกค่าย ทางเข้า เดียว เชื่อมต่อทุกฟังก์ชัน ฝากถอนออโต้ ด้วยความแม่นยำ สมัครสมาชิก เพื่อติดตาม โปรโมชั่น">
-  <script type="application/ld+json" set:html={JSON.stringify(allSchemas)} />
+  title="SUMOHENG | เว็บหลัก ทางเข้าเล่น เข้าสู่ระบบ และสมัครสมาชิกใหม่"
+  description="SUMOHENG เว็บหลัก สำหรับสมัคร ทางเข้าเล่น สล็อต คาสิโน ค่ายชั้นนำผ่าน Super API เข้าสู่ระบบ สมาชิกใหม่ SUMO HENG พร้อมฝากถอนออโต้ ปลอดภัย">
+  <script type="application/ld+json" set:html={JSON.stringify(allSchemas)} />
+
+  <Announcement />
+  <div class="mx-auto w-full max-w-5xl px-4 py-8 text-center">
+    <p class="text-4xl leading-tight font-black text-[#470000] drop-shadow-sm md:text-5xl">
+      SUMOHENG <br />
+      <span class="text-[#ffdb0e]">เว็บใหญ่ ใจปล้ำ</span>
+    </p>
+  </div>
+  <ContentBox title="SUMOHENG เว็บหลัก ทางเข้าเล่น สล็อต คาสิโน สำหรับสมาชิก">
+    <p class="leading-relaxed">SUMOHENG วางระบบการใช้งานให้สมาชิกเข้าถึงบริการหลักได้จากจุดเดียว ตั้งแต่<a href="/ทางเข้า/" class="font-bold text-yellow-400 underline underline-offset-4 transition-colors hover:text-yellow-300">ทางเข้าเล่น</a> การเข้าสู่ระบบ สล็อต คาสิโน โปรโมชั่น ไปจนถึงการจัดการบัญชี โดยเน้นให้แต่ละขั้นตอนเชื่อมต่อกันอย่างเป็นระเบียบ เพื่อให้ทั้งสมาชิกใหม่และสมาชิกเดิมเข้าใจวิธีใช้งานได้โดยไม่ต้องค้นหาหลายช่องทาง</p>
 
-  <Announcement />
-  <div class="mx-auto w-full max-w-5xl px-4 py-8 text-center">
-    <p class="text-4xl leading-tight font-black text-[#470000] drop-shadow-sm md:text-5xl">
-      SUMOHENG <br />
-      <span class="text-[#ffdb0e]">เว็บใหญ่ ใจปล้ำ</span>
-    </p>
-  </div>
-  <ContentBox title="SUMOHENG เว็บหลัก ทางเข้า ซูโม่เฮง เกมสล็อตแท้ ฝากถอนออโต้">
-    <p class="leading-relaxed">
-      <strong class="text-amber-400">SUMOHENG</strong> คือเว็บหลักของซูโม่เฮงที่ใช้สำหรับการเข้าใช้งานและเข้าถึงข้อมูลเว็บไซต์อย่างเป็นทางการ ภายในเว็บไซต์เชื่อมต่อเกมสล็อตแท้จากหลายค่ายผ่านระบบเดียว
-      พร้อมระบบฝากถอนออโต้ที่ช่วยจัดการธุรกรรมตามขั้นตอนของระบบ เพื่อให้สมาชิกสามารถใช้งานทุกบริการได้จากบัญชีเดียว
-    </p>
+    <p class="mt-4 leading-relaxed">สิ่งที่ SUMOHENG ให้ความสำคัญไม่ใช่เพียงจำนวนเกมหรือบริการที่มีอยู่ แต่คือการจัดประสบการณ์ใช้งานให้ต่อเนื่อง สมาชิกสามารถใช้บัญชีเดียวเพื่อเข้าถึงส่วนต่าง ๆ ของระบบได้ง่ายขึ้น พร้อมตรวจสอบข้อมูลที่จำเป็นก่อนตัดสินใจใช้งานในแต่ละส่วน</p>
+
+    <div class="mt-8 flex flex-nowrap justify-center gap-3 sm:gap-6">
+      <a
+        href="/login/"
+        class="group relative flex flex-1 items-center justify-center rounded-full border border-red-500/50 bg-[#450a0a]/80 px-4 py-3 text-sm font-black whitespace-nowrap text-yellow-500 backdrop-blur-sm transition-all duration-300 hover:scale-105 hover:bg-red-900/60 hover:shadow-[0_0_15px_rgba(220,38,38,0.4)] sm:flex-none sm:px-10 sm:py-3.5 sm:text-base">
+        เข้าระบบเกม
+      </a>
+
+      <a
+        href="/register/"
+        class="group relative flex flex-1 items-center justify-center rounded-full bg-gradient-to-r from-yellow-500 via-yellow-400 to-yellow-500 px-4 py-3 text-sm font-black whitespace-nowrap text-[#450a0a] shadow-[0_5px_20px_rgba(251,191,36,0.4)] transition-all duration-300 hover:-translate-y-1 hover:scale-105 hover:shadow-[0_8px_25px_rgba(251,191,36,0.6)] sm:flex-none sm:px-10 sm:py-3.5 sm:text-base">
+        สมัครสมาชิก
+      </a>
+    </div>
+  </ContentBox>
+
+  <ContentBoxTwo titleleft="ทางเข้า SUMOHENG" titleright="JACKPOT แตกพาร์ทเนอร์">
+    <div slot="left" class="flex flex-col gap-4">
+      <div class="rounded-2xl border border-red-500/30 bg-white/5 p-6 shadow-[0_0_20px_rgba(220,38,38,0.1)] backdrop-blur-md">
+        <div class="flex flex-col gap-4">
+          <div class="relative">
+            <span class="absolute top-3.5 left-4 text-red-500">👤</span>
+            <input
+              type="text"
+              placeholder="ยูสเซอร์เนม / เบอร์โทรศัพท์"
+              class="w-full rounded-full border border-red-500/50 bg-black/60 py-3 pr-4 pl-12 text-white transition-all outline-none focus:border-yellow-400 focus:ring-1 focus:ring-yellow-400/50"
+            />
+          </div>
+          <div class="relative">
+            <span class="absolute top-3.5 left-4 text-red-500">🔑</span>
+            <input
+              type="password"
+              placeholder="รหัสผ่าน"
+              class="w-full rounded-full border border-red-500/50 bg-black/60 py-3 pr-4 pl-12 text-white transition-all outline-none focus:border-yellow-400 focus:ring-1 focus:ring-yellow-400/50"
+            />
+          </div>
+          <button
+            class="mt-2 w-full rounded-full border border-red-400/50 bg-gradient-to-r from-red-600 to-red-700 p-3.5 font-black text-white shadow-[0_5px_15px_rgba(220,38,38,0.5)] transition-all hover:scale-[1.02] hover:shadow-[0_8px_25px_rgba(220,38,38,0.7)]">
+            เข้าสู่ระบบ
+          </button>
+          <div class="mt-2 flex items-center justify-between px-2 text-sm">
+            <a href="#" class="text-gray-400 transition-colors hover:text-white">ลืมรหัสผ่าน?</a>
+            <a href="/register/" class="animate-pulse font-bold text-yellow-400 transition-colors hover:text-yellow-300">สมัครสมาชิกใหม่</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div slot="right">
+      <div class="flex h-full flex-col justify-center rounded-2xl border border-red-500/30 bg-gradient-to-br from-red-900/40 to-black/60 p-5 backdrop-blur-md">
+        <div class="mb-4 text-center">
+          <span class="text-sm font-bold text-gray-300">แจ็คพอตรวม (THB)</span>
+          <div class="bg-gradient-to-r from-yellow-300 via-yellow-400 to-yellow-500 bg-clip-text text-4xl font-black text-transparent drop-shadow-[0_2px_10px_rgba(250,204,21,0.4)]">8,459,230.50</div>
+        </div>
+        <table class="mt-2 w-full text-sm">
+          <thead>
+            <tr class="border-b border-red-500/30 text-red-400">
+              <th class="py-2 pl-2 text-left">ค่ายเกม</th>
+              <th class="py-2 pr-2 text-right">RTP</th>
+            </tr>
+          </thead>
+          <tbody class="text-white">
+            <tr class="border-b border-white/5 transition-colors hover:bg-white/10">
+              <td class="flex items-center gap-2 py-3 pl-2 font-bold"><span class="h-2 w-2 animate-ping rounded-full bg-green-500"></span> PG Soft</td><td
+                class="pr-2 text-right font-black text-green-400">
+                98.5%
+              </td>
+            </tr>
+            <tr class="border-b border-white/5 transition-colors hover:bg-white/10">
+              <td class="flex items-center gap-2 py-3 pl-2 font-bold"><span class="h-2 w-2 rounded-full bg-green-500"></span> Joker Gaming</td><td class="pr-2 text-right font-black text-green-400">
+                97.2%
+              </td>
+            </tr>
+            <tr class="transition-colors hover:bg-white/10">
+              <td class="flex items-center gap-2 py-3 pl-2 font-bold"><span class="h-2 w-2 rounded-full bg-green-500"></span> Pragmatic Play</td><td class="pr-2 text-right font-black text-green-400">
+                96.8%
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </ContentBoxTwo>
+
+  <LatestWinners />
+
+  <ContentBoxThreeColums titleleft="รวมครบจบในที่เดียว" titlecenter="RTP สูง แตกง่าย" titleright="ฝาก-ถอน ระบบออโต้">
+    <div slot="left">สล็อตทุกค่าย คาสิโน กีฬา หวย มีครบจบที่ SUMOHENG เว็บตรงไม่ผ่านเอเย่นต์ มั่นคง ปลอดภัย มาตรฐานระดับสากล</div>
+    <div slot="center">เกมสล็อตคุณภาพ คัดสรรมาอย่างดี อัตราการชนะ (RTP) สูง โบนัสจัดเต็ม โปรแรงแจกหนักทุกวัน แจ็คพอตแตกง่ายสุดๆ</div>
+    <div slot="right">ทำรายการรวดเร็วทันใจด้วยระบบออโต้ 100% รองรับทุกธนาคารและทรูมันนี่วอเลท เงินเข้าไวภายใน 5 วินาที</div>
+  </ContentBoxThreeColums>
+  <ProviderGrid />
+  <ContentBox>
+    <h2 class="mb-4 text-3xl font-black tracking-[0.2em] text-amber-400 uppercase drop-shadow-[0_0_10px_rgba(0,0,0,0.05)]">โปรโมชั่น SUMOHENG โบนัสสำหรับยูสใหม่และสมาชิก ที่ควรรู้</h2>
+    <p class="leading-relaxed"><a href="/promotion/" class="font-bold text-yellow-400 underline underline-offset-4 transition-colors hover:text-yellow-300">โปรโมชั่นของ SUMOHENG</a> ถูกจัดไว้สำหรับการใช้งานหลายรูปแบบ ทั้งสิทธิ์สำหรับยูสใหม่ กิจกรรมของสมาชิกเดิม โบนัสจากการใช้งาน และสิทธิประโยชน์ที่เกิดจากกิจกรรมภายในระบบ จุดสำคัญคือสมาชิกสามารถตรวจสอบโปรโมชั่นที่เหมาะกับรูปแบบการใช้งานของตนเองก่อนเลือกรับสิทธิ์ แทนที่จะต้องสมัครโปรโมชั่นโดยไม่ทราบรายละเอียด แต่ละโปรโมชั่นอาจมีช่วงเวลา วิธีรับสิทธิ์ และเงื่อนไขแตกต่างกัน จึงควรอ่านรายละเอียดก่อนทุกครั้ง แนวทางนี้ทำให้สมาชิกเห็นข้อมูลที่จำเป็นก่อนตัดสินใจ</p>
+  </ContentBox>
+  <ContentBoxSevenThree titleleft="แนะนำ สล็อต คาสิโน และค่ายเกมชั้นนำบน SUMOHENG" titleright="">
+    <div slot="left" class="flex h-full flex-col justify-center">
+      <Picture
+        src={image1}
+        loading="lazy"
+        fetchpriority="low"
+        widths={[200, 400, 600, 800]}
+        sizes="(max-width: 768px) 100vw, 50vw"
+        decoding="async"
+        formats={["avif", "webp"]}
+        fallbackFormat="webp"
+        quality={80}
+        alt="sumoheng VIP Service"
+        class="mx-auto h-auto w-full rounded-2xl border-2 border-yellow-500/30 shadow-[0_10px_30px_rgba(220,38,38,0.3)]"
+      />
+    </div>
+    <div slot="right">
+      <p class="leading-relaxed">SUMOHENG รวมสล็อต คาสิโน และเกมจากหลายค่ายไว้ภายในโครงสร้างเดียว โดยใช้ระบบ <strong class="text-amber-400">Super API</strong> เป็นส่วนเชื่อมต่อบริการที่รองรับ ทำให้สมาชิกไม่จำเป็นต้องแยกบัญชีสำหรับแต่ละค่าย การรวมหลายค่ายไว้ในระบบเดียวไม่ได้มีประโยชน์เพียงเรื่องจำนวนเกม แต่ช่วยให้สมาชิกเปรียบเทียบและเลือกหมวดที่เหมาะกับตนเองได้ง่ายขึ้น ทั้งสล็อต เกมคาสิโน และบริการจากผู้ให้บริการต่าง ๆ หากมีการเพิ่มหรือลดค่ายเกมในอนาคต สมาชิกควรตรวจสอบรายชื่อที่แสดงอยู่ในระบบ ณ เวลาที่ใช้งานจริง</p>
+
+      <a
+        href="/line/"
+        class="inline-flex items-center bg-[#00B900] px-8 py-3 font-bold text-white shadow-lg transition-transform hover:scale-105"
+        style="clip-path: polygon(15% 0, 100% 0, 100% 70%, 85% 100%, 0 100%, 0 30%);">
+        <span class="mr-2 text-xl">LINE</span> ติดต่อแอดมิน
+      </a>
+    </div>
+  </ContentBoxSevenThree>
+  <SmoothCarousel />
+  <ContentBox>
+    <h2 class="mb-4 text-3xl font-black tracking-[0.2em] text-yellow-400 uppercase drop-shadow-[0_0_10px_rgba(0,0,0,0.05)]">ทางเข้า SUMOHENG สำหรับสมาชิกทุกคน รองรับทุกระบบ เปิด 24 ชม.</h2>
+    <p class="leading-relaxed">ซูโม่เฮง เข้าง่ายที่สุดเท่าที่จะทำได้ เปิดหน้านี้แล้วกดเข้าสู่ระบบ จบ ไม่มีขั้นตอนดาวน์โหลด ไม่มีให้กรอกอะไรยืดยาว จะเปิดจากมือถือระหว่างเดินทาง หรือเปิดจากคอมที่บ้าน หน้าตาและเมนูเหมือนกันทั้งหมด ระบบไม่มีวันปิด เข้าได้ตลอด 24 ชั่วโมง คนที่เพิ่งมาครั้งแรก เริ่มที่ปุ่ม<a href="/register/" class="font-bold text-yellow-400 underline underline-offset-4 transition-colors hover:text-yellow-300">สมัครสมาชิก</a> กรอกเบอร์โทรแล้วตั้งรหัสผ่านที่ตัวเองจำได้ ส่วนสมาชิกเดิมที่หายไปนาน ไม่ต้องสมัครใหม่ครับ ยูสเดิมยังอยู่ กด<a href="/login/" class="font-bold text-yellow-400 underline underline-offset-4 transition-colors hover:text-yellow-300">เข้าสู่ระบบ</a>แล้วใช้ต่อได้เลย</p>
 
-    <div class="mt-8 flex flex-nowrap justify-center gap-3 sm:gap-6">
-      <a
-        href="/login"
-        class="group relative flex flex-1 items-center justify-center rounded-full border border-red-500/50 bg-[#450a0a]/80 px-4 py-3 text-sm font-black whitespace-nowrap text-yellow-500 backdrop-blur-sm transition-all duration-300 hover:scale-105 hover:bg-red-900/60 hover:shadow-[0_0_15px_rgba(220,38,38,0.4)] sm:flex-none sm:px-10 sm:py-3.5 sm:text-base">
-        เข้าระบบเกม
-      </a>
-
-      <a
-        href="/register"
-        class="group relative flex flex-1 items-center justify-center rounded-full bg-gradient-to-r from-yellow-500 via-yellow-400 to-yellow-500 px-4 py-3 text-sm font-black whitespace-nowrap text-[#450a0a] shadow-[0_5px_20px_rgba(251,191,36,0.4)] transition-all duration-300 hover:-translate-y-1 hover:scale-105 hover:shadow-[0_8px_25px_rgba(251,191,36,0.6)] sm:flex-none sm:px-10 sm:py-3.5 sm:text-base">
-        สมัครสมาชิก
-      </a>
-    </div>
-  </ContentBox>
-
-  <ContentBoxTwo titleleft="ทางเข้า SUMOHENG" titleright="JACKPOT แตกพาร์ทเนอร์">
-    <div slot="left" class="flex flex-col gap-4">
-      <div class="rounded-2xl border border-red-500/30 bg-white/5 p-6 shadow-[0_0_20px_rgba(220,38,38,0.1)] backdrop-blur-md">
-        <div class="flex flex-col gap-4">
-          <div class="relative">
-            <span class="absolute top-3.5 left-4 text-red-500">👤</span>
-            <input
-              type="text"
-              placeholder="ยูสเซอร์เนม / เบอร์โทรศัพท์"
-              class="w-full rounded-full border border-red-500/50 bg-black/60 py-3 pr-4 pl-12 text-white transition-all outline-none focus:border-yellow-400 focus:ring-1 focus:ring-yellow-400/50"
-            />
-          </div>
-          <div class="relative">
-            <span class="absolute top-3.5 left-4 text-red-500">🔑</span>
-            <input
-              type="password"
-              placeholder="รหัสผ่าน"
-              class="w-full rounded-full border border-red-500/50 bg-black/60 py-3 pr-4 pl-12 text-white transition-all outline-none focus:border-yellow-400 focus:ring-1 focus:ring-yellow-400/50"
-            />
-          </div>
-          <button
-            class="mt-2 w-full rounded-full border border-red-400/50 bg-gradient-to-r from-red-600 to-red-700 p-3.5 font-black text-white shadow-[0_5px_15px_rgba(220,38,38,0.5)] transition-all hover:scale-[1.02] hover:shadow-[0_8px_25px_rgba(220,38,38,0.7)]">
-            เข้าสู่ระบบ
-          </button>
-          <div class="mt-2 flex items-center justify-between px-2 text-sm">
-            <a href="#" class="text-gray-400 transition-colors hover:text-white">ลืมรหัสผ่าน?</a>
-            <a href="/register" class="animate-pulse font-bold text-yellow-400 transition-colors hover:text-yellow-300">สมัครสมาชิกใหม่</a>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div slot="right">
-      <div class="flex h-full flex-col justify-center rounded-2xl border border-red-500/30 bg-gradient-to-br from-red-900/40 to-black/60 p-5 backdrop-blur-md">
-        <div class="mb-4 text-center">
-          <span class="text-sm font-bold text-gray-300">แจ็คพอตรวม (THB)</span>
-          <div class="bg-gradient-to-r from-yellow-300 via-yellow-400 to-yellow-500 bg-clip-text text-4xl font-black text-transparent drop-shadow-[0_2px_10px_rgba(250,204,21,0.4)]">8,459,230.50</div>
-        </div>
-        <table class="mt-2 w-full text-sm">
-          <thead>
-            <tr class="border-b border-red-500/30 text-red-400">
-              <th class="py-2 pl-2 text-left">ค่ายเกม</th>
-              <th class="py-2 pr-2 text-right">RTP</th>
-            </tr>
-          </thead>
-          <tbody class="text-white">
-            <tr class="border-b border-white/5 transition-colors hover:bg-white/10">
-              <td class="flex items-center gap-2 py-3 pl-2 font-bold"><span class="h-2 w-2 animate-ping rounded-full bg-green-500"></span> PG Soft</td><td
-                class="pr-2 text-right font-black text-green-400">
-                98.5%
-              </td>
-            </tr>
-            <tr class="border-b border-white/5 transition-colors hover:bg-white/10">
-              <td class="flex items-center gap-2 py-3 pl-2 font-bold"><span class="h-2 w-2 rounded-full bg-green-500"></span> Joker Gaming</td><td class="pr-2 text-right font-black text-green-400">
-                97.2%
-              </td>
-            </tr>
-            <tr class="transition-colors hover:bg-white/10">
-              <td class="flex items-center gap-2 py-3 pl-2 font-bold"><span class="h-2 w-2 rounded-full bg-green-500"></span> Pragmatic Play</td><td class="pr-2 text-right font-black text-green-400">
-                96.8%
-              </td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </div>
-  </ContentBoxTwo>
-
-  <LatestWinners />
-
-  <ContentBoxThreeColums titleleft="รวมครบจบในที่เดียว" titlecenter="RTP สูง แตกง่าย" titleright="ฝาก-ถอน ระบบออโต้">
-    <div slot="left">สล็อตทุกค่าย คาสิโน กีฬา หวย มีครบจบที่ SUMOHENG เว็บตรงไม่ผ่านเอเย่นต์ มั่นคง ปลอดภัย มาตรฐานระดับสากล</div>
-    <div slot="center">เกมสล็อตคุณภาพ คัดสรรมาอย่างดี อัตราการชนะ (RTP) สูง โบนัสจัดเต็ม โปรแรงแจกหนักทุกวัน แจ็คพอตแตกง่ายสุดๆ</div>
-    <div slot="right">ทำรายการรวดเร็วทันใจด้วยระบบออโต้ 100% รองรับทุกธนาคารและทรูมันนี่วอเลท เงินเข้าไวภายใน 5 วินาที</div>
-  </ContentBoxThreeColums>
-  <ProviderGrid />
-  <ContentBox>
-    <h2 class="mb-4 text-3xl font-black tracking-[0.2em] text-amber-400 uppercase drop-shadow-[0_0_10px_rgba(0,0,0,0.05)]">เกี่ยวกับ SUMOHENG เว็บหลัก ซูโม่เฮง ข้อมูลเว็บไซต์อย่างเป็นทางการ</h2>
-    <p class="leading-relaxed">
-      <strong class="text-yellow-500">SUMOHENG</strong> เป็นเว็บหลักของซูโม่เฮงที่รวบรวมข้อมูลและระบบสำคัญของเว็บไซต์ไว้ในที่เดียว โดยมีเกมสล็อตเป็นหมวดหลัก พร้อมเกมบาคาร่า หวย กีฬา และยิงปลา ผ่านระบบ Super API ที่เชื่อมต่อผู้ให้บริการหลายค่าย
-      สมาชิกสามารถติดตามข่าวสาร ประกาศ ทางเข้าหลัก และสถานะการอัปเดตของเว็บไซต์ รวมถึงใช้งานระบบ Wallet และฝากถอนออโต้ได้ผ่านเว็บไซต์อย่างเป็นทางการ เพื่อให้ทุกส่วนของการใช้งานเชื่อมโยงกันจากเว็บแม่ศูนย์กลางเดียวกัน
-    </p>
-  </ContentBox>
-  <ContentBoxSevenThree titleleft="" titleright="SUMOHENG บริการ เกมสล็อตแท้ Super API ที่สามารถเล่นผ่านเว็บหลัก">
-    <div slot="left" class="flex h-full flex-col justify-center">
-      <Picture
-        src={image1}
-        loading="lazy"
-        fetchpriority="low"
-        widths={[200, 400, 600, 800]}
-        sizes="(max-width: 768px) 100vw, 50vw"
-        decoding="async"
-        formats={["avif", "webp"]}
-        fallbackFormat="webp"
-        quality={80}
-        alt="sumoheng VIP Service"
-        class="mx-auto h-auto w-full rounded-2xl border-2 border-yellow-500/30 shadow-[0_10px_30px_rgba(220,38,38,0.3)]"
-      />
-    </div>
-    <div slot="right">
-      <p>
-        ระบบ <strong class="text-amber-400">Super API</strong> ของ SUMOHENG ทำหน้าที่เชื่อมต่อเกมสล็อตแท้จากผู้พัฒนาเกมหลายค่ายเข้าสู่เว็บไซต์หลัก เพื่อให้สมาชิกสามารถเลือกเล่นเกมจากค่ายต่าง ๆ ได้ภายในยูสเซอร์เดียว
-        พร้อมเข้าถึงเกมใหม่ เกมยอดนิยม และฟีเจอร์ของแต่ละค่ายผ่านระบบเดียวกัน
-      </p>
-
-      <a
-        href="/line"
-        class="inline-flex items-center bg-[#00B900] px-8 py-3 font-bold text-white shadow-lg transition-transform hover:scale-105"
-        style="clip-path: polygon(15% 0, 100% 0, 100% 70%, 85% 100%, 0 100%, 0 30%);">
-        <span class="mr-2 text-xl">LINE</span> ติดต่อแอดมิน
-      </a>
-    </div>
-  </ContentBoxSevenThree>
-  <SmoothCarousel />
-  <ContentBox>
-    <h2 class="mb-4 text-3xl font-black tracking-[0.2em] text-yellow-400 uppercase drop-shadow-[0_0_10px_rgba(0,0,0,0.05)]">ทางเข้า ใช้บัญชีสมาชิกเดียว เชื่อมต่อทุกฟังก์ชัน ของ SUMOHENG</h2>
-    <p class="leading-relaxed">
-      ทางเข้า <strong class="text-yellow-500">SUMOHENG</strong> รองรับการใช้งานผ่านบัญชีสมาชิกเดียว เพื่อเชื่อมต่อทุกฟังก์ชันของเว็บไซต์ภายในระบบเดียว สมาชิกสามารถเข้าถึงเกมสล็อตแท้ ระบบฝากถอนออโต้ ข้อมูลบัญชี ข่าวสาร
-      และโปรโมชั่นได้อย่างต่อเนื่อง โดยทุกส่วนถูกเชื่อมโยงให้ทำงานร่วมกันผ่านเว็บไซต์หลักของ SUMOHENG
-    </p>
-  </ContentBox>
-
-  <ContentBox>
-    <Picture
-      src={image2}
-      loading="lazy"
-      fetchpriority="low"
-      widths={[200, 400, 600, 800]}
-      sizes="(max-width: 768px) 100vw, 50vw"
-      decoding="async"
-      formats={["avif", "webp"]}
-      fallbackFormat="webp"
-      quality={80}
-      alt="sumoheng VIP Service"
-      class="mx-auto h-auto w-full max-w-2xl rounded-2xl border-2 border-yellow-500/30 shadow-[0_10px_30px_rgba(220,38,38,0.3)] transition-transform hover:scale-[1.02]"
-    />
-    <h2 class="mb-4 text-2xl font-black tracking-[0.2em] text-yellow-400 uppercase drop-shadow-[0_0_10px_rgba(0,0,0,0.05)]">
-      ฝากถอนออโต้ ดำเนินการอย่างเป็นขั้นเป็นตอน ด้วยความแม่นยำ
-    </h2>
-    <p class="leading-relaxed">
-      การทำรายการฝากและถอนผ่านระบบออโต้ของ <strong class="text-yellow-500">SUMOHENG</strong> จะดำเนินไปตามลำดับตั้งแต่การรับข้อมูล ตรวจสอบยอด ไปจนถึงการยืนยันรายการก่อนประมวลผล ทุกขั้นตอนอ้างอิงข้อมูลจากบัญชีผู้ใช้เพื่อลดความคลาดเคลื่อน
-      และช่วยให้สถานะของแต่ละธุรกรรมตรวจสอบได้ง่ายขึ้น เมื่อข้อมูลครบถ้วน ระบบจะดำเนินการตามรายการที่ส่งเข้ามา ทำให้การฝากถอนมีความเป็นระเบียบ ถูกต้อง และเชื่อมต่อกับการใช้งานส่วนอื่นของเว็บไซต์ได้ทันที
-    </p>
-  </ContentBox>
-
-  <ReviewCardSumo />
-
-  <ContentBoxSpecial>
-    <h2 slot="title-left">สมัครสมาชิก เพื่อติดตามข่าวสารและโปรโมชั่นของ SUMOHENG</h2>
-    <p slot="content-left" class="leading-relaxed">
-      การสมัครสมาชิกช่วยให้ผู้ใช้งานสามารถเข้าถึงฟังก์ชันต่าง ๆ ของเว็บไซต์ได้ครบถ้วน พร้อมติดตามข่าวสาร ประกาศ และโปรโมชั่นของ SUMOHENG ได้จากเว็บไซต์หลัก
-    </p>
-
-    <h2 slot="title-right">รายละเอียด เงื่อนไข และช่วงเวลาของแต่ละโปรโมชั่น ตรวจสอบได้ชัดเจน</h2>
-    <p slot="content-right" class="leading-relaxed">
-      ข้อมูลแต่ละรายการโปรโมชั่นจะแสดงรายละเอียด เงื่อนไข และช่วงเวลาที่เกี่ยวข้องไว้อย่างชัดเจน เพื่อให้สมาชิกสามารถตรวจสอบข้อมูลล่าสุดและติดตามความเคลื่อนไหวของเว็บไซต์ได้อย่างสะดวก
-    </p>
-  </ContentBoxSpecial>
-
-  <Navfoot />
-
-  <style>
-    :global(.text-yellow-gradient) {
-      background: linear-gradient(to bottom, #e7d800 0%, #ddd44e 100%) !important;
-      -webkit-background-clip: text !important;
-      -webkit-text-fill-color: transparent !important;
-    }
-  </style>
-</MainLayout>
+    <p class="mt-4 leading-relaxed">ข้อควรระวังมีข้อเดียว ก่อนกรอกรหัสผ่าน ให้มองชื่อเว็บบนแถบที่อยู่ก่อนเสมอว่าเป็น sumoheng.com ไม่ใช่ชื่อที่สะกดใกล้เคียง เพราะแบรนด์นี้มีเว็บที่ตั้งชื่อคล้ายกันอยู่หลายตัวจนคนสับสนบ่อย</p>
+  </ContentBox>
+
+  <ContentBox>
+    <Picture
+      src={image2}
+      loading="lazy"
+      fetchpriority="low"
+      widths={[200, 400, 600, 800]}
+      sizes="(max-width: 768px) 100vw, 50vw"
+      decoding="async"
+      formats={["avif", "webp"]}
+      fallbackFormat="webp"
+      quality={80}
+      alt="sumoheng VIP Service"
+      class="mx-auto h-auto w-full max-w-2xl rounded-2xl border-2 border-yellow-500/30 shadow-[0_10px_30px_rgba(220,38,38,0.3)] transition-transform hover:scale-[1.02]"
+    />
+    <h2 class="mb-4 text-2xl font-black tracking-[0.2em] text-yellow-400 uppercase drop-shadow-[0_0_10px_rgba(0,0,0,0.05)]">SUMO HENG ฝากถอนออโต้ รองรับหลายระบบ เร็วทุกระดับ แม่นยำทุกจุด บัญชีเดียว</h2>
+    <p class="leading-relaxed">ฝากถอนของ SUMO HENG จัดการเงินและเครดิตที่เชื่อมอยู่กับบัญชีสมาชิกเดียว เมื่อต้องการทำรายการ สมาชิกจึงสามารถตรวจสอบสถานะและดำเนินการได้ด้วยตัวเอง ระบบออโต้จะช่วยลดขั้นตอนที่ต้องทำซ้ำ และทำให้กระบวนการตั้งแต่เริ่มรายการไปจนถึงตรวจสอบสถานะอยู่ในเส้นทางเดียวกัน อย่างไรก็ตาม ก่อนยืนยันรายการทุกครั้ง สมาชิกควรตรวจสอบจำนวนเงิน ข้อมูลบัญชี และเงื่อนไขที่แสดงในระบบให้ครบถ้วน เพื่อให้รายการตรงกับความต้องการและลดความผิดพลาดที่สามารถป้องกันได้</p>
+  </ContentBox>
+
+  <ReviewCardSumo />
+
+  <ContentBoxSpecial>
+    <h2 slot="title-left">สมัคร และ เข้าสู่ระบบ SUMOHENG อย่างปลอดภัย พร้อมเก็บรักษาข้อมูลส่วนบุคคล</h2>
+    <p slot="content-left" class="leading-relaxed">ตอนสมัครซูโม่เฮง เราขอข้อมูลเท่าที่จำเป็นต่อการเปิดบัญชีและโอนเงินเท่านั้น คือเบอร์โทรศัพท์และชื่อบัญชีสำหรับรับเงิน ใช้เพื่อยืนยันตัวตนตอนฝากถอนและติดต่อกลับเมื่อมีปัญหา ไม่ได้เอาไปทำอย่างอื่น และเราไม่ขอข้อมูลที่ไม่เกี่ยวข้อง เช่น รหัสเข้าแอปธนาคารของคุณ</p>
+
+    <p slot="title-right" class="text-xl font-black tracking-widest text-yellow-400 uppercase">สิ่งที่ทีมงานของเราไม่ทำ</p>
+    <p slot="content-right" class="leading-relaxed">ไม่ขอรหัสผ่านบัญชี ไม่ขอรหัส OTP จากธนาคาร และไม่ขอให้โอนเงินเข้าบัญชีส่วนตัวของใครก็ตาม ถ้าเจอคนอ้างว่าเป็นทีมงานแล้วขอสามอย่างนี้ ตัดบทได้เลยแล้วแจ้งเรา สมาชิกเองก็ควรตั้งรหัสผ่านที่คาดเดาได้ยาก และไม่ส่งข้อมูลเข้าสู่ระบบให้บุคคลอื่น ควรตรวจสอบ URL ก่อนกรอกข้อมูล หากพบความผิดปกติของบัญชี ควรหยุดทำรายการและติดต่อช่องทางบริการที่ระบุไว้บนเว็บไซต์โดยตรง</p>
+  </ContentBoxSpecial>
+
+  <Navfoot />
+
+  <style>
+    :global(.text-yellow-gradient) {
+      background: linear-gradient(to bottom, #e7d800 0%, #ddd44e 100%) !important;
+      -webkit-background-clip: text !important;
+      -webkit-text-fill-color: transparent !important;
+    }
+  </style>
+</MainLayout>

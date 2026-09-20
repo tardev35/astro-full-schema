@@ -41,9 +41,9 @@ const mainLogo = imagePaths.length > 0 ? images[imagePaths[0]].default : null;
           {
             [
               { name: "หน้าแรก", path: "/" },
-              { name: "โปรโมชั่น", path: "/promotion" },
-              { name: "สมัครสมาชิก", path: "/register" },
-              { name: "เข้าสู่ระบบ", path: "/login" },
+              { name: "โปรโมชั่น", path: "/promotion/" },
+              { name: "สมัครสมาชิก", path: "/register/" },
+              { name: "เข้าสู่ระบบ", path: "/login/" },
             ].map((link) => (
               <li>
                 <a href={link.path} class="group flex items-center text-green-50/80 transition-all hover:text-yellow-400">
@@ -64,7 +64,7 @@ const mainLogo = imagePaths.length > 0 ? images[imagePaths[0]].default : null;
           {
             ["สล็อตออนไลน์ (Slot)", "คาสิโนสด (Live Casino)", "บาคาร่า (Baccarat)", "เดิมพันกีฬา (Sportsbook)"].map((game) => (
               <li>
-                <a href="/register" class="group flex items-center text-green-50/80 transition-all hover:text-white">
+                <a href="/register/" class="group flex items-center text-green-50/80 transition-all hover:text-white">
                   <span class="mr-3 h-1.5 w-1.5 rounded-full bg-[#064e3b] transition-colors group-hover:bg-[#10b981] group-hover:shadow-[0_0_8px_rgba(16,185,129,0.8)]" />
                   {game}
                 </a>
@@ -80,7 +80,7 @@ const mainLogo = imagePaths.length > 0 ? images[imagePaths[0]].default : null;
         </h3>
 
         <a
-          href="/line"
+          href="/line/"
           class="flex w-full items-center justify-center gap-2 rounded-lg bg-[#00B900] py-3 font-bold text-white shadow-[0_0_15px_rgba(0,185,0,0.3)] transition-transform hover:scale-105">
           <span class="text-xl font-black">LINE</span> @VEGUS24R
         </a>

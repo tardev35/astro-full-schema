@@ -33,7 +33,7 @@ const isActive = (path: string) => {
       </a>
 
       <a
-        href="/promotion"
+        href="/promotion/"
         class={`group relative w-full h-full flex flex-col items-center justify-center rounded-lg transition-all ${isActive("/promotion") ? "bg-[#8B0000]" : "hover:bg-[#8B0000]/70"}`}>
         <span class="mb-1 text-3xl drop-shadow-md transition-transform group-hover:scale-110">🎁</span>
         <span class={`text-xs font-bold transition-colors ${isActive("/promotion") ? "text-white" : "text-gray-300 group-hover:text-white"}`}>โปรโมชั่น</span>
@@ -42,7 +42,7 @@ const isActive = (path: string) => {
       </a>
 
       <a
-        href="/ทดลองเล่น"
+        href="/ทดลองเล่น/"
         class={`group relative w-full h-full flex flex-col items-center justify-center rounded-lg transition-all ${isActive("/ทดลองเล่น") ? "bg-[#8B0000]" : "hover:bg-[#8B0000]/70"}`}>
         <span class="mb-1 text-3xl drop-shadow-md transition-transform group-hover:scale-110">🎰</span>
         <span class={`text-xs font-bold transition-colors ${isActive("/ทดลองเล่น") ? "text-white" : "text-gray-300 group-hover:text-white"}`}>ทดลองเล่น</span>
@@ -50,14 +50,14 @@ const isActive = (path: string) => {
         </div>
       </a>
 
-      <a href="/ทางเข้า" class={`group relative w-full h-full flex flex-col items-center justify-center rounded-lg transition-all ${isActive("/ทางเข้า") ? "bg-[#8B0000]" : "hover:bg-[#8B0000]/70"}`}>
+      <a href="/ทางเข้า/" class={`group relative w-full h-full flex flex-col items-center justify-center rounded-lg transition-all ${isActive("/ทางเข้า") ? "bg-[#8B0000]" : "hover:bg-[#8B0000]/70"}`}>
         <span class="mb-1 text-3xl drop-shadow-md transition-transform group-hover:scale-110">🌐</span>
         <span class={`text-xs font-bold transition-colors ${isActive("/ทางเข้า") ? "text-white" : "text-gray-300 group-hover:text-white"}`}>ทางเข้า</span>
         <div class={`absolute left-0 top-0 h-full w-[3px] bg-red-500 transition-transform duration-300 origin-top ${isActive("/ทางเข้า") ? "scale-y-100" : "scale-y-0 group-hover:scale-y-100"}`}></div>
       </a>
 
       <a
-        href="/contact-us"
+        href="/contact-us/"
         class={`group relative w-full h-full flex flex-col items-center justify-center rounded-lg transition-all ${isActive("/contact-us") ? "bg-[#8B0000]" : "hover:bg-[#8B0000]/70"}`}>
         <span class="mb-1 text-3xl drop-shadow-md transition-transform group-hover:scale-110">📞</span>
         <span class={`text-xs font-bold transition-colors ${isActive("/contact-us") ? "text-white" : "text-gray-300 group-hover:text-white"}`}>ติดต่อเรา</span>
@@ -78,7 +78,7 @@ const isActive = (path: string) => {
       <Picture src={mainLogo!} alt="KIKI49 Mobile Logo" loading="eager" fetchpriority="high" class="h-[30px] w-auto drop-shadow-md" formats={["avif", "webp"]} fallbackFormat="webp" />
     </a>
 
-    <a href="/login" class="flex h-[32px] items-center justify-center rounded border border-white/20 bg-white px-4 text-xs font-bold text-[#8B0000] shadow transition-colors hover:bg-gray-100">
+    <a href="/login/" class="flex h-[32px] items-center justify-center rounded border border-white/20 bg-white px-4 text-xs font-bold text-[#8B0000] shadow transition-colors hover:bg-gray-100">
       เข้าสู่ระบบ
     </a>
   </nav>
@@ -96,32 +96,32 @@ const isActive = (path: string) => {
         <span class="text-sm font-bold">หน้าแรก</span>
       </a>
       <a
-        href="/promotion"
+        href="/promotion/"
         class={`sidebar-item flex items-center px-4 py-3 rounded-lg border transition-all ${isActive("/promotion") ? "bg-[#8B0000] border-red-500 text-white shadow-inner" : "bg-white/5 border-transparent text-gray-300 hover:bg-white/10 hover:text-white"}`}>
         <span class="mr-3 text-xl">🎁</span>
         <span class="text-sm font-bold">โปรโมชั่น</span>
       </a>
       <a
-        href="/ทดลองเล่น"
+        href="/ทดลองเล่น/"
         class={`sidebar-item flex items-center px-4 py-3 rounded-lg border transition-all ${isActive("/ทดลองเล่น") ? "bg-[#8B0000] border-red-500 text-white shadow-inner" : "bg-white/5 border-transparent text-gray-300 hover:bg-white/10 hover:text-white"}`}>
         <span class="mr-3 text-xl">🎰</span>
         <span class="text-sm font-bold">ทดลองเล่น</span>
       </a>
       <a
-        href="/ทางเข้า"
+        href="/ทางเข้า/"
         class={`sidebar-item flex items-center px-4 py-3 rounded-lg border transition-all ${isActive("/ทางเข้า") ? "bg-[#8B0000] border-red-500 text-white shadow-inner" : "bg-white/5 border-transparent text-gray-300 hover:bg-white/10 hover:text-white"}`}>
         <span class="mr-3 text-xl">🌐</span>
         <span class="text-sm font-bold">ทางเข้า</span>
       </a>
       <a
-        href="/contact-us"
+        href="/contact-us/"
         class={`sidebar-item flex items-center px-4 py-3 rounded-lg border transition-all ${isActive("/contact-us") ? "bg-[#8B0000] border-red-500 text-white shadow-inner" : "bg-white/5 border-transparent text-gray-300 hover:bg-white/10 hover:text-white"}`}>
         <span class="mr-3 text-xl">📞</span>
         <span class="text-sm font-bold">ติดต่อเรา</span>
       </a>
 
       <div class="mt-5 flex flex-col gap-2 border-t border-red-800/50 pt-5">
-        <a href="/register" class="sidebar-item flex justify-center rounded border border-red-500 bg-red-600 py-3 text-sm font-bold text-white shadow-md transition-colors hover:bg-red-500">
+        <a href="/register/" class="sidebar-item flex justify-center rounded border border-red-500 bg-red-600 py-3 text-sm font-bold text-white shadow-md transition-colors hover:bg-red-500">
           🔥 สมัครสมาชิกใหม่
         </a>
       </div>
@@ -129,11 +129,11 @@ const isActive = (path: string) => {
   </div>
 
   <div class="fixed top-4 right-6 z-50 hidden items-center gap-3 lg:flex">
-    <a href="/login" class="group flex items-center gap-1.5 rounded border border-white/20 bg-white px-6 py-2 text-sm font-bold text-[#8B0000] shadow-md transition-all hover:bg-gray-100">
+    <a href="/login/" class="group flex items-center gap-1.5 rounded border border-white/20 bg-white px-6 py-2 text-sm font-bold text-[#8B0000] shadow-md transition-all hover:bg-gray-100">
       🔒 เข้าสู่ระบบ
     </a>
     <a
-      href="/register"
+      href="/register/"
       class="group flex items-center gap-1.5 rounded border border-red-500 bg-red-600 px-6 py-2 text-sm font-bold text-white shadow-[0_0_15px_rgba(220,38,38,0.3)] transition-all hover:scale-105 hover:bg-red-500">
       👤 สมัครสมาชิก
     </a>

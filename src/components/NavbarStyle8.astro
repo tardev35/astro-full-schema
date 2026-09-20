@@ -40,7 +40,7 @@ const isActive = (path: string) => {
           {isActive("/") && <div class="absolute bottom-0 left-0 h-[3px] w-full rounded-t-md bg-yellow-400 shadow-[0_-2px_10px_rgba(250,204,21,0.8)]" />}
         </a>
 
-        <a href="/promotion" class="group relative flex h-full items-center text-sm font-bold transition-all xl:text-base">
+        <a href="/promotion/" class="group relative flex h-full items-center text-sm font-bold transition-all xl:text-base">
           <span class={`absolute left-0 -ml-3 opacity-0 transition-all duration-300 group-hover:opacity-100 group-hover:-ml-4 text-yellow-400`}>[</span>
           <span class={`transition-colors duration-300 ${isActive("/promotion") ? "text-yellow-400 drop-shadow-[0_0_8px_rgba(250,204,21,0.6)]" : "text-black-300 group-hover:text-yellow-300"}`}>
             โปรโมชั่น
@@ -49,7 +49,7 @@ const isActive = (path: string) => {
           {isActive("/promotion") && <div class="absolute bottom-0 left-0 h-[3px] w-full rounded-t-md bg-yellow-400 shadow-[0_-2px_10px_rgba(250,204,21,0.8)]" />}
         </a>
 
-        <a href="/ทดลองเล่น" class="group relative flex h-full items-center text-sm font-bold transition-all xl:text-base">
+        <a href="/ทดลองเล่น/" class="group relative flex h-full items-center text-sm font-bold transition-all xl:text-base">
           <span class={`absolute left-0 -ml-3 opacity-0 transition-all duration-300 group-hover:opacity-100 group-hover:-ml-4 text-yellow-400`}>[</span>
           <span class={`transition-colors duration-300 ${isActive("/ทดลองเล่น") ? "text-yellow-400 drop-shadow-[0_0_8px_rgba(250,204,21,0.6)]" : "text-black-300 group-hover:text-yellow-300"}`}>
             ทดลองเล่น
@@ -58,7 +58,7 @@ const isActive = (path: string) => {
           {isActive("/ทดลองเล่น") && <div class="absolute bottom-0 left-0 h-[3px] w-full rounded-t-md bg-yellow-400 shadow-[0_-2px_10px_rgba(250,204,21,0.8)]" />}
         </a>
 
-        <a href="/ทางเข้า" class="group relative flex h-full items-center text-sm font-bold transition-all xl:text-base">
+        <a href="/ทางเข้า/" class="group relative flex h-full items-center text-sm font-bold transition-all xl:text-base">
           <span class={`absolute left-0 -ml-3 opacity-0 transition-all duration-300 group-hover:opacity-100 group-hover:-ml-4 text-yellow-400`}>[</span>
           <span class={`transition-colors duration-300 ${isActive("/ทางเข้า") ? "text-yellow-400 drop-shadow-[0_0_8px_rgba(250,204,21,0.6)]" : "text-black-300 group-hover:text-yellow-300"}`}>
             ทางเข้า
@@ -67,7 +67,7 @@ const isActive = (path: string) => {
           {isActive("/ทางเข้า") && <div class="absolute bottom-0 left-0 h-[3px] w-full rounded-t-md bg-yellow-400 shadow-[0_-2px_10px_rgba(250,204,21,0.8)]" />}
         </a>
 
-        <a href="/contact-us" class="group relative flex h-full items-center text-sm font-bold transition-all xl:text-base">
+        <a href="/contact-us/" class="group relative flex h-full items-center text-sm font-bold transition-all xl:text-base">
           <span class={`absolute left-0 -ml-3 opacity-0 transition-all duration-300 group-hover:opacity-100 group-hover:-ml-4 text-yellow-400`}>[</span>
           <span class={`transition-colors duration-300 ${isActive("/contact-us") ? "text-yellow-400 drop-shadow-[0_0_8px_rgba(250,204,21,0.6)]" : "text-black-300 group-hover:text-yellow-300"}`}>
             ติดต่อเรา
@@ -79,18 +79,18 @@ const isActive = (path: string) => {
 
       <div class="z-50 flex items-center gap-2 md:gap-4">
         <a
-          href="/login"
+          href="/login/"
           class="hidden items-center justify-center rounded border border-[#1b8d3b] px-6 py-2 text-sm font-bold text-yellow-400 transition-all hover:bg-[#1b8d3b]/20 hover:shadow-[0_0_15px_rgba(27,141,59,0.3)] lg:flex">
           เข้าสู่ระบบ
         </a>
         <a
-          href="/register"
+          href="/register/"
           class="bg-theme-oklab hidden items-center justify-center rounded px-6 py-2 text-sm font-extrabold text-white shadow-[0_0_20px_rgba(27,141,59,0.5)] transition-all hover:brightness-110 lg:flex">
           สมัครสมาชิก
         </a>
 
         <div class="flex items-center gap-2 lg:hidden">
-          <a href="/register" class="bg-theme-oklab flex items-center justify-center rounded px-3 py-1.5 text-[11px] font-bold text-white shadow-[0_0_10px_rgba(27,141,59,0.5)] md:px-4 md:text-xs">
+          <a href="/register/" class="bg-theme-oklab flex items-center justify-center rounded px-3 py-1.5 text-[11px] font-bold text-white shadow-[0_0_10px_rgba(27,141,59,0.5)] md:px-4 md:text-xs">
             สมัครสมาชิก
           </a>
           <button id="hamburger-btn" class="flex flex-col items-center justify-center space-y-1.5 rounded border border-[#1b8d3b]/40 bg-[#1b8d3b]/10 p-1.5" aria-label="Menu">
@@ -121,25 +121,25 @@ const isActive = (path: string) => {
         <span class="text-sm font-bold">หน้าแรก</span>
       </a>
       <a
-        href="/promotion"
+        href="/promotion/"
         class={`sidebar-item flex items-center px-4 py-3.5 rounded-lg border transition-all ${isActive("/promotion") ? "bg-[#1b8d3b]/20 border-[#1b8d3b]/60 text-yellow-400" : "bg-white/5 border-transparent text-black-300 hover:bg-white/10"}`}>
         <span class="mr-3 text-xl">🎁</span>
         <span class="text-sm font-bold">โปรโมชั่น</span>
       </a>
       <a
-        href="/ทดลองเล่น"
+        href="/ทดลองเล่น/"
         class={`sidebar-item flex items-center px-4 py-3.5 rounded-lg border transition-all ${isActive("/ทดลองเล่น") ? "bg-[#1b8d3b]/20 border-[#1b8d3b]/60 text-yellow-400" : "bg-white/5 border-transparent text-black-300 hover:bg-white/10"}`}>
         <span class="mr-3 text-xl">🎰</span>
         <span class="text-sm font-bold">ทดลองเล่น</span>
       </a>
       <a
-        href="/ทางเข้า"
+        href="/ทางเข้า/"
         class={`sidebar-item flex items-center px-4 py-3.5 rounded-lg border transition-all ${isActive("/ทางเข้า") ? "bg-[#1b8d3b]/20 border-[#1b8d3b]/60 text-yellow-400" : "bg-white/5 border-transparent text-black-300 hover:bg-white/10"}`}>
         <span class="mr-3 text-xl">🌐</span>
         <span class="text-sm font-bold">ทางเข้า</span>
       </a>
       <a
-        href="/contact-us"
+        href="/contact-us/"
         class={`sidebar-item flex items-center px-4 py-3.5 rounded-lg border transition-all ${isActive("/contact-us") ? "bg-[#1b8d3b]/20 border-[#1b8d3b]/60 text-yellow-400" : "bg-white/5 border-transparent text-black-300 hover:bg-white/10"}`}>
         <span class="mr-3 text-xl">📞</span>
         <span class="text-sm font-bold">ติดต่อเรา</span>
@@ -147,7 +147,7 @@ const isActive = (path: string) => {
 
       <div class="mt-6 flex flex-col gap-3 border-t border-[#1b8d3b]/40 pt-6">
         <a
-          href="/login"
+          href="/login/"
           class="sidebar-item hover:bg-theme-oklab flex justify-center rounded-lg border border-[#1b8d3b] bg-transparent py-3.5 text-sm font-bold text-yellow-400 transition-colors hover:border-transparent hover:text-white">
           🔒 เข้าสู่ระบบ
         </a>

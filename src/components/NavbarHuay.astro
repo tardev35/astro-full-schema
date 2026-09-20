@@ -30,10 +30,10 @@ const isActive = (path: string) => {
       {
         [
           { name: "หน้าแรก", path: "/" },
-          { name: "ตรวจหวย", path: "/ตรวจหวย" },
-          { name: "แนวทาง", path: "/แนวทาง" },
-          { name: "โปรโมชั่น", path: "/promotion" },
-          { name: "ติดต่อเรา", path: "/contact-us" },
+          { name: "ตรวจหวย", path: "/ตรวจหวย/" },
+          { name: "แนวทาง", path: "/แนวทาง/" },
+          { name: "โปรโมชั่น", path: "/promotion/" },
+          { name: "ติดต่อเรา", path: "/contact-us/" },
         ].map((item) => (
           <a
             href={item.path}
@@ -49,12 +49,12 @@ const isActive = (path: string) => {
 
     <div class="z-[110] flex items-center gap-4">
       <a
-        href="/login"
+        href="/login/"
         class="hidden rounded-full border-2 border-white/20 bg-black/20 px-6 py-2.5 text-sm font-bold text-white backdrop-blur-md transition-all hover:border-white/50 hover:bg-white/10 lg:flex">
         เข้าสู่ระบบ
       </a>
       <a
-        href="/register"
+        href="/register/"
         class="hidden rounded-full bg-gradient-to-r from-yellow-400 to-yellow-500 px-6 py-2.5 text-sm font-black text-[#5f0914] shadow-[0_4px_15px_rgba(250,204,21,0.4)] transition-all hover:-translate-y-0.5 hover:shadow-[0_8px_20px_rgba(250,204,21,0.6)] lg:flex">
         สมัครสมาชิก
       </a>
@@ -74,10 +74,10 @@ const isActive = (path: string) => {
       {
         [
           { name: "หน้าแรก", path: "/" },
-          { name: "ตรวจหวย", path: "/ตรวจหวย" },
-          { name: "แนวทาง", path: "/แนวทาง" },
-          { name: "โปรโมชั่น", path: "/promotion" },
-          { name: "ติดต่อเรา", path: "/contact-us" },
+          { name: "ตรวจหวย", path: "/ตรวจหวย/" },
+          { name: "แนวทาง", path: "/แนวทาง/" },
+          { name: "โปรโมชั่น", path: "/promotion/" },
+          { name: "ติดต่อเรา", path: "/contact-us/" },
         ].map((item) => (
           <a
             href={item.path}
@@ -89,11 +89,11 @@ const isActive = (path: string) => {
     </div>
     <div class="mt-6 flex flex-col gap-4">
       <a
-        href="/register"
+        href="/register/"
         class="flex w-full justify-center rounded-full bg-gradient-to-r from-yellow-400 to-yellow-500 py-3.5 text-lg font-black text-[#5f0914] shadow-[0_5px_15px_rgba(250,204,21,0.4)]">
         สมัครสมาชิก
       </a>
-      <a href="/login" class="flex w-full justify-center rounded-full border-2 border-white/20 bg-black/20 py-3.5 text-lg font-bold text-white">เข้าสู่ระบบ</a>
+      <a href="/login/" class="flex w-full justify-center rounded-full border-2 border-white/20 bg-black/20 py-3.5 text-lg font-bold text-white">เข้าสู่ระบบ</a>
     </div>
   </div>
 </header>

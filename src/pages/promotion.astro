@@ -2,7 +2,7 @@
 import MainLayout from "../layouts/MainLayout.astro";
 import ContentBox from "../components/ContentBox.astro";
 import Navfoot from "../components/Navfoot.astro";
-import Announcement from "../components/Announcement3.astro";
+import Announcement from "../components/AnnouncementCyber.astro";
 
 import { Picture } from "astro:assets";
 
@@ -12,12 +12,12 @@ import pro3 from "../assets/slide3.png";
 import pro4 from "../assets/slide4.png";
 import { pageGraph } from "../lib/schema";
 
-const pageTitle = "โปรโมชั่น GGHENG";
+const pageTitle = "โปรโมชั่น – VODKAFUN";
 
-const pageHeading = "โปรโมชั่น GGHENG ครบจบในที่เดียว คุ้มทุกยอดเล่น";
+const pageHeading = "โปรโมชั่น VODKAFUN คืนคอมมิชชั่นทุกวัน แนะนำเพื่อนรับโบนัสเพิ่ม";
 
 const pageDescription =
-  "อัปเดต โปรโมชั่น GGHENG ครบจบในที่เดียวทั้งหวย บอล บาคาร่า สล็อต หวยจ่ายบาทละ 1000 แนะนำเพื่อนรับ 0.8% และคอมมิชชั่นคืนยอดเล่น 0.3% ดูเงื่อนไขจากภาพได้ทุกใบ";
+  "รวมโปรโมชั่น VODKAFUN สล็อตเว็บตรงเว็บใหญ่ คอมมิชชั่นคืนทุกยอดเล่น 0.3% แนะนำเพื่อนรับโบนัส 0.8% หวยจ่ายบาทละ 1000 ดูเงื่อนไขจากภาพได้ทุกใบ สมัครฟรีวันนี้";
 
 const graph = pageGraph(Astro, {
   name: pageTitle,
@@ -30,7 +30,7 @@ const graph = pageGraph(Astro, {
 });
 
 const promoClass =
-  "mx-auto h-auto w-full rounded-xl border border-[#3a0a0d] object-contain shadow-[0_10px_30px_rgba(245,197,66,0.16)] transition-all duration-300 hover:-translate-y-1 hover:border-[#f5c542]/55 hover:shadow-[0_15px_40px_rgba(245,197,66,0.28)]";
+  "mx-auto h-auto w-full rounded-xl border border-[#1f0b4d] object-contain shadow-[0_10px_30px_rgba(255,61,200,0.16)] transition-all duration-300 hover:-translate-y-1 hover:border-[#ff3dc8]/55 hover:shadow-[0_15px_40px_rgba(255,61,200,0.28)]";
 ---
 
 <MainLayout title={pageTitle} description={pageDescription}>
@@ -40,17 +40,17 @@ const promoClass =
 
   <ContentBox title={pageHeading} as="h1">
     <p class="mb-4 text-left text-base leading-relaxed">
-      หากคุณกำลังมองหาเว็บที่ครบจบในที่เดียว ทั้งหวย บอล บาคาร่า และสล็อต <strong class="text-[#ffdf80]">GGHENG</strong> พร้อมมอบโปรโมชั่นที่คุ้มทุกยอดเล่น รวมไว้ให้เลือกในภาพด้านล่างนี้แล้ว
+      หากคุณกำลังมองหาโปรที่ได้คืนจริงทุกวัน ไม่ใช่แค่ตอนสมัคร <strong class="text-[#ff8fe0]">VODKAFUN</strong> พร้อมเสิร์ฟคอมมิชชั่นคืนทุกยอดเล่น 0.3% ตลอดทั้งวัน กดรับสิทธิ์ที่หน้าเว็บได้ก่อน 23.59 น. ของทุกวัน
     </p>
 
     <p class="mb-8 text-left text-base leading-relaxed">
-      หวย 3 ตัวจ่ายบาทละ 1000 แนะนำเพื่อนรับโบนัส 0.8% และคอมมิชชั่นคืนยอดเล่น 0.3% ทุกวัน เงื่อนไขของแต่ละโปรระบุไว้บนภาพครบถ้วน สมัครยูสเดียวใช้ได้ทุกสิทธิ์ เพื่อประสบการณ์การเล่นที่คุ้มค่าและต่อเนื่องกว่าที่เคย
+      ชวนเพื่อนมาสนุกด้วยกันก็รับโบนัสแนะนำเพื่อน 0.8% ต่อเนื่อง เงื่อนไขของแต่ละโปรระบุไว้บนภาพครบถ้วน สมัครยูสเดียวใช้ได้ทุกสิทธิ์ เพื่อประสบการณ์การเล่นที่คุ้มค่าและต่อเนื่องกว่าที่เคย
     </p>
 
     <div class="grid w-full grid-cols-1 gap-6 sm:grid-cols-2">
       <Picture
         src={pro1}
-        alt="พื้นแดงเข้มประกายไฟ โลโก้ปีกสีแดงทอง GGHENG มุมขวาบน ปุ่มเรียงด้านซ้าย หวย บอล บาคาร่า สล็อต ข้อความทองขนาดใหญ่ ครบจบในที่เดียว แถบล่าง บอล คาสิโน สล็อต ยิงปลา ไก่ชน มวย ไฮโล รูเล็ต กลางภาพเป็นพรีเซนเตอร์หญิงชุดเลื่อมสีดำทอง"
+        alt="VODKAFUN Commission คืนทุกยอดเล่นตลอดทั้งวัน 0.3% เล่นถึง 50% ถอนได้เลย รับสิทธิ์ก่อน 23.59 น. ของทุกวัน"
         loading="lazy"
         fetchpriority="low"
         widths={[200, 400, 600]}
@@ -64,7 +64,7 @@ const promoClass =
 
       <Picture
         src={pro2}
-        alt="โลโก้ GGHENG มุมซ้ายบน หัวข้อ หวย อัตราจ่ายที่ดีที่สุด 3 ตัว บาทละ 1000 · 2 ตัว บาทละ 100 ถูกตรง จ่ายจริง รับเงินรางวัล หลักล้าน ครบจบเรื่องหวย ในเว็บเดียว รัฐบาล ลาว ฮานอย หุ้น ยี่กี่ ฯลฯ"
+        alt="VODKAFUN แนะนำเพื่อน รับโบนัส 0.8% สร้างรายได้ 100,000/เดือน"
         loading="lazy"
         fetchpriority="low"
         widths={[200, 400, 600]}
@@ -78,7 +78,7 @@ const promoClass =
 
       <Picture
         src={pro3}
-        alt="โลโก้ GGHENG หัวข้อ แนะนำเพื่อน รับโบนัส 0.8% สร้างรายได้ 100,000/เดือน พรีเซนเตอร์หญิงชุดเลื่อมลายทอง"
+        alt="VODKAFUN ครบจบในที่เดียว หวย บอล บาคาร่า สล็อต คาสิโน ยิงปลา ไก่ชน มวย ไฮโล รูเล็ต"
         loading="lazy"
         fetchpriority="low"
         widths={[200, 400, 600]}
@@ -92,7 +92,7 @@ const promoClass =
 
       <Picture
         src={pro4}
-        alt="โลโก้ GGHENG หัวข้อ COMMISSION คืนทุกยอดเล่นตลอดทั้งวัน 0.3% เล่นถึง 50% ถอนได้เลย สามารถกดรับง่ายๆ ที่หน้าเว็บได้เลยค่ะ รับสิทธิ์ก่อน 23.59 น. ของทุกวัน ยิ่งเล่นเยอะ ยิ่งได้เยอะ"
+        alt="VODKAFUN หวย อัตราจ่ายที่ดีที่สุด 3 ตัวบาทละ 1000 2 ตัวบาทละ 100 รัฐบาล ลาว ฮานอย หุ้น ยี่กี"
         loading="lazy"
         fetchpriority="low"
         widths={[200, 400, 600]}
@@ -108,8 +108,8 @@ const promoClass =
     <div class="mt-12 flex justify-center pb-4">
       <a
         href="/register/"
-        class="flex items-center justify-center rounded-lg border border-[#c8901a] bg-gradient-to-r from-[#ffe9a3] via-[#f5c542] to-[#c8901a] px-10 py-3.5 text-lg font-black text-[#2a0203] shadow-[0_10px_30px_rgba(245,197,66,0.24)] transition-transform hover:scale-105 hover:shadow-[0_15px_40px_rgba(245,197,66,0.34)]">
-        สมัครสมาชิก GGHENG
+        class="flex items-center justify-center rounded-lg border border-[#0aa4c4] bg-gradient-to-r from-[#9bf2fb] via-[#1be5f4] to-[#0aa4c4] px-10 py-3.5 text-lg font-black text-[#14042e] shadow-[0_10px_30px_rgba(27,229,244,0.24)] transition-transform hover:scale-105 hover:shadow-[0_15px_40px_rgba(27,229,244,0.34)]">
+        สมัครสมาชิก VODKAFUN
       </a>
     </div>
   </ContentBox>

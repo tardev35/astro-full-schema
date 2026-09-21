@@ -1,33 +1,33 @@
 ---
-import ContentBoxTwoPremium from "./ContentBoxTwoPremium.astro";
+import ContentBoxTwo from "./ContentBoxTwo.astro";
 
 const steps = [
-  { icon: "📝", name: "สมัครสมาชิก GGHENG", detail: "เปิดยูสเซอร์ของตัวเองจากหน้าสมัครสมาชิก ตั้งรหัสผ่านที่ไม่ซ้ำกับบัญชีอื่น และเก็บข้อมูลไว้กับตัวเอง", tag: "ขั้นที่ 1" },
+  { icon: "📝", name: "สมัครสมาชิก VODKAFUN", detail: "เปิดยูสเซอร์ของตัวเองจากหน้าสมัครสมาชิก ตั้งรหัสผ่านที่ไม่ซ้ำกับบัญชีอื่น และเก็บข้อมูลไว้กับตัวเอง", tag: "ขั้นที่ 1" },
   { icon: "🔑", name: "เข้าสู่ระบบด้วยยูสเซอร์เดียว", detail: "ใช้ได้ทั้งไอแพด มือถือ และคอมพิวเตอร์ ไม่ต้องโหลดแอปให้รกเครื่อง คลิกเดียวก็เข้าถึงหน้าเกมได้ทันที", tag: "ขั้นที่ 2" },
   { icon: "🎰", name: "เลือกเกมจากค่ายดังลิขสิทธิ์แท้", detail: "PG SOFT, Pragmatic Play, Joker Gaming และอีกหลายค่าย รันด้วยค่า RTP มาตรฐานสากลจากค่ายแม่โดยตรง", tag: "ขั้นที่ 3" },
   { icon: "⚡", name: "ฝากถอนผ่านธนาคารหรือ True Wallet", detail: "รองรับ True Money Wallet เต็มรูปแบบ ระบบออโต้ ไม่มีขั้นต่ำ ตรวจสอบได้ทุกยอดธุรกรรม", tag: "ขั้นที่ 4" },
   { icon: "💰", name: "ถอนได้ครบทุกบาท จ่ายไม่อั้น", detail: "ยอดหลักแสนหรือหลักล้านก็โอนให้ครบ ไม่มีผ่อนจ่าย และไม่หักค่าธรรมเนียมใดๆ", tag: "ขั้นที่ 5" },
 ];
-const chips = ["สล็อตเว็บตรงสายเฮง", "ระบบแท้ 100%", "RTP มาตรฐานสากล", "แตกง่าย", "จ่ายไม่อั้น", "ฝากถอนออโต้", "ไม่มีขั้นต่ำ", "True Wallet", "ไม่ล็อกยูส", "ใช้ได้ทุกแพลตฟอร์ม"];
+const chips = ["สล็อตเว็บตรงเว็บใหญ่", "ระบบแท้ 100%", "RTP มาตรฐานสากล", "แตกง่าย", "จ่ายไม่อั้น", "ฝากถอนออโต้", "ไม่มีขั้นต่ำ", "True Wallet", "ไม่ล็อกยูส", "ใช้ได้ทุกแพลตฟอร์ม"];
 ---
 
-<ContentBoxTwoPremium
-  titleleft="เข้าสู่ระบบ GGHENG"
+<ContentBoxTwo
+  titleleft="เข้าสู่ระบบ VODKAFUN"
   titleright="ลำดับการใช้งานตั้งแต่สมัครถึงถอนยอด"
-  label="เข้าสู่ระบบ GGHENG และลำดับการใช้งานตั้งแต่สมัครถึงถอนยอด">
+  label="เข้าสู่ระบบ VODKAFUN และลำดับการใช้งานตั้งแต่สมัครถึงถอนยอด">
   <div slot="left" class="flex h-full flex-col gap-4">
-    <div class="relative overflow-hidden rounded-2xl border border-[#3a0a0d] bg-[#1f0405] p-6 shadow-[0_10px_30px_rgba(245,197,66,0.18)]">
-      <div aria-hidden="true" class="pointer-events-none absolute -top-10 -right-10 h-32 w-32 rounded-full bg-[#f5c542]/18 blur-[50px]"></div>
+    <div class="relative overflow-hidden rounded-2xl border border-[#1f0b4d] bg-[#120633] p-6 shadow-[0_10px_30px_rgba(255,61,200,0.18)]">
+      <div aria-hidden="true" class="pointer-events-none absolute -top-10 -right-10 h-32 w-32 rounded-full bg-[#ff3dc8]/18 blur-[50px]"></div>
 
       <div class="relative z-10 mb-5 flex items-center gap-3">
         <span
           aria-hidden="true"
-          class="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl border border-[#8a6208] bg-gradient-to-br from-[#ffe9a3] via-[#ffd34d] to-[#c8901a] text-xl shadow-inner">
-          🧧
+          class="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl border border-[#0aa4c4] bg-gradient-to-br from-[#9bf2fb] via-[#1be5f4] to-[#0aa4c4] text-xl shadow-inner">
+          🍸
         </span>
         <div class="flex flex-col">
-          <p class="text-base font-black text-[#ffdf80]">ล็อกอินแล้วจัดการทุกขั้นตอนได้จากยูสของตัวเอง</p>
-          <span class="text-[11px] text-[#d4b59a]">
+          <p class="text-base font-black text-[#ff8fe0]">ล็อกอินแล้วจัดการทุกขั้นตอนได้จากยูสของตัวเอง</p>
+          <span class="text-[11px] text-[#b9a9e6]">
             ยูสเดียวใช้ได้ทั้งการเข้าเล่นทุกค่ายและการทำรายการฝากถอน ตรวจยอดคงเหลือ ดูสถานะรายการ และย้อนดูประวัติการทำรายการได้จากหน้าเมมเบอร์
           </span>
         </div>
@@ -35,39 +35,39 @@ const chips = ["สล็อตเว็บตรงสายเฮง", "ระ
 
       <div class="relative z-10 flex flex-col gap-3.5">
         <div class="relative">
-          <span aria-hidden="true" class="absolute top-3.5 left-4 text-[#f5c542]">👤</span>
+          <span aria-hidden="true" class="absolute top-3.5 left-4 text-[#ff3dc8]">👤</span>
           <input
             type="text"
             placeholder="เบอร์โทรศัพท์ / ยูสเซอร์เนม"
-            class="w-full rounded-xl border border-[#3a0a0d] bg-[#140202] py-3 pr-4 pl-12 text-[#f7e6d0] transition-all outline-none placeholder:text-[#d4b59a] focus:border-[#f5c542] focus:ring-1 focus:ring-[#f5c542]/50"
+            class="w-full rounded-xl border border-[#1f0b4d] bg-[#0a0320] py-3 pr-4 pl-12 text-[#ece6ff] transition-all outline-none placeholder:text-[#b9a9e6] focus:border-[#ff3dc8] focus:ring-1 focus:ring-[#ff3dc8]/50"
           />
         </div>
         <div class="relative">
-          <span aria-hidden="true" class="absolute top-3.5 left-4 text-[#f5c542]">🔑</span>
+          <span aria-hidden="true" class="absolute top-3.5 left-4 text-[#ff3dc8]">🔑</span>
           <input
             type="password"
             placeholder="รหัส PIN 4 หลัก"
-            class="w-full rounded-xl border border-[#3a0a0d] bg-[#140202] py-3 pr-4 pl-12 text-[#f7e6d0] transition-all outline-none placeholder:text-[#d4b59a] focus:border-[#f5c542] focus:ring-1 focus:ring-[#f5c542]/50"
+            class="w-full rounded-xl border border-[#1f0b4d] bg-[#0a0320] py-3 pr-4 pl-12 text-[#ece6ff] transition-all outline-none placeholder:text-[#b9a9e6] focus:border-[#ff3dc8] focus:ring-1 focus:ring-[#ff3dc8]/50"
           />
         </div>
 
         <div class="flex items-center justify-between px-1 text-xs">
-          <label class="flex items-center gap-2 text-[#d4b59a]">
-            <input type="checkbox" class="h-3.5 w-3.5 rounded border-[#3a0a0d] bg-[#140202] accent-[#f5c542]" />
+          <label class="flex items-center gap-2 text-[#b9a9e6]">
+            <input type="checkbox" class="h-3.5 w-3.5 rounded border-[#1f0b4d] bg-[#0a0320] accent-[#ff3dc8]" />
             จดจำฉันไว้
           </label>
-          <a href="/login/" class="text-[#d4b59a] transition-colors hover:text-[#ffdf80]">ลืมรหัส PIN?</a>
+          <a href="/login/" class="text-[#b9a9e6] transition-colors hover:text-[#ff8fe0]">ลืมรหัส PIN?</a>
         </div>
 
         <button
-          class="mt-1 w-full rounded-xl border border-[#8a6208] bg-gradient-to-r from-[#ffe9a3] via-[#ffd34d] to-[#c8901a] p-3.5 font-black text-[#140202] shadow-[0_10px_30px_rgba(245,197,66,0.34)] transition-all hover:scale-[1.02] hover:shadow-[0_15px_40px_rgba(245,197,66,0.44)]">
+          class="mt-1 w-full rounded-xl border border-[#0aa4c4] bg-gradient-to-r from-[#9bf2fb] via-[#1be5f4] to-[#0aa4c4] p-3.5 font-black text-[#14042e] shadow-[0_10px_30px_rgba(27,229,244,0.34)] transition-all hover:scale-[1.02] hover:shadow-[0_15px_40px_rgba(27,229,244,0.44)]">
           เข้าสู่ระบบ
         </button>
 
-        <div class="flex items-center gap-3 py-1 text-[11px] text-[#d4b59a]">
-          <span class="h-px flex-1 bg-[#3a0a0d]"></span>
+        <div class="flex items-center gap-3 py-1 text-[11px] text-[#b9a9e6]">
+          <span class="h-px flex-1 bg-[#1f0b4d]"></span>
           หรือ
-          <span class="h-px flex-1 bg-[#3a0a0d]"></span>
+          <span class="h-px flex-1 bg-[#1f0b4d]"></span>
         </div>
 
         <a
@@ -78,29 +78,29 @@ const chips = ["สล็อตเว็บตรงสายเฮง", "ระ
 
         <div class="mt-1 flex items-center justify-between px-1">
           <div class="flex gap-2">
-            <span class="rounded-full border border-[#3a0a0d] bg-[#140202] px-2.5 py-1 text-[10px] font-bold text-[#ffdf80]"><span aria-hidden="true">🔒</span> ดูแลข้อมูลสมาชิก</span>
-            <span class="rounded-full border border-[#5a0a0a] bg-[#140202] px-2.5 py-1 text-[10px] font-bold text-[#ff8a70]"><span aria-hidden="true">📱</span> ใช้ได้ทุกอุปกรณ์</span>
+            <span class="rounded-full border border-[#1f0b4d] bg-[#0a0320] px-2.5 py-1 text-[10px] font-bold text-[#ff8fe0]"><span aria-hidden="true">🔒</span> ดูแลข้อมูลสมาชิก</span>
+            <span class="rounded-full border border-[#2c1266] bg-[#0a0320] px-2.5 py-1 text-[10px] font-bold text-[#9bf2fb]"><span aria-hidden="true">📱</span> ใช้ได้ทุกอุปกรณ์</span>
           </div>
-          <a href="/register/" class="text-xs font-bold text-[#d4b59a] transition-colors hover:text-[#ffdf80]">สมัครสมาชิกใหม่</a>
+          <a href="/register/" class="text-xs font-bold text-[#b9a9e6] transition-colors hover:text-[#ff8fe0]">สมัครสมาชิกใหม่</a>
         </div>
       </div>
     </div>
   </div>
 
   <div slot="right" class="h-full">
-    <div class="flex h-full flex-col rounded-2xl border border-[#3a0a0d] bg-[#1f0405] p-5 shadow-[0_10px_30px_rgba(245,197,66,0.18)]">
+    <div class="flex h-full flex-col rounded-2xl border border-[#1f0b4d] bg-[#120633] p-5 shadow-[0_10px_30px_rgba(255,61,200,0.18)]">
       <div class="mb-5 flex items-center justify-between gap-3">
         <div>
-          <span class="text-xs font-bold tracking-wide text-[#d4b59a]">ลำดับการใช้งานที่ GGHENG วางไว้ ตั้งแต่เปิดยูสจนถอนยอดออก อยู่ในระบบออโต้ชุดเดียวกันทั้งหมด</span>
-          <div class="bg-gradient-to-r from-[#ffe9a3] via-[#ffd34d] to-[#ff8a70] bg-clip-text text-2xl font-black text-transparent sm:text-3xl">สมัคร • ล็อกอิน • เล่น • ถอน</div>
+          <span class="text-xs font-bold tracking-wide text-[#b9a9e6]">ลำดับการใช้งานที่ VODKAFUN วางไว้ ตั้งแต่เปิดยูสจนถอนยอดออก อยู่ในระบบออโต้ชุดเดียวกันทั้งหมด</span>
+          <div class="bg-gradient-to-r from-[#9bf2fb] via-[#ff8fe0] to-[#ff3dc8] bg-clip-text text-2xl font-black text-transparent sm:text-3xl">สมัคร • ล็อกอิน • เล่น • ถอน</div>
         </div>
-        <span class="flex items-center gap-1.5 self-start rounded-full border border-green-400/40 bg-[#140202] px-2.5 py-1">
+        <span class="flex items-center gap-1.5 self-start rounded-full border border-green-400/40 bg-[#0a0320] px-2.5 py-1">
           <span class="h-1.5 w-1.5 animate-pulse rounded-full bg-green-400 shadow-[0_0_8px_rgba(74,222,128,0.7)]"></span>
           <span class="text-[10px] font-bold tracking-widest text-green-400 uppercase">Live</span>
         </span>
       </div>
 
-      <div class="mb-2 flex items-center justify-between text-[11px] font-bold tracking-widest text-[#d4b59a] uppercase">
+      <div class="mb-2 flex items-center justify-between text-[11px] font-bold tracking-widest text-[#b9a9e6] uppercase">
         <span>ขั้นตอนการใช้งาน</span>
         <span>ลำดับ</span>
       </div>
@@ -108,30 +108,30 @@ const chips = ["สล็อตเว็บตรงสายเฮง", "ระ
       <div class="flex flex-1 flex-col gap-2.5">
         {
           steps.map((s) => (
-            <div class="rounded-xl border border-[#3a0a0d] bg-[#140202] px-3.5 py-2.5 transition-colors hover:border-[#f5c542]/55 hover:bg-[#3a0a0d]">
+            <div class="rounded-xl border border-[#1f0b4d] bg-[#0a0320] px-3.5 py-2.5 transition-colors hover:border-[#ff3dc8]/55 hover:bg-[#1f0b4d]">
               <div class="flex items-center justify-between gap-2 text-sm">
-                <span class="flex min-w-0 items-center gap-2 font-bold text-[#f7e6d0]">
+                <span class="flex min-w-0 items-center gap-2 font-bold text-[#ece6ff]">
                   <span aria-hidden="true" class="w-5 shrink-0 text-center">
                     {s.icon}
                   </span>{" "}
                   <span class="truncate">{s.name}</span>
                 </span>
-                <span class="shrink-0 rounded-full border border-[#5a0a0a] bg-[#1f0405] px-2.5 py-0.5 text-[10px] font-bold text-[#ff8a70]">{s.tag}</span>
+                <span class="shrink-0 rounded-full border border-[#2c1266] bg-[#120633] px-2.5 py-0.5 text-[10px] font-bold text-[#9bf2fb]">{s.tag}</span>
               </div>
-              <div class="mt-1.5 text-[11px] tracking-wide text-[#d4b59a]">{s.detail}</div>
+              <div class="mt-1.5 text-[11px] tracking-wide text-[#b9a9e6]">{s.detail}</div>
             </div>
           ))
         }
       </div>
 
       <div class="mt-4 flex flex-wrap items-center justify-center gap-2">
-        {chips.map((c) => <span class="rounded-full border border-[#3a0a0d] bg-[#140202] px-3 py-1 text-[10px] font-bold text-[#ffdf80]">{c}</span>)}
+        {chips.map((c) => <span class="rounded-full border border-[#1f0b4d] bg-[#0a0320] px-3 py-1 text-[10px] font-bold text-[#ff8fe0]">{c}</span>)}
       </div>
 
-      <div class="mt-3 text-center text-[10px] tracking-wide text-[#d4b59a]">
-        ลำดับในตารางสรุปจากที่หน้าเว็บแสดงไว้ เงื่อนไขการทำรายการ วงเงินต่อรายการ และข้อกำหนดของสิทธิ์ที่กำลังใช้งานให้ยึดตามคู่มือและหน้าเมมเบอร์ของ GGHENG ก่อนทำรายการทุกครั้ง
+      <div class="mt-3 text-center text-[10px] tracking-wide text-[#b9a9e6]">
+        ลำดับในตารางสรุปจากที่หน้าเว็บแสดงไว้ เงื่อนไขการทำรายการ วงเงินต่อรายการ และข้อกำหนดของสิทธิ์ที่กำลังใช้งานให้ยึดตามคู่มือและหน้าเมมเบอร์ของ VODKAFUN ก่อนทำรายการทุกครั้ง
         และอย่าบอกรหัสผ่านหรือ OTP กับใคร หากติดขัดตรงไหนทักไลน์ทีมงานได้ตลอด 24 ชั่วโมง
       </div>
     </div>
   </div>
-</ContentBoxTwoPremium>
+</ContentBoxTwo>

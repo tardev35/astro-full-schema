@@ -1,72 +1,81 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
-import Announcement from "../components/Announcement3.astro";
+import Announcement from "../components/AnnouncementCyber.astro";
 import ContentBox from "../components/ContentBox.astro";
-import ContentBoxPremium from "../components/ContentBoxPremium.astro";
-import ContentBoxFloatingBadge from "../components/ContentBoxFloatingBadge.astro";
-import ContentBoxNeumorphism from "../components/ContentBoxNeumorphism.astro";
-import ContentBoxTwoPremium from "../components/ContentBoxTwoPremium.astro";
-import ContentBoxSevenThreePremium from "../components/ContentBoxSevenThreePremium.astro";
-import ContentBoxSevenThreeNeumorphism from "../components/ContentBoxSevenThreeNeumorphism.astro";
+import ContentBoxCyberCut from "../components/ContentBoxCyberCut.astro";
+import ContentBoxSpecial from "../components/ContentBoxSpecial.astro";
+import ContentBoxTwoCyberCut from "../components/ContentBoxTwoCyberCut.astro";
+import ContentBoxSevenThreeCyberCut from "../components/ContentBoxSevenThreeCyberCut.astro";
+import ContentBoxSevenThree from "../components/ContentBoxSevenThree.astro";
+import FeatureHighlights from "../components/FeatureHighlights.astro";
 import ProviderGrid from "../components/ProviderGrid.astro";
 import GameRankingBoard from "../components/GameRankingBoard.astro";
 import SmoothCarousel from "../components/SmoothCarousel.astro";
-import LatestWinnersCyber from "../components/LatestWinnersCyber.astro";
+import LatestWinnersPremium from "../components/LatestWinnersPremium.astro";
 import LoginRtpSection from "../components/LoginRtpSection.astro";
 import ReviewCardSumo2 from "../components/ReviewCardSumo2.astro";
-import Faq2 from "../components/Faq2.astro";
+import Faq3 from "../components/Faq3.astro";
 import Navfoot from "../components/Navfoot.astro";
 
 import { Picture } from "astro:assets";
 import { pageGraph } from "../lib/schema";
-import imgCommission from "../assets/slide4.png";
-import imgAllInOne from "../assets/slide1.png";
+import imgAllInOne from "../assets/slide3.png";
+import imgCommission from "../assets/slide1.png";
 
-const pageTitle = "GGHENG | สล็อตเว็บตรงสายเฮง ระบบแท้100% แตกง่าย จ่ายไม่อั้น";
+const pageTitle = "VODKAFUN สล็อตเว็บตรงเว็บใหญ่ ลิขสิทธิ์แท้100% สนุกครบทุกเกม";
 
-const pageDescription = "GGHENG สล็อตเว็บตรงสายเฮง ไม่มีขั้นต่ำ ระบบแท้100% เล่นลื่นไหล แตกง่าย ค่าRTP มาตรฐาน ฝากถอน True Wallet หลักล้านก็โอน จ่ายไม่อั้น";
+const pageDescription = "VODKAFUN สล็อตเว็บตรงเว็บใหญ่ ลิขสิทธิ์แท้100% สมัครฟรี ไม่ต้องฝากก่อน ฝากถอน Auto ไม่มีขั้นต่ำ รวม PG SOFT, Pragmatic Play, Joker Gaming ไม่ปรับเรท ไม่ล็อกยูส";
 
-const commissionAlt =
-  "ภาพโปรโมชั่น โลโก้ GGHENG หัวข้อ COMMISSION คืนทุกยอดเล่นตลอดทั้งวัน 0.3% เล่นถึง 50% ถอนได้เลย สามารถกดรับง่ายๆ ที่หน้าเว็บได้เลยค่ะ รับสิทธิ์ก่อน 23.59 น. ของทุกวัน ยิ่งเล่นเยอะ ยิ่งได้เยอะ";
+const announcementMessage =
+  "VODKAFUN สล็อตเว็บตรงเว็บใหญ่ ลิขสิทธิ์แท้ 100% ส่งตรงจากค่ายแม่ผ่าน API แบบ Real-Time • สมัครฟรี ไม่ต้องฝากก่อน ไม่มีค่าธรรมเนียมแรกเข้า • ระบบฝากถอน AI Auto รองรับแอปธนาคารและ True Money Wallet • ไม่มีขั้นต่ำทั้งฝากและถอน เริ่มได้ตั้งแต่ 1 บาท • รวมค่าย PG SOFT, Pragmatic Play, Joker Gaming ในกระเป๋าเดียว ไม่ต้องโยกเงิน";
 
 const allInOneAlt =
-  "ภาพโปรโมชั่นพื้นแดงเข้มประกายไฟ โลโก้ปีกสีแดงทอง GGHENG มุมขวาบน ปุ่มเรียงด้านซ้าย หวย บอล บาคาร่า สล็อต ข้อความทองขนาดใหญ่ ครบจบในที่เดียว แถบล่าง บอล คาสิโน สล็อต ยิงปลา ไก่ชน มวย ไฮโล รูเล็ต กลางภาพเป็นพรีเซนเตอร์หญิงชุดเลื่อมสีดำทอง";
+  "ภาพโปรโมชั่นธีมนีออนซินธ์เวฟ โลโก้ขวดค็อกเทลสีฟ้า VODKAFUN มุมขวาบน ปุ่มเรียงด้านซ้าย หวย บอล บาคาร่า สล็อต ข้อความขนาดใหญ่ ครบจบในที่เดียว แถบล่าง บอล คาสิโน สล็อต ยิงปลา ไก่ชน มวย ไฮโล รูเล็ต กลางภาพเป็นพรีเซนเตอร์หญิงชุดสีชมพูฟ้า";
 
-const walletPoints = [
-  { icon: "👛", text: "รองรับ True Money Wallet แบบเต็มรูปแบบ" },
-  { icon: "🏦", text: "ไม่สะดวกใช้บัญชีธนาคาร ก็ฝาก-ถอนผ่านวอเลทได้ทันที" },
-  { icon: "⚡", text: "ระบบออโต้ทำงานไวเหมือนกันทุกช่องทาง" },
-  { icon: "🔎", text: "ปลอดภัย แม่นยำ ตรวจสอบได้ทุกยอดธุรกรรม" },
+const commissionAlt =
+  "ภาพโปรโมชั่น โลโก้ VODKAFUN หัวข้อ COMMISSION คืนทุกยอดเล่นตลอดทั้งวัน 0.3% เล่นถึง 50% ถอนได้เลย สามารถกดรับง่ายๆ ที่หน้าเว็บได้เลยค่ะ รับสิทธิ์ก่อน 23.59 น. ของทุกวัน ยิ่งเล่นเยอะ ยิ่งได้เยอะ";
+
+const providerHighlights = [
+  {
+    icon: "🍸",
+    title: "PG SOFT",
+    description: "รสชาติยอดฮิต ทานง่าย แตกหนัก กราฟิกสวยบาดใจ",
+    accent: "magenta" as const,
+  },
+  {
+    icon: "🔥",
+    title: "Pragmatic Play",
+    description: "รสเข้มข้น ดุดัน ฟีเจอร์ซื้อฟรีสปินจัดจ้าน",
+    accent: "cyan" as const,
+  },
+  {
+    icon: "🃏",
+    title: "Joker Gaming",
+    description: "รสคลาสสิกที่คุ้นเคย แตกบ่อย เล่นเพลิน",
+    accent: "magenta" as const,
+  },
 ];
 
 const faqs = [
   {
-    q: "GGHENG เป็นสล็อตเว็บตรงหรือเว็บเอเย่นต์?",
-    a: "GGHENG เป็นสล็อตเว็บตรงสายเฮง ใช้ระบบแท้ 100% จากต่างประเทศ ไม่ใช่เว็บเอเย่นต์ เกมทุกเกมเป็นลิขสิทธิ์แท้จากค่ายแม่โดยตรง",
+    q: "VODKAFUN คือเว็บอะไร เชื่อถือได้ไหม?",
+    a: "VODKAFUN คือสล็อตเว็บตรงเว็บใหญ่ ลิขสิทธิ์แท้ 100% ระบบส่งตรงจากค่ายแม่แบบ API Real-Time ไม่ปรับเรท ไม่ล็อกยูส และมีความมั่นคงด้านการเงินสูง สมัครฟรี เล่นได้ทันทีโดยไม่ต้องฝากก่อน.",
   },
   {
-    q: "GGHENG มีการล็อกยูสหรือปรับอัตราแพ้ชนะหรือไม่?",
-    a: "ไม่มี เราทำเว็บแบบจริงจังระยะยาว จึงไม่ยุ่งกับค่าแพ้ชนะหรือปรับอัตราใด ๆ (Lock User) ทุกเกมรันด้วยค่า RTP (Return to Player) มาตรฐานสากลจากค่ายแม่โดยตรง วัดกันที่ดวงและจังหวะของผู้เล่น",
+    q: "สล็อต VODKAFUN แตกง่ายจริงไหม?",
+    a: "แตกง่ายจริง เพราะทุกเกมของ VODKAFUN ใช้ค่า RTP เดิมจากค่ายหลัก ไม่ปรับลดอัตราชนะ ไม่แบ่งยูสใหม่ยูสเก่า จังหวะแตกดี รับโบนัสแบบเป็นธรรมทุกยูสเซอร์.",
   },
   {
-    q: "เล่น GGHENG ได้บนอุปกรณ์อะไรบ้าง ต้องโหลดแอปไหม?",
-    a: "รองรับทุกแพลตฟอร์ม ทั้งไอแพด มือถือ และคอมพิวเตอร์ ใช้ยูสเซอร์เดียวเข้าเล่นได้ทันที ระบบเสถียร ลื่นไหล ไม่กินเน็ต และไม่ต้องโหลดแอปให้รกเครื่อง",
+    q: "สมัครสมาชิก VODKAFUN ต้องเสียเงินหรือฝากก่อนไหม?",
+    a: "ไม่ต้องเสียเงิน สมัครฟรี 100% ไม่ต้องฝากก่อน คุณสามารถสมัครและเข้าระบบชมเกม ทดลองระบบ หรือดูเมนูต่าง ๆ ได้ทันทีโดยไม่ต้องเติมเครดิต.",
   },
   {
-    q: "ถอนเงินยอดใหญ่ที่ GGHENG ได้ครบไหม มีค่าธรรมเนียมหรือเปล่า?",
-    a: "GGHENG จ่ายไม่อั้น ไม่ว่าจะแตกหลักแสนหรือหลักล้านก็โอนให้ครบทุกบาททุกสตางค์ ไม่มีผ่อนจ่าย และไม่หักค่าธรรมเนียมใดๆ ทั้งสิ้น",
+    q: "ฝากถอนกับ VODKAFUN ใช้เวลานานแค่ไหน?",
+    a: "รวดเร็วมาก ระบบฝากถอนเป็น AI Auto 100% ทำรายการเฉลี่ย 2–5 วินาที ฝากปุ๊บเข้าเลย ถอนปุ๊บเงินเด้งเข้าบัญชีทันที รองรับทั้งธนาคารและ True Wallet.",
   },
   {
-    q: "GGHENG มีขั้นต่ำในการฝากหรือไม่?",
-    a: "ไม่มีขั้นต่ำ ไม่ว่าทุนจะมากหรือน้อยก็เริ่มต้นได้ จะฝากหลักสิบหรือหลักร้อยก็เข้าเล่นได้เหมือนสมาชิกทุกคน",
-  },
-  {
-    q: "GGHENG มีเกมสล็อตจากค่ายไหนบ้าง?",
-    a: "เรารวบรวมค่ายเกมชั้นนำระดับโลกอย่าง PG SOFT, Pragmatic Play, Joker Gaming และอีกหลายค่ายมาไว้ในที่เดียว ทุกเกมเป็นลิขสิทธิ์แท้ ภาพสวย เสียงชัด เล่นลื่นไหล และอัปเดตเกมใหม่ก่อนใคร",
-  },
-  {
-    q: "ฝากถอนผ่าน True Wallet ที่ GGHENG ได้ไหม?",
-    a: "ได้ ระบบการเงินรองรับ True Money Wallet แบบเต็มรูปแบบ สำหรับผู้ที่ไม่สะดวกใช้บัญชีธนาคารก็ฝาก-ถอนผ่านวอเลทได้ทันที ระบบออโต้ทำงานเหมือนกัน ปลอดภัย แม่นยำ และตรวจสอบได้ทุกยอดธุรกรรม",
+    q: "VODKAFUN ฝากถอนขั้นต่ำเท่าไหร่?",
+    a: "ไม่มีขั้นต่ำ 100% จะเล่น 1 บาทหรือหลักหมื่นก็เริ่มได้ทันที VODKAFUN ให้คุณเล่นตามงบของตัวเอง ไม่บังคับยอด ไม่ยัดเงื่อนไขแอบแฝง.",
   },
 ];
 
@@ -80,124 +89,120 @@ const graph = pageGraph(Astro, {
 <MainLayout title={pageTitle} description={pageDescription}>
   <script type="application/ld+json" set:html={graph} />
 
-  <Announcement />
-
-  <ContentBoxPremium as="h1" title="GGHENG สล็อตเว็บตรงสายเฮง ระบบแท้100% แตกง่าย จ่ายไม่อั้น">
-    <p class="text-left text-base leading-relaxed">
-      GGHENG (จีจีเฮง) ต้อนรับว่าที่เศรษฐีใหม่ทุกท่าน ที่นี่ไม่ใช่แค่เว็บสล็อตธรรมดา แต่คือ สล็อตเว็บตรงสายเฮง การันตีด้วยเกียรติของเจ้าของเว็บ เราใช้ ระบบแท้100% จากต่างประเทศ สัมผัส เกมสล็อต
-      แตกง่าย ในแบบที่ควรจะเป็น และเมื่อได้เงินรางวัล ไม่ว่าจะยอดเท่าไหร่ GGHENG พร้อม จ่ายไม่อั้น เงินทั้งหมดของเว็บ เตรียมไว้แจกพวกคุณเหล่าสมาชิกโดยเฉพาะ เข้ามาเลยครับ
-      มาร่วมสนุกและโกยเงินทุกวัน
-    </p>
-  </ContentBoxPremium>
+  <Announcement message={announcementMessage} />
 
   <SmoothCarousel />
 
-  <ContentBoxFloatingBadge as="h2" title="GGHENG สล็อตเว็บตรงสายเฮง ส่งตรงความรวย เข้าได้ทุกแพลตฟอร์ม">
+  <ContentBoxCyberCut as="h1" title="VODKAFUN สล็อตเว็บตรงเว็บใหญ่ สมัครฟรี ไม่ต้องฝากก่อน ไม่มีขั้นต่ำ">
     <p class="text-left text-base leading-relaxed">
-      สล็อตเว็บตรงสายเฮง ไม่ได้ถูกกำกัดการเล่นที่ใด หรือแพลตฟอร์มใดแพลตฟอร์มหนึ่ง GGHENG รองรับการใช้งานทุกรูปแบบ ไม่ว่าคุณจะนั่งจิบกาแฟใช้ไอแพด นอนเล่นบนโซฟาด้วยมือถือ
-      หรือนั่งทำงานหน้าคอมพิวเตอร์ ใช้ยูสเซอร์เดียวสามารถเข้าถึงความเฮงๆได้ทันที เว็บไซต์ GGHENG เราทำระบบมาให้เสถียร ลื่นไหล ไม่กินเน็ต ไม่ต้องโหลดแอปให้รกเครื่อง
-      แค่คลิกเดียวก็เหมือนวาร์ปเข้ามาอยู่ในคาสิโนระดับโลก ส่งตรงความเฮงๆ ให้คุณทุกที่
+      VODKAFUN (วอดก้าฟัน) เปิดขวดฉลองความรวย สล็อตเว็บตรงเว็บใหญ่ ดีที่สุดในไทย! สมัครฟรีวันนี้ ไม่ต้องฝากก่อน ฝากถอนไม่มีขั้นต่ำ ระบบลื่นไหลระดับพรีเมียม VODKAFUN เปรียบ เสมือนบาร์เทนเดอร์มืออาชีพ
+      พร้อมเสิร์ฟเกมคุณภาพที่คัดมาแล้วว่า “แตกง่าย เล่นเพลิน ไม่เครียด” ให้คุณได้ดื่มด่ำกับการทำแจ็คพอตแตกแบบ Non-stop ทั้งความปลอดภัย การเงิน และความโปร่งใส ไม่ล็อกยูส ไม่โกง ไม่ปรับเรท
     </p>
-  </ContentBoxFloatingBadge>
+  </ContentBoxCyberCut>
 
-  <ContentBoxNeumorphism as="h3" title="เล่นสล็อตที่ GGHENG แตกง่าย ค่าRTP มาตรฐานสากล">
-    <p class="text-left text-base leading-relaxed">
-      เราเลือกทำเว็บนี้แบบจริงจังระยะยาว ไม่ใช่เว็บที่หวังผลชั่วคราว จึงไม่มีความจำเป็นต้องไปยุ่งกับค่าแพ้ชนะหรือปรับอัตราใด ๆ (Lock User) ให้เสียชื่อ ทุกอย่างที่คุณเล่นคือระบบตรง 100%
-      เกมทุกเกมในบ้านหลังนี้ รันด้วยค่า RTP (Return to Player) มาตรฐานสากลจากค่ายแม่โดยตรง นี่คือเหตุผลที่ว่าทำไมเล่นที่นี่ถึง แตกง่าย กว่าเว็บเอเย่นต์ทั่วไป ความเฮงที่ GGHENG เกิดจาก
-      “ความแฟร์” ล้วนๆ ครับ วัดกันที่ดวงและจังหวะของคุณจริงๆ ไม่มีระบบผีผลักหรือกลโกงใดๆ ให้ระคายเคืองใจแน่นอน
-    </p>
-  </ContentBoxNeumorphism>
-
-  <LoginRtpSection />
-
-  <ContentBoxSevenThreeNeumorphism as="h2" titleright="GGHENG จ่ายไม่อั้น ถอนหลักล้านก็โอนครบทุกบาท">
-    <Picture
-      slot="left"
-      src={imgCommission}
-      alt={commissionAlt}
-      loading="lazy"
-      fetchpriority="low"
-      widths={[240, 382, 480, 764]}
-      sizes="(max-width: 767px) calc(100vw - 96px), 382px"
-      decoding="async"
-      formats={["avif", "webp"]}
-      fallbackFormat="webp"
-      quality={70}
-      class="mx-auto h-auto w-full rounded-2xl border border-[#5c0b13] shadow-[0_10px_30px_rgba(245,197,66,0.22)]"
-    />
-
-    <p slot="right" class="text-left text-base leading-relaxed">
-      เล่นได้เงินแล้วต้องได้ถอน! ที่ GGHENG เรามีสภาพคล่องทางการเงินระดับมหาศาล พร้อมเปย์ไม่อั้น ไม่ว่าคุณจะฟลุ๊คแตกแจ็คพอตหลักแสน หรือดวงเฮงสุดขีดได้หลักล้าน
-      ผมโอนให้ครบทุกบาททุกสตางค์ทันทีภายในไม่กี่วินาที ไม่มีดึงเชง ไม่มีผ่อนจ่าย และไม่หักค่าธรรมเนียมใดๆ ทั้งสิ้น เงินของคุณ คุณต้องได้ใช้ทันทีครับ
-    </p>
-  </ContentBoxSevenThreeNeumorphism>
-
-  <LatestWinnersCyber />
-
-  <ContentBox as="h2" title="คนทุนน้อยก็เฮงได้ เพราะ GGHENG ไม่มีขั้นต่ำ">
-    <div class="flex flex-col gap-4">
-      <p class="text-left text-base leading-relaxed">
-        ไม่ว่าทุนคุณจะมากหรือน้อย ทีมงานเราเชื่อว่าความเฮงมันสร้างกันได้ครับ GGHENG จึงเปิดให้ทุกคนเริ่มต้นแบบ ไม่มีขั้นต่ำ ฝากหลักสิบ หรือหลักร้อย
-        ก็มีสิทธิ์ไปแตะหลักหมื่นหลักแสนเหมือนสมาชิกหลายคนในคลับของผมมาแล้ว ผมต้อนรับทุกคนเสมอ มาลองเริ่มต้นก้าวแรกที่นี่ด้วยกันนะครับ
-      </p>
-
-      <a
-        href="/register/"
-        class="inline-flex w-fit items-center gap-2 rounded-full bg-gradient-to-r from-[#ffe9a3] via-[#f5c542] to-[#c8901a] px-7 py-3 text-sm font-black tracking-widest text-[#2a0203] shadow-[0_10px_30px_rgba(245,197,66,0.34)] transition-transform duration-300 hover:scale-105">
-        <span aria-hidden="true">🧧</span> สมัครสมาชิก GGHENG
-      </a>
-    </div>
-  </ContentBox>
-
-  <ContentBoxSevenThreePremium as="h2" titleright="รวมเกมสล็อตค่ายดัง ระบบแท้100% เล่นลื่นไหล รับโชคใหญ่ได้ทุกเกม">
+  <ContentBoxSevenThreeCyberCut as="h2" titleright="สล็อตเว็บตรงเว็บใหญ่ VODKAFUN ลิขสิทธิ์แท้100% มั่นคงสูง">
     <Picture
       slot="left"
       src={imgAllInOne}
       alt={allInOneAlt}
       loading="lazy"
       fetchpriority="low"
-      widths={[240, 338, 480, 676]}
-      sizes="(max-width: 767px) calc(100vw - 96px), 338px"
+      widths={[240, 346, 480, 692]}
+      sizes="(max-width: 767px) calc(100vw - 96px), 346px"
       decoding="async"
       formats={["avif", "webp"]}
       fallbackFormat="webp"
       quality={70}
-      class="mx-auto h-auto w-full rounded-2xl border border-[#5c0b13] shadow-[0_10px_30px_rgba(245,197,66,0.22)]"
+      class="mx-auto h-auto w-full rounded-2xl border border-[#2c1266] shadow-[0_10px_30px_rgba(255,61,200,0.22)]"
     />
 
     <p slot="right" class="text-left text-base leading-relaxed">
-      สมาชิกเว็บ GGHENG ต้องได้เล่นสล็อตของดีมีคุณภาพเท่านั้นครับเรารวบรวมค่ายเกมชั้นนำระดับโลกอย่าง PG SOFT, Pragmatic Play, Joker Gaming และอีกเพียบ มาไว้ให้ครบจบในที่เดียว
-      ทุกเกมเป็นลิขสิทธิ์แท้ ภาพสวย เสียงชัด เล่นลื่นไหลไม่มีสะดุด ฟีเจอร์มาเต็ม อัปเดตเกมใหม่ก่อนใคร รับรองว่าเล่นเพลินจนลืมเวลา และทุกช่วงเวลา มีโบนัสแตก รับโชคใหญ่ได้ทุกเกม
+      VODKAFUN สล็อตเว็บตรงเว็บใหญ่ มีฐานระบบทั้งหมดคือของแท้ 100% จากค่ายเกมแม่โดยตรง ทุกเกมที่คุณเห็นในเว็บนี้ เชื่อมผ่าน API ของค่ายต้นสังกัดแบบเรียลไทม์ ความมั่นคงการเงินสูง และมีความมั่นคงในระบบ
+      ความปลอดภัย ไม่ว่าจะเป็นผู้เล่นใหม่ หรือผู้เล่นที่ย้ายจากเว็บอื่นเพราะเจอปัญหาเดิม ๆ อย่าง ล็อกยูส อัตราแพ้สูง หรือถอนยาก เว็บนี้จะกลายเป็นเหมือนบ้านหลังใหม่ที่อยู่แล้วสบายใจมากกว่าเดิมหลายเท่า
     </p>
-  </ContentBoxSevenThreePremium>
+  </ContentBoxSevenThreeCyberCut>
+
+  <LoginRtpSection />
+
+  <ContentBoxSpecial as="h2" title="VODKAFUN สล็อตเว็บใหญ่ แตกง่าย ไม่มีหน้าม้า ไม่มีปรับเรท">
+    <p slot="left" class="text-left text-base leading-relaxed">
+      เล่นสล็อตเว็บตรง กับเจ้าใหญ่ VODKAFUN ยังไงก็ แตกง่าย แน่นอน เพราะ ใช้ระบบ API จากค่ายแม่โดยตรง ตัวเกมส่งตรงแบบ Real-Time ค่า RTP เดิม 100% ไม่แต่ง ไม่ปรุง ไม่เติมของปลอม
+    </p>
+
+    <p slot="right" class="text-left text-base leading-relaxed">
+      ทุกคนสามารถเล่นเกมสล็อตได้แบบยุติธรรม ไม่เอาเปรียบสมาชิก ไม่มีการกดอัตราชนะ ไม่ล็อกไอดี ไม่แบ่งกลุ่มยูสใหม่/ยูสเก่า ทุกคนมีโอกาสเข้าสู่จังหวะการแตกดี แตกง่าย สม่ำเสมอ
+      ทำแจ็คพอตแตกอย่างเท่าเทียมเสมอ
+    </p>
+  </ContentBoxSpecial>
+
+  <ContentBoxCyberCut as="h2" title="สมัครฟรี สมาชิก VODKAFUN วันนี้ ไม่ต้องฝากก่อน">
+    <div class="flex flex-col gap-4">
+      <p class="text-left text-base leading-relaxed">
+        ที่คลับของเรา ไม่มีค่าผ่านประตูครับ! เราเปิดกว้างให้ทุกคนเข้ามาสัมผัสความสนุกได้ทันที นโยบายของเราคือ “สมัครฟรี ไม่ต้องฝากก่อน” ไม่ต้องโอนเงินมาจองสิทธิ์ ไม่ต้องเสียค่าธรรมเนียมแรกเข้า
+        แค่กรอกข้อมูลเบื้องต้นให้ครบถ้วน คุณก็ได้รับ User VIP ไปล็อกอินเข้าชมหน้าเว็บ เลือกดูเกม หรือทดลองเล่นระบบได้ทันที เราใจป๋าพอที่จะให้คุณพิสูจน์ระบบจนพอใจ ก่อนที่จะตัดสินใจควักกระเป๋าลงทุน
+        เพราะความเชื่อใจคือสิ่งแรกที่เราอยากเสิร์ฟให้คุณ
+      </p>
+
+      <a
+        href="/register/"
+        class="inline-flex w-fit items-center gap-2 rounded-full bg-gradient-to-r from-[#1be5f4] to-[#0aa4c4] px-7 py-3 text-sm font-black tracking-widest text-[#14042e] shadow-[0_10px_30px_rgba(27,229,244,0.34)] transition-transform duration-300 hover:scale-105">
+        <span aria-hidden="true">🍸</span> สมัครสมาชิก VODKAFUN
+      </a>
+    </div>
+  </ContentBoxCyberCut>
+
+  <ContentBoxTwoCyberCut as="h2" title="ระบบฝากถอน Auto เร็วทุกขั้นตอน ไม่ต้องรอนาน" titleleft="ฝาก Auto" titleright="ถอน Auto">
+    <p>ระบบฝาก-ถอนของ VODKAFUN ใช้งานได้ไวดุจสายฟ้าฟาด ด้วยเทคโนโลยี AI Auto ที่แม่นยำที่สุดในปี 2025</p>
+
+    <p slot="left" class="text-left text-base leading-relaxed">ฝากปุ๊บ เข้าปั๊บ: ไม่ต้องส่งสลิปให้แอดมินดู</p>
+
+    <div slot="right" class="flex flex-col gap-4">
+      <p class="text-left text-base leading-relaxed">ถอนปุ๊บ เงินเด้ง: กดถอนเงินปุ๊บ เงินเข้าบัญชีเร็วกว่าชงเหล้าเสร็จ</p>
+      <p class="text-left text-base leading-relaxed">ไม่ว่าจะฝากผ่านแอปธนาคาร หรือ True Money Wallet ทุกธุรกรรมลื่นไหล ไม่มีสะดุด ให้คุณสนุกต่อเนื่องได้ยาวๆ ยันเช้า</p>
+    </div>
+  </ContentBoxTwoCyberCut>
+
+  <ContentBoxSevenThree as="h2" titleright="สล็อตเว็บใหญ่ ไม่มีขั้นต่ำ สนุกได้ตั้งแต่บาทแรก">
+    <Picture
+      slot="left"
+      src={imgCommission}
+      alt={commissionAlt}
+      loading="lazy"
+      fetchpriority="low"
+      widths={[240, 353, 480, 706]}
+      sizes="(max-width: 767px) calc(100vw - 96px), 353px"
+      decoding="async"
+      formats={["avif", "webp"]}
+      fallbackFormat="webp"
+      quality={70}
+      class="mx-auto h-auto w-full rounded-2xl border border-[#2c1266] shadow-[0_10px_30px_rgba(27,229,244,0.22)]"
+    />
+
+    <p slot="right" class="text-left text-base leading-relaxed">
+      คือสิ่งที่เรายึดมั่น VODKAFUN ไม่มีขั้นต่ำทั้งฝากและถอน จะเริ่ม 1 บาท หรือเริ่มแบบจัดหนักเป็นหมื่นก็เลือกตามสไตล์คุณ การเปิดโอกาสให้ทุกคนเล่นได้ตามงบของตัวเอง เว็บนี้ไม่บังคับยอด
+      ไม่กดดันให้ฝากเพิ่ม ไม่หลอกล่อด้วยเงื่อนไขยิบย่อย ทุกอย่างตรง ๆ สบาย ๆ เหมือนนั่งคุยกับเพื่อนสนิทที่อยากให้คุณได้เงินมากกว่าเสีย
+    </p>
+  </ContentBoxSevenThree>
+
+  <ContentBox as="h2" title="สนุกครบทุกเกม VODKAFUN รวมสล็อตค่ายระดับโลก">
+    <div class="flex flex-col gap-4">
+      <p class="text-left text-base leading-relaxed">เมนูเกมของเราจัดจ้านไม่แพ้ใคร! VODKAFUN รวบรวมค่ายเกมสล็อตชั้นนำมาไว้ให้คุณเลือกเล่นแบบจุใจ เหมือนบาร์ที่มีเครื่องดื่มครบทุกสัญชาติ</p>
+
+      <FeatureHighlights items={providerHighlights} />
+
+      <p class="text-left text-base leading-relaxed">อยากเปลี่ยนบรรยากาศไปเล่นแนวไหน แค่คลิกเดียวก็สลับเกมได้ทันที ไม่ต้องโยกเงินให้เสียเวลา ระบบกระเป๋าเดียวจบ ครบทุกความบันเทิง</p>
+    </div>
+  </ContentBox>
 
   <ProviderGrid />
 
+  <Faq3 title="คำถามที่พบบ่อยเกี่ยวกับ VODKAFUN" faqs={faqs} />
+
   <GameRankingBoard />
 
-  <ContentBoxTwoPremium as="h2" title="ฝากถอน โอนผ่าน True Wallet ได้เต็มระบบเหมือนธนาคาร">
-    <p slot="left" class="text-left text-base leading-relaxed">
-      เพื่อความสะดวกสูงสุด เราอัปเกรดระบบการเงินให้รองรับ True Money Wallet แบบเต็มรูปแบบ สำหรับใครที่ไม่สะดวกใช้บัญชีธนาคาร ก็สามารถฝาก-ถอนผ่านวอเลทได้ทันที
-      ระบบออโต้ทำงานไวไฟเหมือนกันเป๊ะ ปลอดภัย แม่นยำ ตรวจสอบได้ทุกยอดธุรกรรม จะช่องทางไหนก็รับทรัพย์ได้เหมือนกัน ที่ GGHENG เรื่องเงินเรื่องง่ายเสมอ!
-    </p>
+  <LatestWinnersPremium />
 
-    <ul slot="right" class="flex flex-col gap-3">
-      {
-        walletPoints.map((point) => (
-          <li class="flex items-center gap-3 rounded-xl border border-[#5c0b13] bg-[#1f0405] px-4 py-3 text-left text-base leading-relaxed">
-            <span aria-hidden="true" class="shrink-0 text-xl">
-              {point.icon}
-            </span>
-            <span>{point.text}</span>
-          </li>
-        ))
-      }
-    </ul>
-  </ContentBoxTwoPremium>
-
-  <ReviewCardSumo2 title="เสียงตอบรับจาก ผู้ใช้งานจริง" />
-
-  <Faq2 title="คำถามที่พบบ่อยเกี่ยวกับ GGHENG" faqs={faqs} />
+  <ReviewCardSumo2 title="เสียงตอบรับจากสมาชิก VODKAFUN" />
 
   <Navfoot />
 </MainLayout>

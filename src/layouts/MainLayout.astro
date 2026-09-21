@@ -4,8 +4,8 @@ import bgConfig from "../assets/bg.json";
 import "../styles/global.css";
 import { BRAND_NAME, BRAND_TEXT, brandProfile, fontStack, iconVersion } from "../lib/brandProfile";
 import { canonicalFor } from "../lib/schema";
-import Navbar from "../components/NavbarStyle3.astro";
-import Footer from "../components/FooterStyle3.astro";
+import Navbar from "../components/NavbarCyber.astro";
+import Footer from "../components/FooterCyber.astro";
 
 // Only banner1 is ever rendered, so only banner1 is imported.
 //
@@ -54,8 +54,8 @@ const mobileBannerImg = mobileBanner
   : null;
 
 const {
-  title = "GGHENG | สล็อตเว็บตรงสายเฮง ระบบแท้100% แตกง่าย จ่ายไม่อั้น",
-  description = "GGHENG สล็อตเว็บตรงสายเฮง ไม่มีขั้นต่ำ ระบบแท้100% เล่นลื่นไหล แตกง่าย ค่าRTP มาตรฐาน ฝากถอน True Wallet หลักล้านก็โอน จ่ายไม่อั้น",
+  title = "VODKAFUN – VODKAFUN สล็อตเว็บตรงเว็บใหญ่ ลิขสิทธิ์แท้100% สนุกครบทุกเกม",
+  description = "VODKAFUN สล็อตเว็บตรงเว็บใหญ่ ลิขสิทธิ์แท้ 100% จากค่ายเกม สมัครฟรี ไม่ต้องฝากก่อน ฝากถอนออโต้ไม่มีขั้นต่ำ รวม PG SOFT, Pragmatic Play และ Joker ในเว็บเดียว",
   robots = "index, follow",
 } = Astro.props;
 
@@ -207,7 +207,7 @@ const profile = brandProfile(Astro.site);
         background-attachment: fixed;
         background-repeat: no-repeat;
         margin: 0;
-        background-color: #0f0101;
+        background-color: #0a0320;
         font-weight: 400;
         font-family: var(--font-sans) !important;
       }
@@ -260,7 +260,7 @@ const profile = brandProfile(Astro.site);
         }
         <Image
           src={mainBanner}
-          alt="แบนเนอร์ GGHENG พื้นหลังสีแดงเพลิงประกายทอง กลางภาพเป็นโลโก้ปีกแดงทองและตัวอักษรทองขนาดใหญ่ว่า GGHENG ใต้ชื่อเป็นข้อความ สล็อตเว็บตรงสายเฮง เฮง เฮง สองข้างเป็นพรีเซนเตอร์หญิงในชุดเลื่อมถือไพ่ รอบภาพมีมังกรทอง ก้อนทองจีน เหรียญทอง ชิปคาสิโน และเปลวไฟ"
+          alt="แบนเนอร์ VODKAFUN ตัวอักษร VODKA สีขาวขอบชมพูนีออนและ FUN ขอบฟ้านีออนขนาดใหญ่ ใต้ชื่อเป็นข้อความ สล็อต บอล คาสิโน ยิงปลา ไฮโล รูเล็ต พื้นหลังเป็นเมืองยามค่ำคืนแสงเลเซอร์สีชมพูและฟ้า ด้านขวาเป็นพรีเซนเตอร์หญิงในแจ็กเก็ตสีชมพูฟ้า รอบภาพมีเหรียญและชิปคาสิโนลอยอยู่"
           loading="eager"
           fetchpriority="high"
           widths={[412, 640, 828, 1024, 1280, 1600, 1900]}

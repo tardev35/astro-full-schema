@@ -12,7 +12,7 @@ const reviews = [
     stars: 4,
     tag: "ระบบแท้ 100%",
     content:
-      "ระบบหลังบ้านของ GGHENG โคตรตึงครับ! โครงสร้างเว็บแน่นปึก ฝาก-ถอนออโต้รันไวระดับเสี้ยววินาที ไร้รอยต่อจริงๆ การันตีระบบแท้ 100% หัก 1 ดาวเพราะอยากให้มีฟีเจอร์ปรับโหมดสว่างบ้าง รวมๆ คือดีเยี่ยม!",
+      "ระบบหลังบ้านของ VODKAFUN โคตรตึงครับ! โครงสร้างเว็บแน่นปึก ฝาก-ถอนออโต้รันไวระดับเสี้ยววินาที ไร้รอยต่อจริงๆ การันตีระบบแท้ 100% หัก 1 ดาวเพราะอยากให้มีฟีเจอร์ปรับโหมดสว่างบ้าง รวมๆ คือดีเยี่ยม!",
     avatar: "🛠️",
   },
   {
@@ -21,7 +21,7 @@ const reviews = [
     stars: 5,
     tag: "จ่ายไม่อั้น",
     content:
-      "เพจเราเทสแล้ว คอนเฟิร์มว่าที่นี่คือ 'สล็อตสายเฮงของแท้' ไม่ใช่เว็บเอเย่นต์ไก่กา อัตราการแตก (RTP) สูงปรี๊ด ไม่มีการล็อคยูสเซอร์แน่นอน จ่ายไม่อั้นทุกบิล เป็นเว็บคุณภาพที่สายปั่นต้องมาโดน",
+      "เพจเราเทสแล้ว คอนเฟิร์มว่าที่นี่คือ 'สล็อตเว็บตรงของแท้' ไม่ใช่เว็บเอเย่นต์ไก่กา อัตราการแตก (RTP) สูงปรี๊ด ไม่มีการล็อคยูสเซอร์แน่นอน จ่ายไม่อั้นทุกบิล เป็นเว็บคุณภาพที่สายปั่นต้องมาโดน",
     avatar: "📣",
   },
   {
@@ -30,71 +30,71 @@ const reviews = [
     stars: 5,
     tag: "แตกง่าย",
     content:
-      "เจ็บมาจากที่อื่นเยอะ สุดท้ายจบที่ GGHENG ครับ! สล็อตแตกง่ายมาก ฟรีสปินเข้าบ่อยจัด โปรโมชั่นให้มาแบบคุ้มๆ ถอนหลักแสนก็เงินเข้าปุ๊บปั๊บ เอาไปเลย 5 ดาวเต็มๆ ไม่ผิดหวังแน่นอนครับ สายเฮงตัวจริง!",
-    avatar: "🧧",
+      "เจ็บมาจากที่อื่นเยอะ สุดท้ายจบที่ VODKAFUN ครับ! สล็อตแตกง่ายมาก ฟรีสปินเข้าบ่อยจัด โปรโมชั่นให้มาแบบคุ้มๆ ถอนหลักแสนก็เงินเข้าปุ๊บปั๊บ เอาไปเลย 5 ดาวเต็มๆ ไม่ผิดหวังแน่นอนครับ เว็บใหญ่ตัวจริง!",
+    avatar: "🍸",
   },
 ];
 const totalStars = reviews.reduce((sum, r) => sum + r.stars, 0);
 const average = (totalStars / reviews.length).toFixed(1);
 ---
 
-<section aria-label={title ?? "เสียงจากสมาชิก GGHENG"} class="relative z-10 mx-auto mb-12 w-full max-w-[1400px] px-4 font-sans">
+<section aria-label={title ?? "เสียงจากสมาชิก VODKAFUN"} class="relative z-10 mx-auto mb-12 w-full max-w-[1400px] px-4 font-sans">
   <div class="mb-8 flex w-full flex-col items-center justify-center gap-2 text-center">
     {
       title && (
-        <h2 class="bg-gradient-to-r from-[#ffe9a3] via-[#ffd34d] to-[#ff8a70] bg-clip-text text-3xl leading-normal font-black tracking-widest text-transparent uppercase">{title}</h2>
+        <h2 class="bg-gradient-to-r from-[#9bf2fb] via-[#ff8fe0] to-[#ff3dc8] bg-clip-text text-3xl leading-normal font-black tracking-widest text-transparent uppercase">{title}</h2>
       )
     }
-    <div class="mt-2 h-[4px] w-24 rounded-full bg-gradient-to-r from-transparent via-[#f5c542] to-transparent"></div>
+    <div class="mt-2 h-[4px] w-24 rounded-full bg-gradient-to-r from-transparent via-[#ff3dc8] to-transparent"></div>
   </div>
 
-  <div class="mx-auto mb-8 flex max-w-md items-center justify-center gap-5 rounded-2xl border border-[#3a0a0d] bg-[#140202] px-6 py-4 shadow-[0_10px_30px_rgba(245,197,66,0.18)]">
+  <div class="mx-auto mb-8 flex max-w-md items-center justify-center gap-5 rounded-2xl border border-[#1f0b4d] bg-[#0a0320] px-6 py-4 shadow-[0_10px_30px_rgba(255,61,200,0.18)]">
     <div class="flex flex-col items-center">
-      <span class="bg-gradient-to-b from-[#ffe9a3] to-[#ffd34d] bg-clip-text text-4xl leading-none font-black text-transparent">{average}</span>
-      <span class="mt-1 text-[10px] font-bold tracking-widest text-[#d4b59a] uppercase">คะแนนเฉลี่ย</span>
+      <span class="bg-gradient-to-b from-[#9bf2fb] to-[#ff3dc8] bg-clip-text text-4xl leading-none font-black text-transparent">{average}</span>
+      <span class="mt-1 text-[10px] font-bold tracking-widest text-[#b9a9e6] uppercase">คะแนนเฉลี่ย</span>
     </div>
-    <div class="h-12 w-px bg-[#3a0a0d]"></div>
+    <div class="h-12 w-px bg-[#1f0b4d]"></div>
     <div class="flex flex-col gap-1.5">
       <div aria-hidden="true" class="flex gap-1 text-lg">
-        {Array.from({ length: 5 }).map((_, i) => <span class={i < Math.round(Number(average)) ? "text-[#f5c542]" : "text-[#5c0b13]"}>★</span>)}
+        {Array.from({ length: 5 }).map((_, i) => <span class={i < Math.round(Number(average)) ? "text-[#ff3dc8]" : "text-[#2c1266]"}>★</span>)}
       </div>
-      <span class="text-xs font-bold text-[#d4b59a]">คะแนนเฉลี่ย {average} จาก 5 ดาว จากรีวิวของสมาชิก {reviews.length} ท่าน</span>
+      <span class="text-xs font-bold text-[#b9a9e6]">คะแนนเฉลี่ย {average} จาก 5 ดาว จากรีวิวของสมาชิก {reviews.length} ท่าน</span>
     </div>
   </div>
 
   <div class="grid grid-cols-1 gap-6 md:grid-cols-3">
     {
       reviews.map((review) => (
-        <article class="group relative isolate flex flex-col gap-4 overflow-hidden rounded-2xl border border-[#3a0a0d] bg-[#140202] p-6 text-left shadow-[0_10px_30px_rgba(245,197,66,0.16)] transition-all duration-300 hover:-translate-y-1 hover:border-[#f5c542]/55 hover:shadow-[0_15px_40px_rgba(245,197,66,0.28)]">
-          <span aria-hidden="true" class="absolute inset-y-0 left-0 -z-10 w-1 bg-gradient-to-b from-[#f5c542] to-[#e11d1d] opacity-80 transition-opacity duration-300 group-hover:opacity-100" />
-          <span aria-hidden="true" class="pointer-events-none absolute -top-14 -right-14 -z-10 h-32 w-32 rounded-full bg-[#f5c542]/16 blur-[50px] transition-all duration-300 group-hover:bg-[#e11d1d]/18" />
+        <article class="group relative isolate flex flex-col gap-4 overflow-hidden rounded-2xl border border-[#1f0b4d] bg-[#0a0320] p-6 text-left shadow-[0_10px_30px_rgba(255,61,200,0.16)] transition-all duration-300 hover:-translate-y-1 hover:border-[#ff3dc8]/55 hover:shadow-[0_15px_40px_rgba(255,61,200,0.28)]">
+          <span aria-hidden="true" class="absolute inset-y-0 left-0 -z-10 w-1 bg-gradient-to-b from-[#ff3dc8] to-[#1be5f4] opacity-80 transition-opacity duration-300 group-hover:opacity-100" />
+          <span aria-hidden="true" class="pointer-events-none absolute -top-14 -right-14 -z-10 h-32 w-32 rounded-full bg-[#ff3dc8]/16 blur-[50px] transition-all duration-300 group-hover:bg-[#1be5f4]/18" />
 
           <div class="flex items-center justify-between gap-3">
-            <span class="inline-flex items-center gap-1.5 rounded-full border border-[#3a0a0d] bg-[#1f0405] px-3 py-1 text-[10px] font-bold tracking-widest text-[#ffdf80] uppercase">
-              <span aria-hidden="true" class="h-1.5 w-1.5 animate-pulse rounded-full bg-[#f5c542]" />
+            <span class="inline-flex items-center gap-1.5 rounded-full border border-[#1f0b4d] bg-[#120633] px-3 py-1 text-[10px] font-bold tracking-widest text-[#ff8fe0] uppercase">
+              <span aria-hidden="true" class="h-1.5 w-1.5 animate-pulse rounded-full bg-[#ff3dc8]" />
               {review.tag}
             </span>
             <span class="flex gap-0.5 text-sm">
               <span aria-hidden="true" class="flex gap-0.5">
                 {Array.from({ length: 5 }).map((_, i) => (
-                  <span class={i < review.stars ? "text-[#f5c542]" : "text-[#5c0b13]"}>★</span>
+                  <span class={i < review.stars ? "text-[#ff3dc8]" : "text-[#2c1266]"}>★</span>
                 ))}
               </span>
               <span class="sr-only">ให้คะแนน {review.stars} จาก 5 ดาว</span>
             </span>
           </div>
 
-          <p class="text-left text-base leading-relaxed text-[#f7e6d0]">{review.content}</p>
+          <p class="text-left text-base leading-relaxed text-[#ece6ff]">{review.content}</p>
 
-          <div class="mt-auto flex items-center gap-3 border-t border-[#3a0a0d] pt-4">
+          <div class="mt-auto flex items-center gap-3 border-t border-[#1f0b4d] pt-4">
             <span
               aria-hidden="true"
-              class="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl border border-[#5a0a0a] bg-gradient-to-br from-[#ff8a70] via-[#e11d1d] to-[#a31212] text-xl shadow-inner transition-transform duration-300 group-hover:scale-110">
+              class="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl border border-[#2c1266] bg-gradient-to-br from-[#9bf2fb] via-[#1be5f4] to-[#0aa4c4] text-xl shadow-inner transition-transform duration-300 group-hover:scale-110">
               {review.avatar}
             </span>
             <span class="flex flex-col">
-              <span class="text-sm font-black text-[#ffdf80] transition-colors group-hover:text-[#ffe9a3]">{review.name}</span>
-              <span class="text-[10px] font-bold tracking-wider text-[#d4b59a] uppercase">{review.role}</span>
+              <span class="text-sm font-black text-[#ff8fe0] transition-colors group-hover:text-[#9bf2fb]">{review.name}</span>
+              <span class="text-[10px] font-bold tracking-wider text-[#b9a9e6] uppercase">{review.role}</span>
             </span>
           </div>
         </article>

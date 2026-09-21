@@ -16,10 +16,10 @@ const { title, faqs = [] } = Astro.props;
   {
     title && (
       <header class="mb-8 text-center">
-        <h2 class="bg-gradient-to-r from-[#fff27a] via-[#ffe814] to-[#c9a800] bg-clip-text text-2xl leading-normal font-black tracking-widest text-transparent uppercase drop-shadow-sm md:text-3xl">
+        <h2 class="bg-gradient-to-r from-[#9bf2fb] via-[#ff8fe0] to-[#ff3dc8] bg-clip-text text-2xl leading-normal font-black tracking-widest text-transparent uppercase drop-shadow-sm md:text-3xl">
           {title}
         </h2>
-        <div class="mx-auto mt-3 h-[3px] w-24 rounded-full bg-gradient-to-r from-transparent via-[#ffe814] to-transparent" />
+        <div class="mx-auto mt-3 h-[3px] w-24 rounded-full bg-gradient-to-r from-transparent via-[#1be5f4] to-transparent" />
       </header>
     )
   }
@@ -27,8 +27,8 @@ const { title, faqs = [] } = Astro.props;
   <div class="space-y-3">
     {
       faqs.map((faq) => (
-        <details class="faq-item rounded-3xl border border-[#ffe814]/40 bg-[#170512] p-2 shadow-[0_10px_30px_rgba(255,232,20,0.14)] transition-all hover:border-[#ffe814]/60 hover:bg-[#280a1c]">
-          <summary class="flex w-full cursor-pointer items-center justify-between gap-4 p-4 text-left text-[#fff27a] transition-colors hover:text-[#ffe814]">
+        <details class="faq-item rounded-3xl border border-[#1be5f4]/40 bg-[#120633] p-2 shadow-[0_10px_30px_rgba(27,229,244,0.14)] transition-all hover:border-[#1be5f4]/60 hover:bg-[#1f0b4d]">
+          <summary class="flex w-full cursor-pointer items-center justify-between gap-4 p-4 text-left text-[#9bf2fb] transition-colors hover:text-[#1be5f4]">
             <p class="text-left text-sm leading-normal font-bold md:text-base">{faq.q}</p>
             <span aria-hidden="true" class="faq-icon ml-4 flex h-6 w-6 shrink-0 items-center justify-center text-2xl transition-transform duration-300 ease-in-out">
               +
@@ -36,7 +36,7 @@ const { title, faqs = [] } = Astro.props;
           </summary>
 
           <div class="faq-answer overflow-hidden">
-            <p class="px-4 pb-4 text-left text-base leading-relaxed text-[#f3e3ee]">{faq.a}</p>
+            <p class="px-4 pb-4 text-left text-base leading-relaxed text-[#ece6ff]">{faq.a}</p>
           </div>
         </details>
       ))
@@ -53,7 +53,7 @@ const { title, faqs = [] } = Astro.props;
   }
   .faq-item[open] .faq-icon {
     transform: rotate(45deg);
-    color: #ffe814;
+    color: #1be5f4;
   }
   .faq-item[open] .faq-answer {
     animation: faq-reveal 0.25s ease-out;

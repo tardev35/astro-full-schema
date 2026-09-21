@@ -2,7 +2,7 @@
 import MainLayout from "../layouts/MainLayout.astro";
 import ContentBox from "../components/ContentBox.astro";
 import Navfoot from "../components/Navfoot.astro";
-import Announcement from "../components/Announcement3.astro";
+import Announcement from "../components/AnnouncementCyber.astro";
 
 import { Picture } from "astro:assets";
 import { itemList, pageGraph, schemaCtx } from "../lib/schema";
@@ -36,12 +36,12 @@ const demoGames = [
 
 const gameList = demoGames.map((game) => ({ name: game.name, imagePath: game.src.src }));
 
-const pageTitle = "ทดลองเล่นสล็อต GGHENG";
+const pageTitle = "ทดลองเล่น – VODKAFUN";
 
-const pageHeading = "ทดลองเล่นสล็อต GGHENG เลือกค่ายที่ชอบ ลองให้พอใจก่อนลงเครดิตจริง";
+const pageHeading = "ทดลองเล่นสล็อต VODKAFUN ชิมก่อนสั่งจริง สมัครฟรีแล้วลองได้ทุกค่าย";
 
 const pageDescription =
-  "ทดลองเล่น GGHENG สล็อตเว็บตรงสายเฮง รวมโหมดทดลองจากค่ายดังอย่าง PG SOFT, Pragmatic Play และ Joker Gaming เลือกค่ายที่ชอบ เปิดยูสเดียวแล้วลองจนพอใจก่อนเล่นจริง";
+  "ทดลองเล่นสล็อต VODKAFUN เว็บตรง ลิขสิทธิ์แท้จาก PG SOFT, Pragmatic Play และ Joker Gaming สมัครฟรีไม่ต้องฝากก่อน เปิดยูสเดียวแล้วลองเกมจนพอใจก่อนใช้เครดิตจริง";
 
 const ctx = schemaCtx(Astro);
 const graph = pageGraph(Astro, {
@@ -54,8 +54,8 @@ const graph = pageGraph(Astro, {
   ],
   extra: [
     itemList(ctx, {
-      name: "ทดลองเล่นเกมของ GGHENG",
-      alternateName: "GGHENG โหมดทดลองเล่นเกมสล็อตหลายค่ายบนมือถือ ก่อนใช้เครดิตจริงด้วยยูสเซอร์เดียว",
+      name: "ทดลองเล่นเกมของ VODKAFUN",
+      alternateName: "VODKAFUN โหมดทดลองเล่นเกมสล็อตหลายค่ายบนมือถือ ก่อนใช้เครดิตจริงด้วยยูสเซอร์เดียว",
       itemType: "Game",
       items: gameList,
     }),
@@ -70,30 +70,30 @@ const graph = pageGraph(Astro, {
 
   <ContentBox as="h1" title={pageHeading}>
     <p class="mb-4 text-left text-base leading-relaxed">
-      หากคุณกำลังมองหาที่ลองเกมให้ชัดก่อนลงเครดิตจริง <strong class="text-[#ffdf80]">GGHENG</strong> สล็อตเว็บตรงสายเฮง พร้อมมอบโหมดทดลองจากค่ายที่เปิดอยู่ในระบบ เพื่อให้คุณรู้จักจังหวะของเกมก่อนตัดสินใจ
+      หากคุณกำลังมองหาที่ชิมเกมให้รู้รสก่อนสั่งจริง <strong class="text-[#ff8fe0]">VODKAFUN</strong> สล็อตเว็บตรงเว็บใหญ่ พร้อมเสิร์ฟโหมดทดลองจากค่ายที่เปิดอยู่ในระบบ เพื่อให้คุณรู้จังหวะของเกมก่อนตัดสินใจลงเครดิต
     </p>
     <p class="mb-4 text-left text-base leading-relaxed">
-      ขั้นตอนสั้นกว่าที่คิด เลือกค่ายที่สะดุดตาจากด้านล่าง กดที่ภาพเพื่อเปิดยูสก่อนหนึ่งครั้ง จากนั้นเข้าโหมดทดลองของค่ายนั้นต่อได้เลยจากหน้าสมาชิก
+      เข้าคลับนี้ไม่มีค่าผ่านประตู สมัครฟรี ไม่ต้องฝากก่อน เลือกค่ายที่สะดุดตาจากด้านล่าง กดที่ภาพเพื่อเปิดยูสหนึ่งครั้ง แล้วเข้าโหมดทดลองของค่ายนั้นต่อได้จากหน้าสมาชิก
     </p>
     <p class="text-left text-base leading-relaxed">
-      เปิดจากมือถือ ไอแพด หรือคอมพิวเตอร์ก็เหมือนกัน ใช้ยูสเซอร์เดิมได้ทุกเครื่อง ไม่ต้องโหลดแอปให้รกเครื่องและไม่ต้องจำรหัสหลายชุด
+      เปิดจากมือถือ แท็บเล็ต หรือคอมพิวเตอร์ก็ใช้ยูสเซอร์เดิมได้ทุกเครื่อง ไม่ต้องโหลดแอปเพิ่ม และไม่ต้องจำรหัสหลายชุด
     </p>
   </ContentBox>
 
-  <ContentBox as="h2" title="เลือกค่ายที่ถูกใจ แล้วเปิดยูส GGHENG ยูสเดียวลองได้ทุกค่าย">
+  <ContentBox as="h2" title="เลือกค่ายที่ถูกใจ เปิดยูส VODKAFUN ฟรี ยูสเดียวลองได้ทุกค่าย">
     <p class="mb-4 text-left text-base leading-relaxed">
-      ค่ายไหนถูกตาเริ่มจากค่ายนั้นได้เลยครับ เพราะแต่ละค่ายวางจังหวะและฟีเจอร์ไว้ไม่เหมือนกัน ทั้งสล็อตหมุนคลาสสิก เกมฟรีสปิน และเกมโบนัสหลายชั้น ทุกเกมเป็นลิขสิทธิ์แท้จากค่ายโดยตรง
+      เมนูเกมที่นี่เหมือนบาร์ที่มีเครื่องดื่มครบทุกสัญชาติ ทั้งสล็อตหมุนคลาสสิก เกมฟรีสปิน และเกมโบนัสหลายชั้น ทุกเกมเป็นลิขสิทธิ์แท้ที่เชื่อมผ่าน API ของค่ายโดยตรง
     </p>
     <p class="mb-4 text-left text-base leading-relaxed">
-      ปุ่มบนภาพเขียนว่าสมัครเพื่อลอง เพราะมันพาไปที่ขั้นตอนเปิดยูสก่อน พอได้ยูสแล้วค่อยเข้าโหมดทดลองของค่ายนั้นต่อในหน้าสมาชิกเดียวกัน
+      ปุ่มบนภาพเขียนว่าสมัครเพื่อลอง เพราะมันพาไปที่ขั้นตอนเปิดยูสก่อน กรอกข้อมูลเบื้องต้นให้ครบก็ได้ยูสไปล็อกอิน โดยไม่ต้องโอนเงินมาจองสิทธิ์หรือเสียค่าแรกเข้า
     </p>
     <p class="mb-8 text-left text-base leading-relaxed">
-      GGHENG ใช้ระบบแท้100% ยูสเซอร์เดียวสลับได้ทุกค่าย ไม่ต้องเปิดบัญชีใหม่ทีละค่าย ความเฮงจะมาจากเกมไหนก็ไม่ต้องเสียจังหวะตอนกำลังสนุก
+      VODKAFUN ใช้ระบบกระเป๋าเดียว อยากเปลี่ยนบรรยากาศไปค่ายไหนก็สลับได้ในคลิกเดียว ไม่ต้องเปิดบัญชีใหม่ทีละค่าย และไม่ต้องโยกเงินให้เสียจังหวะตอนกำลังสนุก
     </p>
     <div class="mb-5 grid grid-cols-2 gap-5 sm:grid-cols-2 md:grid-cols-4">
       {
         demoGames.map((game) => (
-          <div class="group/game relative mx-auto w-full max-w-[400px] overflow-hidden rounded-xl border border-[#5c0b13]">
+          <div class="group/game relative mx-auto w-full max-w-[400px] overflow-hidden rounded-xl border border-[#2c1266]">
             <Picture
               src={game.src}
               alt={game.alt}
@@ -101,7 +101,7 @@ const graph = pageGraph(Astro, {
               fetchpriority="low"
               widths={[200, 400, 600]}
               sizes="(max-width: 768px) 50vw, 25vw"
-              class="block h-auto w-full object-cover shadow-[0_10px_30px_rgba(245,197,66,0.18)] transition-transform duration-300 group-hover/game:scale-105"
+              class="block h-auto w-full object-cover shadow-[0_10px_30px_rgba(255,61,200,0.18)] transition-transform duration-300 group-hover/game:scale-105"
               decoding="async"
               formats={["avif", "webp"]}
               fallbackFormat="webp"
@@ -111,9 +111,9 @@ const graph = pageGraph(Astro, {
               href="/register/"
               target="_blank"
               rel="noopener noreferrer"
-              aria-label={`สมัครสมาชิกเพื่อลองเล่น ${game.name} ที่ GGHENG`}
-              class="absolute inset-0 flex items-center justify-center bg-[#140202]/85 opacity-0 transition-opacity duration-300 group-hover/game:opacity-100 focus-visible:opacity-100">
-              <span class="rounded-full border border-[#8a6208]/60 bg-gradient-to-r from-[#ffe9a3] via-[#f5c542] to-[#c8901a] px-6 py-2 font-bold text-[#2a0203] shadow-[0_10px_30px_rgba(245,197,66,0.35)] transition-transform hover:scale-110">สมัครเพื่อลอง</span>
+              aria-label={`สมัครสมาชิกเพื่อลองเล่น ${game.name} ที่ VODKAFUN`}
+              class="absolute inset-0 flex items-center justify-center bg-[#0a0320]/85 opacity-0 transition-opacity duration-300 group-hover/game:opacity-100 focus-visible:opacity-100">
+              <span class="rounded-full border border-[#b3128a]/60 bg-gradient-to-r from-[#ff8fe0] to-[#ff3dc8] px-6 py-2 font-bold text-[#14042e] shadow-[0_10px_30px_rgba(255,61,200,0.35)] transition-transform hover:scale-110">สมัครเพื่อลอง</span>
             </a>
           </div>
         ))
@@ -121,7 +121,7 @@ const graph = pageGraph(Astro, {
     </div>
   </ContentBox>
 
-  <ContentBox as="h2" title="ลองให้พอใจในโหมดทดลอง แล้วค่อยตัดสินใจลงเครดิตจริง">
+  <ContentBox as="h2" title="ทดลองเล่นฟรีไม่จำกัดรอบ ลองให้พอใจก่อนใช้เครดิตจริง">
     <p class="mb-4 text-left text-base leading-relaxed">
       เข้าโหมดทดลองแล้วหมุนได้ไม่จำกัดรอบ เพราะเป็นเครดิตสมมติล้วน ๆ อยากลองผิดลองถูกกี่ครั้งก็ตามสบาย ไม่มีอะไรต้องเสี่ยงสักบาท
     </p>
@@ -129,7 +129,7 @@ const graph = pageGraph(Astro, {
       ระหว่างลองก็ดูไปด้วยว่าเกมวางสัญลักษณ์ไว้แบบไหน ฟรีสปินกับโบนัสเข้ามาในจังหวะไหน และหนึ่งรอบยาวพอกับที่คุณชอบไหม เก็บไว้เป็นข้อมูลตอนเลือกเกมที่จะเล่นจริง
     </p>
     <p class="mb-4 text-left text-base leading-relaxed">
-      เกมบน GGHENG รันด้วยค่า RTP มาตรฐานสากลจากค่ายแม่ ไม่มีการล็อกยูส กลไกที่คุณเห็นในโหมดทดลองจึงเป็นชุดเดียวกับตอนเล่นจริง ต่างกันแค่เครดิตที่ใช้หมุน
+      เกมบน VODKAFUN ส่งตรงจากค่ายแม่แบบเรียลไทม์ ใช้ค่า RTP เดิมของค่าย ไม่ปรับเรทและไม่ล็อกยูส กลไกที่คุณเห็นในโหมดทดลองจึงเป็นชุดเดียวกับตอนเล่นจริง ต่างกันแค่เครดิตที่ใช้หมุน
     </p>
     <p class="mb-4 text-left text-base leading-relaxed">
       เรื่องที่ต้องบอกให้ชัดตั้งแต่แรก เครดิตในโหมดทดลองถอนไม่ได้ และไม่นับเป็นยอดเทิร์นของโปรโมชั่นใด ๆ ทั้งสิ้น เอาไว้ทำความรู้จักเกมอย่างเดียว
@@ -139,21 +139,21 @@ const graph = pageGraph(Astro, {
     </p>
   </ContentBox>
 
-  <ContentBox as="h2" title="พร้อมเมื่อไหร่ สมัคร GGHENG แล้วเริ่มเล่นจริงได้ทันที ไม่มีขั้นต่ำ">
+  <ContentBox as="h2" title="พร้อมเมื่อไหร่ เริ่มเล่นจริงกับ VODKAFUN ได้ทันที ไม่มีขั้นต่ำ">
     <p class="mb-4 text-left text-base leading-relaxed">
-      พอเจอเกมที่ใช่แล้ว เริ่มเล่นจริงได้เลยด้วยยูสเซอร์เดิม GGHENG ไม่มีขั้นต่ำ ทุนมากหรือน้อยก็เริ่มได้เท่ากัน จะฝากหลักสิบหรือหลักร้อยก็เข้าเล่นได้ทุกเกม
+      พอเจอเกมที่ใช่แล้ว เริ่มเล่นจริงได้เลยด้วยยูสเซอร์เดิม VODKAFUN ไม่มีขั้นต่ำทั้งฝากและถอน จะเริ่ม 1 บาทหรือจัดหนักเป็นหมื่นก็เลือกได้ตามงบของตัวเอง
     </p>
     <p class="mb-4 text-left text-base leading-relaxed">
-      ฝากถอนเป็นระบบออโต้ รองรับทั้งบัญชีธนาคารและ True Money Wallet แบบเต็มรูปแบบ ใครไม่สะดวกใช้ธนาคารก็ทำรายการผ่านวอลเล็ตได้ทันที ตรวจสอบได้ทุกยอดธุรกรรม
+      ฝากถอนเป็นระบบ AI Auto ทำรายการเฉลี่ย 2–5 วินาที ไม่ต้องส่งสลิปให้แอดมิน รองรับทั้งแอปธนาคารและ True Money Wallet ให้คุณสนุกต่อได้ยาว ๆ โดยไม่ต้องนั่งรอ
     </p>
     <p class="mb-4 text-left text-base leading-relaxed">
-      เล่นได้แล้วต้องได้ถอน GGHENG จ่ายไม่อั้น ถอนหลักแสนหรือหลักล้านก็โอนครบทุกบาท ไม่มีผ่อนจ่ายและไม่หักค่าธรรมเนียม ส่วนเงื่อนไขของโปรโมชั่นที่ใช้อยู่ อ่านให้จบก่อนกดยืนยันทุกครั้ง
+      ถ้าจะรับโปรโมชั่นไปด้วย เงื่อนไขของแต่ละโปรระบุไว้ในหน้าโปรโมชั่นครบทุกใบ เว็บนี้ไม่บังคับยอด และไม่กดดันให้ฝากเพิ่ม
     </p>
     <p class="mb-4 text-left text-base leading-relaxed">
       อีกอย่างที่ควรติดตัวไว้เสมอ อย่าบอกรหัสผ่านหรือรหัส OTP กับใครทั้งนั้น แม้คนนั้นจะอ้างว่าเป็นทีมงานก็ตาม เพราะทีมงานจริงไม่มีเหตุต้องขอ
     </p>
     <p class="text-left text-base leading-relaxed">
-      เลือกค่ายที่ถูกใจแล้วเริ่มได้เลยครับ เกมที่คุณคุ้นมือจากโหมดทดลองวันนี้ คือเกมที่พร้อมให้ลงเครดิตจริงในรอบถัดไปแบบไม่ต้องเดา
+      เลือกค่ายที่ถูกใจแล้วเริ่มได้เลยครับ เกมที่คุณคุ้นมือจากโหมดทดลองคืนนี้ คือเกมที่พร้อมให้ลงเครดิตจริงในรอบถัดไปแบบไม่ต้องเดา
     </p>
   </ContentBox>
 

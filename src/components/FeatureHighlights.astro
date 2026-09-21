@@ -3,7 +3,7 @@ export interface FeatureItem {
   icon: string;
   title: string;
   description: string;
-  accent?: "blue" | "red";
+  accent?: "magenta" | "cyan";
 }
 
 export interface Props {
@@ -17,26 +17,26 @@ const { items, as: HeadingTag = "h3" } = Astro.props;
 <div class="mt-4 flex flex-col gap-5">
   {
     items.map((item) => {
-      const isRed = item.accent === "red";
+      const isCyan = item.accent === "cyan";
       return (
         <div
           class={`group flex flex-col items-start gap-4 rounded-2xl border p-6 transition-all duration-300 hover:-translate-y-1 sm:flex-row ${
-            isRed
-              ? "border-[#0e2150] bg-[#03091f] hover:border-[#e12b27]/60 hover:bg-[#0e2150] hover:shadow-[0_10px_20px_rgba(225,43,39,0.24)]"
-              : "border-[#0e2150] bg-[#03091f] hover:border-[#f7d046]/60 hover:bg-[#0e2150] hover:shadow-[0_10px_20px_rgba(247,208,70,0.26)]"
+            isCyan
+              ? "border-[#1f0b4d] bg-[#0a0320] hover:border-[#1be5f4]/60 hover:bg-[#1f0b4d] hover:shadow-[0_10px_20px_rgba(27,229,244,0.24)]"
+              : "border-[#1f0b4d] bg-[#0a0320] hover:border-[#ff3dc8]/60 hover:bg-[#1f0b4d] hover:shadow-[0_10px_20px_rgba(255,61,200,0.26)]"
           }`}>
           <div
             aria-hidden="true"
             class={`flex h-14 w-14 shrink-0 items-center justify-center rounded-xl text-3xl transition-transform duration-300 group-hover:scale-110 ${
-              isRed
-                ? "border border-[#63120a] bg-gradient-to-br from-[#ff9a7a] via-[#e12b27] to-[#a31a12] shadow-[0_5px_15px_rgba(225,43,39,0.34)] group-hover:rotate-3"
-                : "border border-[#8f6a08] bg-gradient-to-br from-[#ffeeb8] via-[#ffd95e] to-[#c99a17] shadow-[0_5px_15px_rgba(247,208,70,0.36)]"
+              isCyan
+                ? "border border-[#0aa4c4] bg-gradient-to-br from-[#9bf2fb] via-[#1be5f4] to-[#0aa4c4] shadow-[0_5px_15px_rgba(27,229,244,0.34)] group-hover:rotate-3"
+                : "border border-[#b3128a] bg-gradient-to-br from-[#ff8fe0] via-[#ff3dc8] to-[#b3128a] shadow-[0_5px_15px_rgba(255,61,200,0.36)]"
             }`}>
             {item.icon}
           </div>
           <div class="flex flex-col gap-2 text-left">
-            <HeadingTag class={`text-xl leading-normal font-black tracking-wide ${isRed ? "text-[#ff9a7a]" : "text-[#ffe38a]"}`}>{item.title}</HeadingTag>
-            <p class="text-left text-base leading-relaxed text-[#f5e7c2]">{item.description}</p>
+            <HeadingTag class={`text-xl leading-normal font-black tracking-wide ${isCyan ? "text-[#9bf2fb]" : "text-[#ff8fe0]"}`}>{item.title}</HeadingTag>
+            <p class="text-left text-base leading-relaxed text-[#ece6ff]">{item.description}</p>
           </div>
         </div>
       );

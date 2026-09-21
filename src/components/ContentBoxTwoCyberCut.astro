@@ -15,38 +15,38 @@ const sectionLabel = label ?? title ?? titleleft ?? titleright ?? "ข้อม�
 
 <section aria-label={sectionLabel} class="mx-auto mb-6 w-full max-w-7xl px-4 font-sans">
   <div
-    class="relative isolate w-full border border-[#7d0b46] bg-[#170512] p-8 text-[#f3e3ee] shadow-[0_10px_30px_rgba(255,45,142,0.18)] transition-all duration-300 hover:border-[#ff2d8e]/60 hover:shadow-[0_15px_40px_rgba(255,45,142,0.28)]"
+    class="relative isolate w-full border border-[#2c1266] bg-[#120633] p-8 text-[#ece6ff] shadow-[0_10px_30px_rgba(255,61,200,0.18)] transition-all duration-300 hover:border-[#ff3dc8]/60 hover:shadow-[0_15px_40px_rgba(255,61,200,0.28)]"
     style="clip-path: polygon(30px 0, 100% 0, 100% calc(100% - 30px), calc(100% - 30px) 100%, 0 100%, 0 30px);">
-    <div aria-hidden="true" class="absolute top-0 left-0 -z-10 h-[2px] w-24 bg-gradient-to-r from-[#ff2d8e] to-transparent"></div>
-    <div aria-hidden="true" class="absolute right-0 bottom-0 -z-10 h-[2px] w-24 bg-gradient-to-l from-[#ffe814] to-transparent"></div>
-    <div aria-hidden="true" class="absolute top-0 left-0 -z-10 h-16 w-[2px] bg-gradient-to-b from-[#ff2d8e] to-transparent"></div>
-    <div aria-hidden="true" class="absolute right-0 bottom-0 -z-10 h-16 w-[2px] bg-gradient-to-t from-[#ffe814] to-transparent"></div>
+    <div aria-hidden="true" class="absolute top-0 left-0 -z-10 h-[2px] w-24 bg-gradient-to-r from-[#ff3dc8] to-transparent"></div>
+    <div aria-hidden="true" class="absolute right-0 bottom-0 -z-10 h-[2px] w-24 bg-gradient-to-l from-[#1be5f4] to-transparent"></div>
+    <div aria-hidden="true" class="absolute top-0 left-0 -z-10 h-16 w-[2px] bg-gradient-to-b from-[#ff3dc8] to-transparent"></div>
+    <div aria-hidden="true" class="absolute right-0 bottom-0 -z-10 h-16 w-[2px] bg-gradient-to-t from-[#1be5f4] to-transparent"></div>
 
     {
       title && (
-        <TitleTag class="mb-4 bg-gradient-to-r from-[#fff27a] via-[#ffe814] to-[#c9a800] bg-clip-text text-center text-2xl leading-normal font-black text-transparent uppercase">{title}</TitleTag>
+        <TitleTag class="mb-4 bg-gradient-to-r from-[#9bf2fb] via-[#ff8fe0] to-[#ff3dc8] bg-clip-text text-center text-2xl leading-normal font-black text-transparent uppercase">{title}</TitleTag>
       )
     }
 
-    {intro && <div class="mb-8 text-left text-base leading-relaxed text-[#f3e3ee]" set:html={intro} />}
+    {intro && <div class="mb-8 text-left text-base leading-relaxed text-[#ece6ff]" set:html={intro} />}
 
     <div class="grid grid-cols-1 gap-8 md:grid-cols-2">
-      <article class="relative flex flex-col gap-4 text-left text-base leading-relaxed text-[#f3e3ee]">
+      <article class="relative flex flex-col gap-4 text-left text-base leading-relaxed text-[#ece6ff]">
         {
           titleleft && (
-            <p class="flex items-center gap-2 border-b border-[#7d0b46] pb-2 text-xl leading-normal font-black text-[#fff27a] uppercase">
-              <span aria-hidden="true" class="inline-block h-2 w-2 shrink-0 bg-[#ff2d8e] shadow-[0_0_5px_rgba(255,45,142,0.7)]" /> {titleleft}
+            <p class="flex items-center gap-2 border-b border-[#2c1266] pb-2 text-xl leading-normal font-black text-[#9bf2fb] uppercase">
+              <span aria-hidden="true" class="inline-block h-2 w-2 shrink-0 bg-[#ff3dc8] shadow-[0_0_5px_rgba(255,61,200,0.7)]" /> {titleleft}
             </p>
           )
         }
         <slot name="left" />
       </article>
 
-      <article class="relative flex flex-col gap-4 text-left text-base leading-relaxed text-[#f3e3ee] md:border-l md:border-[#7d0b46] md:pl-8">
+      <article class="relative flex flex-col gap-4 text-left text-base leading-relaxed text-[#ece6ff] md:border-l md:border-[#2c1266] md:pl-8">
         {
           titleright && (
-            <p class="flex items-center gap-2 border-b border-[#7d0b46] pb-2 text-xl leading-normal font-black text-[#fff27a] uppercase">
-              <span aria-hidden="true" class="inline-block h-2 w-2 shrink-0 bg-[#ffe814] shadow-[0_0_5px_rgba(255,232,20,0.7)]" /> {titleright}
+            <p class="flex items-center gap-2 border-b border-[#2c1266] pb-2 text-xl leading-normal font-black text-[#9bf2fb] uppercase">
+              <span aria-hidden="true" class="inline-block h-2 w-2 shrink-0 bg-[#1be5f4] shadow-[0_0_5px_rgba(27,229,244,0.7)]" /> {titleright}
             </p>
           )
         }

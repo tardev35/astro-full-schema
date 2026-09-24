@@ -10,6 +10,8 @@ const currentPath = Astro.url.pathname;
 
 const isActive = (path: string) => isActivePath(currentPath, path);
 
+const affUrl = "https://yoalink.com/32c3";
+
 const links = [
   { name: "หน้าแรก", path: "/", icon: "🏠" },
   { name: "โปรโมชั่น", path: "/promotion/", icon: "🎁" },
@@ -58,12 +60,14 @@ const links = [
 
     <div class="z-50 flex items-center gap-3">
       <a
-        href="/login/"
+        href={affUrl}
+        rel="nofollow sponsored"
         class="hidden items-center justify-center gap-1.5 rounded-full border border-[#e11d1d]/70 bg-[#3a0a0d] px-5 py-2 text-sm font-bold text-[#f7e6d0] transition-all hover:bg-[#5c0b13] lg:flex">
         <span aria-hidden="true">🔒</span> เข้าสู่ระบบ
       </a>
       <a
-        href="/register/"
+        href={affUrl}
+        rel="nofollow sponsored"
         class="hidden items-center justify-center gap-1.5 rounded-full bg-gradient-to-r from-[#ffe9a3] via-[#f5c542] to-[#c8901a] px-6 py-2 text-sm font-extrabold text-[#2a0203] shadow-[0_4px_14px_rgba(245,197,66,0.4)] transition-all hover:scale-105 lg:flex">
         <span aria-hidden="true">🧧</span> สมัครสมาชิก
       </a>
@@ -92,12 +96,14 @@ const links = [
 
       <div class="fs-item mt-4 flex w-full max-w-[250px] flex-col gap-4 pt-8">
         <a
-          href="/register/"
+          href={affUrl}
+          rel="nofollow sponsored"
           class="flex w-full items-center justify-center gap-2 rounded-full bg-gradient-to-r from-[#ffe9a3] via-[#f5c542] to-[#c8901a] py-3.5 text-lg font-extrabold text-[#2a0203] shadow-[0_6px_20px_rgba(245,197,66,0.4)]">
           <span aria-hidden="true">🧧</span> สมัครสมาชิก
         </a>
         <a
-          href="/login/"
+          href={affUrl}
+          rel="nofollow sponsored"
           class="flex w-full items-center justify-center gap-2 rounded-full border-2 border-[#e11d1d]/70 bg-[#3a0a0d] py-3.5 text-lg font-bold text-[#f7e6d0] transition-colors hover:bg-[#5c0b13]">
           <span aria-hidden="true">🔒</span> เข้าสู่ระบบ
         </a>

@@ -1,0 +1,45 @@
+---
+import MainLayout from "../layouts/MainLayout.astro";
+import ContentBox from "../components/ContentBox.astro";
+import Navfoot from "../components/Navfoot.astro";
+import Announcement from "../components/AnnouncementCyber.astro";
+import { pageGraph } from "../lib/schema";
+
+const pageTitle = "วิธีฝากถอน VODKAFUN";
+
+const pageHeading = "วิธีฝากถอน VODKAFUN";
+
+const pageDescription =
+  "วิธีฝากถอน VODKAFUN ระบบออโต้ รองรับบัญชีธนาคารและ Wallet เข้าระบบแล้วทำรายการได้จากหน้าสมาชิก ตรวจยอดขั้นต่ำและเงื่อนไขบัญชีก่อนกดยืนยัน ทำได้ตลอด 24 ชม.";
+
+const graph = pageGraph(Astro, {
+  name: pageTitle,
+  description: pageDescription,
+  breadcrumb: [
+    { name: "หน้าแรก", path: "/" },
+    { name: "วิธีฝากถอน", path: "/วิธีฝากถอน" },
+  ],
+});
+
+const affUrl = "https://yoalink.com/mojo";
+---
+
+<MainLayout title={pageTitle} description={pageDescription}>
+  <script type="application/ld+json" set:html={graph} />
+
+  <Announcement />
+
+  <ContentBox as="h1" title={pageHeading}>
+    <div class="flex justify-center py-6">
+      <a
+        href={affUrl}
+        rel="nofollow sponsored"
+        class="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-[#9bf2fb] to-[#1be5f4] px-12 py-4 text-lg font-black tracking-widest text-[#14042e] shadow-[0_0_20px_rgba(27,229,244,0.45)] transition-transform duration-300 hover:scale-105"
+        style="clip-path: polygon(15px 0, 100% 0, 100% calc(100% - 15px), calc(100% - 15px) 100%, 0 100%, 0 15px);">
+        <span aria-hidden="true">💳</span> ฝากถอน VODKAFUN
+      </a>
+    </div>
+  </ContentBox>
+
+  <Navfoot />
+</MainLayout>

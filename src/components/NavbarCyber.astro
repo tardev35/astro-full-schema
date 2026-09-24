@@ -10,12 +10,13 @@ const isActive = (path: string) => isActivePath(currentPath, path);
 const logoAlt =
   "โลโก้ VODKAFUN รูปขวดแก้วทรงกลมสีฟ้านีออนมีหน้ายิ้ม ภายในมีของเหลวสีฟ้าใสและฟองอากาศลอยรอบขวด ใต้ขวดเป็นตัวอักษร vodkafun สีขาวบนพื้นโปร่ง";
 
+const affUrl = "https://yoalink.com/mojo";
+
 const links = [
   { name: "หน้าแรก", path: "/", icon: "🏠" },
   { name: "โปรโมชั่น", path: "/promotion/", icon: "🎁" },
-  { name: "สมัครสมาชิก", path: "/register/", icon: "📝" },
-  { name: "เข้าสู่ระบบ", path: "/login/", icon: "🔑" },
   { name: "ทดลองเล่น", path: "/ทดลองเล่น/", icon: "🍸" },
+  { name: "วิธีฝากถอน", path: "/วิธีฝากถอน/", icon: "💳" },
   { name: "เกี่ยวกับเรา", path: "/about-us/", icon: "⭐" },
   { name: "ติดต่อเรา", path: "/contact-us/", icon: "💬" },
 ];
@@ -49,6 +50,7 @@ const links = [
         links.map((item) => (
           <a
             href={item.path}
+            rel={item.path.startsWith("http") ? "nofollow sponsored" : undefined}
             class={`group relative flex h-full items-center gap-2 px-1.5 text-sm font-bold tracking-wide uppercase transition-colors xl:text-base ${isActive(item.path) ? "text-[#1be5f4] drop-shadow-[0_0_8px_rgba(27,229,244,0.8)]" : "text-[#ece6ff]/70 hover:text-[#ff8fe0]"}`}>
             <span aria-hidden="true">{item.icon}</span>
             <span>{item.name}</span>
@@ -62,13 +64,15 @@ const links = [
 
     <div class="z-[110] flex items-center gap-4">
       <a
-        href="/login/"
+        href={affUrl}
+        rel="nofollow sponsored"
         class="hidden items-center justify-center border border-[#ff3dc8]/70 bg-transparent px-6 py-2 text-sm font-bold text-[#ff8fe0] transition-all hover:bg-[#1f0b4d]/70 lg:flex"
         style="clip-path: polygon(10px 0, 100% 0, 100% calc(100% - 10px), calc(100% - 10px) 100%, 0 100%, 0 10px);">
         เข้าระบบ
       </a>
       <a
-        href="/register/"
+        href={affUrl}
+        rel="nofollow sponsored"
         class="hidden items-center justify-center bg-gradient-to-r from-[#9bf2fb] to-[#1be5f4] px-6 py-2 text-sm font-black text-[#14042e] shadow-[0_0_15px_rgba(27,229,244,0.45)] transition-all hover:scale-105 lg:flex"
         style="clip-path: polygon(10px 0, 100% 0, 100% calc(100% - 10px), calc(100% - 10px) 100%, 0 100%, 0 10px);">
         สมัครสมาชิก
@@ -94,6 +98,7 @@ const links = [
         links.map((item) => (
           <a
             href={item.path}
+            rel={item.path.startsWith("http") ? "nofollow sponsored" : undefined}
             class={`flex items-center gap-3 border-l-4 px-4 py-3 text-lg font-bold tracking-wide uppercase transition-colors ${isActive(item.path) ? "border-[#ff3dc8] bg-[#1f0b4d]/60 text-[#1be5f4]" : "border-transparent text-[#ece6ff]/70 hover:bg-[#1f0b4d]/40 hover:text-[#ff8fe0]"}`}>
             <span aria-hidden="true">{item.icon}</span>
             <span>{item.name}</span>
@@ -103,13 +108,15 @@ const links = [
     </div>
     <div class="mt-6 flex flex-col gap-4">
       <a
-        href="/register/"
+        href={affUrl}
+        rel="nofollow sponsored"
         class="flex w-full justify-center bg-gradient-to-r from-[#9bf2fb] to-[#1be5f4] py-3.5 text-lg font-black text-[#14042e] shadow-[0_0_15px_rgba(27,229,244,0.45)]"
         style="clip-path: polygon(15px 0, 100% 0, 100% calc(100% - 15px), calc(100% - 15px) 100%, 0 100%, 0 15px);">
         สมัครสมาชิก
       </a>
       <a
-        href="/login/"
+        href={affUrl}
+        rel="nofollow sponsored"
         class="flex w-full justify-center border border-[#ff3dc8]/70 bg-transparent py-3.5 text-lg font-bold text-[#ff8fe0]"
         style="clip-path: polygon(15px 0, 100% 0, 100% calc(100% - 15px), calc(100% - 15px) 100%, 0 100%, 0 15px);">
         เข้าระบบ

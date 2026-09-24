@@ -472,29 +472,77 @@ different colors:
   match the brand's genre (a lottery brand's menu should not be led by a
   slot machine), and keep them to one per item.
 
-  **Menu order: `สมัครสมาชิก` and `เข้าสู่ระบบ` go immediately after
-  `โปรโมชั่น`, not at the end of the list.** Asked for on 2026-08-07, on
-  WINNOW168's `NavbarStyle6`, and it applies to whichever variant a brand
-  picks from here on. The order is:
+  **The navbar has a fixed shape: six menu entries and two buttons.**
+  Superseding the 2026-08-07 menu-order rule, which put `สมัครสมาชิก`
+  and `เข้าสู่ระบบ` inside the menu after `โปรโมชั่น`: **those two are
+  no longer menu entries at all.** Asked for on 2026-09-25 with a layout
+  sketch, on VODKAFUN's `NavbarCyber`, and it applies to whichever variant
+  a brand picks from here on.
 
   ```
-  หน้าแรก · โปรโมชั่น · สมัครสมาชิก · เข้าสู่ระบบ · <everything else>
+  desktop  [logo]  หน้าแรก · โปรโมชั่น · ทดลองเล่น · วิธีฝากถอน · เกี่ยวกับเรา · ติดต่อเรา   [เข้าระบบ] [สมัครสมาชิก]
+                   └───────────────── six menu entries ───────────────┘   └── two buttons ──┘
+
+  mobile   bar     [logo]                                   [☰]
+           drawer  the same six entries, stacked, then the two buttons full-width
   ```
 
-  Those two are the only menu entries that are conversion actions rather
-  than pages to read, so they belong where a visitor scanning left-to-right
-  reaches them before the informational pages (`ทดลองเล่น`, `เกี่ยวกับเรา`,
-  `ติดต่อเรา`, `บทความ`). They arrive last because the uploader's ส่วนที่ 5
-  **appends** a newly-toggled page's `{ name, path }` to the end of the
-  `links` array — so every rebrand inherits them in the wrong place unless
-  someone moves them. Reorder the array; do not special-case them in the
-  markup.
+  The menu is six pages a visitor might want to *read*; the two buttons are
+  the conversion actions and live in the corner on desktop and at the foot
+  of the drawer on mobile. Both renderings come from the one `links` array
+  plus one duplicated button pair, so there is nothing to keep in sync by
+  hand beyond what the variant already duplicates.
 
-  Two things this does NOT change: `หน้าแรก` stays first, and the header's
-  own login/register **CTA buttons** (most variants have a pair pinned in a
-  corner or in the mobile bar) are separate chrome — leave them where the
-  variant puts them. If a brand has the cta toggle off, there are no
-  `/register` and `/login` menu entries to order and this rule is a no-op.
+  `วิธีฝากถอน` is the entry most templates will not have a page for.
+  **Do not point a menu entry at a route that does not exist** —
+  `verify-build.mjs` checks every `href` against the built routes and will
+  fail the build. Either build the page (`src/pages/วิธีฝากถอน.astro`,
+  same shape as `ทางเข้า.astro`: `MainLayout` + `pageGraph` with a
+  breadcrumb + `ContentBox as="h1"` + a few `as="h2"` sections) or ask the
+  operator which existing page that slot should point at. A new sub-page's
+  description is **not** exempt from `DESC_MIN` 150 — only the home page is.
+
+  `หน้าแรก` stays first. When a brand has extra pages (`บทความ`,
+  `ตรวจหวย`, `แนวทาง`, `ทางเข้า`), ask which six belong in the bar
+  rather than letting the uploader's ส่วนที่ 5 **append** them and quietly
+  grow the menu — that appending is why menus drift out of shape. The
+  footer keeps the full list, so a page dropped from the navbar is still
+  linked; add any newly created page to the active `Footer*` list too.
+
+  **The CTA buttons link straight to the affiliate shortlink; the menu
+  entries stay internal.** Asked for on 2026-09-23, on GGHENG's
+  `NavbarStyle3`, and it applies to whichever variant a brand picks from
+  here on. One navbar carries both kinds of link on purpose:
+
+  | where | href |
+  | --- | --- |
+  | `links` array entries `สมัครสมาชิก` / `เข้าสู่ระบบ` | `/register/` and `/login/` |
+  | the CTA button pair — **and its twin at the foot of the mobile drawer** | the brand's shortlink |
+
+  The button is the conversion action, so it should not spend a page load
+  and the interstitial's 1.5 s meta-refresh to reach somewhere the href
+  could have named outright. The menu entries stay internal because
+  `/register/` and `/login/` are real routes with their own title and
+  description, and nothing else links to them once the buttons stop.
+
+  Take the URL from `login.astro`/`register.astro`'s own `targetUrl`
+  rather than inventing one — the uploader stages that value, and a
+  second copy that drifts is a silent wrong link. Declare it **once** in
+  the navbar frontmatter (`const affUrl = "…"`) and reference it from
+  every button, because the pair is duplicated in the markup: most
+  variants render the desktop buttons and then render them again inside
+  the mobile menu, so a literal URL has to be right in four places.
+
+  Give each one `rel="nofollow sponsored"` — it is an outbound affiliate
+  link on every page of the site, which is what `sponsored` is for.
+  `yoalink.com` and `tinyurl.com` are already in `verify-build.mjs`'s
+  `ALLOWED_HOSTS`, so the off-domain check stays green without touching
+  the gate.
+
+  Watch the indentation when scripting this edit: matching
+  `'        href="/login/"'` with `str.count` also matches the ten-space
+  copy inside the drawer, because eight spaces are a substring of ten.
+  Match whole stripped lines instead.
 
 **Rotate every family's variant on each rebrand — the ONE variant you
 must not reuse is the one the previous brand had wired in.** This is a

@@ -1047,3 +1047,20 @@ NavbarStyle family, Footer family** โดย:
 
 ### 2026-07-22 (structure) — ปิดหน้าหวยชั่วคราว (ออกจาก sitemap)
 ช่วงนี้โฟกัสสล็อต ยังไม่ใช้หน้าหวย จึงย้าย `ตรวจหวย.astro` + `แนวทาง.astro` จาก `src/pages/` → `src/pages-disabled/` (ระดับเดียวกับ pages → relative import `../components|../layouts|../assets` ยังใช้ได้ ไม่ต้องแก้โค้ด) ผ่าน `git mv` เก็บ history. ผล: Astro ไม่ route ให้ → หลุดจาก sitemap. build เหลือ 7 หน้า, sitemap เหลือ 7 URL (ไม่มี ตรวจหวย/แนวทาง). ไม่มีลิงก์ live ชี้ไป (มีแค่ FooterHuay inventory). กลับมาใช้ = `git mv src/pages-disabled/*.astro src/pages/` แล้ว build ใหม่. ธีม Huay + component (AnnouncementHuay/ContentBoxHuay/LottoGrid/LatestWinnersHuay) คงไว้เป็น inventory ไม่ลบ
+
+---
+
+## 2026-09-30 — SUMOHENG: เขียนเนื้อหาหน้าแรกใหม่จาก brief `sm.txt` (ใช้เนื้อหาจาก brief เท่านั้น)
+
+**เป้าหมาย:** เปลี่ยน title / description / H1 / H2 ×5 และย่อหน้าใต้หัวข้อของ `index.astro` ให้ตรงกับ `sm.txt` แบบคำต่อคำ และให้ heading ในหน้าเหลือเฉพาะหัวข้อจาก brief — ข้อความอื่นที่เคยเป็น `h2/h3/h4` เปลี่ยนเป็น `<p>` (class เดิม หน้าตาเดิม)
+
+**ไฟล์ที่แก้:**
+- `src/pages/index.astro` — title, description, JSON-LD (WebPage name/description, alternateName → `ซูโม่เฮง`), H1 + 5 H2 + ย่อหน้า; ส่วน "สมัครสมาชิก" ย้ายจาก `ContentBoxSpecial` (2 คอลัมน์) มาเป็น `ContentBox` ธรรมดา เพราะ brief มีย่อหน้าเดียว; ส่ง `as="p"` ให้ `ContentBoxTwo` และ `ContentBox3Three`
+- `ContentBoxTwo.astro`, `ContentBox3Three.astro` — เพิ่ม prop `as` (default `h2` / `h3` เหมือนเดิม)
+- `ProviderGrid.astro`, `LatestWinnersPremium.astro`, `ReviewCardSumo2.astro`, `FooterPremiumSumo.astro` — `h2/h3/h4` → `<p>`
+
+**สิ่งที่ปรับจาก brief:** แก้คำสะกด `ควาแม่นยำ` → `ความแม่นยำ` (description + H2), ตัดช่องว่างซ้ำใน description; ลิงก์ภายใน 3 จุดบนข้อความของ brief เอง: `ทางเข้า SUMOHENG` → `/ทางเข้า/`, `สมัครสมาชิก` → `/register/`, `โปรโมชั่นของ SUMOHENG` → `/promotion/`
+
+**Verify:** `npm run build` ผ่าน 9 หน้า; `dist/index.html`: h1=1, h2=5 (เรียงตาม brief), h3–h6=0; ทุกบรรทัดของ brief พบในหน้า; ข้อความชุดเก่า / `<!--` / `undefined` = 0
+
+**ไม่ได้แตะ:** ข้อความของ widget ที่ไม่ได้มาจาก brief ยังอยู่ (สโลแกน hero, กล่อง 3 คอลัมน์, การ์ด login, ตาราง RTP, รีวิว, ProviderGrid, carousel); `ContentBoxSpecial.astro` คงไว้เป็น inventory; ยังไม่ได้ deploy; `index.astro` เดิมมี line ending `\r\r\n` ถูก normalize เป็น CRLF ทำให้ diff ขึ้นทั้งไฟล์

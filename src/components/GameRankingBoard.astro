@@ -10,69 +10,70 @@ import img6 from "../assets/providers/game6.avif";
 const games = [
   {
     rank: 1,
-    name: "สล็อตแตกง่าย รอบสั้น หมุนไว",
-    type: "กลุ่มที่สมาชิกเปิดบ่อยที่สุด จังหวะเกมกระชับ ระบบแท้ 100% รันด้วยค่า RTP มาตรฐานสากลจากค่ายแม่ ไม่ล็อกยูส",
-    menus: ["ระบบแท้ 100%", "รอบกระชับ"],
+    name: "สล็อต PG SOFT กราฟิก 3D",
+    type: "ภาพวิจิตรบรรจง เชื่อมตรงจากค่ายแม่แบบลิขสิทธิ์แท้",
+    menus: ["PG SOFT", "ลิขสิทธิ์แท้"],
     players: 5124,
-    img: img4,
-  },
-  {
-    rank: 2,
-    name: "สล็อตสายฟีเจอร์และฟรีสปิน",
-    type: "เกมที่มีฟีเจอร์มาเต็มและรอบฟรีสปินให้ลุ้น ภาพสวย เสียงชัด เล่นลื่นไหลไม่มีสะดุด",
-    menus: ["ฟีเจอร์เต็ม", "ฟรีสปิน"],
-    players: 3842,
-    img: img5,
-  },
-  {
-    rank: 3,
-    name: "สล็อตแจ็คพอต",
-    type: "ลุ้นรางวัลใหญ่ตั้งแต่หลักแสนถึงหลักล้าน ยอดเท่าไหร่ก็โอนให้ครบทุกบาท ไม่มีผ่อนจ่าย ไม่หักค่าธรรมเนียม",
-    menus: ["แจ็คพอต", "จ่ายไม่อั้น"],
-    players: 3517,
     img: img6,
   },
   {
-    rank: 4,
-    name: "สล็อตเล่นลื่น ไม่กินเน็ต",
-    type: "ระบบเสถียร ลื่นไหล ไม่ต้องโหลดแอป เปิดเล่นได้ทั้งมือถือ ไอแพด และคอมพิวเตอร์ด้วยยูสเซอร์เดียว",
-    menus: ["ไม่กินเน็ต", "ทุกแพลตฟอร์ม"],
-    players: 2905,
+    rank: 2,
+    name: "สล็อตโรม่า Joker Gaming",
+    type: "ตำนานคลาสสิกที่เล่นง่าย ไม่ซับซ้อน แต่ผลตอบแทนหอมหวาน",
+    menus: ["Joker Gaming", "คลาสสิก"],
+    players: 3842,
     img: img2,
   },
   {
+    rank: 3,
+    name: "สล็อต Pragmatic Play ฟีเจอร์เด็ด",
+    type: "ลูกเล่นแพรวพราว ลุ้นระทึกตลอดเวลา จ่ายหนักไม่มีกั๊ก",
+    menus: ["Pragmatic Play", "ฟีเจอร์เด็ด"],
+    players: 3517,
+    img: img3,
+  },
+  {
+    rank: 4,
+    name: "สล็อตสายซื้อฟรีสปิน",
+    type: "กดเข้าโบนัสได้เลย ไม่ต้องนั่งเฝ้าจังหวะให้เมื่อยนิ้ว",
+    menus: ["ซื้อฟรีสปิน", "เข้าโบนัสได้เลย"],
+    players: 2905,
+    img: img4,
+  },
+  {
     rank: 5,
-    name: "บาคาร่าและคาสิโนสด",
-    type: "สลับบรรยากาศจากสล็อตมาที่โต๊ะไพ่ได้จากยูสเซอร์เดิม ฝากถอนผ่านธนาคารหรือ True Wallet ได้เหมือนกัน",
-    menus: ["ยูสเดียว", "True Wallet"],
+    name: "สล็อตคลาสสิกรอบสั้น",
+    type: "จบไวเข้าใจง่าย เหมาะกับบรรยากาศที่ไม่เร่ง ไม่กดดัน",
+    menus: ["รอบสั้น", "เข้าใจง่าย"],
     players: 2431,
     img: img1,
   },
   {
     rank: 6,
-    name: "ยิงปลาและเกมจังหวะไว",
-    type: "เล่นพร้อมกันหลายคนในห้องเดียว ระบบเดินต่อเนื่อง กลับเข้าเกมเดิมได้จากเมนูเดียวกับสล็อต",
-    menus: ["ห้องรวม", "กลับเข้าเกมง่าย"],
+    name: "สล็อตเกมใหม่สำหรับมือถือ",
+    type: "เมนูภาษาไทยชัดเจน รองรับทั้ง iOS และ Android",
+    menus: ["เกมใหม่", "iOS และ Android"],
     players: 2108,
-    img: img3,
+    img: img5,
   },
 ];
 
 const medal = (rank: number) => (rank === 1 ? "🥇" : rank === 2 ? "🥈" : rank === 3 ? "🥉" : null);
 ---
 
-<section aria-label="กลุ่มเกมที่สมาชิก VODKAFUN เปิดเล่นบ่อย" class="mx-auto w-full max-w-[1300px] px-4 py-8 font-sans">
-  <div class="mb-8 flex w-full flex-col items-center justify-center gap-2 text-center">
+<section aria-label="หมวดสล็อตยอดนิยมของ YIMSIAM889 ที่พี่น้องชาวไทยหมุนกันมากที่สุด" class="mx-auto w-full max-w-[1300px] px-4 py-8 font-sans">
+  <div class="mb-6 flex w-full flex-col items-center justify-center gap-2 text-center">
     <span aria-hidden="true" class="text-2xl">🏆</span>
-    <p class="bg-gradient-to-r from-[#9bf2fb] via-[#ff8fe0] to-[#ff3dc8] bg-clip-text text-2xl font-black tracking-widest text-transparent uppercase">
-      กลุ่มเกมที่สมาชิก VODKAFUN เปิดเล่นบ่อยที่สุด
+    <p class="bg-gradient-to-r from-[#eaf4ff] via-[#9cc9ff] to-[#7cc0ff] bg-clip-text text-2xl leading-normal font-black tracking-widest text-transparent uppercase">
+      หมวดสล็อตยอดนิยมของ YIMSIAM889 ที่พี่น้องชาวไทยหมุนกันมากที่สุด
     </p>
-    <p class="max-w-3xl text-base leading-relaxed text-[#ece6ff]">
-      ทุกกลุ่มในตารางนี้เข้าเล่นได้จากยูสเซอร์เดียว เลือกค่ายแล้วสลับไปมาได้ทันที ลำดับความนิยมขยับตามคนที่เข้ามาใช้งานในแต่ละช่วง ไม่ได้แปลว่ากลุ่มไหนจ่ายดีกว่ากลุ่มไหน
-      รายละเอียดเกม ตารางจ่าย และข้อมูล RTP ให้ยึดตามหน้าของเกมที่ให้บริการจริง
-    </p>
-    <div class="mt-2 h-[3px] w-24 rounded-full bg-gradient-to-r from-transparent via-[#ff3dc8] to-transparent"></div>
+    <div aria-hidden="true" class="mt-2 h-[3px] w-24 rounded-full bg-gradient-to-r from-transparent via-[#2f8cff] to-transparent"></div>
   </div>
+
+  <p class="mb-6 text-left text-base leading-relaxed text-[#d6e4ff]">
+    ทุกเกมที่ YIMSIAM889 เชื่อมต่อสัญญาณตรงจากค่ายแม่เหมือนกันหมดขอรับ อัตราการชนะจึงเป็นไปตามค่า RTP มาตรฐานสากล ไม่มีใครมาแอบปรับหลังบ้าน
+    ลำดับความนิยมในตารางนี้ขยับตามคนที่เข้ามาหมุนในแต่ละช่วง ไม่ได้แปลว่าเกมไหนแตกดีกว่าเกมไหน วัดกันที่ดวงและฝีมือล้วนๆ เหมือนกันทุกเกม
+  </p>
 
   <div class="flex flex-col gap-3">
     {
@@ -82,12 +83,12 @@ const medal = (rank: number) => (rank === 1 ? "🥇" : rank === 2 ? "🥈" : ran
           <article
             class={`group relative flex items-center gap-3 overflow-hidden rounded-2xl border p-3 transition-all duration-300 hover:-translate-y-0.5 sm:gap-5 sm:p-4 ${
               top
-                ? "border-[#ff3dc8]/55 bg-gradient-to-r from-[#120633] via-[#0a0320] to-[#120633] shadow-[0_15px_40px_rgba(255,61,200,0.26)]"
-                : "border-[#1f0b4d] bg-[#0a0320] shadow-[0_10px_30px_rgba(255,61,200,0.14)] hover:border-[#ff3dc8]/45 hover:shadow-[0_15px_40px_rgba(255,61,200,0.22)]"
+                ? "border-[#2f8cff]/55 bg-gradient-to-r from-[#0a1f4d] via-[#061538] to-[#0a1f4d] shadow-[0_15px_40px_rgba(47,140,255,0.26)]"
+                : "border-[#16357a] bg-[#061538] shadow-[0_10px_30px_rgba(47,140,255,0.14)] hover:border-[#2f8cff]/45 hover:shadow-[0_15px_40px_rgba(47,140,255,0.22)]"
             }`}>
             <div
               aria-hidden="true"
-              class="pointer-events-none absolute top-1/2 -left-10 h-24 w-24 -translate-y-1/2 rounded-full bg-[#ff3dc8]/18 blur-[40px] transition-all duration-500 group-hover:bg-[#1be5f4]/20"
+              class="pointer-events-none absolute top-1/2 -left-10 h-24 w-24 -translate-y-1/2 rounded-full bg-[#2f8cff]/18 blur-[40px] transition-all duration-500 group-hover:bg-[#7cc0ff]/20"
             />
 
             <div class="relative z-10 flex w-8 shrink-0 flex-col items-center justify-center sm:w-12">
@@ -97,14 +98,14 @@ const medal = (rank: number) => (rank === 1 ? "🥇" : rank === 2 ? "🥈" : ran
                   <span class="sr-only">อันดับ {g.rank}</span>
                 </span>
               ) : (
-                <span class="text-xl font-black text-[#ff3dc8] sm:text-2xl">#{g.rank}</span>
+                <span class="text-xl font-black text-[#7cc0ff] sm:text-2xl">#{g.rank}</span>
               )}
             </div>
 
-            <div class={`relative z-10 h-14 w-14 shrink-0 overflow-hidden rounded-xl border sm:h-16 sm:w-16 ${top ? "border-[#ff3dc8]/55" : "border-[#1f0b4d]"}`}>
+            <div class={`relative z-10 h-14 w-14 shrink-0 overflow-hidden rounded-xl border sm:h-16 sm:w-16 ${top ? "border-[#2f8cff]/55" : "border-[#16357a]"}`}>
               <Picture
                 src={g.img}
-                alt={`ภาพหน้าปกเกมประกอบรายการกลุ่ม ${g.name} บนกระดานกลุ่มเกมยอดนิยมของ VODKAFUN`}
+                alt={`ภาพหน้าปกเกมสล็อตในหมวด ${g.name} บนกระดานหมวดสล็อตยอดนิยมของ YIMSIAM889`}
                 formats={["avif", "webp"]}
                 fallbackFormat="webp"
                 loading="lazy"
@@ -119,22 +120,22 @@ const medal = (rank: number) => (rank === 1 ? "🥇" : rank === 2 ? "🥈" : ran
 
             <div class="relative z-10 min-w-0 flex-1">
               <div class="flex items-center gap-2">
-                <p class="truncate text-base font-black text-[#ff8fe0] sm:text-lg">{g.name}</p>
+                <p class="truncate text-base font-black text-[#9cc9ff] sm:text-lg">{g.name}</p>
                 {top && (
-                  <span class="hidden shrink-0 rounded-full border border-[#2c1266] bg-[#120633] px-2 py-0.5 text-[9px] font-black tracking-wider text-[#9bf2fb] sm:inline">ยอดนิยมสูงสุด</span>
+                  <span class="hidden shrink-0 rounded-full border border-[#16357a] bg-[#0a1f4d] px-2 py-0.5 text-[9px] font-black tracking-wider text-[#eaf4ff] sm:inline">ยอดนิยมสูงสุด</span>
                 )}
               </div>
-              <p class="truncate text-[11px] text-[#b9a9e6] sm:text-xs">{g.type}</p>
+              <p class="truncate text-[11px] text-[#93a9d6] sm:text-xs">{g.type}</p>
 
               <div class="mt-2 flex flex-wrap items-center gap-1.5">
                 {g.menus.map((m) => (
-                  <span class="rounded-full border border-[#1f0b4d] bg-[#120633] px-2.5 py-0.5 text-[10px] font-bold text-[#ff8fe0]">{m}</span>
+                  <span class="rounded-full border border-[#16357a] bg-[#0a1f4d] px-2.5 py-0.5 text-[10px] font-bold text-[#dbeaff]">{m}</span>
                 ))}
               </div>
             </div>
 
             <div class="relative z-10 hidden shrink-0 flex-col items-end gap-1 sm:flex">
-              <span class="flex items-center gap-1.5 text-[11px] text-[#b9a9e6]">
+              <span class="flex items-center gap-1.5 text-[11px] text-[#93a9d6]">
                 <span class="h-1.5 w-1.5 animate-pulse rounded-full bg-green-400 shadow-[0_0_6px_rgba(74,222,128,0.7)]" />
                 <span class="tabular-nums" data-players data-base={g.players}>
                   {g.players.toLocaleString("en-US")}
@@ -145,8 +146,8 @@ const medal = (rank: number) => (rank === 1 ? "🥇" : rank === 2 ? "🥈" : ran
                 href="/register/"
                 class={`rounded-full px-4 py-1.5 text-xs font-black transition-transform hover:scale-105 ${
                   top
-                    ? "bg-gradient-to-r from-[#ff8fe0] via-[#ff3dc8] to-[#ff3dc8] text-[#14042e] shadow-[0_10px_30px_rgba(255,61,200,0.34)]"
-                    : "border border-[#1f0b4d] bg-[#120633] text-[#ff8fe0] hover:border-[#ff3dc8]/55 hover:bg-[#1f0b4d]"
+                    ? "bg-gradient-to-r from-[#eaf4ff] via-[#9cc9ff] to-[#4d9dff] text-[#03133c] shadow-[0_10px_30px_rgba(47,140,255,0.4)]"
+                    : "border border-[#2f8cff]/70 bg-[#061538] text-[#dbeaff] hover:bg-[#0a1f4d]"
                 }`}>
                 สมัครเข้าเล่น
               </a>

@@ -13,24 +13,24 @@ const sectionLabel = label ?? title ?? titleleft ?? titleright ?? "ข้อม�
 
 <section aria-label={sectionLabel} class="relative z-10 mx-auto mb-10 w-full max-w-[1400px] px-4 font-sans">
   <div
-    class="group relative isolate w-full overflow-hidden rounded-3xl border border-[#1f0b4d] bg-[#0a0320] p-8 text-[#ece6ff] shadow-[0_10px_30px_rgba(27,229,244,0.16)] transition-all duration-500 hover:border-[#1be5f4]/55 md:p-10">
+    class="group relative isolate w-full overflow-hidden rounded-3xl border border-[#16357a] bg-[#020b24] p-8 text-[#d6e4ff] shadow-[0_10px_30px_rgba(124,192,255,0.16)] transition-all duration-500 hover:border-[#7cc0ff]/55 md:p-10">
     {
       title && (
-        <header class="mb-6 flex items-center gap-4 border-b border-[#1f0b4d] pb-4">
-          <span aria-hidden="true" class="h-8 w-1.5 shrink-0 rounded-full bg-gradient-to-b from-[#1be5f4] to-[#ff3dc8] shadow-[0_0_10px_rgba(27,229,244,0.45)]" />
-          <HeadingTag class="bg-gradient-to-r from-[#9bf2fb] via-[#ff8fe0] to-[#ff3dc8] bg-clip-text text-2xl leading-normal font-black tracking-widest text-transparent uppercase">{title}</HeadingTag>
+        <header class="mb-6 flex items-center gap-4 border-b border-[#16357a] pb-4">
+          <span aria-hidden="true" class="h-8 w-1.5 shrink-0 rounded-full bg-gradient-to-b from-[#7cc0ff] to-[#2f8cff] shadow-[0_0_10px_rgba(124,192,255,0.45)]" />
+          <HeadingTag class="bg-gradient-to-r from-[#eaf4ff] via-[#9cc9ff] to-[#7cc0ff] bg-clip-text text-2xl leading-normal font-black tracking-widest text-transparent uppercase">{title}</HeadingTag>
         </header>
       )
     }
 
     <div class="grid grid-cols-1 gap-6 md:grid-cols-2 lg:gap-8">
-      <article class="flex flex-col gap-4 text-left text-base leading-relaxed text-[#ece6ff]">
+      <article class="flex flex-col gap-4 text-left text-base leading-relaxed text-[#d6e4ff]">
         {
           titleleft && (
-            <p class="flex items-center gap-3 border-b border-[#1f0b4d] pb-3 text-xl leading-normal font-black tracking-widest text-[#ff3dc8] uppercase">
+            <p class="flex items-center gap-3 border-b border-[#16357a] pb-3 text-xl leading-normal font-black tracking-widest text-[#9cc9ff] uppercase">
               <span
                 aria-hidden="true"
-                class="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg border border-[#2c1266] bg-gradient-to-br from-[#9bf2fb] via-[#1be5f4] to-[#0aa4c4] text-sm text-[#14042e] shadow-[0_5px_15px_rgba(27,229,244,0.32)]">
+                class="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg border border-[#16357a] bg-gradient-to-br from-[#eaf4ff] via-[#9cc9ff] to-[#4d9dff] text-sm text-[#03133c] shadow-[0_5px_15px_rgba(124,192,255,0.32)]">
                 🔐
               </span>
               {titleleft}
@@ -40,14 +40,14 @@ const sectionLabel = label ?? title ?? titleleft ?? titleright ?? "ข้อม�
         <slot name="left" />
       </article>
 
-      <article class="flex flex-col gap-4 text-left text-base leading-relaxed text-[#ece6ff]">
+      <article class="flex flex-col gap-4 text-left text-base leading-relaxed text-[#d6e4ff]">
         {
           titleright && (
-            <p class="flex items-center gap-3 border-b border-[#1f0b4d] pb-3 text-xl leading-normal font-black tracking-widest text-[#ff3dc8] uppercase">
+            <p class="flex items-center gap-3 border-b border-[#16357a] pb-3 text-xl leading-normal font-black tracking-widest text-[#9cc9ff] uppercase">
               <span
                 aria-hidden="true"
-                class="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg border border-[#b3128a] bg-gradient-to-br from-[#ff8fe0] via-[#ff3dc8] to-[#ff3dc8] text-sm text-[#14042e] shadow-[0_5px_15px_rgba(255,61,200,0.30)]">
-                📊
+                class="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg border border-[#0b4fd6] bg-gradient-to-br from-[#9cc9ff] via-[#2f8cff] to-[#0b4fd6] text-sm text-[#03133c] shadow-[0_5px_15px_rgba(47,140,255,0.30)]">
+                🎰
               </span>
               {titleright}
             </p>

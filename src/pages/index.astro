@@ -1,82 +1,57 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
-import Announcement from "../components/AnnouncementCyber.astro";
+import Announcement from "../components/AnnouncementPremium.astro";
 import ContentBox from "../components/ContentBox.astro";
-import ContentBoxCyberCut from "../components/ContentBoxCyberCut.astro";
-import ContentBoxSpecial from "../components/ContentBoxSpecial.astro";
-import ContentBoxTwoCyberCut from "../components/ContentBoxTwoCyberCut.astro";
-import ContentBoxSevenThreeCyberCut from "../components/ContentBoxSevenThreeCyberCut.astro";
-import ContentBoxSevenThree from "../components/ContentBoxSevenThree.astro";
-import FeatureHighlights from "../components/FeatureHighlights.astro";
+import ContentBoxPremium from "../components/ContentBoxPremium.astro";
+import ContentBoxNeumorphism from "../components/ContentBoxNeumorphism.astro";
+import ContentBoxTwoPremium from "../components/ContentBoxTwoPremium.astro";
+import ContentBoxSevenThreePremium from "../components/ContentBoxSevenThreePremium.astro";
+import ContentBoxSevenThreeNeumorphism from "../components/ContentBoxSevenThreeNeumorphism.astro";
 import ProviderGrid from "../components/ProviderGrid.astro";
 import GameRankingBoard from "../components/GameRankingBoard.astro";
 import SmoothCarousel from "../components/SmoothCarousel.astro";
-import LatestWinnersPremium from "../components/LatestWinnersPremium.astro";
+import LatestWinners4 from "../components/LatestWinners4.astro";
 import LoginRtpSection from "../components/LoginRtpSection.astro";
 import ReviewCardSumo2 from "../components/ReviewCardSumo2.astro";
-import Faq3 from "../components/Faq3.astro";
+import Faq from "../components/Faq.astro";
 import Navfoot from "../components/Navfoot.astro";
 
 import { Picture } from "astro:assets";
 import { pageGraph } from "../lib/schema";
-import imgAllInOne from "../assets/slide3.png";
-import imgCommission from "../assets/slide1.png";
+import imgFair from "../assets/slide4.png";
+import imgAuto from "../assets/slide3.png";
 
-const pageTitle = "VODKAFUN เว็บตรง สล็อตปาร์ตี้ ทางเข้า ล่าสุด ฟรีสปินแตกบ่อย";
+const pageTitle = "YIMSIAM889 สล็อตสยาม เว็บตรงแตกดีจริง ยิ้มรับโปรสมาชิกใหม่";
 
 const pageDescription =
-  "VODKAFUN สล็อตปาร์ตี้ รวมค่ายเกมหลายสไตล์ ทางเข้าล่าสุด ตลอด 24 ชั่วโมง เกมสล็อตฟรีสปินแตกบ่อย ระบบฝากถอนออโต้ เว็บตรง ดูแลความปลอดภัยสมาชิก";
+  "YIMSIAM889 สล็อตสยาม ความบันเทิงฉบับไทยแท้ เว็บตรงแตกดีจริง มาตรฐานสากล ยิ้มรับโปรสมาชิกใหม่ ธุรกรรมว่องไวด้วยระบบอัตโนมัติ ทางเข้าปลอดภัย รองรับมือถือทุกระบบ";
 
-const announcementMessage =
-  "VODKAFUN เว็บตรง สล็อตสไตล์ปาร์ตี้ รวมเกมหลายค่ายไว้ในยูสเดียว • ทางเข้าล่าสุด vodkafun-brand.com เปิดผ่านเบราว์เซอร์ได้ตรง ไม่ต้องดาวน์โหลดแอป • รองรับทั้งมือถือและ PC ตลอด 24 ชั่วโมง • รวมสล็อตคลาสสิก Megaways Cascading Cluster และเกมแจ็กพอต • ฝากถอนออโต้ รองรับทั้งธนาคารและ Wallet • ให้บริการสำหรับผู้ที่มีอายุ 21 ปีขึ้นไป";
+const fairAlt =
+  "ภาพโปรโมชั่น YIMSIAM889 ข้อความตัวอักษรโครเมียมขอบน้ำเงินว่า เว็บตรงแตกดีจริง มาตรฐานสากล ด้านขวาเป็นพรีเซนเตอร์หญิงชุดราตรีเลื่อมสีน้ำเงินเงินถือไพ่ ด้านหลังเป็นมงกุฎคริสตัลบนแท่นขั้นบันไดแสงนีออนสีฟ้า มีชิปและไพ่ลอยรอบภาพ";
 
-const allInOneAlt =
-  "ภาพโปรโมชั่นธีมนีออนซินธ์เวฟ โลโก้ขวดค็อกเทลสีฟ้า VODKAFUN มุมขวาบน ปุ่มเรียงด้านซ้าย หวย บอล บาคาร่า สล็อต ข้อความขนาดใหญ่ ครบจบในที่เดียว แถบล่าง บอล คาสิโน สล็อต ยิงปลา ไก่ชน มวย ไฮโล รูเล็ต กลางภาพเป็นพรีเซนเตอร์หญิงชุดสีชมพูฟ้า";
-
-const commissionAlt =
-  "ภาพโปรโมชั่น โลโก้ VODKAFUN หัวข้อ COMMISSION คืนทุกยอดเล่นตลอดทั้งวัน 0.3% เล่นถึง 50% ถอนได้เลย สามารถกดรับง่ายๆ ที่หน้าเว็บได้เลยค่ะ รับสิทธิ์ก่อน 23.59 น. ของทุกวัน ยิ่งเล่นเยอะ ยิ่งได้เยอะ";
-
-const providerHighlights = [
-  {
-    icon: "🎰",
-    title: "Megaways",
-    description: "จำนวนช่องบนแต่ละวงล้อเปลี่ยนทุกรอบ ทางชนะไม่เท่ากันสักรอบ",
-    accent: "magenta" as const,
-  },
-  {
-    icon: "💧",
-    title: "Cascading",
-    description: "สัญลักษณ์ชนะแล้วหายไป ตัวใหม่ร่วงลงมาแทน ต่อกันได้ในรอบเดียว",
-    accent: "cyan" as const,
-  },
-  {
-    icon: "🧩",
-    title: "Cluster",
-    description: "นับชนะจากการเกาะกลุ่มของสัญลักษณ์ แทนการเรียงเป็นเส้น",
-    accent: "magenta" as const,
-  },
-];
+const autoAlt =
+  "ภาพโปรโมชั่น YIMSIAM889 ข้อความตัวอักษรโครเมียมขอบน้ำเงินว่า ธุรกรรมว่องไว ระบบอัตโนมัติ ด้านขวาเป็นพรีเซนเตอร์หญิงชุดราตรีเลื่อมสีน้ำเงินเงินผายมือไปทางโลโก้ยักษ์ของแบรนด์ มีชิปคาสิโนสีน้ำเงินและไพ่ลอยเป็นวงโค้งแสงนีออน";
 
 const faqs = [
   {
-    q: "vodkafan หรือ vodka fun แล้วเจอเว็บนี้ ใช่เว็บเดียวกันไหม",
-    a: "ใช่ เป็นเว็บเดียวกัน ชื่อที่สะกดถูกคือ VODKAFUN เขียนติดกันทั้งคำ แต่หลายคนจำเป็น vodkafan บ้าง แยกเป็น vodka fun บ้าง ทั้งหมดหมายถึงเว็บนี้ ถ้าพิมพ์แล้วเจอหน้านี้ก็มาถูกที่แล้ว",
+    q: "YIMSIAM889 เป็นเว็บสล็อตสยามแบบไหน ให้บริการเกมลิขสิทธิ์แท้หรือไม่",
+    a: "YIMSIAM889 คือเว็บสล็อตสยามที่ให้บริการเกมลิขสิทธิ์แท้ เน้นระบบโปร่งใส เล่นลื่น และให้ประสบการณ์แบบไทยแท้ขอรับ เรายึดถือคติบริการด้วยใจ ยิ้มแย้มแจ่มใสแบบไทยแท้ จึงคัดสรรเฉพาะเกมที่ถูกจริตพี่น้องชาวไทย เล่นง่าย กติกาไม่ซับซ้อนซ่อนเงื่อน คำว่าสล็อตสยามไม่ได้หมายถึงแค่ชื่อ แต่สะท้อนแนวคิดการให้บริการที่สุภาพ ไม่เร่ง ไม่กดดัน และให้เกียรติผู้เล่นทุกคน เหมาะกับท่านที่อยากเล่นในบรรยากาศที่ไม่วุ่นวาย แต่ยังได้ระบบที่ชัดเจนและเชื่อถือได้",
   },
   {
-    q: "จะรู้ได้ยังไงว่ากำลังเข้าเว็บจริง ไม่ใช่เว็บปลอม",
-    a: "เช็กสามจุดก่อนกรอกรหัส อ่านชื่อโดเมนบนแถบที่อยู่ให้ตรงทีละตัวอักษร ดูว่าขึ้นต้นด้วย https และมีกุญแจล็อก และดูว่าหน้าเข้าสู่ระบบยังอยู่บนโดเมนเดิม ถ้ากดล็อกอินแล้วเด้งไปโดเมนอื่นที่ไม่รู้จัก ให้ปิดทันที",
+    q: "YIMSIAM889 เป็นเว็บตรงไม่ผ่านเอเย่นต์จริงหรือไม่",
+    a: "จริงขอรับ YIMSIAM889 ให้บริการในรูปแบบเว็บตรง เชื่อมต่อเกมจากค่ายผู้พัฒนาโดยตรง ไม่ผ่านเอเย่นต์หรือนายหน้าค้าความใดๆ ทั้งสิ้น การรับสัญญาณเกมตรงจากค่ายแม่ทำให้ระบบเกมมีความเสถียรและยุติธรรมที่สุด ไม่มีคนกลางมาคั่นระหว่างท่านกับค่ายเกม เรื่องความซื่อสัตย์สุจริตนั้นเป็นสมบัติของผู้ดี กระผมจึงกล้ายืนยันนั่งยันว่าที่นี่โปร่งใสและตรวจสอบได้ทุกขั้นตอน",
   },
   {
-    q: "ทำไมถอนไม่ผ่าน ทั้งที่มียอดในบัญชี",
-    a: "สาเหตุที่เจอบ่อยที่สุดคือชื่อบัญชีธนาคารไม่ตรงกับชื่อที่ลงทะเบียนไว้ เพราะระบบจ่ายเงินกลับเข้าบัญชีชื่อเดียวกันเท่านั้น รองลงมาคือยังทำเงื่อนไขโบนัสไม่ครบ ถ้าเช็กสองข้อนี้แล้วยังติด ให้ทักช่องทางทางการพร้อมแจ้งเวลาที่ทำรายการ",
+    q: "เว็บตรงแตกดีจริงของ YIMSIAM889 หมายความว่าอย่างไร ระบบเกมแฟร์แค่ไหน",
+    a: "ระบบเกมของ YIMSIAM889 ทำงานตามค่า RTP มาตรฐานสากล การแตกของเกมขึ้นอยู่กับจังหวะและการเล่นจริงขอรับ คำว่าเว็บตรงแตกดีจริงของเราจึงไม่ได้กล่าวเกินจริงแต่อย่างใด เพราะเมื่อระบบมันตรงไปตรงมา อัตราการชนะก็เป็นไปตามที่ค่ายกำหนด ไม่มีใครมาแอบปรับหลังบ้านให้ท่านหงุดหงิดหัวใจ ไม่มีการกั๊กช่วงเวลาว่าต้องมาหมุนตอนไหนถึงจะเข้า วัดกันที่ดวงและฝีมือล้วนๆ ดวงดีก็รับทรัพย์กันไปถ้วนหน้า",
   },
   {
-    q: "รับโบนัสแล้วถอนได้เลยไหม",
-    a: "โบนัสเกือบทุกแบบมียอดเทิร์นที่ต้องทำก่อนถอน และมักมีเพดานยอดถอนกำหนดไว้ เงื่อนไขของแต่ละโปรจะแสดงอยู่ในหน้าโปรโมชั่นตอนกดรับ ถ้าไม่อยากติดเงื่อนไข เลือกไม่รับโบนัสแล้วเล่นด้วยเครดิตตัวเองก็ได้ ถอนได้ทันทีไม่ติดอะไร",
+    q: "โปรสมาชิกใหม่ของ YIMSIAM889 รับอย่างไร ยุ่งยากหรือไม่",
+    a: "YIMSIAM889 มีโปรสมาชิกใหม่เพื่อช่วยให้ผู้เล่นเริ่มต้นได้ง่ายและสนุกมากขึ้นขอรับ สำหรับท่านที่เพิ่งก้าวเข้ามาเป็นส่วนหนึ่งของครอบครัวเรา ทางเราจัดเตรียมของขวัญต้อนรับชุดใหญ่ไว้ให้ยิ้มกันแบบแก้มปริ ทั้งโบนัสเพิ่มทุนและสิทธิพิเศษต่างๆ ที่จัดสรรมาอย่างเหมาะสม เพื่อให้ท่านมีกระสุนในการเริ่มเล่นมากขึ้น ไม่ต้องกังวลเรื่องทุนรอน ขั้นตอนก็ไม่ยุ่งยาก สมัครปุ๊บ รับสิทธิ์ปั๊บ ง่ายดายเพียงลัดนิ้วมือเดียว",
   },
   {
-    q: "ฟรีสปินได้มาจากอะไร",
-    a: "ส่วนใหญ่ได้จากการเก็บสัญลักษณ์ Scatter ให้ครบตามที่แต่ละเกมกำหนด บางเกมสามตัว บางเกมสี่ตัวขึ้นไป จำนวนรอบที่ได้และเงื่อนไขต่อรอบจะเขียนไว้ในหน้ากติกาของเกมนั้น ผลแต่ละรอบมาจากระบบสุ่มและเป็นอิสระจากรอบก่อนหน้า ไม่มีรูปแบบให้จับ",
+    q: "ทางเข้า YIMSIAM889 รองรับอุปกรณ์อะไรบ้าง ฝากถอนต้องส่งสลิปหรือไม่",
+    a: "ทางเข้า YIMSIAM889 รองรับมือถือ iOS, Android รวมถึงคอมพิวเตอร์และแท็บเล็ต ใช้งานได้ทุกที่ขอรับ หน้าเว็บออกแบบมาให้อ่านง่าย สบายตา เมนูภาษาไทยชัดเจน ไม่ต้องแปลไทยเป็นไทยอีกรอบ ส่วนเรื่องธุรกรรมนั้นเป็นระบบอัตโนมัติเต็มรูปแบบ ท่านทำรายการได้ด้วยตัวเองผ่านแอปพลิเคชันธนาคารชั้นนำหรือทรูวอลเลท โดยไม่ต้องส่งสลิปให้แอดมินดูให้เสียเวลา ฝากปุ๊บเงินเข้าปั๊บ ถอนปุ๊บเงินโอนเข้าบัญชีทันที",
   },
 ];
 
@@ -86,182 +61,169 @@ const graph = pageGraph(Astro, {
   faqs,
 });
 
-const inlineLink = "font-bold text-[#1be5f4] underline underline-offset-4 transition-colors hover:text-[#9bf2fb]";
+const inlineLink = "font-bold text-[#7cc0ff] underline underline-offset-4 transition-colors hover:text-[#eaf4ff]";
+const slideFrame = "mx-auto h-auto w-full rounded-2xl border border-[#16357a] shadow-[0_10px_30px_rgba(47,140,255,0.22)]";
 ---
 
 <MainLayout title={pageTitle} description={pageDescription}>
   <script type="application/ld+json" set:html={graph} />
 
-  <Announcement message={announcementMessage} />
+  <Announcement />
 
   <SmoothCarousel />
 
-  <ContentBoxCyberCut as="h1" title="VODKAFUN เว็บตรง เกมสล็อตปาร์ตี้ ทางเข้า ล่าสุด สนุกกับฟรีสปินหลายสไตล์">
-    <p class="text-left text-base leading-relaxed">
-      VODKAFUN เว็บตรง เกมเดิมพันที่มีภาพลักษณ์สล็อตสไตล์ปาร์ตี้ชัดเจน ตั้งแต่การเลือกเกมเข้าระบบ คือเกมที่ภาพสด สีจัด ผู้เล่นสามารถเลือกเกมได้หลายแนวภายในยูสเดียว
-      ตั้งแต่สล็อตรอบไวไปจนถึงเกมที่มีฟรีสปิน ตัวคูณ และรอบพิเศษ เกมสล็อตในเว็บ VODKAFUN มาจากหลายค่าย แต่ละค่ายมีลายเซ็นของตัวเองไม่เหมือนกัน
-      โดยเฉพาะรอบฟรีสปินที่ออกแบบมาคนละแนว บางเกมเข้ารอบได้ถี่แต่รอบสั้น บางเกมกว่าจะเข้าต้องใจเย็น แต่พอเข้าแล้วยาวและมีตัวคูณสะสม
-      ความหลากหลายตรงนี้คือเหตุผลที่คนเล่นเรียกเว็บนี้ว่าสายปาร์ตี้
-    </p>
-  </ContentBoxCyberCut>
+  <ContentBoxPremium as="h1" title="YIMSIAM889 สล็อตสยาม เว็บตรงแตกดีจริง ยิ้มรับโปรสมาชิกใหม่">
+    <div class="flex flex-col gap-4">
+      <p class="text-left text-base leading-relaxed">
+        YIMSIAM889 สล็อตสยาม เว็บตรงที่เน้นระบบโปร่งใส เล่นลื่น แตกดีจริงตามจังหวะเกม ยิ้มรับโปรสมาชิกใหม่ สมัครง่าย ใช้งานสะดวก รองรับมือถือครบทุกระบบ
+      </p>
 
-  <ContentBoxSevenThreeCyberCut as="h2" titleright="ทางเข้า VODKAFUN ล่าสุด รองรับการใช้งานทั้งมือถือและ PC ตลอด 24 ชั่วโมง">
+      <p class="text-left text-base leading-relaxed">
+        เรียนเชิญท่านนักเสี่ยงโชคสู่ YIMSIAM889 (ยิ้มสยาม889) ที่มีความเป็นไทยแท้ๆ เว็บตรงแตกดีจริง ระบบมั่นคง ปลอดภัย อาณาจักรแห่งความบันเทิงที่พร้อมจะมอบรอยยิ้มพิมพ์ใจให้กับทุกท่าน
+        ยิ้มรับโปรสมาชิกใหม่ ที่เราจัดเตรียมไว้ให้อย่างสมเกียรติ เชิญทัศนาและร่วมสนุกกันได้เลยขอรับ!
+      </p>
+    </div>
+  </ContentBoxPremium>
+
+  <ContentBoxNeumorphism as="h2" title="รู้จัก YIMSIAM889 สล็อตสยาม ความบันเทิงฉบับไทยแท้ ยิ้มได้ทุกการหมุน">
+    <div class="flex flex-col gap-4">
+      <p class="text-left text-base leading-relaxed">
+        YIMSIAM889 ผู้ให้บริการสล็อตออนไลน์ ที่ยึดถือคติ “บริการด้วยใจ ยิ้มแย้มแจ่มใสแบบไทยแท้” เราคือศูนย์รวมเกม สล็อตสยาม ที่คัดสรรมาแล้วว่าถูกจริตพี่น้องชาวไทย เล่นง่าย
+        กติกาไม่ซับซ้อนซ่อนเงื่อน
+      </p>
+
+      <p class="text-left text-base leading-relaxed">
+        YIMSIAM889 เป็นเว็บสล็อตที่ตั้งใจผสมความเป็นกันเองแบบคนไทย เข้ากับมาตรฐานของเว็บตรงที่เน้นระบบเป็นหลัก คำว่า “สล็อตสยาม” ไม่ได้หมายถึงแค่ชื่อ
+        แต่สะท้อนแนวคิดการให้บริการที่สุภาพ ไม่เร่ง ไม่กดดัน และให้เกียรติผู้เล่นทุกคน เว็บนี้เหมาะกับคนที่อยากเล่นเกมสล็อตในบรรยากาศที่ไม่วุ่นวาย แต่ยังคงได้ระบบที่ชัดเจนและเชื่อถือได้
+      </p>
+    </div>
+  </ContentBoxNeumorphism>
+
+  <GameRankingBoard />
+
+  <ContentBoxSevenThreePremium as="h2" titleright="การันตีความแฟร์ YIMSIAM889 เว็บตรงแตกดีจริง มาตรฐานสากล">
     <Picture
       slot="left"
-      src={imgAllInOne}
-      alt={allInOneAlt}
+      src={imgFair}
+      alt={fairAlt}
       loading="lazy"
       fetchpriority="low"
-      widths={[240, 346, 480, 692]}
-      sizes="(max-width: 767px) calc(100vw - 96px), 346px"
+      widths={[338, 480, 600]}
+      sizes="(max-width: 767px) calc(100vw - 98px), 338px"
       decoding="async"
       formats={["avif", "webp"]}
       fallbackFormat="webp"
       quality={70}
-      class="mx-auto h-auto w-full rounded-2xl border border-[#2c1266] shadow-[0_10px_30px_rgba(255,61,200,0.22)]"
+      class={slideFrame}
     />
 
     <div slot="right" class="flex flex-col gap-4">
       <p class="text-left text-base leading-relaxed">
-        ทางเข้าล่าสุดของ VODKAFUN คือ vodkafun-brand.com ใช้ได้ทั้งสมาชิกเดิมที่จะ<a href="/login/" class={inlineLink}>เข้าสู่ระบบ</a>
-        เข้าใช้งานได้ตลอด 24 ชม. ทุกวัน และคนที่เพิ่งเข้ามาครั้งแรกแล้วต้องการ<a href="/register/" class={inlineLink}>สมัคร</a>
-        เปิดผ่านเบราว์เซอร์ได้ตรง ไม่ต้องดาวน์โหลดแอปหรือติดตั้งโปรแกรมเสริม รองรับ Chrome, Safari และ Edge ในเวอร์ชันปัจจุบัน หน้านี้จะอัปเดตทุกครั้งที่มีการเปลี่ยนทางเข้า
-        ถ้าวันไหนเปิดลิงก์เดิมแล้วโหลดค้างหรือขึ้นหน้าว่าง ให้กลับมาเช็กที่นี่ก่อนเป็นอันดับแรก และถ้าสงสัยว่าเป็นที่เครือข่าย ลองสลับระหว่าง Wi-Fi กับเน็ตมือถือดู หลายครั้งเข้าได้ทันที
+        เรื่องความซื่อสัตย์สุจริตนั้นเป็นสมบัติของผู้ดีขอรับ YIMSIAM889 ให้บริการในรูปแบบของเว็บตรง ไม่ผ่านเอเย่นต์หรือนายหน้าค้าความใดๆ ทั้งสิ้น เราเชื่อมต่อสัญญาณเกมโดยตรงจากค่ายแม่
+        ทำให้ระบบเกมมีความเสถียรและยุติธรรมที่สุด
       </p>
 
       <p class="text-left text-base leading-relaxed">
-        ทดสอบเข้าใช้งานล่าสุดเมื่อวันที่ 21 กันยายน บนมือถือ SAMSUNG A14 + Chrome และระบบปฏิบัติการ PC Windows 10 และ 11 + Chrome ทุกอย่างเชื่อมต่อผ่าน Wi-Fi
+        เว็บตรงแตกดีจริง ของเรานั้นไม่ได้กล่าวเกินจริงแต่อย่างใด เพราะเมื่อระบบมันตรงไปตรงมา อัตราการชนะ (RTP) ก็จะเป็นไปตามมาตรฐานสากล ไม่มีใครมาแอบปรับหลังบ้านให้ท่านหงุดหงิดหัวใจ
+        วัดกันที่ดวงและฝีมือล้วนๆ ดวงดีก็รับทรัพย์กันไปถ้วนหน้า กระผมกล้ายืนยันนั่งยันเลยว่า ที่นี่ยุติธรรม โปร่งใส ตรวจสอบได้ทุกขั้นตอนขอรับ
       </p>
     </div>
-  </ContentBoxSevenThreeCyberCut>
+  </ContentBoxSevenThreePremium>
 
-  <LoginRtpSection />
-
-  <ContentBoxSpecial as="h2" title="วิธีตรวจสอบทางเข้า VODKAFUN ว่าเป็นช่องทางทางการ">
-    <p slot="left" class="text-left text-base leading-relaxed">
-      เช็กได้ 5 จุด ใช้เวลารวมไม่ถึงสิบวินาที จุดแรกคืออ่านชื่อโดเมนบนแถบที่อยู่ทีละตัวอักษร ให้ตรงกับ https://vodkafun-brand.com/ (เดิมคือ vodkafun.com) เป๊ะ
-      เพราะเว็บที่ทำเลียนแบบมักต่างแค่ตัวอักษรเดียวหรือสลับตำแหน่งกัน เช่น vodkafan จุดที่สองคือต้องขึ้นต้นด้วย https และมีสัญลักษณ์กุญแจล็อกอยู่หน้า URL
-      จุดที่สามคือชื่อแบรนด์บนหน้าเว็บต้องสะกดตรงกับโดเมน ไม่ใช่คนละตัว
+  <ContentBox as="h3" title="PG SOFT ขวัญใจมหาชน แตกง่ายได้มาตรฐาน">
+    <p class="text-left text-base leading-relaxed">
+      หากเอ่ยถึงค่ายเกมที่งดงามประหนึ่งงานศิลปะ ต้องยกให้ PG SOFT เขาเลยขอรับ ค่ายนี้ขึ้นชื่อลือชาเรื่องกราฟิก 3D ที่วิจิตรบรรจง ทันสมัย และที่สำคัญคือระบบเกมที่ “แตกง่าย” จนเป็นที่กล่าวขาน
+      YIMSIAM889 เชื่อมต่อตรงกับค่าย pg ให้ท่านได้เพลิดเพลินกันแบบลิขสิทธิ์แท้ มั่นใจได้เลยว่าทุกการหมุนวงล้อ คือความยุติธรรมตามมาตรฐานสากล ไม่มีหมกเม็ดให้ท่านต้องระคายเคืองใจแน่นอนขอรับ
     </p>
+  </ContentBox>
 
-    <p slot="right" class="text-left text-base leading-relaxed">
-      จุดที่สี่คือ<a href="/login/" class={inlineLink}>หน้าเข้าสู่ระบบ</a>ต้องอยู่บนโดเมนเดิม ถ้ากดล็อกอินแล้วเด้งไปโดเมนอื่นที่ไม่รู้จัก ให้ปิดทันที
-      และจุดที่ห้าคือช่องทางติดต่อบนหน้าเว็บต้องตรงกับที่ระบุไว้ในหน้านี้ คือ<a href="/line/" class={inlineLink}>ไลน์ทางการของ VODKAFUN</a>
-      ช่องทางอื่นที่ใช้ชื่อหรือโลโก้คล้ายกันแต่ไม่อยู่ในรายการนี้ ไม่ใช่ช่องทางของ VODKAFUN
+  <ContentBox as="h3" title="Joker Gaming ตำนานสล็อตยุคคลาสสิก">
+    <p class="text-left text-base leading-relaxed">
+      ท่านที่หลงใหลในรสชาติความเก๋าและความขลัง Joker Gaming คือคำตอบที่ตรงใจที่สุดขอรับ อมตะนิรันดร์กาล สำหรับค่ายเกมนี้ เปรียบเสมือนเพื่อนเก่าที่รู้ใจ
+      โดยเฉพาะเกมสล็อตโรม่าอันเลื่องชื่อที่ยังคงแจกรางวัลหนักอย่างสม่ำเสมอ เป็นความคลาสสิกที่เล่นง่าย ไม่ซับซ้อน แต่ผลตอบแทนนั้นช่างหอมหวาน
+      กระผมเรียนเชิญท่านมาร่วมรำลึกความหลังและกอบโกยกำไรจากตำนานบทนี้กันเถิดขอรับ
     </p>
-  </ContentBoxSpecial>
+  </ContentBox>
 
-  <ContentBoxCyberCut as="h2" title="สมัคร VODKAFUN สำหรับสมาชิกใหม่ พร้อมเงื่อนไขโบนัสที่ควรรู้ก่อนรับสิทธิ์">
-    <div class="flex flex-col gap-4">
-      <p class="text-left text-base leading-relaxed">
-        การสมัคร VODKAFUN สำหรับสมาชิกใหม่ เริ่มจากเปิดหน้าสมัครผ่านช่องทางทางการ กรอกข้อมูลและผูกบัญชีธนาคารตามขั้นตอนของระบบ ควรใช้เบอร์โทรศัพท์ที่ติดต่อได้จริง
-        และบัญชีธนาคารที่ชื่อเจ้าของตรงกับข้อมูลสมาชิก เพราะข้อมูลที่ไม่ตรงกันอาจทำให้ระบบต้องตรวจสอบเพิ่มเติมเมื่อต้องทำรายการทางการเงินในภายหลัง
-      </p>
-
-      <p class="text-left text-base leading-relaxed">
-        หากต้องการรับโบนัส <a href="/promotion/" class={inlineLink}>โปรโมชั่น VODKAFUN</a> ควรอ่านเงื่อนไขของรายการนั้นให้ครบ โดยดูทั้งยอดฝากขั้นต่ำ
-        ยอดทำรายการที่กำหนด เกมที่เข้าร่วม และจำนวนครั้งที่รับสิทธิ์ โปรโมชั่นของ VODKAFUN อาจมีรายละเอียดต่างกันในแต่ละช่วงเวลา
-      </p>
-
-      <a
-        href="/register/"
-        class="inline-flex w-fit items-center gap-2 rounded-full bg-gradient-to-r from-[#1be5f4] to-[#0aa4c4] px-7 py-3 text-sm font-black tracking-widest text-[#14042e] shadow-[0_10px_30px_rgba(27,229,244,0.34)] transition-transform duration-300 hover:scale-105">
-        <span aria-hidden="true">🍸</span> สมัครสมาชิก VODKAFUN
-      </a>
-    </div>
-  </ContentBoxCyberCut>
-
-  <ContentBox as="h2" title="VODKAFUN สล็อตสายปาร์ตี้ รวมหลายค่าย หลายสไตล์ เล่นได้ในยูสเดียว">
-    <div class="flex flex-col gap-4">
-      <p class="text-left text-base leading-relaxed">
-        ยูสเดียวเล่นได้ทุกเกม ทุกค่าย บนเว็บตรง VODKAFUN มีให้เลือกหลายกลุ่ม ตั้งแต่สล็อตคลาสสิกที่กติกาตรงไปตรงมา อ่านไลน์ชนะได้ทันทีตั้งแต่รอบแรก
-        ไปจนถึงกลุ่มที่เปลี่ยนวิธีนับรางวัลไปคนละแบบ
-      </p>
-
-      <FeatureHighlights items={providerHighlights} />
-
-      <p class="text-left text-base leading-relaxed">
-        และกลุ่มแจ็กพอตที่มียอดสะสมกองกลางเพิ่มขึ้นตามการเล่น ทั้งหมดเล่นจากยูสเดียว ไม่ต้องเปิดหลายบัญชีตามค่าย และไม่ต้องโอนเครดิตไปมาให้เสียจังหวะ
-        อยากดูก่อนว่าแต่ละกลุ่มเล่นยังไง เปิด<a href="/ทดลองเล่น/" class={inlineLink}>โหมดทดลองเล่น</a>ดูรอบเกมได้ก่อนลงเครดิตจริง
-      </p>
-    </div>
+  <ContentBox as="h3" title="Pragmatic Play (PP) ฟีเจอร์เด็ดดวง จ่ายหนักไม่มีกั๊ก">
+    <p class="text-left text-base leading-relaxed">
+      หากท่านปรารถนาความตื่นเต้นในระดับสากล Pragmatic Play หรือที่เรียกกันติดปากว่า PP นั้นไม่ทำให้ผิดหวังขอรับ ค่ายนี้โดดเด่นเรื่องฟีเจอร์ที่แพรวพราว มีลูกเล่นให้ลุ้นระทึกตลอดเวลา
+      และมีอัตราการจ่ายที่หนักหน่วงสมน้ำสมเนื้อ เป็นค่ายใหญ่ระดับโลกที่กระผมภูมิใจนำเสนอ เพื่อให้ท่านได้สัมผัสประสบการณ์ระดับเฟิร์สคลาสที่นี่ที่เดียวขอรับ
+    </p>
   </ContentBox>
 
   <ProviderGrid />
 
-  <ContentBoxSevenThree as="h2" titleright="สล็อตฟรีสปินแตกบ่อย VODKAFUN รวมเกมโบนัสสำหรับสายชอบลุ้นรอบพิเศษ">
-    <Picture
-      slot="left"
-      src={imgCommission}
-      alt={commissionAlt}
-      loading="lazy"
-      fetchpriority="low"
-      widths={[240, 353, 480, 706]}
-      sizes="(max-width: 767px) calc(100vw - 96px), 353px"
-      decoding="async"
-      formats={["avif", "webp"]}
-      fallbackFormat="webp"
-      quality={70}
-      class="mx-auto h-auto w-full rounded-2xl border border-[#2c1266] shadow-[0_10px_30px_rgba(27,229,244,0.22)]"
-    />
-
-    <div slot="right" class="flex flex-col gap-4">
-      <p class="text-left text-base leading-relaxed">
-        ฟรีสปินเป็นฟีเจอร์รอบพิเศษที่เกมสล็อตบางเกมเปิดให้เมื่อเกิดเงื่อนไขตามที่เกมกำหนด เช่น การได้สัญลักษณ์ Scatter ครบจำนวนที่ระบุ
-        เกมบางแบบเพิ่มจำนวนรอบจากการได้ Scatter ซ้ำระหว่างฟรีสปิน ขณะที่บางเกมใช้ตัวคูณหรือฟีเจอร์เสริมเข้ามาเปลี่ยนรูปแบบรางวัล จึงควรดูข้อมูลของแต่ละเกมใน VODKAFUN ก่อนเริ่มเล่น
-      </p>
-
-      <p class="text-left text-base leading-relaxed">
-        รูปแบบฟรีสปินของแต่ละค่ายไม่ได้เหมือนกันทั้งหมด เกมบางประเภทให้จำนวนรอบมากแต่ใช้ตัวคูณไม่สูง ขณะที่อีกแบบอาจให้รอบเริ่มต้นน้อยกว่าแต่มีโอกาสสะสมตัวคูณหรือเปิดฟีเจอร์เพิ่มเติม
-      </p>
-    </div>
-  </ContentBoxSevenThree>
-
-  <ContentBoxTwoCyberCut
-    as="h2"
-    title="ระบบออโต้ รองรับธนาคารและ Wallet พร้อมตรวจสอบยอดขั้นต่ำก่อนทำรายการ"
-    titleleft="ฝากออโต้"
-    titleright="ถอนออโต้">
-    <p>ฝากถอนออโต้ ใช้สำหรับทำรายการผ่านบัญชีสมาชิก โดยเลือกช่องทางธนาคารหรือ Wallet ที่ระบบรองรับ แล้วทำรายการตามขั้นตอนที่แสดงในหน้าฝาก</p>
-
+  <ContentBoxTwoPremium as="h2" title="เปิดเรือนต้อนรับ ยิ้มรับโปรสมาชิกใหม่ คุ้มค่าตั้งแต่ก้าวแรก" titleleft="ของขวัญต้อนรับชุดใหญ่" titleright="สมัครปุ๊บ รับสิทธิ์ปั๊บ">
     <p slot="left" class="text-left text-base leading-relaxed">
-      ควรใช้บัญชีที่ผูกกับยูสของตัวเองเพื่อให้ข้อมูลผู้ทำรายการตรงกัน และไม่ควรโอนผ่านบัญชีบุคคลอื่นหากระบบไม่ได้รองรับวิธีดังกล่าว
+      สำหรับท่านที่เพิ่งก้าวเข้ามาเป็นส่วนหนึ่งของครอบครัวเรา YIMSIAM889 ได้จัดเตรียมของขวัญต้อนรับชุดใหญ่ ให้ท่านได้ <a href="/promotion/" class={inlineLink}>ยิ้มรับโปรสมาชิกใหม่</a>
+      กันแบบแก้มปริ การต้อนรับแขกบ้านแขกเมืองเป็นธรรมเนียมไทยแท้ขอรับ ไม่ว่าจะเป็นโบนัสเพิ่มทุน หรือสิทธิพิเศษต่างๆ กระผมจัดสรรมาให้อย่างเหมาะสม
     </p>
 
     <div slot="right" class="flex flex-col gap-4">
       <p class="text-left text-base leading-relaxed">
-        สำหรับการถอน สมาชิกควรตรวจสอบยอดขั้นต่ำ เงื่อนไขของบัญชี และสถานะรายการก่อนยืนยัน เวลาประมวลผลอาจแตกต่างกันได้ในบางช่วง เช่น ระบบธนาคารอยู่ระหว่างปรับปรุง
-        หรือรายการจำเป็นต้องตรวจสอบข้อมูลเพิ่มเติม
+        เพื่อให้ท่านมี “กระสุน” ในการเริ่มเล่นที่มากขึ้น ถือเป็นน้ำใจเล็กๆ น้อยๆ จากทางเรา เพื่อให้ท่านเริ่มต้นความสนุกได้อย่างมั่นใจ ไม่ต้องกังวลเรื่องทุนรอน สมัครปุ๊บ รับสิทธิ์ปั๊บ
+        ง่ายดายเพียงลัดนิ้วมือเดียว
+      </p>
+
+      <a
+        href="/register/"
+        class="inline-flex w-fit items-center gap-2 rounded-full bg-gradient-to-r from-[#eaf4ff] via-[#9cc9ff] to-[#4d9dff] px-7 py-3 text-sm font-black tracking-widest text-[#03133c] shadow-[0_10px_30px_rgba(47,140,255,0.4)] transition-transform duration-300 hover:scale-105">
+        <span aria-hidden="true">🎁</span> สมัครสมาชิก YIMSIAM889
+      </a>
+    </div>
+  </ContentBoxTwoPremium>
+
+  <ContentBoxSevenThreeNeumorphism as="h2" titleright="ธุรกรรมว่องไว ฝากถอนผ่าน ระบบอัตโนมัติ ปลอดภัยหายห่วง">
+    <Picture
+      slot="left"
+      src={imgAuto}
+      alt={autoAlt}
+      loading="lazy"
+      fetchpriority="low"
+      widths={[381, 480, 600]}
+      sizes="(max-width: 767px) calc(100vw - 98px), 381px"
+      decoding="async"
+      formats={["avif", "webp"]}
+      fallbackFormat="webp"
+      quality={70}
+      class={slideFrame}
+    />
+
+    <div slot="right" class="flex flex-col gap-4">
+      <p class="text-left text-base leading-relaxed">
+        <a href="/วิธีฝากถอน/" class={inlineLink}>ระบบฝาก-ถอนของ YIMSIAM889</a> ได้นำเทคโนโลยีสมัยใหม่เข้ามาช่วยอำนวยความสะดวก เป็นระบบอัตโนมัติ (Auto) ที่ทำงานรวดเร็วปานกามนิตหนุ่ม
+        เรื่องเงินๆ ทองๆ ต้องรอบคอบ แต่ก็ต้องรวดเร็วด้วยเช่นกันขอรับ
       </p>
 
       <p class="text-left text-base leading-relaxed">
-        หากรายการค้างเกินเวลาที่แจ้งไว้ ควร<a href="/contact-us/" class={inlineLink}>ติดต่อแอดมิน</a> พร้อมแจ้งข้อมูลรายการเพื่อให้ตรวจสอบได้ตรงจุด
+        ท่านสามารถทำรายการได้ด้วยตัวเองผ่านแอปพลิเคชันธนาคารชั้นนำ หรือทรูวอลเลท โดยไม่ต้องส่งสลิปให้แอดมินดูให้เสียเวลา ฝากปุ๊บเงินเข้าปั๊บ ถอนปุ๊บเงินโอนเข้าบัญชีทันที ถูกต้อง แม่นยำ
+        และปลอดภัยสูงสุด ให้ท่านสบายใจได้เลยว่า ทุกบาททุกสตางค์ของท่านจะถูกดูแลเป็นอย่างดีขอรับ
       </p>
     </div>
-  </ContentBoxTwoCyberCut>
+  </ContentBoxSevenThreeNeumorphism>
 
-  <ContentBoxCyberCut as="h2" title="ความปลอดภัยบน VODKAFUN เว็บตรง พร้อมการดูแลบัญชีและข้อมูลส่วนบุคคล">
+  <LatestWinners4 />
+
+  <ContentBoxPremium as="h2" title="ทางเข้า YIMSIAM889 เล่นสะดวกสบาย รองรับทุกอุปกรณ์ อยู่ที่ไหนก็สนุกได้">
     <div class="flex flex-col gap-4">
       <p class="text-left text-base leading-relaxed">
-        VODKAFUN เว็บตรง ให้บริการสำหรับผู้ที่มีอายุ 21 ปีขึ้นไป ฝั่งระบบ การเชื่อมต่อระหว่างเครื่องของสมาชิกกับเว็บทำผ่าน HTTPS ทั้งหมด
-        ซึ่งเป็นเหตุผลที่ต้องเห็นสัญลักษณ์กุญแจล็อกอยู่หน้า URL ทุกครั้งที่เข้าใช้งาน การเข้าสู่ระบบใช้เบอร์โทรที่ลงทะเบียนคู่กับรหัสผ่านที่ตั้งเอง
-        และมีรหัสยืนยันส่งเข้าเบอร์ในขั้นตอนที่จำเป็น ข้อมูลที่ระบบเก็บมีเท่าที่ต้องใช้ยืนยันตัวตนและทำรายการเท่านั้น ไม่ถูกส่งต่อให้บุคคลภายนอก
+        ในยุคสมัยนี้ ความสะดวกสบายเป็นอีกปัจจัย ที่ต้องนำมาคิดพัฒนาเว็บไซต์สล็อตออนไลน์ ไม่ว่าท่านจะนอนเล่นเอกเขนกอยู่บนเรือน เดินทางไกล หรือพักผ่อนหย่อนใจที่ไหน ก็สามารถเข้าถึง
+        <a href="/ทางเข้า/" class={inlineLink}>ทางเข้า YIMSIAM889</a>
+        ได้ง่ายๆ ผ่านโทรศัพท์มือถือทุกรุ่น ทั้ง iOS และ Android รวมถึงคอมพิวเตอร์และแท็บเล็ต
       </p>
 
       <p class="text-left text-base leading-relaxed">
-        ในฝั่งสมาชิก การรักษาบัญชีและข้อมูลส่วนบุคคล เริ่มจากการไม่เปิดเผยรหัสผ่านหรือ OTP ให้บุคคลอื่น ตรวจชื่อโดเมนก่อนล็อกอิน
-        และหลีกเลี่ยงการกดลิงก์ที่ส่งมาจากแหล่งที่ไม่รู้จัก
+        หน้าเว็บไซต์ของเราออกแบบมาให้อ่านง่าย สบายตา เมนูภาษาไทยชัดเจน ไม่ต้องแปลไทยเป็นไทยอีกรอบ เล่นได้ลื่นไหลไม่มีสะดุด ให้ท่านพกพาความสนุกและความรวยติดตัวไปได้ทุกที่ทุกเวลาขอรับ
       </p>
     </div>
-  </ContentBoxCyberCut>
+  </ContentBoxPremium>
 
-  <Faq3 title="คำถามที่พบบ่อยเกี่ยวกับ VODKAFUN" faqs={faqs} />
+  <LoginRtpSection />
 
-  <GameRankingBoard />
+  <Faq title="คำถามที่พบบ่อยเกี่ยวกับ YIMSIAM889" faqs={faqs} />
 
-  <LatestWinnersPremium />
-
-  <ReviewCardSumo2 title="เสียงตอบรับจากสมาชิก VODKAFUN" />
+  <ReviewCardSumo2 />
 
   <Navfoot />
 </MainLayout>

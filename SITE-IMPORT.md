@@ -83,7 +83,7 @@ npm run rebrand:upload
 ### ③ เขียนจริง
 
 ```powershell
-node tools/site-import.mjs topgamevip-homepage.net --write --force
+node tools/site-import.mjs yimsiam889-brand.com --write --force
 ```
 
 - `--write` — เขียนลง `src/assets/content.txt`

@@ -11,15 +11,15 @@ const rightHeading = titleright ?? title;
 
 <section class="relative z-10 mx-auto mb-8 w-full max-w-7xl px-4 font-sans">
   <div
-    class="group relative isolate w-full overflow-hidden rounded-3xl border border-[#5c0b13] bg-[#140202] p-8 text-[#f7e6d0] shadow-[0_10px_30px_rgba(245,197,66,0.16)] transition-all duration-500 hover:border-[#f5c542]/55 hover:shadow-[0_15px_40px_rgba(245,197,66,0.28)] md:p-10">
-    <div aria-hidden="true" class="pointer-events-none absolute -top-24 -left-24 -z-10 h-48 w-48 rounded-full bg-[#f5c542]/18 blur-[60px] transition-all duration-500 group-hover:bg-[#ffd34d]/26"></div>
-    <div aria-hidden="true" class="pointer-events-none absolute -right-24 -bottom-24 -z-10 h-48 w-48 rounded-full bg-[#e11d1d]/16 blur-[60px] transition-all duration-500 group-hover:bg-[#ff5a4a]/24"></div>
+    class="group relative isolate w-full overflow-hidden rounded-3xl border border-[#16357a] bg-[#061538] p-8 text-[#d6e4ff] shadow-[0_10px_30px_rgba(47,140,255,0.16)] transition-all duration-500 hover:border-[#2f8cff]/55 hover:shadow-[0_15px_40px_rgba(47,140,255,0.28)] md:p-10">
+    <div aria-hidden="true" class="pointer-events-none absolute -top-24 -left-24 -z-10 h-48 w-48 rounded-full bg-[#2f8cff]/18 blur-[60px] transition-all duration-500 group-hover:bg-[#2f8cff]/26"></div>
+    <div aria-hidden="true" class="pointer-events-none absolute -right-24 -bottom-24 -z-10 h-48 w-48 rounded-full bg-[#7cc0ff]/16 blur-[60px] transition-all duration-500 group-hover:bg-[#7cc0ff]/24"></div>
 
     <div class="grid grid-cols-1 gap-10 md:grid-cols-[3fr_7fr] md:items-center">
-      <article class="flex flex-col gap-4 text-left text-base leading-relaxed text-[#f7e6d0]">
+      <article class="flex flex-col gap-4 text-left text-base leading-relaxed text-[#d6e4ff]">
         {
           titleleft && (
-            <p class="bg-gradient-to-r from-[#ffe9a3] via-[#ffd34d] to-[#ff8a70] bg-clip-text text-center text-xl leading-normal font-black tracking-widest text-transparent uppercase md:text-left">
+            <p class="bg-gradient-to-r from-[#eaf4ff] via-[#9cc9ff] to-[#7cc0ff] bg-clip-text text-center text-xl leading-normal font-black tracking-widest text-transparent uppercase md:text-left">
               {titleleft}
             </p>
           )
@@ -27,10 +27,10 @@ const rightHeading = titleright ?? title;
         <slot name="left" />
       </article>
 
-      <article class="flex flex-col gap-4 text-left text-base leading-relaxed text-[#f7e6d0] md:border-l md:border-[#5c0b13] md:pl-10">
+      <article class="flex flex-col gap-4 text-left text-base leading-relaxed text-[#d6e4ff] md:border-l md:border-[#16357a] md:pl-10">
         {
           rightHeading && (
-            <HeadingTag class="mb-2 bg-gradient-to-r from-[#ffe9a3] via-[#ffd34d] to-[#ff8a70] bg-clip-text text-2xl leading-normal font-black tracking-widest text-transparent uppercase">
+            <HeadingTag class="mb-2 bg-gradient-to-r from-[#eaf4ff] via-[#9cc9ff] to-[#7cc0ff] bg-clip-text text-2xl leading-normal font-black tracking-widest text-transparent uppercase">
               {rightHeading}
             </HeadingTag>
           )

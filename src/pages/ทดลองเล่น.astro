@@ -2,7 +2,7 @@
 import MainLayout from "../layouts/MainLayout.astro";
 import ContentBox from "../components/ContentBox.astro";
 import Navfoot from "../components/Navfoot.astro";
-import Announcement from "../components/AnnouncementPremium.astro";
+import Announcement from "../components/Announcement5.astro";
 
 import { Picture } from "astro:assets";
 import { itemList, pageGraph, schemaCtx } from "../lib/schema";
@@ -36,12 +36,14 @@ const demoGames = [
 
 const gameList = demoGames.map((game) => ({ name: game.name, imagePath: game.src.src }));
 
-const pageTitle = "ทดลองเล่นสล็อต YIMSIAM889 - ลองระบบเกมก่อนใช้เครดิตจริง";
+const pageTitle = "ทดลองเล่นสล็อต VODKAFUN ลองเกมเวอร์ชั่นใหม่ให้คุ้นมือก่อนเล่นจริง";
 
-const pageHeading = "ทดลองเล่นสล็อต YIMSIAM889 ลองระบบเกมให้คุ้นมือก่อนใช้เครดิตจริง";
+const pageHeading = "ทดลองเล่นสล็อต VODKAFUN ลองเกมเวอร์ชั่นใหม่ให้คุ้นมือก่อนใช้เครดิตจริง";
 
 const pageDescription =
-  "ทดลองเล่นสล็อต YIMSIAM889 เว็บตรงไม่ผ่านเอเย่นต์ เปิดดูหน้าเกมจากค่าย PG SOFT Joker Gaming และ Pragmatic Play ก่อนใช้เครดิตจริง ดูเดิมพันต่อรอบและฟีเจอร์โบนัส";
+  "ทดลองเล่นสล็อต VODKAFUN สมัครยูสเดียวแล้วเข้าโหมดทดลองของค่ายดังได้ทันที หมุนด้วยเครดิตสมมติไม่จำกัดรอบ ดูเดิมพันต่อรอบและฟีเจอร์โบนัสให้คุ้นมือก่อนเล่นจริง";
+
+const linkClass = "font-bold text-[#c8fc04] underline underline-offset-4 transition-colors hover:text-[#e6ff6a]";
 
 const ctx = schemaCtx(Astro);
 const graph = pageGraph(Astro, {
@@ -54,8 +56,8 @@ const graph = pageGraph(Astro, {
   ],
   extra: [
     itemList(ctx, {
-      name: "ทดลองเล่นเกมสล็อตของ YIMSIAM889",
-      alternateName: "YIMSIAM889 โหมดทดลองเล่นสล็อตหลายค่ายบนมือถือ ก่อนใช้เครดิตจริงด้วยยูสเซอร์เดียว",
+      name: "ทดลองเล่นเกมสล็อตของ VODKAFUN",
+      alternateName: "VODKAFUN โหมดทดลองเล่นสล็อตหลายค่ายบนมือถือ ก่อนใช้เครดิตจริงด้วยยูสเซอร์เดียว",
       itemType: "Game",
       items: gameList,
     }),
@@ -71,32 +73,32 @@ const graph = pageGraph(Astro, {
   <ContentBox as="h1" title={pageHeading}>
     <div class="flex flex-col gap-4">
       <p class="text-left text-base leading-relaxed">
-        หากท่านกำลังมองหาที่ลองเกมให้คุ้นมือก่อนลงเครดิตจริง <strong class="text-[#9cc9ff]">YIMSIAM889</strong> สล็อตสยามเว็บตรงไม่ผ่านเอเย่นต์ พร้อมเปิดเรือนให้ท่านเข้ามาดูหน้าเกมจากค่ายดัง เพื่อให้รู้จังหวะของเกมก่อนตัดสินใจขอรับ
+        หากคุณกำลังมองหาที่ลองเกมให้คุ้นมือก่อนลงเครดิตจริง <strong class="text-[#c8fc04]">VODKAFUN</strong> พร้อมเปิดหน้าเกมสล็อตเวอร์ชั่นใหม่จากค่ายดังให้คุณเข้ามาดูของจริง เพื่อให้รู้จังหวะและฟีเจอร์ของเกมก่อนตัดสินใจ
       </p>
       <p class="text-left text-base leading-relaxed">
-        เชิญเลือกค่ายที่สะดุดตาจากด้านล่าง กดที่ภาพเพื่อสมัครสมาชิกเพียงครั้งเดียว แล้วเข้าโหมดทดลองของค่ายนั้นต่อได้จากหน้าสมาชิก ใช้เวลาเพียงครู่เดียวก็พร้อมลองแล้วขอรับ
+        เลือกค่ายที่สะดุดตาจากด้านล่าง กดที่ภาพเพื่อสมัครยูสเดียวใช้เวลาไม่กี่นาที แล้วเข้าโหมดทดลองของค่ายนั้นต่อได้จากหน้าสมาชิกทันที ไม่ต้องเปิดบัญชีใหม่ทีละค่าย
       </p>
       <p class="text-left text-base leading-relaxed">
-        จะเปิดจากมือถือ iOS หรือ Android แท็บเล็ต หรือคอมพิวเตอร์ ก็ใช้ยูสเซอร์เดิมได้ทุกเครื่อง เมนูภาษาไทยอ่านง่ายสบายตา ไม่ต้องแปลไทยเป็นไทยอีกรอบ
+        จะเปิดจากมือถือ iOS หรือ Android แท็บเล็ต หรือคอมพิวเตอร์ ก็ใช้ยูสเซอร์เดิมได้ทุกเครื่อง เมนูภาษาไทยอ่านง่าย ลองเกมได้ทุกที่ที่คุณสะดวก
       </p>
     </div>
   </ContentBox>
 
-  <ContentBox as="h2" title="เลือกค่ายที่ถูกใจ สมัครสมาชิก YIMSIAM889 ครั้งเดียว ยูสเดียวลองได้หลายค่าย">
+  <ContentBox as="h2" title="เลือกค่ายที่ถูกใจ สมัคร VODKAFUN ครั้งเดียว ยูสเดียวลองได้หลายค่าย">
     <div class="flex flex-col gap-4">
       <p class="text-left text-base leading-relaxed">
-        เรือนนี้รวมเกมไว้หลายรส ทั้งสล็อตกราฟิก 3D ของ PG SOFT เกมคลาสสิกรอบสั้นของ Joker Gaming และเกมฟีเจอร์แพรวพราวของ Pragmatic Play ทุกค่ายเชื่อมสัญญาณตรงจากค่ายแม่แบบลิขสิทธิ์แท้ขอรับ
+        VODKAFUN รวมเกมครบครันไว้ให้คุณในบัญชีเดียว ทั้งสล็อต ยิงปลา กีฬา คาสิโน และหวย ค่ายสล็อตบนหน้านี้คือจุดเริ่มที่ง่ายที่สุด เพราะส่วนใหญ่มีโหมดทดลองให้เปิดดูได้ทันทีหลังสมัคร
       </p>
       <p class="text-left text-base leading-relaxed">
-        ปุ่มบนภาพเขียนว่าสมัครเพื่อลอง เพราะจะพาท่านไปขั้นตอนสมัครสมาชิกก่อน กรอกข้อมูลเบื้องต้นให้ครบก็ได้ยูสเซอร์ไว้เข้าสู่ระบบ แล้วเลือกเปิดเกมที่อยากลองได้จากหน้าสมาชิกทันที
+        ปุ่มบนภาพเขียนว่าสมัครเพื่อลอง เพราะจะพาคุณไปขั้นตอน <a href="/register/" class={linkClass}>สมัครสมาชิก</a> ก่อน กรอกข้อมูลเบื้องต้นให้ครบก็ได้ยูสเซอร์ไว้เข้าสู่ระบบ แล้วเลือกเปิดเกมที่อยากลองได้จากหน้าสมาชิก
       </p>
       <p class="text-left text-base leading-relaxed">
-        สมัครครั้งเดียวใช้ได้กับทุกค่ายในเรือน อยากเปลี่ยนบรรยากาศจากเกมหนึ่งไปอีกเกมก็กดสลับได้เลย ไม่ต้องเปิดบัญชีใหม่ทีละค่ายให้วุ่นวาย
+        สมัครครั้งเดียวใช้ได้กับทุกค่ายบน VODKAFUN อยากเปลี่ยนบรรยากาศจากเกมหนึ่งไปอีกเกมก็กดสลับได้เลย เล่นสล็อตเสร็จจะแวะไปยิงปลาหรือดูบอลต่อก็ยูสเดิม
       </p>
       <div class="mt-4 mb-5 grid grid-cols-2 gap-5 sm:grid-cols-2 md:grid-cols-4">
         {
           demoGames.map((game) => (
-            <div class="group/game relative mx-auto w-full max-w-[400px] overflow-hidden rounded-xl border border-[#16357a]">
+            <div class="group/game relative mx-auto w-full max-w-[400px] overflow-hidden rounded-xl border border-[#1d5c22] bg-[#06230a]">
               <Picture
                 src={game.src}
                 alt={game.alt}
@@ -104,7 +106,7 @@ const graph = pageGraph(Astro, {
                 fetchpriority="low"
                 widths={[200, 400, 600]}
                 sizes="(max-width: 768px) 50vw, 25vw"
-                class="block h-auto w-full object-cover shadow-[0_10px_30px_rgba(47,140,255,0.18)] transition-transform duration-300 group-hover/game:scale-105"
+                class="block h-auto w-full object-cover shadow-[0_10px_30px_rgba(200,252,4,0.18)] transition-transform duration-300 group-hover/game:scale-105"
                 decoding="async"
                 formats={["avif", "webp"]}
                 fallbackFormat="webp"
@@ -114,9 +116,9 @@ const graph = pageGraph(Astro, {
                 href="/register/"
                 target="_blank"
                 rel="noopener noreferrer"
-                aria-label={`สมัครสมาชิก YIMSIAM889 เพื่อลองเล่น ${game.name}`}
-                class="absolute inset-0 flex items-center justify-center bg-[#020b24]/85 opacity-0 transition-opacity duration-300 group-hover/game:opacity-100 focus-visible:opacity-100">
-                <span class="rounded-full border border-[#0b4fd6]/60 bg-gradient-to-r from-[#eaf4ff] via-[#9cc9ff] to-[#4d9dff] px-6 py-2 font-bold text-[#03133c] shadow-[0_10px_30px_rgba(47,140,255,0.4)] transition-transform hover:scale-110">สมัครเพื่อลอง</span>
+                aria-label={`สมัครสมาชิก VODKAFUN เพื่อลองเล่น ${game.name}`}
+                class="absolute inset-0 flex items-center justify-center bg-[#020f03]/85 opacity-0 transition-opacity duration-300 group-hover/game:opacity-100 focus-visible:opacity-100">
+                <span class="rounded-xl bg-gradient-to-r from-[#e6ff6a] via-[#c8fc04] to-[#7ee000] px-6 py-2 font-bold text-[#0b2a05] shadow-[0_10px_30px_rgba(200,252,4,0.35)] transition-transform hover:scale-110">สมัครเพื่อลอง</span>
               </a>
             </div>
           ))
@@ -128,40 +130,53 @@ const graph = pageGraph(Astro, {
   <ContentBox as="h2" title="ทดลองเล่นฟรีไม่จำกัดรอบ ลองให้พอใจก่อนใช้เครดิตจริง">
     <div class="flex flex-col gap-4">
       <p class="text-left text-base leading-relaxed">
-        เข้าโหมดทดลองแล้วหมุนได้ไม่จำกัดรอบ เพราะใช้เครดิตสมมติทั้งหมด ท่านอยากลองผิดลองถูกกี่ครั้งก็เชิญตามสบาย ไม่เร่ง ไม่กดดัน ตามแบบฉบับการต้อนรับของเรือนยิ้มสยามขอรับ
+        เข้าโหมดทดลองแล้วหมุนได้ไม่จำกัดรอบ เพราะใช้เครดิตสมมติทั้งหมด คุณอยากลองผิดลองถูกกี่ครั้งก็ได้ตามสบาย ไม่มีใครเร่ง ไม่มีใครกดดันให้ฝากก่อนที่คุณจะพร้อม
       </p>
       <p class="text-left text-base leading-relaxed">
-        ระหว่างลองเชิญสังเกตไปด้วยว่าเดิมพันต่อรอบเริ่มที่เท่าไร ฟรีสปินกับฟีเจอร์โบนัสเข้ามาในจังหวะไหน และหนึ่งรอบยาวพอดีกับที่ท่านชอบหรือไม่ จะได้เลือกเกมที่ถูกจริตตัวเองตั้งแต่ยังไม่ลงทุน
+        ระหว่างลองให้สังเกตว่าเดิมพันต่อรอบเริ่มที่เท่าไร ฟรีสปินกับฟีเจอร์โบนัสเข้ามาในจังหวะไหน และหนึ่งรอบยาวพอดีกับที่คุณชอบหรือไม่ จะได้เลือกเกมที่ถูกจริตตั้งแต่ยังไม่ลงทุน
       </p>
       <p class="text-left text-base leading-relaxed">
-        เกมบน YIMSIAM889 รับสัญญาณตรงจากค่ายแม่ ค่า RTP เป็นไปตามมาตรฐานสากล ไม่มีใครมาแอบปรับหลังบ้าน หน้าเกมและกติกาที่ท่านเห็นตอนทดลองจึงเป็นชุดเดียวกับตอนเล่นจริง ต่างกันเพียงเครดิตที่ใช้หมุน
+        หน้าเกมและกติกาที่คุณเห็นตอนทดลองเป็นชุดเดียวกับตอนเล่นจริง ต่างกันแค่เครดิตที่ใช้หมุน สิ่งที่คุณเรียนรู้จากโหมดนี้จึงใช้ได้จริงเมื่อถึงรอบเล่นจริง
       </p>
       <p class="text-left text-base leading-relaxed">
-        เรื่องที่กระผมขอเรียนให้ชัดตั้งแต่ต้น เครดิตในโหมดทดลองถอนออกมาไม่ได้ และไม่นับเป็นยอดเทิร์นของโปรโมชั่นใดทั้งสิ้น มีไว้ให้ท่านทำความรู้จักเกมอย่างเดียวขอรับ
+        เรื่องที่ขอบอกให้ชัดตั้งแต่ต้น เครดิตในโหมดทดลองถอนออกมาไม่ได้ และไม่นับเป็นยอดเทิร์นของโปรโมชั่นใดทั้งสิ้น มีไว้ให้คุณทำความรู้จักเกมอย่างเดียว
       </p>
       <p class="text-left text-base leading-relaxed">
-        อีกข้อคือไม่ใช่ทุกเกมที่มีปุ่มทดลอง เพราะโหมดนี้ขึ้นอยู่กับค่ายผู้พัฒนาแต่ละราย หากเกมที่ท่านหมายตายังไม่เปิดไว้ <a href="/contact-us/" class="font-bold text-[#7cc0ff] underline underline-offset-4 transition-colors hover:text-[#eaf4ff]">ทักทีมงาน</a> ให้ช่วยแนะนำเกมแนวใกล้เคียงได้เลย
+        อีกข้อคือไม่ใช่ทุกเกมที่มีปุ่มทดลอง เพราะโหมดนี้ขึ้นอยู่กับค่ายผู้พัฒนาแต่ละราย หากเกมที่คุณหมายตายังไม่เปิดไว้ <a href="/contact-us/" class={linkClass}>ทักทีมงาน</a> ให้ช่วยแนะนำเกมแนวใกล้เคียงได้เลย
       </p>
     </div>
   </ContentBox>
 
-  <ContentBox as="h2" title="พร้อมเมื่อไหร่ เริ่มเล่นจริงกับ YIMSIAM889 ได้ทันทีด้วยยูสเซอร์เดิม">
+  <ContentBox as="h2" title="พร้อมเมื่อไหร่ สมัครสมาชิก VODKAFUN แล้วเริ่มเล่นจริงได้ทันที">
     <div class="flex flex-col gap-4">
       <p class="text-left text-base leading-relaxed">
-        เมื่อเจอเกมที่ใช่แล้ว ท่านเริ่มเล่นจริงได้เลยด้วยยูสเซอร์เดิม ไม่ต้องสมัครซ้ำ จะเริ่มเบาๆ หรือจัดเต็มก็เลือกได้ตามงบของท่านเอง เรือนนี้ไม่เร่งและไม่กดดันให้ฝากเพิ่ม
+        เมื่อเจอเกมที่ใช่แล้ว คุณเริ่มเล่นจริงได้เลยด้วยยูสเซอร์เดิม ไม่ต้องสมัครซ้ำ จะเริ่มเบาๆ หรือจัดเต็มก็เลือกได้ตามงบของคุณเอง เช็กยอดขั้นต่ำและเงื่อนไขล่าสุดจากระบบก่อนฝากทุกครั้ง
       </p>
       <p class="text-left text-base leading-relaxed">
-        ฝากถอนเป็นระบบอัตโนมัติ ทำรายการเองผ่านแอปพลิเคชันธนาคารชั้นนำหรือทรูวอลเลทได้เลย ไม่ต้องส่งสลิปให้แอดมินดูให้เสียเวลา ท่านจึงสนุกต่อได้ยาวๆ โดยไม่ต้องนั่งรอ
+        ฝากถอนเป็นระบบออโต้ ทำรายการเองจากหน้าบัญชี รองรับทรูมันนี่วอเล็ต ตรวจข้อมูลบัญชีและจำนวนเงินก่อนยืนยัน แล้วกลับไปสนุกต่อได้โดยไม่ต้องนั่งรอ ดูขั้นตอนที่หน้า <a href="/วิธีฝากถอน/" class={linkClass}>วิธีฝากถอน</a>
       </p>
       <p class="text-left text-base leading-relaxed">
-        สมาชิกใหม่ยังมีของขวัญต้อนรับจัดเตรียมไว้ให้ยิ้มรับตั้งแต่ก้าวแรก เงื่อนไขของแต่ละรายการดูได้ที่ <a href="/promotion/" class="font-bold text-[#7cc0ff] underline underline-offset-4 transition-colors hover:text-[#eaf4ff]">หน้าโปรโมชั่น</a> เลือกรับเฉพาะรายการที่เข้ากับสไตล์การเล่นของท่านได้เลยขอรับ
+        สมาชิกใหม่ยังมีโปรโมชั่นรอต้อนรับตั้งแต่ก้าวแรก ทั้งเช็คอินรายวัน แนะนำเพื่อน และคืนยอดเสีย เงื่อนไขของแต่ละรายการดูได้ที่ <a href="/promotion/" class={linkClass}>หน้าโปรโมชั่น</a> เลือกรับเฉพาะรายการที่เข้ากับสไตล์การเล่นของคุณ
       </p>
       <p class="text-left text-base leading-relaxed">
-        อีกเรื่องที่ควรติดตัวไว้เสมอ อย่าบอกรหัสผ่านหรือรหัส OTP กับผู้ใดทั้งสิ้น แม้ผู้นั้นจะอ้างว่าเป็นทีมงานก็ตาม เพราะทีมงานตัวจริงไม่มีเหตุให้ต้องขอขอรับ
+        อีกเรื่องที่ควรติดตัวไว้เสมอ อย่าบอกรหัสผ่านหรือรหัส OTP กับใครทั้งสิ้น แม้คนนั้นจะอ้างว่าเป็นทีมงานก็ตาม เพราะทีมงานตัวจริงไม่มีเหตุให้ต้องขอ
       </p>
       <p class="text-left text-base leading-relaxed">
-        เชิญเลือกค่ายที่ถูกใจแล้วเริ่มได้เลยขอรับ เกมที่ท่านคุ้นมือจากโหมดทดลองวันนี้ คือเกมที่ท่านรู้จักหน้าตาและกติกาดีแล้วเมื่อถึงรอบเล่นจริง ไม่ต้องเดาเอาเอง
+        เลือกค่ายที่ถูกใจแล้วเริ่มได้เลย เกมที่คุณคุ้นมือจากโหมดทดลองวันนี้ คือเกมที่คุณรู้จักหน้าตาและกติกาดีแล้วเมื่อถึงรอบเล่นจริง ไม่ต้องเดาเอาเอง
       </p>
+      <div class="flex flex-col items-center justify-center gap-4 pt-2 sm:flex-row">
+        <a
+          href="/register/"
+          class="inline-flex w-full max-w-[320px] items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-[#e6ff6a] via-[#c8fc04] to-[#7ee000] px-8 py-3.5 text-lg font-black tracking-wide text-[#0b2a05] shadow-[0_10px_30px_rgba(200,252,4,0.35)] transition-transform duration-300 hover:scale-105">
+          <span aria-hidden="true">🎰</span> สมัครสมาชิก VODKAFUN
+        </a>
+
+        <a
+          href="/login/"
+          class="inline-flex w-full max-w-[320px] items-center justify-center gap-2 rounded-xl border border-[#c8fc04]/70 bg-[#0b3a10] px-8 py-3.5 text-lg font-bold tracking-wide text-[#e6ffcc] transition-colors duration-300 hover:bg-[#145a1a]">
+          เข้าสู่ระบบ
+        </a>
+      </div>
     </div>
   </ContentBox>
 

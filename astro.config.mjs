@@ -72,10 +72,10 @@ export default defineConfig({
   },
 
   redirects: {
-    "/line": "https://tinyurl.com/simfun8",
+    "/line": "https://tinyurl.com/lineva",
   },
 
-  site: "https://yimsiam889-brand.com",
+  site: "https://vodkafun-brand.com",
   integrations: [
     sitemap({
       // /login, /register and /line are forwarding pages that all ship

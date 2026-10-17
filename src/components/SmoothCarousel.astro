@@ -5,23 +5,28 @@ import slide1 from "../assets/slide1.png";
 import slide2 from "../assets/slide2.png";
 import slide3 from "../assets/slide3.png";
 import slide4 from "../assets/slide4.png";
+import slide5 from "../assets/slide5.png";
 
 const images = [
   {
     src: slide1,
-    alt: "ภาพโปรโมชั่น YIMSIAM889 ข้อความตัวอักษรโครเมียมขอบน้ำเงินว่า ยิ้มรับโปรสมาชิกใหม่ คุ้มค่าตั้งแต่ก้าวแรก ด้านซ้ายเป็นพรีเซนเตอร์หญิงชุดราตรีเลื่อมสีน้ำเงินเงิน ด้านหลังเป็นมงกุฎคริสตัลบนแท่นในห้องคาสิโนแสงนีออนสีฟ้า มีชิปและไพ่ลอยรอบภาพ",
+    alt: "ภาพโปรโมชั่น VODKAFUN ข้อความว่า แนะนำเพื่อน รับโบนัส 0.8% สร้างรายได้ 100,000/เดือน มีโลโก้ VODKAFUN สีเขียวมะนาว พรีเซนเตอร์หญิงชุดดำเขียวผมไฮไลต์เขียว บนพื้นหลังสีเขียวเข้ม",
   },
   {
     src: slide2,
-    alt: "ภาพโปรโมชั่น YIMSIAM889 ข้อความตัวอักษรโครเมียมขอบน้ำเงินว่า ทางเข้า YIMSIAM889 รองรับทุกอุปกรณ์ ด้านซ้ายเป็นพรีเซนเตอร์หญิงชุดราตรีเลื่อมสีน้ำเงินเงินถือไพ่คลี่เป็นพัด ด้านหลังเป็นมงกุฎรูปสิงห์ในห้องคาสิโนแสงนีออนสีฟ้า มีชิปและไพ่ลอยรอบภาพ",
+    alt: "ภาพโปรโมชั่น VODKAFUN ข้อความว่า CASHBACK 3% คืนยอดเสียทุกยอดฝาก เล่นถึง 50% ถอนได้เลย รับสิทธิ์ก่อน 23.59 น. ของทุกวัน มีโลโก้ VODKAFUN พรีเซนเตอร์หญิงชุดดำเขียวผมไฮไลต์เขียว บนพื้นหลังสีเขียวเข้ม",
   },
   {
     src: slide3,
-    alt: "ภาพโปรโมชั่น YIMSIAM889 ข้อความตัวอักษรโครเมียมขอบน้ำเงินว่า ธุรกรรมว่องไว ระบบอัตโนมัติ ด้านขวาเป็นพรีเซนเตอร์หญิงชุดราตรีเลื่อมสีน้ำเงินเงินผายมือไปทางโลโก้ยักษ์ของแบรนด์ มีชิปคาสิโนสีน้ำเงินและไพ่ลอยเป็นวงโค้งแสงนีออน",
+    alt: "ภาพโปรโมชั่น VODKAFUN ข้อความว่า กระเป๋าโบนัส รวมยอดคืนยอดเสีย ค่าแนะนำเพื่อน และโบนัสเช็คอิน ถอนเครดิตเกมหรือเงินสด มีโลโก้ VODKAFUN พรีเซนเตอร์หญิงชุดดำเขียวผมไฮไลต์เขียว บนพื้นหลังสีเขียวเข้ม",
   },
   {
     src: slide4,
-    alt: "ภาพโปรโมชั่น YIMSIAM889 ข้อความตัวอักษรโครเมียมขอบน้ำเงินว่า เว็บตรงแตกดีจริง มาตรฐานสากล ด้านขวาเป็นพรีเซนเตอร์หญิงชุดราตรีเลื่อมสีน้ำเงินเงินถือไพ่ ด้านหลังเป็นมงกุฎคริสตัลบนแท่นขั้นบันไดแสงนีออนสีฟ้า มีชิปและไพ่ลอยรอบภาพ",
+    alt: "ภาพโปรโมชั่น VODKAFUN ข้อความว่า เช็คอินประจำวัน รับรางวัลทุกวัน เช็คอินง่าย ลุ้นของรางวัลมากมาย มีโลโก้ VODKAFUN พรีเซนเตอร์หญิงชุดดำเขียวผมไฮไลต์เขียว บนพื้นหลังสีเขียวเข้ม",
+  },
+  {
+    src: slide5,
+    alt: "ภาพโปรโมชั่น VODKAFUN ข้อความว่า วงล้อนำโชค ลุ้นรับรางวัลมูลค่ามากกว่า 1 ล้านบาท ฝาก 500 บาท รับ 1 ตั๋วสุ่มวงล้อ มีโลโก้ VODKAFUN พรีเซนเตอร์หญิงชุดดำเขียวผมไฮไลต์เขียว บนพื้นหลังสีเขียวเข้ม",
   },
 ];
 
@@ -33,7 +38,7 @@ const slides = Array.from({ length: COPIES }, () => images).flat();
   <input id="carousel-pause" type="checkbox" class="peer sr-only" />
   <label
     for="carousel-pause"
-    class="sr-only cursor-pointer peer-focus-visible:not-sr-only peer-focus-visible:mb-3 peer-focus-visible:inline-block peer-focus-visible:rounded-full peer-focus-visible:border peer-focus-visible:border-[#2f8cff]/55 peer-focus-visible:bg-[#061538] peer-focus-visible:px-4 peer-focus-visible:py-2 peer-focus-visible:text-sm peer-focus-visible:font-bold peer-focus-visible:text-[#dbeaff]">
+    class="sr-only cursor-pointer peer-focus-visible:not-sr-only peer-focus-visible:mb-3 peer-focus-visible:inline-block peer-focus-visible:rounded-full peer-focus-visible:border peer-focus-visible:border-[#c8fc04]/55 peer-focus-visible:bg-[#06230a] peer-focus-visible:px-4 peer-focus-visible:py-2 peer-focus-visible:text-sm peer-focus-visible:font-bold peer-focus-visible:text-[#e6ffcc]">
     หยุด / เล่นสไลด์ภาพ
   </label>
 
@@ -46,7 +51,7 @@ const slides = Array.from({ length: COPIES }, () => images).flat();
             <Picture
               src={slide.src}
               alt={isDuplicate ? "" : slide.alt}
-              class="block w-full rounded-xl border border-[#16357a] object-cover shadow-[0_10px_30px_rgba(47,140,255,0.20)]"
+              class="block w-full rounded-xl border border-[#1d5c22] object-cover shadow-[0_10px_30px_rgba(200,252,4,0.20)]"
               width={slide.src.width}
               height={slide.src.height}
               loading="lazy"
@@ -69,14 +74,14 @@ const slides = Array.from({ length: COPIES }, () => images).flat();
   .marquee {
     --gap: 12px;
     --per-view: 1;
-    --shift: calc(-400% - 48px);
+    --shift: calc(-500% - 60px);
   }
 
   @media (min-width: 768px) {
     .marquee {
       --gap: 16px;
       --per-view: 2;
-      --shift: calc(-200% - 32px);
+      --shift: calc(-250% - 40px);
     }
   }
 
@@ -84,7 +89,7 @@ const slides = Array.from({ length: COPIES }, () => images).flat();
     .marquee {
       --gap: 20px;
       --per-view: 3;
-      --shift: calc(-133.3333% - 26.6667px);
+      --shift: calc(-166.6667% - 33.3333px);
     }
   }
 

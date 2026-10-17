@@ -9,36 +9,36 @@ const mainLogo = imagePaths.length > 0 ? images[imagePaths[0]].default : null;
 
 const quickLinks = [
   { name: "หน้าแรก", path: "/" },
-  { name: "ทดลองเล่นเกมฟรี", path: "/ทดลองเล่น/" },
-  { name: "โปรโมชั่นสมาชิกใหม่", path: "/promotion/" },
-  { name: "ทางเข้าล่าสุด", path: "/ทางเข้า/" },
+  { name: "โปรโมชั่น", path: "/promotion/" },
+  { name: "ทดลองเล่น", path: "/ทดลองเล่น/" },
+  { name: "วิธีฝากถอน", path: "/วิธีฝากถอน/" },
+  { name: "ทางเข้า", path: "/ทางเข้า/" },
   { name: "เกี่ยวกับเรา", path: "/about-us/" },
   { name: "สมัครสมาชิก", path: "/register/" },
   { name: "เข้าสู่ระบบ", path: "/login/" },
-  { name: "ติดต่อแอดมิน", path: "/contact-us/" },
+  { name: "ติดต่อเรา", path: "/contact-us/" },
 ];
 
-const logoAlt =
-  "โลโก้ GGHENG ตราตัวอักษร G ในวงแหวนทอง มีปีกสีแดงเข้มขอบทองกางสองข้าง ใต้ตราเป็นคำว่า GGHENG สีทอง";
+const logoAlt = "โลโก้ VODKAFUN ขวดวอดก้าสีเขียวเข้มฝาเงินบนสาดสีเขียวมะนาวเรืองแสง ใต้ขวดเป็นคำว่า VODKA ตัวอักษรโครเมียมสีขาว และ FUN ตัวอักษรสีเขียวมะนาว";
 ---
 
-<footer class="relative mt-32 w-full border-t border-[#f5c542]/45 bg-[#140202] pt-64 pb-6 font-sans text-[#f7e6d0] shadow-[0_-10px_30px_rgba(245,197,66,0.28)] md:pt-40">
+<footer class="relative mt-32 w-full border-t border-[#c8fc04]/45 bg-[#020f03] pt-64 pb-6 font-sans text-[#d9f7d0] shadow-[0_-10px_30px_rgba(200,252,4,0.18)] md:pt-40">
   <div
-    class="absolute -top-14 left-1/2 z-20 flex w-[92%] max-w-5xl -translate-x-1/2 flex-col items-center justify-between rounded-2xl border border-[#f5c542]/50 bg-gradient-to-r from-[#5a0a0a] via-[#a31212] to-[#3a0a0d] p-6 shadow-[0_15px_40px_rgba(245,197,66,0.32)] md:-top-16 md:flex-row md:p-8">
+    class="absolute -top-14 left-1/2 z-20 flex w-[92%] max-w-5xl -translate-x-1/2 flex-col items-center justify-between rounded-2xl border border-[#c8fc04]/50 bg-gradient-to-r from-[#06230a] via-[#0f4a14] to-[#06230a] p-6 shadow-[0_15px_40px_rgba(200,252,4,0.22)] md:-top-16 md:flex-row md:p-8">
     <div class="mb-5 flex flex-col text-center md:mb-0 md:text-left">
-      <p class="text-xl font-black tracking-wide text-white uppercase italic drop-shadow-[0_2px_4px_rgba(20,2,2,0.6)] md:text-3xl">
-        <span aria-hidden="true">🧧</span> เปิดยูส {BRAND_NAME} วันนี้ เริ่มเล่นได้ทันที ไม่มีขั้นต่ำ
+      <p class="text-xl font-black tracking-wide text-[#f3ffe9] uppercase italic drop-shadow-[0_2px_4px_rgba(2,15,3,0.6)] md:text-3xl">
+        <span aria-hidden="true">🍾</span> เปิดยูส {BRAND_NAME} วันนี้ เล่นสล็อตเวอร์ชั่นใหม่ได้ทันที
       </p>
-      <p class="mt-2 text-sm font-medium text-[#f7e6d0]/90 md:text-base">
-        ยูสเดียวเข้าได้ทุกแพลตฟอร์ม ทั้งมือถือ ไอแพด และคอมพิวเตอร์ ไม่ต้องโหลดแอป ฝากถอนออโต้ผ่านธนาคารและ True Money Wallet ถอนได้ครบทุกยอด
+      <p class="mt-2 text-sm font-medium text-[#d9f7d0]/90 md:text-base">
+        ยูสเดียวเลือกได้ทั้งสล็อต ยิงปลา กีฬา คาสิโน และหวย ฝากถอนระบบออโต้ รองรับทรูมันนี่วอเล็ต ใช้งานได้ทั้งมือถือ แท็บเล็ต และคอมพิวเตอร์
       </p>
     </div>
 
     <a
       href="/register/"
-      class="group relative flex items-center justify-center overflow-hidden rounded-full border border-[#ffe9a3] bg-gradient-to-b from-[#ffe9a3] to-[#f5c542] px-8 py-3.5 text-sm font-extrabold whitespace-nowrap text-[#2a0203] shadow-[0_0_15px_rgba(245,197,66,0.5)] transition-all hover:scale-105 md:text-base">
+      class="group relative flex items-center justify-center overflow-hidden rounded-full border border-[#e6ff6a] bg-gradient-to-b from-[#e6ff6a] to-[#c8fc04] px-8 py-3.5 text-sm font-extrabold whitespace-nowrap text-[#0b2a05] shadow-[0_0_15px_rgba(200,252,4,0.5)] transition-all hover:scale-105 md:text-base">
       <span class="relative z-10">สมัครสมาชิกเลย <span aria-hidden="true">🚀</span></span>
-      <div aria-hidden="true" class="absolute inset-0 translate-y-full bg-[#f5c542] transition-transform duration-300 group-hover:translate-y-0"></div>
+      <div aria-hidden="true" class="absolute inset-0 translate-y-full bg-[#7ee000] transition-transform duration-300 group-hover:translate-y-0"></div>
     </a>
   </div>
 
@@ -53,21 +53,20 @@ const logoAlt =
                 alt={logoAlt}
                 widths={[100, 200, 300]}
                 sizes="100px"
-                height={45}
                 loading="lazy"
                 decoding="async"
-                class="h-[45px] w-auto drop-shadow-[0_0_12px_rgba(245,197,66,0.55)]"
+                class="h-[60px] w-auto drop-shadow-[0_0_12px_rgba(200,252,4,0.5)]"
                 formats={["avif", "webp"]}
                 fallbackFormat="webp"
               />
             ) : (
-              <p class="bg-gradient-to-b from-[#ffe9a3] to-[#f5c542] bg-clip-text text-3xl font-black text-transparent drop-shadow-[0_0_8px_rgba(245,197,66,0.5)]">{BRAND_NAME}</p>
+              <p class="bg-gradient-to-b from-[#e6ff6a] to-[#3fc20a] bg-clip-text text-3xl font-black text-transparent drop-shadow-[0_0_8px_rgba(200,252,4,0.5)]">{BRAND_NAME}</p>
             )
           }
         </a>
-        <p class="text-sm leading-relaxed text-[#f7e6d0]/85">
-          {BRAND_NAME} สล็อตเว็บตรงสายเฮง ระบบแท้100% รวมเกมจาก PG SOFT, Pragmatic Play และ Joker Gaming ไว้ในยูสเดียว ทุกเกมรันด้วยค่า RTP มาตรฐานจากค่ายแม่ ไม่มีล็อกยูส
-          ฝากถอนออโต้ไม่มีขั้นต่ำ รองรับทั้งบัญชีธนาคารและ True Money Wallet
+        <p class="text-sm leading-relaxed text-[#d9f7d0]/85">
+          {BRAND_NAME} สล็อตเวอร์ชั่นใหม่ รวมเกมครบครันไว้ในบัญชีเดียว ทั้งสล็อต ยิงปลา กีฬา คาสิโน และหวย ทำรายการฝากถอนผ่านระบบออโต้ รองรับทรูมันนี่วอเล็ตตามช่องทางที่เปิดให้บริการ
+          ตรวจสอบสถานะรายการและประวัติธุรกรรมได้จากระบบสมาชิก
         </p>
 
         <div class="mt-2 flex flex-wrap gap-3">
@@ -100,16 +99,16 @@ const logoAlt =
       </div>
 
       <div class="md:col-span-6 lg:col-span-5">
-        <p class="relative mb-5 inline-block text-lg font-bold tracking-wider text-white uppercase">
+        <p class="relative mb-5 inline-block text-lg font-bold tracking-wider text-[#f3ffe9] uppercase">
           ลิงก์ด่วน (Quick Links)
-          <span aria-hidden="true" class="absolute -bottom-2 left-0 h-1 w-1/2 rounded-full bg-gradient-to-r from-[#ffe9a3] to-[#f5c542] shadow-[0_0_8px_rgba(245,197,66,0.6)]"></span>
+          <span aria-hidden="true" class="absolute -bottom-2 left-0 h-1 w-1/2 rounded-full bg-gradient-to-r from-[#e6ff6a] to-[#3fc20a] shadow-[0_0_8px_rgba(200,252,4,0.6)]"></span>
         </p>
 
         <div class="grid grid-cols-2 gap-x-4 gap-y-3 text-sm">
           {
             quickLinks.map((link) => (
-              <a href={link.path} class="group flex items-center text-[#f7e6d0]/85 transition-colors hover:text-white">
-                <span aria-hidden="true" class="mr-2 h-1.5 w-1.5 rounded-sm bg-[#f5c542] transition-transform group-hover:rotate-45" />
+              <a href={link.path} class="group flex items-center text-[#d9f7d0]/85 transition-colors hover:text-[#f3ffe9]">
+                <span aria-hidden="true" class="mr-2 h-1.5 w-1.5 rounded-sm bg-[#c8fc04] transition-transform group-hover:rotate-45" />
                 {link.name}
               </a>
             ))
@@ -118,39 +117,39 @@ const logoAlt =
       </div>
 
       <div class="md:col-span-6 lg:col-span-3">
-        <p class="relative mb-5 inline-block text-lg font-bold tracking-wider text-white uppercase">
+        <p class="relative mb-5 inline-block text-lg font-bold tracking-wider text-[#f3ffe9] uppercase">
           ระบบการเงิน
-          <span aria-hidden="true" class="absolute -bottom-2 left-0 h-1 w-1/2 rounded-full bg-gradient-to-r from-[#ffe9a3] to-[#f5c542] shadow-[0_0_8px_rgba(245,197,66,0.6)]"></span>
+          <span aria-hidden="true" class="absolute -bottom-2 left-0 h-1 w-1/2 rounded-full bg-gradient-to-r from-[#e6ff6a] to-[#3fc20a] shadow-[0_0_8px_rgba(200,252,4,0.6)]"></span>
         </p>
 
-        <p class="mb-4 text-xs text-[#f7e6d0]/85">รองรับการฝาก-ถอนผ่านแอปธนาคารชั้นนำและทรูมันนี่วอลเล็ท โดยควรใช้บัญชีชื่อเดียวกับข้อมูลที่สมัครไว้</p>
+        <p class="mb-4 text-xs text-[#d9f7d0]/85">รองรับการฝากถอนผ่านแอปธนาคารชั้นนำและทรูมันนี่วอเล็ต ตรวจสอบข้อมูลบัญชี จำนวนเงิน และเงื่อนไขให้ถูกต้องก่อนยืนยันทุกครั้ง</p>
 
         <BankStrip size={30} />
 
-        <div class="mt-3 flex h-10 items-center justify-center rounded border border-white/12 bg-[#3a0a0d] transition-colors hover:border-[#f5c542]/70" title="ตรวจรายการย้อนหลัง">
-          <span class="flex items-center gap-1 text-xs font-bold text-[#f7e6d0]"><span aria-hidden="true" class="text-lg text-[#ffe9a3]">🧾</span> เก็บเลขรายการไว้ตรวจสอบได้</span>
+        <div class="mt-3 flex h-10 items-center justify-center rounded border border-white/12 bg-[#06230a] transition-colors hover:border-[#c8fc04]/70" title="ตรวจรายการย้อนหลัง">
+          <span class="flex items-center gap-1 text-xs font-bold text-[#d9f7d0]"><span aria-hidden="true" class="text-lg text-[#e6ff6a]">🧾</span> ตรวจประวัติธุรกรรมได้จากระบบสมาชิก</span>
         </div>
       </div>
     </div>
 
     <hr class="mb-6 border-white/15" />
 
-    <div class="mb-6 hidden text-justify text-[10px] leading-relaxed text-[#f7e6d0]/65 md:block">
-      {BRAND_NAME} สล็อตเว็บตรงสายเฮง ใช้ระบบแท้100% จากต่างประเทศ รวมค่ายเกมชั้นนำอย่าง PG SOFT, Pragmatic Play และ Joker Gaming ไว้ครบในที่เดียว ทุกเกมเป็นลิขสิทธิ์แท้
-      รันด้วยค่า RTP (Return to Player) มาตรฐานสากลจากค่ายแม่โดยตรง ไม่มีการล็อกยูสหรือปรับอัตราใด ๆ เริ่มเล่นได้แบบไม่มีขั้นต่ำ ถอนได้ครบทุกยอดโดยไม่หักค่าธรรมเนียม
-      ระบบฝากถอนออโต้รองรับทั้งบัญชีธนาคารและ True Money Wallet เข้าเล่น {BRAND_NAME} ด้วยยูสเดียวได้จากมือถือ ไอแพด และคอมพิวเตอร์ โดยไม่ต้องโหลดแอป
+    <div class="mb-6 hidden text-justify text-[10px] leading-relaxed text-[#d9f7d0]/65 md:block">
+      {BRAND_NAME} รวมความบันเทิงจากเกมสล็อตเวอร์ชั่นใหม่ล่าสุดไว้กับเกมเดิมพันหลายประเภท ทั้งสล็อต ยิงปลา กีฬา คาสิโน และหวย ให้สมาชิกเลือกเล่นได้ตามความชอบภายในเว็บไซต์เดียว
+      การสมัครสมาชิก เข้าสู่ระบบ และทำรายการฝากถอนผ่านระบบออโต้ออกแบบมาให้ไม่ซับซ้อน พร้อมรองรับทรูมันนี่วอเล็ตตามช่องทางที่เปิดให้บริการ ก่อนเข้าสู่ระบบควรตรวจสอบชื่อเว็บไซต์และ URL
+      ให้ตรงกับช่องทางที่แบรนด์ประกาศ และไม่เปิดเผยรหัสผ่านหรือรหัสยืนยันให้บุคคลอื่น
     </div>
 
-    <div class="flex flex-col items-center justify-between gap-4 border-t border-white/15 pt-6 text-xs text-[#f7e6d0]/75 md:flex-row">
-      <p>&copy; {new Date().getFullYear()} <span class="font-bold tracking-wider text-white uppercase">{BRAND_NAME}</span>. All Rights Reserved.</p>
+    <div class="flex flex-col items-center justify-between gap-4 border-t border-white/15 pt-6 text-xs text-[#d9f7d0]/75 md:flex-row">
+      <p>&copy; {new Date().getFullYear()} <span class="font-bold tracking-wider text-[#f3ffe9] uppercase">{BRAND_NAME}</span>. All Rights Reserved.</p>
 
       <div class="flex items-center gap-6">
-        <a href="/terms/" class="transition-colors hover:text-white">เงื่อนไขและข้อตกลง</a>
-        <a href="/privacy/" class="transition-colors hover:text-white">นโยบายความเป็นส่วนตัว</a>
+        <a href="/terms/" class="transition-colors hover:text-[#f3ffe9]">เงื่อนไขและข้อตกลง</a>
+        <a href="/privacy/" class="transition-colors hover:text-[#f3ffe9]">นโยบายความเป็นส่วนตัว</a>
 
         <a
           href="#top"
-          class="flex h-8 w-8 items-center justify-center rounded border border-white/25 bg-white/10 text-white transition-all hover:border-[#f5c542] hover:bg-[#3a0a0d] hover:shadow-[0_0_15px_rgba(245,197,66,0.5)]"
+          class="flex h-8 w-8 items-center justify-center rounded border border-white/25 bg-white/10 text-[#f3ffe9] transition-all hover:border-[#c8fc04] hover:bg-[#06230a] hover:shadow-[0_0_15px_rgba(200,252,4,0.5)]"
           aria-label="กลับขึ้นด้านบนสุดของหน้า">
           <span aria-hidden="true">↑</span>
         </a>

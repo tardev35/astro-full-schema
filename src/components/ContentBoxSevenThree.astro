@@ -9,12 +9,15 @@ const { titleleft, titleright, as: HeadingTag = "h2" } = Astro.props;
 
 <section class="relative z-10 mx-auto mb-10 w-full max-w-[1400px] px-4 font-sans">
   <div
-    class="group relative isolate w-full overflow-hidden rounded-3xl border border-[#1f0b4d] bg-[#0a0320] p-8 text-[#ece6ff] shadow-[0_10px_30px_rgba(255,61,200,0.16)] transition-all duration-500 hover:border-[#ff3dc8]/60 md:p-10">
+    class="group relative isolate w-full overflow-hidden rounded-3xl border border-[#1d5c22] bg-[#06230a] p-8 text-[#d9f7d0] shadow-[0_10px_30px_rgba(200,252,4,0.14)] transition-all duration-500 hover:border-[#c8fc04]/60 md:p-10">
+    <div aria-hidden="true" class="pointer-events-none absolute -top-20 -right-20 -z-10 h-40 w-40 rounded-full bg-[#c8fc04]/14 blur-[60px] transition-all duration-500 group-hover:bg-[#c8fc04]/24"></div>
+    <div aria-hidden="true" class="pointer-events-none absolute -bottom-20 -left-20 -z-10 h-40 w-40 rounded-full bg-[#3fc20a]/16 blur-[60px] transition-all duration-500 group-hover:bg-[#3fc20a]/26"></div>
+
     <div class="grid grid-cols-1 gap-8 md:grid-cols-[3fr_7fr] md:items-center">
-      <article class="flex flex-col gap-4 border-b border-[#1f0b4d] pb-6 text-center text-base font-medium text-[#b9a9e6] md:border-r md:border-b-0 md:pr-6 md:pb-0 md:text-left">
+      <article class="flex flex-col gap-4 border-b border-[#1d5c22] pb-6 text-center text-base font-medium text-[#a9d9a0] md:border-r md:border-b-0 md:pr-6 md:pb-0 md:text-left">
         {
           titleleft && (
-            <p class="text-center text-4xl leading-normal font-black tracking-wider text-[#1be5f4] uppercase drop-shadow-[0_2px_10px_rgba(255,61,200,0.30)] md:text-left">
+            <p class="text-center text-4xl leading-normal font-black tracking-wider text-[#c8fc04] uppercase drop-shadow-[0_2px_10px_rgba(200,252,4,0.30)] md:text-left">
               {titleleft}
             </p>
           )
@@ -22,8 +25,8 @@ const { titleleft, titleright, as: HeadingTag = "h2" } = Astro.props;
         <slot name="left" />
       </article>
 
-      <article class="flex flex-col gap-3 text-left text-base leading-relaxed text-[#ece6ff] md:pl-6">
-        {titleright && <HeadingTag class="flex items-center gap-2 text-2xl leading-normal font-black text-[#1be5f4] drop-shadow-[0_1px_6px_rgba(255,61,200,0.25)]">{titleright}</HeadingTag>}
+      <article class="flex flex-col gap-3 text-left text-base leading-relaxed text-[#d9f7d0] md:pl-6">
+        {titleright && <HeadingTag class="flex items-center gap-2 text-2xl leading-normal font-black text-[#c8fc04] drop-shadow-[0_1px_6px_rgba(200,252,4,0.25)]">{titleright}</HeadingTag>}
         <slot name="right" />
       </article>
     </div>

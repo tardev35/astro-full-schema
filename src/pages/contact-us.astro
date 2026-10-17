@@ -2,17 +2,17 @@
 import MainLayout from "../layouts/MainLayout.astro";
 import ContentBox from "../components/ContentBox.astro";
 import Navfoot from "../components/Navfoot.astro";
-import Announcement from "../components/AnnouncementPremium.astro";
+import Announcement from "../components/Announcement5.astro";
 
 import { Picture } from "astro:assets";
 import imgLine from "../assets/contact-line.webp";
 import { pageGraph } from "../lib/schema";
 import { BRAND_ADDRESS } from "../lib/brandProfile";
 
-const pageTitle = "ติดต่อ - YIMSIAM889";
+const pageTitle = "ติดต่อทีมงาน VODKAFUN | LINE Official ตลอด 24 ชั่วโมง";
 
 const pageDescription =
-  "ช่องทางติดต่อทีมงานคนไทยของ YIMSIAM889 ผ่าน LINE Official ตอบเอง ไม่ใช้บอท ดูแลเรื่องสมัครสมาชิก เข้าสู่ระบบ และฝากถอนอัตโนมัติ พร้อมที่อยู่และอีเมลของเว็บ";
+  "ติดต่อทีมงาน VODKAFUN ผ่าน LINE Official ได้ตลอด 24 ชั่วโมง สอบถามเรื่องสมัครสมาชิก เข้าสู่ระบบ ฝากถอนระบบออโต้ พร้อมที่อยู่และอีเมลติดต่อของเว็บไซต์ครบ";
 
 const graph = pageGraph(Astro, {
   type: "ContactPage",
@@ -23,13 +23,13 @@ const graph = pageGraph(Astro, {
     { name: "ติดต่อเรา", path: "/contact-us" },
   ],
   org: {
-    alternateName: "YIMSIAM889 สล็อตสยาม เว็บตรงแตกดีจริง ยิ้มรับโปรสมาชิกใหม่",
+    alternateName: "VODKAFUN สล็อตเวอร์ชั่นใหม่ รวมเกมครบครัน ฝากถอนระบบออโต้",
     contactPoints: [
       {
         contactType: "customer service",
         availableLanguage: ["Thai", "English"],
         path: "/line",
-        description: "ติดต่อทีมงาน YIMSIAM889 ผ่าน LINE Official สอบถามการสมัครสมาชิก การเข้าสู่ระบบ และการฝากถอนอัตโนมัติ",
+        description: "ติดต่อทีมงาน VODKAFUN ผ่าน LINE Official สอบถามการสมัครสมาชิก การเข้าสู่ระบบ และการฝากถอนระบบออโต้",
       },
     ],
   },
@@ -41,11 +41,11 @@ const graph = pageGraph(Astro, {
 
   <Announcement />
 
-  <ContentBox title="ติดต่อทีมงาน YIMSIAM889" as="h1">
+  <ContentBox title="ติดต่อทีมงาน VODKAFUN" as="h1">
     <div>
       <Picture
         src={imgLine}
-        alt="ภาพช่องทางติดต่อทีมงาน YIMSIAM889 ทาง LINE ไอคอนแอป LINE สีเขียวทรงสี่เหลี่ยมมุมมน มีกรอบข้อความสีครีมที่เขียนคำว่า LINE อยู่ตรงกลาง ด้านบนเป็นวงกลมลูกศรสีเขียวล้อมตัวเลข 24h และมีผู้หญิงผมดำรวบตึง สวมชุดราตรีซาตินสีเขียวเข้มเปิดไหล่ ใส่สร้อยคอสีทอง ยืนอยู่ทางขวาของภาพ"
+        alt="ภาพช่องทางติดต่อทีมงาน VODKAFUN ทาง LINE ไอคอนแอป LINE สีเขียวทรงสี่เหลี่ยมมุมมน มีกรอบข้อความสีครีมที่เขียนคำว่า LINE อยู่ตรงกลาง ด้านบนเป็นวงกลมลูกศรสีเขียวล้อมตัวเลข 24h และมีผู้หญิงผมดำรวบตึง สวมชุดราตรีซาตินสีเขียวเข้มเปิดไหล่ ใส่สร้อยคอสีทอง ยืนอยู่ทางขวาของภาพ"
         loading="lazy"
         fetchpriority="low"
         widths={[200, 400, 600]}
@@ -58,8 +58,8 @@ const graph = pageGraph(Astro, {
       />
       {
         BRAND_ADDRESS.lines.length > 0 && (
-          <address aria-label={BRAND_ADDRESS.label} class="mt-8 mb-8 rounded-r-xl border-l-4 border-[#2f8cff] bg-[#0a1f4d] py-4 pr-4 pl-6 text-left text-base leading-relaxed not-italic">
-            <span class="mb-1 block font-bold text-[#9cc9ff]">{BRAND_ADDRESS.label}</span>
+          <address aria-label={BRAND_ADDRESS.label} class="mt-8 mb-8 rounded-r-xl border-l-4 border-[#c8fc04] bg-[#0b3a10] py-4 pr-4 pl-6 text-left text-base leading-relaxed not-italic">
+            <span class="mb-1 block font-bold text-[#c8fc04]">{BRAND_ADDRESS.label}</span>
             {BRAND_ADDRESS.lines.map((line) => (
               <span class="block">{line}</span>
             ))}
@@ -68,7 +68,7 @@ const graph = pageGraph(Astro, {
                 <span aria-hidden="true" class="mr-2">
                   ✉️
                 </span>
-                <a href={`mailto:${BRAND_ADDRESS.email}`} class="font-bold text-[#7cc0ff] underline underline-offset-4 transition-colors hover:text-[#eaf4ff]">
+                <a href={`mailto:${BRAND_ADDRESS.email}`} class="font-bold text-[#e6ff6a] underline underline-offset-4 transition-colors hover:text-[#f3ffe9]">
                   {BRAND_ADDRESS.email}
                 </a>
               </span>
@@ -80,15 +80,15 @@ const graph = pageGraph(Astro, {
       <div class="flex flex-wrap justify-center gap-4">
         <a
           href="/register/"
-          aria-label="สมัครสมาชิก YIMSIAM889"
-          class="flex items-center justify-center rounded-lg border border-[#0b4fd6] bg-gradient-to-r from-[#eaf4ff] via-[#9cc9ff] to-[#4d9dff] px-8 py-3 font-bold text-[#03133c] shadow-[0_10px_30px_rgba(47,140,255,0.4)] transition-transform hover:scale-105 hover:shadow-[0_15px_40px_rgba(47,140,255,0.5)]">
+          aria-label="สมัครสมาชิก VODKAFUN"
+          class="flex items-center justify-center rounded-xl bg-gradient-to-r from-[#e6ff6a] via-[#c8fc04] to-[#7ee000] px-8 py-3 font-bold text-[#0b2a05] shadow-[0_10px_30px_rgba(200,252,4,0.35)] transition-transform hover:scale-105 hover:shadow-[0_15px_40px_rgba(200,252,4,0.5)]">
           สมัครสมาชิก
         </a>
 
         <a
           href="/login/"
-          aria-label="เข้าสู่ระบบ YIMSIAM889"
-          class="flex items-center justify-center rounded-lg border border-[#2f8cff]/70 bg-[#061538] px-8 py-3 font-extrabold text-[#dbeaff] shadow-[0_4px_14px_rgba(124,192,255,0.22)] transition-transform hover:scale-105 hover:bg-[#0a1f4d]">
+          aria-label="เข้าสู่ระบบ VODKAFUN"
+          class="flex items-center justify-center rounded-xl border border-[#c8fc04]/70 bg-[#0b3a10] px-8 py-3 font-extrabold text-[#e6ffcc] shadow-[0_4px_14px_rgba(63,194,10,0.22)] transition-transform hover:scale-105 hover:bg-[#145a1a]">
           เข้าสู่ระบบ
         </a>
 
@@ -96,8 +96,8 @@ const graph = pageGraph(Astro, {
           href="/line/"
           target="_blank"
           rel="noopener noreferrer"
-          aria-label="ติดต่อทีมงาน YIMSIAM889 ผ่าน Line Official"
-          class="flex items-center justify-center rounded-lg border border-green-300 bg-gradient-to-b from-green-400 to-green-700 px-8 py-3 font-bold text-white transition-transform hover:scale-105">
+          aria-label="ติดต่อทีมงาน VODKAFUN ผ่าน Line Official"
+          class="flex items-center justify-center rounded-xl border border-[#00B900]/70 bg-[#00B900] px-8 py-3 font-bold text-white shadow-[0_8px_24px_rgba(0,185,0,0.35)] transition-transform hover:scale-105 hover:bg-[#00a300]">
           ติดต่อผ่าน Line Official
         </a>
       </div>

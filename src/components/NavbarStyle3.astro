@@ -10,32 +10,42 @@ const currentPath = Astro.url.pathname;
 
 const isActive = (path: string) => isActivePath(currentPath, path);
 
+const affUrl = "https://yoalink.com/mojo";
+
 const links = [
   { name: "หน้าแรก", path: "/", icon: "🏠" },
   { name: "โปรโมชั่น", path: "/promotion/", icon: "🎁" },
-  { name: "สมัครสมาชิก", path: "/register/", icon: "📝" },
-  { name: "เข้าสู่ระบบ", path: "/login/", icon: "🔑" },
   { name: "ทดลองเล่น", path: "/ทดลองเล่น/", icon: "🎰" },
-  { name: "เกี่ยวกับเรา", path: "/about-us/", icon: "🐉" },
+  { name: "วิธีฝากถอน", path: "/วิธีฝากถอน/", icon: "💳" },
+  { name: "เกี่ยวกับเรา", path: "/about-us/", icon: "🍾" },
   { name: "ติดต่อเรา", path: "/contact-us/", icon: "💬" },
 ];
+
+const logoAlt = "โลโก้ VODKAFUN ขวดวอดก้าสีเขียวเข้มฝาเงินบนสาดสีเขียวมะนาวเรืองแสง ใต้ขวดเป็นคำว่า VODKA ตัวอักษรโครเมียมสีขาว และ FUN ตัวอักษรสีเขียวมะนาว";
 ---
 
 <header class="sticky top-4 z-50 w-full px-4 font-sans">
   <nav
-    class="mx-auto flex h-[70px] w-full max-w-[1600px] items-center justify-between rounded-full border border-[#f5c542]/35 bg-[#1f0405] px-6 shadow-[0_8px_24px_rgba(225,29,29,0.35)] xl:px-10">
+    aria-label="เมนูหลัก VODKAFUN"
+    class="mx-auto flex h-[70px] w-full max-w-[1600px] items-center justify-between rounded-full border border-[#c8fc04]/35 bg-[#041a06]/95 px-6 shadow-[0_8px_24px_rgba(2,15,3,0.65),0_0_18px_rgba(200,252,4,0.14)] xl:px-10">
     <a href="/" class="z-50 flex-shrink-0 transition-transform hover:scale-105">
-      <Picture
-        src={mainLogo!}
-        alt="โลโก้ GGHENG ตราตัวอักษร G ในวงแหวนทอง มีปีกสีแดงเข้มขอบทองกางสองข้าง ใต้ตราเป็นคำว่า GGHENG สีทอง"
-        widths={[120, 240, 360]}
-        sizes="120px"
-        loading="eager"
-        fetchpriority="high"
-        class="h-[35px] w-auto drop-shadow-[0_2px_8px_rgba(245,197,66,0.5)] xl:h-[40px]"
-        formats={["avif", "webp"]}
-        fallbackFormat="webp"
-      />
+      {
+        mainLogo ? (
+          <Picture
+            src={mainLogo}
+            alt={logoAlt}
+            widths={[120, 240, 360]}
+            sizes="120px"
+            loading="eager"
+            fetchpriority="high"
+            class="h-[44px] w-auto drop-shadow-[0_2px_10px_rgba(200,252,4,0.45)] xl:h-[52px]"
+            formats={["avif", "webp"]}
+            fallbackFormat="webp"
+          />
+        ) : (
+          <span class="bg-gradient-to-r from-[#f3ffe9] via-[#c8fc04] to-[#3fc20a] bg-clip-text text-2xl font-black tracking-widest text-transparent">VODKAFUN</span>
+        )
+      }
     </a>
 
     <div class="hidden h-full items-center gap-6 lg:flex xl:gap-10 2xl:gap-14">
@@ -43,13 +53,14 @@ const links = [
         links.map((item) => (
           <a
             href={item.path}
-            class={`group relative flex h-full items-center gap-1.5 text-sm font-bold transition-colors xl:text-base ${isActive(item.path) ? "text-[#f5c542]" : "text-[#f7e6d0] hover:text-[#ffe9a3]"}`}>
+            class={`group relative flex h-full items-center gap-1.5 text-sm font-bold transition-colors xl:text-base ${isActive(item.path) ? "text-[#c8fc04]" : "text-[#d9f7d0] hover:text-[#e6ff6a]"}`}>
             <span aria-hidden="true" class="text-base">
               {item.icon}
             </span>
             <span>{item.name}</span>
             <div
-              class={`absolute bottom-[15px] left-0 h-[3px] w-full origin-left rounded-full bg-gradient-to-r from-[#e11d1d] to-[#f5c542] transition-transform duration-300 ${isActive(item.path) ? "scale-x-100" : "scale-x-0 group-hover:scale-x-100"}`}
+              aria-hidden="true"
+              class={`absolute bottom-[15px] left-0 h-[3px] w-full origin-left rounded-full bg-gradient-to-r from-[#3fc20a] to-[#c8fc04] transition-transform duration-300 ${isActive(item.path) ? "scale-x-100" : "scale-x-0 group-hover:scale-x-100"}`}
             />
           </a>
         ))
@@ -58,30 +69,32 @@ const links = [
 
     <div class="z-50 flex items-center gap-3">
       <a
-        href="/login/"
-        class="hidden items-center justify-center gap-1.5 rounded-full border border-[#e11d1d]/70 bg-[#3a0a0d] px-5 py-2 text-sm font-bold text-[#f7e6d0] transition-all hover:bg-[#5c0b13] lg:flex">
-        <span aria-hidden="true">🔒</span> เข้าสู่ระบบ
+        href={affUrl}
+        rel="nofollow sponsored"
+        class="hidden items-center justify-center gap-1.5 rounded-full border border-[#c8fc04]/70 bg-[#0b3a10] px-5 py-2 text-sm font-bold text-[#e6ffcc] transition-all hover:bg-[#145a1a] lg:flex">
+        <span aria-hidden="true">🔑</span> เข้าสู่ระบบ
       </a>
       <a
-        href="/register/"
-        class="hidden items-center justify-center gap-1.5 rounded-full bg-gradient-to-r from-[#ffe9a3] via-[#f5c542] to-[#c8901a] px-6 py-2 text-sm font-extrabold text-[#2a0203] shadow-[0_4px_14px_rgba(245,197,66,0.4)] transition-all hover:scale-105 lg:flex">
-        <span aria-hidden="true">🧧</span> สมัครสมาชิก
+        href={affUrl}
+        rel="nofollow sponsored"
+        class="hidden items-center justify-center gap-1.5 rounded-full bg-gradient-to-r from-[#e6ff6a] via-[#c8fc04] to-[#7ee000] px-6 py-2 text-sm font-extrabold text-[#0b2a05] shadow-[0_4px_14px_rgba(200,252,4,0.4)] transition-all hover:scale-105 lg:flex">
+        <span aria-hidden="true">🍾</span> สมัครสมาชิก
       </a>
 
       <button id="hamburger-btn" class="relative flex h-[40px] w-[40px] flex-col items-end justify-center gap-[6px] p-2 lg:hidden" aria-label="เปิดเมนู">
-        <span class="line-1 h-[2px] w-6 origin-center rounded-full bg-[#f5c542] shadow-sm transition-all duration-300"></span>
-        <span class="line-2 h-[2px] w-4 origin-center rounded-full bg-[#e11d1d] shadow-sm transition-all duration-300"></span>
+        <span class="line-1 h-[2px] w-6 origin-center rounded-full bg-[#c8fc04] shadow-sm transition-all duration-300"></span>
+        <span class="line-2 h-[2px] w-4 origin-center rounded-full bg-[#3fc20a] shadow-sm transition-all duration-300"></span>
       </button>
     </div>
   </nav>
 
-  <div id="fullscreen-menu" class="pointer-events-none fixed inset-0 z-[60] flex flex-col items-center justify-center bg-[#0f0101] opacity-0 transition-opacity duration-500">
+  <div id="fullscreen-menu" class="pointer-events-none fixed inset-0 z-[60] flex flex-col items-center justify-center bg-[#020f03] opacity-0 transition-opacity duration-500">
     <div class="flex w-full flex-col items-center space-y-5 px-6">
       {
         links.map((item) => (
           <a
             href={item.path}
-            class={`fs-item flex items-center gap-3 text-2xl font-black tracking-widest uppercase transition-all duration-300 ${isActive(item.path) ? "text-[#f5c542]" : "text-[#f7e6d0] hover:text-[#ffe9a3]"}`}>
+            class={`fs-item flex items-center gap-3 text-2xl font-black tracking-widest uppercase transition-all duration-300 ${isActive(item.path) ? "text-[#c8fc04]" : "text-[#d9f7d0] hover:text-[#e6ff6a]"}`}>
             <span aria-hidden="true" class="text-2xl">
               {item.icon}
             </span>
@@ -92,14 +105,16 @@ const links = [
 
       <div class="fs-item mt-4 flex w-full max-w-[250px] flex-col gap-4 pt-8">
         <a
-          href="/register/"
-          class="flex w-full items-center justify-center gap-2 rounded-full bg-gradient-to-r from-[#ffe9a3] via-[#f5c542] to-[#c8901a] py-3.5 text-lg font-extrabold text-[#2a0203] shadow-[0_6px_20px_rgba(245,197,66,0.4)]">
-          <span aria-hidden="true">🧧</span> สมัครสมาชิก
+          href={affUrl}
+          rel="nofollow sponsored"
+          class="flex w-full items-center justify-center gap-2 rounded-full bg-gradient-to-r from-[#e6ff6a] via-[#c8fc04] to-[#7ee000] py-3.5 text-lg font-extrabold text-[#0b2a05] shadow-[0_6px_20px_rgba(200,252,4,0.4)]">
+          <span aria-hidden="true">🍾</span> สมัครสมาชิก
         </a>
         <a
-          href="/login/"
-          class="flex w-full items-center justify-center gap-2 rounded-full border-2 border-[#e11d1d]/70 bg-[#3a0a0d] py-3.5 text-lg font-bold text-[#f7e6d0] transition-colors hover:bg-[#5c0b13]">
-          <span aria-hidden="true">🔒</span> เข้าสู่ระบบ
+          href={affUrl}
+          rel="nofollow sponsored"
+          class="flex w-full items-center justify-center gap-2 rounded-full border-2 border-[#c8fc04]/70 bg-[#0b3a10] py-3.5 text-lg font-bold text-[#e6ffcc] transition-colors hover:bg-[#145a1a]">
+          <span aria-hidden="true">🔑</span> เข้าสู่ระบบ
         </a>
       </div>
     </div>

@@ -9,18 +9,18 @@ const headingSize = HeadingTag === "h1" ? "text-xl sm:text-2xl md:text-3xl" : "t
 
 <section class="my-12 flex w-full justify-center px-4 font-sans">
   <div
-    class="relative isolate w-full max-w-[1400px] rounded-2xl border-2 border-[#5c0b13] bg-[#1f0405] p-8 pt-36 text-left text-base leading-relaxed text-[#f7e6d0] shadow-[0_10px_30px_rgba(245,197,66,0.16)] md:pt-24">
-    <div aria-hidden="true" class="pointer-events-none absolute -top-16 -right-10 -z-10 h-40 w-40 rounded-full bg-[#f5c542]/18 blur-[60px]"></div>
-    <div aria-hidden="true" class="pointer-events-none absolute -bottom-16 -left-10 -z-10 h-40 w-40 rounded-full bg-[#e11d1d]/18 blur-[60px]"></div>
+    class="relative isolate w-full max-w-[1400px] rounded-2xl border-2 border-[#1d5c22] bg-[#06230a] p-8 pt-36 text-left text-base leading-relaxed text-[#d9f7d0] shadow-[0_10px_30px_rgba(200,252,4,0.16)] md:pt-24">
+    <div aria-hidden="true" class="pointer-events-none absolute -top-16 -right-10 -z-10 h-40 w-40 rounded-full bg-[#c8fc04]/18 blur-[60px]"></div>
+    <div aria-hidden="true" class="pointer-events-none absolute -bottom-16 -left-10 -z-10 h-40 w-40 rounded-full bg-[#3fc20a]/18 blur-[60px]"></div>
 
     {
       title && (
-        <div class="absolute -top-6 left-1/2 flex w-[92%] max-w-2xl -translate-x-1/2 items-center justify-center gap-2 rounded-lg border-2 border-[#f5c542]/70 bg-gradient-to-r from-[#5a0a0a] via-[#a31212] to-[#5a0a0a] px-4 py-2.5 text-center shadow-[0_10px_30px_rgba(225,29,29,0.32)] sm:px-8">
-          <span aria-hidden="true" class="shrink-0 text-[#ffe9a3]">
+        <div class="absolute -top-6 left-1/2 flex w-[92%] max-w-2xl -translate-x-1/2 items-center justify-center gap-2 rounded-lg border-2 border-[#e6ff6a]/70 bg-gradient-to-r from-[#7ee000] via-[#c8fc04] to-[#7ee000] px-4 py-2.5 text-center shadow-[0_10px_30px_rgba(200,252,4,0.32)] sm:px-8">
+          <span aria-hidden="true" class="shrink-0 text-[#0b2a05]">
             ✦
           </span>
-          <HeadingTag class={`min-w-0 ${headingSize} leading-normal font-black tracking-tight text-[#ffe9a3] uppercase`}>{title}</HeadingTag>
-          <span aria-hidden="true" class="shrink-0 text-[#ffe9a3]">
+          <HeadingTag class={`min-w-0 ${headingSize} leading-normal font-black tracking-tight text-[#0b2a05] uppercase`}>{title}</HeadingTag>
+          <span aria-hidden="true" class="shrink-0 text-[#0b2a05]">
             ✦
           </span>
         </div>

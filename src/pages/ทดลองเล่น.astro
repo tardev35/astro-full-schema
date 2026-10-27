@@ -2,7 +2,7 @@
 import MainLayout from "../layouts/MainLayout.astro";
 import ContentBox from "../components/ContentBox.astro";
 import Navfoot from "../components/Navfoot.astro";
-import Announcement from "../components/Announcement5.astro";
+import Announcement from "../components/AnnouncementPremium.astro";
 
 import { Picture } from "astro:assets";
 import { itemList, pageGraph, schemaCtx } from "../lib/schema";
@@ -36,14 +36,14 @@ const demoGames = [
 
 const gameList = demoGames.map((game) => ({ name: game.name, imagePath: game.src.src }));
 
-const pageTitle = "ทดลองเล่นสล็อต VODKAFUN ลองเกมเวอร์ชั่นใหม่ให้คุ้นมือก่อนเล่นจริง";
+const pageTitle = "ทดลองเล่นสล็อต WINDRAGON ลองค่ายเด่นสายแตกโหดให้คุ้นมือก่อนเล่นจริง";
 
-const pageHeading = "ทดลองเล่นสล็อต VODKAFUN ลองเกมเวอร์ชั่นใหม่ให้คุ้นมือก่อนใช้เครดิตจริง";
+const pageHeading = "ทดลองเล่นสล็อต WINDRAGON ลองค่ายเด่นสายแตกโหดให้คุ้นมือก่อนใช้เครดิตจริง";
 
 const pageDescription =
-  "ทดลองเล่นสล็อต VODKAFUN สมัครยูสเดียวแล้วเข้าโหมดทดลองของค่ายดังได้ทันที หมุนด้วยเครดิตสมมติไม่จำกัดรอบ ดูเดิมพันต่อรอบและฟีเจอร์โบนัสให้คุ้นมือก่อนเล่นจริง";
+  "ทดลองเล่นสล็อต WINDRAGON สมัครยูสเดียวแล้วเข้าโหมดทดลองของค่ายเด่นได้จากมือถือ หมุนฟรีด้วยเครดิตสมมติ ดูเบทต่อรอบ ฟรีสปินและตัวคูณให้คุ้นมือก่อนเล่นจริง";
 
-const linkClass = "font-bold text-[#c8fc04] underline underline-offset-4 transition-colors hover:text-[#e6ff6a]";
+const linkClass = "font-bold text-[#ff9a4d] underline underline-offset-4 transition-colors hover:text-[#ffd77a]";
 
 const ctx = schemaCtx(Astro);
 const graph = pageGraph(Astro, {
@@ -56,8 +56,8 @@ const graph = pageGraph(Astro, {
   ],
   extra: [
     itemList(ctx, {
-      name: "ทดลองเล่นเกมสล็อตของ VODKAFUN",
-      alternateName: "VODKAFUN โหมดทดลองเล่นสล็อตหลายค่ายบนมือถือ ก่อนใช้เครดิตจริงด้วยยูสเซอร์เดียว",
+      name: "ทดลองเล่นเกมสล็อตของ WINDRAGON",
+      alternateName: "WINDRAGON โหมดทดลองเล่นสล็อตค่ายเด่นบนมือถือ ก่อนใช้เครดิตจริงด้วยยูสเซอร์เดียว",
       itemType: "Game",
       items: gameList,
     }),
@@ -73,32 +73,32 @@ const graph = pageGraph(Astro, {
   <ContentBox as="h1" title={pageHeading}>
     <div class="flex flex-col gap-4">
       <p class="text-left text-base leading-relaxed">
-        หากคุณกำลังมองหาที่ลองเกมให้คุ้นมือก่อนลงเครดิตจริง <strong class="text-[#c8fc04]">VODKAFUN</strong> พร้อมเปิดหน้าเกมสล็อตเวอร์ชั่นใหม่จากค่ายดังให้คุณเข้ามาดูของจริง เพื่อให้รู้จังหวะและฟีเจอร์ของเกมก่อนตัดสินใจ
+        หากคุณกำลังมองหาที่ลองสล็อตให้คุ้นมือก่อนลงเครดิตจริง <strong class="text-[#ff9a4d]">WINDRAGON</strong> พร้อมเปิดหน้าเกมจากค่ายเด่นสายแตกโหดให้คุณเข้ามาดูของจริง เพื่อให้รู้จังหวะฟรีสปินและตัวคูณก่อนตัดสินใจ
       </p>
       <p class="text-left text-base leading-relaxed">
-        เลือกค่ายที่สะดุดตาจากด้านล่าง กดที่ภาพเพื่อสมัครยูสเดียวใช้เวลาไม่กี่นาที แล้วเข้าโหมดทดลองของค่ายนั้นต่อได้จากหน้าสมาชิกทันที ไม่ต้องเปิดบัญชีใหม่ทีละค่าย
+        เลือกค่ายที่สะดุดตาจากด้านล่าง กดที่ภาพแล้วระบบจะพาไปหน้าสมัครสมาชิก สมัครยูสเดียวใช้เวลาไม่กี่นาที จากนั้นเข้าโหมดทดลองของค่ายนั้นต่อได้จากหน้าสมาชิกทันที
       </p>
       <p class="text-left text-base leading-relaxed">
-        จะเปิดจากมือถือ iOS หรือ Android แท็บเล็ต หรือคอมพิวเตอร์ ก็ใช้ยูสเซอร์เดิมได้ทุกเครื่อง เมนูภาษาไทยอ่านง่าย ลองเกมได้ทุกที่ที่คุณสะดวก
+        ทุกขั้นเปิดจากสมาร์ทโฟนได้ครบ ตั้งแต่สมัคร ล็อกอิน ไปจนถึงเปิดเกม จะลองตอนพักเที่ยงหรือก่อนนอนก็ใช้มือถือเครื่องเดียวจบ ไม่ต้องรอเปิดคอม
       </p>
     </div>
   </ContentBox>
 
-  <ContentBox as="h2" title="เลือกค่ายที่ถูกใจ สมัคร VODKAFUN ครั้งเดียว ยูสเดียวลองได้หลายค่าย">
+  <ContentBox as="h2" title="เลือกค่ายที่ใช่ สมัคร WINDRAGON ครั้งเดียว ลองได้ทุกค่ายด้วยยูสเดียว">
     <div class="flex flex-col gap-4">
       <p class="text-left text-base leading-relaxed">
-        VODKAFUN รวมเกมครบครันไว้ให้คุณในบัญชีเดียว ทั้งสล็อต ยิงปลา กีฬา คาสิโน และหวย ค่ายสล็อตบนหน้านี้คือจุดเริ่มที่ง่ายที่สุด เพราะส่วนใหญ่มีโหมดทดลองให้เปิดดูได้ทันทีหลังสมัคร
+        WINDRAGON ให้สล็อตมาก่อนทุกอย่าง ค่ายด้านล่างจึงเป็นจุดเริ่มที่ง่ายที่สุด แต่ละค่ายมีแนวเกมของตัวเอง ทั้งเกมที่จ่ายถี่และเกมสายแตกโหดที่รอฟรีสปินพายอดขึ้นแรง
       </p>
       <p class="text-left text-base leading-relaxed">
-        ปุ่มบนภาพเขียนว่าสมัครเพื่อลอง เพราะจะพาคุณไปขั้นตอน <a href="/register/" class={linkClass}>สมัครสมาชิก</a> ก่อน กรอกข้อมูลเบื้องต้นให้ครบก็ได้ยูสเซอร์ไว้เข้าสู่ระบบ แล้วเลือกเปิดเกมที่อยากลองได้จากหน้าสมาชิก
+        ปุ่มบนภาพเขียนว่าสมัครเพื่อลอง เพราะจะพาคุณไปหน้า <a href="/register/" class={linkClass}>สมัครสมาชิก</a> ก่อน กรอกข้อมูลเบื้องต้นให้ครบก็ได้ยูสเซอร์ไว้เข้าสู่ระบบ แล้วเลือกเปิดเกมที่อยากลองได้จากหน้าสมาชิก
       </p>
       <p class="text-left text-base leading-relaxed">
-        สมัครครั้งเดียวใช้ได้กับทุกค่ายบน VODKAFUN อยากเปลี่ยนบรรยากาศจากเกมหนึ่งไปอีกเกมก็กดสลับได้เลย เล่นสล็อตเสร็จจะแวะไปยิงปลาหรือดูบอลต่อก็ยูสเดิม
+        สมัครครั้งเดียวใช้ได้กับทุกค่ายบน WINDRAGON เบื่อเกมหนึ่งก็กดสลับไปอีกค่ายได้เลย ไม่ต้องเปิดบัญชีใหม่ทีละค่าย และไม่ต้องจำรหัสผ่านหลายชุดให้ปวดหัว
       </p>
       <div class="mt-4 mb-5 grid grid-cols-2 gap-5 sm:grid-cols-2 md:grid-cols-4">
         {
           demoGames.map((game) => (
-            <div class="group/game relative mx-auto w-full max-w-[400px] overflow-hidden rounded-xl border border-[#1d5c22] bg-[#06230a]">
+            <div class="group/game relative mx-auto w-full max-w-[400px] overflow-hidden rounded-xl border border-[#5a2a12] bg-[#1a100c]">
               <Picture
                 src={game.src}
                 alt={game.alt}
@@ -106,7 +106,7 @@ const graph = pageGraph(Astro, {
                 fetchpriority="low"
                 widths={[200, 400, 600]}
                 sizes="(max-width: 768px) 50vw, 25vw"
-                class="block h-auto w-full object-cover shadow-[0_10px_30px_rgba(200,252,4,0.18)] transition-transform duration-300 group-hover/game:scale-105"
+                class="block h-auto w-full object-cover shadow-[0_10px_30px_rgba(242,107,29,0.18)] transition-transform duration-300 group-hover/game:scale-105"
                 decoding="async"
                 formats={["avif", "webp"]}
                 fallbackFormat="webp"
@@ -116,9 +116,9 @@ const graph = pageGraph(Astro, {
                 href="/register/"
                 target="_blank"
                 rel="noopener noreferrer"
-                aria-label={`สมัครสมาชิก VODKAFUN เพื่อลองเล่น ${game.name}`}
-                class="absolute inset-0 flex items-center justify-center bg-[#020f03]/85 opacity-0 transition-opacity duration-300 group-hover/game:opacity-100 focus-visible:opacity-100">
-                <span class="rounded-xl bg-gradient-to-r from-[#e6ff6a] via-[#c8fc04] to-[#7ee000] px-6 py-2 font-bold text-[#0b2a05] shadow-[0_10px_30px_rgba(200,252,4,0.35)] transition-transform hover:scale-110">สมัครเพื่อลอง</span>
+                aria-label={`สมัครสมาชิก WINDRAGON เพื่อลองเล่น ${game.name}`}
+                class="absolute inset-0 flex items-center justify-center bg-[#0f0a09]/85 opacity-0 transition-opacity duration-300 group-hover/game:opacity-100 focus-visible:opacity-100">
+                <span class="rounded-xl bg-gradient-to-r from-[#ff8a2a] to-[#e2550a] px-6 py-2 font-bold text-[#1a0701] shadow-[0_10px_30px_rgba(242,107,29,0.35)] transition-transform hover:scale-110 hover:brightness-110">สมัครเพื่อลอง</span>
               </a>
             </div>
           ))
@@ -127,53 +127,53 @@ const graph = pageGraph(Astro, {
     </div>
   </ContentBox>
 
-  <ContentBox as="h2" title="ทดลองเล่นฟรีไม่จำกัดรอบ ลองให้พอใจก่อนใช้เครดิตจริง">
+  <ContentBox as="h2" title="ทดลองเล่นสล็อตฟรี หมุนให้หนำใจก่อนใช้เครดิตจริง">
     <div class="flex flex-col gap-4">
       <p class="text-left text-base leading-relaxed">
-        เข้าโหมดทดลองแล้วหมุนได้ไม่จำกัดรอบ เพราะใช้เครดิตสมมติทั้งหมด คุณอยากลองผิดลองถูกกี่ครั้งก็ได้ตามสบาย ไม่มีใครเร่ง ไม่มีใครกดดันให้ฝากก่อนที่คุณจะพร้อม
+        โหมดทดลองใช้เครดิตสมมติทั้งหมด คุณจะลองผิดลองถูกกี่รอบก็ได้ตามสบาย ไม่มีใครเร่ง และไม่มีใครกดดันให้ฝากก่อนที่คุณจะพร้อมเล่นจริง
       </p>
       <p class="text-left text-base leading-relaxed">
-        ระหว่างลองให้สังเกตว่าเดิมพันต่อรอบเริ่มที่เท่าไร ฟรีสปินกับฟีเจอร์โบนัสเข้ามาในจังหวะไหน และหนึ่งรอบยาวพอดีกับที่คุณชอบหรือไม่ จะได้เลือกเกมที่ถูกจริตตั้งแต่ยังไม่ลงทุน
+        ระหว่างหมุนลองสังเกตว่าเบทต่อรอบเริ่มที่เท่าไร สแคตเตอร์ต้องขึ้นกี่ตัวถึงเข้าฟรีสปิน และตัวคูณพายอดขึ้นได้แรงแค่ไหน จะได้เลือกเกมที่ถูกจริตตั้งแต่ยังไม่ลงทุน
       </p>
       <p class="text-left text-base leading-relaxed">
-        หน้าเกมและกติกาที่คุณเห็นตอนทดลองเป็นชุดเดียวกับตอนเล่นจริง ต่างกันแค่เครดิตที่ใช้หมุน สิ่งที่คุณเรียนรู้จากโหมดนี้จึงใช้ได้จริงเมื่อถึงรอบเล่นจริง
+        หน้าเกมและกติกาตอนทดลองเป็นชุดเดียวกับตอนเล่นจริง ต่างกันแค่เครดิตที่ใช้หมุน จังหวะที่คุณจับได้วันนี้จึงพกไปใช้ได้ทันทีเมื่อถึงรอบเล่นจริง
       </p>
       <p class="text-left text-base leading-relaxed">
         เรื่องที่ขอบอกให้ชัดตั้งแต่ต้น เครดิตในโหมดทดลองถอนออกมาไม่ได้ และไม่นับเป็นยอดเทิร์นของโปรโมชั่นใดทั้งสิ้น มีไว้ให้คุณทำความรู้จักเกมอย่างเดียว
       </p>
       <p class="text-left text-base leading-relaxed">
-        อีกข้อคือไม่ใช่ทุกเกมที่มีปุ่มทดลอง เพราะโหมดนี้ขึ้นอยู่กับค่ายผู้พัฒนาแต่ละราย หากเกมที่คุณหมายตายังไม่เปิดไว้ <a href="/contact-us/" class={linkClass}>ทักทีมงาน</a> ให้ช่วยแนะนำเกมแนวใกล้เคียงได้เลย
+        อีกข้อคือไม่ใช่ทุกเกมที่มีปุ่มทดลอง เพราะโหมดนี้ขึ้นอยู่กับค่ายผู้พัฒนาแต่ละราย ถ้าเกมที่หมายตาไว้ยังไม่เปิดให้ลอง <a href="/contact-us/" class={linkClass}>ทักทีมงาน</a> ให้ช่วยแนะนำเกมแนวใกล้เคียงได้เลย
       </p>
     </div>
   </ContentBox>
 
-  <ContentBox as="h2" title="พร้อมเมื่อไหร่ สมัครสมาชิก VODKAFUN แล้วเริ่มเล่นจริงได้ทันที">
+  <ContentBox as="h2" title="เจอเกมที่ใช่แล้ว สมัคร WINDRAGON แล้วเริ่มปั่นจริงได้ทันที">
     <div class="flex flex-col gap-4">
       <p class="text-left text-base leading-relaxed">
-        เมื่อเจอเกมที่ใช่แล้ว คุณเริ่มเล่นจริงได้เลยด้วยยูสเซอร์เดิม ไม่ต้องสมัครซ้ำ จะเริ่มเบาๆ หรือจัดเต็มก็เลือกได้ตามงบของคุณเอง เช็กยอดขั้นต่ำและเงื่อนไขล่าสุดจากระบบก่อนฝากทุกครั้ง
+        เมื่อเจอเกมที่ถูกใจ คุณเริ่มเล่นจริงได้เลยด้วยยูสเซอร์เดิม ไม่ต้องสมัครซ้ำ จะเริ่มจากเบทต่ำเพื่อจับจังหวะหรือขยับขึ้นเมื่อทุนพร้อมก็เลือกได้ตามงบของคุณเอง
       </p>
       <p class="text-left text-base leading-relaxed">
-        ฝากถอนเป็นระบบออโต้ ทำรายการเองจากหน้าบัญชี รองรับทรูมันนี่วอเล็ต ตรวจข้อมูลบัญชีและจำนวนเงินก่อนยืนยัน แล้วกลับไปสนุกต่อได้โดยไม่ต้องนั่งรอ ดูขั้นตอนที่หน้า <a href="/วิธีฝากถอน/" class={linkClass}>วิธีฝากถอน</a>
+        ฝากถอนของ WINDRAGON เป็นระบบออโต้ กดทำรายการเองจากมือถือ ไม่ต้องส่งสลิป ไม่ต้องรอแอดมิน และยอดบวกโอนเต็มจำนวนไม่หักเปอร์เซ็นต์ ดูขั้นตอนได้ที่หน้า <a href="/วิธีฝากถอน/" class={linkClass}>วิธีฝากถอน</a>
       </p>
       <p class="text-left text-base leading-relaxed">
-        สมาชิกใหม่ยังมีโปรโมชั่นรอต้อนรับตั้งแต่ก้าวแรก ทั้งเช็คอินรายวัน แนะนำเพื่อน และคืนยอดเสีย เงื่อนไขของแต่ละรายการดูได้ที่ <a href="/promotion/" class={linkClass}>หน้าโปรโมชั่น</a> เลือกรับเฉพาะรายการที่เข้ากับสไตล์การเล่นของคุณ
+        อยากยืดรอบให้นานขึ้น WINDRAGON ยังมีโปรสุดคุ้มไว้เสริมทุน แต่ละรายการมีเงื่อนไขของตัวเอง ดูรายละเอียดได้ที่ <a href="/promotion/" class={linkClass}>หน้าโปรโมชั่น</a> แล้วเลือกรับเฉพาะโปรที่เข้ากับสไตล์การเล่นของคุณ
       </p>
       <p class="text-left text-base leading-relaxed">
         อีกเรื่องที่ควรติดตัวไว้เสมอ อย่าบอกรหัสผ่านหรือรหัส OTP กับใครทั้งสิ้น แม้คนนั้นจะอ้างว่าเป็นทีมงานก็ตาม เพราะทีมงานตัวจริงไม่มีเหตุให้ต้องขอ
       </p>
       <p class="text-left text-base leading-relaxed">
-        เลือกค่ายที่ถูกใจแล้วเริ่มได้เลย เกมที่คุณคุ้นมือจากโหมดทดลองวันนี้ คือเกมที่คุณรู้จักหน้าตาและกติกาดีแล้วเมื่อถึงรอบเล่นจริง ไม่ต้องเดาเอาเอง
+        เลือกค่ายที่ถูกใจแล้วเริ่มได้เลย เกมที่คุณลองจนคุ้นมือวันนี้ คือเกมที่คุณรู้จังหวะและกติกาดีแล้วเมื่อถึงรอบเล่นจริง เพื่อการปั่นที่มั่นใจและสนุกต่อเนื่องกว่าที่เคย
       </p>
       <div class="flex flex-col items-center justify-center gap-4 pt-2 sm:flex-row">
         <a
           href="/register/"
-          class="inline-flex w-full max-w-[320px] items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-[#e6ff6a] via-[#c8fc04] to-[#7ee000] px-8 py-3.5 text-lg font-black tracking-wide text-[#0b2a05] shadow-[0_10px_30px_rgba(200,252,4,0.35)] transition-transform duration-300 hover:scale-105">
-          <span aria-hidden="true">🎰</span> สมัครสมาชิก VODKAFUN
+          class="inline-flex w-full max-w-[320px] items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-[#ff8a2a] to-[#e2550a] px-8 py-3.5 text-lg font-black tracking-wide text-[#1a0701] shadow-[0_10px_30px_rgba(242,107,29,0.35)] transition duration-300 hover:scale-105 hover:brightness-110">
+          <span aria-hidden="true">🎰</span> สมัครสมาชิก WINDRAGON
         </a>
 
         <a
           href="/login/"
-          class="inline-flex w-full max-w-[320px] items-center justify-center gap-2 rounded-xl border border-[#c8fc04]/70 bg-[#0b3a10] px-8 py-3.5 text-lg font-bold tracking-wide text-[#e6ffcc] transition-colors duration-300 hover:bg-[#145a1a]">
+          class="inline-flex w-full max-w-[320px] items-center justify-center gap-2 rounded-xl border border-[#f26b1d]/70 bg-[#26150e] px-8 py-3.5 text-lg font-bold tracking-wide text-[#f2e7de] transition-colors duration-300 hover:bg-[#3a1d10]">
           เข้าสู่ระบบ
         </a>
       </div>

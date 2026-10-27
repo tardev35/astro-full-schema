@@ -2,7 +2,7 @@
 import MainLayout from "../layouts/MainLayout.astro";
 import ContentBox from "../components/ContentBox.astro";
 import Navfoot from "../components/Navfoot.astro";
-import Announcement from "../components/Announcement5.astro";
+import Announcement from "../components/AnnouncementPremium.astro";
 
 import { Picture } from "astro:assets";
 
@@ -10,15 +10,14 @@ import pro1 from "../assets/slide1.png";
 import pro2 from "../assets/slide2.png";
 import pro3 from "../assets/slide3.png";
 import pro4 from "../assets/slide4.png";
-import pro5 from "../assets/slide5.png";
 import { pageGraph } from "../lib/schema";
 
-const pageTitle = "โปรโมชั่น VODKAFUN | แนะนำเพื่อน แคชแบ็ก เช็คอิน วงล้อนำโชค";
+const pageTitle = "โปรโมชั่น WINDRAGON | คืนยอดเสียทุกสัปดาห์ ฝากถอนออโต้ เริ่ม 1 บาท";
 
-const pageHeading = "โปรโมชั่น VODKAFUN รวมโบนัสแนะนำเพื่อน แคชแบ็ก และวงล้อนำโชค";
+const pageHeading = "โปรโมชั่น WINDRAGON รวมโปรสุดคุ้มเสริมทุนสำหรับสมาชิก";
 
 const pageDescription =
-  "รวมโปรโมชั่น VODKAFUN ไว้ในหน้าเดียว แนะนำเพื่อนรับ 0.8% แคชแบ็ก 3% กระเป๋าโบนัส เช็คอินรายวัน และวงล้อนำโชค ดูรายละเอียดบนภาพแล้วสมัครสมาชิกรับสิทธิ์ได้เลย";
+  "รวมโปรโมชั่น WINDRAGON ไว้ในหน้าเดียว คืนยอดเสียทุกสัปดาห์สูงสุด 10,000 บาท ฝากถอนออโต้เริ่มแค่ 1 บาท รองรับทุกธนาคารและทรูวอเล็ท สมัครแล้วรับสิทธิ์ได้เลย";
 
 const graph = pageGraph(Astro, {
   name: pageTitle,
@@ -31,7 +30,7 @@ const graph = pageGraph(Astro, {
 });
 
 const promoClass =
-  "mx-auto h-auto w-full rounded-xl border border-[#1d5c22] object-contain shadow-[0_10px_30px_rgba(200,252,4,0.14)] transition-all duration-300 hover:-translate-y-1 hover:border-[#c8fc04]/55 hover:shadow-[0_15px_40px_rgba(200,252,4,0.28)]";
+  "mx-auto h-auto w-full rounded-xl border border-[#5a2a12] object-contain shadow-[0_10px_30px_rgba(242,107,29,0.14)] transition-all duration-300 hover:-translate-y-1 hover:border-[#f26b1d]/55 hover:shadow-[0_15px_40px_rgba(242,107,29,0.28)]";
 ---
 
 <MainLayout title={pageTitle} description={pageDescription}>
@@ -41,17 +40,17 @@ const promoClass =
 
   <ContentBox title={pageHeading} as="h1">
     <p class="mb-4 text-left text-base leading-relaxed">
-      หากคุณกำลังมองหาโปรโมชั่นที่ใช้ได้จริงทุกวัน <strong class="text-[#c8fc04]">VODKAFUN</strong> พร้อมมอบทั้งโบนัสแนะนำเพื่อน แคชแบ็กคืนยอดเสีย กระเป๋าโบนัส เช็คอินประจำวัน และวงล้อนำโชค รวมไว้ให้เลือกครบในหน้าเดียว
+      หากคุณกำลังมองหาโปรที่ช่วยเสริมทุนให้มีรอบลุ้นนานขึ้น <strong class="text-[#ff9a4d]">WINDRAGON</strong> พร้อมมอบทั้งโปรคืนยอดเสียทุกสัปดาห์สูงสุด 10,000 บาท และระบบฝากถอนออโต้ที่เริ่มได้ตั้งแต่ 1 บาท รวมไว้ให้ดูครบในหน้าเดียว
     </p>
 
     <p class="mb-8 text-left text-base leading-relaxed">
-      แต่ละโปรโมชั่นมีเงื่อนไขและช่วงเวลารับสิทธิ์ต่างกัน ตรวจสอบรายละเอียดล่าสุดในระบบสมาชิกก่อนกดรับทุกครั้ง เพื่อให้ทุกยอดฝากของคุณได้สิทธิ์ครบตามที่ตั้งใจ
+      เงื่อนไขและช่วงเวลารับสิทธิ์ของแต่ละโปรไม่เหมือนกัน เช็กรายละเอียดล่าสุดในหน้าสมาชิกก่อนกดรับทุกครั้ง สมัครครั้งเดียวใช้ได้ทุกสิทธิ์ เพื่อประสบการณ์การเล่นที่คุ้มค่าและต่อเนื่องกว่าที่เคย
     </p>
 
     <div class="grid w-full grid-cols-1 gap-6 sm:grid-cols-2">
       <Picture
         src={pro1}
-        alt="ภาพโปรโมชั่น VODKAFUN ข้อความว่า แนะนำเพื่อน รับโบนัส 0.8% สร้างรายได้ 100,000 ต่อเดือน พรีเซนเตอร์หญิงชุดดำเขียวผมไฮไลต์เขียวยืนคู่กัน ด้านหลังเป็นสนามสีเขียวเข้มพร้อมโลโก้ VODKAFUN"
+        alt="โปรโมชั่น WINDRAGON ข้อความบนภาพ: WINDRAGON168 เว็บเดิมพันอันดับ 1 บริการออนไลน์ครบวงจร สล็อต บาคาร่า กีฬาสด หวย"
         loading="lazy"
         fetchpriority="low"
         widths={[400, 600]}
@@ -65,7 +64,7 @@ const promoClass =
 
       <Picture
         src={pro2}
-        alt="ภาพโปรโมชั่น VODKAFUN ข้อความว่า CASHBACK 3% คืนยอดเสียทุกยอดฝาก เล่นถึง 50% ถอนได้เลย รับสิทธิ์ก่อน 23.59 น. ของทุกวัน พรีเซนเตอร์หญิงชุดดำเขียวผมไฮไลต์เขียว ด้านหลังเป็นสนามสีเขียวเข้มพร้อมโลโก้ VODKAFUN"
+        alt="โปรโมชั่น WINDRAGON ข้อความบนภาพ: ฝาก-ถอนระบบอัตโนมัติ แค่ 1 บาทก็สนุกได้ รองรับทุกธนาคารและทรูวอเล็ท"
         loading="lazy"
         fetchpriority="low"
         widths={[400, 600]}
@@ -79,7 +78,7 @@ const promoClass =
 
       <Picture
         src={pro3}
-        alt="ภาพโปรโมชั่น VODKAFUN ข้อความว่า กระเป๋าโบนัส รวมยอดคืนยอดเสีย ค่าแนะนำเพื่อน และโบนัสเช็คอิน ถอนเครดิตเกมหรือเงินสด พรีเซนเตอร์หญิงชุดดำเขียวผมไฮไลต์เขียว ด้านหลังเป็นสนามสีเขียวเข้มพร้อมโลโก้ VODKAFUN"
+        alt="โปรโมชั่น WINDRAGON ข้อความบนภาพ: กีฬาสดออนไลน์ ลีกเล็ก ลีกใหญ่ทั่วโลก ค่าน้ำดีที่สุด เคลียร์บิลไว ถอนได้เลย!"
         loading="lazy"
         fetchpriority="low"
         widths={[400, 600]}
@@ -93,21 +92,7 @@ const promoClass =
 
       <Picture
         src={pro4}
-        alt="ภาพโปรโมชั่น VODKAFUN ข้อความว่า เช็คอินประจำวัน รับรางวัลทุกวัน เช็คอินง่าย ลุ้นของรางวัลมากมาย พรีเซนเตอร์หญิงชุดดำเขียวผมไฮไลต์เขียว ด้านหลังเป็นสนามสีเขียวเข้มพร้อมโลโก้ VODKAFUN"
-        loading="lazy"
-        fetchpriority="low"
-        widths={[400, 600]}
-        sizes="(max-width: 768px) 100vw, 50vw"
-        class={promoClass}
-        decoding="async"
-        formats={["avif", "webp"]}
-        fallbackFormat="webp"
-        quality={80}
-      />
-
-      <Picture
-        src={pro5}
-        alt="ภาพโปรโมชั่น VODKAFUN ข้อความว่า วงล้อนำโชค ลุ้นรับรางวัลมูลค่ามากกว่า 1 ล้านบาท ฝาก 500 บาท รับ 1 ตั๋วสุ่มวงล้อ พรีเซนเตอร์หญิงชุดดำเขียวผมไฮไลต์เขียวข้างวงล้อรางวัล ด้านหลังเป็นสนามสีเขียวเข้มพร้อมโลโก้ VODKAFUN"
+        alt="โปรโมชั่น WINDRAGON ข้อความบนภาพ: คืนยอดเสียทุกสัปดาห์ คืนให้สูงสุด 10,000.-"
         loading="lazy"
         fetchpriority="low"
         widths={[400, 600]}
@@ -123,8 +108,8 @@ const promoClass =
     <div class="mt-12 flex justify-center pb-4">
       <a
         href="/register/"
-        class="flex items-center justify-center rounded-xl bg-gradient-to-r from-[#e6ff6a] via-[#c8fc04] to-[#7ee000] px-10 py-3.5 text-lg font-black text-[#0b2a05] shadow-[0_10px_30px_rgba(200,252,4,0.35)] transition-transform hover:scale-105 hover:shadow-[0_15px_40px_rgba(200,252,4,0.5)]">
-        สมัครสมาชิก VODKAFUN
+        class="flex items-center justify-center rounded-xl bg-gradient-to-r from-[#ff8a2a] to-[#e2550a] px-10 py-3.5 text-lg font-black text-[#1a0701] shadow-[0_10px_30px_rgba(242,107,29,0.35)] transition-all hover:scale-105 hover:brightness-110 hover:shadow-[0_15px_40px_rgba(242,107,29,0.5)]">
+        สมัครสมาชิก WINDRAGON
       </a>
     </div>
   </ContentBox>

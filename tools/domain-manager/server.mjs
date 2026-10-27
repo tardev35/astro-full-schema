@@ -21,6 +21,8 @@ import express from "express";
 import { NodeSSH } from "node-ssh";
 import { fileURLToPath } from "node:url";
 import { dirname, join } from "node:path";
+import { existsSync } from "node:fs";
+import { homedir } from "node:os";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 
@@ -29,6 +31,41 @@ const PORT = Number(process.env.PORT) || 3000;
 const VPS_HOST = process.env.VPS_HOST || "45.32.122.181";
 const VPS_USER = process.env.VPS_USER || "root";
 const VPS_PASSWORD = process.env.VPS_PASSWORD || "";
+const VPS_KEY = process.env.VPS_KEY || "";
+
+// Key first when this machine has one (the owner's machines do), password
+// from .env second (the dev team's Windows Servers have no key). Each attempt
+// is reported by name so a wrong password and a missing key read differently.
+function authAttempts() {
+  const out = [];
+  const keys = [VPS_KEY, join(homedir(), ".ssh", "id_ed25519"), join(homedir(), ".ssh", "id_rsa")].filter(Boolean);
+  for (const k of keys) {
+    if (existsSync(k) && !out.some((a) => a.privateKeyPath === k)) out.push({ label: "SSH key " + k, privateKeyPath: k });
+  }
+  if (VPS_PASSWORD) out.push({ label: "รหัสผ่านจาก .env", password: VPS_PASSWORD });
+  return out;
+}
+
+async function connectVps(ssh) {
+  const attempts = authAttempts();
+  if (!attempts.length) {
+    throw new Error("เครื่องนี้ไม่มี SSH key (~/.ssh/id_ed25519) และยังไม่ได้ตั้ง VPS_PASSWORD ใน tools/domain-manager/.env");
+  }
+  const failed = [];
+  for (const a of attempts) {
+    const { label, ...opts } = a;
+    try {
+      await ssh.connect({ host: VPS_HOST, username: VPS_USER, readyTimeout: 20000, ...opts });
+      return label;
+    } catch (error) {
+      failed.push(label + ": " + error.message);
+    }
+  }
+  throw new Error(
+    "ต่อ " + VPS_USER + "@" + VPS_HOST + " ไม่ได้ ลองแล้ว " + attempts.length + " วิธี\n" + failed.join("\n") +
+    "\nถ้าใช้รหัสผ่าน: ตรวจ VPS_PASSWORD ใน tools/domain-manager/.env ว่าตรงกับรหัส root ปัจจุบัน (เครื่องอื่นที่รหัสถูกต้องยังเข้าได้)",
+  );
+}
 
 // add-site.sh runs as root, so the domain MUST be validated before it is placed
 // in the remote command. This strict whitelist (a-z 0-9 . -, real TLD) blocks
@@ -49,13 +86,10 @@ app.post("/api/add-site", async (req, res) => {
   if (!DOMAIN_RE.test(domain)) {
     return res.status(400).json({ success: false, error: `โดเมนไม่ถูกต้อง: '${domain}' (เช่น mybrand-review.com)` });
   }
-  if (!VPS_PASSWORD) {
-    return res.status(500).json({ success: false, error: "ยังไม่ได้ตั้ง VPS_PASSWORD ใน .env (คัดลอกจาก .env.example)" });
-  }
-
   const ssh = new NodeSSH();
   try {
-    await ssh.connect({ host: VPS_HOST, username: VPS_USER, password: VPS_PASSWORD });
+    const via = await connectVps(ssh);
+    console.log("[add-site] " + domain + " via " + via);
     // domain is whitelisted above, so this interpolation is safe.
     const result = await ssh.execCommand(`./add-site.sh ${domain}`);
     return res.json({ success: true, output: result.stdout, errorOutput: result.stderr });
@@ -69,6 +103,6 @@ app.post("/api/add-site", async (req, res) => {
 app.listen(PORT, HOST, () => {
   console.log(`\n  Domain manager: http://localhost:${PORT}   (bind ${HOST})`);
   console.log(`  Target VPS: ${VPS_USER}@${VPS_HOST}`);
-  if (!VPS_PASSWORD) console.log(`  [!] VPS_PASSWORD ยังว่าง — ตั้งใน tools/domain-manager/.env ก่อนใช้งาน`);
+  console.log(`  auth: ${authAttempts().map((a) => a.label).join(" → ") || "ไม่มีทั้ง SSH key และ VPS_PASSWORD"}`);
   console.log("");
 });

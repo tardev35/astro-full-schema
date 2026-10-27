@@ -1,61 +1,51 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
-import Announcement from "../components/Announcement5.astro";
+import Announcement from "../components/AnnouncementPremium.astro";
 import ContentBox from "../components/ContentBox.astro";
-import ContentBoxFloatingBadge from "../components/ContentBoxFloatingBadge.astro";
-import ContentBoxSevenThree from "../components/ContentBoxSevenThree.astro";
-import ContentBoxSevenThreeFloatingBadge from "../components/ContentBoxSevenThreeFloatingBadge.astro";
-import ContentBoxTwoFloatingBadge from "../components/ContentBoxTwoFloatingBadge.astro";
-import ContentBoxSpecial from "../components/ContentBoxSpecial.astro";
-import Faq2 from "../components/Faq2.astro";
+import ContentBoxPremium from "../components/ContentBoxPremium.astro";
+import ContentBoxCyberCut from "../components/ContentBoxCyberCut.astro";
+import ContentBoxTwoPremium from "../components/ContentBoxTwoPremium.astro";
+import ContentBoxSevenThreePremium from "../components/ContentBoxSevenThreePremium.astro";
+import ContentBoxSevenThreeCyberCut from "../components/ContentBoxSevenThreeCyberCut.astro";
+import Faq3 from "../components/Faq3.astro";
 import SmoothCarousel from "../components/SmoothCarousel.astro";
 import GameRankingBoard from "../components/GameRankingBoard.astro";
 import ProviderGrid from "../components/ProviderGrid.astro";
-import LatestWinners3 from "../components/LatestWinners3.astro";
+import LatestWinnersPremium from "../components/LatestWinnersPremium.astro";
 import LoginRtpSection from "../components/LoginRtpSection.astro";
 import ReviewCardSumo2 from "../components/ReviewCardSumo2.astro";
 import Navfoot from "../components/Navfoot.astro";
 
 import { Picture } from "astro:assets";
 import { pageGraph } from "../lib/schema";
-import imgFun from "../assets/slide5.png";
-import imgWallet from "../assets/slide3.png";
-import imgPromo from "../assets/banner2.png";
+import imgWallet from "../assets/slide2.png";
+import imgCashback from "../assets/slide4.png";
 
-const pageTitle = "VODKAFUN | สล็อตเวอร์ชั่นใหม่ รวมเกมครบครัน ระบบออโต้ลื่นไหล";
+const pageTitle = "WINDRAGON สล็อตออนไลน์ ค่ายเด่นแตกโหด ฝากถอนออโต้ จ่ายไวเต็มยอด";
 
 const pageDescription =
-  "สล็อตเวอร์ชั่นใหม่ล่าสุด VODKAFUN รวมเกมครบครัน ยิงปลา กีฬา คาสิโน หวย มีให้เลือกเล่นครบจบในเว็บเดียว ระบบออโต้ ฝากถอน รองรับทรูมันนี่วอเล็ต.";
+  "ทางเข้า WINDRAGON สล็อตออนไลน์ เล่นบนมือถือได้ครบ รวมค่ายเด่นแตกโหด ฝากถอนออโต้ไม่ง้อสลิป ยอดบวกจ่ายเต็ม โปรสุดคุ้มเสริมทุน เข้าเล่นได้วันนี้";
 
-const funAlt =
-  "ภาพโปรโมชั่น VODKAFUN ข้อความว่า วงล้อนำโชค ลุ้นรับรางวัลมูลค่ามากกว่า 1 ล้านบาท ฝาก 500 บาท รับ 1 ตั๋วสุ่มวงล้อ พรีเซนเตอร์หญิงชุดดำเขียวผมไฮไลต์เขียวยืนข้างวงล้อรางวัล บนพื้นหลังสีเขียวเข้ม พร้อมโลโก้ VODKAFUN";
+const announcementMessage = "WINDRAGON สล็อตออนไลน์ เล่นจบในมือถือ ฝากถอนออโต้ไม่ต้องส่งสลิป ยอดบวกโอนเต็มจำนวน พร้อมโปรสุดคุ้มเสริมทุนทุกวัน";
 
-const walletAlt =
-  "ภาพโปรโมชั่น VODKAFUN ข้อความว่า กระเป๋าโบนัส รวมยอดคืนยอดเสีย ค่าแนะนำเพื่อน และโบนัสเช็คอิน ถอนเครดิตเกมหรือเงินสด พรีเซนเตอร์หญิงชุดดำเขียวผมไฮไลต์เขียว บนพื้นหลังสีเขียวเข้ม พร้อมโลโก้ VODKAFUN";
+const walletAlt = "ฝาก-ถอนระบบอัตโนมัติ แค่ 1 บาทก็สนุกได้ รองรับทุกธนาคารและทรูวอเล็ท";
 
-const promoAlt =
-  "ภาพโปรโมชั่น VODKAFUN ข้อความว่า โปรโมชั่นรายวัน มีตัวละครแพนด้า มาสคอตเกม PG ลูกฟุตบอล และมังกร บนพื้นหลังสีเขียวเข้ม พร้อมโลโก้ VODKAFUN";
+const cashbackAlt = "คืนยอดเสียทุกสัปดาห์ คืนให้สูงสุด 10,000.-";
+
+const faqTitle = "ถามตรงตอบตรง เรื่องที่สายปั่นอยากรู้ก่อนเริ่มเล่นสล็อตออนไลน์";
 
 const faqs = [
   {
-    q: "VODKAFUN มีเกมสล็อตเวอร์ชั่นใหม่ให้เลือกหรือไม่?",
-    a: "VODKAFUN นำเสนอเกมสล็อตหลายรูปแบบ รวมถึงเกมที่มีฟีเจอร์ฟรีสปิน ตัวคูณรางวัล และโบนัสภายในเกม โดยรายละเอียดของแต่ละเกมขึ้นอยู่กับผู้ให้บริการและกติกาที่กำหนด",
+    q: "ฝากเงินไปแล้ว เครดิตยังไม่ขึ้น ต้องทำยังไง",
+    a: "ปกติไม่ต้องทำอะไรเลย ยอดจะเข้าเครดิตเองในไม่กี่วินาที ถ้ารอเกินนั้นแล้วยังไม่ขึ้น อย่าเพิ่งโอนซ้ำ จดเวลาที่โอนกับยอดเงินไว้ แล้วแจ้งทีมงานผ่านช่องทางติดต่อบนหน้าเว็บให้ตรวจรายการ",
   },
   {
-    q: "นอกจากสล็อตแล้ว VODKAFUN มีเกมอะไรอีกบ้าง?",
-    a: "VODKAFUN มีหมวดเกมยิงปลา กีฬา คาสิโน และหวย ให้เลือกนอกเหนือจากเกมสล็อต สมาชิกสามารถดูประเภทเกมที่เปิดให้บริการได้จากหน้าเว็บไซต์",
+    q: "ถอนเงินกับ WINDRAGON ต้องแนบสลิปหรือทักแอดมินก่อนไหม",
+    a: "ไม่ต้องทั้งสองอย่าง กดถอนจากมือถือได้เอง ยอดที่ยืนยันจะโอนเข้าบัญชีเต็มจำนวนภายในไม่กี่วินาที จุดเดียวที่ต้องดูคือใช้บัญชีที่ชื่อตรงกับตอนสมัคร รายการจะไม่สะดุด",
   },
   {
-    q: "VODKAFUN รองรับการฝากถอนผ่านทรูมันนี่วอเล็ตไหม?",
-    a: "VODKAFUN ระบุการรองรับทรูมันนี่วอเล็ตเป็นหนึ่งในช่องทางทำรายการ สมาชิกควรตรวจสอบช่องทางที่ใช้งานได้จริง รวมถึงยอดขั้นต่ำและเงื่อนไขล่าสุดจากระบบก่อนทำธุรกรรม",
-  },
-  {
-    q: "สมาชิกเดิมต้องสมัคร VODKAFUN ใหม่หรือไม่?",
-    a: "หากยังสามารถใช้งานบัญชีสมาชิกเดิมได้ ไม่จำเป็นต้องสมัครใหม่เพียงเพราะมีการเปลี่ยนทางเข้าเว็บไซต์ ควรตรวจสอบข้อมูลบัญชีและช่องทางเข้าใช้งานกับผู้ให้บริการก่อน",
-  },
-  {
-    q: "หากเข้า VODKAFUN ไม่ได้ ต้องทำอย่างไร?",
-    a: "เริ่มจากตรวจสอบ URL การเชื่อมต่ออินเทอร์เน็ต และสถานะของเว็บไซต์ หากยังพบปัญหา ควรติดต่อฝ่ายบริการผ่านช่องทางที่ยืนยันได้ และหลีกเลี่ยงการส่งรหัสผ่านหรือข้อมูลทางการเงินให้บุคคลที่ไม่เกี่ยวข้อง",
+    q: "ไม่มีคอม เล่นในมือถืออย่างเดียวได้ครบไหม",
+    a: "ได้ครบ ตั้งแต่สมัคร ล็อกอิน เลือกค่าย ปั่น ไปจนถึงฝากถอน ทำจากสมาร์ทโฟนได้ทั้งหมด ใครเข้าเล่นบ่อยลองบุ๊กมาร์กทางเข้าไว้ในเบราว์เซอร์ จะเปิดกลับมาได้ในแตะเดียว",
   },
 ];
 
@@ -65,102 +55,55 @@ const graph = pageGraph(Astro, {
   faqs,
 });
 
-const inlineLink = "font-bold text-[#c8fc04] underline underline-offset-4 transition-colors hover:text-[#e6ff6a]";
-const slideFrame = "mx-auto h-auto w-full rounded-2xl border border-[#1d5c22] shadow-[0_10px_30px_rgba(200,252,4,0.18)]";
-const promoFrame = "mx-auto h-auto w-full max-w-2xl rounded-2xl border border-[#1d5c22] shadow-[0_10px_30px_rgba(200,252,4,0.18)]";
+const inlineLink = "font-bold text-[#ff9a4d] underline underline-offset-4 transition-colors hover:text-[#ffd77a]";
+const slideFrame = "mx-auto h-auto w-full rounded-2xl border border-[#5a2a12] shadow-[0_10px_30px_rgba(242,107,29,0.22)]";
+const cutFrame = "mx-auto h-auto w-full rounded-md border border-[#f26b1d]/40 shadow-[0_10px_30px_rgba(179,18,27,0.30)]";
+const body = "text-left text-base leading-relaxed";
 ---
 
 <MainLayout title={pageTitle} description={pageDescription}>
   <script type="application/ld+json" set:html={graph} />
 
-  <Announcement />
+  <Announcement message={announcementMessage} />
 
   <SmoothCarousel />
 
-  <ContentBoxFloatingBadge as="h1" title="VODKAFUN สล็อตเวอร์ชั่นใหม่ รวมเกมครบครัน ฝากถอนระบบออโต้">
-    <div class="flex flex-col gap-4">
-      <p class="text-left text-base leading-relaxed">
-        VODKAFUN รวมความบันเทิงจากเกมสล็อตเวอร์ชั่นใหม่ล่าสุดไว้กับเกมเดิมพันหลายประเภท ทั้งสล็อต ยิงปลา กีฬา คาสิโน และหวย ให้สมาชิกเลือกเล่นได้ตามความชอบภายในเว็บไซต์เดียว
-        ไม่ว่าจะเป็นคนที่ชอบหมุนสล็อตลุ้นโบนัส ติดตามผลกีฬา หรือสัมผัสบรรยากาศเกมคาสิโนสด ก็สามารถเลือกหมวดเกมที่ต้องการได้จากบัญชีสมาชิก VODKAFUN
-      </p>
+  <ContentBoxPremium as="h1" title="WINDRAGON สล็อตออนไลน์ ค่ายเด่นแตกโหด ฝากถอนออโต้ ยอดบวกได้เต็ม">
+    <p class={body}>
+      สายปั่นที่ได้ยอดบวกแล้วยังต้องนั่งรอแอดมินโอน ลองย้ายมาปั่นกับ WINDRAGON ดูสักรอบ สล็อตออนไลน์ที่นี่เปิดจากสมาร์ทโฟนได้ตั้งแต่ทางเข้าจนถึงหน้าถอน ในล็อบบี้มีสล็อตค่ายเด่นสายแตกโหดให้เลือกตามทุน
+      ฝากถอนออโต้กดทำรายการเองได้โดยไม่ต้องส่งสลิป ยอดบวกก้อนใหญ่ก็โอนเต็มจำนวนไม่หักเปอร์เซ็นต์ และยังมีโปรสุดคุ้มไว้เสริมทุนตอนอยากยืดรอบ เหมาะกับคนที่อยากเล่นให้จบในมือถือเครื่องเดียว
+    </p>
+  </ContentBoxPremium>
 
-      <p class="text-left text-base leading-relaxed">
-        นอกจากตัวเลือกเกมแล้ว VODKAFUN ยังให้ความสำคัญกับการใช้งานที่ไม่ซับซ้อน ตั้งแต่<a href="/register/" class={inlineLink}>การสมัครสมาชิก</a> เข้าสู่ระบบ
-        ไปจนถึงการทำรายการฝากถอนผ่านระบบออโต้ พร้อมรองรับทรูมันนี่วอเล็ตตามช่องทางที่เปิดให้บริการ เพื่อให้สมาชิกใช้เวลากับเกมที่ชอบได้อย่างต่อเนื่อง
-      </p>
-    </div>
-  </ContentBoxFloatingBadge>
+  <ContentBoxCyberCut as="h2" title="ทางเข้า WINDRAGON สล็อตออนไลน์ เปิดจากสมาร์ทโฟนแล้วเล่นได้ครบ">
+    <p class={body}>
+      คนที่ค้นหา<a href="/ทางเข้า/" class={inlineLink}>ทางเข้า WINDRAGON</a> ส่วนใหญ่แค่อยากกดแล้วได้เข้าเล่นเลย ที่นี่จึงให้ทุกขั้นทำจากสมาร์ทโฟนได้ครบ ตั้งแต่ล็อกอิน ฝากเงิน เลือกเกม ไปจนถึงกดถอน
+      สมาชิกเดิมใช้บัญชีเดิมเข้าได้ทันทีแม้จะเปลี่ยนเครื่อง ไม่ต้องสมัครใหม่ ก่อนใส่รหัสผ่านทุกครั้งให้เช็กชื่อเว็บบนแถบที่อยู่ว่าสะกดตรงตัว จะได้ไม่หลงเข้าลิงก์ปลอม
+    </p>
+  </ContentBoxCyberCut>
 
-  <ContentBoxSevenThree as="h2" titleright="สล็อตเวอร์ชั่นใหม่ VODKAFUN เลือกสนุกได้หลายรูปแบบในเว็บเดียว">
-    <Picture
-      slot="left"
-      src={imgFun}
-      alt={funAlt}
-      loading="lazy"
-      fetchpriority="low"
-      widths={[338, 480, 600]}
-      sizes="(max-width: 767px) calc(100vw - 98px), 338px"
-      decoding="async"
-      formats={["avif", "webp"]}
-      fallbackFormat="webp"
-      quality={70}
-      class={slideFrame}
-    />
+  <LoginRtpSection />
 
-    <div slot="right" class="flex flex-col gap-4">
-      <p class="text-left text-base leading-relaxed">
-        สล็อตเวอร์ชั่นใหม่ของ VODKAFUN มีรูปแบบเกมให้เลือกตามความชอบของผู้เล่น ทั้งเกมที่เน้นการหมุนฟรี เกมที่มีตัวคูณรางวัล และเกมสล็อตที่มาพร้อมฟีเจอร์โบนัสแตกต่างกันออกไป
-        แต่ละเกมมีรูปแบบการเล่นและเงื่อนไขการจ่ายรางวัลของตัวเอง สมาชิกจึงสามารถเปรียบเทียบรายละเอียดก่อนเลือกเกมที่เหมาะกับงบประมาณและสไตล์การเล่นได้
-      </p>
-
-      <p class="text-left text-base leading-relaxed">
-        สำหรับคนที่เล่นสล็อตเป็นประจำ ความสนุกไม่ได้อยู่แค่การรอลุ้นรางวัลเท่านั้น แต่ยังอยู่ที่การค้นหาเกมใหม่ <a href="/ทดลองเล่น/" class={inlineLink}>ทดลองทำความเข้าใจฟีเจอร์</a>
-        และเลือกจังหวะหยุดเล่นของตัวเอง การมีเกมสล็อตหลายประเภทภายใน VODKAFUN จึงช่วยให้เปลี่ยนบรรยากาศได้โดยไม่ต้องเริ่มต้นค้นหาเว็บไซต์ใหม่ทุกครั้ง
-      </p>
-    </div>
-  </ContentBoxSevenThree>
-
-  <GameRankingBoard />
-
-  <ContentBox as="h2" title="VODKAFUN รวมเกมครบครัน ยิงปลา กีฬา คาสิโน และหวย">
-    <div class="flex flex-col gap-6">
-      <p class="text-left text-base leading-relaxed">
-        VODKAFUN รวมเกมครบครันสำหรับสมาชิกที่มีความชอบแตกต่างกัน นอกเหนือจากเกมสล็อตแล้วยังมีหมวดเกมยิงปลาที่เน้นการเลือกเป้าหมาย เกมกีฬาให้ติดตามการแข่งขัน คาสิโนสำหรับผู้ที่ชอบเกมโต๊ะ
-        และหวยสำหรับคนที่สนใจการออกรางวัล แต่ละหมวดมีลักษณะการเล่นไม่เหมือนกัน จึงควรตรวจสอบกติกาและเงื่อนไขของเกมก่อนเริ่มทุกครั้ง
-      </p>
-
-      <Picture
-        src={imgPromo}
-        alt={promoAlt}
-        loading="lazy"
-        fetchpriority="low"
-        widths={[480, 560, 672, 800, 1024]}
-        sizes="(max-width: 767px) calc(100vw - 96px), 672px"
-        decoding="async"
-        formats={["avif", "webp"]}
-        fallbackFormat="webp"
-        quality={70}
-        class={promoFrame}
-      />
-
-      <p class="text-left text-base leading-relaxed">
-        ข้อดีของการมีเกมหลายหมวดอยู่ภายใต้บัญชีเดียวคือ สมาชิกสามารถกลับมาเลือกประเภทเกมที่ต้องการได้สะดวกขึ้น วันนี้อาจสนใจเกมสล็อต วันต่อมาอยากดูการแข่งขันกีฬา หรือเลือกเล่นเกมคาสิโน
-        ก็สามารถค้นหาหมวดที่สนใจได้จาก<a href="/login/" class={inlineLink}>ระบบสมาชิก VODKAFUN</a> โดยไม่ต้องสมัครบัญชีใหม่แยกตามประเภทเกม
-      </p>
-    </div>
+  <ContentBox as="h2" title="รวมสล็อตค่ายเด่นแตกโหด เลือกเกมให้ตรงสายก่อนกดสปินรอบแรก">
+    <p class={body}>
+      แตกโหดในภาษาสายปั่นคือเกมที่อาจเงียบไปสักพัก แต่พอสแคตเตอร์ครบจนเข้าฟรีสปิน ตัวคูณจะพายอดขึ้นแรงกว่าเกมจ่ายถี่ WINDRAGON รวมสล็อตค่ายเด่นแนวนี้ไว้ ดูรายชื่อค่ายได้จากตารางด้านล่าง
+      วิธีเลือกง่ายๆ คือหยิบเกมที่คุ้นมาสองสามเกม ดูช่วงเบทกับฟีเจอร์ก่อน แล้วเริ่มจากเบทต่ำเพื่อจับจังหวะ พอทุนพร้อมค่อยขยับขึ้นทีละขั้น
+    </p>
   </ContentBox>
 
   <ProviderGrid />
 
-  <ContentBoxSevenThreeFloatingBadge as="h2" title="ฝากถอนระบบออโต้ VODKAFUN รองรับทรูมันนี่วอเล็ต">
+  <GameRankingBoard />
+
+  <ContentBoxSevenThreePremium as="h2" titleright="ฝากถอนออโต้ทำเองผ่านมือถือ ไม่ต้องส่งสลิป ไม่ต้องรอแอดมิน">
     <Picture
       slot="left"
       src={imgWallet}
       alt={walletAlt}
       loading="lazy"
       fetchpriority="low"
-      widths={[338, 480, 600]}
-      sizes="(max-width: 767px) calc(100vw - 98px), 338px"
+      widths={[340, 460, 600]}
+      sizes="(max-width: 767px) calc(100vw - 98px), (max-width: 1279px) calc(40vw - 62px), 450px"
       decoding="async"
       formats={["avif", "webp"]}
       fallbackFormat="webp"
@@ -168,74 +111,56 @@ const promoFrame = "mx-auto h-auto w-full max-w-2xl rounded-2xl border border-[#
       class={slideFrame}
     />
 
-    <div slot="right" class="flex flex-col gap-4">
-      <p class="text-left text-base leading-relaxed">
-        ระบบออโต้ VODKAFUN เป็นส่วนสำคัญของ<a href="/วิธีฝากถอน/" class={inlineLink}>การทำรายการฝากถอน</a> สมาชิกสามารถตรวจสอบช่องทางการชำระเงินที่ระบบเปิดให้บริการ รวมถึงทรูมันนี่วอเล็ต
-        โดยควรตรวจสอบข้อมูลบัญชี จำนวนเงิน และเงื่อนไขการทำรายการให้ถูกต้องก่อนยืนยัน เพื่อช่วยลดปัญหาการกรอกข้อมูลผิดหรือทำรายการไม่สำเร็จ
-      </p>
+    <p slot="right" class={body}>
+      เคยไหมที่โอนเงินเสร็จแล้วต้องแคปสลิปส่งแชต รออีกพักใหญ่กว่าเครดิตจะขึ้น <a href="/วิธีฝากถอน/" class={inlineLink}>ระบบการเงินของ WINDRAGON</a> เป็นออโต้ทั้งขาเข้าและขาออก ผู้เล่นกดทำรายการเองในมือถือ ระบบตรวจยอดแล้วปรับเครดิตให้ในไม่กี่วินาที
+      ไม่ต้องแนบหลักฐาน ไม่ต้องทักใครช่วยดัน ถอนก็แค่ใส่ยอดแล้วยืนยัน เหมาะกับคนที่อยากคุมจังหวะเงินเข้าออกเอง
+    </p>
+  </ContentBoxSevenThreePremium>
 
-      <p class="text-left text-base leading-relaxed">
-        การฝากถอนแต่ละครั้งควรมีข้อมูลสถานะให้สมาชิกตรวจสอบได้ หากยอดเงินยังไม่ปรากฏหรือพบรายการผิดปกติ ควรตรวจสอบประวัติธุรกรรมและติดต่อฝ่ายบริการผ่านช่องทางของ VODKAFUN โดยตรง
-        ไม่ควรโอนเงินซ้ำทันทีหากยังไม่ทราบสาเหตุ เพราะความชัดเจนของรายการสำคัญกว่าการทำธุรกรรมอย่างเร่งรีบ
-      </p>
-    </div>
-  </ContentBoxSevenThreeFloatingBadge>
-
-  <LatestWinners3 />
-
-  <ContentBoxTwoFloatingBadge as="h2" title="ทางเข้า VODKAFUN สำหรับสมัครสมาชิกและเข้าสู่ระบบ" titleleft="สมาชิกใหม่และสมาชิกเดิม" titleright="ใช้บัญชีอย่างปลอดภัย">
-    <p slot="left" class="text-left text-base leading-relaxed">
-      ทางเข้า VODKAFUN เป็นจุดเริ่มต้นสำหรับทั้งสมาชิกใหม่และสมาชิกเดิม ผู้ที่ยังไม่มีบัญชีสามารถเลือกสมัครสมาชิกและกรอกข้อมูลตามที่ระบบกำหนด ส่วนสมาชิกที่มีบัญชีอยู่แล้วสามารถ<a
-        href="/login/"
-        class={inlineLink}>เข้าสู่ระบบด้วยข้อมูลเดิม</a
-      > เพื่อกลับไปเลือกเกม ตรวจสอบรายการฝากถอน หรือดูรายละเอียดบัญชีของตนเองได้ตามต้องการ
+  <ContentBoxTwoPremium as="h2" title="ยอดบวกใหญ่แค่ไหน WINDRAGON ก็โอนเต็มจำนวน ไม่หักเปอร์เซ็นต์">
+    <p slot="left" class={body}>
+      คำถามที่สายปั่นถามก่อนสมัครแทบทุกเว็บคือ ถ้าแตกก้อนใหญ่จริงจะได้ครบไหม คำตอบของที่นี่คือได้ครบ ตัวเลขที่เห็นตอนกดถอนคือยอดที่เข้าบัญชีจริง
     </p>
 
-    <div slot="right" class="flex flex-col gap-4">
-      <p class="text-left text-base leading-relaxed">
-        เมื่อเข้าสู่ระบบ VODKAFUN แล้ว สมาชิกควรตรวจสอบว่าบัญชีที่ใช้งานเป็นของตนเอง และหลีกเลี่ยงการเปิดเผยรหัสผ่านหรือรหัสยืนยันให้บุคคลอื่น หากพบปัญหาในการเข้าสู่ระบบ
-        ควรใช้ช่องทางช่วยเหลือที่เว็บไซต์ระบุไว้ แทนการสมัครบัญชีซ้ำโดยไม่จำเป็น
-      </p>
-
-      <a
-        href="/register/"
-        class="inline-flex w-fit items-center gap-2 rounded-full bg-gradient-to-r from-[#e6ff6a] via-[#c8fc04] to-[#7ee000] px-7 py-3 text-sm font-black tracking-widest text-[#0b2a05] shadow-[0_10px_30px_rgba(200,252,4,0.35)] transition-transform duration-300 hover:scale-105">
-        <span aria-hidden="true">🍾</span> สมัครสมาชิก VODKAFUN
-      </a>
-    </div>
-  </ContentBoxTwoFloatingBadge>
-
-  <LoginRtpSection />
-
-  <ContentBoxSpecial as="h2" title="ตรวจสอบทางเข้า VODKAFUN ให้ถูกต้องก่อนใช้บัญชีสมาชิก">
-    <p slot="left" class="text-left text-base leading-relaxed">
-      ก่อนเข้าสู่ระบบ VODKAFUN ควรตรวจสอบชื่อเว็บไซต์และที่อยู่ URL ให้ตรงกับช่องทางที่แบรนด์ประกาศใช้งาน เนื่องจากลิงก์ที่ปรากฏในผลการค้นหา ข้อความแชต หรือโฆษณา
-      อาจไม่ได้เชื่อมต่อกับระบบสมาชิกเดียวกันทั้งหมด การสังเกตเพียงชื่อ VODKAFUN หรือรูปโลโก้จึงไม่เพียงพอที่จะยืนยันว่าเป็นเว็บไซต์เดียวกับที่เคยใช้งาน
+    <p slot="right" class={body}>
+      ไม่มีการตัดเปอร์เซ็นต์หรือค่าหักยิบย่อยโผล่มาตอนเงินออก และเพราะถอนผ่านระบบออโต้ ยอดจึงไม่ต้องค้างรอใครอนุมัติ รอบที่ลุ้นมาจากเกมแตกโหดเลยกลับมาถึงมือเต็มก้อน
     </p>
+  </ContentBoxTwoPremium>
 
-    <p slot="right" class="text-left text-base leading-relaxed">
-      หากเข้าสู่เว็บไซต์ผิดแห่ง อาจพบปัญหาการใช้บัญชีเดิมไม่ได้ ข้อมูลรายการไม่ตรงกัน หรือเสี่ยงเปิดเผยข้อมูลส่วนตัวให้ผู้ไม่เกี่ยวข้อง สมาชิกจึงควรใช้<a href="/ทางเข้า/" class={inlineLink}
-        >ทางเข้าที่ตรวจสอบได้</a
-      > และติดต่อฝ่ายบริการผ่านช่องทางที่ได้รับการยืนยันก่อนกรอกข้อมูลสำคัญ เพื่อให้การกลับมาใช้งาน VODKAFUN เป็นไปอย่างถูกต้อง
+  <LatestWinnersPremium />
+
+  <ContentBoxSevenThreeCyberCut as="h2" titleright="โปรสุดคุ้มของ WINDRAGON เสริมทุนให้มีรอบลุ้นนานขึ้น">
+    <Picture
+      slot="left"
+      src={imgCashback}
+      alt={cashbackAlt}
+      loading="lazy"
+      fetchpriority="low"
+      widths={[340, 460, 600]}
+      sizes="(max-width: 767px) calc(100vw - 98px), (max-width: 1279px) calc(40vw - 52px), 460px"
+      decoding="async"
+      formats={["avif", "webp"]}
+      fallbackFormat="webp"
+      quality={70}
+      class={cutFrame}
+    />
+
+    <p slot="right" class={body}>
+      โชคเป็นเรื่องของรีลที่หมุน แต่ทุนเผื่อเป็นเรื่องที่เตรียมได้ก่อน โปรสุดคุ้มที่นี่ช่วยเติมเครดิตให้มีรอบปั่นมากขึ้นโดยไม่ต้องควักเงินเพิ่ม ก่อนกดรับให้อ่านสามเรื่องใน<a href="/promotion/" class={inlineLink}>หน้าโปรโมชั่น</a>
+      คือใช้กับเกมไหนได้ ต้องมียอดเล่นเท่าไรก่อนถอน และหมดเขตเมื่อไร รู้ครบแล้วค่อยรับ จะได้ไม่เจอเงื่อนไขทีหลัง แค่นี้โปรก็กลายเป็นเวลาเล่นที่เพิ่มขึ้นจริงโดยไม่ต้องขยับงบ
     </p>
-  </ContentBoxSpecial>
+  </ContentBoxSevenThreeCyberCut>
 
-  <ContentBox as="h2" title="คำถามที่พบบ่อยเกี่ยวกับ VODKAFUN">
-    <div class="flex flex-col gap-4">
-      <p class="text-left text-base leading-relaxed">
-        ผู้ที่ค้นหา VODKAFUN อาจต้องการทั้งข้อมูลเกม ช่องทางเข้าเล่น และรายละเอียดระบบสมาชิก คำถามต่อไปนี้รวบรวมประเด็นพื้นฐานที่ควรทราบก่อนเข้าใช้งาน
-        เพื่อให้เลือกหมวดเกมและตรวจสอบข้อมูลที่เกี่ยวข้องได้ง่ายขึ้น
-      </p>
+  <Faq3 title={faqTitle} faqs={faqs} />
 
-      <p class="text-left text-base leading-relaxed">
-        รายละเอียดบางส่วน เช่น ช่องทางชำระเงิน เกมที่เปิดให้บริการ หรือเงื่อนไขสมาชิก อาจเปลี่ยนแปลงตามการให้บริการในแต่ละช่วงเวลา จึงควรตรวจสอบข้อมูลปัจจุบันภายในเว็บไซต์ก่อนดำเนินการ
-      </p>
-    </div>
+  <ContentBox>
+    <p class={body}>
+      WINDRAGON อาจมีมังกรอยู่ในชื่อ แต่เหตุผลที่น่าเล่นเป็นเรื่องที่จับต้องได้ เปิดจากมือถือแล้วเข้าเล่นได้ทันที มีค่ายเด่นสายแตกโหดให้เลือก ฝากถอนออโต้ไม่ต้องแนบสลิป ยอดบวกเข้าบัญชีครบไม่โดนตัด
+      และมีโปรช่วยเติมทุนเวลาอยากเล่นต่อ ใครพร้อมก็<a href="/register/" class={inlineLink}>สมัคร</a>แล้วลองหมุนรอบแรกได้เลย
+    </p>
   </ContentBox>
 
-  <Faq2 faqs={faqs} />
-
-  <ReviewCardSumo2 />
+  <ReviewCardSumo2 title="เสียงจากสมาชิก WINDRAGON" />
 
   <Navfoot />
 </MainLayout>

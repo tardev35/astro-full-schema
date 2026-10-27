@@ -6,12 +6,12 @@ const images = import.meta.glob<{ default: ImageMetadata }>("../assets/logo.{png
 const imagePaths = Object.keys(images);
 const mainLogo = imagePaths.length > 0 ? images[imagePaths[0]].default : null;
 
-const logoAlt = "โลโก้ YIMSIAM889 หน้ายักษ์ทวารบาลสีขาวเงินอยู่เหนือป้ายชื่อแบรนด์ตัวอักษรโครเมียมขอบน้ำเงิน บนโล่สีกรมท่าเรืองแสงสีฟ้า";
+const logoAlt = "โลโก้ WINDRAGON 168 มังกรเพลิงสีส้มขดตัวข้างตัวอักษร WIN สีส้มและ DRAGON สีเงินโครเมียม ใต้ชื่อมีคำว่า WE WIN TOGETHER";
 ---
 
 <footer
-  class="relative mt-16 w-full overflow-hidden rounded-t-[3rem] border-t-2 border-[#2f8cff] bg-[#010a1f] pt-16 pb-8 font-sans text-[#d6e4ff] shadow-[0_-15px_40px_rgba(47,140,255,0.22)]">
-  <div aria-hidden="true" class="pointer-events-none absolute inset-x-0 -top-20 mx-auto h-[250px] w-full max-w-4xl rounded-full bg-[#2f8cff]/20 blur-[100px]"></div>
+  class="relative mt-16 w-full overflow-hidden rounded-t-[3rem] border-t-2 border-[#f26b1d] bg-[#0f0a09] pt-16 pb-8 font-sans text-[#f2e7de] shadow-[0_-15px_40px_rgba(242,107,29,0.22)]">
+  <div aria-hidden="true" class="pointer-events-none absolute inset-x-0 -top-20 mx-auto h-[250px] w-full max-w-4xl rounded-full bg-[#f26b1d]/20 blur-[100px]"></div>
 
   <div class="relative z-10 mx-auto w-full max-w-[1200px] px-6">
     <div class="mb-12 grid grid-cols-1 gap-12 md:grid-cols-12">
@@ -25,44 +25,44 @@ const logoAlt = "โลโก้ YIMSIAM889 หน้ายักษ์ทวา
                 widths={[130, 260, 390]}
                 sizes="130px"
                 loading="lazy"
-                class="h-[75px] w-auto drop-shadow-[0_5px_15px_rgba(47,140,255,0.45)]"
+                class="h-[75px] w-auto drop-shadow-[0_5px_15px_rgba(242,107,29,0.45)]"
                 formats={["avif", "webp"]}
                 fallbackFormat="webp"
               />
             ) : (
-              <span class="bg-gradient-to-r from-[#eaf4ff] to-[#2f8cff] bg-clip-text text-4xl font-black tracking-widest text-transparent">YIMSIAM889</span>
+              <span class="bg-gradient-to-r from-[#ffd77a] to-[#f26b1d] bg-clip-text text-4xl font-black tracking-widest text-transparent">WINDRAGON</span>
             )
           }
         </a>
-        <p class="border-l-2 border-[#2f8cff] pl-4 text-sm leading-relaxed text-[#d6e4ff]/75">
-          YIMSIAM889 สล็อตสยาม เว็บตรงไม่ผ่านเอเย่นต์ เชื่อมต่อสัญญาณเกมโดยตรงจากค่ายแม่ ทั้ง PG SOFT, Joker Gaming และ Pragmatic Play อัตราการชนะเป็นไปตามค่า RTP มาตรฐานสากล
-          ฝากถอนผ่านระบบอัตโนมัติ ทำรายการเองได้ผ่านแอปธนาคารชั้นนำหรือทรูวอลเลท ไม่ต้องส่งสลิป รองรับมือถือ iOS, Android คอมพิวเตอร์และแท็บเล็ต บริการด้วยใจแบบไทยแท้
+        <p class="border-l-2 border-[#f26b1d] pl-4 text-sm leading-relaxed text-[#f2e7de]/75">
+          WINDRAGON สล็อตออนไลน์ที่เล่นจบได้ในมือถือเครื่องเดียว ตั้งแต่ทางเข้า เลือกค่ายเด่นสายแตกโหด ไปจนถึงหน้าถอน
+          ฝากถอนออโต้กดทำรายการเองไม่ต้องส่งสลิป ยอดบวกโอนเข้าบัญชีเต็มจำนวนไม่หักเปอร์เซ็นต์ พร้อมโปรสุดคุ้มไว้เสริมทุน WE WIN TOGETHER
         </p>
         <div class="mt-4 flex gap-3">
-          <span class="rounded-full border border-[#2f8cff]/45 bg-[#2f8cff]/15 px-4 py-1 text-xs font-medium text-[#eaf4ff]">เว็บตรงลิขสิทธิ์แท้</span>
-          <span class="rounded-full border border-[#7cc0ff]/45 bg-[#7cc0ff]/15 px-4 py-1 text-xs font-medium text-[#dbeaff]">ฝากถอนอัตโนมัติ</span>
+          <span class="rounded-full border border-[#f26b1d]/45 bg-[#f26b1d]/15 px-4 py-1 text-xs font-medium text-[#ffd77a]">สล็อตค่ายเด่นแตกโหด</span>
+          <span class="rounded-full border border-[#f5b942]/45 bg-[#f5b942]/15 px-4 py-1 text-xs font-medium text-[#f2e7de]">ฝากถอนออโต้ไม่ต้องส่งสลิป</span>
         </div>
       </div>
 
-      <nav aria-label="ลิงก์หน้าเว็บ YIMSIAM889" class="flex flex-col gap-4 md:col-span-3 lg:pl-8">
-        <p class="text-lg font-black tracking-widest text-[#eaf4ff] uppercase drop-shadow-sm">เมนูลัด</p>
-        <div aria-hidden="true" class="h-[1px] w-12 bg-[#2f8cff]"></div>
-        <ul class="flex flex-col gap-3 text-sm font-medium text-[#d6e4ff]/75">
-          <li><a href="/" class="transition-colors hover:text-[#7cc0ff]">หน้าแรก</a></li>
-          <li><a href="/promotion/" class="transition-colors hover:text-[#7cc0ff]">โปรโมชั่น</a></li>
-          <li><a href="/register/" class="transition-colors hover:text-[#7cc0ff]">สมัครสมาชิก</a></li>
-          <li><a href="/login/" class="transition-colors hover:text-[#7cc0ff]">เข้าสู่ระบบ</a></li>
-          <li><a href="/ทางเข้า/" class="transition-colors hover:text-[#7cc0ff]">ทางเข้า</a></li>
-          <li><a href="/ทดลองเล่น/" class="transition-colors hover:text-[#7cc0ff]">ทดลองเล่น</a></li>
-          <li><a href="/วิธีฝากถอน/" class="transition-colors hover:text-[#7cc0ff]">วิธีฝากถอน</a></li>
-          <li><a href="/about-us/" class="transition-colors hover:text-[#7cc0ff]">เกี่ยวกับเรา</a></li>
-          <li><a href="/contact-us/" class="transition-colors hover:text-[#7cc0ff]">ติดต่อเรา</a></li>
+      <nav aria-label="ลิงก์หน้าเว็บ WINDRAGON" class="flex flex-col gap-4 md:col-span-3 lg:pl-8">
+        <p class="text-lg font-black tracking-widest text-[#ffd77a] uppercase drop-shadow-sm">เมนูลัด</p>
+        <div aria-hidden="true" class="h-[1px] w-12 bg-[#f26b1d]"></div>
+        <ul class="flex flex-col gap-3 text-sm font-medium text-[#f2e7de]/75">
+          <li><a href="/" class="transition-colors hover:text-[#ff9a4d]">หน้าแรก</a></li>
+          <li><a href="/promotion/" class="transition-colors hover:text-[#ff9a4d]">โปรโมชั่น</a></li>
+          <li><a href="/register/" class="transition-colors hover:text-[#ff9a4d]">สมัครสมาชิก</a></li>
+          <li><a href="/login/" class="transition-colors hover:text-[#ff9a4d]">เข้าสู่ระบบ</a></li>
+          <li><a href="/ทางเข้า/" class="transition-colors hover:text-[#ff9a4d]">ทางเข้า</a></li>
+          <li><a href="/ทดลองเล่น/" class="transition-colors hover:text-[#ff9a4d]">ทดลองเล่น</a></li>
+          <li><a href="/วิธีฝากถอน/" class="transition-colors hover:text-[#ff9a4d]">วิธีฝากถอน</a></li>
+          <li><a href="/about-us/" class="transition-colors hover:text-[#ff9a4d]">เกี่ยวกับเรา</a></li>
+          <li><a href="/contact-us/" class="transition-colors hover:text-[#ff9a4d]">ติดต่อเรา</a></li>
         </ul>
       </nav>
 
       <div class="flex flex-col gap-5 md:col-span-4">
-        <p class="text-lg font-black tracking-widest text-[#eaf4ff] uppercase drop-shadow-sm">ฝ่ายดูแลสมาชิก</p>
-        <div aria-hidden="true" class="h-[1px] w-12 bg-[#2f8cff]"></div>
+        <p class="text-lg font-black tracking-widest text-[#ffd77a] uppercase drop-shadow-sm">ฝ่ายดูแลสมาชิก</p>
+        <div aria-hidden="true" class="h-[1px] w-12 bg-[#f26b1d]"></div>
 
         <a
           href="/line/"
@@ -90,16 +90,16 @@ const logoAlt = "โลโก้ YIMSIAM889 หน้ายักษ์ทวา
           )
         }
 
-        <div class="mt-4 text-xs font-medium tracking-widest text-[#d6e4ff]/60 uppercase">ช่องทางฝากถอนที่รองรับ</div>
+        <div class="mt-4 text-xs font-medium tracking-widest text-[#f2e7de]/60 uppercase">ช่องทางฝากถอนที่รองรับ</div>
         <BankStrip size={30} />
       </div>
     </div>
 
-    <div class="flex flex-col items-center justify-between border-t border-[#16357a] pt-8 text-xs font-medium tracking-wide text-[#d6e4ff]/55 md:flex-row">
+    <div class="flex flex-col items-center justify-between border-t border-[#5a2a12] pt-8 text-xs font-medium tracking-wide text-[#f2e7de]/55 md:flex-row">
       <p>COPYRIGHT &copy; {new Date().getFullYear()} {BRAND_NAME}. ALL RIGHTS RESERVED.</p>
       <div class="mt-4 flex gap-4 md:mt-0">
-        <a href="/terms/" class="transition-colors hover:text-[#7cc0ff]">TERMS &amp; CONDITIONS</a>
-        <a href="/privacy/" class="transition-colors hover:text-[#7cc0ff]">PRIVACY POLICY</a>
+        <a href="/terms/" class="transition-colors hover:text-[#ff9a4d]">TERMS &amp; CONDITIONS</a>
+        <a href="/privacy/" class="transition-colors hover:text-[#ff9a4d]">PRIVACY POLICY</a>
       </div>
     </div>
   </div>

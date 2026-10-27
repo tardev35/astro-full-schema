@@ -2,15 +2,15 @@
 import MainLayout from "../layouts/MainLayout.astro";
 import ContentBox from "../components/ContentBox.astro";
 import Navfoot from "../components/Navfoot.astro";
-import Announcement from "../components/Announcement5.astro";
+import Announcement from "../components/AnnouncementPremium.astro";
 import { pageGraph } from "../lib/schema";
 
-const pageTitle = "วิธีฝากถอน VODKAFUN ระบบออโต้ รองรับทรูมันนี่วอเล็ต";
+const pageTitle = "วิธีฝากถอน WINDRAGON ระบบออโต้ ไม่ต้องส่งสลิป รองรับทรูวอเล็ท";
 
-const pageHeading = "วิธีฝากถอน VODKAFUN ผ่านระบบออโต้ รองรับทรูมันนี่วอเล็ต";
+const pageHeading = "วิธีฝากถอน WINDRAGON ผ่านระบบออโต้ ทำเองได้จากมือถือ";
 
 const pageDescription =
-  "วิธีฝากถอน VODKAFUN ผ่านระบบออโต้ ทำรายการเองจากหน้าบัญชี รองรับแอปธนาคารและทรูมันนี่วอเล็ต พร้อมจุดที่ควรตรวจก่อนยืนยัน ทั้งข้อมูลบัญชี จำนวนเงิน เงื่อนไข";
+  "วิธีฝากถอน WINDRAGON ผ่านระบบออโต้ ทำรายการเองจากมือถือ ไม่ต้องส่งสลิป ไม่ต้องรอแอดมิน รองรับทุกธนาคารและทรูวอเล็ท เริ่มแค่ 1 บาท พร้อมจุดที่ควรตรวจก่อนยืนยัน";
 
 const graph = pageGraph(Astro, {
   name: pageTitle,
@@ -21,7 +21,7 @@ const graph = pageGraph(Astro, {
   ],
 });
 
-const linkClass = "font-bold text-[#c8fc04] underline underline-offset-4 transition-colors hover:text-[#e6ff6a]";
+const linkClass = "font-bold text-[#ff9a4d] underline underline-offset-4 transition-colors hover:text-[#ffd77a]";
 ---
 
 <MainLayout title={pageTitle} description={pageDescription}>
@@ -31,7 +31,7 @@ const linkClass = "font-bold text-[#c8fc04] underline underline-offset-4 transit
 
   <ContentBox as="h1" title={pageHeading}>
     <p class="mb-4 text-left text-base leading-relaxed">
-      ระบบออโต้ของ <strong class="text-[#c8fc04]">VODKAFUN</strong> เป็นส่วนสำคัญของการทำรายการฝากถอน คุณทำรายการได้ด้วยตัวเองจากหน้าบัญชีผ่านช่องทางที่ระบบเปิดให้บริการ รวมถึงทรูมันนี่วอเล็ต โดยไม่ต้องรอใครกดยืนยันให้
+      ระบบการเงินของ <strong class="text-[#ff9a4d]">WINDRAGON</strong> เป็นออโต้ทั้งขาเข้าและขาออก คุณกดทำรายการเองจากหน้าบัญชีในมือถือ ผ่านแอปธนาคารหรือทรูวอเล็ท โดยไม่ต้องแคปสลิปส่งแชต และไม่ต้องรอใครกดยืนยันให้
     </p>
 
     <p class="text-left text-base leading-relaxed">
@@ -39,67 +39,63 @@ const linkClass = "font-bold text-[#c8fc04] underline underline-offset-4 transit
     </p>
   </ContentBox>
 
-  <ContentBox as="h2" title="ฝากเงินผ่านระบบออโต้ VODKAFUN">
+  <ContentBox as="h2" title="ฝากเงินผ่านระบบออโต้ WINDRAGON ไม่ต้องส่งสลิป">
     <p class="mb-4 text-left text-base leading-relaxed">
-      <a href="/login/" class={linkClass}>เข้าสู่ระบบ</a> ด้วยบัญชีสมาชิกของคุณ แล้วเลือกเมนูฝากจากหน้าบัญชี ระบบจะแสดงช่องทางที่เปิดให้บริการในตอนนั้น ทั้งแอปธนาคารและทรูมันนี่วอเล็ต เลือกช่องทางที่คุณใช้อยู่เป็นประจำ
+      <a href="/login/" class={linkClass}>เข้าสู่ระบบ</a> ด้วยบัญชีสมาชิกของคุณ แล้วเลือกเมนูฝากจากหน้าบัญชี ระบบจะแสดงช่องทางที่เปิดให้บริการในตอนนั้น ทั้งแอปธนาคารและทรูวอเล็ท เลือกช่องทางที่คุณใช้อยู่เป็นประจำ
     </p>
 
     <p class="mb-4 text-left text-base leading-relaxed">
-      ก่อนโอน ตรวจเลขบัญชีปลายทาง จำนวนเงิน และยอดขั้นต่ำที่ระบบระบุไว้ให้ตรงกัน เมื่อโอนเสร็จ ระบบออโต้จะตรวจรายการและปรับยอดเครดิตให้เอง คุณไม่ต้องส่งสลิปและไม่ต้องรอใครกดยืนยัน
+      ก่อนโอน ตรวจเลขบัญชีปลายทางและจำนวนเงินให้ตรงกับที่ระบบแสดง ยอดเริ่มต้นแค่ 1 บาท เมื่อโอนเสร็จ ระบบออโต้จะตรวจรายการและปรับยอดเครดิตให้เองในไม่กี่วินาที ไม่ต้องแนบหลักฐาน ไม่ต้องทักใครช่วยดัน
     </p>
 
     <p class="text-left text-base leading-relaxed">ขั้นตอนยิ่งสั้น โอกาสกรอกผิดก็ยิ่งน้อย ใช้เวลาตรวจตัวเลขก่อนกดยืนยันสักครู่ แล้วที่เหลือปล่อยให้ระบบออโต้จัดการต่อ</p>
   </ContentBox>
 
-  <ContentBox as="h2" title="ถอนเงินผ่านระบบออโต้ เข้าบัญชีที่ลงทะเบียนไว้">
+  <ContentBox as="h2" title="ถอนเงินผ่านระบบออโต้ เข้าบัญชีที่ลงทะเบียนไว้เต็มจำนวน">
     <p class="mb-4 text-left text-base leading-relaxed">
       การถอนทำจากหน้าบัญชีเช่นเดียวกัน ระบุยอดที่ต้องการ ตรวจเงื่อนไขของโปรโมชั่นที่คุณรับไว้ว่าทำยอดครบแล้วหรือยัง แล้วกดยืนยันเพียงครั้งเดียว ระบบออโต้จะโอนเข้าบัญชีที่คุณลงทะเบียนไว้ตอนสมัคร
     </p>
 
     <p class="mb-4 text-left text-base leading-relaxed">
-      ทุกรายการถูกบันทึกในประวัติธุรกรรม คุณเปิดดูสถานะย้อนหลังได้จากหน้าบัญชีทุกเมื่อ ถ้ารายการยังขึ้นว่ากำลังดำเนินการ ให้รอให้สถานะเปลี่ยนก่อน ไม่ควรกดถอนซ้ำระหว่างที่ระบบทำงาน
+      ตัวเลขที่เห็นตอนกดถอนคือยอดที่เข้าบัญชีจริง ไม่มีการตัดเปอร์เซ็นต์หรือค่าหักยิบย่อยโผล่มาตอนเงินออก ทุกรายการถูกบันทึกในประวัติธุรกรรม เปิดดูสถานะย้อนหลังได้จากหน้าบัญชีทุกเมื่อ
     </p>
 
-    <p class="text-left text-base leading-relaxed">ยอดที่เห็นในประวัติคือยอดที่ทำรายการจริง ตรวจสอบได้ทุกบาท ถ้าตัวเลขไม่ตรงกับที่คุณจำได้ ให้เริ่มจากตรงนี้ก่อนติดต่อทีมงาน</p>
+    <p class="text-left text-base leading-relaxed">ถ้ารายการยังขึ้นว่ากำลังดำเนินการ ให้รอให้สถานะเปลี่ยนก่อน ไม่ควรกดถอนซ้ำระหว่างที่ระบบทำงาน</p>
   </ContentBox>
 
   <ContentBox as="h2" title="สิ่งที่ควรตรวจก่อนยืนยันรายการฝากถอน">
     <p class="mb-4 text-left text-base leading-relaxed">
-      ตรวจข้อมูลบัญชี จำนวนเงิน และเงื่อนไขให้ถูกต้องก่อนกดยืนยัน ชื่อบัญชีที่ใช้โอนต้องตรงกับชื่อที่ลงทะเบียนกับ VODKAFUN ให้ระบบออโต้จับคู่รายการได้ หากใช้บัญชีของคนอื่น ระบบอาจไม่ปรับยอดให้
+      ตรวจข้อมูลบัญชี จำนวนเงิน และเงื่อนไขให้ถูกต้องก่อนกดยืนยัน ชื่อบัญชีที่ใช้โอนต้องตรงกับชื่อที่ลงทะเบียนกับ WINDRAGON ระบบออโต้จึงจับคู่รายการได้ หากใช้บัญชีของคนอื่น ระบบอาจไม่ปรับยอดให้
     </p>
 
     <p class="mb-4 text-left text-base leading-relaxed">
-      หากยอดยังไม่ปรากฏหรือพบรายการผิดปกติ ให้เปิดดูประวัติธุรกรรมก่อน แล้วติดต่อฝ่ายบริการผ่านช่องทางของ VODKAFUN โดยตรง อย่าโอนเงินซ้ำทันทีถ้ายังไม่ทราบสาเหตุ
+      ถ้ารอเกินไม่กี่วินาทีแล้วเครดิตยังไม่ขึ้น อย่าเพิ่งโอนซ้ำ จดเวลาที่โอนกับยอดเงินไว้ แล้วแจ้งทีมงานที่หน้า <a href="/contact-us/" class={linkClass}>ติดต่อเรา</a> ให้ตรวจรายการ และอย่าส่งรหัสผ่านหรือรหัส OTP ให้ใครทั้งสิ้น ทีมงานจริงไม่มีเหตุต้องขอ
     </p>
 
-    <p class="mb-4 text-left text-base leading-relaxed">
-      แจ้งทีมงานได้ที่หน้า <a href="/contact-us/" class={linkClass}>ติดต่อเรา</a> พร้อมเวลาที่ทำรายการและยอดเงิน ทีมงานจะช่วยตรวจให้ และโปรดอย่าส่งรหัสผ่านหรือรหัส OTP ให้ใครทั้งสิ้น ทีมงานจริงไม่มีเหตุต้องขอ
-    </p>
-
-    <p class="text-left text-base leading-relaxed">รอบคอบก่อนกดหนึ่งครั้ง สบายใจกว่าตามแก้ทีหลังหลายรอบ รายการที่กรอกถูกตั้งแต่ต้น ระบบออโต้จัดการให้จบในไม่กี่นาที</p>
+    <p class="text-left text-base leading-relaxed">รอบคอบก่อนกดหนึ่งครั้ง สบายใจกว่าตามแก้ทีหลังหลายรอบ</p>
   </ContentBox>
 
-  <ContentBox as="h2" title="ช่องทางที่รองรับ แอปธนาคารและทรูมันนี่วอเล็ต">
+  <ContentBox as="h2" title="ช่องทางที่รองรับ ทุกธนาคารและทรูวอเล็ท">
     <div class="flex flex-col gap-4">
       <p class="text-left text-base leading-relaxed">
-        VODKAFUN รองรับการทำรายการผ่านแอปธนาคารของไทย และทรูมันนี่วอเล็ตสำหรับคนที่ไม่สะดวกใช้บัญชีธนาคาร ทั้งสองช่องทางทำงานบนระบบออโต้ชุดเดียวกัน ช่องทางที่เปิดจริงดูได้จากหน้าฝากในแต่ละช่วงเวลา
+        WINDRAGON รองรับการทำรายการผ่านแอปธนาคารของไทยทุกธนาคาร และทรูวอเล็ทสำหรับคนที่ไม่สะดวกใช้บัญชีธนาคาร ทั้งสองช่องทางทำงานบนระบบออโต้ชุดเดียวกัน ช่องทางที่เปิดจริงดูได้จากหน้าฝากในแต่ละช่วงเวลา
       </p>
 
       <p class="text-left text-base leading-relaxed">
-        ระบบเปิดรับรายการตลอดวัน ทำได้จากมือถือทั้ง iOS และ Android รวมถึงคอมพิวเตอร์และแท็บเล็ต ยอดขั้นต่ำและเงื่อนไขอาจเปลี่ยนตามช่วงเวลา ให้ยึดตัวเลขที่ระบบแสดงตอนทำรายการเป็นหลัก
+        ทุกขั้นทำจากสมาร์ทโฟนได้ครบทั้ง iOS และ Android รวมถึงคอมพิวเตอร์และแท็บเล็ต ยอดขั้นต่ำและเงื่อนไขอาจเปลี่ยนตามช่วงเวลา ให้ยึดตัวเลขที่ระบบแสดงตอนทำรายการเป็นหลัก
       </p>
 
       <div class="flex flex-col items-center justify-center gap-4 pt-4 sm:flex-row">
         <a
           href="/login/"
-          class="inline-flex w-full max-w-[320px] items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-[#e6ff6a] via-[#c8fc04] to-[#7ee000] px-8 py-3.5 text-lg font-black tracking-wide text-[#0b2a05] shadow-[0_10px_30px_rgba(200,252,4,0.35)] transition-transform duration-300 hover:scale-105">
+          class="inline-flex w-full max-w-[320px] items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-[#ff8a2a] to-[#e2550a] px-8 py-3.5 text-lg font-black tracking-wide text-[#1a0701] shadow-[0_10px_30px_rgba(242,107,29,0.35)] transition-all duration-300 hover:scale-105 hover:brightness-110">
           <span aria-hidden="true">💳</span> เข้าสู่ระบบเพื่อฝากถอน
         </a>
 
         <a
           href="/register/"
-          class="inline-flex w-full max-w-[320px] items-center justify-center gap-2 rounded-xl border border-[#c8fc04]/70 bg-[#0b3a10] px-8 py-3.5 text-lg font-bold tracking-wide text-[#e6ffcc] transition-colors duration-300 hover:bg-[#145a1a]">
-          สมัครสมาชิก VODKAFUN
+          class="inline-flex w-full max-w-[320px] items-center justify-center gap-2 rounded-xl border border-[#f26b1d]/70 bg-[#26150e] px-8 py-3.5 text-lg font-bold tracking-wide text-[#f2e7de] transition-colors duration-300 hover:bg-[#3a1d10]">
+          สมัครสมาชิก WINDRAGON
         </a>
       </div>
     </div>

@@ -4,8 +4,8 @@ import bgConfig from "../assets/bg.json";
 import "../styles/global.css";
 import { BRAND_NAME, BRAND_TEXT, brandProfile, fontStack, iconVersion } from "../lib/brandProfile";
 import { canonicalFor } from "../lib/schema";
-import Navbar from "../components/NavbarStyle3.astro";
-import Footer from "../components/FooterStyle3.astro";
+import Navbar from "../components/NavbarStyle8.astro";
+import Footer from "../components/FooterPremium.astro";
 
 // Only banner1 is ever rendered, so only banner1 is imported.
 //
@@ -54,8 +54,8 @@ const mobileBannerImg = mobileBanner
   : null;
 
 const {
-  title = "VODKAFUN | สล็อตเวอร์ชั่นใหม่ รวมเกมครบครัน ระบบออโต้ลื่นไหล",
-  description = "สล็อตเวอร์ชั่นใหม่ล่าสุด VODKAFUN รวมเกมครบครัน ยิงปลา กีฬา คาสิโน หวย มีให้เลือกเล่นครบจบในเว็บเดียว ระบบออโต้ ฝากถอน รองรับทรูมันนี่วอเล็ต.",
+  title = "WINDRAGON สล็อตออนไลน์ ค่ายเด่นแตกโหด ฝากถอนออโต้ จ่ายไวเต็มยอด",
+  description = "ทางเข้า WINDRAGON สล็อตออนไลน์ เล่นบนมือถือได้ครบ รวมค่ายเด่นแตกโหด ฝากถอนออโต้ไม่ง้อสลิป ยอดบวกจ่ายเต็ม โปรสุดคุ้มเสริมทุน เข้าเล่นได้วันนี้",
   robots = "index, follow",
 } = Astro.props;
 
@@ -207,7 +207,7 @@ const profile = brandProfile(Astro.site);
         background-attachment: fixed;
         background-repeat: no-repeat;
         margin: 0;
-        background-color: #020f03;
+        background-color: #050915;
         font-weight: 400;
         font-family: var(--font-sans) !important;
       }
@@ -260,7 +260,7 @@ const profile = brandProfile(Astro.site);
         }
         <Image
           src={mainBanner}
-          alt="แบนเนอร์ VODKAFUN โลโก้ขวดวอดก้าบนสาดสีเขียวมะนาวเรืองแสง ข้อความ สล็อตเวอร์ชั่นใหม่ รวมเกมครบครัน ระบบออโต้ลื่นไหล พร้อมไอคอนหมวดเกม สล็อต คาสิโน กีฬา ยิงปลา หวย และป้ายรองรับทรูมันนี่วอเล็ต ด้านขวาเป็นพรีเซนเตอร์หญิงผมดำแซมเขียวถือไพ่ ฉากหลังเป็นตู้สล็อต 777 ลูกฟุตบอล ฉลามการ์ตูน และเหรียญทองท่ามกลางแสงนีออนสีเขียว"
+          alt="แบนเนอร์ WINDRAGON 168 WE WIN TOGETHER ข้อความ WINDRAGON เว็บตรง สมัครง่าย เล่นได้ครบในยูสเดียว คาสิโนออนไลน์มาตรฐาน ระบบออโต้ ฝากถอนรวดเร็ว รองรับมือถือ 24 ชม. สมัครสมาชิกง่าย ระบบเสถียร ค่ายเกมยอดนิยม ดูแลง่ายตลอดวัน พร้อมปุ่มสมัครสมาชิก มังกรเพลิงสีทองและพรีเซนเตอร์หญิงชุดกี่เพ้าสีแดงถือไพ่"
           loading="eager"
           fetchpriority="high"
           widths={[412, 640, 828, 1024, 1280, 1600, 1900]}

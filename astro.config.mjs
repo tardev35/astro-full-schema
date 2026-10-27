@@ -75,7 +75,7 @@ export default defineConfig({
     "/line": "https://tinyurl.com/lineva",
   },
 
-  site: "https://vodkafun-brand.com",
+  site: "https://windragon.org.uk",
   integrations: [
     sitemap({
       // /login, /register and /line are forwarding pages that all ship

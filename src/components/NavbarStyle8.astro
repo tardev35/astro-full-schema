@@ -10,23 +10,23 @@ const currentPath = Astro.url.pathname;
 
 const isActive = (path: string) => isActivePath(currentPath, path);
 
-const affUrl = "https://tinyurl.com/yz22c2r4";
+const affUrl = "https://yoalink.com/mojo";
 
 const links = [
   { name: "หน้าแรก", path: "/", icon: "🏠" },
   { name: "โปรโมชั่น", path: "/promotion/", icon: "🎁" },
   { name: "ทดลองเล่น", path: "/ทดลองเล่น/", icon: "🎰" },
   { name: "วิธีฝากถอน", path: "/วิธีฝากถอน/", icon: "💳" },
-  { name: "เกี่ยวกับเรา", path: "/about-us/", icon: "🛕" },
+  { name: "เกี่ยวกับเรา", path: "/about-us/", icon: "🐉" },
   { name: "ติดต่อเรา", path: "/contact-us/", icon: "💬" },
 ];
 
-const logoAlt = "โลโก้ YIMSIAM889 หน้ายักษ์ทวารบาลสีขาวเงินอยู่เหนือป้ายชื่อแบรนด์ตัวอักษรโครเมียมขอบน้ำเงิน บนโล่สีกรมท่าเรืองแสงสีฟ้า";
+const logoAlt = "โลโก้ WINDRAGON 168 มังกรเพลิงสีส้มขดตัวข้างตัวอักษร WIN สีส้มและ DRAGON สีเงินโครเมียม ใต้ชื่อมีคำว่า WE WIN TOGETHER";
 ---
 
 <header class="sticky top-0 z-50 w-full font-sans">
-  <nav aria-label="เมนูหลัก YIMSIAM889" class="relative z-40 w-full bg-[#020b24]/95 shadow-[0_4px_20px_rgba(1,10,31,0.7)]">
-    <div aria-hidden="true" class="absolute bottom-0 left-0 h-[2px] w-full bg-gradient-to-r from-[#0b4fd6] via-[#2f8cff] to-[#7cc0ff] opacity-80"></div>
+  <nav aria-label="เมนูหลัก WINDRAGON" class="relative z-40 w-full bg-[#120a08]/95 shadow-[0_4px_20px_rgba(10,4,2,0.7)]">
+    <div aria-hidden="true" class="absolute bottom-0 left-0 h-[2px] w-full bg-gradient-to-r from-[#8e2c04] via-[#f26b1d] to-[#f5b942] opacity-80"></div>
 
     <div class="flex h-[65px] w-full items-center justify-between px-3 md:px-6 lg:h-[80px]">
       <div class="flex items-center">
@@ -40,12 +40,12 @@ const logoAlt = "โลโก้ YIMSIAM889 หน้ายักษ์ทวา
                 sizes="140px"
                 loading="eager"
                 fetchpriority="high"
-                class="h-[45px] w-auto drop-shadow-[0_0_10px_rgba(47,140,255,0.55)] lg:h-[60px]"
+                class="h-[45px] w-auto drop-shadow-[0_0_10px_rgba(242,107,29,0.55)] lg:h-[60px]"
                 formats={["avif", "webp"]}
                 fallbackFormat="webp"
               />
             ) : (
-              <span class="bg-gradient-to-b from-[#eaf4ff] to-[#2f8cff] bg-clip-text text-2xl font-black tracking-widest text-transparent">YIMSIAM889</span>
+              <span class="bg-gradient-to-b from-[#ffd77a] to-[#f26b1d] bg-clip-text text-2xl font-black tracking-widest text-transparent">WINDRAGON</span>
             )
           }
         </a>
@@ -58,10 +58,10 @@ const logoAlt = "โลโก้ YIMSIAM889 หน้ายักษ์ทวา
               <span aria-hidden="true" class="text-base transition-transform duration-300 group-hover:-translate-y-0.5">
                 {link.icon}
               </span>
-              <span class={`transition-colors duration-300 ${isActive(link.path) ? "text-[#eaf4ff] drop-shadow-[0_0_8px_rgba(47,140,255,0.75)]" : "text-[#dbeaff]/85 group-hover:text-[#9cc9ff]"}`}>
+              <span class={`transition-colors duration-300 ${isActive(link.path) ? "text-[#ffd77a] drop-shadow-[0_0_8px_rgba(242,107,29,0.75)]" : "text-[#f2e7de]/85 group-hover:text-[#ff9a4d]"}`}>
                 {link.name}
               </span>
-              {isActive(link.path) && <div class="absolute bottom-0 left-0 h-[3px] w-full rounded-t-md bg-[#2f8cff] shadow-[0_-2px_10px_rgba(47,140,255,0.9)]" />}
+              {isActive(link.path) && <div class="absolute bottom-0 left-0 h-[3px] w-full rounded-t-md bg-[#f26b1d] shadow-[0_-2px_10px_rgba(242,107,29,0.9)]" />}
             </a>
           ))
         }
@@ -71,33 +71,33 @@ const logoAlt = "โลโก้ YIMSIAM889 หน้ายักษ์ทวา
         <a
           href={affUrl}
           rel="nofollow sponsored"
-          class="hidden items-center justify-center gap-1.5 rounded border border-[#2f8cff]/70 px-6 py-2 text-sm font-bold text-[#dbeaff] transition-all hover:bg-[#0a1f4d]/70 hover:shadow-[0_0_15px_rgba(47,140,255,0.4)] lg:flex">
+          class="hidden items-center justify-center gap-1.5 rounded border border-[#f26b1d]/70 px-6 py-2 text-sm font-bold text-[#f2e7de] transition-all hover:bg-[#2a140b]/70 hover:shadow-[0_0_15px_rgba(242,107,29,0.4)] lg:flex">
           <span aria-hidden="true">🔑</span> เข้าระบบ
         </a>
         <a
           href={affUrl}
           rel="nofollow sponsored"
-          class="nav-cta-chrome hidden items-center justify-center gap-1.5 rounded px-6 py-2 text-sm font-extrabold text-[#03133c] shadow-[0_0_20px_rgba(47,140,255,0.55)] transition-all hover:brightness-110 lg:flex">
+          class="nav-cta-chrome hidden items-center justify-center gap-1.5 rounded px-6 py-2 text-sm font-extrabold text-[#1a0701] shadow-[0_0_20px_rgba(242,107,29,0.55)] transition-all hover:brightness-110 lg:flex">
           <span aria-hidden="true">👑</span> สมัครสมาชิก
         </a>
 
-        <button id="hamburger-btn" class="flex flex-col items-center justify-center space-y-1.5 rounded border border-[#2f8cff]/45 bg-[#0a1f4d]/50 p-2 lg:hidden" aria-label="เปิดเมนู">
-          <span class="hamburger-line h-[2px] w-5 origin-center rounded-full bg-[#eaf4ff] transition-all duration-300"></span>
-          <span class="hamburger-line h-[2px] w-5 rounded-full bg-[#eaf4ff] transition-all duration-300"></span>
-          <span class="hamburger-line h-[2px] w-5 origin-center rounded-full bg-[#eaf4ff] transition-all duration-300"></span>
+        <button id="hamburger-btn" class="flex flex-col items-center justify-center space-y-1.5 rounded border border-[#f26b1d]/45 bg-[#2a140b]/50 p-2 lg:hidden" aria-label="เปิดเมนู">
+          <span class="hamburger-line h-[2px] w-5 origin-center rounded-full bg-[#ffd77a] transition-all duration-300"></span>
+          <span class="hamburger-line h-[2px] w-5 rounded-full bg-[#ffd77a] transition-all duration-300"></span>
+          <span class="hamburger-line h-[2px] w-5 origin-center rounded-full bg-[#ffd77a] transition-all duration-300"></span>
         </button>
       </div>
     </div>
   </nav>
 
-  <div id="mobile-overlay" class="pointer-events-none fixed inset-0 z-40 bg-[#010a1f]/80 opacity-0 transition-opacity duration-300 lg:hidden"></div>
+  <div id="mobile-overlay" class="pointer-events-none fixed inset-0 z-40 bg-[#0a0402]/80 opacity-0 transition-opacity duration-300 lg:hidden"></div>
 
   <div
     id="mobile-sidebar"
-    class="fixed top-0 right-0 z-50 h-screen w-[260px] translate-x-full transform overflow-y-auto border-l border-[#2f8cff]/40 bg-[#020b24] shadow-[-10px_0_30px_rgba(1,10,31,0.85)] transition-transform duration-400 ease-[cubic-bezier(0.3,1,0.3,1)] lg:hidden">
+    class="fixed top-0 right-0 z-50 h-screen w-[260px] translate-x-full transform overflow-y-auto border-l border-[#f26b1d]/40 bg-[#120a08] shadow-[-10px_0_30px_rgba(10,4,2,0.85)] transition-transform duration-400 ease-[cubic-bezier(0.3,1,0.3,1)] lg:hidden">
     <div class="flex items-center justify-between border-b border-white/5 px-5 py-5">
-      <span class="text-sm font-extrabold tracking-wider text-[#dbeaff]">เมนู</span>
-      <button id="close-sidebar-btn" class="p-1 text-xl text-[#9cc9ff] hover:text-white" aria-label="ปิดเมนู">✕</button>
+      <span class="text-sm font-extrabold tracking-wider text-[#f2e7de]">เมนู</span>
+      <button id="close-sidebar-btn" class="p-1 text-xl text-[#ff9a4d] hover:text-white" aria-label="ปิดเมนู">✕</button>
     </div>
 
     <div class="flex flex-col space-y-2 px-4 pt-4 pb-8">
@@ -105,7 +105,7 @@ const logoAlt = "โลโก้ YIMSIAM889 หน้ายักษ์ทวา
         links.map((link) => (
           <a
             href={link.path}
-            class={`sidebar-item flex items-center rounded-lg border px-4 py-3.5 transition-all ${isActive(link.path) ? "border-[#2f8cff]/60 bg-[#0a1f4d]/70 text-[#eaf4ff]" : "border-transparent bg-white/5 text-[#dbeaff]/85 hover:bg-white/10"}`}>
+            class={`sidebar-item flex items-center rounded-lg border px-4 py-3.5 transition-all ${isActive(link.path) ? "border-[#f26b1d]/60 bg-[#2a140b]/70 text-[#ffd77a]" : "border-transparent bg-white/5 text-[#f2e7de]/85 hover:bg-white/10"}`}>
             <span aria-hidden="true" class="mr-3 text-xl">
               {link.icon}
             </span>
@@ -114,17 +114,17 @@ const logoAlt = "โลโก้ YIMSIAM889 หน้ายักษ์ทวา
         ))
       }
 
-      <div class="mt-6 flex flex-col gap-3 border-t border-[#2f8cff]/40 pt-6">
+      <div class="mt-6 flex flex-col gap-3 border-t border-[#f26b1d]/40 pt-6">
         <a
           href={affUrl}
           rel="nofollow sponsored"
-          class="sidebar-item nav-cta-chrome flex items-center justify-center gap-2 rounded-lg py-3.5 text-sm font-extrabold text-[#03133c] shadow-[0_0_15px_rgba(47,140,255,0.45)]">
+          class="sidebar-item nav-cta-chrome flex items-center justify-center gap-2 rounded-lg py-3.5 text-sm font-extrabold text-[#1a0701] shadow-[0_0_15px_rgba(242,107,29,0.45)]">
           <span aria-hidden="true">👑</span> สมัครสมาชิก
         </a>
         <a
           href={affUrl}
           rel="nofollow sponsored"
-          class="sidebar-item flex items-center justify-center gap-2 rounded-lg border border-[#2f8cff]/70 bg-transparent py-3.5 text-sm font-bold text-[#eaf4ff] transition-colors hover:bg-[#0a1f4d]">
+          class="sidebar-item flex items-center justify-center gap-2 rounded-lg border border-[#f26b1d]/70 bg-transparent py-3.5 text-sm font-bold text-[#ffd77a] transition-colors hover:bg-[#2a140b]">
           <span aria-hidden="true">🔑</span> เข้าระบบ
         </a>
       </div>
@@ -134,7 +134,7 @@ const logoAlt = "โลโก้ YIMSIAM889 หน้ายักษ์ทวา
 
 <style is:global>
   .nav-cta-chrome {
-    background-image: linear-gradient(in oklab to right, #eaf4ff, #9cc9ff, #4d9dff);
+    background-image: linear-gradient(in oklab to right, #ffb15c, #ff8a2a, #e2550a);
   }
 
   #hamburger-btn.active .hamburger-line:nth-child(1) {

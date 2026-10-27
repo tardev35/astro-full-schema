@@ -2,14 +2,14 @@
 import MainLayout from "../layouts/MainLayout.astro";
 import ContentBox from "../components/ContentBox.astro";
 import Navfoot from "../components/Navfoot.astro";
-import Announcement from "../components/Announcement5.astro";
+import Announcement from "../components/AnnouncementPremium.astro";
 import CtaRedirect from "../components/CtaRedirect.astro";
 import { pageGraph } from "../lib/schema";
 
-const pageTitle = "เข้าสู่ระบบ VODKAFUN | ปุ่มล็อกอินเข้าหน้าสมาชิก สล็อตเวอร์ชั่นใหม่";
+const pageTitle = "เข้าสู่ระบบ WINDRAGON | ทางเข้าหน้าสมาชิก สล็อตออนไลน์ เล่นต่อได้ทันที";
 
 const pageDescription =
-  "หากคุณกำลังมองหาทางกลับเข้าหน้าสมาชิกโดยไม่ต้องค้นหาลิงก์ VODKAFUN พร้อมมอบปุ่มเข้าสู่ระบบเพียงปุ่มเดียว เพื่อกลับไปเล่นสล็อตและเกมที่ชอบด้วยบัญชีเดิมได้ทันที";
+  "หากคุณกำลังมองหาทางกลับเข้าหน้าสมาชิกโดยไม่ต้องค้นหาลิงก์ WINDRAGON พร้อมมอบปุ่มเข้าสู่ระบบเพียงปุ่มเดียว เพื่อกลับไปปั่นสล็อตค่ายเด่นแตกโหดด้วยบัญชีเดิมทันที";
 
 const graph = pageGraph(Astro, {
   name: pageTitle,
@@ -28,15 +28,15 @@ const targetUrl = "https://yoalink.com/mojo";
 
   <Announcement />
 
-  <ContentBox title="เข้าสู่ระบบ VODKAFUN" as="h1">
+  <ContentBox title="เข้าสู่ระบบ WINDRAGON" as="h1">
     <div class="flex justify-center py-8">
       <a
         href={targetUrl}
         rel="nofollow sponsored"
         data-cta-redirect
-        aria-label="เข้าสู่ระบบ VODKAFUN"
-        class="group relative mx-auto flex w-full max-w-[320px] items-center justify-center gap-3 overflow-hidden rounded-xl bg-gradient-to-r from-[#e6ff6a] via-[#c8fc04] to-[#7ee000] px-6 py-4 text-xl font-bold tracking-wide text-[#0b2a05] shadow-[0_10px_30px_rgba(200,252,4,0.35)] transition-all duration-300 hover:scale-105 hover:shadow-[0_15px_40px_rgba(200,252,4,0.5)]">
-        เข้าสู่ระบบ VODKAFUN
+        aria-label="เข้าสู่ระบบ WINDRAGON"
+        class="group relative mx-auto flex w-full max-w-[320px] items-center justify-center gap-3 overflow-hidden rounded-xl bg-gradient-to-r from-[#ff8a2a] to-[#e2550a] px-6 py-4 text-xl font-bold tracking-wide text-[#1a0701] shadow-[0_10px_30px_rgba(242,107,29,0.35)] transition-all duration-300 hover:scale-105 hover:brightness-110 hover:shadow-[0_15px_40px_rgba(242,107,29,0.5)]">
+        เข้าสู่ระบบ WINDRAGON
       </a>
     </div>
   </ContentBox>

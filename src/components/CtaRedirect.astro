@@ -32,7 +32,7 @@ const { label } = Astro.props;
     place-items: center;
     padding: 1.5rem;
     background:
-      radial-gradient(circle at 50% 12%, rgba(200, 252, 4, 0.30) 0%, transparent 55%), radial-gradient(circle at 50% 90%, rgba(63, 194, 10, 0.22) 0%, transparent 55%), rgba(2, 15, 3, 0.92);
+      radial-gradient(circle at 50% 12%, rgba(242, 107, 29, 0.30) 0%, transparent 55%), radial-gradient(circle at 50% 90%, rgba(179, 18, 27, 0.22) 0%, transparent 55%), rgba(10, 4, 2, 0.92);
     animation: cta-fade 0.25s ease-out both;
   }
 
@@ -45,12 +45,12 @@ const { label } = Astro.props;
     max-width: 420px;
     padding: 3rem 2rem;
     text-align: center;
-    border: 1px solid rgba(200, 252, 4, 0.4);
+    border: 1px solid rgba(242, 107, 29, 0.4);
     border-radius: 1.5rem;
-    background: #06230a;
+    background: #1a100c;
     box-shadow:
-      0 1rem 3rem rgba(200, 252, 4, 0.3),
-      0 0 2rem rgba(63, 194, 10, 0.22);
+      0 1rem 3rem rgba(242, 107, 29, 0.3),
+      0 0 2rem rgba(179, 18, 27, 0.22);
   }
 
   .brand {
@@ -58,7 +58,7 @@ const { label } = Astro.props;
     font-size: 1.375rem;
     font-weight: 700;
     letter-spacing: 0.3em;
-    background: linear-gradient(180deg, #f3ffe9 0%, #c8fc04 55%, #3fc20a 100%);
+    background: linear-gradient(180deg, #fff1dc 0%, #f26b1d 55%, #b3121b 100%);
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
@@ -78,14 +78,14 @@ const { label } = Astro.props;
     width: 40px;
     height: 40px;
     border-radius: 50%;
-    background: radial-gradient(circle, #f3ffe9 0%, #c8fc04 40%, #3fc20a 100%);
-    box-shadow: 0 0 2rem rgba(200, 252, 4, 0.45);
+    background: radial-gradient(circle, #fff1dc 0%, #f26b1d 40%, #b3121b 100%);
+    box-shadow: 0 0 2rem rgba(242, 107, 29, 0.45);
     animation: cta-pulse 2s ease-in-out infinite;
   }
 
   .ring {
     position: absolute;
-    border: 3px solid rgba(63, 194, 10, 0.35);
+    border: 3px solid rgba(179, 18, 27, 0.35);
     border-radius: 50%;
     animation: cta-spin linear infinite;
   }
@@ -93,14 +93,14 @@ const { label } = Astro.props;
   .ring-1 {
     width: 100%;
     height: 100%;
-    border-top-color: #c8fc04;
+    border-top-color: #f26b1d;
     animation-duration: 4s;
   }
 
   .ring-2 {
     width: 80%;
     height: 80%;
-    border-bottom-color: #f3ffe9;
+    border-bottom-color: #fff1dc;
     animation-duration: 6s;
     animation-direction: reverse;
   }
@@ -110,14 +110,14 @@ const { label } = Astro.props;
     font-size: 1.125rem;
     font-weight: 700;
     letter-spacing: 0.12em;
-    color: #c8fc04;
+    color: #f26b1d;
   }
 
   .sub {
     margin: 0.75rem 0 0 0;
     font-size: 0.875rem;
     line-height: 1.6;
-    color: #d9f7d0;
+    color: #f2e7de;
   }
 
   @keyframes cta-spin {
@@ -130,11 +130,11 @@ const { label } = Astro.props;
     0%,
     100% {
       transform: scale(1);
-      box-shadow: 0 0 2rem rgba(200, 252, 4, 0.45);
+      box-shadow: 0 0 2rem rgba(242, 107, 29, 0.45);
     }
     50% {
       transform: scale(1.15);
-      box-shadow: 0 0 3rem rgba(63, 194, 10, 0.5);
+      box-shadow: 0 0 3rem rgba(179, 18, 27, 0.5);
     }
   }
 

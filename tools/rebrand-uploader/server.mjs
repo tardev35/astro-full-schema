@@ -572,7 +572,44 @@ function decodeTextBrief(buf) {
   }
 }
 
+// A Markdown brief (.md) is folded onto the same line convention the docx
+// path produces, so nothing downstream learns a second syntax: "# " → "H1:",
+// "## " → "H2:", "### " → "H3:", front matter keys stay as "title:" /
+// "description:" lines, bullets become plain lines, emphasis markers go.
+function markdownToBrief(text) {
+  const out = [];
+  let inFront = false;
+  const lines = text.replace(/\r\n?/g, "\n").split("\n");
+  lines.forEach((raw, i) => {
+    let line = raw.replace(/\t/g, " ").trimEnd();
+    if (i === 0 && line.trim() === "---") { inFront = true; return; }
+    if (inFront) {
+      if (line.trim() === "---") { inFront = false; return; }
+      const kv = line.match(/^\s*(title|description|des|meta|h1)\s*:\s*(.*)$/i);
+      if (kv) out.push(kv[1].toLowerCase() === "h1" ? "H1: " + kv[2].trim() : kv[1] + ": " + kv[2].trim().replace(/^["']|["']$/g, ""));
+      return;
+    }
+    line = line.trim();
+    if (!line || /^(---|\*\*\*|___)$/.test(line)) return;
+    const h = line.match(/^(#{1,6})\s+(.*)$/);
+    if (h) {
+      const level = Math.min(h[1].length, 3);
+      line = "H" + level + ": " + h[2].replace(/\s*#+\s*$/, "");
+    }
+    line = line.replace(/^[-*+]\s+/, "").replace(/^\d+[.)]\s+/, "").replace(/^>\s+/, "");
+    line = line.replace(/\*\*(.+?)\*\*/g, "$1").replace(/__(.+?)__/g, "$1").replace(/(^|[^*])\*([^*\n]+)\*/g, "$1$2").replace(/`([^`]+)`/g, "$1");
+    line = line.replace(/\[([^\]]+)\]\([^)]*\)/g, "$1").replace(/\s{2,}/g, " ").trim();
+    if (line) out.push(line);
+  });
+  return out;
+}
+
+function looksLikeMarkdown(text) {
+  return /^#{1,6}\s+\S/m.test(text) || /^---\s*\n(?:[\w-]+\s*:.*\n)+---/m.test(text);
+}
+
 function briefTextToLines(text) {
+  if (looksLikeMarkdown(text)) return markdownToBrief(text);
   return text
     .replace(/\r\n?/g, "\n")
     .split("\n")
@@ -3311,8 +3348,8 @@ const PAGE = /* html */ `<!doctype html>
       <span class="status">อัพครั้งเดียว เซฟลงทั้ง src/assets และ public ให้อัตโนมัติ</span>
     </div>
     <div class="field">
-      <div class="row"><label>Content brief</label><span class="target">content.docx / content.txt</span></div>
-      <div class="row"><input type="file" accept=".docx,.txt" data-slot="docx" /></div>
+      <div class="row"><label>Content brief</label><span class="target">content.docx / content.txt (.md ก็ได้ แปลงให้เอง)</span></div>
+      <div class="row"><input type="file" accept=".docx,.txt,.md" data-slot="docx" /></div>
       <span class="status"></span>
     </div>
     <div class="field" id="bgField" data-img>
@@ -3432,7 +3469,7 @@ const PAGE = /* html */ `<!doctype html>
       <h2 data-n="4">SEO · Title / Meta หน้าย่อย</h2>
       <div class="pull-row">
         <button type="button" id="pullDocx" class="ghost">📄 ดึงจาก Content brief</button>
-        <span class="pull-hint">อัพ Content brief (.docx หรือ .txt) ในส่วนที่ 1 ก่อน แล้วค่อยกดปุ่มนี้</span>
+        <span class="pull-hint">อัพ Content brief (.docx / .txt / .md) ในส่วนที่ 1 ก่อน แล้วค่อยกดปุ่มนี้</span>
       </div>
       <div class="fieldset">
 <div class="field" data-page="promotion">
@@ -4180,7 +4217,7 @@ const PAGE = /* html */ `<!doctype html>
     const hint = document.getElementById('rbFireHint');
     if (busy) hint.innerHTML = 'กำลังรัน — <strong>ห้ามปิดหน้าต่างดำ (cmd)</strong> (ปิดแท็บเบราว์เซอร์ได้ ไม่กระทบ)';
     else if (pending) hint.innerHTML = '⬆ <strong>ยังมีไฟล์ที่เลือกไว้แต่ยังไม่ได้อัพโหลด</strong> — กด "อัพโหลดทั้งหมด" ก่อน ปุ่ม Rebrand ถึงจะกดได้';
-    else if (!briefStaged) hint.innerHTML = '⚠ <strong>ยังไม่มี Content brief ใน src/assets</strong> — อัพโหลด .docx หรือ .txt ในส่วนที่ 1 ก่อน';
+    else if (!briefStaged) hint.innerHTML = '⚠ <strong>ยังไม่มี Content brief ใน src/assets</strong> — อัพโหลด .docx / .txt / .md ในส่วนที่ 1 ก่อน';
     else if (!promptOk) hint.innerHTML = 'กรอกชื่อแบรนด์ให้ถูกต้องก่อน ปุ่ม Rebrand ถึงจะกดได้';
     else hint.innerHTML = 'พร้อมยิงแล้ว · งานจริงกินเวลาหลายสิบนาที · <strong>ห้ามปิดหน้าต่างดำ (cmd)</strong> ระหว่างรัน (ปิดแท็บเบราว์เซอร์ได้)';
   }

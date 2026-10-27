@@ -152,7 +152,7 @@ progress in the normal way — there is no separate channel to write to.
    brief is read, so don't spend three tool calls re-deriving a file that
    already exists.
 
-   The brief may have arrived as a `.docx` **or as a plain `.txt`** — the
+   The brief may have arrived as a `.docx`, a plain `.txt`, **or a `.md`** (added 2026-10-28: the uploader folds Markdown onto the same line convention, `#`→`H1:`, `##`→`H2:`, `###`→`H3:`, front-matter `title:`/`description:` kept, bullets and emphasis stripped, so `content.txt` looks the same whichever format arrived) — the
    uploader takes either and normalises both to `content.txt`, so this
    step does not change. A text brief leaves **no** `content.docx` at
    all (the uploader deletes any previous brand's), which is expected,

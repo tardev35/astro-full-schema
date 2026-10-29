@@ -1,64 +1,76 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
-import Announcement from "../components/AnnouncementPremium.astro";
+import Announcement from "../components/Announcement2.astro";
 import ContentBox from "../components/ContentBox.astro";
-import ContentBoxPremium from "../components/ContentBoxPremium.astro";
-import ContentBoxCyberCut from "../components/ContentBoxCyberCut.astro";
-import ContentBoxTwoPremium from "../components/ContentBoxTwoPremium.astro";
-import ContentBoxSevenThreePremium from "../components/ContentBoxSevenThreePremium.astro";
-import ContentBoxSevenThreeCyberCut from "../components/ContentBoxSevenThreeCyberCut.astro";
-import Faq3 from "../components/Faq3.astro";
+import ContentBoxNeumorphism from "../components/ContentBoxNeumorphism.astro";
+import ContentBoxFloatingBadge from "../components/ContentBoxFloatingBadge.astro";
+import ContentBoxTwo from "../components/ContentBoxTwo.astro";
+import ContentBoxSpecial from "../components/ContentBoxSpecial.astro";
+import ContentBoxSevenThreeNeumorphism from "../components/ContentBoxSevenThreeNeumorphism.astro";
+import ContentBoxSevenThree from "../components/ContentBoxSevenThree.astro";
+import FeatureHighlights from "../components/FeatureHighlights.astro";
 import SmoothCarousel from "../components/SmoothCarousel.astro";
 import GameRankingBoard from "../components/GameRankingBoard.astro";
 import ProviderGrid from "../components/ProviderGrid.astro";
-import LatestWinnersPremium from "../components/LatestWinnersPremium.astro";
+import LatestWinners4 from "../components/LatestWinners4.astro";
 import LoginRtpSection from "../components/LoginRtpSection.astro";
 import ReviewCardSumo2 from "../components/ReviewCardSumo2.astro";
 import Navfoot from "../components/Navfoot.astro";
 
 import { Picture } from "astro:assets";
 import { pageGraph } from "../lib/schema";
-import imgWallet from "../assets/slide2.png";
-import imgCashback from "../assets/slide4.png";
+import imgNewMember from "../assets/slide1.png";
+import imgSupport from "../assets/slide4.png";
 
-const pageTitle = "WINDRAGON สล็อตออนไลน์ ค่ายเด่นแตกโหด ฝากถอนออโต้ จ่ายไวเต็มยอด";
+const pageTitle = "SUPREME888 สล็อต ถอนได้เต็มทุกบิล ฝากถอนออโต้ทำเองได้ เกมหลายค่าย";
 
 const pageDescription =
-  "ทางเข้า WINDRAGON สล็อตออนไลน์ เล่นบนมือถือได้ครบ รวมค่ายเด่นแตกโหด ฝากถอนออโต้ไม่ง้อสลิป ยอดบวกจ่ายเต็ม โปรสุดคุ้มเสริมทุน เข้าเล่นได้วันนี้";
+  "สมัคร SUPREME888 สล็อต จ่ายเต็มทุกยอดไม่หักเปอร์เซ็นต์ ฝากถอนออโต้กดเองได้ เลือกเกมตามกลไก โปรสมาชิกใหม่ มือถือครบทุกขั้นตอน แอดมิน 24 ชม. เปิดยูสได้เลย";
 
-const announcementMessage = "WINDRAGON สล็อตออนไลน์ เล่นจบในมือถือ ฝากถอนออโต้ไม่ต้องส่งสลิป ยอดบวกโอนเต็มจำนวน พร้อมโปรสุดคุ้มเสริมทุนทุกวัน";
+const announcementMessage =
+  "SUPREME888 สล็อต จ่ายเต็มทุกยอด ไม่หักเปอร์เซ็นต์ • ฝากถอนออโต้ ฝากเริ่ม 20 บาท ถอนขั้นต่ำ 50 บาท กดเองได้ตลอด 24 ชม. ไม่ต้องส่งสลิป • ใช้ได้ทุกธนาคารและ TrueMoney Wallet ทั้งขาฝากและขาถอน • รวม PG Soft, Pragmatic Play, JILI และ Joker Gaming ไว้ในเว็บเดียว • มือถือเครื่องเดียวทำได้ครบ แอดมินดูแลตลอด 24 ชม.";
 
-const walletAlt = "ฝาก-ถอนระบบอัตโนมัติ แค่ 1 บาทก็สนุกได้ รองรับทุกธนาคารและทรูวอเล็ท";
+const newMemberAlt = "Supreme888 สมาชิกใหม่ เริ่มต้นง่าย สมัครสะดวก พร้อมสนุกได้ทันที สมัครง่าย ระบบเสถียร พร้อมดูแล ปุ่มสมัครสมาชิก";
 
-const cashbackAlt = "คืนยอดเสียทุกสัปดาห์ คืนให้สูงสุด 10,000.-";
+const supportAlt = "Supreme888 พร้อมดูแลทุกขั้นตอน บริการรวดเร็ว เป็นกันเอง ตอบไว ใส่ใจ พร้อมดูแล ปุ่มติดต่อเรา";
 
-const faqTitle = "ถามตรงตอบตรง เรื่องที่สายปั่นอยากรู้ก่อนเริ่มเล่นสล็อตออนไลน์";
-
-const faqs = [
+const games = [
   {
-    q: "ฝากเงินไปแล้ว เครดิตยังไม่ขึ้น ต้องทำยังไง",
-    a: "ปกติไม่ต้องทำอะไรเลย ยอดจะเข้าเครดิตเองในไม่กี่วินาที ถ้ารอเกินนั้นแล้วยังไม่ขึ้น อย่าเพิ่งโอนซ้ำ จดเวลาที่โอนกับยอดเงินไว้ แล้วแจ้งทีมงานผ่านช่องทางติดต่อบนหน้าเว็บให้ตรวจรายการ",
+    icon: "🏺",
+    title: "Treasures of Aztec (PG Soft)",
+    description: "สาวถ้ำที่ตัวคูณขยับขึ้นทุกครั้งที่ชนะติดกัน เหมาะกับคนชอบลุ้นยาวในรอบฟรีสปิน",
+    accent: "red" as const,
   },
   {
-    q: "ถอนเงินกับ WINDRAGON ต้องแนบสลิปหรือทักแอดมินก่อนไหม",
-    a: "ไม่ต้องทั้งสองอย่าง กดถอนจากมือถือได้เอง ยอดที่ยืนยันจะโอนเข้าบัญชีเต็มจำนวนภายในไม่กี่วินาที จุดเดียวที่ต้องดูคือใช้บัญชีที่ชื่อตรงกับตอนสมัคร รายการจะไม่สะดุด",
+    icon: "🍭",
+    title: "Sweet Bonanza (Pragmatic Play)",
+    description: "สัญลักษณ์ร่วงหล่นต่อเนื่อง ลูกอมตัวคูณในรอบฟรีสปินรวมยอดตอนท้าย และมีปุ่มซื้อฟีเจอร์สำหรับคนทุนพร้อม",
+    accent: "ink" as const,
   },
   {
-    q: "ไม่มีคอม เล่นในมือถืออย่างเดียวได้ครบไหม",
-    a: "ได้ครบ ตั้งแต่สมัคร ล็อกอิน เลือกค่าย ปั่น ไปจนถึงฝากถอน ทำจากสมาร์ทโฟนได้ทั้งหมด ใครเข้าเล่นบ่อยลองบุ๊กมาร์กทางเข้าไว้ในเบราว์เซอร์ จะเปิดกลับมาได้ในแตะเดียว",
+    icon: "💎",
+    title: "Fortune Gems (JILI)",
+    description: "ช่องเกมสามแถวพร้อมวงล้อตัวคูณด้านข้างที่สุ่มให้ทุกรอบ จังหวะไว เหมาะกับคนที่เล่นทีละช่วงสั้น",
+    accent: "red" as const,
+  },
+  {
+    icon: "🏛️",
+    title: "Roma (Joker Gaming)",
+    description: "เกมคลาสสิกที่คนไทยคุ้น กติกาเข้าใจง่าย มีฟีเจอร์พิเศษให้ลุ้นระหว่างทาง เหมาะกับคนเพิ่งเริ่ม",
+    accent: "ink" as const,
   },
 ];
 
 const graph = pageGraph(Astro, {
   name: pageTitle,
   description: pageDescription,
-  faqs,
 });
 
-const inlineLink = "font-bold text-[#ff9a4d] underline underline-offset-4 transition-colors hover:text-[#ffd77a]";
-const slideFrame = "mx-auto h-auto w-full rounded-2xl border border-[#5a2a12] shadow-[0_10px_30px_rgba(242,107,29,0.22)]";
-const cutFrame = "mx-auto h-auto w-full rounded-md border border-[#f26b1d]/40 shadow-[0_10px_30px_rgba(179,18,27,0.30)]";
+const inlineLink = "font-bold text-[#b5121a] underline underline-offset-4 transition-colors hover:text-[#ec1b24]";
+const slideFrame = "mx-auto h-auto w-full rounded-2xl border border-[#f1d2d3] shadow-[0_10px_30px_rgba(236,27,36,0.12)]";
 const body = "text-left text-base leading-relaxed";
+const listItem = "rounded-xl border-l-4 border-[#ec1b24] bg-[#fff5f5] px-4 py-3";
+const listLabel = "font-black text-[#141414]";
 ---
 
 <MainLayout title={pageTitle} description={pageDescription}>
@@ -68,26 +80,46 @@ const body = "text-left text-base leading-relaxed";
 
   <SmoothCarousel />
 
-  <ContentBoxPremium as="h1" title="WINDRAGON สล็อตออนไลน์ ค่ายเด่นแตกโหด ฝากถอนออโต้ ยอดบวกได้เต็ม">
+  <ContentBoxNeumorphism as="h1" title="SUPREME888 สล็อต ถอนได้เต็มทุกบิล ฝากถอนออโต้ทำเองได้ เล่นครบบนมือถือ">
     <p class={body}>
-      สายปั่นที่ได้ยอดบวกแล้วยังต้องนั่งรอแอดมินโอน ลองย้ายมาปั่นกับ WINDRAGON ดูสักรอบ สล็อตออนไลน์ที่นี่เปิดจากสมาร์ทโฟนได้ตั้งแต่ทางเข้าจนถึงหน้าถอน ในล็อบบี้มีสล็อตค่ายเด่นสายแตกโหดให้เลือกตามทุน
-      ฝากถอนออโต้กดทำรายการเองได้โดยไม่ต้องส่งสลิป ยอดบวกก้อนใหญ่ก็โอนเต็มจำนวนไม่หักเปอร์เซ็นต์ และยังมีโปรสุดคุ้มไว้เสริมทุนตอนอยากยืดรอบ เหมาะกับคนที่อยากเล่นให้จบในมือถือเครื่องเดียว
+      คนที่เคยแตกบิลใหญ่แล้วได้เงินไม่ครบ มักถามก่อนเปิดยูสว่าเว็บนี้จ่ายเต็มไหม SUPREME888 สล็อต ใช้ชื่อที่แปลว่าสูงสุด แต่สิ่งที่เราอยากให้สูงจริงคือยอดถอนที่สมาชิกได้รับเต็มจำนวนไม่หักเปอร์เซ็นต์ ฝากถอนออโต้ที่กดเองได้ เกมหลายค่ายที่เลือกตามกลไกได้ในเว็บเดียว โปรสมาชิกใหม่ มือถือเครื่องเดียวทำได้ครบทุกขั้นตอน และแอดมินที่รับเรื่องตลอด 24 ชั่วโมง ใครยังลังเลว่าจะ<a href="/register/" class={inlineLink}>สมัคร SUPREME888</a> ดีไหม อ่านทีละข้อแล้วค่อยตัดสินใจครับ
     </p>
-  </ContentBoxPremium>
+  </ContentBoxNeumorphism>
 
-  <ContentBoxCyberCut as="h2" title="ทางเข้า WINDRAGON สล็อตออนไลน์ เปิดจากสมาร์ทโฟนแล้วเล่นได้ครบ">
+  <ContentBoxFloatingBadge as="h2" title="ถอนเยอะแล้วจ่ายไหม SUPREME888 สล็อต จ่ายเต็มทุกยอด ไม่หักเปอร์เซ็นต์">
     <p class={body}>
-      คนที่ค้นหา<a href="/ทางเข้า/" class={inlineLink}>ทางเข้า WINDRAGON</a> ส่วนใหญ่แค่อยากกดแล้วได้เข้าเล่นเลย ที่นี่จึงให้ทุกขั้นทำจากสมาร์ทโฟนได้ครบ ตั้งแต่ล็อกอิน ฝากเงิน เลือกเกม ไปจนถึงกดถอน
-      สมาชิกเดิมใช้บัญชีเดิมเข้าได้ทันทีแม้จะเปลี่ยนเครื่อง ไม่ต้องสมัครใหม่ ก่อนใส่รหัสผ่านทุกครั้งให้เช็กชื่อเว็บบนแถบที่อยู่ว่าสะกดตรงตัว จะได้ไม่หลงเข้าลิงก์ปลอม
+      ถ้าแตกหลักแสนจะได้ครบไหม คำตอบของเราสั้นมาก ยอดที่กดถอนได้จะโอนเข้าบัญชีเต็มจำนวน ไม่หักเปอร์เซ็นต์จากบิลใหญ่ บิลเล็กบิลใหญ่ใช้กติกาเดียวกัน ถ้ารับโปรไว้ ให้เปิดดูเงื่อนไขการถอนของโปรนั้นใน<a href="/promotion/" class={inlineLink}>หน้าโปรโมชั่น</a>ก่อนกดถอน จะได้ไม่งงว่าทำไมยอดยังถอนไม่ได้ เหมาะกับคนที่เคยโดนหักหัวคิวจนไม่กล้าถอนก้อนใหญ่ครับ
     </p>
-  </ContentBoxCyberCut>
+  </ContentBoxFloatingBadge>
 
-  <LoginRtpSection />
+  <LatestWinners4 />
 
-  <ContentBox as="h2" title="รวมสล็อตค่ายเด่นแตกโหด เลือกเกมให้ตรงสายก่อนกดสปินรอบแรก">
+  <ContentBoxTwo as="h2" title="ฝากถอนออโต้เริ่ม 20 บาท ถอนเองได้ตลอด 24 ชม. ไม่ต้องส่งสลิป">
+    <p slot="left" class={body}>
+      ทุนน้อยกับทุนหนาใช้ระบบฝากถอนออโต้ชุดเดียวกันที่นี่ ฝากเริ่มที่ 20 บาท จะโอนจากแอปธนาคารหรือเติมผ่านวอเลทก็ได้ พอยอดเข้า ระบบปรับเครดิตให้ทันทีภายในไม่กี่วินาที ขาถอนกดได้เองทั้ง 24 ชั่วโมง ถอนตอนตีสามก็ไม่ต้องรอแอดมินตื่น สรุปสั้นๆ ครับ
+    </p>
+
+    <div slot="right" class="flex flex-col gap-4">
+      <ul class="flex flex-col gap-3">
+        <li class={listItem}><strong class={listLabel}>ช่องทาง:</strong> ทุกธนาคารและ TrueMoney Wallet (ทรูวอเลท) ใช้ได้ทั้งขาฝากและขาถอน</li>
+        <li class={listItem}><strong class={listLabel}>ขั้นต่ำ:</strong> ฝาก 20 บาท ถอน 50 บาท</li>
+        <li class={listItem}><strong class={listLabel}>เวลา:</strong> ปรับเครดิตให้เองในไม่กี่วินาที ไม่ต้องส่งสลิปให้แอดมิน</li>
+      </ul>
+      <p class={body}>
+        ถ้าโอนแล้วเครดิตยังไม่ขึ้น อย่าเพิ่งโอนซ้ำ จดเวลาและยอดที่โอน แล้วทักแอดมินผ่านช่องทางบนหน้าเว็บ รายการที่ข้อมูลครบจะตามเจอไวกว่าครับ
+      </p>
+    </div>
+  </ContentBoxTwo>
+
+  <ContentBox as="h2" title="เลือกเกมสล็อตจากกลไกฟรีสปิน ตัวคูณ ซื้อฟีเจอร์ หลายค่ายในเว็บเดียว">
     <p class={body}>
-      แตกโหดในภาษาสายปั่นคือเกมที่อาจเงียบไปสักพัก แต่พอสแคตเตอร์ครบจนเข้าฟรีสปิน ตัวคูณจะพายอดขึ้นแรงกว่าเกมจ่ายถี่ WINDRAGON รวมสล็อตค่ายเด่นแนวนี้ไว้ ดูรายชื่อค่ายได้จากตารางด้านล่าง
-      วิธีเลือกง่ายๆ คือหยิบเกมที่คุ้นมาสองสามเกม ดูช่วงเบทกับฟีเจอร์ก่อน แล้วเริ่มจากเบทต่ำเพื่อจับจังหวะ พอทุนพร้อมค่อยขยับขึ้นทีละขั้น
+      หลายคนเข้ามาแล้วถามว่าจะเริ่มเกมไหนดี เราไม่ตอบด้วยชื่อเกมเดียว ที่นี่รวมค่ายที่สายปั่นไทยเปิดบ่อยไว้ในเว็บเดียว มี PG Soft กับ Pragmatic Play และมี JILI กับ Joker Gaming ให้สลับเล่น วิธีเลือกที่เราแนะนำคือดูกลไกก่อนดูหน้าปก รอบฟรีสปินเข้าแบบไหน ตัวคูณทำงานตอนไหน เบทต่ำสุดต่อรอบของเกมนั้นเท่าไร แล้วคัดไว้สองสามเกมที่ตรงกับทุนของตัวเองครับ
+    </p>
+
+    <FeatureHighlights items={games} />
+
+    <p class={`mt-5 ${body}`}>
+      วิธีแบ่งทุนที่เราแนะนำคือ ตั้งงบของวันนั้นไว้ก่อนเปิดเกม ลองเกมละไม่กี่รอบด้วยเบทเล็กเพื่อดูจังหวะ ถ้าเกมไหนรอบฟรีสปินเข้ายากกว่าที่ทุนรับไหว ให้สลับไปเกมที่จังหวะสั้นกว่าแทนการเพิ่มเบทไล่ทุน ทุนจะอยู่ได้นานกว่าครับ
     </p>
   </ContentBox>
 
@@ -95,15 +127,15 @@ const body = "text-left text-base leading-relaxed";
 
   <GameRankingBoard />
 
-  <ContentBoxSevenThreePremium as="h2" titleright="ฝากถอนออโต้ทำเองผ่านมือถือ ไม่ต้องส่งสลิป ไม่ต้องรอแอดมิน">
+  <ContentBoxSevenThreeNeumorphism as="h2" titleright="โปรสมาชิกใหม่ SUPREME888 อ่านเงื่อนไขในหน้าโปรโมชั่นก่อนรับ จะได้ถอนไม่ติด">
     <Picture
       slot="left"
-      src={imgWallet}
-      alt={walletAlt}
+      src={imgNewMember}
+      alt={newMemberAlt}
       loading="lazy"
       fetchpriority="low"
-      widths={[340, 460, 600]}
-      sizes="(max-width: 767px) calc(100vw - 98px), (max-width: 1279px) calc(40vw - 62px), 450px"
+      widths={[280, 380, 480, 600]}
+      sizes="(max-width: 767px) calc(100vw - 96px), (max-width: 1399px) calc(30vw - 38px), 382px"
       decoding="async"
       formats={["avif", "webp"]}
       fallbackFormat="webp"
@@ -112,55 +144,50 @@ const body = "text-left text-base leading-relaxed";
     />
 
     <p slot="right" class={body}>
-      เคยไหมที่โอนเงินเสร็จแล้วต้องแคปสลิปส่งแชต รออีกพักใหญ่กว่าเครดิตจะขึ้น <a href="/วิธีฝากถอน/" class={inlineLink}>ระบบการเงินของ WINDRAGON</a> เป็นออโต้ทั้งขาเข้าและขาออก ผู้เล่นกดทำรายการเองในมือถือ ระบบตรวจยอดแล้วปรับเครดิตให้ในไม่กี่วินาที
-      ไม่ต้องแนบหลักฐาน ไม่ต้องทักใครช่วยดัน ถอนก็แค่ใส่ยอดแล้วยืนยัน เหมาะกับคนที่อยากคุมจังหวะเงินเข้าออกเอง
+      คนเปิดยูสครั้งแรกมีโปรสมาชิกใหม่รอรับอยู่ รายละเอียดและเงื่อนไขทั้งหมดอยู่ใน<a href="/promotion/" class={inlineLink}>หน้าโปรโมชั่น</a> ก่อนรับโปรเราอยากให้เปิดหน้านั้นดูสามเรื่อง หนึ่งคือโปรมีเงื่อนไขยอดฝากไหม สองคือต้องทำเทิร์นก่อนถอนหรือไม่ อย่างไร สามคือโปรนับยอดจากเกมไหนบ้าง รู้สามเรื่องนี้แล้วจะวางแผนถอนได้ตั้งแต่ก่อนฝาก ถ้าอ่านแล้วยังไม่แน่ใจว่าเงื่อนไขเข้ากับแผนของตัวเองไหม ทักแอดมินถามก่อนรับได้เลย เราตอบให้ก่อนที่จะฝากครับ
     </p>
-  </ContentBoxSevenThreePremium>
+  </ContentBoxSevenThreeNeumorphism>
 
-  <ContentBoxTwoPremium as="h2" title="ยอดบวกใหญ่แค่ไหน WINDRAGON ก็โอนเต็มจำนวน ไม่หักเปอร์เซ็นต์">
+  <ContentBoxSpecial as="h2" title="ทางเข้า SUPREME888 บนมือถือ สมัคร ฝาก ปั่น ถอน จบในเครื่องเดียว" iconleft="📱" iconright="🔑">
     <p slot="left" class={body}>
-      คำถามที่สายปั่นถามก่อนสมัครแทบทุกเว็บคือ ถ้าแตกก้อนใหญ่จริงจะได้ครบไหม คำตอบของที่นี่คือได้ครบ ตัวเลขที่เห็นตอนกดถอนคือยอดที่เข้าบัญชีจริง
+      ไม่ต้องรอกลับบ้านไปเปิดคอม ทุกขั้นตอนของเว็บนี้ทำบนมือถือได้ครบ ตั้งแต่สมัคร ฝากเครดิต ดูโปร เปิดเกม ไปจนถึงกดถอน ใช้ได้ทั้ง iOS และ Android ผ่านเบราว์เซอร์โดยไม่ต้องโหลดแอปเพิ่ม
     </p>
 
     <p slot="right" class={body}>
-      ไม่มีการตัดเปอร์เซ็นต์หรือค่าหักยิบย่อยโผล่มาตอนเงินออก และเพราะถอนผ่านระบบออโต้ ยอดจึงไม่ต้องค้างรอใครอนุมัติ รอบที่ลุ้นมาจากเกมแตกโหดเลยกลับมาถึงมือเต็มก้อน
+      สมาชิกเดิมที่เปลี่ยนเครื่องให้เข้าผ่าน<a href="/ทางเข้า/" class={inlineLink}>ทางเข้า SUPREME888</a> แล้วล็อกอินด้วยยูสและรหัสเดิม ไม่ต้องสมัครซ้ำครับ
     </p>
-  </ContentBoxTwoPremium>
+  </ContentBoxSpecial>
 
-  <LatestWinnersPremium />
+  <LoginRtpSection />
 
-  <ContentBoxSevenThreeCyberCut as="h2" titleright="โปรสุดคุ้มของ WINDRAGON เสริมทุนให้มีรอบลุ้นนานขึ้น">
+  <ContentBoxSevenThree as="h2" titleright="ติดตรงไหนทักแอดมินได้ตลอด 24 ชม. คนใหม่สมัครแล้วเริ่มได้ทันที">
     <Picture
       slot="left"
-      src={imgCashback}
-      alt={cashbackAlt}
+      src={imgSupport}
+      alt={supportAlt}
       loading="lazy"
       fetchpriority="low"
-      widths={[340, 460, 600]}
-      sizes="(max-width: 767px) calc(100vw - 98px), (max-width: 1279px) calc(40vw - 52px), 460px"
+      widths={[280, 380, 480, 600]}
+      sizes="(max-width: 767px) calc(100vw - 96px), (max-width: 1399px) calc(30vw - 67px), 353px"
       decoding="async"
       formats={["avif", "webp"]}
       fallbackFormat="webp"
       quality={70}
-      class={cutFrame}
+      class={slideFrame}
     />
 
     <p slot="right" class={body}>
-      โชคเป็นเรื่องของรีลที่หมุน แต่ทุนเผื่อเป็นเรื่องที่เตรียมได้ก่อน โปรสุดคุ้มที่นี่ช่วยเติมเครดิตให้มีรอบปั่นมากขึ้นโดยไม่ต้องควักเงินเพิ่ม ก่อนกดรับให้อ่านสามเรื่องใน<a href="/promotion/" class={inlineLink}>หน้าโปรโมชั่น</a>
-      คือใช้กับเกมไหนได้ ต้องมียอดเล่นเท่าไรก่อนถอน และหมดเขตเมื่อไร รู้ครบแล้วค่อยรับ จะได้ไม่เจอเงื่อนไขทีหลัง แค่นี้โปรก็กลายเป็นเวลาเล่นที่เพิ่มขึ้นจริงโดยไม่ต้องขยับงบ
+      ระบบออโต้ทำงานได้เอง แต่ก็ยังมีจังหวะที่คนต้องคุยกับคน เช่น ล็อกอินไม่ผ่าน เครดิตไม่ขึ้นหลังโอน ถอนค้างสถานะนานผิดปกติ หรือโปรไม่โชว์ แอดมินของเรารับเคสตลอด 24 ชั่วโมงผ่านช่องทางติดต่อบนหน้าเว็บ ทักมาพร้อมชื่อยูส เวลาที่ทำรายการ และยอดเงิน และไม่ต้องส่งรหัสผ่านหรือ OTP ให้ใครทั้งนั้น ส่วนคนใหม่ กด<a href="/register/" class={inlineLink}>สมัคร SUPREME888</a> แล้วกรอกตามขั้นตอนที่ระบบแสดง ตรวจข้อมูลให้ถูกก่อนยืนยัน จะได้ทำรายการได้ราบรื่นตั้งแต่ครั้งแรกครับ
     </p>
-  </ContentBoxSevenThreeCyberCut>
-
-  <Faq3 title={faqTitle} faqs={faqs} />
+  </ContentBoxSevenThree>
 
   <ContentBox>
     <p class={body}>
-      WINDRAGON อาจมีมังกรอยู่ในชื่อ แต่เหตุผลที่น่าเล่นเป็นเรื่องที่จับต้องได้ เปิดจากมือถือแล้วเข้าเล่นได้ทันที มีค่ายเด่นสายแตกโหดให้เลือก ฝากถอนออโต้ไม่ต้องแนบสลิป ยอดบวกเข้าบัญชีครบไม่โดนตัด
-      และมีโปรช่วยเติมทุนเวลาอยากเล่นต่อ ใครพร้อมก็<a href="/register/" class={inlineLink}>สมัคร</a>แล้วลองหมุนรอบแรกได้เลย
+      SUPREME888 ให้สิ่งที่สายปั่นต้องการจริงหกอย่าง ยอดถอนที่เข้าเต็มไม่หักเปอร์เซ็นต์ ระบบออโต้ที่ฝากตั้งแต่ 20 บาทและถอนเองได้ทั้งวัน เกมหลายค่ายที่เลือกจากกลไกได้โดยไม่ต้องย้ายเว็บ โปรสมาชิกใหม่ที่เปิดดูเงื่อนไขได้ก่อนรับ มือถือเครื่องเดียวทำได้ครบ และแอดมินที่รับเรื่องตลอด 24 ชั่วโมง เปิดยูสไว้ก่อน แล้วลองฝากก้อนเล็กดูจังหวะระบบด้วยตัวเองครับ
     </p>
   </ContentBox>
 
-  <ReviewCardSumo2 title="เสียงจากสมาชิก WINDRAGON" />
+  <ReviewCardSumo2 />
 
   <Navfoot />
 </MainLayout>

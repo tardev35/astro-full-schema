@@ -1,166 +1,103 @@
 ---
 import { Picture } from "astro:assets";
-import img1 from "../assets/providers/game1.avif";
-import img2 from "../assets/providers/game2.avif";
-import img3 from "../assets/providers/game3.avif";
-import img4 from "../assets/providers/game4.avif";
-import img5 from "../assets/providers/game5.avif";
-import img6 from "../assets/providers/game6.avif";
+import { BRAND_NAME } from "../lib/brandProfile";
+import imgPg from "../assets/providers/game1.avif";
+import imgJoker from "../assets/providers/game4.avif";
+import imgJili from "../assets/providers/game5.avif";
+import imgPp from "../assets/providers/game6.avif";
 
 const games = [
   {
-    rank: 1,
-    name: "สล็อต PG SOFT เวอร์ชั่นใหม่",
-    type: "กราฟิก 3D เชื่อมตรงจากค่ายแม่แบบลิขสิทธิ์แท้",
-    menus: ["PG SOFT", "ลิขสิทธิ์แท้"],
-    players: 5124,
-    img: img6,
+    name: "Treasures of Aztec",
+    provider: "PG Soft",
+    fit: "เหมาะกับคนชอบลุ้นยาวในรอบฟรีสปิน",
+    mechanics: ["ฟรีสปิน", "ตัวคูณขยับเมื่อชนะติดกัน"],
+    img: imgPg,
+    alt: "โลโก้ PG Pocket Games Soft กับตัวละครสาวสวมมงกุฎขนนกและเพื่อนร่วมเกม",
   },
   {
-    rank: 2,
-    name: "สล็อตโรม่า Joker Gaming",
-    type: "เกมคลาสสิกที่กติกาไม่ซับซ้อน เล่นได้ทันทีโดยไม่ต้องศึกษานาน",
-    menus: ["Joker Gaming", "คลาสสิก"],
-    players: 3842,
-    img: img2,
+    name: "Sweet Bonanza",
+    provider: "Pragmatic Play",
+    fit: "เหมาะกับคนทุนพร้อมที่อยากกดซื้อฟีเจอร์",
+    mechanics: ["สัญลักษณ์ร่วงหล่น", "ลูกอมตัวคูณ", "ซื้อฟีเจอร์"],
+    img: imgPp,
+    alt: "โลโก้ PP Slot กับเทพเจ้าเคราขาวถือสายฟ้า",
   },
   {
-    rank: 3,
-    name: "สล็อต Pragmatic Play ตัวคูณรางวัล",
-    type: "ฟีเจอร์หลายชั้น ตัวคูณและโบนัสในเกมแตกต่างกันไปตามแต่ละเกม",
-    menus: ["Pragmatic Play", "ตัวคูณรางวัล"],
-    players: 3517,
-    img: img3,
+    name: "Fortune Gems",
+    provider: "JILI",
+    fit: "จังหวะไว เหมาะกับคนที่เล่นทีละช่วงสั้น",
+    mechanics: ["สามแถว", "วงล้อตัวคูณด้านข้าง"],
+    img: imgJili,
+    alt: "โลโก้ JILI กับนักรบชุดทองถือขวานพู่สี",
   },
   {
-    rank: 4,
-    name: "สล็อตสายซื้อฟรีสปิน",
-    type: "กดเข้ารอบโบนัสได้เลย ไม่ต้องนั่งเฝ้าจังหวะ",
-    menus: ["ซื้อฟรีสปิน", "เข้าโบนัสได้เลย"],
-    players: 2905,
-    img: img4,
-  },
-  {
-    rank: 5,
-    name: "สล็อตคลาสสิกรอบสั้น",
-    type: "จบไว เข้าใจง่าย เหมาะกับช่วงที่มีเวลาเล่นไม่นาน",
-    menus: ["รอบสั้น", "เข้าใจง่าย"],
-    players: 2431,
-    img: img1,
-  },
-  {
-    rank: 6,
-    name: "สล็อตเกมใหม่สำหรับมือถือ",
-    type: "เมนูภาษาไทยชัดเจน รองรับทั้ง iOS และ Android",
-    menus: ["เกมใหม่", "iOS และ Android"],
-    players: 2108,
-    img: img5,
+    name: "Roma",
+    provider: "Joker Gaming",
+    fit: "กติกาเข้าใจง่าย เหมาะกับคนเพิ่งเริ่ม",
+    mechanics: ["คลาสสิก", "ฟีเจอร์พิเศษระหว่างทาง"],
+    img: imgJoker,
+    alt: "โลโก้ JOKER กับนักรบสวมหมวกเหล็กหน้าโคลอสเซียม",
   },
 ];
 
-const medal = (rank: number) => (rank === 1 ? "🥇" : rank === 2 ? "🥈" : rank === 3 ? "🥉" : null);
+const boardTitle = `เทียบกลไกเกมสล็อตก่อนเลือกเล่นกับ ${BRAND_NAME}`;
 ---
 
-<section aria-label="หมวดสล็อตยอดนิยมของ WINDRAGON ที่สมาชิกเลือกเล่นมากที่สุด" class="mx-auto w-full max-w-[1300px] px-4 py-8 font-sans">
+<section aria-label={boardTitle} class="mx-auto w-full max-w-[1300px] px-4 py-8 font-sans">
   <div class="mb-6 flex w-full flex-col items-center justify-center gap-2 text-center">
-    <span aria-hidden="true" class="text-2xl">🏆</span>
-    <p class="bg-gradient-to-r from-[#ffd77a] via-[#f5b942] to-[#f26b1d] bg-clip-text text-2xl leading-normal font-black tracking-widest text-transparent uppercase">
-      หมวดสล็อตยอดนิยมของ WINDRAGON ที่สมาชิกเลือกเล่นมากที่สุด
-    </p>
-    <div aria-hidden="true" class="mt-2 h-[3px] w-24 rounded-full bg-gradient-to-r from-transparent via-[#f26b1d] to-transparent"></div>
+    <span aria-hidden="true" class="text-2xl">🎰</span>
+    <p class="text-2xl leading-normal font-black tracking-wide text-[#141414]">{boardTitle}</p>
+    <div aria-hidden="true" class="mt-2 h-[3px] w-24 rounded-full bg-gradient-to-r from-transparent via-[#ec1b24] to-transparent"></div>
   </div>
 
-  <p class="mb-6 text-left text-base leading-relaxed text-[#f2e7de]">
-    ทุกเกมสล็อตใน WINDRAGON เชื่อมต่อจากค่ายผู้ให้บริการโดยตรง อัตราการจ่ายจึงเป็นไปตามค่า RTP ที่แต่ละค่ายกำหนด ลำดับในตารางนี้ขยับตามจำนวนคนที่เข้ามาเล่นในแต่ละช่วง
-    ไม่ได้บอกว่าเกมไหนจ่ายดีกว่าเกมไหน ใช้เป็นจุดเริ่มต้นสำหรับเลือกเกมที่คุณยังไม่เคยลองได้
+  <p class="mb-6 text-left text-base leading-relaxed text-[#2b2627]">
+    แต่ละแถวสรุปกลไกหลักของเกมจากค่ายที่ {BRAND_NAME} เปิดให้เล่น ดูว่ารอบฟรีสปินเข้าแบบไหน ตัวคูณทำงานตอนไหน และมีปุ่มซื้อฟีเจอร์หรือไม่ แล้วคัดไว้สองสามเกมที่ตรงกับทุนของตัวเอง
   </p>
 
   <div class="flex flex-col gap-3">
     {
-      games.map((g) => {
-        const top = g.rank === 1;
-        return (
-          <article
-            class={`group relative flex items-center gap-3 overflow-hidden rounded-2xl border p-3 transition-all duration-300 hover:-translate-y-0.5 sm:gap-5 sm:p-4 ${
-              top
-                ? "border-[#f26b1d]/55 bg-gradient-to-r from-[#26150e] via-[#1a100c] to-[#26150e] shadow-[0_15px_40px_rgba(242,107,29,0.26)]"
-                : "border-[#5a2a12] bg-[#1a100c] shadow-[0_10px_30px_rgba(242,107,29,0.14)] hover:border-[#f26b1d]/45 hover:shadow-[0_15px_40px_rgba(242,107,29,0.22)]"
-            }`}>
-            <div
-              aria-hidden="true"
-              class="pointer-events-none absolute top-1/2 -left-10 h-24 w-24 -translate-y-1/2 rounded-full bg-[#f26b1d]/18 blur-[40px] transition-all duration-500 group-hover:bg-[#cd4604]/20"
+      games.map((g) => (
+        <article class="group relative flex items-center gap-3 overflow-hidden rounded-2xl border border-[#f1d2d3] bg-white p-3 shadow-[0_10px_30px_rgba(20,20,20,0.06)] transition-all duration-300 hover:-translate-y-0.5 hover:border-[#e9b7b9] hover:bg-[#fff5f5] hover:shadow-[0_15px_40px_rgba(236,27,36,0.12)] sm:gap-5 sm:p-4">
+          <span aria-hidden="true" class="absolute inset-y-0 left-0 w-1 bg-gradient-to-b from-[#ff4d55] to-[#b5121a] opacity-80 transition-opacity duration-300 group-hover:opacity-100" />
+
+          <div class="relative h-14 w-14 shrink-0 overflow-hidden rounded-xl border border-[#f1d2d3] sm:h-16 sm:w-16">
+            <Picture
+              src={g.img}
+              alt={g.alt}
+              formats={["avif", "webp"]}
+              fallbackFormat="webp"
+              loading="lazy"
+              fetchpriority="low"
+              widths={[100, 200]}
+              quality={60}
+              sizes="(max-width: 640px) 56px, 64px"
+              decoding="async"
+              class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
             />
+          </div>
 
-            <div class="relative z-10 flex w-8 shrink-0 flex-col items-center justify-center sm:w-12">
-              {medal(g.rank) ? (
-                <span class="text-2xl sm:text-3xl">
-                  <span aria-hidden="true">{medal(g.rank)}</span>
-                  <span class="sr-only">อันดับ {g.rank}</span>
-                </span>
-              ) : (
-                <span class="text-xl font-black text-[#f5b942] sm:text-2xl">#{g.rank}</span>
-              )}
+          <div class="min-w-0 flex-1">
+            <div class="flex flex-wrap items-center gap-2">
+              <p class="text-base font-black text-[#141414] sm:text-lg">{g.name}</p>
+              <span class="shrink-0 rounded-full bg-[#141414] px-2 py-0.5 text-[10px] font-black tracking-wider text-[#f6eeee]">{g.provider}</span>
             </div>
+            <p class="text-xs text-[#6b6264]">{g.fit}</p>
 
-            <div class={`relative z-10 h-14 w-14 shrink-0 overflow-hidden rounded-xl border sm:h-16 sm:w-16 ${top ? "border-[#f26b1d]/55" : "border-[#5a2a12]"}`}>
-              <Picture
-                src={g.img}
-                alt={`ภาพหน้าปกเกมสล็อตในหมวด ${g.name} บนกระดานหมวดสล็อตยอดนิยมของ WINDRAGON`}
-                formats={["avif", "webp"]}
-                fallbackFormat="webp"
-                loading="lazy"
-                fetchpriority="low"
-                widths={[100, 200]}
-                quality={60}
-                sizes="(max-width: 640px) 56px, 64px"
-                decoding="async"
-                class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
-              />
+            <div class="mt-2 flex flex-wrap items-center gap-1.5">
+              {g.mechanics.map((m) => (
+                <span class="rounded-full border border-[#f1d2d3] bg-[#fff5f5] px-2.5 py-0.5 text-[11px] font-bold text-[#b5121a]">{m}</span>
+              ))}
             </div>
+          </div>
 
-            <div class="relative z-10 min-w-0 flex-1">
-              <div class="flex items-center gap-2">
-                <p class="truncate text-base font-black text-[#ff9a4d] sm:text-lg">{g.name}</p>
-                {top && (
-                  <span class="hidden shrink-0 rounded-full border border-[#5a2a12] bg-[#26150e] px-2 py-0.5 text-[9px] font-black tracking-wider text-[#fff4ea] sm:inline">ยอดนิยมสูงสุด</span>
-                )}
-              </div>
-              <p class="truncate text-[11px] text-[#c9b5a6] sm:text-xs">{g.type}</p>
-
-              <div class="mt-2 flex flex-wrap items-center gap-1.5">
-                {g.menus.map((m) => (
-                  <span class="rounded-full border border-[#5a2a12] bg-[#26150e] px-2.5 py-0.5 text-[10px] font-bold text-[#ffe4cc]">{m}</span>
-                ))}
-              </div>
-            </div>
-
-            <div class="relative z-10 hidden shrink-0 flex-col items-end gap-1 sm:flex">
-              <span class="flex items-center gap-1.5 text-[11px] text-[#c9b5a6]">
-                <span class="h-1.5 w-1.5 animate-pulse rounded-full bg-green-400 shadow-[0_0_6px_rgba(74,222,128,0.7)]" />
-                <span class="tabular-nums" data-players data-base={g.players}>
-                  {g.players.toLocaleString("en-US")}
-                </span>{" "}
-                ออนไลน์
-              </span>
-              <a
-                href="/register/"
-                class={`rounded-full px-4 py-1.5 text-xs font-black transition-transform hover:scale-105 ${
-                  top
-                    ? "bg-gradient-to-r from-[#ff8a2a] via-[#f26b1d] to-[#e2550a] text-[#1a0701] shadow-[0_10px_30px_rgba(242,107,29,0.4)]"
-                    : "border border-[#f26b1d]/70 bg-[#26150e] text-[#ffe4cc] hover:border-[#f26b1d]"
-                }`}>
-                สมัครเข้าเล่น
-              </a>
-            </div>
-          </article>
-        );
-      })
+          <a
+            href="/register/"
+            class="hidden shrink-0 rounded-full bg-gradient-to-b from-[#ff4d55] to-[#d0121b] px-4 py-1.5 text-xs font-black text-white shadow-[0_10px_30px_rgba(236,27,36,0.30)] transition-transform hover:scale-105 sm:inline-block">
+            สมัครเข้าเล่น
+          </a>
+        </article>
+      ))
     }
   </div>
 </section>
-
-<script>
-  import { startLiveCounters } from "../lib/liveCounter";
-
-  startLiveCounters();
-</script>

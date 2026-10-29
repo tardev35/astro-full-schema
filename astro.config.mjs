@@ -72,10 +72,10 @@ export default defineConfig({
   },
 
   redirects: {
-    "/line": "https://tinyurl.com/lineva",
+    "/line": "https://tinyurl.com/suhng",
   },
 
-  site: "https://windragon.org.uk",
+  site: "https://supreme888.fun",
   integrations: [
     sitemap({
       // /login, /register and /line are forwarding pages that all ship

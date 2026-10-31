@@ -10,11 +10,11 @@ const { title = `เสียงจากสมาชิก ${BRAND_NAME}` } = A
 const reviews = [
   {
     name: "คุณภูมิ",
-    role: "ถอนก้อนใหญ่เป็นประจำ",
+    role: "เล่นคาสิโนสดกับหวยเป็นประจำ",
     stars: 5,
-    tag: "จ่ายเต็มทุกยอด",
-    content: `เคยเจอเว็บที่หักเปอร์เซ็นต์ตอนถอนก้อนใหญ่จนไม่กล้าถอน มาเล่นกับ ${BRAND_NAME} กดถอนเท่าไรก็เข้าบัญชีเท่านั้น บิลเล็กบิลใหญ่ใช้กติกาเดียวกัน ตอนรับโปรก็เปิดอ่านเงื่อนไขในหน้าโปรโมชั่นก่อน เลยรู้ตั้งแต่แรกว่ายอดไหนถอนได้`,
-    avatar: "💯",
+    tag: "บัญชีเดียว",
+    content: `ปกติเล่นบาคาร่าแล้วแวะส่งโพยหวยหุ้น พอมาเล่นกับ ${BRAND_NAME} ไม่ต้องจำรหัสหลายที่ ไม่ต้องโยกเครดิตข้ามหมวด ใช้เครดิตก้อนเดิมได้เลย ตอนรับโปรก็เปิดอ่านเงื่อนไขในหน้าโปรโมชั่นก่อน เลยรู้ตั้งแต่แรกว่ายอดไหนถอนได้`,
+    avatar: "🃏",
   },
   {
     name: "คุณต้น",
@@ -41,59 +41,59 @@ const average = (totalStars / reviews.length).toFixed(1);
 
 <section aria-label={title} class="relative z-10 mx-auto mb-12 w-full max-w-[1400px] px-4 font-sans">
   <div class="mb-8 flex w-full flex-col items-center justify-center gap-2 text-center">
-    <p class="text-3xl leading-normal font-black tracking-wide text-[#141414]">{title}</p>
-    <div aria-hidden="true" class="mt-2 h-[4px] w-24 rounded-full bg-gradient-to-r from-transparent via-[#ec1b24] to-transparent"></div>
+    <p class="text-3xl leading-normal font-black tracking-wide text-[#ead9ec]">{title}</p>
+    <div aria-hidden="true" class="mt-2 h-[4px] w-24 rounded-full bg-gradient-to-r from-transparent via-[#e061e3] to-transparent"></div>
   </div>
 
-  <div class="mx-auto mb-8 flex max-w-md items-center justify-center gap-5 rounded-2xl border border-[#f1d2d3] bg-white px-6 py-4 shadow-[0_10px_30px_rgba(236,27,36,0.10)]">
+  <div class="mx-auto mb-8 flex max-w-md items-center justify-center gap-5 rounded-2xl border border-[#5a1a60] bg-[#1c0620] px-6 py-4 shadow-[0_10px_30px_rgba(193,63,196,0.25)]">
     <div class="flex flex-col items-center">
-      <span class="text-4xl leading-none font-black text-[#8a6508]">{average}</span>
-      <span class="mt-1 text-[10px] font-bold tracking-widest text-[#6b6264] uppercase">คะแนนเฉลี่ย</span>
+      <span class="text-4xl leading-none font-black text-[#ffe08a]">{average}</span>
+      <span class="mt-1 text-[10px] font-bold tracking-widest text-[#c9a8cc] uppercase">คะแนนเฉลี่ย</span>
     </div>
-    <div class="h-12 w-px bg-[#f1d2d3]"></div>
+    <div class="h-12 w-px bg-[#5a1a60]"></div>
     <div class="flex flex-col gap-1.5">
       <div aria-hidden="true" class="flex gap-1 text-lg">
-        {Array.from({ length: 5 }).map((_, i) => <span class={i < Math.round(Number(average)) ? "text-[#d4a017]" : "text-[#f1d2d3]"}>★</span>)}
+        {Array.from({ length: 5 }).map((_, i) => <span class={i < Math.round(Number(average)) ? "text-[#f5c542]" : "text-[#5a1a60]"}>★</span>)}
       </div>
-      <span class="text-xs font-bold text-[#6b6264]">คะแนนเฉลี่ย {average} จาก 5 ดาว จากรีวิวของสมาชิก {reviews.length} คน</span>
+      <span class="text-xs font-bold text-[#c9a8cc]">คะแนนเฉลี่ย {average} จาก 5 ดาว จากรีวิวของสมาชิก {reviews.length} คน</span>
     </div>
   </div>
 
   <div class="grid grid-cols-1 gap-6 md:grid-cols-3">
     {
       reviews.map((review) => (
-        <article class="group relative isolate flex flex-col gap-4 overflow-hidden rounded-2xl border border-[#f1d2d3] bg-white p-6 text-left shadow-[0_10px_30px_rgba(20,20,20,0.06)] transition-all duration-300 hover:-translate-y-1 hover:border-[#e9b7b9] hover:shadow-[0_15px_40px_rgba(236,27,36,0.14)]">
+        <article class="group relative isolate flex flex-col gap-4 overflow-hidden rounded-2xl border border-[#5a1a60] bg-[#1c0620] p-6 text-left shadow-[0_10px_30px_rgba(0,0,0,0.35)] transition-all duration-300 hover:-translate-y-1 hover:border-[#8a2f8f] hover:shadow-[0_15px_40px_rgba(193,63,196,0.35)]">
           <span
             aria-hidden="true"
-            class="absolute inset-y-0 left-0 -z-10 w-1 bg-gradient-to-b from-[#ff4d55] via-[#ec1b24] to-[#b5121a] opacity-80 transition-opacity duration-300 group-hover:opacity-100"
+            class="absolute inset-y-0 left-0 -z-10 w-1 bg-gradient-to-b from-[#e061e3] via-[#c13fc4] to-[#9c2193] opacity-80 transition-opacity duration-300 group-hover:opacity-100"
           />
 
           <div class="flex items-center justify-between gap-3">
-            <span class="inline-flex items-center gap-1.5 rounded-full border border-[#f1d2d3] bg-[#fff5f5] px-3 py-1 text-[10px] font-bold tracking-widest text-[#b5121a] uppercase">
-              <span aria-hidden="true" class="h-1.5 w-1.5 animate-pulse rounded-full bg-[#ec1b24]" />
+            <span class="inline-flex items-center gap-1.5 rounded-full border border-[#5a1a60] bg-[#31103a] px-3 py-1 text-[10px] font-bold tracking-widest text-[#ffe08a] uppercase">
+              <span aria-hidden="true" class="h-1.5 w-1.5 animate-pulse rounded-full bg-[#e061e3]" />
               {review.tag}
             </span>
             <span class="flex gap-0.5 text-sm">
               <span aria-hidden="true" class="flex gap-0.5">
                 {Array.from({ length: 5 }).map((_, i) => (
-                  <span class={i < review.stars ? "text-[#d4a017]" : "text-[#f1d2d3]"}>★</span>
+                  <span class={i < review.stars ? "text-[#f5c542]" : "text-[#5a1a60]"}>★</span>
                 ))}
               </span>
               <span class="sr-only">ให้คะแนน {review.stars} จาก 5 ดาว</span>
             </span>
           </div>
 
-          <p class="text-left text-base leading-relaxed text-[#2b2627]">{review.content}</p>
+          <p class="text-left text-base leading-relaxed text-[#ead9ec]">{review.content}</p>
 
-          <div class="mt-auto flex items-center gap-3 border-t border-[#f1d2d3] pt-4">
+          <div class="mt-auto flex items-center gap-3 border-t border-[#5a1a60] pt-4">
             <span
               aria-hidden="true"
-              class="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-gradient-to-b from-[#ff4d55] to-[#d0121b] text-xl shadow-[0_5px_15px_rgba(236,27,36,0.18)] transition-transform duration-300 group-hover:scale-110">
+              class="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-gradient-to-b from-[#e061e3] to-[#9c2193] text-xl shadow-[0_5px_15px_rgba(193,63,196,0.35)] transition-transform duration-300 group-hover:scale-110">
               {review.avatar}
             </span>
             <span class="flex flex-col">
-              <span class="text-sm font-black text-[#141414] transition-colors group-hover:text-[#b5121a]">{review.name}</span>
-              <span class="text-[10px] font-bold tracking-wider text-[#6b6264] uppercase">{review.role}</span>
+              <span class="text-sm font-black text-[#ead9ec] transition-colors group-hover:text-[#ffe08a]">{review.name}</span>
+              <span class="text-[10px] font-bold tracking-wider text-[#c9a8cc] uppercase">{review.role}</span>
             </span>
           </div>
         </article>

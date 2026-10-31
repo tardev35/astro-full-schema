@@ -11,31 +11,31 @@ const games = [
     name: "Treasures of Aztec",
     provider: "PG Soft",
     fit: "เหมาะกับคนชอบลุ้นยาวในรอบฟรีสปิน",
-    mechanics: ["ฟรีสปิน", "ตัวคูณขยับเมื่อชนะติดกัน"],
+    mechanics: ["ฟรีสปิน", "ตัวคูณขยับตามคอมโบ"],
     img: imgPg,
     alt: "โลโก้ PG Pocket Games Soft กับตัวละครสาวสวมมงกุฎขนนกและเพื่อนร่วมเกม",
   },
   {
     name: "Sweet Bonanza",
     provider: "Pragmatic Play",
-    fit: "เหมาะกับคนทุนพร้อมที่อยากกดซื้อฟีเจอร์",
-    mechanics: ["สัญลักษณ์ร่วงหล่น", "ลูกอมตัวคูณ", "ซื้อฟีเจอร์"],
+    fit: "เหมาะกับคนทุนพร้อมที่อยากกดซื้อฟรีสปิน",
+    mechanics: ["สัญลักษณ์ร่วงหล่น", "ลูกระเบิดตัวคูณ", "ซื้อฟรีสปิน"],
     img: imgPp,
     alt: "โลโก้ PP Slot กับเทพเจ้าเคราขาวถือสายฟ้า",
   },
   {
     name: "Fortune Gems",
     provider: "JILI",
-    fit: "จังหวะไว เหมาะกับคนที่เล่นทีละช่วงสั้น",
-    mechanics: ["สามแถว", "วงล้อตัวคูณด้านข้าง"],
+    fit: "รอบเดินไว เหมาะกับคนที่เล่นทีละช่วงสั้น",
+    mechanics: ["3 รีล", "วงล้อตัวคูณด้านขวา"],
     img: imgJili,
     alt: "โลโก้ JILI กับนักรบชุดทองถือขวานพู่สี",
   },
   {
     name: "Roma",
     provider: "Joker Gaming",
-    fit: "กติกาเข้าใจง่าย เหมาะกับคนเพิ่งเริ่ม",
-    mechanics: ["คลาสสิก", "ฟีเจอร์พิเศษระหว่างทาง"],
+    fit: "เล่นง่าย เหมาะกับคนเพิ่งเริ่ม",
+    mechanics: ["คลาสสิก", "โบนัสพิเศษระหว่างปั่น"],
     img: imgJoker,
     alt: "โลโก้ JOKER กับนักรบสวมหมวกเหล็กหน้าโคลอสเซียม",
   },
@@ -47,21 +47,21 @@ const boardTitle = `เทียบกลไกเกมสล็อตก่อ
 <section aria-label={boardTitle} class="mx-auto w-full max-w-[1300px] px-4 py-8 font-sans">
   <div class="mb-6 flex w-full flex-col items-center justify-center gap-2 text-center">
     <span aria-hidden="true" class="text-2xl">🎰</span>
-    <p class="text-2xl leading-normal font-black tracking-wide text-[#141414]">{boardTitle}</p>
-    <div aria-hidden="true" class="mt-2 h-[3px] w-24 rounded-full bg-gradient-to-r from-transparent via-[#ec1b24] to-transparent"></div>
+    <p class="text-2xl leading-normal font-black tracking-wide text-white">{boardTitle}</p>
+    <div aria-hidden="true" class="mt-2 h-[3px] w-24 rounded-full bg-gradient-to-r from-transparent via-[#f5c542] to-transparent"></div>
   </div>
 
-  <p class="mb-6 text-left text-base leading-relaxed text-[#2b2627]">
-    แต่ละแถวสรุปกลไกหลักของเกมจากค่ายที่ {BRAND_NAME} เปิดให้เล่น ดูว่ารอบฟรีสปินเข้าแบบไหน ตัวคูณทำงานตอนไหน และมีปุ่มซื้อฟีเจอร์หรือไม่ แล้วคัดไว้สองสามเกมที่ตรงกับทุนของตัวเอง
+  <p class="mb-6 text-left text-base leading-relaxed text-[#ead9ec]">
+    แต่ละแถวสรุปกลไกหลักของเกมจากค่ายที่ {BRAND_NAME} รวมไว้ในเว็บเดียว ดูว่ารอบฟรีสปินเข้าแบบไหน ตัวคูณทำงานตอนไหน และซื้อฟีเจอร์ได้หรือไม่ แล้วเลือกแนวที่เข้ามือตัวเอง
   </p>
 
   <div class="flex flex-col gap-3">
     {
       games.map((g) => (
-        <article class="group relative flex items-center gap-3 overflow-hidden rounded-2xl border border-[#f1d2d3] bg-white p-3 shadow-[0_10px_30px_rgba(20,20,20,0.06)] transition-all duration-300 hover:-translate-y-0.5 hover:border-[#e9b7b9] hover:bg-[#fff5f5] hover:shadow-[0_15px_40px_rgba(236,27,36,0.12)] sm:gap-5 sm:p-4">
-          <span aria-hidden="true" class="absolute inset-y-0 left-0 w-1 bg-gradient-to-b from-[#ff4d55] to-[#b5121a] opacity-80 transition-opacity duration-300 group-hover:opacity-100" />
+        <article class="group relative flex items-center gap-3 overflow-hidden rounded-2xl border border-[#5a1a60] bg-[#1c0620] p-3 shadow-[0_10px_30px_rgba(0,0,0,0.3)] transition-all duration-300 hover:-translate-y-0.5 hover:border-[#8a2f8f] hover:bg-[#26082c] hover:shadow-[0_15px_40px_rgba(193,63,196,0.22)] sm:gap-5 sm:p-4">
+          <span aria-hidden="true" class="absolute inset-y-0 left-0 w-1 bg-gradient-to-b from-[#e061e3] to-[#9c2193] opacity-80 transition-opacity duration-300 group-hover:opacity-100" />
 
-          <div class="relative h-14 w-14 shrink-0 overflow-hidden rounded-xl border border-[#f1d2d3] sm:h-16 sm:w-16">
+          <div class="relative h-14 w-14 shrink-0 overflow-hidden rounded-xl border border-[#5a1a60] sm:h-16 sm:w-16">
             <Picture
               src={g.img}
               alt={g.alt}
@@ -79,21 +79,21 @@ const boardTitle = `เทียบกลไกเกมสล็อตก่อ
 
           <div class="min-w-0 flex-1">
             <div class="flex flex-wrap items-center gap-2">
-              <p class="text-base font-black text-[#141414] sm:text-lg">{g.name}</p>
-              <span class="shrink-0 rounded-full bg-[#141414] px-2 py-0.5 text-[10px] font-black tracking-wider text-[#f6eeee]">{g.provider}</span>
+              <p class="text-base font-black text-white sm:text-lg">{g.name}</p>
+              <span class="shrink-0 rounded-full bg-gradient-to-b from-[#ffe08a] via-[#f5c542] to-[#b07d12] px-2 py-0.5 text-[10px] font-black tracking-wider text-[#3a0535]">{g.provider}</span>
             </div>
-            <p class="text-xs text-[#6b6264]">{g.fit}</p>
+            <p class="text-xs text-[#c9a8cc]">{g.fit}</p>
 
             <div class="mt-2 flex flex-wrap items-center gap-1.5">
               {g.mechanics.map((m) => (
-                <span class="rounded-full border border-[#f1d2d3] bg-[#fff5f5] px-2.5 py-0.5 text-[11px] font-bold text-[#b5121a]">{m}</span>
+                <span class="rounded-full border border-[#5a1a60] bg-[#31103a] px-2.5 py-0.5 text-[11px] font-bold text-[#ffe08a]">{m}</span>
               ))}
             </div>
           </div>
 
           <a
             href="/register/"
-            class="hidden shrink-0 rounded-full bg-gradient-to-b from-[#ff4d55] to-[#d0121b] px-4 py-1.5 text-xs font-black text-white shadow-[0_10px_30px_rgba(236,27,36,0.30)] transition-transform hover:scale-105 sm:inline-block">
+            class="hidden shrink-0 rounded-full bg-gradient-to-b from-[#e061e3] to-[#9c2193] px-4 py-1.5 text-xs font-black text-white shadow-[0_10px_30px_rgba(193,63,196,0.35)] transition-transform hover:scale-105 sm:inline-block">
             สมัครเข้าเล่น
           </a>
         </article>

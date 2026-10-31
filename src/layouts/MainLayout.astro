@@ -4,8 +4,8 @@ import bgConfig from "../assets/bg.json";
 import "../styles/global.css";
 import { BRAND_NAME, BRAND_TEXT, brandProfile, fontStack, iconVersion } from "../lib/brandProfile";
 import { canonicalFor } from "../lib/schema";
-import Navbar from "../components/NavbarStyle3.astro";
-import Footer from "../components/FooterStyle3.astro";
+import Navbar from "../components/NavbarStyle6.astro";
+import Footer from "../components/FooterStyle2.astro";
 
 // Only banner1 is ever rendered, so only banner1 is imported.
 //
@@ -54,8 +54,8 @@ const mobileBannerImg = mobileBanner
   : null;
 
 const {
-  title = "SUPREME888 สล็อต ถอนได้เต็มทุกบิล ฝากถอนออโต้ทำเองได้ เกมหลายค่าย",
-  description = "สมัคร SUPREME888 สล็อต จ่ายเต็มทุกยอดไม่หักเปอร์เซ็นต์ ฝากถอนออโต้กดเองได้ เลือกเกมตามกลไก โปรสมาชิกใหม่ มือถือครบทุกขั้นตอน แอดมิน 24 ชม. เปิดยูสได้เลย",
+  title = "TGA99 สล็อต คาสิโนสด หวย ยิงปลา บัญชีเดียว ฝากถอนออโต้ 24 ชม.",
+  description = "ทางเข้า TGA99 รวมสล็อตโบนัสแตกถี่จ่ายหนัก คาสิโนสดภาพคมชัด หวยครบไม่อั้นเลข เกมยิงปลาปลาบอสโบนัสใหญ่ ฝากถอนออโต้บัญชีเดียวตลอด 24 ชม. สมัครเข้าเล่นเลย",
   robots = "index, follow",
 } = Astro.props;
 
@@ -207,7 +207,7 @@ const profile = brandProfile(Astro.site);
         background-attachment: fixed;
         background-repeat: no-repeat;
         margin: 0;
-        background-color: #fcfcfc;
+        background-color: #120212;
         font-weight: 400;
         font-family: var(--font-sans) !important;
       }
@@ -260,7 +260,7 @@ const profile = brandProfile(Astro.site);
         }
         <Image
           src={mainBanner}
-          alt="แบนเนอร์ Supreme888 ข้อความ SUPREME888 สนุกครบ จบในที่เดียว สมัครง่าย ใช้งานสะดวกทุกวัน แพลตฟอร์มทันสมัย ระบบมั่นคง บริการรวดเร็ว ไอคอนสมัครง่าย ระบบเสถียร เกมยอดนิยม พร้อมดูแล พร้อมปุ่มสมัครสมาชิก พรีเซนเตอร์หญิงชุดแดงถือไพ่เอซ และมือถือแสดงหน้าเว็บ Supreme888"
+          alt="แบนเนอร์ TGA99 ข้อความ TGA99 สนุกครบ จบในที่เดียว สมัครง่าย ใช้งานสะดวกทุกวัน แพลตฟอร์มทันสมัย ระบบมั่นคง บริการรวดเร็ว ไอคอนสมัครง่าย ระบบเสถียร เกมยอดนิยม พร้อมดูแล พร้อมปุ่มสมัครสมาชิก พรีเซนเตอร์หญิงชุดกี่เพ้าสีม่วงลายทอง ชิปและลูกเต๋าสีม่วงทอง และมือถือแสดงหน้าเว็บ TGA99"
           loading="eager"
           fetchpriority="high"
           widths={[412, 640, 828, 1024, 1280, 1600, 1900]}

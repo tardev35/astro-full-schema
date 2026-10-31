@@ -1,63 +1,62 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
-import Announcement from "../components/Announcement2.astro";
+import Announcement from "../components/Announcement6.astro";
 import ContentBox from "../components/ContentBox.astro";
-import ContentBoxNeumorphism from "../components/ContentBoxNeumorphism.astro";
-import ContentBoxFloatingBadge from "../components/ContentBoxFloatingBadge.astro";
-import ContentBoxTwo from "../components/ContentBoxTwo.astro";
-import ContentBoxSpecial from "../components/ContentBoxSpecial.astro";
-import ContentBoxSevenThreeNeumorphism from "../components/ContentBoxSevenThreeNeumorphism.astro";
-import ContentBoxSevenThree from "../components/ContentBoxSevenThree.astro";
+import ContentBoxPremium from "../components/ContentBoxPremium.astro";
+import ContentBoxCyberCut from "../components/ContentBoxCyberCut.astro";
+import ContentBoxTwoPremium from "../components/ContentBoxTwoPremium.astro";
+import ContentBoxSevenThreePremium from "../components/ContentBoxSevenThreePremium.astro";
+import ContentBoxSevenThreeCyberCut from "../components/ContentBoxSevenThreeCyberCut.astro";
 import FeatureHighlights from "../components/FeatureHighlights.astro";
 import SmoothCarousel from "../components/SmoothCarousel.astro";
 import GameRankingBoard from "../components/GameRankingBoard.astro";
 import ProviderGrid from "../components/ProviderGrid.astro";
-import LatestWinners4 from "../components/LatestWinners4.astro";
+import LatestWinnersPremium from "../components/LatestWinnersPremium.astro";
 import LoginRtpSection from "../components/LoginRtpSection.astro";
 import ReviewCardSumo2 from "../components/ReviewCardSumo2.astro";
 import Navfoot from "../components/Navfoot.astro";
 
 import { Picture } from "astro:assets";
 import { pageGraph } from "../lib/schema";
-import imgNewMember from "../assets/slide1.png";
-import imgSupport from "../assets/slide4.png";
+import imgAllStyles from "../assets/slide2.png";
+import imgStable from "../assets/slide3.png";
 
-const pageTitle = "SUPREME888 สล็อต ถอนได้เต็มทุกบิล ฝากถอนออโต้ทำเองได้ เกมหลายค่าย";
+const pageTitle = "TGA99 สล็อต คาสิโนสด หวย ยิงปลา บัญชีเดียว ฝากถอนออโต้ 24 ชม.";
 
 const pageDescription =
-  "สมัคร SUPREME888 สล็อต จ่ายเต็มทุกยอดไม่หักเปอร์เซ็นต์ ฝากถอนออโต้กดเองได้ เลือกเกมตามกลไก โปรสมาชิกใหม่ มือถือครบทุกขั้นตอน แอดมิน 24 ชม. เปิดยูสได้เลย";
+  "ทางเข้า TGA99 รวมสล็อตโบนัสแตกถี่จ่ายหนัก คาสิโนสดภาพคมชัด หวยครบไม่อั้นเลข เกมยิงปลาปลาบอสโบนัสใหญ่ ฝากถอนออโต้บัญชีเดียวตลอด 24 ชม. สมัครเข้าเล่นเลย";
 
 const announcementMessage =
-  "SUPREME888 สล็อต จ่ายเต็มทุกยอด ไม่หักเปอร์เซ็นต์ • ฝากถอนออโต้ ฝากเริ่ม 20 บาท ถอนขั้นต่ำ 50 บาท กดเองได้ตลอด 24 ชม. ไม่ต้องส่งสลิป • ใช้ได้ทุกธนาคารและ TrueMoney Wallet ทั้งขาฝากและขาถอน • รวม PG Soft, Pragmatic Play, JILI และ Joker Gaming ไว้ในเว็บเดียว • มือถือเครื่องเดียวทำได้ครบ แอดมินดูแลตลอด 24 ชม.";
+  "TGA99 สล็อต คาสิโนสด หวย ยิงปลา บัญชีเดียว • ฝากถอนออโต้ตลอด 24 ชั่วโมง ฝากขั้นต่ำ 20 บาท ถอนขั้นต่ำ 50 บาท • โอนได้จากทุกธนาคารและทรูวอเลท ไม่ต้องแนบสลิป • สลับหมวดเล่นต่อได้ทันที ไม่ต้องโยกเครดิต";
 
-const newMemberAlt = "Supreme888 สมาชิกใหม่ เริ่มต้นง่าย สมัครสะดวก พร้อมสนุกได้ทันที สมัครง่าย ระบบเสถียร พร้อมดูแล ปุ่มสมัครสมาชิก";
+const allStylesAlt = "TGA99 สนุกครบทุกสไตล์ รวมเกมยอดนิยมไว้ในที่เดียว ปุ่มเริ่มสนุก";
 
-const supportAlt = "Supreme888 พร้อมดูแลทุกขั้นตอน บริการรวดเร็ว เป็นกันเอง ตอบไว ใส่ใจ พร้อมดูแล ปุ่มติดต่อเรา";
+const stableAlt = "TGA99 มั่นใจทุกการใช้งาน ระบบเสถียร ใช้งานลื่นไหล ปุ่มสมัครเลย";
 
 const games = [
   {
-    icon: "🏺",
-    title: "Treasures of Aztec (PG Soft)",
-    description: "สาวถ้ำที่ตัวคูณขยับขึ้นทุกครั้งที่ชนะติดกัน เหมาะกับคนชอบลุ้นยาวในรอบฟรีสปิน",
-    accent: "red" as const,
+    icon: "🐱",
+    title: "Lucky Neko (PG Soft)",
+    description: "เกมแมวกวักที่ตัวคูณเพิ่มขึ้นเมื่อมีสัญลักษณ์แมวเข้ามาในชุดชนะ จุดลุ้นอยู่ที่ตัวคูณมากกว่าการรอแตกใหญ่ทีเดียว",
+    accent: "magenta" as const,
   },
   {
-    icon: "🍭",
-    title: "Sweet Bonanza (Pragmatic Play)",
-    description: "สัญลักษณ์ร่วงหล่นต่อเนื่อง ลูกอมตัวคูณในรอบฟรีสปินรวมยอดตอนท้าย และมีปุ่มซื้อฟีเจอร์สำหรับคนทุนพร้อม",
-    accent: "ink" as const,
+    icon: "⚡",
+    title: "Gates of Olympus (Pragmatic Play)",
+    description: "เกมเทพซุสใช้ระบบสัญลักษณ์ร่วงหล่น พร้อมลูกแก้วสายฟ้าที่สุ่มตัวคูณมาทบยอดในรอบโบนัส",
+    accent: "gold" as const,
   },
   {
-    icon: "💎",
-    title: "Fortune Gems (JILI)",
-    description: "ช่องเกมสามแถวพร้อมวงล้อตัวคูณด้านข้างที่สุ่มให้ทุกรอบ จังหวะไว เหมาะกับคนที่เล่นทีละช่วงสั้น",
-    accent: "red" as const,
+    icon: "🀄",
+    title: "Mahjong Ways 2 (PG Soft)",
+    description: "สล็อตไพ่นกกระจอกที่สัญลักษณ์กรอบทองในชุดชนะจะกลายเป็นไวลด์ ส่วนตัวคูณขยับขึ้นตามจำนวนครั้งที่ชนะต่อเนื่องในสปินเดียว",
+    accent: "magenta" as const,
   },
   {
     icon: "🏛️",
-    title: "Roma (Joker Gaming)",
-    description: "เกมคลาสสิกที่คนไทยคุ้น กติกาเข้าใจง่าย มีฟีเจอร์พิเศษให้ลุ้นระหว่างทาง เหมาะกับคนเพิ่งเริ่ม",
-    accent: "ink" as const,
+    title: "Roma (Joker)",
+    description: "เกมเก่าที่คนเล่นรุ่นแรกคุ้นมือ สแกตเตอร์ 3 ตัวพาเข้าฟรีสปิน แล้วมีโบนัสสู้สิงโตให้ลุ้นในรอบนั้น",
+    accent: "gold" as const,
   },
 ];
 
@@ -66,11 +65,11 @@ const graph = pageGraph(Astro, {
   description: pageDescription,
 });
 
-const inlineLink = "font-bold text-[#b5121a] underline underline-offset-4 transition-colors hover:text-[#ec1b24]";
-const slideFrame = "mx-auto h-auto w-full rounded-2xl border border-[#f1d2d3] shadow-[0_10px_30px_rgba(236,27,36,0.12)]";
+const inlineLink = "font-bold text-[#ffe08a] underline underline-offset-4 transition-colors hover:text-[#f5c542]";
+const slideFrame = "mx-auto h-auto w-full rounded-2xl border border-[#5a1a60] shadow-[0_10px_30px_rgba(193,63,196,0.25)]";
 const body = "text-left text-base leading-relaxed";
-const listItem = "rounded-xl border-l-4 border-[#ec1b24] bg-[#fff5f5] px-4 py-3";
-const listLabel = "font-black text-[#141414]";
+const listItem = "rounded-xl border-l-4 border-[#c13fc4] bg-[#26082c] px-4 py-3";
+const listLabel = "font-black text-[#ffe08a]";
 ---
 
 <MainLayout title={pageTitle} description={pageDescription}>
@@ -80,58 +79,29 @@ const listLabel = "font-black text-[#141414]";
 
   <SmoothCarousel />
 
-  <ContentBoxNeumorphism as="h1" title="SUPREME888 สล็อต ถอนได้เต็มทุกบิล ฝากถอนออโต้ทำเองได้ เล่นครบบนมือถือ">
+  <ContentBoxPremium as="h1" title="TGA99 สล็อต คาสิโนสด หวย ยิงปลา บัญชีเดียว ฝากถอนออโต้ตลอด 24 ชม.">
     <p class={body}>
-      คนที่เคยแตกบิลใหญ่แล้วได้เงินไม่ครบ มักถามก่อนเปิดยูสว่าเว็บนี้จ่ายเต็มไหม SUPREME888 สล็อต ใช้ชื่อที่แปลว่าสูงสุด แต่สิ่งที่เราอยากให้สูงจริงคือยอดถอนที่สมาชิกได้รับเต็มจำนวนไม่หักเปอร์เซ็นต์ ฝากถอนออโต้ที่กดเองได้ เกมหลายค่ายที่เลือกตามกลไกได้ในเว็บเดียว โปรสมาชิกใหม่ มือถือเครื่องเดียวทำได้ครบทุกขั้นตอน และแอดมินที่รับเรื่องตลอด 24 ชั่วโมง ใครยังลังเลว่าจะ<a href="/register/" class={inlineLink}>สมัคร SUPREME888</a> ดีไหม อ่านทีละข้อแล้วค่อยตัดสินใจครับ
+      บางวันคุณอาจอยากหมุนวงล้อสั้นๆ หรือเปิดโต๊ะไพ่ดูเค้าไพ่สด TGA99 จึงรวมทั้งสี่หมวดไว้ในบัญชีเดียวและกระเป๋าเงินเดียวโดยไม่ต้องจำรหัสผ่านหลายที่ เริ่มตั้งแต่สล็อตโบนัสแตกถี่ที่จ่ายหนักจ่ายจริง คาสิโนสดภาพคมชัดจากห้องดีลเลอร์ หวยออนไลน์ครบตลาดแบบไม่อั้นเลข ไปจนถึงเกมยิงปลาที่ได้เล็งปลาบอสโบนัสใหญ่ เรื่องเงินจัดการผ่านฝากถอนออโต้ซึ่งทำรายการเองได้ทั้งวันทั้งคืน ฝากเริ่ม 20 บาท ถอนขั้นต่ำ 50 บาท สลับหมวดเล่นต่อได้ทันทีโดยไม่ต้องโยกเครดิต
     </p>
-  </ContentBoxNeumorphism>
+  </ContentBoxPremium>
 
-  <ContentBoxFloatingBadge as="h2" title="ถอนเยอะแล้วจ่ายไหม SUPREME888 สล็อต จ่ายเต็มทุกยอด ไม่หักเปอร์เซ็นต์">
+  <ContentBoxCyberCut as="h2" title="สล็อต TGA99 โบนัสแตกถี่ จ่ายหนักจ่ายจริงจากค่ายฮิต">
     <p class={body}>
-      ถ้าแตกหลักแสนจะได้ครบไหม คำตอบของเราสั้นมาก ยอดที่กดถอนได้จะโอนเข้าบัญชีเต็มจำนวน ไม่หักเปอร์เซ็นต์จากบิลใหญ่ บิลเล็กบิลใหญ่ใช้กติกาเดียวกัน ถ้ารับโปรไว้ ให้เปิดดูเงื่อนไขการถอนของโปรนั้นใน<a href="/promotion/" class={inlineLink}>หน้าโปรโมชั่น</a>ก่อนกดถอน จะได้ไม่งงว่าทำไมยอดยังถอนไม่ได้ เหมาะกับคนที่เคยโดนหักหัวคิวจนไม่กล้าถอนก้อนใหญ่ครับ
-    </p>
-  </ContentBoxFloatingBadge>
-
-  <LatestWinners4 />
-
-  <ContentBoxTwo as="h2" title="ฝากถอนออโต้เริ่ม 20 บาท ถอนเองได้ตลอด 24 ชม. ไม่ต้องส่งสลิป">
-    <p slot="left" class={body}>
-      ทุนน้อยกับทุนหนาใช้ระบบฝากถอนออโต้ชุดเดียวกันที่นี่ ฝากเริ่มที่ 20 บาท จะโอนจากแอปธนาคารหรือเติมผ่านวอเลทก็ได้ พอยอดเข้า ระบบปรับเครดิตให้ทันทีภายในไม่กี่วินาที ขาถอนกดได้เองทั้ง 24 ชั่วโมง ถอนตอนตีสามก็ไม่ต้องรอแอดมินตื่น สรุปสั้นๆ ครับ
+      อยากได้เกมที่โบนัสออกถี่แต่ไม่อยากเปิดหลายแท็บไล่เทียบข้ามเว็บ หมวดสล็อตที่นี่รวมเกมที่มีฟีเจอร์ดันตัวคูณในรอบโบนัสไว้ให้แล้ว โดยมีเกมหลักจากค่ายที่คนเล่นคุ้นมืออย่าง PG Soft, Pragmatic Play และ Joker ให้เลือกตามสไตล์การเดินเบท ยอดที่ชนะมากดถอนออกด้วยระบบออโต้ได้โดยไม่ต้องรอแอดมิน
     </p>
 
-    <div slot="right" class="flex flex-col gap-4">
-      <ul class="flex flex-col gap-3">
-        <li class={listItem}><strong class={listLabel}>ช่องทาง:</strong> ทุกธนาคารและ TrueMoney Wallet (ทรูวอเลท) ใช้ได้ทั้งขาฝากและขาถอน</li>
-        <li class={listItem}><strong class={listLabel}>ขั้นต่ำ:</strong> ฝาก 20 บาท ถอน 50 บาท</li>
-        <li class={listItem}><strong class={listLabel}>เวลา:</strong> ปรับเครดิตให้เองในไม่กี่วินาที ไม่ต้องส่งสลิปให้แอดมิน</li>
-      </ul>
-      <p class={body}>
-        ถ้าโอนแล้วเครดิตยังไม่ขึ้น อย่าเพิ่งโอนซ้ำ จดเวลาและยอดที่โอน แล้วทักแอดมินผ่านช่องทางบนหน้าเว็บ รายการที่ข้อมูลครบจะตามเจอไวกว่าครับ
-      </p>
-    </div>
-  </ContentBoxTwo>
-
-  <ContentBox as="h2" title="เลือกเกมสล็อตจากกลไกฟรีสปิน ตัวคูณ ซื้อฟีเจอร์ หลายค่ายในเว็บเดียว">
-    <p class={body}>
-      หลายคนเข้ามาแล้วถามว่าจะเริ่มเกมไหนดี เราไม่ตอบด้วยชื่อเกมเดียว ที่นี่รวมค่ายที่สายปั่นไทยเปิดบ่อยไว้ในเว็บเดียว มี PG Soft กับ Pragmatic Play และมี JILI กับ Joker Gaming ให้สลับเล่น วิธีเลือกที่เราแนะนำคือดูกลไกก่อนดูหน้าปก รอบฟรีสปินเข้าแบบไหน ตัวคูณทำงานตอนไหน เบทต่ำสุดต่อรอบของเกมนั้นเท่าไร แล้วคัดไว้สองสามเกมที่ตรงกับทุนของตัวเองครับ
-    </p>
-
-    <FeatureHighlights items={games} />
-
-    <p class={`mt-5 ${body}`}>
-      วิธีแบ่งทุนที่เราแนะนำคือ ตั้งงบของวันนั้นไว้ก่อนเปิดเกม ลองเกมละไม่กี่รอบด้วยเบทเล็กเพื่อดูจังหวะ ถ้าเกมไหนรอบฟรีสปินเข้ายากกว่าที่ทุนรับไหว ให้สลับไปเกมที่จังหวะสั้นกว่าแทนการเพิ่มเบทไล่ทุน ทุนจะอยู่ได้นานกว่าครับ
-    </p>
-  </ContentBox>
+    <FeatureHighlights items={games} as="p" />
+  </ContentBoxCyberCut>
 
   <ProviderGrid />
 
   <GameRankingBoard />
 
-  <ContentBoxSevenThreeNeumorphism as="h2" titleright="โปรสมาชิกใหม่ SUPREME888 อ่านเงื่อนไขในหน้าโปรโมชั่นก่อนรับ จะได้ถอนไม่ติด">
+  <ContentBoxSevenThreePremium as="h2" titleright="คาสิโนสด TGA99 ภาพคมชัด มีบาคาร่า รูเล็ต ไฮโลครบโต๊ะ">
     <Picture
       slot="left"
-      src={imgNewMember}
-      alt={newMemberAlt}
+      src={imgAllStyles}
+      alt={allStylesAlt}
       loading="lazy"
       fetchpriority="low"
       widths={[280, 380, 480, 600]}
@@ -144,27 +114,21 @@ const listLabel = "font-black text-[#141414]";
     />
 
     <p slot="right" class={body}>
-      คนเปิดยูสครั้งแรกมีโปรสมาชิกใหม่รอรับอยู่ รายละเอียดและเงื่อนไขทั้งหมดอยู่ใน<a href="/promotion/" class={inlineLink}>หน้าโปรโมชั่น</a> ก่อนรับโปรเราอยากให้เปิดหน้านั้นดูสามเรื่อง หนึ่งคือโปรมีเงื่อนไขยอดฝากไหม สองคือต้องทำเทิร์นก่อนถอนหรือไม่ อย่างไร สามคือโปรนับยอดจากเกมไหนบ้าง รู้สามเรื่องนี้แล้วจะวางแผนถอนได้ตั้งแต่ก่อนฝาก ถ้าอ่านแล้วยังไม่แน่ใจว่าเงื่อนไขเข้ากับแผนของตัวเองไหม ทักแอดมินถามก่อนรับได้เลย เราตอบให้ก่อนที่จะฝากครับ
+      คนที่อยากเปลี่ยนบรรยากาศจากเกมหมุนวงล้อมาดูจังหวะเปิดไพ่ตามเวลาจริง สลับมาหมวดคาสิโนสดได้ด้วยเครดิตก้อนเดิม สัญญาณภาพส่งตรงจากโต๊ะดีลเลอร์ด้วยความละเอียดคมชัด เห็นหน้าไพ่ ลูกเต๋า และวงล้อชัดเจน มีให้เลือกครบทั้งบาคาร่าสำหรับคนชอบอ่านสถิติเค้าไพ่ รูเล็ตที่เลือกได้ทั้งวางเลขเดี่ยวหรือแทงสีแทงคู่คี่ และไฮโลที่ได้ลุ้นแต้มสูงต่ำจบไวเป็นรอบๆ ตั้งงบต่อรอบไว้ก่อนวางชิปแล้วเล่นตามนั้น
     </p>
-  </ContentBoxSevenThreeNeumorphism>
+  </ContentBoxSevenThreePremium>
 
-  <ContentBoxSpecial as="h2" title="ทางเข้า SUPREME888 บนมือถือ สมัคร ฝาก ปั่น ถอน จบในเครื่องเดียว" iconleft="📱" iconright="🔑">
-    <p slot="left" class={body}>
-      ไม่ต้องรอกลับบ้านไปเปิดคอม ทุกขั้นตอนของเว็บนี้ทำบนมือถือได้ครบ ตั้งแต่สมัคร ฝากเครดิต ดูโปร เปิดเกม ไปจนถึงกดถอน ใช้ได้ทั้ง iOS และ Android ผ่านเบราว์เซอร์โดยไม่ต้องโหลดแอปเพิ่ม
+  <ContentBoxPremium as="h2" title="ซื้อหวยที่ TGA99 ไม่อั้นเลข ครบหวยหุ้น ลาว ฮานอย และหวยไทย">
+    <p class={body}>
+      ปัญหาที่คอหวยเจอบ่อยคือหาได้เลขเด็ดมาแล้วกดส่งโพยไม่ผ่านเพราะติดเลขอั้น หรือโดนหั่นราคาจ่ายตอนใกล้ปิดรับ ที่นี่เปิดรับแทงด้วยนโยบายไม่อั้นเลขเพื่อให้ส่งโพยเลขที่ตั้งใจไว้ได้ครบทุกตัว เข้ามาลุ้นได้มากกว่าแค่สองงวดต่อเดือน เพราะเปิดตลาดที่ออกผลรายวันไว้ทั้งหวยหุ้น ฮานอย ลาว รวมถึงงวดรัฐบาลไทย เช็กเรทจ่ายของตลาดที่จะเล่นก่อนส่งโพยทุกครั้ง ถูกรางวัลแล้วถอนออกด้วยระบบออโต้เหมือนทุกหมวด
     </p>
+  </ContentBoxPremium>
 
-    <p slot="right" class={body}>
-      สมาชิกเดิมที่เปลี่ยนเครื่องให้เข้าผ่าน<a href="/ทางเข้า/" class={inlineLink}>ทางเข้า SUPREME888</a> แล้วล็อกอินด้วยยูสและรหัสเดิม ไม่ต้องสมัครซ้ำครับ
-    </p>
-  </ContentBoxSpecial>
-
-  <LoginRtpSection />
-
-  <ContentBoxSevenThree as="h2" titleright="ติดตรงไหนทักแอดมินได้ตลอด 24 ชม. คนใหม่สมัครแล้วเริ่มได้ทันที">
+  <ContentBoxSevenThreeCyberCut as="h2" titleright="เกมยิงปลาบนเว็บนี้ ใช้ฝีมือเล็งเป้า ลุ้นปลาบอสโบนัสใหญ่">
     <Picture
       slot="left"
-      src={imgSupport}
-      alt={supportAlt}
+      src={imgStable}
+      alt={stableAlt}
       loading="lazy"
       fetchpriority="low"
       widths={[280, 380, 480, 600]}
@@ -177,13 +141,29 @@ const listLabel = "font-black text-[#141414]";
     />
 
     <p slot="right" class={body}>
-      ระบบออโต้ทำงานได้เอง แต่ก็ยังมีจังหวะที่คนต้องคุยกับคน เช่น ล็อกอินไม่ผ่าน เครดิตไม่ขึ้นหลังโอน ถอนค้างสถานะนานผิดปกติ หรือโปรไม่โชว์ แอดมินของเรารับเคสตลอด 24 ชั่วโมงผ่านช่องทางติดต่อบนหน้าเว็บ ทักมาพร้อมชื่อยูส เวลาที่ทำรายการ และยอดเงิน และไม่ต้องส่งรหัสผ่านหรือ OTP ให้ใครทั้งนั้น ส่วนคนใหม่ กด<a href="/register/" class={inlineLink}>สมัคร SUPREME888</a> แล้วกรอกตามขั้นตอนที่ระบบแสดง ตรวจข้อมูลให้ถูกก่อนยืนยัน จะได้ทำรายการได้ราบรื่นตั้งแต่ครั้งแรกครับ
+      ถ้าวันไหนไม่อยากรอจังหวะสุ่มของวงล้อหรือรอบออกผลรางวัล หมวดเกมยิงปลาที่นี่เป็นทางเลือกที่ให้คุณคุมจังหวะการยิงและเลือกเป้าหมายเองได้ เครดิตที่ใช้ยิงมาจากกระเป๋าเงินเดียวกับหมวดอื่น จะเล็งตัวไหนหรือพักมือรอตัวใหญ่ก็ตัดสินใจเองทั้งหมด ส่วนปลาบอสคือตัวที่พกโบนัสก้อนใหญ่มาให้ลุ้น ห้องที่เปิดมีทั้ง Mega Fishing ของ JILI ที่มีบอสยักษ์กับกงล้อโบนัส และ Dinosaur Tycoon ที่เปลี่ยนฝูงปลาเป็นไดโนเสาร์ เหมาะกับคนที่ชอบเกมภาพสวยและอยากใช้ความแม่นกะจังหวะกระสุนด้วยตัวเอง
     </p>
-  </ContentBoxSevenThree>
+  </ContentBoxSevenThreeCyberCut>
+
+  <ContentBoxTwoPremium as="h2" title="ฝากถอนออโต้ บัญชีเดียวตลอด 24 ชม. รองรับวอเลท">
+    <p slot="left" class={body}>
+      การสลับเล่นถึงสี่หมวดจะสะดุดทันทีถ้าต้องคอยโยกเครดิตเข้าออกตามค่ายหรือส่งหลักฐานโอนเงินให้แอดมินตรวจ TGA99 จึงผูกทุกหมวดเข้ากับกระเป๋าเงินเดียวและทำรายการฝากถอนออโต้ได้ตลอด 24 ชั่วโมง โอนได้จากทุกธนาคารและทรูวอเลท (TrueMoney Wallet) ยอดปรับเข้าออกในไม่กี่วินาทีแบบไม่ต้องแนบสลิป ทั้งยังมีโปรฝาก เครดิตฟรี และกิจกรรมแจกเสริมทุนให้เช็กเงื่อนไขล่าสุดได้ที่<a href="/promotion/" class={inlineLink}>หน้าโปรโมชั่น</a>
+    </p>
+
+    <ul slot="right" class="flex flex-col gap-3">
+      <li class={listItem}><strong class={listLabel}>ฝากขั้นต่ำ 20 บาท:</strong> เริ่มเติมทุนได้ตั้งแต่ยอดเล็ก</li>
+      <li class={listItem}><strong class={listLabel}>ถอนขั้นต่ำ 50 บาท:</strong> ยอดถึงเกณฑ์เมื่อไหร่กดถอนเองได้เลย ระบบทำให้โดยไม่ต้องผ่านแอดมิน</li>
+      <li class={listItem}><strong class={listLabel}>สมัครครั้งเดียว:</strong> กรอกข้อมูลตามช่องที่ระบบกำหนดแล้วตรวจก่อนยืนยัน สมาชิกเดิมล็อกอินด้วยข้อมูลเดิมได้ทุกเครื่อง ใช้เล่นได้ทั้งสี่หมวดโดยไม่ค้างยอดข้ามหมวด</li>
+    </ul>
+  </ContentBoxTwoPremium>
+
+  <LatestWinnersPremium />
+
+  <LoginRtpSection />
 
   <ContentBox>
     <p class={body}>
-      SUPREME888 ให้สิ่งที่สายปั่นต้องการจริงหกอย่าง ยอดถอนที่เข้าเต็มไม่หักเปอร์เซ็นต์ ระบบออโต้ที่ฝากตั้งแต่ 20 บาทและถอนเองได้ทั้งวัน เกมหลายค่ายที่เลือกจากกลไกได้โดยไม่ต้องย้ายเว็บ โปรสมาชิกใหม่ที่เปิดดูเงื่อนไขได้ก่อนรับ มือถือเครื่องเดียวทำได้ครบ และแอดมินที่รับเรื่องตลอด 24 ชั่วโมง เปิดยูสไว้ก่อน แล้วลองฝากก้อนเล็กดูจังหวะระบบด้วยตัวเองครับ
+      TGA99 รวบรวมสล็อตโบนัสแตกถี่จากค่ายดัง โต๊ะคาสิโนสดภาพชัดทั้งบาคาร่า รูเล็ต ไฮโล ตลาดหวยหุ้น ลาว ฮานอย และหวยไทยที่เปิดรับแบบไม่อั้นเลข รวมถึงห้องเกมยิงปลาล่าบอสโบนัสใหญ่ไว้ภายใต้บัญชีเดียว ส่วนเรื่องเงินใช้ฝากถอนออโต้ตลอด 24 ชั่วโมง ใครที่มองหาเว็บเดียวจบครบสี่แนว <a href="/register/" class={inlineLink}>สมัคร TGA99</a> แล้วเริ่มเล่นหมวดที่ถนัดได้เลย
     </p>
   </ContentBox>
 

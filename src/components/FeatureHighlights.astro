@@ -3,7 +3,7 @@ export interface FeatureItem {
   icon: string;
   title: string;
   description: string;
-  accent?: "red" | "ink";
+  accent?: "magenta" | "gold";
 }
 
 export interface Props {
@@ -17,19 +17,19 @@ const { items, as: HeadingTag = "h3" } = Astro.props;
 <div class="mt-4 flex flex-col gap-5">
   {
     items.map((item) => {
-      const isInk = item.accent === "ink";
+      const isGold = item.accent === "gold";
       return (
-        <div class="group flex flex-col items-start gap-4 rounded-2xl border border-[#f1d2d3] bg-[#fff5f5] p-6 transition-all duration-300 hover:-translate-y-1 hover:border-[#e9b7b9] hover:bg-white hover:shadow-[0_10px_20px_rgba(236,27,36,0.12)] sm:flex-row">
+        <div class="group flex flex-col items-start gap-4 rounded-2xl border border-[#5a1a60] bg-[#26082c] p-6 transition-all duration-300 hover:-translate-y-1 hover:border-[#8a2f8f] hover:bg-[#31103a] hover:shadow-[0_10px_20px_rgba(193,63,196,0.18)] sm:flex-row">
           <div
             aria-hidden="true"
             class={`flex h-14 w-14 shrink-0 items-center justify-center rounded-xl text-3xl transition-transform duration-300 group-hover:scale-110 ${
-              isInk ? "bg-[#141414] shadow-[0_5px_15px_rgba(20,20,20,0.06)] group-hover:rotate-3" : "bg-gradient-to-b from-[#ff4d55] to-[#d0121b] shadow-[0_5px_15px_rgba(236,27,36,0.18)]"
+              isGold ? "bg-gradient-to-b from-[#ffe08a] via-[#f5c542] to-[#b07d12] shadow-[0_5px_15px_rgba(245,197,66,0.25)] group-hover:rotate-3" : "bg-gradient-to-b from-[#e061e3] to-[#9c2193] shadow-[0_5px_15px_rgba(193,63,196,0.35)]"
             }`}>
             {item.icon}
           </div>
           <div class="flex flex-col gap-2 text-left">
-            <HeadingTag class="text-xl leading-normal font-black tracking-wide text-[#141414]">{item.title}</HeadingTag>
-            <p class="text-left text-base leading-relaxed text-[#2b2627]">{item.description}</p>
+            <HeadingTag class="text-xl leading-normal font-black tracking-wide text-white">{item.title}</HeadingTag>
+            <p class="text-left text-base leading-relaxed text-[#ead9ec]">{item.description}</p>
           </div>
         </div>
       );

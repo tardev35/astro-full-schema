@@ -1004,6 +1004,8 @@ Applied on 2026-07-15 for HENGJUD365: cleaned `ContentBox`,
 
 ### How the prose should sound
 
+**Brand keyword is always UPPERCASE in copy** (owner, 2026-10-29): `HENG30`, never `heng30` or `Heng30` — in title, description, H1/H2, paragraphs, FAQ, alt text and section headings. Only domains, URLs and emails stay lowercase (`heng30-th.com`, `contact@heng30.com`). If the docx types the brand in lowercase, normalise it while mapping content; do not copy the casing through. The WP Rebrand plugin enforces the same rule mechanically (`brand_case_deep`).
+
 Asked for on 2026-08-26, after DOLLAR789's `/promotion` intro shipped reading
 like a manual. Two voices, picked by what the page is for.
 

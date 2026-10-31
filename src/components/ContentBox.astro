@@ -8,15 +8,15 @@ const { title, as: HeadingTag = "h1" } = Astro.props;
 
 <section class="relative z-10 my-8 flex w-full justify-center px-4 font-sans">
   <div
-    class="group relative isolate w-full max-w-[1400px] overflow-hidden rounded-3xl border border-[#f1d2d3] bg-white p-8 text-left text-base leading-relaxed text-[#2b2627] shadow-[0_10px_30px_rgba(20,20,20,0.06)] transition-all duration-500 hover:border-[#e9b7b9] hover:shadow-[0_15px_40px_rgba(236,27,36,0.12)] md:p-10">
-    <div aria-hidden="true" class="pointer-events-none absolute top-0 left-0 -z-10 h-1.5 w-full bg-gradient-to-r from-[#ec1b24] via-[#ff4d55] to-[#b5121a]"></div>
-    <div aria-hidden="true" class="pointer-events-none absolute -right-20 -bottom-20 -z-10 h-40 w-40 rounded-full bg-[#ec1b24]/6 blur-[60px] transition-all duration-500 group-hover:bg-[#ec1b24]/10"></div>
+    class="group relative isolate w-full max-w-[1400px] overflow-hidden rounded-3xl border border-[#5a1a60] bg-[#1c0620] p-8 text-left text-base leading-relaxed text-[#ead9ec] shadow-[0_10px_30px_rgba(0,0,0,0.35)] transition-all duration-500 hover:border-[#8a2f8f] hover:shadow-[0_15px_40px_rgba(193,63,196,0.22)] md:p-10">
+    <div aria-hidden="true" class="pointer-events-none absolute top-0 left-0 -z-10 h-1.5 w-full bg-gradient-to-r from-[#c13fc4] via-[#e061e3] to-[#f5c542]"></div>
+    <div aria-hidden="true" class="pointer-events-none absolute -right-20 -bottom-20 -z-10 h-40 w-40 rounded-full bg-[#c13fc4]/15 blur-[60px] transition-all duration-500 group-hover:bg-[#c13fc4]/25"></div>
 
     {
       title && (
-        <header class="mb-6 flex items-center gap-4 border-b border-[#f1d2d3] pb-4">
-          <div aria-hidden="true" class="h-8 w-1.5 shrink-0 rounded-full bg-gradient-to-b from-[#ff4d55] to-[#b5121a]" />
-          <HeadingTag class="text-2xl leading-normal font-black tracking-wide text-[#141414]">{title}</HeadingTag>
+        <header class="mb-6 flex items-center gap-4 border-b border-[#5a1a60] pb-4">
+          <div aria-hidden="true" class="h-8 w-1.5 shrink-0 rounded-full bg-gradient-to-b from-[#e061e3] to-[#f5c542]" />
+          <HeadingTag class="text-2xl leading-normal font-black tracking-wide text-white">{title}</HeadingTag>
         </header>
       )
     }

@@ -1,17 +1,17 @@
 ---
-import ContentBoxTwo from "./ContentBoxTwo.astro";
+import ContentBoxTwo from "./ContentBoxTwoPremium.astro";
 import { BRAND_NAME } from "../lib/brandProfile";
 
 const steps = [
   {
     icon: "🎰",
-    name: "สล็อตหลายค่ายในเว็บเดียว",
-    detail: "PG Soft, Pragmatic Play, JILI และ Joker Gaming สลับค่ายได้โดยไม่ต้องย้ายเว็บ เลือกเกมจากกลไกฟรีสปิน ตัวคูณ และซื้อฟีเจอร์",
-    tag: "หลายค่าย",
+    name: "สี่หมวดในบัญชีเดียว",
+    detail: "สล็อต คาสิโนสด หวย และเกมยิงปลาใช้กระเป๋าเงินเดียวกัน สลับหมวดเล่นต่อได้ทันทีโดยไม่ต้องโยกเครดิต",
+    tag: "4 หมวด",
   },
   { icon: "⚡", name: "ฝากถอนออโต้", detail: "ฝากเริ่ม 20 บาท ถอนขั้นต่ำ 50 บาท ระบบปรับเครดิตให้ในไม่กี่วินาที ไม่ต้องส่งสลิปให้แอดมิน", tag: "ออโต้" },
   { icon: "👛", name: "ทุกธนาคารและ TrueMoney Wallet", detail: "ใช้ได้ทั้งขาฝากและขาถอน จะโอนจากแอปธนาคารหรือเติมผ่านวอเลทก็ได้", tag: "ทรูวอเลท" },
-  { icon: "💯", name: "จ่ายเต็มทุกยอด", detail: "ยอดที่กดถอนโอนเข้าบัญชีเต็มจำนวน ไม่หักเปอร์เซ็นต์ บิลเล็กบิลใหญ่ใช้กติกาเดียวกัน", tag: "ไม่หัก %" },
+  { icon: "💸", name: "ถอนเองไม่ต้องรอแอดมิน", detail: "ยอดถึงเกณฑ์ 50 บาทเมื่อไหร่กดถอนเองได้เลย ระบบทำให้โดยไม่ต้องผ่านแอดมิน", tag: "ถอนเองได้" },
   { icon: "📱", name: "มือถือครบทุกขั้นตอน", detail: "ใช้ได้ทั้ง iOS และ Android ผ่านเบราว์เซอร์ ไม่ต้องโหลดแอปเพิ่ม สมัคร ฝาก ปั่น ถอน จบในเครื่องเดียว", tag: "ไม่ต้องโหลดแอป" },
   { icon: "💬", name: "แอดมินตลอด 24 ชม.", detail: "ติดตรงไหนทักผ่านช่องทางติดต่อบนหน้าเว็บ พร้อมชื่อยูส เวลาที่ทำรายการ และยอดเงิน", tag: "24 ชม." },
 ];
@@ -20,16 +20,16 @@ const chips = ["PG Soft", "Pragmatic Play", "JILI", "Joker Gaming", "ฝาก�
 
 <ContentBoxTwo titleleft={`เข้าสู่ระบบ ${BRAND_NAME}`} titleright={`ระบบที่ ${BRAND_NAME} เตรียมไว้ในยูสเดียว`} label={`เข้าสู่ระบบ ${BRAND_NAME} และระบบที่ใช้ได้จากยูสเดียว`}>
   <div slot="left" class="flex h-full flex-col gap-4">
-    <div class="relative overflow-hidden rounded-2xl border border-[#f1d2d3] bg-[#fff5f5] p-6 shadow-[0_10px_30px_rgba(20,20,20,0.06)]">
+    <div class="relative overflow-hidden rounded-2xl border border-[#5a1a60] bg-[#1c0620] p-6 shadow-[0_10px_30px_rgba(0,0,0,0.35)]">
       <div class="mb-5 flex items-center gap-3">
         <span
           aria-hidden="true"
-          class="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-gradient-to-b from-[#ff4d55] to-[#d0121b] text-xl font-black text-white italic shadow-[0_5px_15px_rgba(236,27,36,0.18)]">
-          S
+          class="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-gradient-to-b from-[#e061e3] to-[#9c2193] text-xl font-black text-white italic shadow-[0_5px_15px_rgba(193,63,196,0.35)]">
+          T
         </span>
         <div class="flex flex-col">
-          <p class="text-base font-black text-[#141414]">ยินดีต้อนรับกลับสู่ {BRAND_NAME}</p>
-          <span class="text-xs text-[#6b6264]">ล็อกอินด้วยยูสและรหัสเดิม เปลี่ยนเครื่องก็ไม่ต้องสมัครซ้ำ</span>
+          <p class="text-base font-black text-[#ead9ec]">ยินดีต้อนรับกลับสู่ {BRAND_NAME}</p>
+          <span class="text-xs text-[#c9a8cc]">ล็อกอินด้วยยูสและรหัสเดิม เปลี่ยนเครื่องก็ไม่ต้องสมัครซ้ำ</span>
         </div>
       </div>
 
@@ -40,7 +40,7 @@ const chips = ["PG Soft", "Pragmatic Play", "JILI", "Joker Gaming", "ฝาก�
             type="text"
             aria-label="เบอร์โทรศัพท์หรือยูสเซอร์เนม"
             placeholder="เบอร์โทรศัพท์ / ยูสเซอร์เนม"
-            class="w-full rounded-xl border border-[#f1d2d3] bg-white py-3 pr-4 pl-12 text-[#141414] transition-all outline-none placeholder:text-[#6b6264] focus:border-[#ec1b24] focus:ring-1 focus:ring-[#ec1b24]/30"
+            class="w-full rounded-xl border border-[#5a1a60] bg-[#31103a] py-3 pr-4 pl-12 text-[#ead9ec] transition-all outline-none placeholder:text-[#c9a8cc] focus:border-[#e061e3] focus:ring-1 focus:ring-[#e061e3]/30"
           />
         </div>
         <div class="relative">
@@ -49,28 +49,28 @@ const chips = ["PG Soft", "Pragmatic Play", "JILI", "Joker Gaming", "ฝาก�
             type="password"
             aria-label="รหัสผ่าน"
             placeholder="รหัสผ่าน"
-            class="w-full rounded-xl border border-[#f1d2d3] bg-white py-3 pr-4 pl-12 text-[#141414] transition-all outline-none placeholder:text-[#6b6264] focus:border-[#ec1b24] focus:ring-1 focus:ring-[#ec1b24]/30"
+            class="w-full rounded-xl border border-[#5a1a60] bg-[#31103a] py-3 pr-4 pl-12 text-[#ead9ec] transition-all outline-none placeholder:text-[#c9a8cc] focus:border-[#e061e3] focus:ring-1 focus:ring-[#e061e3]/30"
           />
         </div>
 
         <div class="flex items-center justify-between px-1 text-xs">
-          <label class="flex items-center gap-2 text-[#6b6264]">
-            <input type="checkbox" class="h-3.5 w-3.5 rounded border-[#f1d2d3] accent-[#ec1b24]" />
+          <label class="flex items-center gap-2 text-[#c9a8cc]">
+            <input type="checkbox" class="h-3.5 w-3.5 rounded border-[#5a1a60] accent-[#c13fc4]" />
             จดจำฉันไว้
           </label>
-          <a href="/login/" class="text-[#6b6264] transition-colors hover:text-[#b5121a]">ลืมรหัสผ่าน?</a>
+          <a href="/login/" class="text-[#c9a8cc] transition-colors hover:text-[#ffe08a]">ลืมรหัสผ่าน?</a>
         </div>
 
         <a
           href="/login/"
-          class="mt-1 block w-full rounded-xl bg-gradient-to-b from-[#ff4d55] to-[#d0121b] p-3.5 text-center font-black text-white shadow-[0_10px_30px_rgba(236,27,36,0.30)] transition-all hover:scale-[1.02]">
+          class="mt-1 block w-full rounded-xl bg-gradient-to-b from-[#e061e3] to-[#9c2193] p-3.5 text-center font-black text-white shadow-[0_10px_30px_rgba(193,63,196,0.45)] transition-all hover:scale-[1.02]">
           เข้าสู่ระบบ
         </a>
 
-        <div class="flex items-center gap-3 py-1 text-xs text-[#6b6264]">
-          <span class="h-px flex-1 bg-[#f1d2d3]"></span>
+        <div class="flex items-center gap-3 py-1 text-xs text-[#c9a8cc]">
+          <span class="h-px flex-1 bg-[#5a1a60]"></span>
           หรือ
-          <span class="h-px flex-1 bg-[#f1d2d3]"></span>
+          <span class="h-px flex-1 bg-[#5a1a60]"></span>
         </div>
 
         <a
@@ -81,29 +81,29 @@ const chips = ["PG Soft", "Pragmatic Play", "JILI", "Joker Gaming", "ฝาก�
 
         <div class="mt-1 flex flex-wrap items-center justify-between gap-2 px-1">
           <div class="flex flex-wrap gap-2">
-            <span class="rounded-full bg-[#141414] px-2.5 py-1 text-[10px] font-bold text-[#f6eeee]"><span aria-hidden="true">🔒</span> ไม่ส่งรหัสผ่านหรือ OTP ให้ใคร</span>
-            <span class="rounded-full border border-[#f1d2d3] bg-white px-2.5 py-1 text-[10px] font-bold text-[#b5121a]"><span aria-hidden="true">📱</span> iOS และ Android</span>
+            <span class="rounded-full bg-[#62035b] px-2.5 py-1 text-[10px] font-bold text-[#ffe08a]"><span aria-hidden="true">🔒</span> ไม่ส่งรหัสผ่านหรือ OTP ให้ใคร</span>
+            <span class="rounded-full border border-[#5a1a60] bg-[#31103a] px-2.5 py-1 text-[10px] font-bold text-[#ffe08a]"><span aria-hidden="true">📱</span> iOS และ Android</span>
           </div>
-          <a href="/register/" class="text-xs font-bold text-[#b5121a] transition-colors hover:text-[#ec1b24]">สมัครสมาชิกใหม่</a>
+          <a href="/register/" class="text-xs font-bold text-[#ffe08a] transition-colors hover:text-[#f5c542]">สมัครสมาชิกใหม่</a>
         </div>
       </div>
     </div>
   </div>
 
   <div slot="right" class="h-full">
-    <div class="flex h-full flex-col rounded-2xl border border-[#f1d2d3] bg-[#fff5f5] p-5 shadow-[0_10px_30px_rgba(20,20,20,0.06)]">
+    <div class="flex h-full flex-col rounded-2xl border border-[#5a1a60] bg-[#1c0620] p-5 shadow-[0_10px_30px_rgba(0,0,0,0.35)]">
       <div class="mb-5 flex items-center justify-between gap-3">
         <div>
-          <span class="text-xs font-bold tracking-wide text-[#6b6264]">สรุปสิ่งที่ {BRAND_NAME} เตรียมไว้ ตั้งแต่หน้าเกมจนถึงหน้าถอน</span>
-          <div class="text-2xl leading-normal font-black text-[#141414] sm:text-3xl">สล็อตหลายค่าย <span class="text-[#ec1b24]">•</span> ฝากถอนออโต้</div>
+          <span class="text-xs font-bold tracking-wide text-[#c9a8cc]">สรุปสิ่งที่ {BRAND_NAME} เตรียมไว้ ตั้งแต่หน้าเกมจนถึงหน้าถอน</span>
+          <div class="text-2xl leading-normal font-black text-[#ead9ec] sm:text-3xl">สี่หมวดบัญชีเดียว <span class="text-[#e061e3]">•</span> ฝากถอนออโต้</div>
         </div>
-        <span class="flex items-center gap-1.5 self-start rounded-full border border-green-600/40 bg-white px-2.5 py-1">
+        <span class="flex items-center gap-1.5 self-start rounded-full border border-green-400/40 bg-[#31103a] px-2.5 py-1">
           <span class="h-1.5 w-1.5 animate-pulse rounded-full bg-green-500"></span>
-          <span class="text-[10px] font-bold tracking-widest text-green-700 uppercase">Live</span>
+          <span class="text-[10px] font-bold tracking-widest text-green-400 uppercase">Live</span>
         </span>
       </div>
 
-      <div class="mb-2 flex items-center justify-between text-[11px] font-bold tracking-widest text-[#6b6264] uppercase">
+      <div class="mb-2 flex items-center justify-between text-[11px] font-bold tracking-widest text-[#c9a8cc] uppercase">
         <span>ระบบ / บริการในเว็บ</span>
         <span>จุดเด่น</span>
       </div>
@@ -111,27 +111,27 @@ const chips = ["PG Soft", "Pragmatic Play", "JILI", "Joker Gaming", "ฝาก�
       <div class="flex flex-1 flex-col gap-2.5">
         {
           steps.map((s) => (
-            <div class="rounded-xl border border-[#f1d2d3] bg-white px-3.5 py-2.5 transition-colors hover:border-[#e9b7b9] hover:bg-[#fde8e9]">
+            <div class="rounded-xl border border-[#5a1a60] bg-[#31103a] px-3.5 py-2.5 transition-colors hover:border-[#8a2f8f] hover:bg-[#3a0535]">
               <div class="flex items-center justify-between gap-2 text-sm">
-                <span class="flex min-w-0 items-center gap-2 font-bold text-[#141414]">
+                <span class="flex min-w-0 items-center gap-2 font-bold text-[#ead9ec]">
                   <span aria-hidden="true" class="w-5 shrink-0 text-center">
                     {s.icon}
                   </span>{" "}
                   <span class="truncate">{s.name}</span>
                 </span>
-                <span class="shrink-0 rounded-full bg-[#141414] px-2.5 py-0.5 text-[10px] font-bold text-[#f6eeee]">{s.tag}</span>
+                <span class="shrink-0 rounded-full bg-[#62035b] px-2.5 py-0.5 text-[10px] font-bold text-[#ffe08a]">{s.tag}</span>
               </div>
-              <div class="mt-1.5 text-xs tracking-wide text-[#6b6264]">{s.detail}</div>
+              <div class="mt-1.5 text-xs tracking-wide text-[#c9a8cc]">{s.detail}</div>
             </div>
           ))
         }
       </div>
 
       <div class="mt-4 flex flex-wrap items-center justify-center gap-2">
-        {chips.map((c) => <span class="rounded-full border border-[#f1d2d3] bg-white px-3 py-1 text-[10px] font-bold text-[#b5121a]">{c}</span>)}
+        {chips.map((c) => <span class="rounded-full border border-[#5a1a60] bg-[#31103a] px-3 py-1 text-[10px] font-bold text-[#ffe08a]">{c}</span>)}
       </div>
 
-      <div class="mt-3 text-center text-[11px] tracking-wide text-[#6b6264]">
+      <div class="mt-3 text-center text-[11px] tracking-wide text-[#c9a8cc]">
         เงื่อนไขของแต่ละโปรดูได้ในหน้าโปรโมชั่นก่อนรับ และไม่ต้องส่งรหัสผ่านหรือ OTP ให้ใครทั้งนั้น ติดตรงไหนทักแอดมินได้ตลอด 24 ชม.
       </div>
     </div>

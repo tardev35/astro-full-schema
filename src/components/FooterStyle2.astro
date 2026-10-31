@@ -1,16 +1,32 @@
 ---
 import { Picture } from "astro:assets";
 import BankStrip from "./BankStrip.astro";
-import { BRAND_ADDRESS } from "../lib/brandProfile";
+import { BRAND_ADDRESS, BRAND_NAME } from "../lib/brandProfile";
 
 const images = import.meta.glob<{ default: ImageMetadata }>("../assets/logo.{png,webp,jpg}", { eager: true });
 const imagePaths = Object.keys(images);
 const mainLogo = imagePaths.length > 0 ? images[imagePaths[0]].default : null;
+
+const logoAlt = "โลโก้ TGA99 ตัวอักษร TGA สีม่วงอมชมพูไล่เฉดเงาและเลข 99 สีเงินโครเมียม ขอบม่วงเข้ม";
+
+const menu = [
+  { name: "หน้าแรก", path: "/" },
+  { name: "โปรโมชั่น", path: "/promotion/" },
+  { name: "สมัครสมาชิก", path: "/register/" },
+  { name: "เข้าสู่ระบบ", path: "/login/" },
+  { name: "ทางเข้า", path: "/ทางเข้า/" },
+  { name: "ทดลองเล่น", path: "/ทดลองเล่น/" },
+  { name: "วิธีฝากถอน", path: "/วิธีฝากถอน/" },
+  { name: "เกี่ยวกับเรา", path: "/about-us/" },
+  { name: "ติดต่อเรา", path: "/contact-us/" },
+];
+
+const services = ["สล็อตออนไลน์ (Slot)", "คาสิโนสด (Live Casino)", "หวยออนไลน์ (Lotto)", "เกมยิงปลา (Fishing)", "ฝากถอนออโต้ (Auto)"];
 ---
 
-<footer class="relative w-full overflow-hidden border-t-[3px] border-[#0b83fa] bg-[#000617] pt-16 pb-8 text-white shadow-[0_-10px_30px_rgba(11,131,250,0.22)]">
-  <div aria-hidden="true" class="pointer-events-none absolute top-0 right-0 h-96 w-96 rounded-full bg-[#0b83fa]/12 blur-[100px]"></div>
-  <div aria-hidden="true" class="pointer-events-none absolute bottom-0 left-0 h-96 w-96 rounded-full bg-[#e8202a]/18 blur-[100px]"></div>
+<footer class="relative w-full overflow-hidden border-t-[3px] border-[#c13fc4] bg-[#0d010f] pt-16 pb-8 text-[#ead9ec] shadow-[0_-10px_30px_rgba(193,63,196,0.25)]">
+  <div aria-hidden="true" class="pointer-events-none absolute top-0 right-0 h-96 w-96 rounded-full bg-[#c13fc4]/15 blur-[100px]"></div>
+  <div aria-hidden="true" class="pointer-events-none absolute bottom-0 left-0 h-96 w-96 rounded-full bg-[#f5c542]/12 blur-[100px]"></div>
 
   <div class="relative z-10 mx-auto w-full max-w-[1200px] px-6">
     <div class="mb-12 grid grid-cols-1 gap-10 md:grid-cols-2 lg:grid-cols-4 lg:gap-8">
@@ -18,52 +34,35 @@ const mainLogo = imagePaths.length > 0 ? images[imagePaths[0]].default : null;
         <a href="/" class="inline-block origin-left transition-transform hover:scale-105">
           {
             mainLogo ? (
-              <Picture
-                src={mainLogo}
-                alt="โลโก้ BABYSHARK8899 หัวฉลามการ์ตูนสีฟ้าฟันแหลมอยู่ในวงกลมสีแดง ตัวอักษร BABY สีแดง SHARK สีขาวเงิน และเลข 8899 สีฟ้าขอบดำ มีสายฟ้าสีเหลืองประกอบสองข้าง"
-                widths={[110, 220, 330]}
-                sizes="110px"
-                class="h-[50px] w-auto drop-shadow-[0_0_15px_rgba(11,131,250,0.55)]"
-                formats={["avif", "webp"]}
-                fallbackFormat="webp"
-              />
+              <Picture src={mainLogo} alt={logoAlt} widths={[110, 220, 330]} sizes="110px" class="h-[50px] w-auto drop-shadow-[0_0_15px_rgba(224,97,227,0.55)]" formats={["avif", "webp"]} fallbackFormat="webp" />
             ) : (
-              <span class="bg-gradient-to-b from-[#6cc5ff] to-[#0b83fa] bg-clip-text text-4xl font-black text-transparent drop-shadow-[0_0_10px_rgba(11,131,250,0.45)]">BABYSHARK8899</span>
+              <span class="bg-gradient-to-b from-[#e061e3] to-[#9c2193] bg-clip-text text-4xl font-black text-transparent drop-shadow-[0_0_10px_rgba(193,63,196,0.45)]">{BRAND_NAME}</span>
             )
           }
         </a>
-        <p class="text-base leading-relaxed text-[#9fb8dc]">
-          BABYSHARK8899 ให้บริการเข้าเล่นเกมสล็อตผ่านระบบตรง เว็บนอกลิขสิทธิ์แท้ พร้อมระบบฝากถอนที่เชื่อมกับบัญชีสมาชิกโดยตรง ดูเงื่อนไขการถอน สถานะรายการ และข้อมูลบัญชีได้จากระบบเดียว รองรับทั้งมือถือ แท็บเล็ต และคอมพิวเตอร์
+        <p class="text-base leading-relaxed text-[#c9a8cc]">
+          {BRAND_NAME} รวมสล็อต คาสิโนสด หวย และเกมยิงปลาไว้ในบัญชีเดียว พร้อมระบบฝากถอนออโต้ที่สมาชิกทำรายการเองได้ตลอด 24 ชั่วโมง ฝากขั้นต่ำ 20 บาท ถอนขั้นต่ำ 50 บาท ใช้งานได้ทั้งมือถือ แท็บเล็ต และคอมพิวเตอร์
         </p>
         <div class="mt-2 flex items-center gap-3">
-          <div class="flex items-center gap-1.5 rounded border border-[#0b83fa]/50 bg-[#0b83fa]/10 px-3 py-1.5 text-xs font-bold text-[#9ed4ff] shadow-[0_0_10px_rgba(11,131,250,0.25)]">
+          <div class="flex items-center gap-1.5 rounded border border-[#c13fc4]/50 bg-[#c13fc4]/10 px-3 py-1.5 text-xs font-bold text-[#e8a9ea] shadow-[0_0_10px_rgba(193,63,196,0.25)]">
             <span aria-hidden="true" class="text-base">🛡️</span> SSL/TLS 256-BIT
           </div>
-          <div class="flex items-center gap-1.5 rounded border border-[#e8202a]/50 bg-[#6e0a10]/35 px-3 py-1.5 text-xs font-bold text-[#ff8080]">
+          <div class="flex items-center gap-1.5 rounded border border-[#f5c542]/50 bg-[#f5c542]/10 px-3 py-1.5 text-xs font-bold text-[#ffe08a]">
             <span aria-hidden="true" class="text-base">⚡</span> AUTO 24H
           </div>
         </div>
       </div>
 
       <nav aria-label="เมนูหลัก" class="flex flex-col gap-4 lg:pl-8">
-        <p class="flex items-center gap-2 text-lg font-extrabold text-[#9ed4ff]">
-          <span aria-hidden="true" class="h-6 w-1.5 rounded-full bg-gradient-to-b from-[#6cc5ff] to-[#00397f]"></span> เมนูหลัก
+        <p class="flex items-center gap-2 text-lg font-extrabold text-[#ffe08a]">
+          <span aria-hidden="true" class="h-6 w-1.5 rounded-full bg-gradient-to-b from-[#e061e3] to-[#62035b]"></span> เมนูหลัก
         </p>
         <ul class="flex flex-col gap-3 text-sm">
           {
-            [
-              { name: "หน้าแรก", path: "/" },
-              { name: "โปรโมชั่น", path: "/promotion/" },
-              { name: "สมัครสมาชิก", path: "/register/" },
-              { name: "เข้าสู่ระบบ", path: "/login/" },
-              { name: "ทางเข้า", path: "/ทางเข้า/" },
-              { name: "ทดลองเล่น", path: "/ทดลองเล่น/" },
-              { name: "เกี่ยวกับเรา", path: "/about-us/" },
-              { name: "ติดต่อเรา", path: "/contact-us/" },
-            ].map((link) => (
+            menu.map((link) => (
               <li>
-                <a href={link.path} class="group flex items-center text-[#9fb8dc] transition-all hover:text-[#9ed4ff]">
-                  <span aria-hidden="true" class="mr-2 -ml-4 text-[#0b83fa] opacity-0 transition-all group-hover:ml-0 group-hover:opacity-100">
+                <a href={link.path} class="group flex items-center text-[#c9a8cc] transition-all hover:text-[#ffe08a]">
+                  <span aria-hidden="true" class="mr-2 -ml-4 text-[#e061e3] opacity-0 transition-all group-hover:ml-0 group-hover:opacity-100">
                     ➤
                   </span>
                   {link.name}
@@ -75,15 +74,15 @@ const mainLogo = imagePaths.length > 0 ? images[imagePaths[0]].default : null;
       </nav>
 
       <nav aria-label="หมวดหมู่บริการ" class="flex flex-col gap-4">
-        <p class="flex items-center gap-2 text-lg font-extrabold text-[#9ed4ff]">
-          <span aria-hidden="true" class="h-6 w-1.5 rounded-full bg-gradient-to-b from-[#6cc5ff] to-[#00397f]"></span> หมวดเกมและบริการ
+        <p class="flex items-center gap-2 text-lg font-extrabold text-[#ffe08a]">
+          <span aria-hidden="true" class="h-6 w-1.5 rounded-full bg-gradient-to-b from-[#e061e3] to-[#62035b]"></span> หมวดเกมและบริการ
         </p>
         <ul class="flex flex-col gap-3 text-sm">
           {
-            ["สล็อตออนไลน์ (Slot)", "คาสิโนสด (Live Casino)", "ยิงปลา (Fishing)", "เว็บนอกลิขสิทธิ์แท้ (Direct)", "ฝากถอนออโต้ (Auto)"].map((game) => (
+            services.map((game) => (
               <li>
-                <a href="/register/" class="group flex items-center text-[#9fb8dc] transition-all hover:text-[#9ed4ff]">
-                  <span aria-hidden="true" class="mr-3 h-1.5 w-1.5 rounded-full bg-[#00397f] transition-colors group-hover:bg-[#0b83fa] group-hover:shadow-[0_0_8px_rgba(11,131,250,0.8)]" />
+                <a href="/register/" class="group flex items-center text-[#c9a8cc] transition-all hover:text-[#ffe08a]">
+                  <span aria-hidden="true" class="mr-3 h-1.5 w-1.5 rounded-full bg-[#62035b] transition-colors group-hover:bg-[#e061e3] group-hover:shadow-[0_0_8px_rgba(224,97,227,0.8)]" />
                   {game}
                 </a>
               </li>
@@ -93,14 +92,14 @@ const mainLogo = imagePaths.length > 0 ? images[imagePaths[0]].default : null;
       </nav>
 
       <div class="flex flex-col gap-5">
-        <p class="flex items-center gap-2 text-lg font-extrabold text-[#9ed4ff]">
-          <span aria-hidden="true" class="h-6 w-1.5 rounded-full bg-gradient-to-b from-[#6cc5ff] to-[#00397f]"></span> บริการลูกค้า
+        <p class="flex items-center gap-2 text-lg font-extrabold text-[#ffe08a]">
+          <span aria-hidden="true" class="h-6 w-1.5 rounded-full bg-gradient-to-b from-[#e061e3] to-[#62035b]"></span> บริการลูกค้า
         </p>
 
         <a
           href="/line/"
           class="flex w-full items-center justify-center gap-2 rounded-lg bg-[#00B900] py-3 font-bold text-white shadow-[0_0_15px_rgba(0,185,0,0.3)] transition-transform hover:scale-105">
-          <span class="text-xl font-black">LINE</span> @BABYSHARK8899
+          <span class="text-xl font-black">LINE</span> @{BRAND_NAME}
         </a>
 
         {
@@ -124,25 +123,24 @@ const mainLogo = imagePaths.length > 0 ? images[imagePaths[0]].default : null;
         }
 
         <div class="mt-2">
-          <p class="mb-3 text-xs font-bold tracking-wider text-[#9ed4ff]/90 uppercase">รองรับทุกธนาคาร &amp; True Wallet</p>
+          <p class="mb-3 text-xs font-bold tracking-wider text-[#ffe08a]/90 uppercase">รองรับทุกธนาคาร &amp; True Wallet</p>
           <BankStrip size={26} />
         </div>
       </div>
     </div>
 
-    <div class="mb-6 flex flex-wrap justify-center gap-4 border-y border-[#0b83fa]/25 py-6 opacity-60 grayscale transition-all duration-500 hover:opacity-100 hover:grayscale-0 md:gap-8">
-      <span class="text-lg font-black text-gray-300 italic md:text-2xl">PG<span class="text-[#9ed4ff]">SOFT</span></span>
-      <span class="text-lg font-black text-gray-300 italic md:text-2xl">PRAGMATIC<span class="text-[#9ed4ff]">PLAY</span></span>
-      <span class="text-lg font-black text-gray-300 italic md:text-2xl">JOKER<span class="text-[#9ed4ff]">GAMING</span></span>
-      <span class="text-lg font-black text-gray-300 italic md:text-2xl">EVO<span class="text-[#9ed4ff]">LUTION</span></span>
-      <span class="text-lg font-black text-gray-300 italic md:text-2xl">MICRO<span class="text-[#9ed4ff]">GAMING</span></span>
+    <div class="mb-6 flex flex-wrap justify-center gap-4 border-y border-[#c13fc4]/25 py-6 opacity-60 grayscale transition-all duration-500 hover:opacity-100 hover:grayscale-0 md:gap-8">
+      <span class="text-lg font-black text-[#e8e8ee] italic md:text-2xl">PG<span class="text-[#e061e3]">SOFT</span></span>
+      <span class="text-lg font-black text-[#e8e8ee] italic md:text-2xl">PRAGMATIC<span class="text-[#e061e3]">PLAY</span></span>
+      <span class="text-lg font-black text-[#e8e8ee] italic md:text-2xl">JOKER<span class="text-[#e061e3]">GAMING</span></span>
+      <span class="text-lg font-black text-[#e8e8ee] italic md:text-2xl">JI<span class="text-[#e061e3]">LI</span></span>
     </div>
 
-    <div class="flex flex-col items-center justify-between gap-4 text-xs text-[#9fb8dc] md:flex-row">
-      <p>&copy; {new Date().getFullYear()} <span class="font-bold text-[#0b83fa]">BABYSHARK8899</span>. All rights reserved. เว็บนอกลิขสิทธิ์แท้ จ่ายเต็มทุกบิล ปลอดภัย 100%</p>
+    <div class="flex flex-col items-center justify-between gap-4 text-xs text-[#c9a8cc] md:flex-row">
+      <p>&copy; {new Date().getFullYear()} <span class="font-bold text-[#e061e3]">{BRAND_NAME}</span>. All rights reserved. สล็อต คาสิโนสด หวย ยิงปลา จบในบัญชีเดียว</p>
       <div class="flex gap-4">
-        <a href="/terms/" class="transition-colors hover:text-[#9ed4ff]">เงื่อนไขการให้บริการ</a>
-        <a href="/privacy/" class="transition-colors hover:text-[#9ed4ff]">นโยบายความเป็นส่วนตัว</a>
+        <a href="/terms/" class="transition-colors hover:text-[#ffe08a]">เงื่อนไขการให้บริการ</a>
+        <a href="/privacy/" class="transition-colors hover:text-[#ffe08a]">นโยบายความเป็นส่วนตัว</a>
       </div>
     </div>
   </div>

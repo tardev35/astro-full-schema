@@ -13,5 +13,5 @@ Disallow: /
 User-agent: Anthropic-ai
 Disallow: /
 
-Sitemap: https://funnemo.net/sitemap-0.xml
+Sitemap: https://funnemo.me/sitemap-0.xml
 

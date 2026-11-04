@@ -20,6 +20,7 @@ const links = [
   { name: "ติดต่อเรา", path: "/contact-us", icon: "💬" },
 ];
 
+const affUrl = "https://yoalink.com/gf78";
 const logoAlt = "โลโก้ BABYSHARK8899 หัวฉลามการ์ตูนสีฟ้าฟันแหลมอยู่ในวงกลมสีแดง ตัวอักษร BABY สีแดง SHARK สีขาวเงิน และเลข 8899 สีฟ้าขอบดำ มีสายฟ้าสีเหลืองประกอบสองข้าง";
 ---
 
@@ -68,19 +69,22 @@ const logoAlt = "โลโก้ BABYSHARK8899 หัวฉลามการ์
 
       <div class="z-50 flex items-center gap-2 md:gap-4">
         <a
-          href="/login"
+          href={affUrl}
+          rel="nofollow sponsored"
           class="hidden items-center justify-center gap-1.5 rounded border border-[#0b83fa]/60 px-6 py-2 text-sm font-bold text-[#dbe9ff] transition-all hover:bg-[#0a2258]/70 hover:shadow-[0_0_15px_rgba(11,131,250,0.4)] lg:flex">
           <span aria-hidden="true">🔑</span> เข้าสู่ระบบ
         </a>
         <a
-          href="/register"
+          href={affUrl}
+          rel="nofollow sponsored"
           class="bg-theme-oklab hidden items-center justify-center gap-1.5 rounded px-6 py-2 text-sm font-extrabold text-white shadow-[0_0_20px_rgba(232,32,42,0.55)] transition-all hover:brightness-110 lg:flex">
           <span aria-hidden="true">🎫</span> สมัครสมาชิก
         </a>
 
         <div class="flex items-center gap-2 lg:hidden">
           <a
-            href="/register"
+            href={affUrl}
+          rel="nofollow sponsored"
             class="bg-theme-oklab flex items-center justify-center rounded px-3 py-1.5 text-[11px] font-bold text-white shadow-[0_0_10px_rgba(232,32,42,0.55)] md:px-4 md:text-xs">
             สมัครสมาชิก
           </a>
@@ -120,7 +124,8 @@ const logoAlt = "โลโก้ BABYSHARK8899 หัวฉลามการ์
 
       <div class="mt-6 flex flex-col gap-3 border-t border-[#0b83fa]/40 pt-6">
         <a
-          href="/login"
+          href={affUrl}
+          rel="nofollow sponsored"
           class="sidebar-item hover:bg-theme-oklab flex items-center justify-center gap-2 rounded-lg border border-[#0b83fa]/70 bg-transparent py-3.5 text-sm font-bold text-[#e6f2ff] transition-colors hover:border-transparent hover:text-white">
           <span aria-hidden="true">🔑</span> เข้าสู่ระบบ
         </a>

@@ -1,0 +1,36 @@
+---
+export interface RuleRow {
+  label: string;
+  value: string;
+  note?: string;
+}
+
+export interface Props {
+  title: string;
+  rows: RuleRow[];
+  footnote?: string;
+  class?: string;
+}
+
+const { title, rows, footnote, class: className = "" } = Astro.props;
+---
+
+<div class={`rounded-[22px] bg-gradient-to-br from-[#2b95ff]/60 via-[#1a4a9c]/35 to-[#e8202a]/50 p-px shadow-[0_12px_32px_rgba(0,0,0,0.35)] ${className}`}>
+  <div class="overflow-hidden rounded-[21px] bg-[#041a45]">
+    <p class="border-b border-[#1a4a9c] bg-[#06204f] px-4 py-3 text-sm font-black tracking-wide text-white sm:px-5">{title}</p>
+    <dl class="divide-y divide-[#1a4a9c]/70">
+      {
+        rows.map((r) => (
+          <div class="flex items-start gap-4 px-4 py-3 sm:px-5">
+            <dt class="w-32 shrink-0 text-[13px] font-bold text-[#9fb8dc] sm:w-40">{r.label}</dt>
+            <dd class="min-w-0 flex-1">
+              <span class="block text-[15px] font-black text-[#4da3ff]">{r.value}</span>
+              {r.note && <span class="mt-0.5 block text-xs leading-relaxed text-[#b9cdf0]">{r.note}</span>}
+            </dd>
+          </div>
+        ))
+      }
+    </dl>
+    {footnote && <p class="border-t border-[#1a4a9c]/70 px-4 py-2.5 text-xs text-[#9fb8dc] sm:px-5">{footnote}</p>}
+  </div>
+</div>

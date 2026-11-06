@@ -1,46 +1,66 @@
 ---
 import { Picture } from "astro:assets";
-import img1 from "../assets/providers/game1.avif";
-import img2 from "../assets/providers/game2.avif";
-import img3 from "../assets/providers/game3.avif";
-import img4 from "../assets/providers/game4.avif";
-import img5 from "../assets/providers/game5.avif";
-import img6 from "../assets/providers/game6.avif";
+import { BRAND_NAME } from "../lib/brandProfile";
+import imgPg from "../assets/providers/game1.avif";
+import imgJili from "../assets/providers/game5.avif";
+import imgPp from "../assets/providers/game6.avif";
 
 const providers = [
-  { name: "PG SOFT", users: "4,592", isHot: true, img: img1 },
-  { name: "Pragmatic Play", users: "3,845", isHot: true, img: img2 },
-  { name: "JILI", users: "2,901", isHot: true, img: img3 },
-  { name: "Joker", users: "2,184", isHot: true, img: img4 },
-  { name: "CQ9", users: "1,754", isHot: false, img: img5 },
-  { name: "Relax Gaming", users: "3,245", isHot: true, img: img6 },
+  {
+    name: "PG Soft",
+    games: "Treasures of Aztec · Fortune Tiger",
+    players: "4,592",
+    isHot: true,
+    img: imgPg,
+    alt: "โลโก้ PG Pocket Games Soft กับตัวละครสาวสวมมงกุฎขนนกและเพื่อนร่วมเกม",
+  },
+  {
+    name: "Pragmatic Play",
+    games: "Starlight Princess · The Dog House",
+    players: "3,845",
+    isHot: true,
+    img: imgPp,
+    alt: "โลโก้ PP Slot กับเทพเจ้าเคราขาวถือสายฟ้า",
+  },
+  {
+    name: "JILI",
+    games: "Super Ace · Boxing King · Boom Legend",
+    players: "2,901",
+    isHot: false,
+    img: imgJili,
+    alt: "โลโก้ JILI กับนักรบชุดทองถือขวานพู่สี",
+  },
 ];
+
+const moreProviders = ["JDB – Dragon Fishing", "Spadegaming – Zombie Party", "Dream Gaming (DG) – คาสิโนสด", "Pretty Gaming – คาสิโนสด"];
+
+const gridTitle = `ค่ายเกมที่ ${BRAND_NAME} แยกไว้ให้เลือกตามค่าย`;
 ---
 
-<section aria-label="ค่ายเกมพรีเมียมที่ SUPERCLUB168 รวมไว้ในกระเป๋าเดียว" class="mx-auto w-full max-w-[1300px] px-4 py-8 font-sans sm:px-6 lg:px-8">
+<section aria-label={gridTitle} class="mx-auto w-full max-w-[1300px] px-4 py-8 font-sans sm:px-6 lg:px-8">
   <div class="mb-8 flex w-full flex-col items-center justify-center gap-2 text-center">
-    <span aria-hidden="true" class="text-2xl drop-shadow-[0_0_10px_rgba(247,208,70,0.8)]">🎰</span>
-    <p class="bg-gradient-to-r from-[#ffeeb8] via-[#f7d046] to-[#c99a17] bg-clip-text text-3xl font-black tracking-widest text-transparent uppercase drop-shadow-sm">
-      ค่ายเกมพรีเมียมที่ <span class="text-[#f7d046]">SUPERCLUB168</span> รวมไว้ในกระเป๋าเดียว
+    <span aria-hidden="true" class="text-2xl drop-shadow-[0_0_10px_rgba(11,124,244,0.8)]">🎰</span>
+    <p class="bg-gradient-to-r from-white via-[#4da3ff] to-[#0b7cf4] bg-clip-text text-2xl font-black tracking-wide text-transparent drop-shadow-sm md:text-3xl">
+      ค่ายเกมที่ <span class="text-[#4da3ff]">{BRAND_NAME}</span> แยกไว้ให้เลือกตามค่าย
     </p>
-    <div class="mt-2 h-[2px] w-24 rounded-full bg-gradient-to-r from-transparent via-[#f7d046] to-transparent"></div>
+    <div aria-hidden="true" class="mt-2 h-[2px] w-24 rounded-full bg-gradient-to-r from-transparent via-[#0b7cf4] to-transparent"></div>
   </div>
 
-  <div class="grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-6 lg:gap-6">
+  <div class="mx-auto grid max-w-3xl grid-cols-3 gap-3 sm:gap-4 lg:gap-6">
     {
       providers.map((p) => (
-        <div class="group relative flex flex-col overflow-hidden rounded-2xl bg-[#03091f] shadow-[0_5px_15px_rgba(0,0,0,0.55)] transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_15px_40px_rgba(247,208,70,0.28)]">
-          <div class="pointer-events-none absolute inset-0 z-20 rounded-2xl border border-[#16305f]/50 transition-all duration-500 group-hover:border-[#f7d046]/60 group-hover:shadow-[inset_0_0_20px_rgba(247,208,70,0.15)]" />
+        <div class="group relative flex flex-col overflow-hidden rounded-2xl bg-[#041a45] shadow-[0_5px_15px_rgba(0,0,0,0.55)] transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_15px_40px_rgba(11,124,244,0.28)]">
+          <div class="pointer-events-none absolute inset-0 z-20 rounded-2xl border border-[#1a4a9c] transition-all duration-500 group-hover:border-[#2f7bff] group-hover:shadow-[inset_0_0_20px_rgba(11,124,244,0.15)]" />
 
-          <div class="absolute top-0 left-0 z-10 flex items-center gap-1.5 rounded-br-xl border-r border-b border-[#16305f]/50 bg-[#071230]/85 px-3 py-1.5 text-[10px] font-medium text-[#cdb888] backdrop-blur-md transition-colors group-hover:text-[#ffeeb8]">
+          <div class="absolute top-0 left-0 z-10 flex items-center gap-1.5 rounded-br-xl border-r border-b border-[#1a4a9c] bg-[#010d28]/85 px-2 py-1 text-[10px] font-medium text-[#9fb8dc] backdrop-blur-md transition-colors group-hover:text-white sm:px-3 sm:py-1.5">
             <svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
               <path fill-rule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clip-rule="evenodd" />
             </svg>
-            {p.users}
+            {p.players}
           </div>
 
           {p.isHot && (
-            <div class="absolute top-0 right-0 z-10 flex items-center gap-1 rounded-bl-xl border-b border-l border-[#ffeeb8]/50 bg-gradient-to-r from-[#c99a17] to-[#ffd95e] px-3 py-1.5 text-[10px] font-black tracking-wide text-[#03091f] shadow-md">
+            <div class="absolute top-0 right-0 z-10 flex items-center gap-1 rounded-bl-xl border-b border-l border-white/40 bg-gradient-to-r from-[#b0121a] to-[#ff5a60] px-2 py-1 text-[10px] font-black tracking-wide text-white shadow-md sm:px-3 sm:py-1.5">
               <span aria-hidden="true" class="animate-pulse">
                 🔥
               </span>{" "}
@@ -50,25 +70,33 @@ const providers = [
 
           <Picture
             src={p.img}
-            alt={`ภาพหน้าปกเกมสล็อตของค่าย ${p.name} ในตารางค่ายเกมของ SUPERCLUB168`}
+            alt={p.alt}
             formats={["avif", "webp"]}
             fallbackFormat="webp"
             loading="lazy"
             fetchpriority="low"
-            widths={[200, 400]}
-            sizes="(max-width: 640px) 45vw, (max-width: 1024px) 30vw, 200px"
+            widths={[120, 160, 221]}
+            sizes="(max-width: 767px) 30vw, 240px"
+            quality={70}
             decoding="async"
             class="block aspect-square w-full object-cover opacity-90 transition-transform duration-700 group-hover:scale-110 group-hover:opacity-100"
           />
 
-          <p class="relative z-10 border-t border-[#16305f]/50 px-3 py-2 text-center text-xs font-bold text-[#f5e7c2] transition-colors group-hover:text-[#ffeeb8]">{p.name}</p>
+          <div class="relative z-10 border-t border-[#1a4a9c] px-2 py-2 text-center sm:px-3">
+            <p class="text-xs font-black text-white transition-colors group-hover:text-[#4da3ff] sm:text-sm">{p.name}</p>
+            <p class="mt-0.5 hidden text-[11px] leading-snug text-[#9fb8dc] sm:block">{p.games}</p>
+          </div>
 
           <div
             aria-hidden="true"
-            class="pointer-events-none absolute bottom-9 left-0 h-20 w-full bg-gradient-to-t from-[#c99a17]/45 to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-100"
+            class="pointer-events-none absolute bottom-10 left-0 h-20 w-full bg-gradient-to-t from-[#0b7cf4]/45 to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-100"
           />
         </div>
       ))
     }
   </div>
+
+  <ul aria-label="ค่ายเกมอื่นที่มีในเว็บ" class="mt-6 flex flex-wrap items-center justify-center gap-2">
+    {moreProviders.map((m) => <li class="rounded-full border border-[#1a4a9c] bg-[#06204f] px-3 py-1 text-xs font-bold text-[#dbe9ff]">{m}</li>)}
+  </ul>
 </section>

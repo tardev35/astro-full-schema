@@ -1,27 +1,31 @@
 ---
 const {
-  message = "OSIRIS168 เว็บสล็อตระบบใหม่ปี 2026 รวมค่ายเกมดังไว้ในยูสเดียว เปลี่ยนค่ายได้โดยไม่ต้องเปิดบัญชีใหม่ • ระบบฝากถอนออโต้เต็มระบบ ส่งรายการและเช็กเครดิตได้จากหน้าเมมเบอร์จุดเดียว • โปรสมาชิกใหม่ osiris 168 ดูสิทธิ์และเงื่อนไขได้จากหน้าโปรโมชั่นก่อนเลือกใช้ • เล่นผ่านมือถือได้เลย ไม่ต้องโหลดapp เปิดเบราว์เซอร์แล้วล็อกอินด้วยยูสเดิม • ธีมเทพเจ้าโอไซริให้โชคใช้กับทั้งเว็บ เปิดเข้ามาก็รู้ว่าอยู่เว็บไหน",
+  message = "BABYSHARK8899 รวมสล็อต คาสิโนสด ยิงปลา และหวยไว้ในทางเข้าเดียว • เปิดผ่านเบราว์เซอร์บนมือถือได้ทันที ไม่ต้องโหลดแอป รองรับทั้ง iOS และ Android • สมัคร ฝาก เล่น และถอนจบในเครื่องเดียว • มีเรื่องติดขัดทักแอดมินผ่านช่องทางบนหน้าเว็บได้เลย",
 } = Astro.props;
+
+const SCROLL_PX_PER_SEC = 55;
+const PX_PER_CHAR = 6.2;
+const scrollSeconds = Math.max(14, Math.round((message.length * PX_PER_CHAR + 48) / SCROLL_PX_PER_SEC));
 ---
 
 <div class="mx-auto mt-6 max-w-[900px] px-2 md:px-0">
-  <div class="relative flex h-[40px] items-center rounded-sm border-b-2 border-[#e8b52c] bg-[#050d0b] shadow-[0_2px_10px_rgba(3,10,8,0.8)]">
-    <div class="absolute -top-3 left-4 flex items-center gap-1.5 rounded-sm bg-gradient-to-r from-[#8a6314] to-[#ffdd8a] px-3 py-0.5 shadow-[0_4px_10px_rgba(232,181,44,0.5)]">
-      <div aria-hidden="true" class="h-2 w-2 animate-pulse rounded-full bg-[#03251c]"></div>
-      <span class="text-[10px] font-black tracking-widest text-[#03251c] md:text-xs">LIVE UPDATE</span>
+  <div class="relative flex h-[40px] items-center rounded-sm border-b-2 border-[#0b7cf4] bg-[#041a45] shadow-[0_2px_10px_rgba(1,13,40,0.8)]">
+    <div class="absolute -top-3 left-4 flex items-center gap-1.5 rounded-sm bg-gradient-to-r from-[#b0121a] to-[#ff5a60] px-3 py-0.5 shadow-[0_4px_10px_rgba(232,32,42,0.5)]">
+      <div aria-hidden="true" class="h-2 w-2 animate-pulse rounded-full bg-white"></div>
+      <span class="text-[10px] font-black tracking-widest text-white md:text-xs">LIVE UPDATE</span>
     </div>
 
     <div class="ml-32 flex-1 overflow-hidden md:ml-40">
-      <div class="ticker-track flex w-max gap-12 text-sm font-medium whitespace-nowrap text-[#dfeee6]">
+      <div class="ticker-track flex w-max gap-12 text-sm font-medium whitespace-nowrap text-[#dbe9ff]" style={`animation-duration:${scrollSeconds}s`}>
         <span>{message}</span>
-        <span>{message}</span>
+        <span aria-hidden="true">{message}</span>
       </div>
     </div>
   </div>
 </div>
 
 <style>
-  @keyframes scroll {
+  @keyframes announcement4-scroll {
     from {
       transform: translateX(0);
     }
@@ -31,7 +35,7 @@ const {
   }
 
   .ticker-track {
-    animation: scroll 26s linear infinite;
+    animation: announcement4-scroll 26s linear infinite;
   }
 
   @media (prefers-reduced-motion: reduce) {

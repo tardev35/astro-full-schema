@@ -787,7 +787,12 @@ scanAstroFrontmatter(path.join("src", "layouts"));
 if (fs.existsSync("wrangler.toml")) {
   const wrangler = fs.readFileSync("wrangler.toml", "utf8");
   const name = (wrangler.match(/^\s*name\s*=\s*"([^"]+)"/m) || [])[1];
-  const slug = SITE.hostname.replace(/^www\./i, "").split(/[-.]/)[0];
+  // m.brand.com is a separate site from the apex Worker, so its name is brand-m —
+  // the bare brand slug there is exactly the collision this check exists to stop.
+  const host = SITE.hostname.replace(/^www\./i, "");
+  const subdomain = host.match(/^(m|mobile|app|web|amp)\.(.+)$/i);
+  const brandSlug = (subdomain ? subdomain[2] : host).split(/[-.]/)[0];
+  const slug = subdomain ? `${brandSlug}-${subdomain[1].toLowerCase()}` : brandSlug;
   if (name && slug && name.toLowerCase() !== slug.toLowerCase()) {
     error("wrangler.toml", `name = "${name}" but the site is ${SITE.hostname} (expected "${slug}") — ` + `deploying now would overwrite the "${name}" brand's live worker`);
   }

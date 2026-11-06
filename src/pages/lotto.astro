@@ -1,0 +1,168 @@
+---
+import MainLayout from "../layouts/MainLayout.astro";
+import ContentBox from "../components/ContentBox.astro";
+import Navfoot from "../components/Navfoot.astro";
+import Announcement from "../components/Announcement4.astro";
+import Faq3 from "../components/Faq3.astro";
+import IconTiles from "../components/IconTiles.astro";
+import RuleTable from "../components/RuleTable.astro";
+import CtaBand from "../components/CtaBand.astro";
+import { Picture } from "astro:assets";
+import { pageGraph } from "../lib/schema";
+import imgLottery from "../assets/slide3.png";
+
+const pageTitle = "BABYSHARK8899 หวยออนไลน์ รวมการแทงหวยและรอบออกรางวัล";
+const pageHeading = "BABYSHARK8899 หวยออนไลน์ รวมการแทงหวยและรอบออกรางวัล";
+const pageDescription =
+  "BABYSHARK8899 หวยออนไลน์ รวมข้อมูลแทงหวยหลายประเภท พร้อมกติกาเลข 2 ตัว 3 ตัว บน ล่าง และโต๊ด ดูวันและรอบออกรางวัล พร้อมรายละเอียดการตรวจผลหวยแต่ละงวดผ่านมือถือ";
+const lotteryAlt =
+  "BABYSHARK8899 หวย อัตราจ่ายที่ดีที่สุด 3 ตัว บาทละ 1000 และ 2 ตัว บาทละ 100 ถูกตรง จ่ายจริง รับเงินรางวัลหลักล้าน พริตตี้ในชุดแจ็กเก็ตดำแดง";
+
+const faqs = [
+  {
+    q: "BABYSHARK8899 หวยมีหวยหุ้นตัวไหนให้แทงบ้าง",
+    a: "มีหลายตัวครับ ตัวอย่างเช่นหุ้นไทย นิเคอิ ฮั่งเส็ง และดาวโจนส์ แต่ละตลาดออกผลตามวันทำการของตัวเอง วันหยุดจึงอาจไม่ตรงกัน",
+  },
+  {
+    q: "แทงโต๊ดไว้ แล้วผลออกเรียงตรงตามที่แทง ยังนับว่าถูกไหม",
+    a: "ถูกครับ โต๊ดนับทุกแบบที่ใช้สามหลักชุดเดิม รวมแบบเรียงตรงด้วย ส่วน 3 ตัวบนเป็นอีกประเภทหนึ่ง ใช้เลขชุดเดียวกันได้แต่คิดผลแยกกัน",
+  },
+  {
+    q: "หวยฮานอยรอบปกติ พิเศษ และ VIP ใช้ผลชุดเดียวกันไหม",
+    a: "ไม่ใช่ครับ แต่ละรอบมีผลของตัวเองแม้ออกในวันเดียวกัน แทงรอบไหนก็เทียบกับผลรอบนั้น เวลาประกาศแต่ละรอบดูในตารางรอบหวย",
+  },
+  {
+    q: "ตรวจผลแล้วเลขตรงแค่ 2 ตัวท้าย แต่แทง 3 ตัวบนไว้ ได้รางวัลไหม",
+    a: "ไม่ได้ครับ 3 ตัวบนต้องตรงทั้งสามหลักตามลำดับ เลข 2 ตัวท้ายที่ตรงจะเข้าก็ต่อเมื่อคุณแทง 2 ตัวบนไว้ด้วย",
+  },
+];
+
+const graph = pageGraph(Astro, {
+  name: pageTitle,
+  description: pageDescription,
+  breadcrumb: [
+    { name: "หน้าแรก", path: "/" },
+    { name: "หวยออนไลน์", path: "/lotto" },
+  ],
+  faqs,
+  primaryImagePath: imgLottery.src,
+});
+
+const lottoGroups = [
+  { icon: "flag", name: "หวยไทย", desc: "หวยรัฐบาล หวยออมสิน และหวย ธ.ก.ส. ผลออกในประเทศ ลุ้นกันเป็นงวด" },
+  { icon: "ticket", name: "หวยลาว", desc: "แยกเป็นกลุ่มของตัวเอง ถ้าคุณตามผลฝั่งลาวอยู่แล้วก็หาง่าย ไม่ปนตลาดอื่น" },
+  { icon: "globe", name: "หวยต่างประเทศ", desc: "หวยมาเลย์ หวยฮานอยที่แยกเป็นรอบปกติ รอบพิเศษ และรอบ VIP หวยหุ้นทั้งหุ้นไทยและหุ้นนอกอย่างนิเคอิ ฮั่งเส็ง ดาวโจนส์ และหวยยี่กี บางตลาดมีผลทุกวัน" },
+];
+
+const betTypes = [
+  { icon: "number", name: "3 ตัวบน", desc: "ต้องตรง 538 ทุกหลักและเรียงตามลำดับ" },
+  { icon: "number", name: "2 ตัวบน", desc: "2 หลักท้ายของรางวัลที่ 1 คือ 38" },
+  { icon: "target", name: "วิ่งบน", desc: "เลขตัวเดียวใน 3 ตัวบน แทง 5 แทง 3 หรือแทง 8 ก็เข้า" },
+  { icon: "split", name: "3 ตัวโต๊ด", desc: "3 หลักเดิมสลับที่ได้ 835 หรือ 358 ก็ถูก" },
+  { icon: "number", name: "2 ตัวล่าง", desc: "ไม่ได้ดูจาก 538 แต่ดูรางวัลเลขท้าย 2 ตัวที่ประกาศแยก" },
+  { icon: "target", name: "วิ่งล่าง", desc: "เลขตัวเดียวในเลขท้าย 2 ตัวชุดนั้น" },
+];
+
+const scheduleRows = [
+  { label: "หวยรัฐบาล", value: "วันที่ 1 กับวันที่ 16", note: "ถ้าตรงวันหยุด บางงวดก็ขยับวัน" },
+  { label: "หวยฮานอย", value: "ออกผลทุกวัน", note: "แยกรอบปกติ พิเศษ และ VIP แต่ละรอบมีผลของตัวเอง" },
+  { label: "หวยหุ้น", value: "เฉพาะวันที่ตลาดหุ้นตัวนั้นเปิดทำการ", note: "ตลาดหยุดก็หยุดตาม" },
+  { label: "หวยยี่กี", value: "ออกวันละหลายรอบ" },
+  { label: "ตลาดที่เหลือ", value: "ดูวันเวลาจากตารางรอบหวย", note: "เวลาปิดรับเช็กอีกทีตอนเปิดหน้าแทงหวย" },
+];
+
+const resultSources = [
+  { icon: "shield", name: "หวยรัฐบาล", desc: "ยึดผลที่สำนักงานสลากกินแบ่งรัฐบาลประกาศ" },
+  { icon: "chart", name: "หวยหุ้น", desc: "ยึดตัวเลขตอนปิดตลาดของหุ้นตัวนั้น" },
+  { icon: "check", name: "ตลาดที่เหลือ", desc: "ยึดผลจากผู้ออกรางวัลของแต่ละตลาด ตอนเทียบ ดูงวดหรือรอบให้ตรงกับที่แทงก่อน แล้วไล่ทีละประเภทในโพย" },
+];
+
+const body = "text-left text-base leading-relaxed";
+const inlineLink = "font-bold text-[#4da3ff] underline underline-offset-4 transition-colors hover:text-[#ff5a60]";
+const digit = "flex h-16 w-14 items-center justify-center rounded-2xl bg-gradient-to-b from-[#4da3ff] to-[#0554b8] text-4xl font-black text-white shadow-[0_10px_26px_rgba(11,124,244,0.45)] sm:h-20 sm:w-16 sm:text-5xl";
+---
+
+<MainLayout title={pageTitle} description={pageDescription}>
+  <script type="application/ld+json" set:html={graph} />
+
+  <Announcement />
+
+  <ContentBox title={pageHeading} as="h1">
+    <div class="grid grid-cols-1 gap-6 md:grid-cols-[1fr_300px] md:items-start">
+      <p class={body}>
+        เลขชุดเดียวที่คุณจดไว้ในโน้ตมือถือ แทงได้หลายแบบและลุ้นได้หลายตลาด ที่ BABYSHARK8899 หวยออนไลน์ เราจึงรวมเรื่องก่อนแทงไว้ในหน้าเดียว ทั้งประเภทหวยไทย ลาว และต่างประเทศ กติกาเลข 2 ตัว 3 ตัว บน ล่าง และโต๊ด วันกับรอบออกรางวัล และการตรวจผลแต่ละงวด อ่านจบบนมือถือแล้วค่อยเลือกตลาดที่จะลงโพย
+      </p>
+      <Picture
+        src={imgLottery}
+        alt={lotteryAlt}
+        loading="eager"
+        decoding="async"
+        widths={[300, 450, 600]}
+        sizes="(max-width: 767px) calc(100vw - 96px), 300px"
+        formats={["avif", "webp"]}
+        fallbackFormat="webp"
+        quality={70}
+        class="mx-auto h-auto w-full max-w-[300px] rounded-2xl border border-[#1a4a9c] shadow-[0_10px_30px_rgba(11,124,244,0.25)]"
+      />
+    </div>
+  </ContentBox>
+
+  <ContentBox as="h2" title="BABYSHARK8899 หวย รวมประเภทหวยไทย หวยลาว และหวยต่างประเทศ">
+    <p class={`${body} mb-6`}>หวยที่เปิดให้แทงกับเราแบ่งกลุ่มตามที่มาของผล รู้ว่าตลาดที่สนใจอยู่กลุ่มไหน ก็พอเดาจังหวะลุ้นได้</p>
+    <IconTiles items={lottoGroups} cols={3} />
+  </ContentBox>
+
+  <ContentBox as="h2" title="หวย BABYSHARK8899 เลข 2 ตัว 3 ตัว บน ล่าง และโต๊ด">
+    <p class={`${body} mb-6`}>
+      รู้ว่าจะแทงเลขกี่หลักก็เลือกประเภทได้แล้ว เลขตัวเดียวไว้แทงวิ่ง เลข 3 ตัวใช้กับ 3 ตัวบนหรือโต๊ด ส่วนเลข 2 ตัวใช้กับ 2 ตัวบนหรือ 2 ตัวล่าง ตัวอย่างนี้ใช้หวยรัฐบาล สมมติว่ารางวัลที่ 1 ลงท้ายด้วย 538
+    </p>
+    <div class="mb-6 flex flex-col items-center gap-3 rounded-[22px] border border-[#1a4a9c] bg-[#06204f] px-4 py-6">
+      <p class="text-[11px] font-extrabold tracking-[0.22em] text-[#4da3ff] uppercase">ตัวอย่าง รางวัลที่ 1 ลงท้ายด้วย</p>
+      <div class="flex gap-3" aria-label="เลขตัวอย่าง 538">
+        <span class={digit}>5</span>
+        <span class={digit}>3</span>
+        <span class={digit}>8</span>
+      </div>
+      <p class="text-xs text-[#9fb8dc]">ใช้เลขชุดเดียวนี้เทียบกับทุกประเภทด้านล่าง</p>
+    </div>
+    <IconTiles items={betTypes} cols={3} />
+    <p class={`${body} mt-6`}>ตลาดอื่นก็นับแบบนี้ แต่เทียบกับผลของตลาดนั้นเอง อัตราจ่ายแต่ละประเภท หน้าแทงหวยโชว์ให้ดูก่อนคุณกดยืนยัน</p>
+  </ContentBox>
+
+  <ContentBox as="h2" title="รอบออกรางวัลหวย BABYSHARK8899 พร้อมวันและเวลาของแต่ละประเภท">
+    <p class={`${body} mb-4`}>
+      แทงถูกเลขแต่ลงผิดรอบ ผลที่ลุ้นก็ไม่ใช่งวดที่ตั้งใจ ในตารางรอบหวยบนหน้าเว็บ แต่ละตลาดมีวันออกรางวัลกับเวลาประกาศผลกำกับไว้ วิธีอ่านคือหาชื่อตลาดที่จะแทง ดูวันก่อนแล้วค่อยดูเวลา ส่วนเวลาปิดรับให้เช็กอีกทีตอนเปิดหน้าแทงหวย
+    </p>
+    <p class={`${body} mb-6`}>
+      จังหวะแต่ละกลุ่มต่างกัน งวดหวยรัฐบาลปกติตรงกับวันที่ 1 กับวันที่ 16 แต่ถ้าตรงวันหยุด บางงวดก็ขยับวัน ฮานอยออกผลทุกวัน หวยหุ้นมีผลเฉพาะวันที่ตลาดหุ้นตัวนั้นเปิดทำการ ตลาดหยุดก็หยุดตาม ยี่กีออกวันละหลายรอบ ตลาดที่เหลือดูวันเวลาจากตารางได้เลย
+    </p>
+    <RuleTable title="จังหวะออกผลของแต่ละกลุ่ม" rows={scheduleRows} />
+  </ContentBox>
+
+  <ContentBox as="h2" title="ตรวจผลหวย BABYSHARK8899 พร้อมข้อมูลผลรางวัลแต่ละงวด">
+    <p class={`${body} mb-6`}>
+      ผลออกแล้วอยากรู้ว่าเลขเข้าไหม ผลล่าสุดดูได้บนหน้าเว็บ พลาดงวดไหนก็ย้อนดูผลงวดนั้นได้ ผลที่เราแสดงอ้างอิงตามตลาด หวยรัฐบาลยึดผลที่สำนักงานสลากกินแบ่งรัฐบาลประกาศ หวยหุ้นยึดตัวเลขตอนปิดตลาดของหุ้นตัวนั้น ตลาดที่เหลือยึดผลจากผู้ออกรางวัลของแต่ละตลาด ตอนเทียบ ดูงวดหรือรอบให้ตรงกับที่แทงก่อน แล้วไล่ทีละประเภทในโพย
+    </p>
+    <IconTiles items={resultSources} cols={3} />
+  </ContentBox>
+
+  <ContentBox as="h2" title="ทางเข้า BABYSHARK8899 หวย เลือกดูข้อมูลผ่านมือถือได้สะดวก">
+    <p class={`${body} mb-4`}>
+      บางครั้งคุณแค่อยากรู้ว่าตลาดที่ตามอยู่ประกาศผลกี่โมง เปิดบนมือถือก็พอ <a href="/ทางเข้า/" class={inlineLink}>ทางเข้า BABYSHARK8899</a> ใช้ผ่านเบราว์เซอร์ ไม่ต้องโหลดแอป ได้ทั้ง iOS และ Android บนคอมก็เปิดได้ ใช้เมนูเลือกประเภทหวยไปที่ตลาดที่ต้องการ อยากกลับไปหมวดอื่นก็กดลิงก์<a href="/" class={inlineLink}>เว็บไซต์หลัก</a>
+    </p>
+    <p class={`${body} mb-6`}>
+      เคยสมัครไว้แล้ว ยูสกับรหัสเดิมใช้ได้ทุกเครื่อง ถ้ายังไม่มียูส กด<a href="/register/" class={inlineLink}>สมัคร BABYSHARK8899</a> ได้เลย ทุกครั้งที่ล็อกอิน มองแถบที่อยู่ให้ชื่อเว็บถูกต้อง และอย่าบอก OTP กับรหัสผ่านให้ใคร ติดขัดตรงไหนทักแอดมินจากช่องทางที่แสดงบนหน้าเว็บ
+    </p>
+    <CtaBand title="เลือกตลาดหวยแรกกับ BABYSHARK8899" text="เปิดบนมือถือผ่านเบราว์เซอร์ ไม่ต้องโหลดแอป ยูสกับรหัสเดิมใช้ได้ทุกเครื่อง" />
+  </ContentBox>
+
+  <Faq3 title="คำถามที่พบบ่อยเกี่ยวกับหวย BABYSHARK8899" faqs={faqs} />
+
+  <ContentBox>
+    <p class={body}>
+      BABYSHARK8899 หวยออนไลน์ แยกตลาดไทย ลาว และต่างประเทศ อธิบายบน ล่าง โต๊ดด้วยเลขชุดเดียว บอกจังหวะออกผลแต่ละกลุ่ม มีผลล่าสุดกับผลย้อนหลัง เปิดมือถือแล้วเลือกตลาดแรกได้เลย
+    </p>
+  </ContentBox>
+
+  <Navfoot />
+</MainLayout>

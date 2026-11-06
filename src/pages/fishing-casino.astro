@@ -1,0 +1,152 @@
+---
+import MainLayout from "../layouts/MainLayout.astro";
+import ContentBox from "../components/ContentBox.astro";
+import Navfoot from "../components/Navfoot.astro";
+import Announcement from "../components/Announcement4.astro";
+import Faq3 from "../components/Faq3.astro";
+import IconTiles from "../components/IconTiles.astro";
+import ProviderCards from "../components/ProviderCards.astro";
+import CtaBand from "../components/CtaBand.astro";
+import { Picture } from "astro:assets";
+import { pageGraph } from "../lib/schema";
+import imgFishing from "../assets/cat-fishing.webp";
+import imgJili from "../assets/providers/game5.avif";
+
+const pageTitle = "BABYSHARK8899 รวมค่ายเกมยิงปลาออนไลน์(Fishing Casino) พร้อมเกมตัวอย่าง";
+const pageHeading = "BABYSHARK8899 ยิงปลาออนไลน์ รวมค่ายเกมและตัวอย่างเกม(Fishing Casino)";
+const pageDescription =
+  "BABYSHARK8899 รวมเกมยิงปลาออนไลน์จากค่ายต่าง ๆ พร้อมรายชื่อเกมและเกมตัวอย่าง เลือกดูฉาก อาวุธ และฟีเจอร์เกมยิงปลา ค้นหาเกมที่ชอบและเข้าหมวดเกมได้ง่ายผ่านมือถือ";
+
+const faqs = [
+  {
+    q: "หมวดเกมยิงปลาของ BABYSHARK8899 มีค่ายไหนให้เลือกบ้าง",
+    a: "มีค่าย JILI, JDB และ Spadegaming ครับ โดยเรารวมโลโก้ค่ายและรายการเกมไว้ในหน้าเดียวให้คุณกดเลือกดูแนวเกมได้ทันที",
+  },
+  {
+    q: "ข้อมูลเกมตัวอย่างบนหน้าเว็บคือโหมดทดลองเล่นหรือไม่",
+    a: "ไม่ใช่โหมดทดลองเล่นครับ เกมตัวอย่างคือการ์ดเกมที่แสดงชื่อ ภาพหน้าปก และข้อมูลเกมอย่าง Dinosaur Tycoon II, Boom Legend หรือ Zombie Party ให้ดูธีมฉากก่อนเล่นจริง",
+  },
+  {
+    q: "เข้าเล่นเกมยิงปลาผ่านมือถือต้องติดตั้งแอปเพิ่มไหม",
+    a: "ไม่ต้องติดตั้งแอปครับ คุณเปิดเข้าผ่านเบราว์เซอร์บนมือถือได้ทั้ง iOS และ Android รวมถึงเล่นบนคอมพิวเตอร์ได้จากหน้าเว็บหลัก",
+  },
+  {
+    q: "หากเข้าใช้งานระบบสมาชิกแล้วติดปัญหาต้องติดต่อที่ไหน",
+    a: "ติดต่อแอดมินผ่านช่องทางบนหน้าเว็บได้เลยครับ หากมีข้อสงสัยเรื่องการเข้าสู่ระบบหรือการเปิดหน้าเกมยิงปลา ทีมงานของเราพร้อมช่วยตรวจสอบ",
+  },
+];
+
+const graph = pageGraph(Astro, {
+  name: pageTitle,
+  description: pageDescription,
+  breadcrumb: [
+    { name: "หน้าแรก", path: "/" },
+    { name: "ยิงปลา", path: "/fishing-casino" },
+  ],
+  faqs,
+  primaryImagePath: imgFishing.src,
+});
+
+const providers = [
+  {
+    tagline: "ค่ายเกมยิงปลา",
+    name: "JILI",
+    desc: "ค่ายยิงปลาที่เว็บไทยใช้มาก มีทั้งสล็อต ยิงปลา และเกมโต๊ะ ภาพสดใสและมีเป้าหมายตั้งแต่ปลาใต้ทะเลไปจนถึงไดโนเสาร์และสัตว์ประหลาด",
+    games: ["Happy Fishing", "Dinosaur Tycoon II", "Boom Legend"],
+    img: imgJili,
+    alt: "โลโก้ JILI กับนักรบชุดทองถือขวานพู่สี",
+  },
+  {
+    tagline: "ค่ายเกมยิงปลา",
+    name: "JDB",
+    desc: "ค่ายที่มีเกมยิงปลาหลายเกมรวมถึงธีมมังกร เหมาะถ้าคุณอยากล่าบอสมังกร",
+    games: ["Dragon Fishing", "Fishing YiLuFa"],
+    icon: "dragon",
+  },
+  {
+    tagline: "ค่ายเกมยิงปลา",
+    name: "Spadegaming",
+    desc: "ค่ายที่มีเกมยิงปลาธีมแปลกแนวอย่างเอเลี่ยนและซอมบี้ ตอบโจทย์ถ้าคุณอยากเปลี่ยนจากธีมปลาไปเป็นแนวอื่น",
+    games: ["Alien Hunter", "Zombie Party"],
+    icon: "skull",
+  },
+];
+
+const sampleGames = [
+  { icon: "fish", name: "Happy Fishing", desc: "เกมเริ่มต้นของค่าย JILI ภาพสดใส", tag: "JILI" },
+  { icon: "flame", name: "Dinosaur Tycoon II", desc: "เกมจาก JILI ที่ใช้ธีมไดโนเสาร์แทนปลา โดยมีบอสไดโนเสาร์ยักษ์เป็นเป้าหมายหลัก", tag: "JILI" },
+  { icon: "target", name: "Boom Legend", desc: "เกมของ JILI ที่ใช้ธีมสัตว์ประหลาดแทนปลา พร้อมมอนสเตอร์บอส", tag: "JILI" },
+  { icon: "dragon", name: "Dragon Fishing และ Fishing YiLuFa", desc: "เกมยิงปลาจาก JDB โดย Dragon Fishing มีปลาบอสมังกร", tag: "JDB" },
+  { icon: "skull", name: "Alien Hunter และ Zombie Party", desc: "เกมจาก Spadegaming ที่ใช้ธีมเอเลี่ยนและซอมบี้แทนฝูงปลา", tag: "Spadegaming" },
+];
+
+const features = [
+  { icon: "globe", name: "ฉากหลังตามธีม", desc: "ใต้ทะเล ไดโนเสาร์ มอนสเตอร์ เอเลี่ยน ซอมบี้ และมังกร เลือกดูภาพประกอบของฉากได้ครบ" },
+  { icon: "coins", name: "ห้องตามขนาดเบทและค่ากระสุน", desc: "โดยทั่วไปเกมยิงปลาให้เลือกห้องตามขนาดเบทและปรับค่ากระสุนต่อนัดได้ ทุกนัดหักเครดิตตามค่ากระสุน" },
+  { icon: "crown", name: "ปลาหรือบอสตัวใหญ่", desc: "ให้รางวัลสูงกว่าแต่ต้องยิงหลายนัด รายละเอียดของแต่ละเกมดูได้จากข้อมูลบนการ์ด" },
+  { icon: "users", name: "อาวุธพิเศษและห้องหลายคน", desc: "หลายเกมมีอาวุธพิเศษที่สุ่มได้ระหว่างเล่น และห้องหนึ่งมักเล่นพร้อมกันได้หลายคน" },
+];
+
+const body = "text-left text-base leading-relaxed";
+const inlineLink = "font-bold text-[#4da3ff] underline underline-offset-4 transition-colors hover:text-[#ff5a60]";
+---
+
+<MainLayout title={pageTitle} description={pageDescription}>
+  <script type="application/ld+json" set:html={graph} />
+
+  <Announcement />
+
+  <ContentBox title={pageHeading} as="h1">
+    <div class="flex flex-col gap-5 sm:flex-row sm:items-center">
+      <span class="shrink-0 self-start rounded-full bg-gradient-to-br from-[#0b7cf4] via-[#4da3ff] to-[#e8202a] p-[3px] shadow-[0_0_30px_rgba(11,124,244,0.45)]">
+        <Picture
+          src={imgFishing}
+          alt="ปลาการ์ตูนฟันแหลมสีแดงถือส้อมกับปลาตัวเล็กและเหรียญทองกลางคลื่น"
+          loading="eager"
+          decoding="async"
+          widths={[128, 192, 256]}
+          sizes="112px"
+          formats={["avif", "webp"]}
+          fallbackFormat="webp"
+          quality={74}
+          class="h-24 w-24 rounded-full object-cover sm:h-28 sm:w-28"
+        />
+      </span>
+      <p class={body}>
+        เวลาเปลี่ยนมาเล่นเกมยิงปลาออนไลน์ที่ BABYSHARK8899 คุณจะได้เล็งเป้าและคุมจังหวะกดยิงเองตามมือ เราจัดหมวด Fishing Casino แยกไว้ชัดเจน เพื่อให้คุณเช็กค่ายเกมยิงปลา ดูรายชื่อเกมตัวอย่างพร้อมภาพหน้าปก รวมถึงเทียบฉาก อาวุธ และฟีเจอร์ก่อนเข้าห้องจริง พร้อมระบบค้นหาชื่อเกมและเมนูที่กดผ่านจอมือถือได้สะดวก
+      </p>
+    </div>
+  </ContentBox>
+
+  <ContentBox as="h2" title="เกมยิงปลาออนไลน์ BABYSHARK8899 เลือกค่ายเกมที่ต้องการได้ทันที">
+    <p class={`${body} mb-6`}>
+      ถ้าคุณเล็งเกมยิงปลาไว้แล้ว ขั้นแรกมักเป็นการดูว่าค่ายไหนทำแนวภาพและเป้าหมายถูกจริต บนหน้าเกมยิงปลาออนไลน์ของเราจึงจัดโลโก้ค่ายคู่กับรายการเกมให้คุณกดเลือกได้ทันทีโดยไม่ต้องเลื่อนหาปนกับหมวดอื่น โดยค่ายเกมยิงปลาที่เราเปิดให้เลือกมีจุดเด่นดังนี้
+    </p>
+    <ProviderCards items={providers} cols={3} />
+  </ContentBox>
+
+  <ContentBox as="h2" title="BABYSHARK8899 รวมเกมตัวอย่าง(Fishing Casino) พร้อมรายชื่อและภาพเกมยิงปลา">
+    <p class={`${body} mb-6`}>
+      การดูแค่ชื่อค่ายอาจยังนึกภาพไม่ออกว่าในห้องมีเป้าหมายแบบไหน เราจึงรวบรวมเกมตัวอย่างในหมวด Fishing Casino มาแสดงเป็นการ์ดเกมที่มีชื่อเกม ภาพหน้าปก และข้อมูลเกม เพื่อให้คุณเทียบแนวทางก่อนเข้าเล่นจริง โดยเกมที่เรายกมาให้ดูมีจุดเด่นดังนี้
+    </p>
+    <IconTiles items={sampleGames} cols={3} />
+  </ContentBox>
+
+  <ContentBox as="h2" title="เกมยิงปลา BABYSHARK8899 เลือกดูฉาก อาวุธ และฟีเจอร์พิเศษ">
+    <p class={`${body} mb-6`}>
+      ก่อนเข้าห้องยิงปลา การเข้าใจองค์ประกอบบนจอจะช่วยให้คุณวางแผนกดยิงได้ง่ายขึ้น ในหมวดนี้คุณเลือกดูภาพประกอบของฉาก อาวุธ และฟีเจอร์พิเศษได้ครบ ทั้งฉากหลังตามธีมใต้ทะเล ไดโนเสาร์ มอนสเตอร์ เอเลี่ยน ซอมบี้ และมังกร โดยทั่วไปเกมยิงปลาให้เลือกห้องตามขนาดเบทและปรับค่ากระสุนต่อนัดได้ ทุกนัดหักเครดิตตามค่ากระสุน ปลาหรือบอสตัวใหญ่ให้รางวัลสูงกว่าแต่ต้องยิงหลายนัด หลายเกมมีอาวุธพิเศษที่สุ่มได้ระหว่างเล่น และห้องหนึ่งมักเล่นพร้อมกันได้หลายคน รายละเอียดของแต่ละเกมดูได้จากข้อมูลบนการ์ด
+    </p>
+    <IconTiles items={features} cols={2} />
+  </ContentBox>
+
+  <ContentBox as="h2" title="ทางเข้าเกมยิงปลา BABYSHARK8899 บนมือถือและคอมพิวเตอร์">
+    <p class={`${body} mb-6`}>
+      เมื่อเลือกค่ายและเกมได้แล้ว คุณกดเมนูเข้าหมวดเกมยิงปลาจากหน้าหลักได้โดยตรง หรือพิมพ์ชื่ออย่าง Happy Fishing ลงในช่องค้นหาเกมเพื่อเปิดการ์ดเกมทันที ระบบ<a href="/ทางเข้า/" class={inlineLink}>ทางเข้า BABYSHARK8899</a> เล่นผ่านเบราว์เซอร์บนมือถือและคอมได้โดยไม่ต้องโหลดแอป รองรับทั้ง iOS และ Android ถ้าคุณมียูสอยู่แล้ว ใช้ยูสและรหัสเดิมล็อกอินได้ทุกเครื่องโดยไม่ต้องสมัครซ้ำ ถ้ายังไม่มีบัญชี กด<a href="/register/" class={inlineLink}>สมัคร BABYSHARK8899</a> เพื่อเปิดยูสได้เลย แนะนำให้ตรวจชื่อเว็บบนแถบที่อยู่ก่อนล็อกอิน และไม่ให้รหัสผ่านหรือ OTP กับใคร
+    </p>
+    <CtaBand title="เข้าหมวดเกมยิงปลา BABYSHARK8899" text="เล่นผ่านเบราว์เซอร์บนมือถือและคอม ไม่ต้องโหลดแอป ยูสและรหัสเดิมใช้ได้ทุกเครื่อง" />
+  </ContentBox>
+
+  <Faq3 title="คำถามที่พบบ่อยเกี่ยวกับเกมยิงปลา BABYSHARK8899" faqs={faqs} />
+
+  <Navfoot />
+</MainLayout>

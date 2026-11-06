@@ -72,10 +72,10 @@ export default defineConfig({
   },
 
   redirects: {
-    "/line": "https://tinyurl.com/suhng",
+    "/line": "https://yoalink.com/gf78",
   },
 
-  site: "https://tga99.live",
+  site: "https://m.babyshark8899-brand.com",
   integrations: [
     sitemap({
       // /login, /register and /line are forwarding pages that all ship

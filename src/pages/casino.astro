@@ -1,0 +1,176 @@
+---
+import MainLayout from "../layouts/MainLayout.astro";
+import ContentBox from "../components/ContentBox.astro";
+import Navfoot from "../components/Navfoot.astro";
+import Announcement from "../components/Announcement4.astro";
+import Faq3 from "../components/Faq3.astro";
+import IconTiles from "../components/IconTiles.astro";
+import ProviderCards from "../components/ProviderCards.astro";
+import RuleTable from "../components/RuleTable.astro";
+import CtaBand from "../components/CtaBand.astro";
+import { Picture } from "astro:assets";
+import { pageGraph } from "../lib/schema";
+import imgCasino from "../assets/cat-casino.webp";
+
+const pageTitle = "BABYSHARK8899 คาสิโนสด | บาคาร่า รูเล็ต และแบล็กแจ็ก";
+const pageHeading = "BABYSHARK8899 คาสิโนสด รวมบาคาร่า รูเล็ต และแบล็กแจ็ก";
+const pageDescription =
+  "คาสิโนสด BABYSHARK8899 รวมบาคาร่า รูเล็ต และแบล็กแจ็ก พร้อมภาพตัวอย่างโต๊ะเกม วิธีนับแต้ม กติกา และรายละเอียดเกมแต่ละประเภท เลือกดูเกมที่สนใจได้จากหน้าเดียว";
+
+const faqs = [
+  {
+    q: "โต๊ะบาคาร่าแบบไม่มีค่าคอมมิชชั่นของ BABYSHARK8899 ต่างจากโต๊ะปกติอย่างไร",
+    a: "ต่างกันตรงเงื่อนไขจ่ายรางวัลเมื่อเจ้ามือชนะ โต๊ะมาตรฐานหักค่าคอมมิชชั่น 5% ส่วนโต๊ะ No Commission ไม่หักค่าคอม แต่ถ้าเจ้ามือชนะด้วย 6 แต้มจะจ่ายครึ่งเดียว",
+  },
+  {
+    q: "การวางเดิมพันรูเล็ตแบบวงในกับวงนอกให้ผลตอบแทนต่างกันแค่ไหน",
+    a: "ต่างกันตามความเฉพาะเจาะจง การแทงวงในอย่างเต็งเลขเดี่ยวจ่าย 35 ต่อ 1 ส่วนการแทงวงนอกเช่นสีแดงดำ คู่คี่ หรือสูงต่ำ มีโอกาสถูกกว้างกว่าจึงจ่าย 1 ต่อ 1 ตามกติกามาตรฐาน",
+  },
+  {
+    q: "ไพ่ A ในเกมแบล็กแจ็กมีวิธีคิดแต้มอย่างไรเวลารวมไพ่ในมือ",
+    a: "นับเป็น 1 หรือ 11 แต้มตามค่าที่มือคุณได้เปรียบและไม่บัสต์ เช่นถือคู่กับไพ่ 10 แต้มจะนับเป็น 11 เพื่อให้ครบ 21 แต้ม แต่ถ้ารวมเป็น 11 แล้วเกิน 21 จะปรับเป็น 1 แต้มแทน",
+  },
+  {
+    q: "ก่อนกดเข้าโต๊ะคาสิโนสดสามารถเช็กข้อมูลอะไรของห้องนั้นได้บ้าง",
+    a: "ดูรายชื่อเกม ภาพตัวอย่างโต๊ะ และชื่อค่ายผู้พัฒนาได้ตั้งแต่หน้ารวม เมื่อกดเข้าห้องจะเห็นยอดขั้นต่ำและสูงสุดต่อไม้ รวมถึงตารางเค้าไพ่ย้อนหลังในโต๊ะบาคาร่า",
+  },
+];
+
+const graph = pageGraph(Astro, {
+  name: pageTitle,
+  description: pageDescription,
+  breadcrumb: [
+    { name: "หน้าแรก", path: "/" },
+    { name: "คาสิโนสด", path: "/casino" },
+  ],
+  faqs,
+  primaryImagePath: imgCasino.src,
+});
+
+const gameTypes = [
+  { icon: "cards", name: "บาคาร่า", desc: "ถูกใจคนชอบเปิดไพ่เดินรอบไว แค่ทายฝั่งผู้เล่นหรือเจ้ามือโดยไม่ต้องกดจั่วไพ่เอง" },
+  { icon: "wheel", name: "รูเล็ต", desc: "เหมาะกับคนชอบเลือกเองว่าจะเต็งเลขเดียวหรือทายกลุ่มกว้างๆ" },
+  { icon: "number", name: "แบล็กแจ็ก", desc: "เหมาะกับคนชอบคำนวณและอยากตัดสินใจเองว่าจะขอไพ่เพิ่มหรือหยุดเพื่อสู้แต้มกับดีลเลอร์" },
+];
+
+const baccaratPoints = [
+  { label: "A", value: "1 แต้ม" },
+  { label: "2 ถึง 9", value: "นับตามหน้าไพ่" },
+  { label: "10 J Q K", value: "0 แต้ม" },
+  { label: "แต้มสูงสุด", value: "9 แต้ม", note: "ดูหลักหน่วยของผลรวม" },
+  { label: "ไพ่ป๊อก", value: "8 หรือ 9 แต้มจาก 2 ใบแรก", note: "จบตาทันที ถ้าไม่ใช่ ใบที่ 3 จะจั่วหรือไม่ก็เป็นไปตามกติกาตายตัวของเกม" },
+];
+
+const baccaratTables = [
+  { icon: "cards", name: "โต๊ะมาตรฐาน", desc: "หักค่าคอมมิชชั่น 5% เมื่อทายเจ้ามือถูก", tag: "Commission" },
+  { icon: "check", name: "บาคาร่า No Commission", desc: "ไม่หักค่าคอมมิชชั่น แต่ถ้าเจ้ามือชนะด้วย 6 แต้มจะจ่ายครึ่งเดียว", tag: "No Commission" },
+];
+
+const rouletteRows = [
+  { label: "วงล้อยุโรป", value: "37 ช่อง", note: "มีเลข 0 ถึง 36" },
+  { label: "วงล้ออเมริกัน", value: "38 ช่อง", note: "เพิ่ม 00 คู่กับ 0" },
+  { label: "วงใน", value: "เจาะจงตัวเลข", note: "เต็งเลขเดี่ยวจ่าย 35 ต่อ 1 วางคร่อมเลขคู่ติดกัน แถว 3 ตัว หรือมุม 4 ตัว" },
+  { label: "วงนอก", value: "ทายกลุ่ม จ่าย 1 ต่อ 1", note: "สีแดงหรือดำ คู่หรือคี่ สูง (19 ถึง 36) หรือต่ำ (1 ถึง 18) บนโต๊ะมาตรฐาน รวมถึงแทงโหลและคอลัมน์" },
+  { label: "ลูกเหล็กตกช่อง 0", value: "วงนอกเสีย", note: "ตามกติกามาตรฐาน" },
+];
+
+const blackjackRows = [
+  { label: "เลข 2 ถึง 10", value: "นับตามหน้าไพ่" },
+  { label: "J Q K", value: "10 แต้ม" },
+  { label: "A", value: "1 หรือ 11 แต้ม", note: "ตามที่ได้เปรียบ" },
+  { label: "แบล็กแจ็ก", value: "A คู่กับไพ่ค่า 10 แต้ม", note: "ใน 2 ใบแรก" },
+  { label: "บัสต์", value: "ทะลุ 21 แต้ม", note: "แพ้ทันที เป้าหมายคือทำแต้มใกล้ 21 กว่าดีลเลอร์โดยห้ามเกิน" },
+];
+
+const blackjackActions = [
+  { icon: "plus", name: "Hit", desc: "ขอไพ่เพิ่ม" },
+  { icon: "stop", name: "Stand", desc: "หยุด" },
+  { icon: "double", name: "Double", desc: "ลงเบทเพิ่มเท่าตัวพร้อมรับไพ่ใบเดียว" },
+  { icon: "split", name: "Split", desc: "แยกไพ่คู่เป็น 2 มือ" },
+];
+
+const providers = [
+  { tagline: "ค่ายคาสิโนสด", name: "Allbet", desc: "แสดงรายชื่อเกมและภาพโต๊ะไว้ตั้งแต่หน้ารวม เมื่อกดเข้าโต๊ะจะเห็นยอดขั้นต่ำและสูงสุดต่อไม้ชัดเจน", icon: "cards" },
+  { tagline: "ค่ายคาสิโนสด", name: "Asia Gaming (AG)", desc: "โต๊ะบาคาร่ามีเค้าไพ่ย้อนหลังให้ดู เล่นผ่านเบราว์เซอร์ได้ทั้งมือถือ iOS และ Android หรือคอมโดยไม่ต้องโหลดแอป", icon: "crown" },
+];
+
+const body = "text-left text-base leading-relaxed";
+const inlineLink = "font-bold text-[#4da3ff] underline underline-offset-4 transition-colors hover:text-[#ff5a60]";
+---
+
+<MainLayout title={pageTitle} description={pageDescription}>
+  <script type="application/ld+json" set:html={graph} />
+
+  <Announcement />
+
+  <ContentBox title={pageHeading} as="h1">
+    <div class="flex flex-col gap-5 sm:flex-row sm:items-center">
+      <span class="shrink-0 self-start rounded-full bg-gradient-to-br from-[#0b7cf4] via-[#4da3ff] to-[#e8202a] p-[3px] shadow-[0_0_30px_rgba(11,124,244,0.45)]">
+        <Picture
+          src={imgCasino}
+          alt="สาวในชุดกี่เพ้าสีแดงชูไพ่ ข้างลูกเต๋าและหีบชิปทอง"
+          loading="eager"
+          decoding="async"
+          widths={[128, 192, 256]}
+          sizes="112px"
+          formats={["avif", "webp"]}
+          fallbackFormat="webp"
+          quality={74}
+          class="h-24 w-24 rounded-full object-cover sm:h-28 sm:w-28"
+        />
+      </span>
+      <p class={body}>
+        BABYSHARK8899 คาสิโนสดจัดโต๊ะหลักไว้ให้คุณดูได้จากหน้าเดียว เราวางโต๊ะบาคาร่า วงล้อรูเล็ต และโต๊ะแบล็กแจ็กพร้อมภาพตัวอย่าง ให้เห็นบรรยากาศก่อนเลือก ใครอยากทบทวนวิธีนับแต้มหรือกติกาพื้นฐาน เราสรุปแยกตามเกมไว้ให้แล้ว
+      </p>
+    </div>
+  </ContentBox>
+
+  <ContentBox as="h2" title="ประเภทเกมคาสิโนสด BABYSHARK8899 รวมบาคาร่า รูเล็ต และแบล็กแจ็ก">
+    <p class={`${body} mb-6`}>
+      ผู้เล่นแต่ละคนถนัดจังหวะต่างกัน เราจึงแยกเกมเป็นสามกลุ่ม บาคาร่าถูกใจคนชอบเปิดไพ่เดินรอบไว แค่ทายฝั่งผู้เล่นหรือเจ้ามือโดยไม่ต้องกดจั่วไพ่เอง รูเล็ตเหมาะกับคนชอบเลือกเองว่าจะเต็งเลขเดียวหรือทายกลุ่มกว้างๆ ขณะที่แบล็กแจ็กเหมาะกับคนชอบคำนวณและอยากตัดสินใจเองว่าจะขอไพ่เพิ่มหรือหยุดเพื่อสู้แต้มกับดีลเลอร์
+    </p>
+    <IconTiles items={gameTypes} cols={3} />
+  </ContentBox>
+
+  <ContentBox as="h2" title="บาคาร่า BABYSHARK8899 เกมไพ่ยอดนิยม พร้อมรูปแบบโต๊ะและกติกา">
+    <p class={`${body} mb-4`}>
+      จุดเด่นของบาคาร่าคือความกระชับ ดีลเลอร์แจกไพ่ฝั่งผู้เล่น (Player) กับเจ้ามือ (Banker) ฝั่งละ 2 ใบ คุณลงเบทได้ทั้งสองฝั่งหรือช่องเสมอ (Tie)
+    </p>
+    <p class={`${body} mb-6`}>
+      การนับแต้มดูหลักหน่วยของผลรวม โดย A นับ 1 แต้ม เลข 2 ถึง 9 นับตามหน้าไพ่ ส่วน 10 J Q K นับ 0 แต้ม แต้มสูงสุดคือ 9 หาก 2 ใบแรกได้ 8 หรือ 9 แต้มคือไพ่ป๊อกและจบตาทันที ถ้าไม่ใช่ ใบที่ 3 จะจั่วหรือไม่ก็เป็นไปตามกติกาตายตัวของเกม รูปแบบโต๊ะมีทั้งบาคาร่าโต๊ะมาตรฐานที่หักค่าคอมมิชชั่น 5% เมื่อทายเจ้ามือถูก และบาคาร่า No Commission ที่ไม่หักค่าคอมมิชชั่น แต่ถ้าเจ้ามือชนะด้วย 6 แต้มจะจ่ายครึ่งเดียว
+    </p>
+    <div class="grid grid-cols-1 gap-4 lg:grid-cols-2">
+      <RuleTable title="การนับแต้มบาคาร่า" rows={baccaratPoints} footnote="ช่องเดิมพัน: ผู้เล่น (Player) · เจ้ามือ (Banker) · เสมอ (Tie)" />
+      <IconTiles items={baccaratTables} cols={2} kicker="รูปแบบโต๊ะ" title="โต๊ะมาตรฐานกับโต๊ะ No Commission" class="lg:[&>ul]:grid-cols-1" />
+    </div>
+  </ContentBox>
+
+  <ContentBox as="h2" title="รูเล็ต BABYSHARK8899 เกมวงล้อเสี่ยงโชค พร้อมรูปแบบการเดิมพัน">
+    <p class={`${body} mb-6`}>
+      รูเล็ตลุ้นว่าลูกเหล็กจะตกช่องไหน วงล้อมีสองแบบคือวงล้อยุโรป 37 ช่อง มีเลข 0 ถึง 36 และวงล้ออเมริกัน 38 ช่องที่เพิ่ม 00 คู่กับ 0 การวางชิปแบ่งเป็นการเดิมพันวงในและวงนอก วงในคือเจาะจงตัวเลข เช่น เต็งเลขเดี่ยวจ่าย 35 ต่อ 1 วางคร่อมเลขคู่ติดกัน แถว 3 ตัว หรือมุม 4 ตัว ส่วนวงนอกคือทายกลุ่ม เช่น สีแดงหรือดำ คู่หรือคี่ และสูง (19 ถึง 36) หรือต่ำ (1 ถึง 18) ซึ่งจ่าย 1 ต่อ 1 บนโต๊ะมาตรฐาน รวมถึงแทงโหลและคอลัมน์ หากลูกเหล็กตกช่อง 0 การแทงวงนอกจะเสียตามกติกามาตรฐาน
+    </p>
+    <RuleTable title="วงล้อและรูปแบบการเดิมพันรูเล็ต" rows={rouletteRows} />
+  </ContentBox>
+
+  <ContentBox as="h2" title="แบล็กแจ็ก BABYSHARK8899 เกมไพ่ 21 แต้ม พร้อมกติกาการเล่น">
+    <p class={`${body} mb-6`}>
+      ที่โต๊ะแบล็กแจ็ก คุณบริหารแต้มสู้กับเจ้ามือเอง เป้าหมายคือทำแต้มใกล้ 21 แต้มกว่าดีลเลอร์โดยห้ามเกิน หากทะลุ 21 แต้มถือว่าบัสต์และแพ้ทันที วิธีนับแต้มคิดเลข 2 ถึง 10 ตามหน้าไพ่ ส่วน J Q K นับ 10 แต้ม สำหรับ A นับ 1 หรือ 11 แต้มตามที่ได้เปรียบ หากไพ่ 2 ใบแรกได้ A คู่กับไพ่ค่า 10 แต้มเรียกว่าแบล็กแจ็ก เมื่อเห็นไพ่แล้วมีตัวเลือกสี่แบบคือ Hit ขอไพ่เพิ่ม Stand หยุด Double ลงเบทเพิ่มเท่าตัวพร้อมรับไพ่ใบเดียว และ Split แยกไพ่คู่เป็น 2 มือ ส่วนเจ้ามือจั่วตามกติกาตายตัวของโต๊ะ
+    </p>
+    <div class="grid grid-cols-1 gap-4 lg:grid-cols-2">
+      <RuleTable title="การนับแต้มแบล็กแจ็ก" rows={blackjackRows} footnote="เจ้ามือจั่วตามกติกาตายตัวของโต๊ะ" />
+      <IconTiles items={blackjackActions} cols={2} kicker="ตัวเลือกเมื่อเห็นไพ่" title="Hit · Stand · Double · Split" />
+    </div>
+  </ContentBox>
+
+  <ContentBox as="h2" title="เลือกโต๊ะคาสิโนสด BABYSHARK8899 พร้อมดูรายละเอียดก่อนเข้าเล่น">
+    <p class={`${body} mb-6`}>
+      เพื่อให้เลือกห้องได้ง่าย เราแสดงรายชื่อเกม ภาพโต๊ะ และชื่อค่ายอย่าง Allbet กับ Asia Gaming (AG) ไว้ตั้งแต่หน้ารวม เมื่อกดเข้าโต๊ะจะเห็นยอดขั้นต่ำและสูงสุดต่อไม้ชัดเจน โดยโต๊ะบาคาร่ามีเค้าไพ่ย้อนหลังให้ดูด้วย เล่นผ่านเบราว์เซอร์ได้ทั้งมือถือ iOS และ Android หรือคอมโดยไม่ต้องโหลดแอป สมาชิกเดิมล็อกอินผ่าน <a href="/ทางเข้า/" class={inlineLink}>ทางเข้า BABYSHARK8899</a> ด้วยรหัสเดิมได้ทุกเครื่อง ส่วนคนใหม่กด <a href="/register/" class={inlineLink}>สมัคร BABYSHARK8899</a> บนหน้าเว็บได้ทันที สงสัยตรงไหนติดต่อแอดมินผ่านช่องทางบนหน้าเว็บ
+    </p>
+    <ProviderCards items={providers} cols={2} class="mb-6" />
+    <CtaBand title="เข้าโต๊ะคาสิโนสด BABYSHARK8899" text="ดูรายชื่อเกม ภาพโต๊ะ และชื่อค่ายได้จากหน้ารวม เมื่อเข้าห้องจะเห็นยอดขั้นต่ำและสูงสุดต่อไม้" />
+  </ContentBox>
+
+  <Faq3 title="คำถามที่พบบ่อยเกี่ยวกับคาสิโนสด BABYSHARK8899" faqs={faqs} />
+
+  <Navfoot />
+</MainLayout>

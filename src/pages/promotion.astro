@@ -2,7 +2,7 @@
 import MainLayout from "../layouts/MainLayout.astro";
 import ContentBox from "../components/ContentBox.astro";
 import Navfoot from "../components/Navfoot.astro";
-import Announcement from "../components/Announcement6.astro";
+import Announcement from "../components/Announcement4.astro";
 
 import { Picture } from "astro:assets";
 
@@ -10,14 +10,15 @@ import pro1 from "../assets/slide1.png";
 import pro2 from "../assets/slide2.png";
 import pro3 from "../assets/slide3.png";
 import pro4 from "../assets/slide4.png";
+import pro5 from "../assets/slide5.png";
 import { pageGraph } from "../lib/schema";
 
-const pageTitle = "โปรโมชั่น TGA99 | โปรสมาชิกใหม่ ฝากถอนออโต้เริ่ม 20 บาท";
+const pageTitle = "โปรโมชั่น BABYSHARK8899 โบนัสฝาก 10% และ 50% แนะนำเพื่อน คอมมิชชั่นคืนยอดเล่น";
 
-const pageHeading = "โปรโมชั่น TGA99 โปรสมาชิกใหม่ เช็กเงื่อนไขก่อนรับ";
+const pageHeading = "โปรโมชั่น BABYSHARK8899 โบนัสฝาก แนะนำเพื่อน และคอมมิชชั่นคืนยอดเล่นทุกวัน";
 
 const pageDescription =
-  "โปรโมชั่น TGA99 โปรสมาชิกใหม่สำหรับคนเปิดยูสครั้งแรก เช็กเงื่อนไขยอดฝาก เทิร์น และเกมที่นับยอดก่อนรับ ฝากถอนออโต้เริ่ม 20 บาท รองรับทุกธนาคารและทรูวอเลท";
+  "โปรโมชั่น BABYSHARK8899 โบนัสฝากเพิ่ม 10% สูงสุด 500 บาท โบนัสฝาก 50% สูงสุด 10,000 บาท แนะนำเพื่อนรับ 0.8% และคอมมิชชั่น 0.3% คืนทุกยอดเล่น เงื่อนไขอยู่บนภาพ";
 
 const graph = pageGraph(Astro, {
   name: pageTitle,
@@ -29,8 +30,31 @@ const graph = pageGraph(Astro, {
   primaryImagePath: pro1.src,
 });
 
+const promos = [
+  {
+    src: pro1,
+    alt: "โปรโมชั่น BABYSHARK8899 ฝากรับโบนัสเพิ่ม 10% จากทุกยอดบิลฝาก มูลค่าสูงสุด 500 บาท ครอบคลุมสมาชิกเก่าและใหม่ ยอดฝากขั้นต่ำ 100 บาทต่อบิล ทำเทิร์น 8 เท่า ถอนสูงสุด 5 เท่า แจ้งแอดมินได้ตลอด 24 ชั่วโมง",
+  },
+  {
+    src: pro2,
+    alt: "โปรโมชั่น BABYSHARK8899 โบนัสฝาก 50% ฝาก 1,000 บาทขึ้นไป รับโบนัส 50% สูงสุด 10,000 บาท ทำเทิร์น 5 เท่า ถอนสูงสุด 2 เท่า",
+  },
+  {
+    src: pro3,
+    alt: "BABYSHARK8899 หวย อัตราจ่ายที่ดีที่สุด 3 ตัว บาทละ 1000 และ 2 ตัว บาทละ 100 ถูกตรง จ่ายจริง รับเงินรางวัลหลักล้าน ครบจบเรื่องหวยในเว็บเดียว ทั้งรัฐบาล ลาว ฮานอย หุ้น ยี่กี พรีเซนเตอร์หญิงในแจ็คเก็ตหนังสีดำ",
+  },
+  {
+    src: pro4,
+    alt: "BABYSHARK8899 แนะนำเพื่อนรับ 0.8% สร้างรายได้ 100,000 บาทต่อเดือน พรีเซนเตอร์หญิงสองคนในแจ็คเก็ตหนังและกระโปรงสีแดง",
+  },
+  {
+    src: pro5,
+    alt: "BABYSHARK8899 คอมมิชชั่น 0.3% คืนทุกยอดเล่นตลอดทั้งวัน เล่นถึง 50% ถอนได้เลย กดรับได้ที่หน้าเว็บ รับสิทธิ์ก่อน 23.59 น. ของทุกวัน ยิ่งเล่นเยอะ ยิ่งได้เยอะ",
+  },
+];
+
 const promoClass =
-  "mx-auto h-auto w-full rounded-xl border border-[#5a1a60] object-contain shadow-[0_10px_30px_rgba(0,0,0,0.35)] transition-all duration-300 hover:-translate-y-1 hover:border-[#8a2f8f] hover:shadow-[0_15px_40px_rgba(193,63,196,0.35)]";
+  "mx-auto h-auto w-full rounded-xl border border-[#1a4a9c] object-contain shadow-[0_10px_30px_rgba(0,0,0,0.35)] transition-all duration-300 hover:-translate-y-1 hover:border-[#2f7bff] hover:shadow-[0_15px_40px_rgba(11,124,244,0.35)]";
 ---
 
 <MainLayout title={pageTitle} description={pageDescription}>
@@ -40,76 +64,38 @@ const promoClass =
 
   <ContentBox title={pageHeading} as="h1">
     <p class="mb-4 text-left text-base leading-relaxed">
-      หากคุณกำลังมองหาจุดเริ่มที่คุ้มตั้งแต่วันแรก <strong>TGA99</strong> พร้อมมอบโปรสมาชิกใหม่ให้คนเปิดยูสครั้งแรก คู่กับระบบฝากถอนออโต้ที่เริ่มได้ตั้งแต่ 20 บาท ทั้งทุกธนาคารและ TrueMoney Wallet
+      หากกำลังมองหาโบนัสที่เลือกให้ตรงกับจังหวะเล่นของตัวเอง <strong class="text-[#4da3ff]">BABYSHARK8899</strong> พร้อมมอบโปรโมชั่นทั้งโบนัสฝาก แนะนำเพื่อน และคอมมิชชั่นคืนยอดเล่น รวมไว้ให้ดูครบในหน้าเดียว
     </p>
 
     <p class="mb-8 text-left text-base leading-relaxed">
-      แต่ละโปรมีเงื่อนไขของตัวเอง เช็กก่อนรับว่ามีเงื่อนไขยอดฝากไหม ต้องทำเทิร์นหรือไม่ และนับยอดจากเกมไหน ไม่แน่ใจทักแอดมินได้ตลอด 24 ชม. เพื่อวางแผนถอนได้ตั้งแต่ก่อนฝาก
+      แต่ละรายการระบุยอดรับ เทิร์น และเพดานถอนไว้บนภาพของตัวเอง เงื่อนไขจึงต่างกันไปตามโปร ดูให้ตรงกับตัวที่จะรับ ไม่แน่ใจทักแอดมินผ่านช่องทางบนหน้าเว็บได้เลย
     </p>
 
     <div class="grid w-full grid-cols-1 gap-6 sm:grid-cols-2">
-      <Picture
-        src={pro1}
-        alt="TGA99 สมาชิกใหม่ เริ่มต้นง่าย สมัครสะดวก พร้อมสนุกได้ทันที สมัครง่าย ระบบเสถียร พร้อมดูแล ปุ่มสมัครสมาชิก"
-        loading="lazy"
-        fetchpriority="low"
-        widths={[400, 600]}
-        sizes="(max-width: 768px) 100vw, 50vw"
-        class={promoClass}
-        decoding="async"
-        formats={["avif", "webp"]}
-        fallbackFormat="webp"
-        quality={80}
-      />
-
-      <Picture
-        src={pro2}
-        alt="TGA99 สนุกครบ ทุกสไตล์ รวมเกมยอดนิยมไว้ในที่เดียว เกมยอดนิยม ใช้งานสะดวก เลือกได้ครบ ปุ่มเริ่มสนุก"
-        loading="lazy"
-        fetchpriority="low"
-        widths={[400, 600]}
-        sizes="(max-width: 768px) 100vw, 50vw"
-        class={promoClass}
-        decoding="async"
-        formats={["avif", "webp"]}
-        fallbackFormat="webp"
-        quality={80}
-      />
-
-      <Picture
-        src={pro3}
-        alt="TGA99 มั่นใจ ทุกการใช้งาน ระบบเสถียร ใช้งานลื่นไหล มั่นคง ทันสมัย รวดเร็ว ปุ่มสมัครเลย"
-        loading="lazy"
-        fetchpriority="low"
-        widths={[400, 600]}
-        sizes="(max-width: 768px) 100vw, 50vw"
-        class={promoClass}
-        decoding="async"
-        formats={["avif", "webp"]}
-        fallbackFormat="webp"
-        quality={80}
-      />
-
-      <Picture
-        src={pro4}
-        alt="TGA99 พร้อมดูแล ทุกขั้นตอน บริการรวดเร็ว เป็นกันเอง ตอบไว ใส่ใจ พร้อมดูแล ปุ่มติดต่อเรา"
-        loading="lazy"
-        fetchpriority="low"
-        widths={[400, 600]}
-        sizes="(max-width: 768px) 100vw, 50vw"
-        class={promoClass}
-        decoding="async"
-        formats={["avif", "webp"]}
-        fallbackFormat="webp"
-        quality={80}
-      />
+      {
+        promos.map((promo) => (
+          <Picture
+            src={promo.src}
+            alt={promo.alt}
+            loading="lazy"
+            fetchpriority="low"
+            widths={[400, 600]}
+            sizes="(max-width: 768px) 100vw, 50vw"
+            class={promoClass}
+            decoding="async"
+            formats={["avif", "webp"]}
+            fallbackFormat="webp"
+            quality={70}
+          />
+        ))
+      }
     </div>
 
     <div class="mt-12 flex justify-center pb-4">
       <a
         href="/register/"
-        class="flex items-center justify-center rounded-xl bg-gradient-to-b from-[#e061e3] to-[#9c2193] px-10 py-3.5 text-lg font-black text-white shadow-[0_10px_30px_rgba(193,63,196,0.35)] transition-all hover:scale-105 hover:brightness-110 hover:shadow-[0_15px_40px_rgba(193,63,196,0.45)]">
-        สมัครสมาชิก TGA99
+        class="flex items-center justify-center rounded-xl bg-gradient-to-b from-[#4da3ff] to-[#0554b8] px-10 py-3.5 text-lg font-black text-white shadow-[0_10px_30px_rgba(11,124,244,0.35)] transition-all hover:scale-105 hover:brightness-110 hover:shadow-[0_15px_40px_rgba(11,124,244,0.45)]">
+        สมัครสมาชิก BABYSHARK8899
       </a>
     </div>
   </ContentBox>

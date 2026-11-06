@@ -10,24 +10,24 @@ const currentPath = Astro.url.pathname;
 
 const isActive = (path: string) => isActivePath(currentPath, path);
 
-const affUrl = "https://yoalink.com/22hs";
+const affUrl = "https://yoalink.com/gf78";
 
 const links = [
   { name: "หน้าแรก", path: "/", icon: "🏠" },
   { name: "โปรโมชั่น", path: "/promotion/", icon: "🎁" },
   { name: "ทดลองเล่น", path: "/ทดลองเล่น/", icon: "🎰" },
   { name: "วิธีฝากถอน", path: "/วิธีฝากถอน/", icon: "💳" },
-  { name: "เกี่ยวกับเรา", path: "/about-us/", icon: "👑" },
+  { name: "เกี่ยวกับเรา", path: "/about-us/", icon: "🦈" },
   { name: "ติดต่อเรา", path: "/contact-us/", icon: "💬" },
 ];
 
-const logoAlt = "โลโก้ Supreme888 ตัวอักษรเอียงสีขาวบนกล่องสี่เหลี่ยมสีแดง";
+const logoAlt = "โลโก้ BABYSHARK8899 หัวฉลามการ์ตูนสีฟ้าฟันแหลมในวงกลมสีแดง ตัวอักษร BABY สีแดง SHARK สีขาวเงิน และเลข 8899 สีฟ้าขอบดำ มีลายสาดสีแดงและน้ำเงินด้านหลัง";
 ---
 
 <header class="sticky top-4 z-50 w-full px-4 font-sans">
   <nav
-    aria-label="เมนูหลัก SUPREME888"
-    class="mx-auto flex h-[70px] w-full max-w-[1600px] items-center justify-between gap-3 rounded-full border border-[#f1d2d3] bg-white px-5 shadow-[0_8px_24px_rgba(20,20,20,0.08),0_0_0_3px_rgba(236,27,36,0.06)] xl:px-8">
+    aria-label="เมนูหลัก BABYSHARK8899"
+    class="mx-auto flex h-[70px] w-full max-w-[1600px] items-center justify-between gap-3 rounded-full border border-[#1a4a9c] bg-[#041a45]/95 px-5 shadow-[0_8px_24px_rgba(0,0,0,0.45),0_0_0_3px_rgba(11,124,244,0.10)] xl:px-8">
     <a href="/" class="z-50 flex-shrink-0 transition-transform hover:scale-105">
       {
         mainLogo ? (
@@ -38,12 +38,16 @@ const logoAlt = "โลโก้ Supreme888 ตัวอักษรเอีย
             sizes="120px"
             loading="eager"
             fetchpriority="high"
-            class="h-[40px] w-auto shadow-[0_4px_12px_rgba(236,27,36,0.25)] xl:h-[46px]"
+            class="h-[44px] w-auto drop-shadow-[0_4px_12px_rgba(11,124,244,0.45)] xl:h-[52px]"
             formats={["avif", "webp"]}
             fallbackFormat="webp"
           />
         ) : (
-          <span class="bg-[#ec1b24] px-3 py-1 text-2xl font-black tracking-wide text-white italic">SUPREME888</span>
+          <span class="text-2xl font-black tracking-wide italic">
+            <span class="text-[#ff5a60]">BABY</span>
+            <span class="text-white">SHARK</span>
+            <span class="text-[#4da3ff]">8899</span>
+          </span>
         )
       }
     </a>
@@ -53,14 +57,14 @@ const logoAlt = "โลโก้ Supreme888 ตัวอักษรเอีย
         links.map((item) => (
           <a
             href={item.path}
-            class={`group relative flex h-full items-center gap-1.5 text-sm font-bold whitespace-nowrap transition-colors xl:text-base ${isActive(item.path) ? "text-[#ec1b24]" : "text-[#141414] hover:text-[#b5121a]"}`}>
+            class={`group relative flex h-full items-center gap-1.5 text-sm font-bold whitespace-nowrap transition-colors xl:text-base ${isActive(item.path) ? "text-[#4da3ff]" : "text-[#dbe9ff] hover:text-white"}`}>
             <span aria-hidden="true" class="text-base">
               {item.icon}
             </span>
             <span>{item.name}</span>
             <div
               aria-hidden="true"
-              class={`absolute bottom-[15px] left-0 h-[3px] w-full origin-left rounded-full bg-gradient-to-r from-[#ff4d55] to-[#b5121a] transition-transform duration-300 ${isActive(item.path) ? "scale-x-100" : "scale-x-0 group-hover:scale-x-100"}`}
+              class={`absolute bottom-[15px] left-0 h-[3px] w-full origin-left rounded-full bg-gradient-to-r from-[#4da3ff] to-[#e8202a] transition-transform duration-300 ${isActive(item.path) ? "scale-x-100" : "scale-x-0 group-hover:scale-x-100"}`}
             />
           </a>
         ))
@@ -71,30 +75,30 @@ const logoAlt = "โลโก้ Supreme888 ตัวอักษรเอีย
       <a
         href={affUrl}
         rel="nofollow sponsored"
-        class="hidden items-center justify-center gap-1.5 rounded-full bg-[#141414] px-4 py-2 text-sm font-bold whitespace-nowrap text-white transition-all hover:bg-[#2b2627] lg:flex xl:px-5">
+        class="hidden items-center justify-center gap-1.5 rounded-full border border-[#2f7bff]/60 bg-[#0a2a66] px-4 py-2 text-sm font-bold whitespace-nowrap text-white transition-all hover:border-[#4da3ff] hover:bg-[#0554b8] lg:flex xl:px-5">
         <span aria-hidden="true">🔑</span> เข้าสู่ระบบ
       </a>
       <a
         href={affUrl}
         rel="nofollow sponsored"
-        class="hidden items-center justify-center gap-1.5 rounded-full bg-gradient-to-b from-[#ff4d55] to-[#d0121b] px-4 py-2 text-sm font-extrabold whitespace-nowrap text-white shadow-[0_4px_14px_rgba(236,27,36,0.35)] transition-all hover:scale-105 lg:flex xl:px-6">
+        class="hidden items-center justify-center gap-1.5 rounded-full bg-gradient-to-b from-[#ff5a60] to-[#b0121a] px-4 py-2 text-sm font-extrabold whitespace-nowrap text-white shadow-[0_4px_14px_rgba(232,32,42,0.40)] transition-all hover:scale-105 lg:flex xl:px-6">
         <span aria-hidden="true">📝</span> สมัครสมาชิก
       </a>
 
       <button id="hamburger-btn" class="relative flex h-[40px] w-[40px] flex-col items-end justify-center gap-[6px] p-2 xl:hidden" aria-label="เปิดเมนู">
-        <span class="line-1 h-[2px] w-6 origin-center rounded-full bg-[#141414] transition-all duration-300"></span>
-        <span class="line-2 h-[2px] w-4 origin-center rounded-full bg-[#ec1b24] transition-all duration-300"></span>
+        <span class="line-1 h-[2px] w-6 origin-center rounded-full bg-[#dbe9ff] transition-all duration-300"></span>
+        <span class="line-2 h-[2px] w-4 origin-center rounded-full bg-[#e8202a] transition-all duration-300"></span>
       </button>
     </div>
   </nav>
 
-  <div id="fullscreen-menu" class="pointer-events-none fixed inset-0 z-[60] flex flex-col items-center justify-center bg-[#fcfcfc] opacity-0 transition-opacity duration-500">
+  <div id="fullscreen-menu" class="pointer-events-none fixed inset-0 z-[60] flex flex-col items-center justify-center bg-[#010d28]/98 opacity-0 transition-opacity duration-500">
     <div class="flex w-full flex-col items-center space-y-5 px-6">
       {
         links.map((item) => (
           <a
             href={item.path}
-            class={`fs-item flex items-center gap-3 text-2xl font-black tracking-widest uppercase transition-all duration-300 ${isActive(item.path) ? "text-[#ec1b24]" : "text-[#141414] hover:text-[#b5121a]"}`}>
+            class={`fs-item flex items-center gap-3 text-2xl font-black tracking-widest uppercase transition-all duration-300 ${isActive(item.path) ? "text-[#4da3ff]" : "text-[#dbe9ff] hover:text-white"}`}>
             <span aria-hidden="true" class="text-2xl">
               {item.icon}
             </span>
@@ -107,13 +111,13 @@ const logoAlt = "โลโก้ Supreme888 ตัวอักษรเอีย
         <a
           href={affUrl}
           rel="nofollow sponsored"
-          class="flex w-full items-center justify-center gap-2 rounded-full bg-gradient-to-b from-[#ff4d55] to-[#d0121b] py-3.5 text-lg font-extrabold text-white shadow-[0_6px_20px_rgba(236,27,36,0.35)]">
+          class="flex w-full items-center justify-center gap-2 rounded-full bg-gradient-to-b from-[#ff5a60] to-[#b0121a] py-3.5 text-lg font-extrabold text-white shadow-[0_6px_20px_rgba(232,32,42,0.40)]">
           <span aria-hidden="true">📝</span> สมัครสมาชิก
         </a>
         <a
           href={affUrl}
           rel="nofollow sponsored"
-          class="flex w-full items-center justify-center gap-2 rounded-full bg-[#141414] py-3.5 text-lg font-bold text-white transition-colors hover:bg-[#2b2627]">
+          class="flex w-full items-center justify-center gap-2 rounded-full border border-[#2f7bff]/60 bg-[#0a2a66] py-3.5 text-lg font-bold text-white transition-colors hover:bg-[#0554b8]">
           <span aria-hidden="true">🔑</span> เข้าสู่ระบบ
         </a>
       </div>

@@ -1,0 +1,43 @@
+---
+import { BRAND_NAME } from "../lib/brandProfile";
+
+export interface Props {
+  title?: string;
+  text?: string;
+  class?: string;
+}
+
+const {
+  title = `ทางเข้า ${BRAND_NAME} บนมือถือและคอมพิวเตอร์`,
+  text = "เล่นผ่านเบราว์เซอร์ได้ทั้ง iOS Android และคอม ไม่ต้องโหลดแอป ยูสเดิมล็อกอินได้ทุกเครื่อง",
+  class: className = "",
+} = Astro.props;
+---
+
+<div class={`relative overflow-hidden rounded-[22px] bg-gradient-to-br from-[#2b95ff]/70 via-[#1a4a9c]/40 to-[#e8202a]/60 p-px shadow-[0_14px_36px_rgba(0,0,0,0.4)] ${className}`}>
+  <div class="relative flex flex-col items-center gap-5 rounded-[21px] bg-[#041a45] px-5 py-7 text-center sm:px-8">
+    <div aria-hidden="true" class="pointer-events-none absolute -top-24 left-1/2 h-56 w-[28rem] -translate-x-1/2 rounded-full bg-[#0b7cf4]/25 blur-3xl"></div>
+    <p class="relative text-xl font-black text-white sm:text-2xl">{title}</p>
+    <p class="relative max-w-2xl text-sm leading-relaxed text-[#b9cdf0] sm:text-base">{text}</p>
+    <div class="relative flex flex-wrap justify-center gap-3">
+      <a
+        href="/register/"
+        class="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-[#e8202a] to-[#ff4b55] px-6 py-3 text-sm font-extrabold text-white shadow-[0_10px_26px_rgba(232,32,42,0.45)] transition-transform hover:-translate-y-0.5"
+      >
+        สมัคร {BRAND_NAME} <span aria-hidden="true">→</span>
+      </a>
+      <a
+        href="/ทางเข้า/"
+        class="inline-flex items-center gap-2 rounded-full border border-[#4da3ff]/60 bg-[#06204f] px-6 py-3 text-sm font-extrabold text-[#dbe9ff] transition-all hover:border-[#4da3ff] hover:bg-[#0b7cf4] hover:text-white"
+      >
+        ทางเข้า {BRAND_NAME}
+      </a>
+      <a
+        href="/login/"
+        class="inline-flex items-center gap-2 rounded-full border border-[#1a4a9c] px-6 py-3 text-sm font-bold text-[#9fb8dc] transition-all hover:border-[#4da3ff] hover:text-white"
+      >
+        เข้าสู่ระบบ
+      </a>
+    </div>
+  </div>
+</div>

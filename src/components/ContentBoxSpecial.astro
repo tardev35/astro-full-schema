@@ -10,33 +10,33 @@ const { title, as: HeadingTag = "h2", iconleft = "🔍", iconright = "🛡️" }
 
 <section class="relative z-10 mx-auto mb-10 w-full max-w-[1400px] px-4 font-sans">
   <div
-    class="group relative isolate w-full overflow-hidden rounded-3xl border border-[#f1d2d3] bg-white p-6 text-[#2b2627] shadow-[0_10px_30px_rgba(20,20,20,0.06)] transition-all duration-500 hover:border-[#e9b7b9] hover:shadow-[0_15px_40px_rgba(236,27,36,0.12)] md:p-10">
+    class="group relative isolate w-full overflow-hidden rounded-3xl border border-[#1a4a9c] bg-[#041a45] p-6 text-[#dbe9ff] shadow-[0_10px_30px_rgba(0,0,0,0.35)] transition-all duration-500 hover:border-[#2f7bff] hover:shadow-[0_15px_40px_rgba(11,124,244,0.22)] md:p-10">
     <div
       aria-hidden="true"
-      class="pointer-events-none absolute top-0 left-1/2 -z-10 h-[3px] w-1/2 -translate-x-1/2 bg-gradient-to-r from-transparent via-[#ec1b24] to-transparent opacity-70 transition-opacity duration-500 group-hover:opacity-100">
+      class="pointer-events-none absolute top-0 left-1/2 -z-10 h-[3px] w-1/2 -translate-x-1/2 bg-gradient-to-r from-transparent via-[#4da3ff] to-transparent opacity-70 transition-opacity duration-500 group-hover:opacity-100">
     </div>
 
     {
       title && (
-        <header class="mb-8 flex items-center gap-4 border-b border-[#f1d2d3] pb-4">
-          <div aria-hidden="true" class="h-8 w-1.5 shrink-0 rounded-full bg-gradient-to-b from-[#ff4d55] to-[#b5121a]" />
-          <HeadingTag class="text-2xl leading-normal font-black tracking-wide text-[#141414]">{title}</HeadingTag>
+        <header class="mb-8 flex items-center gap-4 border-b border-[#1a4a9c] pb-4">
+          <div aria-hidden="true" class="h-8 w-1.5 shrink-0 rounded-full bg-gradient-to-b from-[#4da3ff] to-[#0554b8]" />
+          <HeadingTag class="text-2xl leading-normal font-black tracking-wide text-white">{title}</HeadingTag>
         </header>
       )
     }
 
     <div class="grid grid-cols-1 gap-6 lg:grid-cols-2 lg:gap-10">
       <article
-        class="relative flex gap-4 rounded-2xl border border-[#f1d2d3] bg-[#fff5f5] p-6 text-left text-base leading-relaxed text-[#2b2627] transition-all duration-300 hover:-translate-y-2 hover:border-[#e9b7b9] hover:bg-[#fde8e9] hover:shadow-[0_15px_40px_rgba(236,27,36,0.12)]">
-        <div aria-hidden="true" class="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-gradient-to-b from-[#ff4d55] to-[#d0121b] text-2xl shadow-[0_5px_15px_rgba(236,27,36,0.18)]">
+        class="relative flex flex-col gap-4 rounded-2xl border border-[#1a4a9c] bg-[#06204f] p-5 sm:flex-row sm:p-6 text-left text-base leading-relaxed text-[#dbe9ff] transition-all duration-300 hover:-translate-y-2 hover:border-[#2f7bff] hover:bg-[#0a2a66] hover:shadow-[0_15px_40px_rgba(11,124,244,0.22)]">
+        <div aria-hidden="true" class="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-gradient-to-b from-[#4da3ff] to-[#0554b8] text-2xl shadow-[0_5px_15px_rgba(11,124,244,0.35)]">
           {iconleft}
         </div>
         <slot name="left" />
       </article>
 
       <article
-        class="relative flex gap-4 rounded-2xl border border-[#f1d2d3] bg-[#fff5f5] p-6 text-left text-base leading-relaxed text-[#2b2627] transition-all duration-300 hover:-translate-y-2 hover:border-[#e9b7b9] hover:bg-[#fde8e9] hover:shadow-[0_15px_40px_rgba(236,27,36,0.12)]">
-        <div aria-hidden="true" class="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-[#141414] text-2xl shadow-[0_5px_15px_rgba(20,20,20,0.06)]">
+        class="relative flex flex-col gap-4 rounded-2xl border border-[#1a4a9c] bg-[#06204f] p-5 sm:flex-row sm:p-6 text-left text-base leading-relaxed text-[#dbe9ff] transition-all duration-300 hover:-translate-y-2 hover:border-[#2f7bff] hover:bg-[#0a2a66] hover:shadow-[0_15px_40px_rgba(11,124,244,0.22)]">
+        <div aria-hidden="true" class="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-gradient-to-b from-[#ff5a60] to-[#b0121a] text-2xl shadow-[0_5px_15px_rgba(232,32,42,0.35)]">
           {iconright}
         </div>
         <slot name="right" />

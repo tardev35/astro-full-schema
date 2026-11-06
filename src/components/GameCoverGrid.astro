@@ -1,0 +1,80 @@
+---
+import { Picture } from "astro:assets";
+import type { ImageMetadata } from "astro";
+
+export interface GameCover {
+  name: string;
+  img: ImageMetadata;
+  alt: string;
+}
+
+export interface Props {
+  heading: string;
+  sub?: string;
+  provider: string;
+  items: GameCover[];
+  href?: string;
+  moreHref?: string;
+  moreText?: string;
+  as?: "h2" | "h3" | "p";
+}
+
+const { heading, sub, provider, items, href = "/register/", moreHref, moreText = "เข้าเล่นทุกเกม", as: HeadingTag = "p" } = Astro.props;
+---
+
+<section class="relative z-10 mx-auto w-full max-w-[1400px] px-4 py-2 font-sans">
+  <div class="mb-5 flex flex-wrap items-end justify-between gap-3">
+    <div class="min-w-0">
+      <span class="mb-1 block text-[11px] font-bold tracking-[0.18em] text-[#4da3ff] uppercase">{provider}</span>
+      <HeadingTag class="text-xl leading-snug font-black text-white md:text-2xl">{heading}</HeadingTag>
+      {sub && <p class="mt-1 text-sm text-[#9fb8dc]">{sub}</p>}
+    </div>
+    <a
+      href={moreHref ?? href}
+      class="inline-flex items-center gap-2 rounded-xl border border-[#4da3ff]/60 px-4 py-2 text-sm font-bold text-[#4da3ff] transition-all hover:bg-[#0b7cf4] hover:text-white"
+    >
+      {moreText} <span aria-hidden="true">↗</span>
+    </a>
+  </div>
+
+  <div class="grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-5 lg:gap-4">
+    {
+      items.map((g, i) => (
+        <a
+          href={href}
+          class="group flex flex-col rounded-2xl border border-[#1a4a9c] bg-[#06204f] p-2.5 text-left transition-all duration-300 hover:-translate-y-1 hover:border-[#4da3ff] hover:shadow-[0_14px_34px_rgba(11,124,244,0.3)] md:p-3"
+        >
+          <span class="block overflow-hidden rounded-xl bg-[#041a45]">
+            <Picture
+              src={g.img}
+              alt={g.alt}
+              loading="lazy"
+              decoding="async"
+              fetchpriority="low"
+              widths={[180, 240, 360]}
+              sizes="(max-width: 639px) calc(50vw - 30px), (max-width: 1023px) calc(33vw - 30px), 240px"
+              formats={["avif", "webp"]}
+              fallbackFormat="webp"
+              quality={62}
+              class="aspect-[2/3] w-full object-cover transition-transform duration-500 group-hover:scale-105"
+            />
+          </span>
+          <span class="mt-2.5 flex items-center justify-between text-[10px] font-extrabold tracking-[0.08em] text-[#4da3ff] uppercase">
+            <span>{provider}</span>
+            <span class="text-[#9fb8dc]">{String(i + 1).padStart(2, "0")}</span>
+          </span>
+          <span class="mt-1 block truncate text-sm font-bold text-white md:text-[15px]">{g.name}</span>
+          <span class="mt-2 flex items-center justify-between border-t border-[#1a4a9c] pt-2 text-xs font-bold text-[#4da3ff]">
+            เล่นเกม
+            <span
+              aria-hidden="true"
+              class="inline-flex h-7 w-7 items-center justify-center rounded-full bg-gradient-to-r from-[#0b7cf4] to-[#2b95ff] text-white shadow-[0_4px_12px_rgba(11,124,244,0.45)] transition-all group-hover:from-[#e8202a] group-hover:to-[#ff4b55]"
+            >
+              <svg viewBox="0 0 24 24" width="11" height="11" fill="currentColor"><path d="M8 5v14l11-7z" /></svg>
+            </span>
+          </span>
+        </a>
+      ))
+    }
+  </div>
+</section>

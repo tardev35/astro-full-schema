@@ -1,0 +1,177 @@
+---
+import MainLayout from "../layouts/MainLayout.astro";
+import ContentBox from "../components/ContentBox.astro";
+import Navfoot from "../components/Navfoot.astro";
+import Announcement from "../components/Announcement4.astro";
+import Faq3 from "../components/Faq3.astro";
+import IconTiles from "../components/IconTiles.astro";
+import ProviderCards from "../components/ProviderCards.astro";
+import GameCoverGrid from "../components/GameCoverGrid.astro";
+import CtaBand from "../components/CtaBand.astro";
+import { pageGraph } from "../lib/schema";
+import imgPg from "../assets/providers/game1.avif";
+import imgJoker from "../assets/providers/game4.avif";
+import imgJili from "../assets/providers/game5.avif";
+import imgPp from "../assets/providers/game6.avif";
+import pgAztec from "../assets/pg-treasures-of-aztec.avif";
+import pgTree from "../assets/pg-tree-of-fortune.avif";
+import pgAlchemy from "../assets/pg-alchemy-gold.avif";
+import pgAlibaba from "../assets/pg-alibaba-cave-of-fortune.avif";
+import pgAnubis from "../assets/pg-anubis-wrath.avif";
+import pgAsgard from "../assets/pg-asgardian-rising.avif";
+import pgBakery from "../assets/pg-bakery-bonanza.avif";
+import pgBali from "../assets/pg-bali-vacation.avif";
+import pgBattle from "../assets/pg-battleground-royale.avif";
+import pgBikini from "../assets/pg-bikini-paradise.avif";
+
+const pageTitle = "BABYSHARK8899 สล็อต รวมข้อมูลประเภทเกมและค่ายเกมสล็อต";
+const pageHeading = "BABYSHARK8899 สล็อต รวมข้อมูลประเภทเกมและค่ายเกมสล็อต";
+const pageDescription =
+  "สำรวจประเภทเกมและค่ายเกมสล็อต API แท้ บนเว็บไซต์ BABYSHARK8899 รวมสล็อต ทำความเข้าใจสัญลักษณ์และฟีเจอร์ของเกม เลือกดูเกมที่ถูกใจ สลับเปลี่ยนเล่นบัญชีเดียว";
+
+const faqs = [
+  {
+    q: "สลับค่ายใน BABYSHARK8899 ต้องสมัครยูสใหม่ไหม",
+    a: "ไม่ต้องครับ บัญชีเดียวเปิดได้ทุกค่ายที่เรามี เล่น Lucky Neko อยู่แล้วอยากไปต่อ Roma ก็ออกจากเกมแล้วเลือกเกมใหม่ได้เลย",
+  },
+  {
+    q: "เพิ่งเริ่มเล่นสล็อต เริ่มจากเกมแบบไหนดี",
+    a: "เริ่มจาก Fortune Gems หรือ Money Coming ได้ครับ ทั้งสองเกมมีวงล้อไม่กี่วง ลองสังเกตว่าวงพิเศษข้างจอเปลี่ยนยอดชนะอย่างไร คุ้นแล้วค่อยขยับไปเกมร่วงหล่นหรือเกมที่เน้นฟรีสปิน",
+  },
+  {
+    q: "ดูกติกาหรือตารางจ่ายของเกมได้ที่ไหน",
+    a: "ดูได้ในหน้าข้อมูลของเกมครับ เปิดดูก่อนเริ่มหมุนได้ ในนั้นมีมูลค่าของแต่ละสัญลักษณ์ และวิธีเข้าฟรีสปินหรือโบนัสของเกมนั้น",
+  },
+  {
+    q: "เล่นสล็อตบนมือถือได้ไหม",
+    a: "ได้ครับ เปิดเกมผ่านเบราว์เซอร์ในมือถือ ไม่ต้องลงแอปเพิ่ม ใช้ได้ทั้ง iOS และ Android เปลี่ยนเครื่องก็ล็อกอินด้วยยูสกับรหัสเดิมได้เลย",
+  },
+];
+
+const graph = pageGraph(Astro, {
+  name: pageTitle,
+  description: pageDescription,
+  breadcrumb: [
+    { name: "หน้าแรก", path: "/" },
+    { name: "สล็อต", path: "/slot" },
+  ],
+  faqs,
+  primaryImagePath: pgAztec.src,
+});
+
+const slotTypes = [
+  { icon: "slot", name: "วงล้อน้อยวง", desc: "จอไม่แน่น อ่านผลง่าย และมีวงพิเศษแยกไว้อีกวง เช่น Fortune Gems และ Money Coming" },
+  { icon: "coins", name: "ระบบร่วงหล่น", desc: "ชุดที่ชนะหายไปแล้วมีสัญลักษณ์ใหม่หล่นมาเติม หมุนครั้งเดียวชนะต่อกันได้ เช่น Mahjong Ways 2" },
+  { icon: "target", name: "จ่ายไม่เรียงไลน์หรือจ่ายเป็นกลุ่ม", desc: "นับจำนวนทั้งจอหรือดูกลุ่มที่เกาะติดกัน เช่น Sweet Bonanza และ Sugar Rush" },
+  { icon: "ticket", name: "เน้นรอบฟรีสปิน", desc: "จุดลุ้นอยู่ที่รอบพิเศษและลูกเล่นในรอบนั้น เช่น Roma และ Lucky Neko" },
+];
+
+const providers = [
+  {
+    tagline: "PG Soft",
+    name: "PG Soft แมวกวักกับไพ่นกกระจอก",
+    desc: "Lucky Neko (แมวกวัก) ใช้ธีมแมวกวักแบบญี่ปุ่น มีไวลด์ช่วยต่อชุดและมีฟรีสปินที่มาพร้อมตัวคูณ ส่วน Mahjong Ways 2 (ไพ่นกกระจอก 2) วางไพ่นกกระจอกบนระบบร่วงหล่น เหมาะถ้าคุณชอบชนะซ้อนในสปินเดียว",
+    games: ["Lucky Neko", "Mahjong Ways 2"],
+    img: imgPg,
+    alt: "โลโก้ PG Pocket Games Soft กับตัวละครสาวสวมมงกุฎขนนกและเพื่อนร่วมทาง",
+  },
+  {
+    tagline: "Pragmatic Play",
+    name: "Pragmatic Play ขนมหวานเต็มกระดาน",
+    desc: "Sugar Rush ใช้กระดาน 7×7 จ่ายเมื่อขนมแบบเดียวกันเกาะติดกันเป็นกลุ่ม ส่วน Sweet Bonanza ธีมหวานเหมือนกันแต่ไม่มีไลน์ให้จำ นับแค่ว่าสัญลักษณ์แบบเดียวกันขึ้นทั้งจอกี่ตัว",
+    games: ["Sugar Rush", "Sweet Bonanza"],
+    img: imgPp,
+    alt: "โลโก้ PP Slot กับเทพเจ้าเคราขาวถือสายฟ้า",
+  },
+  {
+    tagline: "JILI",
+    name: "JILI วงล้อเล็กกับวงพิเศษข้างจอ",
+    desc: "Fortune Gems มีจอหลัก 3×3 กับ 5 ไลน์ และมีวงตัวคูณแยกอยู่ทางขวา หมุนได้ค่าไหน ยอดชนะของสปินนั้นก็คูณตามนั้น ส่วน Money Coming มีวงล้อตัวเลข 3 วง ต่อด้วยวงพิเศษวงที่สี่ที่อาจออกตัวคูณ หมุนซ้ำ หรือพาเข้าโบนัส",
+    games: ["Fortune Gems", "Money Coming"],
+    img: imgJili,
+    alt: "โลโก้ JILI กับนักรบชุดทองถือขวานพู่สี",
+  },
+  {
+    tagline: "Joker Gaming",
+    name: "Joker Gaming สนามกลาดิเอเตอร์ของ Roma",
+    desc: "Roma (โรม่า) ให้กลาดิเอเตอร์เป็นไวลด์ สแกตเตอร์ขึ้นครบ 3 ตัวเมื่อไรได้ฟรีสปิน และในรอบนั้นยังมีโบนัสสู้สิงโตรออยู่",
+    games: ["Roma"],
+    img: imgJoker,
+    alt: "โลโก้ Joker กับนักรบกลาดิเอเตอร์สวมหมวกเกราะหน้าสนามโคลอสเซียม",
+  },
+];
+
+const pgGames = [
+  { name: "Treasures of Aztec", img: pgAztec, alt: "ปกเกม Treasures of Aztec สาวนักสำรวจสวมเครื่องประดับขนนกหน้าจานหินทองของชาวแอซเท็ก" },
+  { name: "Tree of Fortune", img: pgTree, alt: "ปกเกม Tree of Fortune ต้นไม้ใหญ่กลางทุ่งหญ้าที่มีเหรียญทองร่วงจากกิ่ง" },
+  { name: "Alchemy Gold", img: pgAlchemy, alt: "ปกเกม Alchemy Gold หม้อต้มยาสีน้ำเงินที่ทองหลอมพุ่งขึ้นเป็นควันสีส้ม" },
+  { name: "Alibaba's Cave of Fortune", img: pgAlibaba, alt: "ปกเกม Alibaba's Cave of Fortune ชายสวมผ้าโพกหัวสีม่วงยิ้มอยู่หน้าถ้ำสมบัติ" },
+  { name: "Anubis Wrath", img: pgAnubis, alt: "ปกเกม Anubis Wrath เทพอนูบิสหัวสุนัขจิ้งจอกนั่งบนบัลลังก์ทองในวิหารอียิปต์" },
+  { name: "Asgardian Rising", img: pgAsgard, alt: "ปกเกม Asgardian Rising นักรบไวกิ้งกล้ามโตถือขวานและโล่กลางพายุทราย" },
+  { name: "Bakery Bonanza", img: pgBakery, alt: "ปกเกม Bakery Bonanza เค้กช็อกโกแลตราดสตรอว์เบอร์รีล้อมด้วยขนมปังและครัวซองต์" },
+  { name: "Bali Vacation", img: pgBali, alt: "ปกเกม Bali Vacation นางรำบาหลีสวมมงกุฎทองและชุดสีแดงหน้าต้นมะพร้าว" },
+  { name: "Battleground Royale", img: pgBattle, alt: "ปกเกม Battleground Royale ทหารกระโดดร่มถือปืนกลางสนามรบ" },
+  { name: "Bikini Paradise", img: pgBikini, alt: "ปกเกม Bikini Paradise สาวผมบลอนด์ยิ้มริมชายหาดใต้ท้องฟ้าสีฟ้า" },
+];
+
+const symbols = [
+  { icon: "crown", name: "ไวลด์", desc: "แทนสัญลักษณ์อื่นเพื่อต่อชุดชนะ บางเกมไวลด์เกิดระหว่างเล่น อย่างไพ่ขอบทองใน Mahjong Ways 2 ถ้าอยู่ในชุดที่ชนะจะเปลี่ยนเป็นไวลด์" },
+  { icon: "ticket", name: "สแกตเตอร์กับฟรีสปิน", desc: "สแกตเตอร์พาเข้าฟรีสปินหรือโบนัส ส่วนฟรีสปินมักมีลูกเล่นเพิ่ม เช่น ลูกอมระเบิดตัวคูณของ Sweet Bonanza ที่ออกเฉพาะรอบนี้" },
+  { icon: "coins", name: "ตัวคูณ", desc: "ค่าที่คูณยอดชนะ ใน Sugar Rush ช่องที่เคยชนะกลายเป็นจุดตัวคูณ และค่าเพิ่มเมื่อชนะซ้ำช่องเดิม" },
+];
+
+const body = "text-left text-base leading-relaxed";
+const inlineLink = "font-bold text-[#4da3ff] underline underline-offset-4 transition-colors hover:text-[#ff5a60]";
+---
+
+<MainLayout title={pageTitle} description={pageDescription}>
+  <script type="application/ld+json" set:html={graph} />
+
+  <Announcement />
+
+  <ContentBox title={pageHeading} as="h1">
+    <p class={body}>
+      ก่อนกดเกมแรก คุณคงอยากรู้ว่าเกมนั้นเล่นแบบไหนและมาจากค่ายอะไร BABYSHARK8899 สล็อตของเราจึงแยกประเภทเกมตามรูปแบบการเล่น รวมค่ายเกมสล็อต API แท้ที่มีเกมให้เปิดจริง ให้ดูภาพหน้าปกกับรายละเอียดเกมก่อนเลือก อธิบายสัญลักษณ์กับฟีเจอร์แบบอ่านง่าย เจอเกมที่ถูกใจแล้วจะสลับค่ายก็ใช้บัญชีเดียวเล่นต่อได้เลย
+    </p>
+  </ContentBox>
+
+  <ContentBox as="h2" title="เลือกเกมสล็อต BABYSHARK8899 ตามรูปแบบการเล่น จำแนกประเภทเกมสล็อต">
+    <p class={`${body} mb-6`}>
+      บางวันอยากได้เกมจอโล่งที่ดูผลง่าย บางวันอยากรอลุ้นรอบฟีเจอร์ เราจึงแบ่งเกมตามรูปแบบการเล่น คุณเลือกแบบที่ชอบก่อน แล้วค่อยไล่ดูเกมในกลุ่มนั้น
+    </p>
+    <IconTiles items={slotTypes} cols={2} />
+  </ContentBox>
+
+  <ContentBox as="h2" title="ค่ายเกมสล็อตที่สามารถเลือกดูได้ใน BABYSHARK8899 แสดงผู้พัฒนาเกมที่มีอยู่จริง">
+    <p class={`${body} mb-6`}>
+      ชอบเกมไหนแล้วอยากรู้ว่ามาจากค่ายใด ตอนนี้เรามีเกมจาก PG Soft, Pragmatic Play, JILI และ Joker Gaming ให้เลือกดู แต่ละค่ายออกแบบเกมเอง ภาพและวิธีเล่นจึงมีลายเซ็นต่างกัน
+    </p>
+    <ProviderCards items={providers} as="h3" cols={2} />
+  </ContentBox>
+
+  <ContentBox as="h2" title="ดูภาพตัวอย่างและรายละเอียดเกมสล็อตก่อนเลือกเกม Game Discovery">
+    <p class={body}>
+      ชื่อเกมอย่างเดียวบอกไม่ได้ว่าข้างในเป็นแบบไหน หน้าสล็อตของ BABYSHARK8899 จึงวางภาพหน้าปก ชื่อเกม และชื่อค่ายไว้ด้วยกัน ปกบอกธีม ชื่อค่ายบอกที่มา ถ้ายังลังเล เปิดหน้าข้อมูลหรือตารางจ่ายดูก่อนเล่นได้ จะรู้ว่าเกมจ่ายตามไลน์หรือนับทั้งจอ
+    </p>
+  </ContentBox>
+
+  <GameCoverGrid provider="PG Soft" heading="ตัวอย่างหน้าปกเกมจากค่าย PG Soft" sub="ปกบอกธีม ชื่อค่ายบอกที่มา กดเข้าเล่นได้หลังสมัครสมาชิก" items={pgGames} />
+
+  <ContentBox as="h2" title="ทำความเข้าใจสัญลักษณ์และฟีเจอร์ของเกมสล็อต อธิบายกลไกเกม">
+    <p class={`${body} mb-6`}>
+      ศัพท์ในตารางจ่ายดูเยอะ แต่คำที่เจอบ่อยมีไม่กี่คำ เราสรุปไว้ให้ตรงนี้ ส่วนจังหวะจ่ายถี่หรือห่างก็ต่างกันไปตามเกม
+    </p>
+    <IconTiles items={symbols} cols={3} />
+  </ContentBox>
+
+  <Faq3 title="คำถามเกี่ยวกับเกมสล็อต BABYSHARK8899 FAQ" faqs={faqs} />
+
+  <ContentBox>
+    <p class={`${body} mb-6`}>
+      BABYSHARK8899 อยากให้คุณรู้จักเกมก่อนหมุน ทั้งรูปแบบการเล่น ค่ายผู้พัฒนา หน้าปก และหน้าที่ของสัญลักษณ์ จะสลับค่ายก็ใช้ยูสเดิมได้ ยังไม่มียูสก็กด <a href="/register/" class={inlineLink}>สมัคร BABYSHARK8899</a> ได้เลย มียูสแล้วกลับมาที่ <a href="/ทางเข้า/" class={inlineLink}>ทางเข้า BABYSHARK8899</a> เพื่อเลือกเกมแรกของวัน
+    </p>
+    <CtaBand title="เลือกเกมสล็อตแรกของวันกับ BABYSHARK8899" text="บัญชีเดียวเปิดได้ทุกค่าย เล่นผ่านเบราว์เซอร์บนมือถือและคอมโดยไม่ต้องลงแอป" />
+  </ContentBox>
+
+  <Navfoot />
+</MainLayout>

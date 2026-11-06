@@ -1,0 +1,57 @@
+---
+import { gameIcon } from "../lib/gameIcons";
+
+export interface IconTile {
+  icon: string;
+  name: string;
+  desc: string;
+  tag?: string;
+}
+
+export interface Props {
+  items: IconTile[];
+  cols?: 2 | 3 | 4;
+  kicker?: string;
+  title?: string;
+  class?: string;
+}
+
+const { items, cols = 2, kicker, title, class: className = "" } = Astro.props;
+const grid = { 2: "sm:grid-cols-2", 3: "sm:grid-cols-2 lg:grid-cols-3", 4: "sm:grid-cols-2 lg:grid-cols-4" }[cols];
+const medallion = [
+  "from-[#0b7cf4] to-[#2b95ff] shadow-[0_6px_16px_rgba(11,124,244,0.45)]",
+  "from-[#e8202a] to-[#ff4b55] shadow-[0_6px_16px_rgba(232,32,42,0.4)]",
+];
+---
+
+<div class={`w-full ${className}`}>
+  {
+    (kicker || title) && (
+      <div class="mb-4">
+        {kicker && <p class="text-[10px] font-extrabold tracking-[0.22em] text-[#4da3ff] uppercase">{kicker}</p>}
+        {title && <p class="mt-0.5 text-lg font-black text-white">{title}</p>}
+      </div>
+    )
+  }
+  <ul class={`grid grid-cols-1 gap-3 ${grid}`}>
+    {
+      items.map((it, i) => (
+        <li class="group relative rounded-2xl bg-gradient-to-br from-[#2b95ff]/45 via-[#1a4a9c]/30 to-[#e8202a]/40 p-px transition-transform duration-300 hover:-translate-y-0.5">
+          <div class="flex h-full items-start gap-3.5 rounded-[15px] bg-[#06204f] p-4">
+            <span
+              class={`flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-gradient-to-br text-white ${medallion[i % 2]}`}
+              set:html={gameIcon(it.icon, 22)}
+            />
+            <span class="min-w-0">
+              <span class="flex flex-wrap items-center gap-2">
+                <strong class="text-[15px] font-black text-white">{it.name}</strong>
+                {it.tag && <span class="rounded-full border border-[#4da3ff]/40 px-2 py-0.5 text-[10px] font-bold text-[#4da3ff]">{it.tag}</span>}
+              </span>
+              <span class="mt-1 block text-[13px] leading-relaxed text-[#b9cdf0]">{it.desc}</span>
+            </span>
+          </div>
+        </li>
+      ))
+    }
+  </ul>
+</div>

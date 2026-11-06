@@ -4,8 +4,8 @@ import bgConfig from "../assets/bg.json";
 import "../styles/global.css";
 import { BRAND_NAME, BRAND_TEXT, brandProfile, fontStack, iconVersion } from "../lib/brandProfile";
 import { canonicalFor } from "../lib/schema";
-import Navbar from "../components/NavbarStyle6.astro";
-import Footer from "../components/FooterStyle2.astro";
+import Navbar from "../components/NavbarStyle3.astro";
+import Footer from "../components/FooterPremium.astro";
 
 // Only banner1 is ever rendered, so only banner1 is imported.
 //
@@ -54,8 +54,8 @@ const mobileBannerImg = mobileBanner
   : null;
 
 const {
-  title = "TGA99 สล็อต คาสิโนสด หวย ยิงปลา บัญชีเดียว ฝากถอนออโต้ 24 ชม.",
-  description = "ทางเข้า TGA99 รวมสล็อตโบนัสแตกถี่จ่ายหนัก คาสิโนสดภาพคมชัด หวยครบไม่อั้นเลข เกมยิงปลาปลาบอสโบนัสใหญ่ ฝากถอนออโต้บัญชีเดียวตลอด 24 ชม. สมัครเข้าเล่นเลย",
+  title = "BABYSHARK8899 รวมหมวด เกมส์ สล็อต คาสิโน ยิงปลาและหวย",
+  description = "BABYSHARK8899 ทางเข้า เกมเดิมพันออนไลน์ครบทุกหมวดหมู่ ยิงปลา(Fishing Casino) บนมือถือ สล็อตแยกค่าย คาสิโนสด เกมไพ่ที่คุ้นเคย และแทงหวยทุกประเภท",
   robots = "index, follow",
 } = Astro.props;
 
@@ -207,7 +207,7 @@ const profile = brandProfile(Astro.site);
         background-attachment: fixed;
         background-repeat: no-repeat;
         margin: 0;
-        background-color: #120212;
+        background-color: #010d28;
         font-weight: 400;
         font-family: var(--font-sans) !important;
       }
@@ -260,7 +260,7 @@ const profile = brandProfile(Astro.site);
         }
         <Image
           src={mainBanner}
-          alt="แบนเนอร์ TGA99 ข้อความ TGA99 สนุกครบ จบในที่เดียว สมัครง่าย ใช้งานสะดวกทุกวัน แพลตฟอร์มทันสมัย ระบบมั่นคง บริการรวดเร็ว ไอคอนสมัครง่าย ระบบเสถียร เกมยอดนิยม พร้อมดูแล พร้อมปุ่มสมัครสมาชิก พรีเซนเตอร์หญิงชุดกี่เพ้าสีม่วงลายทอง ชิปและลูกเต๋าสีม่วงทอง และมือถือแสดงหน้าเว็บ TGA99"
+          alt="แบนเนอร์ BABYSHARK8899 โลโก้ฉลามการ์ตูนสีฟ้าตรงกลาง ข้อความ สล็อตเว็บแท้อันดับหนึ่ง แจ็คพอตแตกดี ไม่มีกั๊ก และเลข 777 สีแดง พรีเซนเตอร์หญิงสองคนในชุดสีน้ำเงินแดงพิมพ์ชื่อ BABYSHARK8899 ตู้สล็อต 777 ป้าย BIG WIN และ JACKPOT เหรียญทอง ชิปสีแดงและน้ำเงิน หีบสมบัติ และฉลามใส่แว่นกันแดดบนคลื่นน้ำ"
           loading="eager"
           fetchpriority="high"
           widths={[412, 640, 828, 1024, 1280, 1600, 1900]}

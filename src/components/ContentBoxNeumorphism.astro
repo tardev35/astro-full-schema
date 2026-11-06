@@ -9,12 +9,12 @@ const headingSize = HeadingTag === "h1" ? "text-2xl md:text-3xl" : "text-2xl";
 
 <section class="relative z-10 my-6 flex w-full justify-center px-4 font-sans">
   <div
-    class="w-full max-w-[1400px] rounded-[25px] border border-[#f1d2d3] bg-white p-8 text-left text-base leading-relaxed text-[#2b2627] shadow-[10px_10px_24px_rgba(236,27,36,0.10),-8px_-8px_20px_#ffffff] md:p-10">
+    class="w-full max-w-[1400px] rounded-[25px] border border-[#1a4a9c] bg-[#041a45] p-8 text-left text-base leading-relaxed text-[#dbe9ff] shadow-[10px_10px_24px_#010d28,-8px_-8px_20px_#0a2a66] md:p-10">
     {
       title && (
-        <header class="mb-8 border-b border-[#f1d2d3] pb-5 text-center">
-          <HeadingTag class={`${headingSize} leading-normal font-black tracking-wide text-[#141414]`}>{title}</HeadingTag>
-          <span aria-hidden="true" class="mx-auto mt-4 block h-1.5 w-20 rounded-full bg-gradient-to-r from-[#ff4d55] via-[#ec1b24] to-[#b5121a]" />
+        <header class="mb-8 border-b border-[#1a4a9c] pb-5 text-center">
+          <HeadingTag class={`${headingSize} leading-normal font-black tracking-wide text-white`}>{title}</HeadingTag>
+          <span aria-hidden="true" class="mx-auto mt-4 block h-1.5 w-20 rounded-full bg-gradient-to-r from-[#4da3ff] via-[#0b7cf4] to-[#e8202a]" />
         </header>
       )
     }

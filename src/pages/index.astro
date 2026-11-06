@@ -1,75 +1,179 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
-import Announcement from "../components/Announcement6.astro";
+import Announcement from "../components/Announcement4.astro";
 import ContentBox from "../components/ContentBox.astro";
-import ContentBoxPremium from "../components/ContentBoxPremium.astro";
-import ContentBoxCyberCut from "../components/ContentBoxCyberCut.astro";
-import ContentBoxTwoPremium from "../components/ContentBoxTwoPremium.astro";
-import ContentBoxSevenThreePremium from "../components/ContentBoxSevenThreePremium.astro";
-import ContentBoxSevenThreeCyberCut from "../components/ContentBoxSevenThreeCyberCut.astro";
+import ContentBoxNeumorphism from "../components/ContentBoxNeumorphism.astro";
+import ContentBoxFloatingBadge from "../components/ContentBoxFloatingBadge.astro";
+import ContentBoxSpecial from "../components/ContentBoxSpecial.astro";
+import ContentBoxTwoNeumorphism from "../components/ContentBoxTwoNeumorphism.astro";
+import ContentBoxSevenThreeNeumorphism from "../components/ContentBoxSevenThreeNeumorphism.astro";
+import ContentBoxSevenThree from "../components/ContentBoxSevenThree.astro";
+import Faq3 from "../components/Faq3.astro";
 import FeatureHighlights from "../components/FeatureHighlights.astro";
 import SmoothCarousel from "../components/SmoothCarousel.astro";
 import GameRankingBoard from "../components/GameRankingBoard.astro";
-import ProviderGrid from "../components/ProviderGrid.astro";
-import LatestWinnersPremium from "../components/LatestWinnersPremium.astro";
+import ProviderGridPremium from "../components/ProviderGridPremium.astro";
+import LatestWinners3 from "../components/LatestWinners3.astro";
 import LoginRtpSection from "../components/LoginRtpSection.astro";
-import ReviewCardSumo2 from "../components/ReviewCardSumo2.astro";
+import ReviewCardSumo from "../components/ReviewCardSumo.astro";
 import Navfoot from "../components/Navfoot.astro";
 
 import { Picture } from "astro:assets";
 import { pageGraph } from "../lib/schema";
-import imgAllStyles from "../assets/slide2.png";
-import imgStable from "../assets/slide3.png";
+import imgLottery from "../assets/slide3.png";
+import imgService from "../assets/slide1.png";
+import CategoryCards from "../components/CategoryCards.astro";
+import GameCoverGrid from "../components/GameCoverGrid.astro";
+import GameTypeTiles from "../components/GameTypeTiles.astro";
+import imgCatSlot from "../assets/cat-slot.webp";
+import imgCatCasino from "../assets/cat-casino.webp";
+import imgCatFishing from "../assets/cat-fishing.webp";
+import imgCatLottery from "../assets/cat-lottery.webp";
+import pgAztec from "../assets/pg-treasures-of-aztec.avif";
+import pgTree from "../assets/pg-tree-of-fortune.avif";
+import pgAlchemy from "../assets/pg-alchemy-gold.avif";
+import pgAlibaba from "../assets/pg-alibaba-cave-of-fortune.avif";
+import pgAnubis from "../assets/pg-anubis-wrath.avif";
+import pgAsgard from "../assets/pg-asgardian-rising.avif";
+import pgBakery from "../assets/pg-bakery-bonanza.avif";
+import pgBali from "../assets/pg-bali-vacation.avif";
+import pgBattle from "../assets/pg-battleground-royale.avif";
+import pgBikini from "../assets/pg-bikini-paradise.avif";
 
-const pageTitle = "TGA99 สล็อต คาสิโนสด หวย ยิงปลา บัญชีเดียว ฝากถอนออโต้ 24 ชม.";
+const pageTitle = "BABYSHARK8899 รวมหมวด เกมส์ สล็อต คาสิโน ยิงปลาและหวย";
 
 const pageDescription =
-  "ทางเข้า TGA99 รวมสล็อตโบนัสแตกถี่จ่ายหนัก คาสิโนสดภาพคมชัด หวยครบไม่อั้นเลข เกมยิงปลาปลาบอสโบนัสใหญ่ ฝากถอนออโต้บัญชีเดียวตลอด 24 ชม. สมัครเข้าเล่นเลย";
+  "BABYSHARK8899 ทางเข้า เกมเดิมพันออนไลน์ครบทุกหมวดหมู่ ยิงปลา(Fishing Casino) บนมือถือ สล็อตแยกค่าย คาสิโนสด เกมไพ่ที่คุ้นเคย และแทงหวยทุกประเภท";
 
 const announcementMessage =
-  "TGA99 สล็อต คาสิโนสด หวย ยิงปลา บัญชีเดียว • ฝากถอนออโต้ตลอด 24 ชั่วโมง ฝากขั้นต่ำ 20 บาท ถอนขั้นต่ำ 50 บาท • โอนได้จากทุกธนาคารและทรูวอเลท ไม่ต้องแนบสลิป • สลับหมวดเล่นต่อได้ทันที ไม่ต้องโยกเครดิต";
+  "BABYSHARK8899 รวมสล็อต คาสิโนสด ยิงปลา และหวยไว้ในทางเข้าเดียว • เปิดผ่านเบราว์เซอร์บนมือถือได้ทันที ไม่ต้องโหลดแอป รองรับทั้ง iOS และ Android • สมัคร ฝาก เล่น และถอนจบในเครื่องเดียว • มีเรื่องติดขัดทักแอดมินผ่านช่องทางบนหน้าเว็บได้เลย";
 
-const allStylesAlt = "TGA99 สนุกครบทุกสไตล์ รวมเกมยอดนิยมไว้ในที่เดียว ปุ่มเริ่มสนุก";
+const lotteryAlt =
+  "BABYSHARK8899 หวย อัตราจ่ายที่ดีที่สุด 3 ตัว บาทละ 1000 และ 2 ตัว บาทละ 100 ถูกตรง จ่ายจริง รับเงินรางวัลหลักล้าน ครบจบเรื่องหวยในเว็บเดียว ทั้งรัฐบาล ลาว ฮานอย หุ้น ยี่กี พรีเซนเตอร์หญิงในแจ็คเก็ตหนังสีดำ";
 
-const stableAlt = "TGA99 มั่นใจทุกการใช้งาน ระบบเสถียร ใช้งานลื่นไหล ปุ่มสมัครเลย";
+const serviceAlt =
+  "โปรโมชั่น BABYSHARK8899 ฝากรับโบนัสเพิ่ม 10% จากทุกยอดบิลฝาก มูลค่าสูงสุด 500 บาท ครอบคลุมสมาชิกเก่าและใหม่ ยอดฝากขั้นต่ำ 100 บาทต่อบิล ทำเทิร์น 8 เท่า ถอนสูงสุด 5 เท่า แจ้งแอดมินได้ตลอด 24 ชั่วโมง";
 
-const games = [
+const slotHighlights = [
   {
-    icon: "🐱",
-    title: "Lucky Neko (PG Soft)",
-    description: "เกมแมวกวักที่ตัวคูณเพิ่มขึ้นเมื่อมีสัญลักษณ์แมวเข้ามาในชุดชนะ จุดลุ้นอยู่ที่ตัวคูณมากกว่าการรอแตกใหญ่ทีเดียว",
-    accent: "magenta" as const,
+    icon: "🏺",
+    title: "PG Soft",
+    description:
+      "Treasures of Aztec (สาวถ้ำ) เกมร่วงหล่นที่สัญลักษณ์กรอบทองในชุดชนะกลายเป็นไวลด์ในรอบร่วงถัดไป ชนะต่อเนื่องตัวคูณก็เพิ่ม ส่วน Fortune Tiger (เสือทอง) วงล้อ 3×3 ไม่มีฟรีสปิน แต่มีฟีเจอร์สุ่มหมุนซ้ำ",
+    accent: "blue" as const,
   },
   {
-    icon: "⚡",
-    title: "Gates of Olympus (Pragmatic Play)",
-    description: "เกมเทพซุสใช้ระบบสัญลักษณ์ร่วงหล่น พร้อมลูกแก้วสายฟ้าที่สุ่มตัวคูณมาทบยอดในรอบโบนัส",
-    accent: "gold" as const,
+    icon: "👑",
+    title: "Pragmatic Play",
+    description:
+      "Starlight Princess เจ้าหญิงอนิเมะ ตัวคูณสุ่มออกในเกมหลัก และสะสมไปเรื่อยๆ ในฟรีสปิน ส่วน The Dog House มีไวลด์ตัวคูณ ในฟรีสปินไวลด์ค้างจนจบรอบ",
+    accent: "red" as const,
   },
   {
-    icon: "🀄",
-    title: "Mahjong Ways 2 (PG Soft)",
-    description: "สล็อตไพ่นกกระจอกที่สัญลักษณ์กรอบทองในชุดชนะจะกลายเป็นไวลด์ ส่วนตัวคูณขยับขึ้นตามจำนวนครั้งที่ชนะต่อเนื่องในสปินเดียว",
-    accent: "magenta" as const,
+    icon: "🃏",
+    title: "JILI",
+    description:
+      "Super Ace ธีมไพ่ ระบบร่วงหล่น ไพ่กรอบทองในชุดชนะกลายเป็นไวลด์ ตัวคูณเพิ่มเมื่อชนะต่อเนื่อง ส่วน Boxing King ธีมนักมวย มีฟรีสปินกับไวลด์ขยายเต็มแถว",
+    accent: "blue" as const,
+  },
+];
+
+const faqs = [
+  {
+    q: "เปิดทางเข้าบนคอมได้ด้วยไหม",
+    a: "ได้ เปิดผ่านเบราว์เซอร์บนคอมได้เหมือนมือถือ ใครชอบดูโต๊ะไพ่บนจอใหญ่ก็เปิดคอม ออกนอกบ้านค่อยกลับมาใช้มือถือ",
   },
   {
-    icon: "🏛️",
-    title: "Roma (Joker)",
-    description: "เกมเก่าที่คนเล่นรุ่นแรกคุ้นมือ สแกตเตอร์ 3 ตัวพาเข้าฟรีสปิน แล้วมีโบนัสสู้สิงโตให้ลุ้นในรอบนั้น",
-    accent: "gold" as const,
+    q: "สมาชิกเดิมย้ายไปเล่นเครื่องอื่น ต้องสมัครใหม่หรือเปล่า",
+    a: "ไม่ต้อง ใช้ยูสกับรหัสชุดเดิมล็อกอินจากเครื่องไหนก็ได้ แค่เปิดทางเข้าบนหน้านี้ในเครื่องใหม่ก็เล่นต่อได้เลย",
   },
+  {
+    q: "BABYSHARK8899 มีหมวดเกมอะไรให้เลือกบ้าง",
+    a: "มี 4 หมวด คือสล็อตที่แยกตามค่าย โต๊ะสดที่มีดีลเลอร์เปิดไพ่ เกมยิงปลาหลายธีม และหวยหลายตลาด ใครเพิ่งลองยิงปลา เริ่มจากห้องเบทเล็กแล้วตั้งค่ากระสุนต่ำไว้ก่อน เพราะทุกนัดหักเครดิตตามค่ากระสุน",
+  },
+  {
+    q: "ฝากเงินไปแล้วแต่เครดิตไม่เข้า ต้องทำยังไง",
+    a: "อย่าเพิ่งโอนซ้ำ แจ้งแอดมินพร้อมเวลาที่โอนและยอดเงิน ข้อมูลนี้ช่วยให้แอดมินหารายการของเราเจอง่ายขึ้น",
+  },
+];
+
+const categoryItems = [
+  {
+    title: "สล็อตออนไลน์",
+    eyebrow: "Slot",
+    desc: "แยกเกมตามค่าย PG Soft, Pragmatic Play และ JILI เลือกค่ายที่คุ้นแล้วไล่ดูรายชื่อเกมได้เลย",
+    img: imgCatSlot,
+    alt: "ตู้สล็อตการ์ตูนสีม่วงกับตัวละครและเหรียญทองกระจายรอบ",
+    href: "/slot/",
+    cta: "ไปหน้าสล็อต",
+  },
+  {
+    title: "คาสิโนสด",
+    eyebrow: "Live Casino",
+    desc: "บาคาร่า รูเล็ต เสือมังกร แบล็คแจ็ค และไฮโล จากค่าย Dream Gaming (DG) และ Pretty Gaming",
+    img: imgCatCasino,
+    alt: "สาวในชุดกี่เพ้าสีแดงชูไพ่ ข้างลูกเต๋าและหีบชิปทอง",
+    href: "/casino/",
+    cta: "ไปหน้าคาสิโนสด",
+  },
+  {
+    title: "เกมยิงปลา",
+    eyebrow: "Fishing",
+    desc: "Boom Legend, Dragon Fishing และ Zombie Party เล่นหลายคนในห้องเดียวได้ ยิ่งตัวใหญ่รางวัลยิ่งสูง",
+    img: imgCatFishing,
+    alt: "ปลาการ์ตูนฟันแหลมสีแดงถือส้อมกับปลาตัวเล็กและเหรียญทองกลางคลื่น",
+    href: "/fishing-casino/",
+    cta: "ไปหน้ายิงปลา",
+  },
+  {
+    title: "หวยออนไลน์",
+    eyebrow: "Lottery",
+    desc: "หวยรัฐบาล ฮานอย หุ้น ลาว ยี่กี มาเลย์ ออมสิน และ ธ.ก.ส. ตามรอบออกรางวัลของแต่ละตลาด",
+    img: imgCatLottery,
+    alt: "สาวผมยาวชุดแจ็กเก็ตดำแดงยกมือทาบแก้มจากสไลด์หวยของ BABYSHARK8899",
+    href: "/lotto/",
+    cta: "ไปหน้าหวย",
+  },
+];
+
+const pgGames = [
+  { name: "Treasures of Aztec", img: pgAztec, alt: "ปกเกม Treasures of Aztec สาวนักสำรวจสวมเครื่องประดับขนนกหน้าจานหินทองของชาวแอซเท็ก" },
+  { name: "Tree of Fortune", img: pgTree, alt: "ปกเกม Tree of Fortune ต้นไม้ใหญ่กลางทุ่งหญ้าที่มีเหรียญทองร่วงจากกิ่ง" },
+  { name: "Alchemy Gold", img: pgAlchemy, alt: "ปกเกม Alchemy Gold หม้อต้มยาสีน้ำเงินที่ทองหลอมพุ่งขึ้นเป็นควันสีส้ม" },
+  { name: "Alibaba's Cave of Fortune", img: pgAlibaba, alt: "ปกเกม Alibaba's Cave of Fortune ชายสวมผ้าโพกหัวสีม่วงยิ้มอยู่หน้าถ้ำสมบัติ" },
+  { name: "Anubis Wrath", img: pgAnubis, alt: "ปกเกม Anubis Wrath เทพอนูบิสหัวสุนัขจิ้งจอกนั่งบนบัลลังก์ทองในวิหารอียิปต์" },
+  { name: "Asgardian Rising", img: pgAsgard, alt: "ปกเกม Asgardian Rising นักรบไวกิ้งกล้ามโตถือขวานและโล่กลางพายุทราย" },
+  { name: "Bakery Bonanza", img: pgBakery, alt: "ปกเกม Bakery Bonanza เค้กช็อกโกแลตราดสตรอว์เบอร์รีล้อมด้วยขนมปังและครัวซองต์" },
+  { name: "Bali Vacation", img: pgBali, alt: "ปกเกม Bali Vacation นางรำบาหลีสวมมงกุฎทองและชุดสีแดงหน้าต้นมะพร้าว" },
+  { name: "Battleground Royale", img: pgBattle, alt: "ปกเกม Battleground Royale ทหารกระโดดร่มถือปืนกลางสนามรบ" },
+  { name: "Bikini Paradise", img: pgBikini, alt: "ปกเกม Bikini Paradise สาวผมบลอนด์ยิ้มริมชายหาดใต้ท้องฟ้าสีฟ้า" },
+];
+
+const casinoTypes = [
+  { icon: "cards", name: "บาคาร่า", desc: "เริ่มง่ายสุด เลือกฝั่งผู้เล่น เจ้ามือ หรือเสมอ แล้วลุ้นตอนดีลเลอร์พลิกไพ่สด" },
+  { icon: "wheel", name: "รูเล็ต", desc: "วางเลขเดี่ยว แทงสีแดงดำ คู่คี่ หรือสูงต่ำ" },
+  { icon: "dragon", name: "เสือมังกรและแบล็คแจ็ค", desc: "เกมไพ่ที่คุ้นเคย ไม่ต้องเรียนกติกาใหม่" },
+  { icon: "dice", name: "ไฮโล", desc: "ไว้ลุ้นลูกเต๋า" },
+];
+
+const fishingGames = [
+  { icon: "target", name: "Boom Legend – JILI", desc: "ธีมมอนสเตอร์" },
+  { icon: "dragon", name: "Dragon Fishing – JDB", desc: "ชูบอสมังกร" },
+  { icon: "skull", name: "Zombie Party – Spadegaming", desc: "ธีมซอมบี้" },
+  { icon: "users", name: "เล่นหลายคนในห้องเดียว", desc: "ยิ่งตัวใหญ่หรือเป็นบอส รางวัลยิ่งสูง แต่ต้องยิงหลายนัด เหมาะกับคนที่อยากเลือกเป้าเอง" },
 ];
 
 const graph = pageGraph(Astro, {
   name: pageTitle,
   description: pageDescription,
+  faqs,
 });
 
-const inlineLink = "font-bold text-[#ffe08a] underline underline-offset-4 transition-colors hover:text-[#f5c542]";
-const slideFrame = "mx-auto h-auto w-full rounded-2xl border border-[#5a1a60] shadow-[0_10px_30px_rgba(193,63,196,0.25)]";
+const inlineLink = "font-bold text-[#4da3ff] underline underline-offset-4 transition-colors hover:text-[#ff5a60]";
+const slideFrame = "mx-auto h-auto w-full rounded-2xl border border-[#1a4a9c] shadow-[0_10px_30px_rgba(11,124,244,0.25)]";
 const body = "text-left text-base leading-relaxed";
-const listItem = "rounded-xl border-l-4 border-[#c13fc4] bg-[#26082c] px-4 py-3";
-const listLabel = "font-black text-[#ffe08a]";
+const listItem = "rounded-xl border-l-4 border-[#0b7cf4] bg-[#06204f] px-4 py-3";
+const listLabel = "font-black text-[#4da3ff]";
 ---
 
 <MainLayout title={pageTitle} description={pageDescription}>
@@ -79,29 +183,60 @@ const listLabel = "font-black text-[#ffe08a]";
 
   <SmoothCarousel />
 
-  <ContentBoxPremium as="h1" title="TGA99 สล็อต คาสิโนสด หวย ยิงปลา บัญชีเดียว ฝากถอนออโต้ตลอด 24 ชม.">
+  <ContentBoxNeumorphism as="h1" title="BABYSHARK8899 รวมหมวด เกมส์ สล็อต คาสิโน ยิงปลาและหวย">
     <p class={body}>
-      บางวันคุณอาจอยากหมุนวงล้อสั้นๆ หรือเปิดโต๊ะไพ่ดูเค้าไพ่สด TGA99 จึงรวมทั้งสี่หมวดไว้ในบัญชีเดียวและกระเป๋าเงินเดียวโดยไม่ต้องจำรหัสผ่านหลายที่ เริ่มตั้งแต่สล็อตโบนัสแตกถี่ที่จ่ายหนักจ่ายจริง คาสิโนสดภาพคมชัดจากห้องดีลเลอร์ หวยออนไลน์ครบตลาดแบบไม่อั้นเลข ไปจนถึงเกมยิงปลาที่ได้เล็งปลาบอสโบนัสใหญ่ เรื่องเงินจัดการผ่านฝากถอนออโต้ซึ่งทำรายการเองได้ทั้งวันทั้งคืน ฝากเริ่ม 20 บาท ถอนขั้นต่ำ 50 บาท สลับหมวดเล่นต่อได้ทันทีโดยไม่ต้องโยกเครดิต
+      BABYSHARK8899 เชื่อไหม ถ้าคุณเข้าเว็บมาแล้ว ไม่อยากคลิกออก ไม่ว่าคุณจะเป็นสายสล็อต สายไพ่ คนชอบยิงปลา(Fishing Casino) หรือคอหวยที่นับวันรองวด กดเข้าสมัครเติมเงินแล้วแยกไปหมวดของตัวเองได้เลย ทางเข้าเดียวมีเกมเดิมพันออนไลน์ครบทุกหมวด สล็อตแยกตามค่ายพร้อมชื่อเกม คาสิโนสดมีบาคาร่ากับเกมไพ่ที่เราคุ้นมือ ยิงปลามีหลายธีม หวยแทงได้ทุกประเภท ทั้งหมดเล่นง่ายบนมือถือ สงสัยอะไรก็ถามแอดมินได้
     </p>
-  </ContentBoxPremium>
+  </ContentBoxNeumorphism>
 
-  <ContentBoxCyberCut as="h2" title="สล็อต TGA99 โบนัสแตกถี่ จ่ายหนักจ่ายจริงจากค่ายฮิต">
+  <ContentBoxFloatingBadge as="h2" title="BABYSHARK8899 ทางเข้า เกมเดิมพันออนไลน์ครบทุกหมวด บนมือถือ">
     <p class={body}>
-      อยากได้เกมที่โบนัสออกถี่แต่ไม่อยากเปิดหลายแท็บไล่เทียบข้ามเว็บ หมวดสล็อตที่นี่รวมเกมที่มีฟีเจอร์ดันตัวคูณในรอบโบนัสไว้ให้แล้ว โดยมีเกมหลักจากค่ายที่คนเล่นคุ้นมืออย่าง PG Soft, Pragmatic Play และ Joker ให้เลือกตามสไตล์การเดินเบท ยอดที่ชนะมากดถอนออกด้วยระบบออโต้ได้โดยไม่ต้องรอแอดมิน
+      ได้ลิงก์มาแล้วต้องโหลดแอปก่อนไหม? ไม่ต้องเลย <a href="/ทางเข้า/" class={inlineLink}>ทางเข้า BABYSHARK8899</a> เปิดผ่านเบราว์เซอร์แล้วเล่นบนมือถือได้ทันที ใช้ได้ทั้ง iOS และ Android จะหมุนสล็อตก่อนนอน ดูโต๊ะไพ่ระหว่างรอรถ ยิงปลาตอนพักเบรก หรือเปิดหน้าแทงหวยวันหวยออกก็ได้หมด สมัคร ฝาก เล่น และถอนจบในมือถือเครื่องเดียว
     </p>
+  </ContentBoxFloatingBadge>
 
-    <FeatureHighlights items={games} as="p" />
-  </ContentBoxCyberCut>
+  <CategoryCards items={categoryItems} />
 
-  <ProviderGrid />
+  <div id="slot" class="scroll-mt-24">
+  <ContentBox as="h2" title="สล็อตออนไลน์ BABYSHARK8899 เกมสล็อตแยกตามค่าย พร้อมรายชื่อเกม">
+    <p class={body}>ใครเล่นสล็อตมาสักพักมักมีค่ายในใจอยู่แล้ว ที่นี่จึงแยกเกมตามค่าย เลือกค่ายที่คุ้นแล้วไล่ดูรายชื่อเกมได้เลย</p>
+
+    <FeatureHighlights items={slotHighlights} as="p" />
+  </ContentBox>
+  </div>
+
+  <GameCoverGrid provider="PG Soft" heading="ตัวอย่างเกมสล็อตจากค่าย PG Soft" sub="ปกเกมจริงจากค่าย กดเข้าเล่นได้ทุกใบหลังสมัครสมาชิก" items={pgGames} moreHref="/slot/" moreText="ดูหน้าสล็อตทั้งหมด" />
+
+  <ProviderGridPremium />
 
   <GameRankingBoard />
 
-  <ContentBoxSevenThreePremium as="h2" titleright="คาสิโนสด TGA99 ภาพคมชัด มีบาคาร่า รูเล็ต ไฮโลครบโต๊ะ">
+  <div id="casino" class="scroll-mt-24">
+  <ContentBoxSpecial as="h2" title="คาสิโนสด BABYSHARK8899 บาคาร่า รูเล็ต และเกมไพ่ที่คุ้นเคย" iconleft="🃏" iconright="🎡">
+    <p slot="left" class={`${body} min-w-0 flex-1`}>
+      วันที่อยากนั่งโต๊ะไพ่โดยไม่ต้องเรียนกติกาใหม่ ก็เลือกจากเกมที่เล่นเป็นอยู่แล้ว คาสิโนสดที่นี่มีค่าย Dream Gaming (DG) กับ Pretty Gaming บาคาร่าเริ่มง่ายสุด เราแค่เลือกฝั่งผู้เล่น เจ้ามือ หรือเสมอ แล้วลุ้นตอนดีลเลอร์พลิกไพ่สด รูเล็ตวางเลขเดี่ยว แทงสีแดงดำ คู่คี่ หรือสูงต่ำ เกมไพ่ที่คุ้นเคยอื่นมีเสือมังกรกับแบล็คแจ็ค ส่วนไฮโลไว้ลุ้นลูกเต๋า
+    </p>
+
+    <GameTypeTiles slot="right" class="min-w-0 flex-1" cols={1} art={imgCatCasino} artAlt="สาวในชุดกี่เพ้าสีแดงชูไพ่ ข้างลูกเต๋าและหีบชิปทอง" kicker="Live Casino" title="โต๊ะสดที่เปิดให้เล่น" tags={["Dream Gaming (DG)", "Pretty Gaming"]} items={casinoTypes} />
+  </ContentBoxSpecial>
+  </div>
+
+  <div id="fishing" class="scroll-mt-24">
+  <ContentBoxTwoNeumorphism as="h2" title="เกมยิงปลา BABYSHARK8899 รวมเกมยิงปลาหลายรูปแบบ">
+    <p slot="left" class={body}>
+      ชื่อมีฉลามน้อยอยู่ในตัว หมวดที่พาเราลงทะเลก็ต้องมีเกมยิงปลาหลายรูปแบบ Boom Legend ของ JILI มาในธีมมอนสเตอร์ Dragon Fishing ของ JDB ชูบอสมังกร ส่วน Zombie Party ของ Spadegaming เป็นธีมซอมบี้ ทุกเกมเล่นหลายคนในห้องเดียวได้ ยิ่งตัวใหญ่หรือเป็นบอส รางวัลยิ่งสูง แต่ต้องยิงหลายนัด เหมาะกับคนที่อยากเลือกเป้าเอง
+    </p>
+
+    <GameTypeTiles slot="right" cols={1} art={imgCatFishing} artAlt="ปลาการ์ตูนฟันแหลมสีแดงถือส้อมกับปลาตัวเล็กและเหรียญทองกลางคลื่น" kicker="Fishing" title="เกมยิงปลาที่มีให้เลือก" tags={["JILI", "JDB", "Spadegaming"]} items={fishingGames} />
+  </ContentBoxTwoNeumorphism>
+  </div>
+
+  <div id="lottery" class="scroll-mt-24">
+  <ContentBoxSevenThreeNeumorphism as="h2" titleright="ข้อมูลประเภทหวย BABYSHARK8899 และรอบออกรางวัล">
     <Picture
       slot="left"
-      src={imgAllStyles}
-      alt={allStylesAlt}
+      src={imgLottery}
+      alt={lotteryAlt}
       loading="lazy"
       fetchpriority="low"
       widths={[280, 380, 480, 600]}
@@ -114,21 +249,16 @@ const listLabel = "font-black text-[#ffe08a]";
     />
 
     <p slot="right" class={body}>
-      คนที่อยากเปลี่ยนบรรยากาศจากเกมหมุนวงล้อมาดูจังหวะเปิดไพ่ตามเวลาจริง สลับมาหมวดคาสิโนสดได้ด้วยเครดิตก้อนเดิม สัญญาณภาพส่งตรงจากโต๊ะดีลเลอร์ด้วยความละเอียดคมชัด เห็นหน้าไพ่ ลูกเต๋า และวงล้อชัดเจน มีให้เลือกครบทั้งบาคาร่าสำหรับคนชอบอ่านสถิติเค้าไพ่ รูเล็ตที่เลือกได้ทั้งวางเลขเดี่ยวหรือแทงสีแทงคู่คี่ และไฮโลที่ได้ลุ้นแต้มสูงต่ำจบไวเป็นรอบๆ ตั้งงบต่อรอบไว้ก่อนวางชิปแล้วเล่นตามนั้น
+      คอหวยแต่ละคนตามรอบออกรางวัลคนละตลาด หวยรัฐบาลออกวันที่ 1 และ 16 ของเดือน หวยฮานอยมีรอบปกติ พิเศษ และ VIP หวยหุ้นมีหุ้นไทย นิเคอิ ฮั่งเส็ง และดาวโจนส์ ยังมีหวยลาว ยี่กี มาเลย์ ออมสิน และ ธ.ก.ส. ประเภทแทงมี 3 ตัวบน 3 ตัวโต๊ด 2 ตัวบน 2 ตัวล่าง วิ่งบน และวิ่งล่าง อัตราจ่ายกับเวลาปิดรับของแต่ละตลาดดูได้ในหน้าแทงหวยก่อนยืนยันโพย
     </p>
-  </ContentBoxSevenThreePremium>
+  </ContentBoxSevenThreeNeumorphism>
+  </div>
 
-  <ContentBoxPremium as="h2" title="ซื้อหวยที่ TGA99 ไม่อั้นเลข ครบหวยหุ้น ลาว ฮานอย และหวยไทย">
-    <p class={body}>
-      ปัญหาที่คอหวยเจอบ่อยคือหาได้เลขเด็ดมาแล้วกดส่งโพยไม่ผ่านเพราะติดเลขอั้น หรือโดนหั่นราคาจ่ายตอนใกล้ปิดรับ ที่นี่เปิดรับแทงด้วยนโยบายไม่อั้นเลขเพื่อให้ส่งโพยเลขที่ตั้งใจไว้ได้ครบทุกตัว เข้ามาลุ้นได้มากกว่าแค่สองงวดต่อเดือน เพราะเปิดตลาดที่ออกผลรายวันไว้ทั้งหวยหุ้น ฮานอย ลาว รวมถึงงวดรัฐบาลไทย เช็กเรทจ่ายของตลาดที่จะเล่นก่อนส่งโพยทุกครั้ง ถูกรางวัลแล้วถอนออกด้วยระบบออโต้เหมือนทุกหมวด
-    </p>
-  </ContentBoxPremium>
-
-  <ContentBoxSevenThreeCyberCut as="h2" titleright="เกมยิงปลาบนเว็บนี้ ใช้ฝีมือเล็งเป้า ลุ้นปลาบอสโบนัสใหญ่">
+  <ContentBoxSevenThree as="h2" titleright="รายละเอียดบริการ BABYSHARK8899 เว็บไซต์หลัก ช่องทางติดต่อ">
     <Picture
       slot="left"
-      src={imgStable}
-      alt={stableAlt}
+      src={imgService}
+      alt={serviceAlt}
       loading="lazy"
       fetchpriority="low"
       widths={[280, 380, 480, 600]}
@@ -141,33 +271,23 @@ const listLabel = "font-black text-[#ffe08a]";
     />
 
     <p slot="right" class={body}>
-      ถ้าวันไหนไม่อยากรอจังหวะสุ่มของวงล้อหรือรอบออกผลรางวัล หมวดเกมยิงปลาที่นี่เป็นทางเลือกที่ให้คุณคุมจังหวะการยิงและเลือกเป้าหมายเองได้ เครดิตที่ใช้ยิงมาจากกระเป๋าเงินเดียวกับหมวดอื่น จะเล็งตัวไหนหรือพักมือรอตัวใหญ่ก็ตัดสินใจเองทั้งหมด ส่วนปลาบอสคือตัวที่พกโบนัสก้อนใหญ่มาให้ลุ้น ห้องที่เปิดมีทั้ง Mega Fishing ของ JILI ที่มีบอสยักษ์กับกงล้อโบนัส และ Dinosaur Tycoon ที่เปลี่ยนฝูงปลาเป็นไดโนเสาร์ เหมาะกับคนที่ชอบเกมภาพสวยและอยากใช้ความแม่นกะจังหวะกระสุนด้วยตัวเอง
+      ลิงก์ที่ส่งต่อกันในแชตมีหลายหน้าตา ก่อนกรอกรหัสทุกครั้งจึงมองชื่อเว็บบนแถบที่อยู่ให้แน่ใจว่าตรง เว็บไซต์หลักเข้าได้จากทางเข้าบนหน้านี้ ใครยังไม่มียูสกด<a href="/register/" class={inlineLink}>สมัคร BABYSHARK8899</a> ใส่ข้อมูลตามหน้าสมัครแล้วเช็กอีกรอบก่อนกดยืนยัน มีเรื่องติดขัดก็ติดต่อแอดมินผ่านช่องทางบนหน้าเว็บ รหัสผ่านกับ OTP ไม่ส่งให้ใคร
     </p>
-  </ContentBoxSevenThreeCyberCut>
+  </ContentBoxSevenThree>
 
-  <ContentBoxTwoPremium as="h2" title="ฝากถอนออโต้ บัญชีเดียวตลอด 24 ชม. รองรับวอเลท">
-    <p slot="left" class={body}>
-      การสลับเล่นถึงสี่หมวดจะสะดุดทันทีถ้าต้องคอยโยกเครดิตเข้าออกตามค่ายหรือส่งหลักฐานโอนเงินให้แอดมินตรวจ TGA99 จึงผูกทุกหมวดเข้ากับกระเป๋าเงินเดียวและทำรายการฝากถอนออโต้ได้ตลอด 24 ชั่วโมง โอนได้จากทุกธนาคารและทรูวอเลท (TrueMoney Wallet) ยอดปรับเข้าออกในไม่กี่วินาทีแบบไม่ต้องแนบสลิป ทั้งยังมีโปรฝาก เครดิตฟรี และกิจกรรมแจกเสริมทุนให้เช็กเงื่อนไขล่าสุดได้ที่<a href="/promotion/" class={inlineLink}>หน้าโปรโมชั่น</a>
-    </p>
-
-    <ul slot="right" class="flex flex-col gap-3">
-      <li class={listItem}><strong class={listLabel}>ฝากขั้นต่ำ 20 บาท:</strong> เริ่มเติมทุนได้ตั้งแต่ยอดเล็ก</li>
-      <li class={listItem}><strong class={listLabel}>ถอนขั้นต่ำ 50 บาท:</strong> ยอดถึงเกณฑ์เมื่อไหร่กดถอนเองได้เลย ระบบทำให้โดยไม่ต้องผ่านแอดมิน</li>
-      <li class={listItem}><strong class={listLabel}>สมัครครั้งเดียว:</strong> กรอกข้อมูลตามช่องที่ระบบกำหนดแล้วตรวจก่อนยืนยัน สมาชิกเดิมล็อกอินด้วยข้อมูลเดิมได้ทุกเครื่อง ใช้เล่นได้ทั้งสี่หมวดโดยไม่ค้างยอดข้ามหมวด</li>
-    </ul>
-  </ContentBoxTwoPremium>
-
-  <LatestWinnersPremium />
-
-  <LoginRtpSection />
+  <Faq3 title="คำถามที่พบบ่อยเกี่ยวกับ BABYSHARK8899" faqs={faqs} />
 
   <ContentBox>
     <p class={body}>
-      TGA99 รวบรวมสล็อตโบนัสแตกถี่จากค่ายดัง โต๊ะคาสิโนสดภาพชัดทั้งบาคาร่า รูเล็ต ไฮโล ตลาดหวยหุ้น ลาว ฮานอย และหวยไทยที่เปิดรับแบบไม่อั้นเลข รวมถึงห้องเกมยิงปลาล่าบอสโบนัสใหญ่ไว้ภายใต้บัญชีเดียว ส่วนเรื่องเงินใช้ฝากถอนออโต้ตลอด 24 ชั่วโมง ใครที่มองหาเว็บเดียวจบครบสี่แนว <a href="/register/" class={inlineLink}>สมัคร TGA99</a> แล้วเริ่มเล่นหมวดที่ถนัดได้เลย
+      BABYSHARK8899 คือทะเลที่รวมวงล้อ โต๊ะไพ่ ห้องล่าปลา และโพยหวยไว้ด้วยกัน สล็อตเลือกตามค่าย โต๊ะสดมีบาคาร่ากับรูเล็ต หวยแทงได้ตั้งแต่งวดรัฐบาลถึงหวยหุ้น เข้า<a href="/ทางเข้า/" class={inlineLink}>ทางเข้าบนหน้านี้</a>แล้วเลือกหมวดแรกของวันได้เลย
     </p>
   </ContentBox>
 
-  <ReviewCardSumo2 />
+  <LatestWinners3 />
+
+  <LoginRtpSection />
+
+  <ReviewCardSumo />
 
   <Navfoot />
 </MainLayout>

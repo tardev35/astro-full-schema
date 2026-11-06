@@ -8,14 +8,14 @@ const { title, as: HeadingTag = "h1" } = Astro.props;
 
 <section class="relative z-10 my-8 flex w-full justify-center px-4 font-sans">
   <div
-    class="group relative isolate w-full max-w-[1400px] overflow-hidden rounded-3xl border border-[#5a1a60] bg-[#1c0620] p-8 text-left text-base leading-relaxed text-[#ead9ec] shadow-[0_10px_30px_rgba(0,0,0,0.35)] transition-all duration-500 hover:border-[#8a2f8f] hover:shadow-[0_15px_40px_rgba(193,63,196,0.22)] md:p-10">
-    <div aria-hidden="true" class="pointer-events-none absolute top-0 left-0 -z-10 h-1.5 w-full bg-gradient-to-r from-[#c13fc4] via-[#e061e3] to-[#f5c542]"></div>
-    <div aria-hidden="true" class="pointer-events-none absolute -right-20 -bottom-20 -z-10 h-40 w-40 rounded-full bg-[#c13fc4]/15 blur-[60px] transition-all duration-500 group-hover:bg-[#c13fc4]/25"></div>
+    class="group relative isolate w-full max-w-[1400px] overflow-hidden rounded-3xl border border-[#1a4a9c] bg-[#041a45] p-8 text-left text-base leading-relaxed text-[#dbe9ff] shadow-[0_10px_30px_rgba(0,0,0,0.35)] transition-all duration-500 hover:border-[#2f7bff] hover:shadow-[0_15px_40px_rgba(11,124,244,0.22)] md:p-10">
+    <div aria-hidden="true" class="pointer-events-none absolute top-0 left-0 -z-10 h-1.5 w-full bg-gradient-to-r from-[#0b7cf4] via-[#4da3ff] to-[#e8202a]"></div>
+    <div aria-hidden="true" class="pointer-events-none absolute -right-20 -bottom-20 -z-10 h-40 w-40 rounded-full bg-[#0b7cf4]/15 blur-[60px] transition-all duration-500 group-hover:bg-[#0b7cf4]/25"></div>
 
     {
       title && (
-        <header class="mb-6 flex items-center gap-4 border-b border-[#5a1a60] pb-4">
-          <div aria-hidden="true" class="h-8 w-1.5 shrink-0 rounded-full bg-gradient-to-b from-[#e061e3] to-[#f5c542]" />
+        <header class="mb-6 flex items-center gap-4 border-b border-[#1a4a9c] pb-4">
+          <div aria-hidden="true" class="h-8 w-1.5 shrink-0 rounded-full bg-gradient-to-b from-[#4da3ff] to-[#e8202a]" />
           <HeadingTag class="text-2xl leading-normal font-black tracking-wide text-white">{title}</HeadingTag>
         </header>
       )

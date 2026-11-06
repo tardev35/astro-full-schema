@@ -2,42 +2,67 @@
 import { Picture } from "astro:assets";
 import { BRAND_NAME } from "../lib/brandProfile";
 import imgPg from "../assets/providers/game1.avif";
-import imgJoker from "../assets/providers/game4.avif";
 import imgJili from "../assets/providers/game5.avif";
 import imgPp from "../assets/providers/game6.avif";
+
+const pgAlt = "โลโก้ PG Pocket Games Soft กับตัวละครสาวสวมมงกุฎขนนกและเพื่อนร่วมเกม";
+const ppAlt = "โลโก้ PP Slot กับเทพเจ้าเคราขาวถือสายฟ้า";
+const jiliAlt = "โลโก้ JILI กับนักรบชุดทองถือขวานพู่สี";
 
 const games = [
   {
     name: "Treasures of Aztec",
     provider: "PG Soft",
-    fit: "เหมาะกับคนชอบลุ้นยาวในรอบฟรีสปิน",
-    mechanics: ["ฟรีสปิน", "ตัวคูณขยับตามคอมโบ"],
+    fit: "สาวถ้ำ เหมาะกับคนชอบลุ้นชนะต่อเนื่องให้ตัวคูณขยับขึ้น",
+    mechanics: ["ร่วงหล่น", "กรอบทองเป็นไวลด์", "ตัวคูณเพิ่มเมื่อชนะต่อเนื่อง"],
     img: imgPg,
-    alt: "โลโก้ PG Pocket Games Soft กับตัวละครสาวสวมมงกุฎขนนกและเพื่อนร่วมเกม",
+    alt: pgAlt,
+    players: 1860,
   },
   {
-    name: "Sweet Bonanza",
+    name: "Fortune Tiger",
+    provider: "PG Soft",
+    fit: "เสือทอง วงล้อ 3×3 รอบสั้น เหมาะกับคนที่เล่นทีละช่วง",
+    mechanics: ["วงล้อ 3×3", "ไม่มีฟรีสปิน", "สุ่มหมุนซ้ำ"],
+    img: imgPg,
+    alt: pgAlt,
+    players: 1420,
+  },
+  {
+    name: "Starlight Princess",
     provider: "Pragmatic Play",
-    fit: "เหมาะกับคนทุนพร้อมที่อยากกดซื้อฟรีสปิน",
-    mechanics: ["สัญลักษณ์ร่วงหล่น", "ลูกระเบิดตัวคูณ", "ซื้อฟรีสปิน"],
+    fit: "เจ้าหญิงอนิเมะ เหมาะกับคนชอบรอตัวคูณสะสมในฟรีสปิน",
+    mechanics: ["ตัวคูณสุ่มในเกมหลัก", "สะสมตัวคูณในฟรีสปิน"],
     img: imgPp,
-    alt: "โลโก้ PP Slot กับเทพเจ้าเคราขาวถือสายฟ้า",
+    alt: ppAlt,
+    players: 1275,
   },
   {
-    name: "Fortune Gems",
+    name: "The Dog House",
+    provider: "Pragmatic Play",
+    fit: "เหมาะกับคนชอบไวลด์ที่ค้างอยู่จนจบรอบ",
+    mechanics: ["ไวลด์ตัวคูณ", "ไวลด์ค้างในฟรีสปิน"],
+    img: imgPp,
+    alt: ppAlt,
+    players: 960,
+  },
+  {
+    name: "Super Ace",
     provider: "JILI",
-    fit: "รอบเดินไว เหมาะกับคนที่เล่นทีละช่วงสั้น",
-    mechanics: ["3 รีล", "วงล้อตัวคูณด้านขวา"],
+    fit: "ธีมไพ่ ระบบร่วงหล่น เหมาะกับคนชอบลุ้นตัวคูณจากชุดชนะต่อเนื่อง",
+    mechanics: ["ร่วงหล่น", "ไพ่กรอบทองเป็นไวลด์", "ตัวคูณเพิ่มเมื่อชนะต่อเนื่อง"],
     img: imgJili,
-    alt: "โลโก้ JILI กับนักรบชุดทองถือขวานพู่สี",
+    alt: jiliAlt,
+    players: 1130,
   },
   {
-    name: "Roma",
-    provider: "Joker Gaming",
-    fit: "เล่นง่าย เหมาะกับคนเพิ่งเริ่ม",
-    mechanics: ["คลาสสิก", "โบนัสพิเศษระหว่างปั่น"],
-    img: imgJoker,
-    alt: "โลโก้ JOKER กับนักรบสวมหมวกเหล็กหน้าโคลอสเซียม",
+    name: "Boxing King",
+    provider: "JILI",
+    fit: "ธีมนักมวย เหมาะกับคนชอบลุ้นไวลด์ขยายเต็มแถวในฟรีสปิน",
+    mechanics: ["ฟรีสปิน", "ไวลด์ขยายเต็มแถว"],
+    img: imgJili,
+    alt: jiliAlt,
+    players: 840,
   },
 ];
 
@@ -48,20 +73,20 @@ const boardTitle = `เทียบกลไกเกมสล็อตก่อ
   <div class="mb-6 flex w-full flex-col items-center justify-center gap-2 text-center">
     <span aria-hidden="true" class="text-2xl">🎰</span>
     <p class="text-2xl leading-normal font-black tracking-wide text-white">{boardTitle}</p>
-    <div aria-hidden="true" class="mt-2 h-[3px] w-24 rounded-full bg-gradient-to-r from-transparent via-[#f5c542] to-transparent"></div>
+    <div aria-hidden="true" class="mt-2 h-[3px] w-24 rounded-full bg-gradient-to-r from-transparent via-[#0b7cf4] to-transparent"></div>
   </div>
 
-  <p class="mb-6 text-left text-base leading-relaxed text-[#ead9ec]">
-    แต่ละแถวสรุปกลไกหลักของเกมจากค่ายที่ {BRAND_NAME} รวมไว้ในเว็บเดียว ดูว่ารอบฟรีสปินเข้าแบบไหน ตัวคูณทำงานตอนไหน และซื้อฟีเจอร์ได้หรือไม่ แล้วเลือกแนวที่เข้ามือตัวเอง
+  <p class="mb-6 text-left text-base leading-relaxed text-[#dbe9ff]">
+    แต่ละแถวสรุปกลไกหลักของเกมจากค่ายที่ {BRAND_NAME} แยกไว้ให้ ดูว่าฟรีสปินเข้าแบบไหน ตัวคูณทำงานตอนไหน แล้วเลือกแนวที่เข้ามือตัวเอง
   </p>
 
   <div class="flex flex-col gap-3">
     {
       games.map((g) => (
-        <article class="group relative flex items-center gap-3 overflow-hidden rounded-2xl border border-[#5a1a60] bg-[#1c0620] p-3 shadow-[0_10px_30px_rgba(0,0,0,0.3)] transition-all duration-300 hover:-translate-y-0.5 hover:border-[#8a2f8f] hover:bg-[#26082c] hover:shadow-[0_15px_40px_rgba(193,63,196,0.22)] sm:gap-5 sm:p-4">
-          <span aria-hidden="true" class="absolute inset-y-0 left-0 w-1 bg-gradient-to-b from-[#e061e3] to-[#9c2193] opacity-80 transition-opacity duration-300 group-hover:opacity-100" />
+        <article class="group relative flex items-center gap-3 overflow-hidden rounded-2xl border border-[#1a4a9c] bg-[#041a45] p-3 shadow-[0_10px_30px_rgba(0,0,0,0.3)] transition-all duration-300 hover:-translate-y-0.5 hover:border-[#2f7bff] hover:bg-[#06204f] hover:shadow-[0_15px_40px_rgba(11,124,244,0.22)] sm:gap-5 sm:p-4">
+          <span aria-hidden="true" class="absolute inset-y-0 left-0 w-1 bg-gradient-to-b from-[#4da3ff] to-[#0554b8] opacity-80 transition-opacity duration-300 group-hover:opacity-100" />
 
-          <div class="relative h-14 w-14 shrink-0 overflow-hidden rounded-xl border border-[#5a1a60] sm:h-16 sm:w-16">
+          <div class="relative h-14 w-14 shrink-0 overflow-hidden rounded-xl border border-[#1a4a9c] sm:h-16 sm:w-16">
             <Picture
               src={g.img}
               alt={g.alt}
@@ -70,7 +95,7 @@ const boardTitle = `เทียบกลไกเกมสล็อตก่อ
               loading="lazy"
               fetchpriority="low"
               widths={[100, 200]}
-              quality={60}
+              quality={70}
               sizes="(max-width: 640px) 56px, 64px"
               decoding="async"
               class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
@@ -80,24 +105,36 @@ const boardTitle = `เทียบกลไกเกมสล็อตก่อ
           <div class="min-w-0 flex-1">
             <div class="flex flex-wrap items-center gap-2">
               <p class="text-base font-black text-white sm:text-lg">{g.name}</p>
-              <span class="shrink-0 rounded-full bg-gradient-to-b from-[#ffe08a] via-[#f5c542] to-[#b07d12] px-2 py-0.5 text-[10px] font-black tracking-wider text-[#3a0535]">{g.provider}</span>
+              <span class="shrink-0 rounded-full bg-gradient-to-b from-[#ff5a60] to-[#b0121a] px-2 py-0.5 text-[10px] font-black tracking-wider text-white">{g.provider}</span>
             </div>
-            <p class="text-xs text-[#c9a8cc]">{g.fit}</p>
+            <p class="text-xs text-[#9fb8dc]">{g.fit}</p>
 
             <div class="mt-2 flex flex-wrap items-center gap-1.5">
               {g.mechanics.map((m) => (
-                <span class="rounded-full border border-[#5a1a60] bg-[#31103a] px-2.5 py-0.5 text-[11px] font-bold text-[#ffe08a]">{m}</span>
+                <span class="rounded-full border border-[#1a4a9c] bg-[#0a2a66] px-2.5 py-0.5 text-[11px] font-bold text-[#4da3ff]">{m}</span>
               ))}
             </div>
           </div>
 
-          <a
-            href="/register/"
-            class="hidden shrink-0 rounded-full bg-gradient-to-b from-[#e061e3] to-[#9c2193] px-4 py-1.5 text-xs font-black text-white shadow-[0_10px_30px_rgba(193,63,196,0.35)] transition-transform hover:scale-105 sm:inline-block">
-            สมัครเข้าเล่น
-          </a>
+          <div class="hidden shrink-0 flex-col items-end gap-1.5 sm:flex">
+            <span class="text-[10px] font-bold tracking-widest text-[#9fb8dc]">กำลังเล่น</span>
+            <span class="text-sm font-black text-[#4da3ff]">
+              <span data-players data-base={g.players}>{g.players.toLocaleString("en-US")}</span> คน
+            </span>
+            <a
+              href="/register/"
+              class="rounded-full bg-gradient-to-b from-[#4da3ff] to-[#0554b8] px-4 py-1.5 text-xs font-black text-white shadow-[0_10px_30px_rgba(11,124,244,0.35)] transition-transform hover:scale-105">
+              สมัครเข้าเล่น
+            </a>
+          </div>
         </article>
       ))
     }
   </div>
 </section>
+
+<script>
+  import { startLiveCounters } from "../lib/liveCounter";
+
+  startLiveCounters();
+</script>

@@ -1,0 +1,77 @@
+---
+import { Picture } from "astro:assets";
+import type { ImageMetadata } from "astro";
+import { gameIcon } from "../lib/gameIcons";
+
+export interface ProviderCard {
+  name: string;
+  tagline?: string;
+  desc: string;
+  games?: string[];
+  img?: ImageMetadata;
+  alt?: string;
+  icon?: string;
+}
+
+export interface Props {
+  items: ProviderCard[];
+  as?: "h3" | "p";
+  cols?: 2 | 3 | 4;
+  class?: string;
+}
+
+const { items, as: HeadingTag = "p", cols = 2, class: className = "" } = Astro.props;
+const grid = { 2: "md:grid-cols-2", 3: "md:grid-cols-3", 4: "sm:grid-cols-2 lg:grid-cols-4" }[cols];
+---
+
+<div class={`grid grid-cols-1 gap-4 ${grid} ${className}`}>
+  {
+    items.map((p) => (
+      <article class="group relative rounded-[22px] bg-gradient-to-br from-[#2b95ff]/60 via-[#1a4a9c]/35 to-[#e8202a]/50 p-px shadow-[0_12px_32px_rgba(0,0,0,0.35)] transition-transform duration-300 hover:-translate-y-1">
+        <div class="relative flex h-full flex-col overflow-hidden rounded-[21px] bg-[#041a45] p-4 sm:p-5">
+          <div aria-hidden="true" class="pointer-events-none absolute -top-16 -right-12 h-40 w-40 rounded-full bg-[#0b7cf4]/20 blur-3xl transition-colors duration-500 group-hover:bg-[#e8202a]/25" />
+          <div class="relative flex items-center gap-4">
+            {
+              p.img ? (
+                <span class="shrink-0 overflow-hidden rounded-2xl border border-[#1a4a9c] bg-[#06204f] shadow-[0_8px_20px_rgba(0,0,0,0.4)]">
+                  <Picture
+                    src={p.img}
+                    alt={p.alt ?? p.name}
+                    loading="lazy"
+                    decoding="async"
+                    fetchpriority="low"
+                    widths={[160, 240]}
+                    sizes="80px"
+                    formats={["avif", "webp"]}
+                    fallbackFormat="webp"
+                    quality={72}
+                    class="h-20 w-20 object-cover"
+                  />
+                </span>
+              ) : (
+                <span
+                  class="flex h-20 w-20 shrink-0 items-center justify-center rounded-2xl bg-gradient-to-br from-[#0b7cf4] to-[#2b95ff] text-white shadow-[0_8px_20px_rgba(11,124,244,0.45)]"
+                  set:html={gameIcon(p.icon ?? "crown", 34)}
+                />
+              )
+            }
+            <div class="min-w-0">
+              {p.tagline && <p class="text-[10px] font-extrabold tracking-[0.2em] text-[#4da3ff] uppercase">{p.tagline}</p>}
+              <HeadingTag class="mt-0.5 text-lg leading-snug font-black text-white">{p.name}</HeadingTag>
+            </div>
+          </div>
+          <p class="relative mt-3 text-sm leading-relaxed text-[#b9cdf0]">{p.desc}</p>
+          {
+            p.games?.length && (
+              <ul class="relative mt-3 flex flex-wrap gap-2">
+                {p.games.map((g) => (
+                  <li class="rounded-full border border-[#4da3ff]/40 bg-[#06204f] px-3 py-1 text-[11px] font-bold text-[#dbe9ff]">{g}</li>
+                ))}
+              </ul>
+            )
+          }
+        </div>
+      </article>
+    ))
+  }
+</div>

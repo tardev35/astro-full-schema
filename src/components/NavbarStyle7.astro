@@ -10,127 +10,144 @@ const currentPath = Astro.url.pathname;
 
 const isActive = (path: string) => isActivePath(currentPath, path);
 
+const affUrl = "https://yoalink.com/22hs";
+
 const links = [
   { name: "หน้าแรก", path: "/", icon: "🏠" },
   { name: "โปรโมชั่น", path: "/promotion/", icon: "🎁" },
-  { name: "สมัครสมาชิก", path: "/register/", icon: "📝" },
-  { name: "เข้าสู่ระบบ", path: "/login/", icon: "🔑" },
   { name: "ทดลองเล่น", path: "/ทดลองเล่น/", icon: "🎰" },
-  { name: "เกี่ยวกับเรา", path: "/about-us/", icon: "📘" },
-  { name: "ติดต่อเรา", path: "/contact-us/", icon: "📞" },
+  { name: "วิธีฝากถอน", path: "/วิธีฝากถอน/", icon: "💳" },
+  { name: "เกี่ยวกับเรา", path: "/about-us/", icon: "💎" },
+  { name: "ติดต่อเรา", path: "/contact-us/", icon: "💬" },
 ];
 
-// แถบเดสก์ท็อปมีปุ่ม "เข้าสู่ระบบ" และ "สมัครสมาชิก" อยู่ทางขวาแล้ว
-// การใส่สองรายการนี้ในเมนูด้วยทำให้ซ้ำซ้อนและเบียดรายการที่เหลือจนอ่านยาก
-// เมนูมือถือไม่มีปุ่มคู่นั้น จึงยังใช้ links ครบทุกรายการ
-const ctaPaths = new Set(["/register", "/login"]);
-const desktopLinks = links.filter((link) => !ctaPaths.has(link.path));
-
-const logoAlt =
-  "โลโก้ ONEHENG89 เป็นป้ายสี่เหลี่ยมมุมมนสีน้ำเงินเข้ม ตัวอักษรสีขาวอ่านว่า 1neheng โดยเลข 1 อยู่ในวงกลมสีขาว และเลข 89 สีน้ำเงินอยู่ในกรอบสี่เหลี่ยมมุมมนสีขาวด้านขวาสุด";
+const logoAlt = "โลโก้ 77RUAY ตัวอักษร 77RUAY สีทองนูนแบบสามมิติ ขอบทองเข้มเงาวาว";
 ---
 
 <header class="sticky top-0 z-50 w-full font-sans">
-  <nav class="relative z-40 w-full border-b border-[#0b3fb8]/40 bg-[#07235f]/97 shadow-[0_5px_25px_rgba(11,63,184,0.22)] backdrop-blur-xl">
-    <div class="mx-auto flex h-[70px] max-w-[1400px] items-center justify-between px-4 lg:h-[80px] xl:px-8">
-      <div class="flex items-center gap-4">
-        <button id="hamburger-btn" class="flex flex-col items-center justify-center space-y-1.5 p-2 lg:hidden" aria-label="Menu">
-          <span class="hamburger-line h-[2px] w-6 origin-center rounded-full bg-[#8fd6ac] shadow-[0_0_5px_rgba(49,201,107,0.5)] transition-all duration-300"></span>
-          <span class="hamburger-line h-[2px] w-6 rounded-full bg-[#8fd6ac] shadow-[0_0_5px_rgba(49,201,107,0.5)] transition-all duration-300"></span>
-          <span class="hamburger-line h-[2px] w-6 origin-center rounded-full bg-[#8fd6ac] shadow-[0_0_5px_rgba(49,201,107,0.5)] transition-all duration-300"></span>
-        </button>
-
-        <a href="/" class="flex-shrink-0 transition-transform hover:scale-105">
-          {
-            mainLogo ? (
-              <Picture
-                src={mainLogo}
-                alt={logoAlt}
-                widths={[110, 220, 330]}
-                sizes="110px"
-                loading="eager"
-                fetchpriority="high"
-                class="h-[35px] w-auto rounded-md bg-white/95 px-1.5 py-1 drop-shadow-[0_0_10px_rgba(59,116,232,0.45)] lg:h-[50px]"
-                formats={["avif", "webp"]}
-                fallbackFormat="webp"
-              />
-            ) : (
-              <span class="bg-gradient-to-b from-white to-[#8fd6ac] bg-clip-text text-2xl font-black text-transparent drop-shadow-[0_0_8px_rgba(49,201,107,0.5)] lg:text-3xl">ONEHENG89</span>
-            )
-          }
-        </a>
-      </div>
-
-      <div class="hidden h-full items-center justify-center gap-5 lg:flex xl:gap-8">
+  <nav
+    aria-label="เมนูหลัก"
+    class="relative z-40 w-full border-b-2 border-[#e0a91b] bg-[#0a1f5c] shadow-[0_6px_24px_rgba(10,31,92,0.25)]"
+    style="background-image: linear-gradient(in oklab to right, #0a1f5c, #0b3a9e 55%, #0a1f5c);">
+    <div class="mx-auto flex h-[66px] max-w-[1400px] items-center justify-between gap-4 px-4 lg:h-[78px] xl:px-8">
+      <a href="/" class="flex-shrink-0 transition-transform hover:scale-105">
         {
-          desktopLinks.map((link) => (
-            <a href={link.path} class="group relative flex h-full shrink-0 flex-col items-center justify-center text-sm font-bold whitespace-nowrap transition-all xl:text-base">
-              <span class="flex items-center gap-1.5">
+          mainLogo ? (
+            <Picture
+              src={mainLogo}
+              alt={logoAlt}
+              widths={[110, 220, 330]}
+              sizes="110px"
+              loading="eager"
+              fetchpriority="high"
+              class="h-[38px] w-auto drop-shadow-[0_2px_6px_rgba(224,169,27,0.45)] lg:h-[50px]"
+              formats={["avif", "webp"]}
+              fallbackFormat="webp"
+            />
+          ) : (
+            <span class="bg-gradient-to-b from-[#fff3c4] via-[#ffd45c] to-[#b07d12] bg-clip-text text-2xl font-black text-transparent lg:text-3xl">77RUAY</span>
+          )
+        }
+      </a>
+
+      <ul class="hidden h-full items-center justify-center gap-6 xl:flex 2xl:gap-8">
+        {
+          links.map((link) => (
+            <li class="h-full">
+              <a
+                href={link.path}
+                aria-current={isActive(link.path) ? "page" : undefined}
+                class="group relative flex h-full shrink-0 items-center gap-1.5 text-[15px] font-bold whitespace-nowrap transition-colors">
                 <span aria-hidden="true" class="text-base leading-none">
                   {link.icon}
                 </span>
-                <span class={`transition-colors duration-300 ${isActive(link.path) ? "text-white drop-shadow-[0_0_8px_rgba(49,201,107,0.6)]" : "text-[#dbe7fb]/75 group-hover:text-white"}`}>{link.name}</span>
-              </span>
-              <div
-                aria-hidden="true"
-                class={`absolute bottom-4 w-1.5 h-1.5 rounded-full bg-[#31c96b] transition-all duration-300 ${isActive(link.path) ? "opacity-100 scale-100 shadow-[0_0_10px_rgba(49,201,107,1)]" : "opacity-0 scale-0 group-hover:opacity-100 group-hover:scale-100"}`}
-              />
-            </a>
+                <span class={isActive(link.path) ? "text-[#ffd45c]" : "text-[#dbe6fb] group-hover:text-white"}>{link.name}</span>
+                <span
+                  aria-hidden="true"
+                  class={`absolute inset-x-0 bottom-0 h-[3px] rounded-t-full bg-[#ffd45c] transition-transform duration-300 ${isActive(link.path) ? "scale-x-100" : "scale-x-0 group-hover:scale-x-100"}`}
+                />
+              </a>
+            </li>
           ))
         }
-      </div>
+      </ul>
 
       <div class="flex items-center gap-3">
         <a
-          href="/login/"
-          class="hidden items-center justify-center rounded-full border border-white/35 bg-white/10 px-6 py-2.5 text-sm font-bold text-white transition-all hover:border-white hover:bg-white/20 md:flex">
+          href={affUrl}
+          rel="nofollow sponsored"
+          style="background-image: linear-gradient(in oklab to bottom, #ffd45c, #e0a91b, #b07d12);"
+          class="hidden items-center justify-center rounded-full px-6 py-2.5 text-sm font-extrabold text-[#0a1f5c] shadow-[0_0_16px_rgba(224,169,27,0.40)] transition-all hover:brightness-110 lg:flex">
           เข้าสู่ระบบ
         </a>
         <a
-          href="/register/"
-          style="background-image: linear-gradient(in oklab to right, #16a34a, #31c96b, #16a34a);"
-          class="flex items-center justify-center rounded-full px-5 py-2 text-xs font-extrabold text-white shadow-[0_0_20px_rgba(22,163,74,0.40)] transition-all hover:shadow-[0_0_25px_rgba(22,163,74,0.6)] hover:brightness-110 lg:px-7 lg:py-2.5 lg:text-sm">
+          href={affUrl}
+          rel="nofollow sponsored"
+          style="background-image: linear-gradient(in oklab to bottom, #4d8ff5, #1a5fe0, #0b3a9e);"
+          class="hidden items-center justify-center rounded-full border-2 border-[#ffd45c] px-6 py-2 text-sm font-extrabold text-white shadow-[0_0_18px_rgba(26,95,224,0.45)] transition-all hover:brightness-110 lg:flex">
           สมัครสมาชิก
         </a>
+
+        <button
+          id="hamburger-btn"
+          type="button"
+          aria-label="เปิดเมนู"
+          aria-expanded="false"
+          aria-controls="mobile-bottom-sheet"
+          class="flex h-11 w-11 flex-col items-center justify-center space-y-1.5 rounded-xl border border-[#ffd45c]/50 bg-white/10 xl:hidden">
+          <span class="hamburger-line h-[2px] w-6 origin-center rounded-full bg-[#ffd45c] transition-all duration-300"></span>
+          <span class="hamburger-line h-[2px] w-6 rounded-full bg-[#ffd45c] transition-all duration-300"></span>
+          <span class="hamburger-line h-[2px] w-6 origin-center rounded-full bg-[#ffd45c] transition-all duration-300"></span>
+        </button>
       </div>
     </div>
   </nav>
 
-  <div id="mobile-overlay" class="pointer-events-none fixed inset-0 z-50 bg-[#041634]/80 opacity-0 backdrop-blur-sm transition-opacity duration-400 lg:hidden"></div>
+  <div id="mobile-overlay" class="pointer-events-none fixed inset-0 z-[105] bg-[#0a1f5c]/55 opacity-0 transition-opacity duration-300 xl:hidden"></div>
 
   <div
     id="mobile-bottom-sheet"
-    class="pb-safe fixed bottom-0 left-0 z-[60] w-full translate-y-full transform rounded-t-3xl border-t border-[#0b3fb8]/40 bg-[#07235f] shadow-[0_-10px_40px_rgba(4,22,52,0.6)] transition-transform duration-400 ease-[cubic-bezier(0.3,1,0.3,1)] lg:hidden">
-    <div class="flex w-full cursor-pointer justify-center pt-3 pb-2" id="close-sheet-btn">
-      <div class="h-1.5 w-12 rounded-full bg-white/35"></div>
-    </div>
+    class="pb-safe fixed bottom-0 left-0 z-[110] max-h-[85vh] w-full translate-y-full transform overflow-y-auto rounded-t-3xl border-t-4 border-[#e0a91b] bg-white shadow-[0_-12px_40px_rgba(10,31,92,0.30)] transition-transform duration-300 ease-[cubic-bezier(0.3,1,0.3,1)] xl:hidden">
+    <button type="button" id="close-sheet-btn" aria-label="ปิดเมนู" class="flex w-full cursor-pointer justify-center pt-3 pb-2">
+      <span aria-hidden="true" class="h-1.5 w-12 rounded-full bg-[#9dbcf0]"></span>
+    </button>
 
-    <div class="flex flex-col space-y-2 px-6 pt-2 pb-8">
+    <ul class="flex flex-col gap-2 px-5 pt-1">
       {
         links.map((link) => (
-          <a
-            href={link.path}
-            class={`sheet-item flex items-center justify-between px-5 py-4 rounded-2xl transition-all ${isActive(link.path) ? "bg-gradient-to-r from-[#16a34a]/30 to-transparent border border-[#31c96b]/45 text-white" : "bg-white/5 border-transparent text-[#dbe7fb]/70"}`}>
-            <span class="flex items-center gap-4">
-              <span aria-hidden="true" class="text-2xl drop-shadow-lg">
-                {link.icon}
+          <li>
+            <a
+              href={link.path}
+              aria-current={isActive(link.path) ? "page" : undefined}
+              class={`sheet-item flex items-center justify-between rounded-2xl border px-5 py-3.5 transition-colors ${isActive(link.path) ? "border-[#1a5fe0] bg-[#eef4ff] text-[#0b3a9e]" : "border-[#d6e2f7] bg-white text-[#0a1f5c]"}`}>
+              <span class="flex items-center gap-4">
+                <span aria-hidden="true" class="text-2xl">
+                  {link.icon}
+                </span>
+                <span class="text-base font-bold">{link.name}</span>
               </span>
-              <span class="text-base font-bold tracking-wide">{link.name}</span>
-            </span>
-            {isActive(link.path) && <span aria-hidden="true" class="h-2 w-2 rounded-full bg-[#31c96b] shadow-[0_0_8px_rgba(49,201,107,1)]" />}
-          </a>
+              {isActive(link.path) && <span aria-hidden="true" class="h-2.5 w-2.5 rounded-full bg-[#e0a91b] shadow-[0_0_8px_rgba(224,169,27,0.8)]" />}
+            </a>
+          </li>
         ))
       }
+    </ul>
 
-      <div class="mt-2 grid grid-cols-2 gap-3 border-t border-white/10 pt-4">
-        <a href="/login/" class="flex items-center justify-center rounded-xl border border-white/35 bg-white/10 py-3.5 text-sm font-bold text-white">เข้าสู่ระบบ</a>
-        <a
-          href="/register/"
-          style="background-image: linear-gradient(in oklab to right, #16a34a, #31c96b, #16a34a);"
-          class="flex items-center justify-center rounded-xl py-3.5 text-sm font-extrabold text-white shadow-[0_0_15px_rgba(22,163,74,0.45)]">
-          สมัครสมาชิก
-        </a>
-      </div>
+    <div class="mt-4 flex flex-col gap-3 border-t border-[#d6e2f7] px-5 pt-4 pb-8">
+      <a
+        href={affUrl}
+        rel="nofollow sponsored"
+        style="background-image: linear-gradient(in oklab to bottom, #4d8ff5, #1a5fe0, #0b3a9e);"
+        class="flex w-full items-center justify-center rounded-xl border-2 border-[#ffd45c] py-3.5 text-base font-extrabold text-white shadow-[0_0_15px_rgba(26,95,224,0.35)]">
+        สมัครสมาชิก
+      </a>
+      <a
+        href={affUrl}
+        rel="nofollow sponsored"
+        style="background-image: linear-gradient(in oklab to bottom, #ffd45c, #e0a91b, #b07d12);"
+        class="flex w-full items-center justify-center rounded-xl py-3.5 text-base font-extrabold text-[#0a1f5c] shadow-[0_0_12px_rgba(224,169,27,0.35)]">
+        เข้าสู่ระบบ
+      </a>
     </div>
   </div>
 </header>
@@ -142,40 +159,33 @@ const logoAlt =
   const closeSheetBtn = document.getElementById("close-sheet-btn");
   const hamburgerLines = document.querySelectorAll(".hamburger-line");
 
-  function toggleMenu() {
-    const isOpen = mobileBottomSheet?.classList.contains("translate-y-0");
+  function setMenu(open: boolean) {
+    mobileBottomSheet?.classList.toggle("translate-y-full", !open);
+    mobileBottomSheet?.classList.toggle("translate-y-0", open);
+    mobileOverlay?.classList.toggle("pointer-events-none", !open);
+    mobileOverlay?.classList.toggle("opacity-0", !open);
+    mobileOverlay?.classList.toggle("opacity-100", open);
+    hamburgerBtn?.setAttribute("aria-expanded", String(open));
 
-    if (!isOpen) {
-      mobileBottomSheet?.classList.remove("translate-y-full");
-      mobileBottomSheet?.classList.add("translate-y-0");
-      mobileOverlay?.classList.remove("pointer-events-none", "opacity-0");
-      mobileOverlay?.classList.add("opacity-100");
-
-      hamburgerLines[0].classList.add("rotate-45", "translate-y-[8px]");
-      hamburgerLines[1].classList.add("opacity-0");
-      hamburgerLines[2].classList.add("-rotate-45", "-translate-y-[8px]");
-    } else {
-      mobileBottomSheet?.classList.add("translate-y-full");
-      mobileBottomSheet?.classList.remove("translate-y-0");
-      mobileOverlay?.classList.add("pointer-events-none", "opacity-0");
-      mobileOverlay?.classList.remove("opacity-100");
-
-      hamburgerLines[0].classList.remove("rotate-45", "translate-y-[8px]");
-      hamburgerLines[1].classList.remove("opacity-0");
-      hamburgerLines[2].classList.remove("-rotate-45", "-translate-y-[8px]");
-    }
+    hamburgerLines[0]?.classList.toggle("rotate-45", open);
+    hamburgerLines[0]?.classList.toggle("translate-y-[8px]", open);
+    hamburgerLines[1]?.classList.toggle("opacity-0", open);
+    hamburgerLines[2]?.classList.toggle("-rotate-45", open);
+    hamburgerLines[2]?.classList.toggle("-translate-y-[8px]", open);
   }
 
-  hamburgerBtn?.addEventListener("click", toggleMenu);
-  mobileOverlay?.addEventListener("click", toggleMenu);
-  closeSheetBtn?.addEventListener("click", toggleMenu);
+  const isOpen = () => mobileBottomSheet?.classList.contains("translate-y-0") ?? false;
 
-  const sheetItems = document.querySelectorAll(".sheet-item");
-  sheetItems.forEach((item) => {
+  hamburgerBtn?.addEventListener("click", () => setMenu(!isOpen()));
+  mobileOverlay?.addEventListener("click", () => setMenu(false));
+  closeSheetBtn?.addEventListener("click", () => setMenu(false));
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape" && isOpen()) setMenu(false);
+  });
+
+  document.querySelectorAll(".sheet-item").forEach((item) => {
     item.addEventListener("click", () => {
-      if (mobileBottomSheet?.classList.contains("translate-y-0")) {
-        toggleMenu();
-      }
+      if (isOpen()) setMenu(false);
     });
   });
 </script>

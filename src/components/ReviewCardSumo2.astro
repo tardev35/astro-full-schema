@@ -10,29 +10,29 @@ const { title = `เสียงจากสมาชิก ${BRAND_NAME}` } = A
 const reviews = [
   {
     name: "คุณภูมิ",
-    role: "เล่นคาสิโนสดกับหวยเป็นประจำ",
+    role: "สลับมือถือกับแท็บเล็ต",
     stars: 5,
-    tag: "บัญชีเดียว",
-    content: `ปกติเล่นบาคาร่าแล้วแวะส่งโพยหวยหุ้น พอมาเล่นกับ ${BRAND_NAME} ไม่ต้องจำรหัสหลายที่ ไม่ต้องโยกเครดิตข้ามหมวด ใช้เครดิตก้อนเดิมได้เลย ตอนรับโปรก็เปิดอ่านเงื่อนไขในหน้าโปรโมชั่นก่อน เลยรู้ตั้งแต่แรกว่ายอดไหนถอนได้`,
-    avatar: "🃏",
+    tag: "ไม่ต้องโหลดแอป",
+    content: "เปลี่ยนโทรศัพท์เครื่องใหม่ก็ไม่ต้องลงโปรแกรมอะไรเพิ่ม เปิดเว็บในเบราว์เซอร์แล้วล็อกอินด้วยยูสกับรหัสเดิมได้เลย ไม่ต้องสมัครซ้ำ วันไหนอยู่หน้าคอมก็เปิดบนจอใหญ่ต่อได้เหมือนกัน",
+    avatar: "📱",
   },
   {
     name: "คุณต้น",
-    role: "สลับเล่นหลายค่ายในยูสเดียว",
+    role: "สลับเล่นหลายค่าย",
     stars: 5,
     tag: "เลือกเกมจากกลไก",
     content:
-      "ชอบที่มี PG Soft, Pragmatic Play, JILI และ Joker Gaming อยู่ในเว็บเดียว ปั่น Treasures of Aztec จนอยากเปลี่ยนจังหวะก็สลับไป Fortune Gems ได้เลยไม่ต้องย้ายเว็บ ลองเกมละไม่กี่รอบด้วยเบทเล็กก่อน แล้วค่อยคัดเกมที่จังหวะเข้ากับทุนของตัวเอง",
-    avatar: "🎰",
+      "ชอบที่มีทั้ง Fortune Tiger กับ Sugar Rush ให้สลับจังหวะ วันไหนอยากเล่นแบบไม่มีฟรีสปินก็เข้าเสือทอง อยากลุ้นสัญลักษณ์ร่วงหล่นก็ไป Sugar Rush ก่อนลองเกมใหม่จะเปิดอ่านกติกาในเกมก่อนทุกครั้ง",
+    avatar: "🐯",
   },
   {
     name: "คุณแนน",
-    role: "ฝากถอนผ่าน TrueMoney Wallet",
+    role: "ฝากถอนช่วงดึก",
     stars: 4,
     tag: "ฝากถอนออโต้",
     content:
-      "ฝากผ่านทรูวอเลทเริ่ม 20 บาท ยอดเข้าแล้วเครดิตขึ้นในไม่กี่วินาที ไม่ต้องส่งสลิป ถอนตอนดึกก็กดเองได้ ทำครบในมือถือเครื่องเดียว ให้ 4 ดาวเพราะตอนแรกหาเมนูถอนไม่เจอ แต่ทักแอดมินตอนดึกก็ยังมีคนตอบ",
-    avatar: "👛",
+      "ฝากตอนดึกโดยไม่ต้องแนบสลิปหรือรอแอดมินตอบ ระบบปรับเครดิตให้เอง ถอนก็กดจากมือถือเครื่องเดียวกับที่เล่น ให้ 4 ดาวเพราะครั้งแรกหาเมนูถอนไม่เจอ ทักแอดมินผ่านช่องทางบนหน้าเว็บก็มีคนช่วยดูให้",
+    avatar: "🌙",
   },
 ];
 const totalStars = reviews.reduce((sum, r) => sum + r.stars, 0);
@@ -41,59 +41,59 @@ const average = (totalStars / reviews.length).toFixed(1);
 
 <section aria-label={title} class="relative z-10 mx-auto mb-12 w-full max-w-[1400px] px-4 font-sans">
   <div class="mb-8 flex w-full flex-col items-center justify-center gap-2 text-center">
-    <p class="text-3xl leading-normal font-black tracking-wide text-[#ead9ec]">{title}</p>
-    <div aria-hidden="true" class="mt-2 h-[4px] w-24 rounded-full bg-gradient-to-r from-transparent via-[#e061e3] to-transparent"></div>
+    <p class="text-2xl leading-normal font-black tracking-wide text-[#0a1f5c] md:text-3xl">{title}</p>
+    <div aria-hidden="true" class="mt-2 h-[4px] w-24 rounded-full bg-gradient-to-r from-[#1a5fe0] via-[#e0a91b] to-[#1a5fe0]"></div>
   </div>
 
-  <div class="mx-auto mb-8 flex max-w-md items-center justify-center gap-5 rounded-2xl border border-[#5a1a60] bg-[#1c0620] px-6 py-4 shadow-[0_10px_30px_rgba(193,63,196,0.25)]">
+  <div class="mx-auto mb-8 flex max-w-md items-center justify-center gap-5 rounded-2xl border border-[#d6e2f7] bg-white px-6 py-4 shadow-[0_10px_30px_rgba(10,31,92,0.08)]">
     <div class="flex flex-col items-center">
-      <span class="text-4xl leading-none font-black text-[#ffe08a]">{average}</span>
-      <span class="mt-1 text-[10px] font-bold tracking-widest text-[#c9a8cc] uppercase">คะแนนเฉลี่ย</span>
+      <span class="text-4xl leading-none font-black text-[#8a6508]">{average}</span>
+      <span class="mt-1 text-[10px] font-bold tracking-widest text-[#4a5878]">คะแนนเฉลี่ย</span>
     </div>
-    <div class="h-12 w-px bg-[#5a1a60]"></div>
+    <div class="h-12 w-px bg-[#d6e2f7]"></div>
     <div class="flex flex-col gap-1.5">
       <div aria-hidden="true" class="flex gap-1 text-lg">
-        {Array.from({ length: 5 }).map((_, i) => <span class={i < Math.round(Number(average)) ? "text-[#f5c542]" : "text-[#5a1a60]"}>★</span>)}
+        {Array.from({ length: 5 }).map((_, i) => <span class={i < Math.round(Number(average)) ? "text-[#e0a91b]" : "text-[#d6e2f7]"}>★</span>)}
       </div>
-      <span class="text-xs font-bold text-[#c9a8cc]">คะแนนเฉลี่ย {average} จาก 5 ดาว จากรีวิวของสมาชิก {reviews.length} คน</span>
+      <span class="text-xs font-bold text-[#4a5878]">คะแนนเฉลี่ย {average} จาก 5 ดาว จากรีวิวของสมาชิก {reviews.length} คน</span>
     </div>
   </div>
 
   <div class="grid grid-cols-1 gap-6 md:grid-cols-3">
     {
       reviews.map((review) => (
-        <article class="group relative isolate flex flex-col gap-4 overflow-hidden rounded-2xl border border-[#5a1a60] bg-[#1c0620] p-6 text-left shadow-[0_10px_30px_rgba(0,0,0,0.35)] transition-all duration-300 hover:-translate-y-1 hover:border-[#8a2f8f] hover:shadow-[0_15px_40px_rgba(193,63,196,0.35)]">
+        <article class="group relative isolate flex flex-col gap-4 overflow-hidden rounded-2xl border border-[#d6e2f7] bg-white p-6 text-left shadow-[0_10px_30px_rgba(10,31,92,0.08)] transition-all duration-300 hover:-translate-y-1 hover:border-[#9dbcf0] hover:shadow-[0_15px_40px_rgba(26,95,224,0.16)]">
           <span
             aria-hidden="true"
-            class="absolute inset-y-0 left-0 -z-10 w-1 bg-gradient-to-b from-[#e061e3] via-[#c13fc4] to-[#9c2193] opacity-80 transition-opacity duration-300 group-hover:opacity-100"
+            class="absolute inset-y-0 left-0 -z-10 w-1 bg-gradient-to-b from-[#4d8ff5] via-[#1a5fe0] to-[#e0a91b] opacity-80 transition-opacity duration-300 group-hover:opacity-100"
           />
 
           <div class="flex items-center justify-between gap-3">
-            <span class="inline-flex items-center gap-1.5 rounded-full border border-[#5a1a60] bg-[#31103a] px-3 py-1 text-[10px] font-bold tracking-widest text-[#ffe08a] uppercase">
-              <span aria-hidden="true" class="h-1.5 w-1.5 animate-pulse rounded-full bg-[#e061e3]" />
+            <span class="inline-flex items-center gap-1.5 rounded-full border border-[#e0a91b]/50 bg-[#fff7e0] px-3 py-1 text-[10px] font-bold tracking-widest text-[#8a6508]">
+              <span aria-hidden="true" class="h-1.5 w-1.5 animate-pulse rounded-full bg-[#1a5fe0]" />
               {review.tag}
             </span>
             <span class="flex gap-0.5 text-sm">
               <span aria-hidden="true" class="flex gap-0.5">
                 {Array.from({ length: 5 }).map((_, i) => (
-                  <span class={i < review.stars ? "text-[#f5c542]" : "text-[#5a1a60]"}>★</span>
+                  <span class={i < review.stars ? "text-[#e0a91b]" : "text-[#d6e2f7]"}>★</span>
                 ))}
               </span>
               <span class="sr-only">ให้คะแนน {review.stars} จาก 5 ดาว</span>
             </span>
           </div>
 
-          <p class="text-left text-base leading-relaxed text-[#ead9ec]">{review.content}</p>
+          <p class="text-left text-base leading-relaxed text-[#1f2a44]">{review.content}</p>
 
-          <div class="mt-auto flex items-center gap-3 border-t border-[#5a1a60] pt-4">
+          <div class="mt-auto flex items-center gap-3 border-t border-[#d6e2f7] pt-4">
             <span
               aria-hidden="true"
-              class="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-gradient-to-b from-[#e061e3] to-[#9c2193] text-xl shadow-[0_5px_15px_rgba(193,63,196,0.35)] transition-transform duration-300 group-hover:scale-110">
+              class="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-gradient-to-b from-[#4d8ff5] via-[#1a5fe0] to-[#0b3a9e] text-xl shadow-[0_5px_15px_rgba(26,95,224,0.30)] transition-transform duration-300 group-hover:scale-110">
               {review.avatar}
             </span>
             <span class="flex flex-col">
-              <span class="text-sm font-black text-[#ead9ec] transition-colors group-hover:text-[#ffe08a]">{review.name}</span>
-              <span class="text-[10px] font-bold tracking-wider text-[#c9a8cc] uppercase">{review.role}</span>
+              <span class="text-sm font-black text-[#0a1f5c] transition-colors group-hover:text-[#1a5fe0]">{review.name}</span>
+              <span class="text-[10px] font-bold tracking-wider text-[#4a5878]">{review.role}</span>
             </span>
           </div>
         </article>

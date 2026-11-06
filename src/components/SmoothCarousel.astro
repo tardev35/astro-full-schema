@@ -5,28 +5,23 @@ import slide1 from "../assets/slide1.png";
 import slide2 from "../assets/slide2.png";
 import slide3 from "../assets/slide3.png";
 import slide4 from "../assets/slide4.png";
-import slide5 from "../assets/slide5.png";
 
 const images = [
   {
     src: slide1,
-    alt: "โปรโมชั่น BABYSHARK8899 ฝากรับโบนัสเพิ่ม 10% จากทุกยอดบิลฝาก มูลค่าสูงสุด 500 บาท ครอบคลุมสมาชิกเก่าและใหม่ ยอดฝากขั้นต่ำ 100 บาทต่อบิล ทำเทิร์น 8 เท่า ถอนสูงสุด 5 เท่า แจ้งแอดมินได้ตลอด 24 ชั่วโมง",
+    alt: "77RUAY สมาชิกใหม่ เริ่มต้นง่าย สมัครสะดวก ใช้งานได้ทุกอุปกรณ์ สมัครง่าย ระบบมั่นคง พร้อมดูแล ปุ่มสมัครสมาชิก พรีเซนเตอร์ชุดกี่เพ้าสีขาวฟ้าปักทองถือมือถือ",
   },
   {
     src: slide2,
-    alt: "โปรโมชั่น BABYSHARK8899 โบนัสฝาก 50% ฝาก 1,000 บาทขึ้นไป รับโบนัส 50% สูงสุด 10,000 บาท ทำเทิร์น 5 เท่า ถอนสูงสุด 2 เท่า",
+    alt: "77RUAY สนุกครบหลายค่าย รวมเกมยอดนิยมไว้ในที่เดียว เกมหลากหลาย ใช้งานสะดวก เลือกได้ครบ ปุ่มเริ่มสนุก พรีเซนเตอร์ชุดกี่เพ้าสีขาวฟ้าชี้ไปที่มือถือ",
   },
   {
     src: slide3,
-    alt: "BABYSHARK8899 หวย อัตราจ่ายที่ดีที่สุด 3 ตัว บาทละ 1000 และ 2 ตัว บาทละ 100 ถูกตรง จ่ายจริง รับเงินรางวัลหลักล้าน ครบจบเรื่องหวยในเว็บเดียว ทั้งรัฐบาล ลาว ฮานอย หุ้น ยี่กี พรีเซนเตอร์หญิงในแจ็คเก็ตหนังสีดำ",
+    alt: "77RUAY ฝากถอนออโต้ รวดเร็ว ใช้งานง่าย มั่นใจได้ อัตโนมัติ ทันสมัย สะดวก ปุ่มสมัครเลย เหรียญลูกศรวนสีฟ้าข้างพรีเซนเตอร์ถือมือถือ",
   },
   {
     src: slide4,
-    alt: "BABYSHARK8899 แนะนำเพื่อนรับ 0.8% สร้างรายได้ 100,000 บาทต่อเดือน พรีเซนเตอร์หญิงสองคนในแจ็คเก็ตหนังและกระโปรงสีแดง",
-  },
-  {
-    src: slide5,
-    alt: "BABYSHARK8899 คอมมิชชั่น 0.3% คืนทุกยอดเล่นตลอดทั้งวัน เล่นถึง 50% ถอนได้เลย กดรับได้ที่หน้าเว็บ รับสิทธิ์ก่อน 23.59 น. ของทุกวัน ยิ่งเล่นเยอะ ยิ่งได้เยอะ",
+    alt: "77RUAY เล่นได้ทุกที่ บนมือถือ ระบบทันสมัย พร้อมดูแลทุกขั้นตอน มือถือ ตอบไว พร้อมดูแล ปุ่มเข้าร่วมเลย พรีเซนเตอร์ชุดกี่เพ้าชี้ไปที่มือถือ",
   },
 ];
 
@@ -38,7 +33,7 @@ const slides = Array.from({ length: COPIES }, () => images).flat();
   <input id="carousel-pause" type="checkbox" class="peer sr-only" />
   <label
     for="carousel-pause"
-    class="sr-only cursor-pointer peer-focus-visible:not-sr-only peer-focus-visible:mb-3 peer-focus-visible:inline-block peer-focus-visible:rounded-full peer-focus-visible:border peer-focus-visible:border-[#0b7cf4]/60 peer-focus-visible:bg-[#041a45] peer-focus-visible:px-4 peer-focus-visible:py-2 peer-focus-visible:text-sm peer-focus-visible:font-bold peer-focus-visible:text-white">
+    class="sr-only cursor-pointer peer-focus-visible:not-sr-only peer-focus-visible:mb-3 peer-focus-visible:inline-block peer-focus-visible:rounded-full peer-focus-visible:border peer-focus-visible:border-[#1a5fe0]/60 peer-focus-visible:bg-white peer-focus-visible:px-4 peer-focus-visible:py-2 peer-focus-visible:text-sm peer-focus-visible:font-bold peer-focus-visible:text-[#0a1f5c]">
     หยุด / เล่นสไลด์ภาพ
   </label>
 
@@ -51,7 +46,7 @@ const slides = Array.from({ length: COPIES }, () => images).flat();
             <Picture
               src={slide.src}
               alt={isDuplicate ? "" : slide.alt}
-              class="block w-full rounded-xl border border-[#1a4a9c] object-cover shadow-[0_10px_30px_rgba(0,0,0,0.35)]"
+              class="block w-full rounded-xl border border-[#d6e2f7] object-cover shadow-[0_10px_30px_rgba(10,31,92,0.12)]"
               width={slide.src.width}
               height={slide.src.height}
               loading="lazy"
@@ -74,15 +69,15 @@ const slides = Array.from({ length: COPIES }, () => images).flat();
   .marquee {
     --gap: 12px;
     --per-view: 1;
-    --shift: calc(-500% - 60px);
-    --duration: 40s;
+    --shift: calc(-400% - 48px);
+    --duration: 32s;
   }
 
   @media (min-width: 768px) {
     .marquee {
       --gap: 16px;
       --per-view: 2;
-      --shift: calc(-250% - 40px);
+      --shift: calc(-200% - 32px);
     }
   }
 
@@ -90,7 +85,7 @@ const slides = Array.from({ length: COPIES }, () => images).flat();
     .marquee {
       --gap: 20px;
       --per-view: 3;
-      --shift: calc(-166.6667% - 33.3333px);
+      --shift: calc(-133.3333% - 26.6667px);
     }
   }
 

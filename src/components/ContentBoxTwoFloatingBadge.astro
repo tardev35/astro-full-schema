@@ -3,26 +3,30 @@ export interface Props {
   title?: string;
   titleleft?: string;
   titleright?: string;
-  as?: "h1" | "h2" | "h3" | "h4" | "h5" | "h6";
+  label?: string;
+  as?: "h1" | "h2" | "h3" | "h4" | "h5" | "h6" | "p";
 }
-const { title, titleleft, titleright, as: HeadingTag = "h2" } = Astro.props;
+const { title, titleleft, titleright, label, as: HeadingTag = "h2" } = Astro.props;
+
+const sectionLabel = label ?? title ?? titleleft ?? titleright;
+const topPad = title ? "pt-20 md:pt-16" : "";
 ---
 
-<section class="my-10 flex w-full justify-center px-4 font-sans">
-  <div class="relative isolate w-full max-w-7xl rounded-2xl border-2 border-[#1d5c22] bg-gradient-to-b from-[#06230a] to-[#020f03] p-8 pt-40 shadow-[0_10px_30px_rgba(200,252,4,0.18)] md:pt-36">
-    <div aria-hidden="true" class="pointer-events-none absolute -top-16 -right-10 -z-10 h-40 w-40 rounded-full bg-[#c8fc04]/18 blur-[60px]"></div>
-    <div aria-hidden="true" class="pointer-events-none absolute -bottom-16 -left-10 -z-10 h-40 w-40 rounded-full bg-[#3fc20a]/24 blur-[60px]"></div>
+<section aria-label={sectionLabel} class="my-10 flex w-full justify-center px-4 font-sans">
+  <div class={`relative isolate w-full max-w-7xl rounded-2xl border-2 border-[#d6e2f7] bg-gradient-to-b from-white to-[#eef4ff] p-8 shadow-[0_10px_30px_rgba(10,31,92,0.08)] ${topPad}`}>
+    <div aria-hidden="true" class="pointer-events-none absolute -top-16 -right-10 -z-10 h-40 w-40 rounded-full bg-[#4d8ff5]/15 blur-[60px]"></div>
+    <div aria-hidden="true" class="pointer-events-none absolute -bottom-16 -left-10 -z-10 h-40 w-40 rounded-full bg-[#e0a91b]/15 blur-[60px]"></div>
 
     {
       title && (
-        <div class="absolute -top-6 left-1/2 flex w-[92%] max-w-2xl -translate-x-1/2 items-center justify-center gap-2 rounded-lg border-2 border-[#c8fc04]/55 bg-[#0b3a10] px-4 py-2.5 text-center shadow-[0_10px_30px_rgba(200,252,4,0.30)] sm:px-8">
-          <span aria-hidden="true" class="shrink-0 text-[#c8fc04]">
+        <div class="absolute -top-6 left-1/2 flex w-[92%] max-w-2xl -translate-x-1/2 items-center justify-center gap-2 rounded-lg border-2 border-[#e0a91b] bg-[#0a1f5c] px-4 py-2.5 text-center shadow-[0_10px_30px_rgba(26,95,224,0.25)] sm:px-8">
+          <span aria-hidden="true" class="shrink-0 text-[#ffd45c]">
             ✦
           </span>
-          <HeadingTag class="min-w-0 bg-gradient-to-r from-[#f3ffe9] via-[#c8fc04] to-[#3fc20a] bg-clip-text text-lg leading-normal font-black tracking-tight text-transparent uppercase sm:text-xl md:text-2xl">
+          <HeadingTag class="min-w-0 bg-gradient-to-r from-white via-[#ffd45c] to-[#e0a91b] bg-clip-text text-lg leading-normal font-black tracking-tight text-transparent sm:text-xl md:text-2xl">
             {title}
           </HeadingTag>
-          <span aria-hidden="true" class="shrink-0 text-[#c8fc04]">
+          <span aria-hidden="true" class="shrink-0 text-[#ffd45c]">
             ✦
           </span>
         </div>
@@ -30,13 +34,13 @@ const { title, titleleft, titleright, as: HeadingTag = "h2" } = Astro.props;
     }
 
     <div class="grid grid-cols-1 gap-10 md:grid-cols-2">
-      <article class="flex flex-col gap-4 text-left text-base leading-relaxed text-[#d9f7d0]">
-        {titleleft && <p class="text-2xl leading-normal font-bold text-[#f3ffe9]">{titleleft}</p>}
+      <article class="flex flex-col gap-4 text-left text-base leading-relaxed text-[#1f2a44]">
+        {titleleft && <p class="text-2xl leading-normal font-bold text-[#0a1f5c]">{titleleft}</p>}
         <slot name="left" />
       </article>
 
-      <article class="flex flex-col gap-4 text-left text-base leading-relaxed text-[#d9f7d0] md:border-l md:border-[#1d5c22] md:pl-10">
-        {titleright && <p class="text-2xl leading-normal font-bold text-[#f3ffe9]">{titleright}</p>}
+      <article class="flex flex-col gap-4 text-left text-base leading-relaxed text-[#1f2a44] md:border-l md:border-[#d6e2f7] md:pl-10">
+        {titleright && <p class="text-2xl leading-normal font-bold text-[#0a1f5c]">{titleright}</p>}
         <slot name="right" />
       </article>
     </div>

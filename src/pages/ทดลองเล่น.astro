@@ -2,7 +2,7 @@
 import MainLayout from "../layouts/MainLayout.astro";
 import ContentBox from "../components/ContentBox.astro";
 import Navfoot from "../components/Navfoot.astro";
-import Announcement from "../components/Announcement4.astro";
+import Announcement from "../components/Announcement3.astro";
 
 import { Picture } from "astro:assets";
 import { itemList, pageGraph, schemaCtx } from "../lib/schema";
@@ -14,40 +14,43 @@ import newCover from "../assets/gamedemo16.webp";
 const demoGames = [
   {
     name: "PG Soft",
-    games: "Treasures of Aztec · Fortune Tiger",
+    games: "Fortune Tiger",
     src: pgCover,
     alt: "แบนเนอร์ค่าย PG Pocket Games Soft โลโก้ตัวอักษรพิกเซลบนพื้นดำ คู่กับตัวละครหญิงนักรบผิวแทนสวมเครื่องประดับทองและหมวกขนนกสไตล์แอซเท็ก",
   },
   {
     name: "JILI",
-    games: "Super Ace · Boxing King",
+    games: "Money Coming",
     src: jiliCover,
-    alt: "แบนเนอร์ค่ายเกม JILI ตัวอักษรทองบนพื้นดำ คู่กับนางเงือกผมแดงสวมเกราะเปลือกหอยสีทอง ยกหอยสังข์แนบหูอยู่ใต้ทะเลที่มีปลาการ์ตูนและปะการัง",
+    alt: "แบนเนอร์ค่ายเกม JILI ตัวอักษรทองบนพื้นดำ คู่กับนางเงือกผมแดงสวมเกราะเปลือกหอยสีทอง ยกหอยสังข์แนบหู ท่ามกลางปะการังและปลาการ์ตูนใต้น้ำ",
   },
   {
     name: "เกมยอดนิยม",
-    games: "เกมที่คนเปิดเล่นบ่อยจากทุกค่าย",
+    games: "รวมเกมยอดนิยมจากหลายค่าย",
     src: popularCover,
-    alt: "แบนเนอร์ Popular Game ตัวอักษรทองนูนหน้าวงแหวนชิปคาสิโนสีทอง ขนาบด้วยกระต่ายถือหีบสมบัติกับแมวใส่แว่นกันแดด ท่ามกลางเหรียญทองและชิปที่ลอยฟุ้ง",
+    alt: "แบนเนอร์ Popular Game ตัวอักษรทองนูนหน้าวงแหวนชิปสีทอง ขนาบด้วยกระต่ายยืนข้างหีบสมบัติกับแมวใส่แว่นกันแดด ท่ามกลางเหรียญทองและชิปที่ลอยฟุ้ง",
   },
   {
     name: "เกมใหม่",
-    games: "เกมที่เพิ่งเข้าจากค่ายในเว็บ",
+    games: "เกมใหม่จากค่ายในเว็บ",
     src: newCover,
-    alt: "แบนเนอร์ New Game ตัวอักษรสีขาวนูนกลางภาพ ขนาบด้วยตัวการ์ตูนฟักทองหัวไฟกับโครงกระดูกยิ้ม ยืนบนฟลอร์นีออนสีชมพูฟ้าที่เกลื่อนด้วยชิปและลูกเต๋า",
+    alt: "แบนเนอร์ New Game ตัวอักษรสีขาวนูนกลางภาพ ขนาบด้วยตัวการ์ตูนฟักทองหัวไฟสวมหมวกคาวบอยกับโครงกระดูกยิ้ม ยืนบนฟลอร์นีออนสีชมพูฟ้าที่เกลื่อนด้วยชิปและลูกเต๋า",
   },
 ];
 
 const gameList = demoGames.map((game) => ({ name: game.name, imagePath: game.src.src }));
 
-const pageTitle = "ทดลองเล่นสล็อต BABYSHARK8899 ลอง PG Soft Pragmatic Play และ JILI ก่อนเล่นจริง";
+const pageTitle = "ทดลองเล่นสล็อต 77RUAY ลอง PG Soft Pragmatic Play JILI และ Habanero ก่อนเล่นจริง";
 
-const pageHeading = "ทดลองเล่นสล็อต BABYSHARK8899 หมุนลองให้คุ้นมือก่อนใช้เครดิตจริง";
+const pageHeading = "ทดลองเล่นสล็อต 77RUAY หมุนลองให้คุ้นมือก่อนใช้เครดิตจริง";
 
 const pageDescription =
-  "ทดลองเล่นสล็อต BABYSHARK8899 สมัครยูสเดียวแล้วเข้าโหมดทดลองของ PG Soft, Pragmatic Play และ JILI บนมือถือ ดูจังหวะฟรีสปินและตัวคูณให้คุ้นมือก่อนใช้เครดิตจริง";
+  "ทดลองเล่นสล็อต 77RUAY สมัครยูสเดียวแล้วเข้าโหมดทดลองของ PG Soft, Pragmatic Play, JILI และ Habanero บนมือถือ ลองจับจังหวะแต่ละเกมให้คุ้นมือก่อนใช้เครดิตจริง";
 
-const linkClass = "font-bold text-[#4da3ff] underline underline-offset-4 transition-colors hover:text-[#ff5a60]";
+const announcementMessage =
+  "77RUAY สล็อตออนไลน์ เล่นผ่านเบราว์เซอร์ได้ทั้ง iOS และ Android ไม่ต้องโหลดแอป • ฝากถอนออโต้ตลอด 24 ชั่วโมง ไม่ต้องแนบสลิป • สมัคร ฝาก เล่น และถอนจบบนมือถือเครื่องเดียว • มีเรื่องติดขัดติดต่อแอดมินผ่านช่องทางบนหน้าเว็บ";
+
+const linkClass = "font-bold text-[#1a5fe0] underline underline-offset-4 transition-colors hover:text-[#8a6508]";
 
 const ctx = schemaCtx(Astro);
 const graph = pageGraph(Astro, {
@@ -60,8 +63,8 @@ const graph = pageGraph(Astro, {
   ],
   extra: [
     itemList(ctx, {
-      name: "ทดลองเล่นเกมสล็อตของ BABYSHARK8899",
-      alternateName: "BABYSHARK8899 โหมดทดลองเล่นสล็อตหลายค่ายบนมือถือ ก่อนใช้เครดิตจริงด้วยยูสเดียว",
+      name: "ทดลองเล่นเกมสล็อตของ 77RUAY",
+      alternateName: "77RUAY โหมดทดลองเล่นสล็อตหลายค่ายบนมือถือ ก่อนใช้เครดิตจริงด้วยยูสเดียว",
       itemType: "Game",
       items: gameList,
     }),
@@ -72,37 +75,40 @@ const graph = pageGraph(Astro, {
 <MainLayout title={pageTitle} description={pageDescription}>
   <script type="application/ld+json" set:html={graph} />
 
-  <Announcement />
+  <Announcement message={announcementMessage} />
 
   <ContentBox as="h1" title={pageHeading}>
     <div class="flex flex-col gap-4">
       <p class="text-left text-base leading-relaxed">
-        หากกำลังมองหาที่หมุนสล็อตให้คุ้นมือก่อนลงเครดิตจริง <strong class="text-[#4da3ff]">BABYSHARK8899</strong> พร้อมพาเราเข้าโหมดทดลองของ PG Soft, Pragmatic Play และ JILI เพื่อให้รู้จังหวะฟรีสปินและตัวคูณก่อนตัดสินใจ
+        หากคุณกำลังมองหาที่ลองสล็อตให้คุ้นมือก่อนลงเครดิตจริง <strong class="font-bold text-[#8a6508]">77RUAY</strong> พร้อมพาคุณเข้าโหมดทดลองของ PG Soft, Pragmatic Play, JILI และ Habanero เพื่อให้รู้จังหวะของแต่ละเกมก่อนตัดสินใจ
       </p>
       <p class="text-left text-base leading-relaxed">
-        กดที่ภาพค่ายด้านล่างจะไปหน้าสมัครสมาชิกก่อน สมัครครั้งเดียวได้ยูสไว้เข้าโหมดทดลองจากหน้าสมาชิกได้เลย ไม่ต้องเปิดยูสแยกทีละค่าย
+        กดที่ภาพด้านล่างจะพาไปหน้าสมัครสมาชิกก่อน ขั้นตอนไม่ยาก สมัครครั้งเดียวได้ยูสไว้เข้าโหมดทดลองจากหน้าสมาชิก ไม่ต้องเปิดยูสแยกทีละค่าย
       </p>
       <p class="text-left text-base leading-relaxed">
-        ทุกขั้นเปิดผ่านเบราว์เซอร์บนมือถือได้ทันที ทั้ง iOS และ Android ไม่ต้องโหลดแอป จะลองตอนพักเที่ยงหรือก่อนนอนก็จบในเครื่องเดียว
+        ทุกขั้นเปิดผ่านเบราว์เซอร์บนมือถือได้ทั้ง iOS และ Android ไม่ต้องโหลดแอป จะลองตอนพักเที่ยงหรือก่อนนอนก็จบในเครื่องเดียว สะดวกตรงไหนก็ลองตรงนั้น
       </p>
     </div>
   </ContentBox>
 
-  <ContentBox as="h2" title="เลือกค่ายที่ชอบ สมัคร BABYSHARK8899 ยูสเดียว แล้วสลับลองได้ทุกค่ายในเว็บเดียว">
+  <ContentBox as="h2" title="เลือกค่ายที่ชอบ สมัครยูสเดียว แล้วสลับลองได้หลายค่ายในเว็บเดียว">
     <div class="flex flex-col gap-4">
       <p class="text-left text-base leading-relaxed">
-        ที่นี่แยกสล็อตตามค่าย และแต่ละค่ายมีกลไกของตัวเอง Treasures of Aztec ของ PG Soft เป็นเกมร่วงหล่นที่ตัวคูณเพิ่มเมื่อชนะต่อเนื่อง ส่วน Fortune Tiger วงล้อ 3×3 ไม่มีฟรีสปินแต่มีสุ่มหมุนซ้ำ
+        แต่ละค่ายมีกลไกของตัวเอง Fortune Tiger ของ PG Soft เป็นเสือทองวงล้อ 3×3 ไม่มีสแกตเตอร์และฟรีสปิน แต่มีฟีเจอร์สุ่มที่หมุนซ้ำ ลองแล้วจะรู้ว่าจังหวะต่างจากเกมทั่วไปแค่ไหน
       </p>
       <p class="text-left text-base leading-relaxed">
-        ฝั่ง Pragmatic Play มี Starlight Princess ที่ตัวคูณสุ่มออกในเกมหลัก กับ The Dog House ที่ไวลด์ค้างจนจบฟรีสปิน ส่วน JILI มี Super Ace ธีมไพ่ และ Boxing King ที่ไวลด์ขยายเต็มแถว
+        ส่วน Sugar Rush ของ Pragmatic Play เป็นระบบร่วงหล่นที่จ่ายเมื่อสัญลักษณ์เหมือนกันติดกันเป็นกลุ่ม และช่องที่ชนะจะกลายเป็นจุดตัวคูณ เหมาะกับคนที่ชอบลุ้นต่อเนื่องในรอบเดียว
       </p>
       <p class="text-left text-base leading-relaxed">
-        ปุ่มบนภาพเขียนว่าสมัครเพื่อลอง เพราะจะพาไปหน้า <a href="/register/" class={linkClass}>สมัครสมาชิก</a> ก่อน สมัครครั้งเดียวใช้ได้ทุกค่ายที่นี่ เบื่อค่ายหนึ่งก็สลับไปอีกค่ายได้โดยไม่ต้องเปิดยูสใหม่
+        ฝั่ง JILI มี Money Coming วงล้อตัวเลข 3 วงกับวงพิเศษวงที่สี่ที่ให้ตัวคูณ หมุนซ้ำ หรือเข้าโบนัส ส่วน Koi Gate ของ Habanero ใช้ปลาคาร์ฟเป็นไวลด์ที่ขยายเต็มแถวแล้วหมุนซ้ำ
+      </p>
+      <p class="text-left text-base leading-relaxed">
+        ปุ่มบนภาพเขียนว่าสมัครเพื่อลอง เพราะจะพาไปหน้า<a href="/register/" class={linkClass}>สมัครสมาชิก</a>ก่อน สมัครครั้งเดียวใช้ได้ทุกค่ายที่นี่ เบื่อค่ายหนึ่งก็สลับไปอีกค่ายได้โดยไม่ต้องเปิดยูสใหม่
       </p>
       <div class="mt-4 mb-5 grid grid-cols-2 gap-5 md:grid-cols-4">
         {
           demoGames.map((game) => (
-            <div class="group/game relative mx-auto w-full max-w-[400px] overflow-hidden rounded-xl border border-[#1a4a9c] bg-[#0a2a66] shadow-[0_10px_30px_rgba(0,0,0,0.35)] transition-colors duration-300 hover:border-[#2f7bff]">
+            <div class="group/game relative mx-auto w-full max-w-[400px] overflow-hidden rounded-xl border border-[#d6e2f7] bg-white shadow-[0_10px_30px_rgba(10,31,92,0.08)] transition-colors duration-300 hover:border-[#9dbcf0]">
               <Picture
                 src={game.src}
                 alt={game.alt}
@@ -116,17 +122,17 @@ const graph = pageGraph(Astro, {
                 fallbackFormat="webp"
                 quality={60}
               />
-              <div class="px-3 py-2 text-center">
-                <p class="text-sm font-bold text-white">{game.name}</p>
-                <p class="text-xs text-[#9fb8dc]">{game.games}</p>
+              <div class="bg-[#eef4ff] px-3 py-2 text-center">
+                <p class="text-sm font-bold text-[#0a1f5c]">{game.name}</p>
+                <p class="text-xs text-[#4a5878]">{game.games}</p>
               </div>
               <a
                 href="/register/"
                 target="_blank"
                 rel="noopener noreferrer"
-                aria-label={`สมัครสมาชิก BABYSHARK8899 เพื่อลองเล่น ${game.name}`}
-                class="absolute inset-0 flex items-center justify-center bg-[#010d28]/80 opacity-0 transition-opacity duration-300 group-hover/game:opacity-100 focus-visible:opacity-100">
-                <span class="rounded-xl bg-gradient-to-b from-[#4da3ff] to-[#0554b8] px-6 py-2 font-bold text-white shadow-[0_10px_30px_rgba(11,124,244,0.35)] transition-transform hover:scale-110 hover:brightness-110">สมัครเพื่อลอง</span>
+                aria-label={`สมัครสมาชิกเพื่อลองเล่น ${game.name}`}
+                class="absolute inset-0 flex items-center justify-center bg-[#0a1f5c]/80 opacity-0 transition-opacity duration-300 group-hover/game:opacity-100 focus-visible:opacity-100">
+                <span class="rounded-xl border-2 border-[#ffd45c] bg-gradient-to-b from-[#4d8ff5] via-[#1a5fe0] to-[#0b3a9e] px-6 py-2 font-bold text-white shadow-[0_10px_30px_rgba(26,95,224,0.35)] transition-transform hover:scale-110 hover:brightness-110">สมัครเพื่อลอง</span>
               </a>
             </div>
           ))
@@ -138,16 +144,13 @@ const graph = pageGraph(Astro, {
   <ContentBox as="h2" title="ทดลองเล่นสล็อตฟรี หมุนลองให้พอใจก่อนใช้เครดิตจริง">
     <div class="flex flex-col gap-4">
       <p class="text-left text-base leading-relaxed">
-        โหมดทดลองใช้เครดิตสมมติทั้งหมด หมุนลองกี่รอบก็ได้ตามสบาย ไม่มีใครเร่ง และไม่ต้องฝากก่อนจนกว่าเราจะพร้อมเล่นจริง
+        โหมดทดลองใช้เครดิตสมมติทั้งหมด หมุนลองได้ตามสบาย ไม่มีใครเร่ง และไม่ต้องฝากก่อนจนกว่าคุณจะพร้อมเล่นจริง ลองให้พอใจก่อนแล้วค่อยตัดสินใจ
       </p>
       <p class="text-left text-base leading-relaxed">
-        ระหว่างหมุนลองสังเกตว่าเบทต่ำสุดต่อรอบเท่าไร รอบฟรีสปินเข้าแบบไหน ตัวคูณทำงานตอนไหน แล้วคัดไว้สองสามเกมที่ตรงกับทุนของตัวเองตั้งแต่ยังไม่ลงเครดิตจริง
+        ระหว่างหมุนลองสังเกตว่าเบทต่ำสุดต่อรอบเท่าไร ฟีเจอร์หมุนซ้ำหรือตัวคูณทำงานตอนไหน แล้วคัดไว้สองสามเกมที่ตรงกับทุนของตัวเองตั้งแต่ยังไม่ลงเครดิตจริง
       </p>
       <p class="text-left text-base leading-relaxed">
-        หน้าเกมและกติกาตอนทดลองเป็นชุดเดียวกับตอนเล่นจริง ต่างกันแค่เครดิตที่ใช้หมุน จังหวะที่จับได้วันนี้จึงพกไปใช้ได้ทันทีเมื่อถึงรอบเล่นจริง
-      </p>
-      <p class="text-left text-base leading-relaxed">
-        โหมดทดลองที่นี่เปิดไว้ฝั่งสล็อต ส่วนคาสิโนสด ยิงปลา และหวยเล่นด้วยเครดิตจริงจากยูสเดียวกัน จะข้ามไปหมวดไหนก็ไม่ต้องสมัครเพิ่ม
+        หน้าเกมตอนทดลองเป็นแบบเดียวกับตอนเล่นจริง ต่างกันแค่เครดิตที่ใช้หมุน จังหวะที่จับได้วันนี้จึงพกไปใช้ได้เลยเมื่อถึงรอบเล่นจริง
       </p>
       <p class="text-left text-base leading-relaxed">
         เรื่องที่ขอบอกให้ชัดตั้งแต่ต้น เครดิตในโหมดทดลองถอนออกมาไม่ได้ และไม่นับเป็นยอดเทิร์นของโปรโมชั่นใดทั้งสิ้น มีไว้ให้ทำความรู้จักเกมอย่างเดียว
@@ -158,33 +161,30 @@ const graph = pageGraph(Astro, {
     </div>
   </ContentBox>
 
-  <ContentBox as="h2" title="พร้อมเมื่อไหร่ สมัครสมาชิก BABYSHARK8899 แล้วเริ่มเล่นจริงได้ทันที">
+  <ContentBox as="h2" title="พร้อมเมื่อไหร่ สมัครสมาชิก 77RUAY แล้วเริ่มเล่นจริงด้วยยูสเดียว">
     <div class="flex flex-col gap-4">
       <p class="text-left text-base leading-relaxed">
-        เมื่อเจอเกมที่ถูกใจ เริ่มเล่นจริงได้เลยด้วยยูสเดิม ไม่ต้องสมัครซ้ำ ตั้งงบของวันนั้นไว้ก่อนเปิดเกม แล้วเริ่มจากเบทเล็กเพื่อจับจังหวะ ทุนจะอยู่ได้นานกว่า
+        หากคุณกำลังมองหาจังหวะที่มั่นใจก่อนลงเครดิตจริง <strong class="font-bold text-[#8a6508]">77RUAY</strong> พร้อมให้คุณเริ่มเล่นจริงด้วยยูสเดิมที่สมัครไว้ ไม่ต้องสมัครซ้ำ เพื่อต่อยอดจากเกมที่ลองจนคุ้นมือมาแล้ว
       </p>
       <p class="text-left text-base leading-relaxed">
-        สมัคร ฝาก เล่น และถอนจบในมือถือเครื่องเดียว ถ้าโอนแล้วเครดิตยังไม่เข้า อย่าเพิ่งโอนซ้ำ แจ้งแอดมินพร้อมเวลาและยอด ขั้นตอนเต็มอยู่ที่หน้า <a href="/วิธีฝากถอน/" class={linkClass}>วิธีฝากถอน</a>
+        ฝากถอนผ่านระบบออโต้ที่ปรับเครดิตให้เอง ไม่ต้องแนบสลิป ทำรายการได้ตลอด 24 ชั่วโมงบนมือถือเครื่องเดียวกับที่เล่น ขั้นตอนเต็มอยู่ที่หน้า<a href="/วิธีฝากถอน/" class={linkClass}>วิธีฝากถอน</a>
       </p>
       <p class="text-left text-base leading-relaxed">
-        โปรโมชั่นแต่ละตัวมีเงื่อนไขเทิร์นของตัวเอง เปิด <a href="/promotion/" class={linkClass}>หน้าโปรโมชั่น</a> ดูบนภาพก่อนรับว่าต้องทำเทิร์นกี่เท่าและถอนได้สูงสุดเท่าไร จะได้วางแผนตั้งแต่ก่อนฝาก
+        ถ้าฝากแล้วเครดิตไม่ขึ้น อย่าเพิ่งโอนซ้ำ จดช่วงเวลาที่ทำรายการกับยอดเงินไว้แล้วแจ้งแอดมินผ่านช่องทางบนหน้าเว็บ ส่วนรหัสผ่านกับ OTP ไม่ส่งให้ใครทั้งสิ้น
       </p>
       <p class="text-left text-base leading-relaxed">
-        อีกเรื่องที่ควรติดตัวไว้เสมอ รหัสผ่านกับ OTP ไม่ส่งให้ใครทั้งสิ้น แม้คนนั้นจะอ้างว่าเป็นทีมงานก็ตาม และก่อนกรอกรหัสทุกครั้งมองชื่อเว็บบนแถบที่อยู่ให้แน่ใจว่าตรง
-      </p>
-      <p class="text-left text-base leading-relaxed">
-        เลือกค่ายที่ถูกใจแล้วเริ่มได้เลย เกมที่ลองจนคุ้นมือวันนี้ คือเกมที่เรารู้จังหวะและกติกาดีแล้วเมื่อถึงรอบเล่นจริง เพื่อการเล่นที่มั่นใจและต่อเนื่องกว่าที่เคย
+        เลือกค่ายที่ถูกใจแล้วเริ่มได้เลย เกมที่ลองจนคุ้นมือวันนี้ คือเกมที่คุณรู้จังหวะและกติกาดีแล้วเมื่อถึงรอบเล่นจริง เพื่อการเล่นที่มั่นใจและต่อเนื่องกว่าที่เคย
       </p>
       <div class="flex flex-col items-center justify-center gap-4 pt-2 sm:flex-row">
         <a
           href="/register/"
-          class="inline-flex w-full max-w-[320px] items-center justify-center gap-2 rounded-xl bg-gradient-to-b from-[#4da3ff] to-[#0554b8] px-8 py-3.5 text-lg font-black tracking-wide text-white shadow-[0_10px_30px_rgba(11,124,244,0.35)] transition duration-300 hover:scale-105 hover:brightness-110">
-          <span aria-hidden="true">🎰</span> สมัครสมาชิก BABYSHARK8899
+          class="inline-flex w-full max-w-[320px] items-center justify-center gap-2 rounded-xl border-2 border-[#ffd45c] bg-gradient-to-b from-[#4d8ff5] via-[#1a5fe0] to-[#0b3a9e] px-8 py-3.5 text-lg font-black tracking-wide text-white shadow-[0_10px_30px_rgba(26,95,224,0.35)] transition duration-300 hover:scale-105 hover:brightness-110">
+          <span aria-hidden="true">🎰</span> สมัครสมาชิก 77RUAY
         </a>
 
         <a
           href="/login/"
-          class="inline-flex w-full max-w-[320px] items-center justify-center gap-2 rounded-xl bg-gradient-to-b from-[#ff5a60] to-[#b0121a] px-8 py-3.5 text-lg font-bold tracking-wide text-white shadow-[0_10px_30px_rgba(232,32,42,0.35)] transition duration-300 hover:scale-105 hover:brightness-110">
+          class="inline-flex w-full max-w-[320px] items-center justify-center gap-2 rounded-xl border-2 border-[#b07d12] bg-gradient-to-b from-[#ffd45c] via-[#e0a91b] to-[#b07d12] px-8 py-3.5 text-lg font-bold tracking-wide text-[#0a1f5c] shadow-[0_10px_30px_rgba(224,169,27,0.30)] transition duration-300 hover:scale-105 hover:brightness-110">
           เข้าสู่ระบบ
         </a>
       </div>

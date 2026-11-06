@@ -1,20 +1,27 @@
 ---
 const {
-  message = "GGHENG สล็อตเว็บตรงสายเฮง ระบบแท้100% จากต่างประเทศ ทุกเกมรันด้วยค่า RTP มาตรฐานสากลจากค่ายแม่โดยตรง ไม่มีล็อกยูส • จ่ายไม่อั้น ถอนหลักแสนหลักล้านก็โอนครบทุกบาท ไม่หักค่าธรรมเนียม • ไม่มีขั้นต่ำ ทุนหลักสิบหลักร้อยก็เริ่มได้ • รวมค่ายดัง PG SOFT, Pragmatic Play, Joker Gaming ลิขสิทธิ์แท้ครบในที่เดียว • ฝากถอนออโต้ผ่านธนาคารและ True Money Wallet เข้าเล่นได้ทุกแพลตฟอร์มด้วยยูสเดียว",
+  message = "77RUAY สล็อตออนไลน์ เล่นผ่านเบราว์เซอร์ได้ทั้ง iOS และ Android ไม่ต้องโหลดแอป • ฝากถอนออโต้ตลอด 24 ชั่วโมง ไม่ต้องแนบสลิป • สมัคร ฝาก เล่น และถอนจบบนมือถือเครื่องเดียว • มีเรื่องติดขัดติดต่อแอดมินผ่านช่องทางบนหน้าเว็บ",
 } = Astro.props;
+
+const SCROLL_PX_PER_SEC = 55;
+const PX_PER_CHAR = 6.2;
+const scrollSeconds = Math.max(14, Math.round((message.length * PX_PER_CHAR + 48) / SCROLL_PX_PER_SEC));
 ---
 
 <div class="mx-auto mt-4 max-w-[900px] px-4 md:px-0">
   <div
-    class="relative flex h-[46px] items-center rounded-r-full border border-[#5c0b13] bg-gradient-to-r from-[#3a0a0d] to-[#1f0405] py-2 pr-4 pl-12 shadow-[0_0_20px_rgba(225,29,29,0.25)]">
-    <div class="absolute top-1/2 -left-2 flex h-11 w-11 -translate-y-1/2 items-center justify-center rounded-full border-[3px] border-[#f5c542] bg-[#140202] shadow-[0_0_15px_rgba(245,197,66,0.35)]">
-      <span aria-hidden="true" class="animate-pulse text-xl">📢</span>
+    class="relative flex h-[46px] items-center rounded-r-full border border-[#d6e2f7] bg-white py-2 pr-4 pl-12 shadow-[0_6px_18px_rgba(10,31,92,0.10)]"
+    style="background-image: linear-gradient(in oklab to right, #eef4ff, #ffffff 45%);">
+    <div
+      class="absolute top-1/2 -left-2 flex h-11 w-11 -translate-y-1/2 items-center justify-center rounded-full border-[3px] border-[#e0a91b] shadow-[0_0_14px_rgba(224,169,27,0.40)]"
+      style="background-image: linear-gradient(in oklab to bottom, #4d8ff5, #1a5fe0, #0b3a9e);">
+      <span aria-hidden="true" class="text-xl">📢</span>
     </div>
 
-    <div class="mr-4 h-full w-[1px] bg-[#f5c542]/30"></div>
+    <div aria-hidden="true" class="mr-4 h-full w-[1px] bg-[#e0a91b]/40"></div>
 
     <div class="flex-1 overflow-hidden [mask-image:linear-gradient(90deg,transparent_0%,#000_5%,#000_95%,transparent_100%)]">
-      <div class="flex w-max animate-[scroll_25s_linear_infinite] gap-12 text-sm font-bold whitespace-nowrap text-[#ffe9a3]">
+      <div class="ticker-track flex w-max gap-12 text-sm font-bold whitespace-nowrap text-[#0a1f5c]" style={`animation-duration:${scrollSeconds}s`}>
         <span>{message}</span>
         <span aria-hidden="true">{message}</span>
       </div>
@@ -23,12 +30,22 @@ const {
 </div>
 
 <style>
-  @keyframes scroll {
+  @keyframes announcement3-scroll {
     from {
       transform: translateX(0);
     }
     to {
       transform: translateX(calc(-50% - 24px));
+    }
+  }
+
+  .ticker-track {
+    animation: announcement3-scroll 25s linear infinite;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .ticker-track {
+      animation: none;
     }
   }
 </style>

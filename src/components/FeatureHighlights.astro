@@ -3,7 +3,7 @@ export interface FeatureItem {
   icon: string;
   title: string;
   description: string;
-  accent?: "blue" | "red";
+  accent?: "blue" | "gold";
 }
 
 export interface Props {
@@ -14,22 +14,22 @@ export interface Props {
 const { items, as: HeadingTag = "h3" } = Astro.props;
 ---
 
-<div class="mt-4 flex flex-col gap-5">
+<div class="mt-5 grid grid-cols-1 gap-4 md:grid-cols-2">
   {
     items.map((item) => {
-      const isRed = item.accent === "red";
+      const isGold = item.accent === "gold";
       return (
-        <div class="group flex flex-col items-start gap-4 rounded-2xl border border-[#1a4a9c] bg-[#06204f] p-6 transition-all duration-300 hover:-translate-y-1 hover:border-[#2f7bff] hover:bg-[#0a2a66] hover:shadow-[0_10px_20px_rgba(11,124,244,0.18)] sm:flex-row">
+        <div class="group flex flex-col items-start gap-4 rounded-2xl border border-[#d6e2f7] bg-[#eef4ff] p-6 transition-all duration-300 hover:-translate-y-1 hover:border-[#9dbcf0] hover:bg-white hover:shadow-[0_10px_20px_rgba(26,95,224,0.16)] sm:flex-row">
           <div
             aria-hidden="true"
             class={`flex h-14 w-14 shrink-0 items-center justify-center rounded-xl text-3xl transition-transform duration-300 group-hover:scale-110 ${
-              isRed ? "bg-gradient-to-b from-[#ff5a60] via-[#e8202a] to-[#b0121a] shadow-[0_5px_15px_rgba(232,32,42,0.3)] group-hover:rotate-3" : "bg-gradient-to-b from-[#4da3ff] to-[#0554b8] shadow-[0_5px_15px_rgba(11,124,244,0.35)]"
+              isGold ? "bg-gradient-to-b from-[#ffd45c] via-[#e0a91b] to-[#b07d12] shadow-[0_5px_15px_rgba(224,169,27,0.35)] group-hover:rotate-3" : "bg-gradient-to-b from-[#4d8ff5] via-[#1a5fe0] to-[#0b3a9e] shadow-[0_5px_15px_rgba(26,95,224,0.30)]"
             }`}>
             {item.icon}
           </div>
           <div class="flex flex-col gap-2 text-left">
-            <HeadingTag class="text-xl leading-normal font-black tracking-wide text-white">{item.title}</HeadingTag>
-            <p class="text-left text-base leading-relaxed text-[#dbe9ff]">{item.description}</p>
+            <HeadingTag class="text-xl leading-normal font-black tracking-wide text-[#0a1f5c]">{item.title}</HeadingTag>
+            <p class="text-left text-base leading-relaxed text-[#1f2a44]">{item.description}</p>
           </div>
         </div>
       );

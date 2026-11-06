@@ -2,15 +2,18 @@
 import MainLayout from "../layouts/MainLayout.astro";
 import ContentBox from "../components/ContentBox.astro";
 import Navfoot from "../components/Navfoot.astro";
-import Announcement from "../components/Announcement4.astro";
+import Announcement from "../components/Announcement3.astro";
 import { pageGraph } from "../lib/schema";
 
-const pageTitle = "เกี่ยวกับ BABYSHARK8899 ทางเข้าเดียวรวมสล็อต คาสิโนสด ยิงปลา และหวย";
+const pageTitle = "เกี่ยวกับ 77RUAY สล็อตออนไลน์ผ่านเบราว์เซอร์ รวมสี่ค่ายเกม ฝากถอนออโต้ 24 ชั่วโมง";
 
-const pageHeading = "เกี่ยวกับ BABYSHARK8899 ทางเข้าเดียวที่รวมสล็อต คาสิโนสด ยิงปลา และหวยไว้ด้วยกัน";
+const pageHeading = "เกี่ยวกับ 77RUAY สล็อตออนไลน์ที่เล่นผ่านเบราว์เซอร์ พร้อมฝากถอนออโต้ตลอด 24 ชั่วโมง";
 
 const pageDescription =
-  "รู้จัก BABYSHARK8899 ทางเข้าเดียวที่รวมสล็อตแยกตามค่าย คาสิโนสด DG และ Pretty Gaming เกมยิงปลา และหวยหลายตลาด เปิดผ่านเบราว์เซอร์มือถือได้ทันที ไม่ต้องโหลดแอป";
+  "รู้จัก 77RUAY สล็อตออนไลน์ที่เล่นผ่านเบราว์เซอร์ทั้ง iOS และ Android รวมเกมจาก PG Soft, Pragmatic Play, JILI และ Habanero ฝากถอนออโต้ 24 ชั่วโมงไม่ต้องแนบสลิป";
+
+const announcementMessage =
+  "77RUAY สล็อตออนไลน์ เล่นผ่านเบราว์เซอร์ได้ทั้ง iOS และ Android ไม่ต้องโหลดแอป • ฝากถอนออโต้ตลอด 24 ชั่วโมง ไม่ต้องแนบสลิป • สมัคร ฝาก เล่น และถอนจบบนมือถือเครื่องเดียว • มีเรื่องติดขัดติดต่อแอดมินผ่านช่องทางบนหน้าเว็บ";
 
 const graph = pageGraph(Astro, {
   name: pageTitle,
@@ -21,104 +24,78 @@ const graph = pageGraph(Astro, {
   ],
 });
 
-const linkClass = "font-bold text-[#4da3ff] underline underline-offset-4 transition-colors hover:text-[#ff5a60]";
+const bodyClass = "mb-4 text-left text-base leading-relaxed text-[#1f2a44]";
+const closerClass = "text-left text-base leading-relaxed text-[#1f2a44]";
+const linkClass = "font-bold text-[#1a5fe0] underline underline-offset-4 transition-colors hover:text-[#8a6508]";
 ---
 
 <MainLayout title={pageTitle} description={pageDescription}>
   <script type="application/ld+json" set:html={graph} />
 
-  <Announcement />
+  <Announcement message={announcementMessage} />
 
   <ContentBox as="h1" title={pageHeading}>
-    <p class="mb-4 text-left text-base leading-relaxed">
-      <strong class="text-[#4da3ff]">BABYSHARK8899</strong> เป็นทางเข้าเดียวที่รวมเกมเดิมพันออนไลน์ไว้ 4 หมวด คือสล็อต คาสิโนสด ยิงปลา และหวย สมัครแล้วเติมเงินครั้งเดียว จากนั้นแยกไปหมวดของตัวเองได้เลย
+    <p class={bodyClass}>
+      <strong class="font-bold text-[#8a6508]">77RUAY</strong> เป็นเว็บสล็อตออนไลน์ที่เปิดผ่านเบราว์เซอร์ได้เลยโดยไม่ต้องโหลดแอป รวมเกมจากสี่ค่าย คือ PG Soft, Pragmatic Play, JILI และ Habanero ไว้ในที่เดียว
     </p>
 
-    <p class="mb-4 text-left text-base leading-relaxed">
-      สายสล็อตไปทางค่าย สายไพ่ไปโต๊ะสด คนชอบยิงปลาลงทะเล คอหวยเปิดหน้าโพย แต่ละหมวดมีค่ายและรายชื่อเกมของตัวเอง ด้านล่างไล่ให้ดูทีละหมวด พร้อมเรื่องที่ควรรู้ก่อนล็อกอิน
+    <p class={bodyClass}>
+      ฝากถอนเป็นระบบออโต้ที่ปรับเครดิตให้เองตลอด 24 ชั่วโมง และทุกขั้นตอนตั้งแต่สมัครจนถึงถอนเงินจัดการได้บนมือถือเครื่องเดียว ด้านล่างไล่ให้ดูทีละเรื่อง
     </p>
 
-    <p class="text-left text-base leading-relaxed">ทางเข้าเดียวกัน แต่ปลายทางของแต่ละคนไม่เหมือนกัน</p>
+    <p class={closerClass}>ทุกอย่างอยู่ในเบราว์เซอร์ ไม่มีอะไรต้องติดตั้งเพิ่ม</p>
   </ContentBox>
 
-  <ContentBox as="h2" title="สล็อต BABYSHARK8899 แยกตามค่าย PG Soft Pragmatic Play และ JILI">
-    <p class="mb-4 text-left text-base leading-relaxed">
-      ค่ายสล็อตที่เปิดอยู่มี PG Soft, Pragmatic Play และ JILI แต่ละค่ายมีรายชื่อเกมของตัวเอง ใครมีค่ายในใจอยู่แล้วเลือกค่ายก่อน แล้วค่อยไล่ดูชื่อเกมในค่ายนั้น
+  <ContentBox as="h2" title="สล็อตออนไลน์ 77RUAY จากสี่ค่าย PG Soft Pragmatic Play JILI และ Habanero">
+    <p class={bodyClass}>
+      ค่ายสล็อตที่เปิดอยู่มีสี่ค่าย แต่ละค่ายมีกติกาและจังหวะเกมของตัวเอง ใครมีค่ายในใจอยู่แล้วเลือกค่ายก่อน แล้วค่อยไล่ดูว่าเกมในค่ายนั้นลุ้นกันแบบไหน
     </p>
 
-    <p class="mb-4 text-left text-base leading-relaxed">
-      PG Soft มี Treasures of Aztec กับ Fortune Tiger ฝั่ง Pragmatic Play มี Starlight Princess กับ The Dog House ส่วน JILI มี Super Ace กับ Boxing King
+    <p class={bodyClass}>
+      Fortune Tiger ของ PG Soft เป็นวงล้อ 3×3 ไม่มีสแกตเตอร์และฟรีสปิน แต่มีฟีเจอร์สุ่มที่หมุนซ้ำ ส่วน Sugar Rush ของ Pragmatic Play ใช้ระบบร่วงหล่น จ่ายเมื่อสัญลักษณ์เหมือนกันติดกันเป็นกลุ่ม
     </p>
 
-    <p class="mb-4 text-left text-base leading-relaxed">
-      สองเกมในค่ายเดียวกันก็เล่นคนละจังหวะ เกมร่วงหล่นสะสมตัวคูณจากการชนะต่อเนื่อง ส่วนเกมวงล้อ 3×3 ไม่มีฟรีสปินแต่มีหมุนซ้ำแบบสุ่ม ชื่อค่ายจึงบอกได้แค่ส่วนหนึ่ง
+    <p class={bodyClass}>
+      Money Coming ของ JILI มีวงล้อตัวเลข 3 วงกับวงพิเศษวงที่สี่ที่ให้ตัวคูณ หมุนซ้ำ หรือเข้าโบนัส ส่วน Koi Gate ของ Habanero ใช้ปลาคาร์ฟเป็นไวลด์ที่ขยายเต็มแถวแล้วหมุนซ้ำ
     </p>
 
-    <p class="text-left text-base leading-relaxed">ชื่อค่ายบอกสไตล์ ชื่อเกมบอกกลไก</p>
+    <p class={closerClass}>ชื่อค่ายบอกสไตล์ ชื่อเกมบอกกลไก</p>
   </ContentBox>
 
-  <ContentBox as="h2" title="คาสิโนสด BABYSHARK8899 จาก Dream Gaming และ Pretty Gaming">
-    <p class="mb-4 text-left text-base leading-relaxed">
-      คาสิโนสดมีสองค่าย คือ Dream Gaming (DG) กับ Pretty Gaming ดีลเลอร์เปิดไพ่สดให้เห็นผ่านกล้อง โต๊ะที่มีคือบาคาร่า รูเล็ต เสือมังกร แบล็คแจ็ค และไฮโล
+  <ContentBox as="h2" title="เล่น 77RUAY ผ่านเบราว์เซอร์มือถือ iOS และ Android ไม่ต้องโหลดแอป">
+    <p class={bodyClass}>
+      ทางเข้าเปิดผ่านเบราว์เซอร์บนมือถือได้ทั้ง iOS และ Android ไม่ต้องโหลดแอปเพิ่ม คนที่เปลี่ยนโทรศัพท์หรือสลับไปใช้แท็บเล็ตระหว่างวันจึงไม่ต้องลงโปรแกรมใหม่ทุกครั้ง
     </p>
 
-    <p class="mb-4 text-left text-base leading-relaxed">
-      บาคาร่าเริ่มง่ายที่สุด เลือกฝั่งผู้เล่น เจ้ามือ หรือเสมอ รูเล็ตวางเลขเดี่ยว หรือแทงสีแดงดำ คู่คี่ สูงต่ำ เสือมังกรกับแบล็คแจ็คเป็นเกมไพ่ที่หลายคนเล่นเป็นอยู่แล้ว ส่วนไฮโลไว้ลุ้นลูกเต๋า
+    <p class={bodyClass}>
+      บนคอมก็เปิดบนจอใหญ่ได้เหมือนกัน สมาชิกเดิมที่ย้ายเครื่องใช้ยูสกับรหัสชุดเดิมล็อกอินได้เลย ไม่ต้องสมัครซ้ำ แค่เปิด <a href="/ทางเข้า/" class={linkClass}>ทางเข้า 77RUAY</a> ในเครื่องใหม่ก็เล่นต่อได้
     </p>
 
-    <p class="text-left text-base leading-relaxed">ไม่ต้องเรียนกติกาใหม่ แค่เลือกโต๊ะที่เล่นเป็นอยู่แล้ว</p>
+    <p class={closerClass}>เปลี่ยนเครื่องได้ ยูสยังเป็นของเดิม</p>
   </ContentBox>
 
-  <ContentBox as="h2" title="เกมยิงปลา BABYSHARK8899 สามธีม Boom Legend Dragon Fishing และ Zombie Party">
-    <p class="mb-4 text-left text-base leading-relaxed">
-      เกมยิงปลามีสามธีมจากสามค่าย Boom Legend ของ JILI เป็นธีมมอนสเตอร์ Dragon Fishing ของ JDB ชูบอสมังกร และ Zombie Party ของ Spadegaming เป็นธีมซอมบี้
+  <ContentBox as="h2" title="ฝากถอนออโต้ตลอด 24 ชั่วโมง ไม่ต้องแนบสลิป จัดการจบบนมือถือเครื่องเดียว">
+    <p class={bodyClass}>
+      ระบบฝากถอนปรับยอดเครดิตให้เอง ไม่ต้องแคปหน้าจอแนบสลิปส่งให้พนักงานตรวจ และไม่ต้องรอแอดมินตอบรับ จะเติมตอนดึกหรือถอนตอนเช้าตรู่ก็ทำรายการผ่านหน้าเว็บได้ตลอด 24 ชั่วโมง
     </p>
 
-    <p class="mb-4 text-left text-base leading-relaxed">
-      ทุกเกมเล่นหลายคนในห้องเดียวได้ ตัวใหญ่หรือบอสให้รางวัลสูงกว่าแต่ต้องยิงหลายนัด และทุกนัดหักเครดิตตามค่ากระสุน คนเพิ่งเริ่มจึงควรเข้าห้องเบทเล็กแล้วตั้งกระสุนต่ำไว้ก่อน
+    <p class={bodyClass}>
+      ตั้งแต่กดสมัคร ฝากเครดิต เลือกค่ายเข้าเล่นสล็อตออนไลน์ ไปจนถึงกดถอนเงิน ทำได้บนมือถือเครื่องเดียว ไม่ต้องเปิดคอมเพิ่ม รายละเอียดแต่ละขั้นอยู่ที่หน้า <a href="/วิธีฝากถอน/" class={linkClass}>วิธีฝากถอน</a>
     </p>
 
-    <p class="text-left text-base leading-relaxed">ยิงปลาต่างจากสล็อตตรงที่เราเลือกเป้าเอง และทุกนัดมีราคา</p>
+    <p class={closerClass}>เรื่องเงินทำจากเครื่องเดียวกับที่เล่น</p>
   </ContentBox>
 
-  <ContentBox as="h2" title="หวย BABYSHARK8899 หลายตลาด ตั้งแต่หวยรัฐบาลถึงหวยหุ้น">
-    <p class="mb-4 text-left text-base leading-relaxed">
-      คอหวยเลือกตลาดได้ตั้งแต่หวยรัฐบาลที่ออกวันที่ 1 และ 16 ของเดือน หวยฮานอยที่มีรอบปกติ พิเศษ และ VIP หวยหุ้นไทย นิเคอิ ฮั่งเส็ง ดาวโจนส์ รวมถึงหวยลาว ยี่กี มาเลย์ ออมสิน และ ธ.ก.ส.
+  <ContentBox as="h2" title="ก่อนล็อกอิน 77RUAY เช็กชื่อเว็บ รักษารหัสผ่านกับ OTP และรู้ช่องทางติดต่อแอดมิน">
+    <p class={bodyClass}>
+      ลิงก์ที่ส่งต่อกันในแชตมีหลายหน้าตา ก่อนกรอกรหัสทุกครั้งจึงมองชื่อเว็บบนแถบที่อยู่ให้ตรงก่อน รหัสผ่านกับ OTP ไม่ส่งให้ใคร แม้คนที่ทักมาจะอ้างว่าเป็นทีมงานก็ตาม
     </p>
 
-    <p class="mb-4 text-left text-base leading-relaxed">
-      ประเภทแทงมี 3 ตัวบน 3 ตัวโต๊ด 2 ตัวบน 2 ตัวล่าง วิ่งบน และวิ่งล่าง อัตราจ่ายกับเวลาปิดรับของแต่ละตลาดอยู่ในหน้าแทงหวย เปิดดูก่อนยืนยันโพยทุกครั้ง
+    <p class={bodyClass}>
+      ล็อกอินไม่ผ่าน ฝากแล้วเครดิตไม่ขึ้น หรือมีรายการค้าง ติดต่อแอดมินผ่านช่องทางบนหน้า <a href="/contact-us/" class={linkClass}>ติดต่อเรา</a> อย่าเพิ่งโอนซ้ำ แจ้งช่วงเวลาที่ทำรายการกับยอดเงินไปพร้อมกัน
     </p>
 
-    <p class="text-left text-base leading-relaxed">ตลาดไหนปิดรับกี่โมง ต้องรู้ก่อนเลขที่จะแทง</p>
-  </ContentBox>
-
-  <ContentBox as="h2" title="เล่น BABYSHARK8899 ผ่านเบราว์เซอร์มือถือ iOS และ Android ไม่ต้องโหลดแอป">
-    <p class="mb-4 text-left text-base leading-relaxed">
-      ทางเข้าเปิดผ่านเบราว์เซอร์บนมือถือได้ทันที ใช้ได้ทั้ง iOS และ Android ไม่ต้องโหลดแอปเพิ่ม สมัคร ฝาก เล่น และถอนจบในเครื่องเดียว
-    </p>
-
-    <p class="mb-4 text-left text-base leading-relaxed">
-      บนคอมก็เปิดผ่านเบราว์เซอร์ได้เหมือนกัน สมาชิกเดิมที่ย้ายเครื่องใช้ยูสกับรหัสชุดเดิมล็อกอินได้เลย ไม่ต้องสมัครใหม่ แค่เปิด <a href="/ทางเข้า/" class={linkClass}>ทางเข้า BABYSHARK8899</a> ในเครื่องใหม่ก็เล่นต่อได้
-    </p>
-
-    <p class="text-left text-base leading-relaxed">เปลี่ยนเครื่องได้ ยูสยังเป็นของเดิม</p>
-  </ContentBox>
-
-  <ContentBox as="h2" title="ก่อนล็อกอิน BABYSHARK8899 เช็กชื่อเว็บ รักษารหัสผ่านกับ OTP และรู้ช่องทางติดต่อแอดมิน">
-    <p class="mb-4 text-left text-base leading-relaxed">
-      ลิงก์ที่ส่งต่อกันในแชตมีหลายหน้าตา ก่อนกรอกรหัสทุกครั้งจึงมองชื่อเว็บบนแถบที่อยู่ให้แน่ใจว่าตรงก่อน ตรงแล้วค่อยกรอก
-    </p>
-
-    <p class="mb-4 text-left text-base leading-relaxed">
-      รหัสผ่านกับ OTP ไม่ส่งให้ใคร แม้คนที่ทักมาจะอ้างว่าเป็นทีมงานก็ตาม
-    </p>
-
-    <p class="mb-4 text-left text-base leading-relaxed">
-      มีเรื่องติดขัด ล็อกอินไม่ผ่าน หรือฝากแล้วเครดิตยังไม่เข้า ติดต่อแอดมินผ่านช่องทางบนหน้าเว็บที่หน้า <a href="/contact-us/" class={linkClass}>ติดต่อเรา</a> กรณีเครดิตไม่เข้า อย่าเพิ่งโอนซ้ำ แจ้งเวลาที่โอนและยอดเงินไปพร้อมกัน
-    </p>
-
-    <p class="text-left text-base leading-relaxed">ข้อมูลที่แจ้งครบตั้งแต่ข้อความแรก คือสิ่งที่ทำให้แอดมินหารายการของเราเจอเร็วที่สุด</p>
+    <p class={closerClass}>ข้อมูลที่แจ้งครบตั้งแต่ข้อความแรก คือสิ่งที่ทำให้แอดมินหารายการของเราเจอเร็วที่สุด</p>
   </ContentBox>
 
   <Navfoot />

@@ -2,10 +2,10 @@
 import { BRAND_NAME } from "../lib/brandProfile";
 
 const providers = [
-  { name: "PG Soft", desc: "ค่ายของ Treasures of Aztec สัญลักษณ์กรอบทองเปลี่ยนเป็น Wild เมื่อชนะต่อเนื่อง ตัวคูณขยับตามคอมโบ", tag: "ฟรีสปิน", icon: "🏺" },
-  { name: "Pragmatic Play", desc: "ค่ายของ Sweet Bonanza ลูกกวาดร่วงหล่น ซื้อฟรีสปินได้ มีลูกระเบิดตัวคูณในรอบโบนัส", tag: "ซื้อฟรีสปิน", icon: "🍭" },
-  { name: "JILI", desc: "ค่ายของ Fortune Gems สล็อต 3 รีลเดินรอบไว วงล้อด้านขวาสุ่มตัวคูณทุกรอบที่หมุน", tag: "ตัวคูณ", icon: "💎" },
-  { name: "Joker Gaming", desc: "ค่ายของ Roma เกมนักรบโรมันที่คนไทยคุ้นหน้า เล่นง่าย มีโบนัสพิเศษให้ลุ้นระหว่างปั่น", tag: "คลาสสิก", icon: "🏛️" },
+  { name: "PG Soft", game: "Fortune Tiger", desc: "เหมาะกับคนที่ชอบเกมแบบไม่มีฟรีสปิน", tag: "วงล้อ 3×3", icon: "🐯" },
+  { name: "Pragmatic Play", game: "Sugar Rush", desc: "เหมาะกับคนที่ชอบลุ้นสัญลักษณ์ร่วงหล่นเป็นกลุ่ม", tag: "ร่วงหล่น", icon: "🍭" },
+  { name: "JILI", game: "Money Coming", desc: "เหมาะกับคนที่ชอบลุ้นวงพิเศษวงที่สี่", tag: "วงพิเศษ", icon: "💰" },
+  { name: "Habanero", game: "Koi Gate", desc: "เหมาะกับคนที่ชอบไวลด์ขยายเต็มแถว", tag: "ไวลด์ขยาย", icon: "🎏" },
 ];
 
 const gridTitle = `ค่ายสล็อตที่ ${BRAND_NAME} รวมไว้ในเว็บเดียว`;
@@ -13,31 +13,28 @@ const gridTitle = `ค่ายสล็อตที่ ${BRAND_NAME} รวม�
 
 <section aria-label={gridTitle} class="relative z-10 mx-auto mb-10 w-full max-w-[1400px] px-4 font-sans">
   <div class="mb-6 flex w-full flex-col items-center justify-center gap-2 text-center">
-    <p class="text-3xl leading-normal font-black tracking-wide text-white">{gridTitle}</p>
-    <div aria-hidden="true" class="mt-2 h-[4px] w-24 rounded-full bg-gradient-to-r from-transparent via-[#c13fc4] to-transparent"></div>
+    <p class="text-2xl leading-normal font-black tracking-wide text-[#0a1f5c] md:text-3xl">{gridTitle}</p>
+    <div aria-hidden="true" class="mt-2 h-[4px] w-24 rounded-full bg-gradient-to-r from-[#1a5fe0] via-[#e0a91b] to-[#1a5fe0]"></div>
   </div>
-
-  <p class="mb-8 text-left text-base leading-relaxed text-[#ead9ec]">
-    {BRAND_NAME} รวมค่ายยอดนิยมในไทยไว้ในเว็บเดียว ทั้ง JILI, PG Soft, Joker Gaming และ Pragmatic Play เลือกค่ายจากการ์ดด้านล่าง แล้วดูกลไกฟรีสปิน ตัวคูณ และปุ่มซื้อฟีเจอร์ของเกมนั้นก่อนเริ่มปั่น
-  </p>
 
   <div class="grid grid-cols-2 gap-4 lg:grid-cols-4 lg:gap-5">
     {
       providers.map((provider) => (
         <a
           href="/register/"
-          class="group relative isolate flex flex-col items-center justify-center overflow-hidden rounded-2xl border border-[#5a1a60] bg-[#1c0620] p-5 shadow-[0_10px_30px_rgba(0,0,0,0.3)] transition-all duration-300 hover:-translate-y-2 hover:border-[#8a2f8f] hover:bg-[#26082c] hover:shadow-[0_15px_40px_rgba(193,63,196,0.22)]">
-          <div class="absolute top-2 right-2 z-10 rounded-full bg-gradient-to-b from-[#ffe08a] via-[#f5c542] to-[#b07d12] px-2 py-0.5 text-[10px] font-black tracking-wide text-[#3a0535] shadow-sm transition-transform duration-300 group-hover:scale-110">
+          class="group relative isolate flex flex-col items-center justify-center overflow-hidden rounded-2xl border border-[#d6e2f7] bg-white p-5 shadow-[0_10px_30px_rgba(10,31,92,0.08)] transition-all duration-300 hover:-translate-y-2 hover:border-[#9dbcf0] hover:bg-[#eef4ff] hover:shadow-[0_15px_40px_rgba(26,95,224,0.16)]">
+          <span class="absolute top-2 right-2 z-10 rounded-full bg-gradient-to-b from-[#ffd45c] via-[#e0a91b] to-[#b07d12] px-2 py-0.5 text-[10px] font-black tracking-wide text-[#0a1f5c] shadow-sm transition-transform duration-300 group-hover:scale-110">
             {provider.tag}
-          </div>
+          </span>
 
-          <div aria-hidden="true" class="mt-3 mb-3 text-4xl transition-transform duration-300 group-hover:scale-125 group-hover:rotate-3">
+          <span aria-hidden="true" class="mt-5 mb-3 text-4xl transition-transform duration-300 group-hover:scale-125 group-hover:rotate-3">
             {provider.icon}
-          </div>
-          <p class="text-center text-base font-black text-white transition-colors group-hover:text-[#ffe08a]">{provider.name}</p>
-          <p class="mt-1 text-center text-xs leading-relaxed text-[#c9a8cc]">{provider.desc}</p>
+          </span>
+          <span class="text-center text-base font-black text-[#0a1f5c] transition-colors group-hover:text-[#1a5fe0]">{provider.name}</span>
+          <span class="mt-0.5 text-center text-sm font-bold text-[#8a6508]">{provider.game}</span>
+          <span class="mt-2 text-center text-xs leading-relaxed text-[#4a5878]">{provider.desc}</span>
 
-          <span class="relative z-10 mt-4 block w-full rounded-full border border-[#5a1a60] bg-[#31103a] py-1.5 text-center text-xs font-bold text-[#ffe08a] transition-colors duration-300 group-hover:border-transparent group-hover:bg-gradient-to-b group-hover:from-[#e061e3] group-hover:to-[#9c2193] group-hover:text-white">
+          <span class="relative z-10 mt-4 block w-full rounded-full border border-[#d6e2f7] bg-[#eef4ff] py-1.5 text-center text-xs font-bold text-[#1a5fe0] transition-colors duration-300 group-hover:border-[#ffd45c] group-hover:bg-gradient-to-b group-hover:from-[#4d8ff5] group-hover:via-[#1a5fe0] group-hover:to-[#0b3a9e] group-hover:text-white">
             สมัครเข้าเล่น
           </span>
         </a>

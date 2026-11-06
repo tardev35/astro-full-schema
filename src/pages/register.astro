@@ -2,14 +2,17 @@
 import MainLayout from "../layouts/MainLayout.astro";
 import ContentBox from "../components/ContentBox.astro";
 import Navfoot from "../components/Navfoot.astro";
-import Announcement from "../components/Announcement4.astro";
+import Announcement from "../components/Announcement3.astro";
 import CtaRedirect from "../components/CtaRedirect.astro";
 import { pageGraph } from "../lib/schema";
 
-const pageTitle = "สมัครสมาชิก BABYSHARK8899 | ปุ่มเปิดยูสใหม่ สล็อต คาสิโนสด ยิงปลา หวย";
+const pageTitle = "สมัครสมาชิก 77RUAY | เปิดยูสใหม่ เล่นสล็อตออนไลน์ผ่านเบราว์เซอร์ ฝากถอนออโต้";
 
 const pageDescription =
-  "หน้าสมัครสมาชิก BABYSHARK8899 มีปุ่มเดียวสำหรับกดไปหน้าเปิดยูสใหม่ กรอกข้อมูลตามหน้าสมัครแล้วเช็กอีกรอบก่อนกดยืนยัน จากนั้นฝาก เล่น และถอนจบในมือถือเครื่องเดียว";
+  "หากคุณกำลังมองหาสล็อตออนไลน์ที่สมัครง่าย 77RUAY พร้อมให้เปิดยูสใหม่บนมือถือ รวมเกมฮิตสี่ค่าย และฝากถอนออโต้ 24 ชั่วโมงไม่ต้องแนบสลิป เพื่อเริ่มเล่นได้สะดวกขึ้น";
+
+const announcementMessage =
+  "77RUAY สล็อตออนไลน์ เล่นผ่านเบราว์เซอร์ได้ทั้ง iOS และ Android ไม่ต้องโหลดแอป • ฝากถอนออโต้ตลอด 24 ชั่วโมง ไม่ต้องแนบสลิป • สมัคร ฝาก เล่น และถอนจบบนมือถือเครื่องเดียว • มีเรื่องติดขัดติดต่อแอดมินผ่านช่องทางบนหน้าเว็บ";
 
 const graph = pageGraph(Astro, {
   name: pageTitle,
@@ -20,23 +23,23 @@ const graph = pageGraph(Astro, {
   ],
 });
 
-const targetUrl = "https://yoalink.com/gf78";
+const targetUrl = "https://yoalink.com/22hs";
 ---
 
 <MainLayout title={pageTitle} description={pageDescription}>
   <script type="application/ld+json" set:html={graph} />
 
-  <Announcement />
+  <Announcement message={announcementMessage} />
 
-  <ContentBox title="สมัครสมาชิก BABYSHARK8899" as="h1">
+  <ContentBox title="สมัครสมาชิก 77RUAY" as="h1">
     <div class="flex justify-center py-8">
       <a
         href={targetUrl}
         rel="nofollow sponsored"
         data-cta-redirect
-        aria-label="สมัครสมาชิก BABYSHARK8899"
-        class="group relative mx-auto flex w-full max-w-[320px] items-center justify-center gap-3 overflow-hidden rounded-full bg-gradient-to-b from-[#4da3ff] to-[#0554b8] px-6 py-4 text-xl font-black tracking-wide text-white shadow-[0_0_15px_rgba(11,124,244,0.45)] transition-all duration-300 hover:scale-105 hover:brightness-110 hover:shadow-[0_15px_40px_rgba(11,124,244,0.45)]">
-        สมัครสมาชิก BABYSHARK8899
+        aria-label="สมัครสมาชิก 77RUAY"
+        class="group relative mx-auto flex w-full max-w-[320px] items-center justify-center gap-3 overflow-hidden rounded-full border-2 border-[#ffd45c] bg-gradient-to-b from-[#4d8ff5] via-[#1a5fe0] to-[#0b3a9e] px-6 py-4 text-xl font-black tracking-wide text-white shadow-[0_0_15px_rgba(26,95,224,0.45)] transition-all duration-300 hover:scale-105 hover:brightness-110 hover:shadow-[0_15px_40px_rgba(26,95,224,0.45)]">
+        สมัครสมาชิก 77RUAY
       </a>
     </div>
   </ContentBox>

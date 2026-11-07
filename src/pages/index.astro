@@ -1,87 +1,72 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
-import Announcement from "../components/Announcement3.astro";
+import Announcement from "../components/Announcement5.astro";
 import ContentBox from "../components/ContentBox.astro";
-import ContentBoxPremium from "../components/ContentBoxPremium.astro";
-import ContentBoxCyberCut from "../components/ContentBoxCyberCut.astro";
-import ContentBoxSevenThreePremium from "../components/ContentBoxSevenThreePremium.astro";
-import ContentBoxSevenThreeCyberCut from "../components/ContentBoxSevenThreeCyberCut.astro";
-import ContentBoxTwoCyberCut from "../components/ContentBoxTwoCyberCut.astro";
-import ContentBoxTwoPremium from "../components/ContentBoxTwoPremium.astro";
-import FeatureHighlights from "../components/FeatureHighlights.astro";
+import ContentBoxNeumorphism from "../components/ContentBoxNeumorphism.astro";
+import ContentBoxSpecial from "../components/ContentBoxSpecial.astro";
+import ContentBoxSevenThreeFloatingBadge from "../components/ContentBoxSevenThreeFloatingBadge.astro";
+import ContentBoxTwoNeumorphism from "../components/ContentBoxTwoNeumorphism.astro";
+import ContentBoxSevenThreeNeumorphism from "../components/ContentBoxSevenThreeNeumorphism.astro";
+import Faq4 from "../components/Faq4.astro";
 import SmoothCarousel from "../components/SmoothCarousel.astro";
-import ProviderGrid from "../components/ProviderGrid.astro";
-import LatestWinners from "../components/LatestWinners.astro";
+import ProviderGridPremium from "../components/ProviderGridPremium.astro";
+import LatestWinners2 from "../components/LatestWinners2.astro";
 import LoginRtpSection from "../components/LoginRtpSection.astro";
-import ReviewCardSumo2 from "../components/ReviewCardSumo2.astro";
+import ReviewCardSumo from "../components/ReviewCardSumo.astro";
 import Navfoot from "../components/Navfoot.astro";
 
 import { Picture } from "astro:assets";
 import { pageGraph } from "../lib/schema";
-import imgAutoPay from "../assets/slide3.png";
-import imgMobile from "../assets/slide4.png";
+import imgDeposit from "../assets/slide1.png";
+import imgSignup from "../assets/slide3.png";
 
-const pageTitle = "777RUAY | สล็อตออนไลน์ เล่นผ่านเบราว์เซอร์ ฝากถอนออโต้ 24 ชั่วโมง";
+const pageTitle = "MEEHAY569 สล็อตเว็บตรง ฝากถอนทรูวอเลท 1 บาท ทดลองเล่นก่อนสมัคร";
 
 const pageDescription =
-  "ทางเข้า 777RUAY สล็อตออนไลน์ เล่นผ่านเบราว์เซอร์ได้ทันที รวมหลายค่ายเกมฮิต ฝากถอนออโต้ตลอด 24 ชั่วโมง จัดการจบในมือถือ มีแอดมินดูแลและสมัครง่ายวันนี้";
+  "MEEHAY569 สล็อตเว็บตรง ไม่ผ่านเอเย่นต์ ฝากถอนทรูวอเลทออโต้เริ่ม 1 บาท ทดลองเล่นสล็อตก่อนตัดสินใจ มือใหม่หรือสายทุนน้อยก็เริ่มได้ สมัครง่าย 4 ขั้นตอน";
 
-const h1Title = "777RUAY สล็อตออนไลน์ เล่นผ่านเบราว์เซอร์ ฝากถอนออโต้ 24 ชั่วโมง";
+const h1Title = "MEEHAY569 สล็อตเว็บตรง ฝากถอนทรูวอเลท 1 บาท ทดลองเล่นก่อนสมัคร";
 
 const announcementMessage =
-  "777RUAY สล็อตออนไลน์ เล่นผ่านเบราว์เซอร์ได้ทั้ง iOS และ Android ไม่ต้องโหลดแอป • ฝากถอนออโต้ตลอด 24 ชั่วโมง ไม่ต้องแนบสลิป • สมัคร ฝาก เล่น และถอนจบบนมือถือเครื่องเดียว • มีเรื่องติดขัดติดต่อแอดมินผ่านช่องทางบนหน้าเว็บ";
+  "MEEHAY569 สล็อตเว็บตรง ไม่ผ่านเอเย่นต์ • ฝากถอนทรูวอเลทออโต้ เริ่ม 1 บาท ตลอด 24 ชั่วโมง ไม่ต้องส่งสลิป • ทดลองเล่นสล็อตได้โดยไม่ต้องฝากเงินหรือสมัครก่อน • สมัครง่าย 4 ขั้นตอน เล่นได้ทั้งเว็บมือถือ แอป และคอม";
 
-const autoPayAlt = "777RUAY ฝากถอนออโต้ รวดเร็ว ใช้งานง่าย มั่นใจได้ อัตโนมัติ ทันสมัย สะดวก ปุ่มสมัครเลย เหรียญลูกศรวนสีฟ้าข้างพรีเซนเตอร์ถือมือถือ";
+const depositAlt =
+  "โลโก้ MEEHAY569 ตัวอักษรสีฟ้าเลข 569 สีทอง ฝากครบ 500 รับเครดิตฟรี 50 โปรลุ้นสนุก ใช้ได้จริง สมัครวันนี้คุ้มกว่า สำหรับสมาชิกที่ร่วมกิจกรรม ปุ่มรับสิทธิ์เลย พรีเซนเตอร์ชุดเลื่อมสีเงิน กบเขียว มังกรข้างวงล้อ 777 และเหรียญทองบนท้องฟ้า";
 
-const mobileAlt = "777RUAY เล่นได้ทุกที่ บนมือถือ ระบบทันสมัย พร้อมดูแลทุกขั้นตอน มือถือ ตอบไว พร้อมดูแล ปุ่มเข้าร่วมเลย พรีเซนเตอร์ชุดกี่เพ้าชี้ไปที่มือถือ";
+const signupAlt =
+  "โลโก้ MEEHAY569 ตัวอักษรสีฟ้าเลข 569 สีทอง สมาชิกใหม่ ฝาก 100 รับ 300 สมัครง่าย รับไว โปรเริ่มต้นสุดคุ้ม ทำยอดตามเงื่อนไขก่อนถอน ปุ่มสมัครเลย พรีเซนเตอร์ชุดเลื่อมสีเงิน กบเขียวสวมมงกุฎชูนิ้วโป้งและถ้วยรางวัลสีทอง";
 
-const slotHighlights = [
+const faqTitle = "FAQ สิ่งที่คนถามก่อนเล่นสล็อตเว็บตรงกับเรา";
+
+const faqs = [
   {
-    icon: "🐯",
-    title: "PG Soft · Fortune Tiger",
-    description: "เสือทองวงล้อ 3×3 ไม่มีสแกตเตอร์และฟรีสปิน มีฟีเจอร์สุ่มที่หมุนซ้ำ",
-    accent: "blue" as const,
+    q: "เล่นสล็อตเวลาไหนแตกดี?",
+    a: "ไม่มีเวลาตายตัว แต่ละสปินเป็นผลสุ่ม กลางวันหรือกลางคืนจึงลุ้นเหมือนกัน เลือกเวลาที่คุณเล่นได้สบายจะดีกว่าครับ",
   },
   {
-    icon: "🍭",
-    title: "Pragmatic Play · Sugar Rush",
-    description: "ระบบร่วงหล่น จ่ายเมื่อสัญลักษณ์เหมือนกันติดกันเป็นกลุ่ม ช่องที่ชนะเป็นจุดตัวคูณ",
-    accent: "gold" as const,
+    q: "มือใหม่หัดเล่นสล็อตเริ่มยังไงดี?",
+    a: "เริ่มจากโหมดทดลองเล่นก่อน เลือกเกมที่กติกาเข้าใจง่าย ดูว่าฟีเจอร์ทำงานแบบไหน แล้วค่อยเริ่มเล่นจริงจากยอดเล็กครับ",
   },
   {
-    icon: "💰",
-    title: "JILI · Money Coming",
-    description: "วงล้อตัวเลข 3 วงกับวงพิเศษวงที่สี่ที่ให้ตัวคูณ หมุนซ้ำ หรือเข้าโบนัส",
-    accent: "gold" as const,
+    q: "สมัคร MEEHAY569 ต้องใช้อะไรบ้าง?",
+    a: "ใช้เบอร์โทรศัพท์ที่รับ OTP ได้ แล้วทำตามขั้นตอนบนเว็บจนฝากเงินเข้าระบบ รหัส OTP ห้ามบอกใครครับ",
   },
   {
-    icon: "🎏",
-    title: "Habanero · Koi Gate",
-    description: "ปลาคาร์ฟเป็นไวลด์ที่ขยายเต็มแถวแล้วหมุนซ้ำ",
-    accent: "blue" as const,
+    q: "ไม่มีบัญชีธนาคาร เล่นได้จริงไหม?",
+    a: "ได้ ใช้ทรูวอเลทฝากถอนแทนบัญชีธนาคารได้ เริ่มที่ 1 บาท และทำรายการเองได้ตลอด 24 ชั่วโมงครับ",
   },
 ];
 
 const graph = pageGraph(Astro, {
   name: h1Title,
   description: pageDescription,
+  faqs,
 });
 
-const body = "text-left text-base leading-relaxed text-[#1f2a44]";
-const brandMark = "font-bold text-[#8a6508]";
-const inlineLink = "font-bold text-[#1a5fe0] underline underline-offset-4 transition-colors hover:text-[#8a6508]";
-const slideFrame = "mx-auto h-auto w-full rounded-2xl border border-[#d6e2f7] shadow-[0_10px_30px_rgba(26,95,224,0.18)]";
-const panel = "flex h-full flex-col justify-center gap-4 rounded-2xl border border-[#d6e2f7] bg-[#eef4ff] p-6";
-const panelLabel = "text-lg leading-normal font-black text-[#0a1f5c]";
-const panelHint = "text-sm font-bold text-[#4a5878]";
-const btnPrimary =
-  "flex w-full items-center justify-center gap-2 rounded-xl border-2 border-[#ffd45c] bg-gradient-to-b from-[#4d8ff5] via-[#1a5fe0] to-[#0b3a9e] px-6 py-3.5 text-base font-black text-white shadow-[0_10px_30px_rgba(26,95,224,0.35)] transition-transform hover:scale-[1.02]";
-const btnSecondary =
-  "flex w-full items-center justify-center gap-2 rounded-xl bg-gradient-to-b from-[#ffd45c] via-[#e0a91b] to-[#b07d12] px-6 py-3.5 text-base font-black text-[#0a1f5c] shadow-[0_10px_30px_rgba(224,169,27,0.30)] transition-transform hover:scale-[1.02]";
-const btnLine =
-  "flex w-full items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-[#00B900] to-[#009900] px-6 py-3.5 text-base font-black text-white shadow-md transition-transform hover:scale-[1.02]";
-const btnOutline =
-  "flex w-full items-center justify-center gap-2 rounded-xl border-2 border-[#1a5fe0] bg-white px-6 py-3 text-base font-black text-[#1a5fe0] transition-colors hover:bg-[#1a5fe0] hover:text-white";
+const body = "text-left text-base leading-relaxed text-[#23323f]";
+const brandMark = "font-bold text-[#a35000]";
+const inlineLink = "font-bold text-[#006d99] underline underline-offset-4 transition-colors hover:text-[#a35000]";
+const slideFrame = "mx-auto h-auto w-full max-w-md rounded-2xl border border-[#cfe9f4] shadow-[0_10px_30px_rgba(0,164,212,0.18)]";
 ---
 
 <MainLayout title={pageTitle} description={pageDescription}>
@@ -89,41 +74,35 @@ const btnOutline =
 
   <Announcement message={announcementMessage} />
 
+  <ContentBoxNeumorphism as="h1" title={h1Title}>
+    <p class={body}>
+      <strong class={brandMark}>MEEHAY569</strong> (มีเฮ) สล็อตเว็บตรง สร้างมาให้คนที่ไม่มีบัญชีธนาคาร มีทุนไม่มาก หรืออยากลองเกมก่อนจ่ายจริง เราให้บริการแบบไม่ผ่านเอเย่นต์ ฝากถอนทรูวอเลทด้วยระบบออโต้ เริ่มได้ที่ 1 บาท ตลอด 24 ชั่วโมง
+    </p>
+    <p class={`mt-4 ${body}`}>
+      คุณ<a href="/ทดลองเล่น/" class={inlineLink}>ทดลองเล่นสล็อต</a>ได้โดยไม่ต้องฝากเงินหรือสมัครก่อน มีเกมจาก PG Soft, Pragmatic Play และ JILI ให้เลือก ส่วนใครอยากพักจากวงล้อก็มีบาคาร่า ไฮโล รูเล็ต และเสือมังกรรออยู่
+    </p>
+  </ContentBoxNeumorphism>
+
   <SmoothCarousel />
 
-  <ContentBoxPremium as="h1" title={h1Title}>
-    <p class={body}>
-      เคยไหมที่ตั้งใจจะกลับมาปั่นเกมค้างไว้แต่หาหน้าล็อกอินเดิมไม่เจอจนเสียจังหวะ ทางเข้า <strong class={brandMark}>777RUAY</strong> จึงเตรียมระบบสล็อตออนไลน์ที่เปิดเล่นผ่านเบราว์เซอร์ได้โดยไม่ต้องโหลดแอป สมาชิกเดิมใช้ยูสและรหัสเดิมเข้าได้ทุกเครื่อง เรารวมค่ายเกมฮิตคู่กับระบบฝากถอนออโต้ซึ่งใช้งานได้ตลอด 24 ชั่วโมง ทุกขั้นตอนตั้งแต่สมัครถึงถอนเงินจัดการจบบนมือถือเครื่องเดียว และมีแอดมินคอยช่วยเมื่อพบปัญหา
+  <ContentBoxSpecial as="h2" title="MEEHAY569 สล็อตเว็บตรง ไม่ผ่านเอเย่นต์ คุยกับเราได้โดยตรง" iconleft="🤝" iconright="📱">
+    <p slot="left" class={body}>
+      คนกลางยิ่งน้อย เรื่องยิ่งง่าย! เคยเล่นผ่านตัวแทนแล้วพอมีปัญหาก็ไม่รู้ว่าต้องไปถามใคร ที่นี่คุณสมัครและเล่นกับเราโดยตรง ไม่ต้องผ่านเอเย่นต์ เวลาจะฝาก ถอน หรือสอบถามอะไรจึงมีปลายทางเดียว
     </p>
-  </ContentBoxPremium>
-
-  <ContentBoxCyberCut as="h2" title="เข้าเล่น 777RUAY สล็อตออนไลน์ผ่านเบราว์เซอร์ได้ทั้ง iOS และ Android">
-    <p class={body}>
-      คนที่เคยเปลี่ยนโทรศัพท์หรือสลับไปใช้แท็บเล็ตแล้วต้องลงโปรแกรมใหม่คงรู้ว่าน่ารำคาญแค่ไหน เราจึงให้คุณเข้าเล่นผ่านเบราว์เซอร์ได้ทั้ง iOS และ Android แบบไม่ต้องโหลดแอป คุณเปิดเว็บหลักแล้วล็อกอินด้วยยูสและรหัสเดิมเพื่อเล่นต่อได้ทันทีโดยไม่ต้องสมัครซ้ำ ถ้าอยู่หน้าคอมก็เปิดบนจอใหญ่ได้เหมือนกัน ก่อนกรอกข้อมูลให้ตรวจชื่อเว็บบนแถบที่อยู่ให้ตรงและเก็บรหัสผ่านรวมถึง OTP ไว้เป็นความลับ เหมาะกับคนที่ชอบความคล่องตัวและเปลี่ยนอุปกรณ์ระหว่างวัน
+    <p slot="right" class={body}>
+      การเข้าเล่นก็เลือกได้ตามถนัด เปิดผ่านหน้าเว็บบนมือถือได้ทุกระบบ หรือจะดาวน์โหลดแอปไว้ในเครื่องก็ได้ ถ้าอยู่หน้าคอมก็เล่นบนจอใหญ่ได้เหมือนกัน ส่วนสมาชิกเดิมกลับมาที่<a href="/ทางเข้า/" class={inlineLink}>ทางเข้า</a> <strong class={brandMark}>MEEHAY569</strong> แล้วล็อกอินด้วยยูสเดิมได้ทุกเครื่อง
     </p>
-  </ContentBoxCyberCut>
+  </ContentBoxSpecial>
 
-  <ContentBox as="h2" title="รวมค่ายสล็อตออนไลน์ พร้อมกลไกเกมที่เลือกตามจังหวะของคุณได้">
-    <p class={body}>ปัญหาของคนที่ชอบเปลี่ยนแนวเกมคือมักเจอเว็บที่มีตัวเลือกจำกัด เราจึงรวมหลายค่ายมาให้เลือกตามจังหวะและกติกาที่คุณถนัด</p>
-
-    <FeatureHighlights items={slotHighlights} />
-
-    <p class={`mt-5 ${body}`}>
-      เกมที่ไม่มีฟรีสปินอย่าง Fortune Tiger เล่นคนละจังหวะกับเกมระบบร่วงหล่นอย่าง Sugar Rush คุณจึงลองดูกติกาก่อนเริ่ม แล้วเลือกเกมที่ลุ้นแบบที่ชอบได้ ส่วนคนชอบวงพิเศษมี Money Coming และคนชอบไวลด์ขยายมี Koi Gate
-    </p>
-  </ContentBox>
-
-  <ProviderGrid />
-
-  <ContentBoxSevenThreePremium as="h2" titleright="ระบบฝากถอนออโต้ปรับเครดิตให้เองตลอด 24 ชั่วโมง ไม่ต้องแนบสลิป">
+  <ContentBoxSevenThreeFloatingBadge as="h2" title="ฝากถอนทรูวอเลทกับ MEEHAY569 ออโต้ ไม่มีบัญชีธนาคารก็เริ่มเล่นได้">
     <Picture
       slot="left"
-      src={imgAutoPay}
-      alt={autoPayAlt}
+      src={imgDeposit}
+      alt={depositAlt}
       loading="lazy"
       fetchpriority="low"
       widths={[280, 380, 480, 600]}
-      sizes="(max-width: 767px) calc(100vw - 96px), (max-width: 1279px) calc(40vw - 61px), 451px"
+      sizes="(max-width: 543px) calc(100vw - 96px), (max-width: 767px) 448px, (max-width: 1311px) calc(30vw - 41px), 353px"
       decoding="async"
       formats={["avif", "webp"]}
       fallbackFormat="webp"
@@ -131,20 +110,43 @@ const btnOutline =
       class={slideFrame}
     />
 
-    <p slot="right" class={body}>
-      ความกังวลเรื่องโอนเงินแล้วต้องคอยแคปหน้าจอส่งให้พนักงานตรวจจะหมดไป เพราะระบบของเราปรับยอดเครดิตให้เอง โดยที่คุณไม่ต้องแนบสลิปยืนยันและไม่ต้องคอยแอดมินตอบรับ ไม่ว่าคุณจะเติมเครดิตตอนดึกหรือกดถอนยอดช่วงเช้าตรู่ ก็<a href="/วิธีฝากถอน/" class={inlineLink}>ทำรายการผ่านหน้าเว็บ</a>ได้ตลอด 24 ชั่วโมง การตัดขั้นตอนส่งหลักฐานทางแชททำให้ฟีลการเล่นต่อเนื่องขึ้นมาก เหมาะกับคนที่ต้องการจัดการเรื่องเงินด้วยตัวเองแบบไม่ต้องรอคิว
-    </p>
-  </ContentBoxSevenThreePremium>
+    <div slot="right" class="flex flex-col gap-4">
+      <p class={body}>
+        ไม่มีบัญชีก็ไม่ใช่ปัญหา คุณใช้ทรูวอเลท (TrueMoney Wallet) ฝากถอนกับเราได้เลย โดยไม่ต้องมีบัญชีธนาคาร ระบบเป็นออโต้ คุณทำรายการเองได้ตลอด 24 ชั่วโมง ระบบปรับเครดิตให้เอง ไม่ต้องส่งสลิป
+      </p>
+      <p class={body}>
+        ยอดเริ่มต้นอยู่ที่ 1 บาท คุณจึงเริ่มจากเงินก้อนเล็กเพื่อลองระบบก่อนได้ ถ้าโอนแล้วเครดิตยังไม่ขึ้น อย่าเพิ่งโอนซ้ำ ให้แจ้งเวลากับยอดผ่าน<a href="/contact-us/" class={inlineLink}>ช่องทางบนหน้าเว็บ</a> เราจะได้ตามจากรายการนั้นให้ตรงจุด
+      </p>
+    </div>
+  </ContentBoxSevenThreeFloatingBadge>
 
-  <ContentBoxSevenThreeCyberCut as="h2" titleright="เล่นสล็อตออนไลน์จบบนมือถือเครื่องเดียว ตั้งแต่สมัครจนถึงถอนเงิน">
+  <LatestWinners2 />
+
+  <ContentBoxTwoNeumorphism as="h2" title="ทดลองเล่นสล็อตก่อน แล้วค่อยเลือกสล็อตออนไลน์ที่เข้ามือคุณ">
+    <div slot="left" class="flex flex-col gap-4">
+      <p class={body}>
+        ลองก่อนดีกว่าเดา ชื่อเกมบอกได้แค่ธีม แต่จังหวะข้างในต้องลองเอง <a href="/ทดลองเล่น/" class={inlineLink}>โหมดทดลองเล่นสล็อต</a>ของเราเปิดให้ลองได้โดยไม่ต้องฝากเงินหรือสมัครก่อน คุณจึงดูฟีเจอร์ของเกมได้ตามสบาย
+      </p>
+      <p class={body}>
+        จะเริ่มจาก Wild Bandito ของ PG Soft ที่ใช้ระบบร่วงหล่น ตัวคูณเพิ่มทุกครั้งที่ชนะต่อเนื่องในสปินเดียว ก็ได้ หรือไปที่ Gates of Olympus ของ Pragmatic Play ที่จ่ายแบบไม่ต้องเรียงไลน์ มีลูกแก้วตัวคูณตกลงมาทบยอดชนะ ถ้าชอบเกมกระดานเล็ก Fortune Gems ของ JILI เป็นวงล้อ 3×3 ที่มีวงตัวคูณแยกอยู่ทางขวา
+      </p>
+    </div>
+    <p slot="right" class={body}>
+      วันไหนอยากเปลี่ยนจากการกดสปินมาลุ้นทีละตา เรามีบาคาร่า ไฮโล รูเล็ต และเสือมังกรอยู่ในเว็บเดียวกัน คุณจึงไม่ต้องไปหาที่อื่นเพิ่ม
+    </p>
+  </ContentBoxTwoNeumorphism>
+
+  <ProviderGridPremium />
+
+  <ContentBoxSevenThreeNeumorphism as="h2" title="มือใหม่หรือสายทุนน้อย เริ่มกับ MEEHAY569 ได้ใน 4 ขั้นตอน">
     <Picture
       slot="left"
-      src={imgMobile}
-      alt={mobileAlt}
+      src={imgSignup}
+      alt={signupAlt}
       loading="lazy"
       fetchpriority="low"
       widths={[280, 380, 480, 600]}
-      sizes="(max-width: 767px) calc(100vw - 96px), (max-width: 1279px) calc(40vw - 51px), 461px"
+      sizes="(max-width: 543px) calc(100vw - 96px), (max-width: 767px) 448px, (max-width: 1431px) calc(30vw - 38px), 391px"
       decoding="async"
       formats={["avif", "webp"]}
       fallbackFormat="webp"
@@ -152,62 +154,27 @@ const btnOutline =
       class={slideFrame}
     />
 
-    <p slot="right" class={body}>
-      หลายคนเคยหงุดหงิดกับการต้องเปิดคอมเพื่อสมัครสมาชิกแล้วย้ายมากดเติมเงินในโทรศัพท์ ที่นี่คุณจัดการทุกขั้นตอนบนมือถือเครื่องเดียวได้ ตั้งแต่กดสมัคร ฝากเครดิต เลือกค่ายเข้าปั่นสล็อตออนไลน์ ไปจนถึงกดถอนเงิน เรื่องเงินทำจากเครื่องเดียวกับที่เล่น คุณจึงไม่ต้องเปิดคอมเพิ่มเพื่อเติมหรือถอน
-    </p>
-  </ContentBoxSevenThreeCyberCut>
-
-  <ContentBoxTwoCyberCut as="h2" title="ช่องทางติดต่อแอดมิน 777RUAY เมื่อพบปัญหาล็อกอินหรือรายการค้าง">
-    <p slot="left" class={body}>
-      เวลาเกิดเหตุขัดข้องแล้วไม่รู้จะถามใครคงทำให้คุณอารมณ์เสียได้ง่ายๆ เราจึงมีช่องทางติดต่อแอดมินไว้บนหน้าเว็บ เพื่อให้คุณขอความช่วยเหลือได้ตรงจุด หากคุณล็อกอินไม่ได้ ฝากแล้วเครดิตไม่ขึ้น หรือมีรายการค้าง ขอให้ระวังอย่าโอนเงินซ้ำเด็ดขาด ให้คุณรวบรวมช่วงเวลาที่ทำรายการและยอดเงิน แล้วแจ้งผ่านช่องทางบนหน้าเว็บเพื่อให้แอดมินตรวจสอบแก้ไข
-    </p>
-
-    <div slot="right" class={panel}>
-      <p class={panelLabel}>ช่องทางติดต่อบนหน้าเว็บ</p>
-      <a href="/line/" class={btnLine}>
-        <span aria-hidden="true">💬</span>
-        <span>ทักแอดมินทาง LINE</span>
-      </a>
-      <a href="/contact-us/" class={btnOutline}>
-        <span aria-hidden="true">📞</span>
-        <span>ดูช่องทางติดต่อทั้งหมด</span>
-      </a>
-      <span class="self-start rounded-full bg-[#0a1f5c] px-3 py-1 text-xs font-bold text-white">
-        <span aria-hidden="true">🔒</span> ไม่ส่งรหัสผ่านหรือ OTP ให้ใคร
-      </span>
+    <div slot="right" class="flex flex-col gap-4">
+      <p class={body}>
+        ลองเกมก่อนได้ พร้อมเมื่อไหร่ค่อยสมัคร ถ้าคุณเพิ่งเริ่มเล่นสล็อตออนไลน์ โหมดทดลองช่วยให้เห็นหน้าตาเกมก่อนใช้เงินจริง ถ้าทุนไม่มาก ยอดเริ่มต้น 1 บาทก็ทำให้คุณไม่ต้องฝากเกินแผน
+      </p>
+      <p class={body}>
+        พอพร้อมก็ไปต่อได้เลย <a href="/line/" class={inlineLink}>แอดไลน์</a>หรือ<a href="/register/" class={inlineLink}>กดปุ่มสมัคร</a>บนเว็บ กรอกเบอร์โทรศัพท์ ใส่ OTP ที่ได้รับ แล้วฝากเงินเข้าระบบ ส่วนเงื่อนไขสิทธิพิเศษดูได้ที่<a href="/promotion/" class={inlineLink}>หน้าโปรโมชั่น</a> ก่อนเริ่มลองตั้งงบที่เสียได้ไว้ก่อน เพราะสล็อตคือความบันเทิง ไม่ใช่ทางหารายได้
+      </p>
     </div>
-  </ContentBoxTwoCyberCut>
+  </ContentBoxSevenThreeNeumorphism>
 
-  <ContentBoxTwoPremium as="h2" title="เริ่มต้นสมัคร 777RUAY และเข้าสู่ระบบสำหรับสมาชิกเดิม">
-    <p slot="left" class={body}>
-      คนที่เพิ่งเข้าเว็บครั้งแรกอาจกังวลว่าขั้นตอนเปิดยูสจะซับซ้อน แต่ขั้นตอนไม่ยาก ผู้เล่นใหม่กด<a href="/register/" class={inlineLink}>สมัคร 777RUAY</a> แล้วกรอกข้อมูลตามที่ระบบแสดง ตรวจความถูกต้องก่อนยืนยัน ส่วนสมาชิกเดิมไปที่<a href="/ทางเข้า/" class={inlineLink}>ทางเข้า 777RUAY</a> แล้วล็อกอินด้วยยูสและรหัสเดิมได้เลย โดยไม่ต้องสมัครซ้ำ
-    </p>
-
-    <div slot="right" class={panel}>
-      <span class={panelHint}>ผู้เล่นใหม่</span>
-      <a href="/register/" class={btnPrimary}>
-        <span aria-hidden="true">✨</span>
-        <span>สมัครสมาชิก</span>
-      </a>
-      <span class={panelHint}>สมาชิกเดิม ใช้ยูสและรหัสเดิม</span>
-      <a href="/login/" class={btnSecondary}>
-        <span aria-hidden="true">🔑</span>
-        <span>เข้าสู่ระบบ</span>
-      </a>
-    </div>
-  </ContentBoxTwoPremium>
+  <Faq4 title={faqTitle} faqs={faqs} />
 
   <ContentBox>
     <p class={body}>
-      <strong class={brandMark}>777RUAY</strong> ให้บริการสล็อตออนไลน์ผ่านเบราว์เซอร์บนมือถือและคอมพิวเตอร์ เรารวมเกมจาก PG Soft, Pragmatic Play, JILI และ Habanero คู่กับฝากถอนออโต้ซึ่งไม่ต้องส่งสลิปและเปิดใช้งานตลอด 24 ชั่วโมง ทุกขั้นตอนตั้งแต่เปิดยูสถึงถอนเครดิตจบในมือถือเครื่องเดียว พร้อมแอดมินบนหน้าเว็บคอยดูแล คุณสามารถกด<a href="/register/" class={inlineLink}>สมัคร</a>หรือ<a href="/login/" class={inlineLink}>เข้าสู่ระบบ</a>ได้ทันที
+      <strong class={brandMark}>MEEHAY569</strong> รวมสล็อตเว็บตรงไว้สำหรับคนที่ไม่อยากเริ่มด้วยขั้นตอนยุ่งยาก คุยกับเว็บโดยตรง <a href="/วิธีฝากถอน/" class={inlineLink}>เติมและถอนผ่านทรูวอเลท</a> ลองเกมก่อนเล่นจริง มือใหม่หรือคนทุนน้อยก็เริ่มได้โดยไม่ต้องรีบ ลองเกมที่สนใจก่อน แล้วค่อย<a href="/register/" class={inlineLink}>สมัคร</a>เมื่อพร้อมเล่นจริง
     </p>
   </ContentBox>
 
-  <LatestWinners />
-
   <LoginRtpSection />
 
-  <ReviewCardSumo2 />
+  <ReviewCardSumo />
 
   <Navfoot />
 </MainLayout>

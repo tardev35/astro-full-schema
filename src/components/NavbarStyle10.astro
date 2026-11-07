@@ -7,35 +7,36 @@ const mainLogo = imagePaths.length > 0 ? images[imagePaths[0]].default : null;
 const currentPath = Astro.url.pathname;
 const isActive = (path: string) => isActivePath(currentPath, path);
 
-const logoAlt =
-  "โลโก้ DOLLAR789 ตัวอักษรนูนสามมิติเขียนว่า DOLLAR789 โดยคำว่า DOLLAR เป็นสีทองและตัว D ทำเป็นสัญลักษณ์ดอลลาร์ ส่วนเลข 789 เป็นสีเงินโครเมียม วางบนพื้นหลังโปร่งใส";
+const affUrl = "https://yoalink.com/22hs";
+
+const logoAlt = "โลโก้ MEEHAY569 ตัวอักษรภาษาไทยคำว่า มีเฮ แบบนูนสามมิติ คำว่า มี สีส้ม คำว่า เฮ สีฟ้า มีป้ายเลข 569 สีทอง ลูกเต๋าและไพ่วางประกอบ";
 
 const links = [
   { name: "หน้าแรก", path: "/", icon: "🏠" },
   { name: "โปรโมชั่น", path: "/promotion/", icon: "🎁" },
-  { name: "สมัครสมาชิก", path: "/register/", icon: "📝" },
-  { name: "เข้าสู่ระบบ", path: "/login/", icon: "🔑" },
-  { name: "ทดลองเล่น", path: "/ทดลองเล่น/", icon: "🃏" },
-  { name: "เกี่ยวกับเรา", path: "/about-us/", icon: "📘" },
+  { name: "ทดลองเล่น", path: "/ทดลองเล่น/", icon: "🎰" },
+  { name: "วิธีฝากถอน", path: "/วิธีฝากถอน/", icon: "💳" },
+  { name: "เกี่ยวกับเรา", path: "/about-us/", icon: "⭐" },
   { name: "ติดต่อเรา", path: "/contact-us/", icon: "💬" },
 ];
 ---
 
-<div class="hidden w-full border-b border-[#7c3aed]/45 bg-gradient-to-r from-[#050010] via-[#2a1147] to-[#050010] px-4 py-1.5 font-sans text-xs font-bold text-[#e9d5ff]/85 lg:block">
+<div class="hidden w-full bg-[#0077b3] px-4 py-1.5 font-sans text-xs font-bold text-white lg:block" style="background-image: linear-gradient(in oklab to right, #006d99, #0077b3 50%, #006d99);">
   <div class="mx-auto flex max-w-400 justify-between">
-    <div class="flex gap-4">
-      <span class="flex items-center gap-1"><span aria-hidden="true" class="text-[#f5c542]">🎴</span> DOLLAR789 รวมคาสิโนสด บาคาร่า สล็อต และฟุตบอลไว้ในยูสเดียว</span>
-      <span class="flex items-center gap-1 text-[#ffe9a8]"><span aria-hidden="true" class="text-[#f5c542]">⚡</span> ฝากถอนออโต้ ทำรายการได้ตลอด 24 ชั่วโมง</span>
+    <div class="flex gap-5">
+      <span class="flex items-center gap-1.5"><span aria-hidden="true">🎰</span> MEEHAY569 สล็อตเว็บตรง ไม่ผ่านเอเย่นต์</span>
+      <span class="flex items-center gap-1.5"><span aria-hidden="true">⚡</span> ฝากถอนทรูวอเลทออโต้ เริ่ม 1 บาท ตลอด 24 ชั่วโมง</span>
     </div>
-    <div class="flex gap-4">
-      <a href="/line/" class="flex items-center gap-1 transition-colors hover:text-[#ffd75e]">ติดต่อแอดมิน LINE: @DOLLAR789</a>
-    </div>
+    <a href="/line/" class="flex items-center gap-1.5 underline-offset-4 transition-colors hover:text-[#ffd23f] hover:underline"><span aria-hidden="true">💬</span> ติดต่อแอดมินทาง LINE</a>
   </div>
 </div>
 
 <header class="sticky top-2 z-50 mt-2 w-full px-2 font-sans md:px-4">
   <nav
-    class="relative mx-auto flex h-[75px] w-full max-w-400 items-center justify-between gap-4 rounded-[20px] border border-[#a855f7]/50 bg-[#0b011b]/90 px-4 shadow-[0_10px_30px_rgba(168,85,247,0.28)] backdrop-blur-lg xl:px-6">
+    aria-label="เมนูหลัก"
+    class="relative mx-auto flex h-[72px] w-full max-w-400 items-center justify-between gap-4 rounded-[22px] border-2 border-white bg-white px-4 shadow-[0_10px_28px_rgba(12,53,80,0.14),0_0_0_1px_#cfe9f4] xl:px-6">
+    <span aria-hidden="true" class="pointer-events-none absolute inset-x-6 -bottom-[2px] h-[3px] rounded-full bg-gradient-to-r from-[#00a4d4] via-[#4cc9f0] to-[#f7941d]"></span>
+
     <a href="/" class="z-50 flex-shrink-0 transition-transform hover:scale-105">
       {
         mainLogo ? (
@@ -44,98 +45,115 @@ const links = [
             alt={logoAlt}
             loading="eager"
             fetchpriority="high"
-            widths={[170, 340, 510]}
-            sizes="170px"
-            class="h-[40px] w-auto max-w-[170px] object-contain drop-shadow-[0_0_10px_rgba(168,85,247,0.55)] xl:h-[45px]"
+            widths={[110, 220, 281]}
+            sizes="100px"
+            class="h-[46px] w-auto object-contain drop-shadow-[0_3px_6px_rgba(0,119,179,0.25)] xl:h-[54px]"
             formats={["avif", "webp"]}
             fallbackFormat="webp"
           />
         ) : (
-          <span class="bg-gradient-to-b from-[#ffe9a8] to-[#a3610c] bg-clip-text text-3xl font-black text-transparent drop-shadow-[0_0_8px_rgba(168,85,247,0.45)]">DOLLAR789</span>
+          <span class="text-3xl font-black text-[#0077b3]">MEEHAY569</span>
         )
       }
     </a>
 
-    <div class="hidden h-full min-w-0 items-center justify-center gap-5 xl:flex 2xl:gap-8">
+    <ul class="hidden h-full min-w-0 items-center justify-center gap-2 xl:flex 2xl:gap-3">
       {
         links.map((item) => (
-          <a
-            href={item.path}
-            class={`group relative flex h-full shrink-0 items-center gap-1.5 text-sm font-bold whitespace-nowrap transition-colors xl:text-base ${isActive(item.path) ? "text-[#f5c542] drop-shadow-[0_0_8px_rgba(168,85,247,0.45)]" : "text-[#e9d5ff]/80 hover:text-[#f5c542]"}`}>
-            <span aria-hidden="true" class="text-base leading-none">
-              {item.icon}
-            </span>
-            <span>{item.name}</span>
-            <div
-              class={`absolute bottom-[18px] left-0 h-[2px] w-full origin-center bg-[#a855f7] shadow-[0_0_10px_rgba(168,85,247,0.9)] transition-transform duration-300 ${isActive(item.path) ? "scale-x-100" : "scale-x-0 group-hover:scale-x-100"}`}
-            />
-          </a>
+          <li>
+            <a
+              href={item.path}
+              aria-current={isActive(item.path) ? "page" : undefined}
+              class={`flex shrink-0 items-center gap-1.5 rounded-full px-3.5 py-2 text-[15px] font-bold whitespace-nowrap transition-colors ${isActive(item.path) ? "bg-[#e8f7fd] text-[#006d99] shadow-[inset_0_0_0_2px_#8ed3ee]" : "text-[#0c3550] hover:bg-[#fff4e5] hover:text-[#a35000]"}`}>
+              <span aria-hidden="true" class="text-base leading-none">
+                {item.icon}
+              </span>
+              <span>{item.name}</span>
+            </a>
+          </li>
         ))
       }
-    </div>
+    </ul>
 
     <div class="z-50 flex shrink-0 items-center gap-2 xl:gap-3">
       <a
-        href="/login/"
-        class="hidden items-center justify-center rounded-full border border-[#a855f7]/60 bg-[#1e0c33] px-6 py-2 text-sm font-bold whitespace-nowrap text-[#ffe9a8] shadow-sm transition-all hover:bg-[#a855f7]/25 2xl:flex">
+        href={affUrl}
+        rel="nofollow sponsored"
+        style="background-image: linear-gradient(in oklab to bottom, #19b2e0, #0077b3);"
+        class="hidden items-center justify-center rounded-full border-2 border-white px-5 py-2 text-sm font-black whitespace-nowrap text-white shadow-[0_4px_14px_rgba(0,164,212,0.35)] transition-all hover:brightness-110 lg:flex xl:px-6">
         เข้าสู่ระบบ
       </a>
       <a
-        href="/register/"
-        class="hidden items-center justify-center rounded-full bg-gradient-to-r from-[#ffe9a8] via-[#f5c542] to-[#a3610c] px-4 py-2 text-sm font-black whitespace-nowrap text-[#150826] shadow-[0_0_15px_rgba(245,197,66,0.45)] transition-all hover:scale-105 lg:flex xl:px-6">
+        href={affUrl}
+        rel="nofollow sponsored"
+        style="background-image: linear-gradient(in oklab to bottom, #ffd23f, #ffb84d 45%, #f7941d);"
+        class="hidden items-center justify-center rounded-full border-2 border-white px-5 py-2 text-sm font-black whitespace-nowrap text-[#4a1d00] shadow-[0_4px_14px_rgba(247,148,29,0.40)] transition-all hover:scale-105 lg:flex xl:px-6">
         สมัครสมาชิก
       </a>
 
       <button
         id="hamburger-btn"
-        class="relative flex h-[42px] w-[42px] flex-col items-center justify-center gap-[5px] rounded-full border border-[#a855f7]/40 bg-gradient-to-b from-[#2a1147] to-[#050010] shadow-sm xl:hidden"
-        aria-label="เปิดเมนู">
-        <span class="line-1 h-[2px] w-5 origin-center rounded-full bg-[#a855f7] transition-all duration-300"></span>
-        <span class="line-2 h-[2px] w-5 origin-center rounded-full bg-[#a855f7] transition-all duration-300"></span>
-        <span class="line-3 h-[2px] w-5 origin-center rounded-full bg-[#a855f7] transition-all duration-300"></span>
+        type="button"
+        aria-label="เปิดเมนู"
+        aria-expanded="false"
+        aria-controls="fullscreen-menu"
+        class="relative flex h-[44px] w-[44px] flex-col items-center justify-center gap-[5px] rounded-full border-2 border-[#8ed3ee] bg-[#e8f7fd] xl:hidden">
+        <span class="line-1 h-[2.5px] w-5 origin-center rounded-full bg-[#0077b3] transition-all duration-300"></span>
+        <span class="line-2 h-[2.5px] w-5 origin-center rounded-full bg-[#f7941d] transition-all duration-300"></span>
+        <span class="line-3 h-[2.5px] w-5 origin-center rounded-full bg-[#0077b3] transition-all duration-300"></span>
       </button>
     </div>
   </nav>
 
-  <div id="fullscreen-menu" class="pointer-events-none fixed inset-0 z-[40] flex flex-col items-center justify-center bg-[#050010]/98 opacity-0 backdrop-blur-xl transition-opacity duration-500">
-    <div class="flex w-full flex-col items-center space-y-5 px-6">
+  <div
+    id="fullscreen-menu"
+    class="pointer-events-none invisible fixed inset-0 z-[40] flex flex-col items-center justify-center bg-[#f4fbfe] opacity-0 transition-[opacity,visibility] duration-500"
+    style="background-image: radial-gradient(circle at 50% 0%, rgba(0,164,212,0.14), transparent 60%), radial-gradient(circle at 50% 100%, rgba(247,148,29,0.14), transparent 60%);">
+    <ul class="flex w-full max-w-[320px] flex-col gap-3 px-6">
       {
         links.map((item) => (
-          <a
-            href={item.path}
-            class={`fs-item flex items-center gap-3 text-2xl font-black tracking-widest uppercase transition-all duration-300 ${isActive(item.path) ? "text-[#f5c542] drop-shadow-[0_0_12px_rgba(168,85,247,0.65)]" : "text-[#e9d5ff]/85 hover:text-[#ffd75e]"}`}>
-            <span aria-hidden="true" class="text-2xl leading-none">
-              {item.icon}
-            </span>
-            {item.name}
-          </a>
+          <li class="fs-item">
+            <a
+              href={item.path}
+              aria-current={isActive(item.path) ? "page" : undefined}
+              class={`flex items-center gap-3 rounded-2xl border-2 px-5 py-3 text-xl font-black transition-colors ${isActive(item.path) ? "border-[#00a4d4] bg-white text-[#006d99]" : "border-[#cfe9f4] bg-white text-[#0c3550] hover:border-[#f7941d] hover:text-[#a35000]"}`}>
+              <span aria-hidden="true" class="text-2xl leading-none">
+                {item.icon}
+              </span>
+              {item.name}
+            </a>
+          </li>
         ))
       }
-      <div class="fs-item mt-4 flex w-full max-w-[280px] flex-col gap-4 pt-6">
+      <li class="fs-item mt-3 flex flex-col gap-3 border-t-2 border-dashed border-[#8ed3ee] pt-5">
         <a
-          href="/register/"
-          class="flex w-full items-center justify-center rounded-full bg-gradient-to-r from-[#ffe9a8] to-[#f5c542] py-3.5 text-lg font-black text-[#150826] shadow-[0_0_20px_rgba(168,85,247,0.5)]">
-          สมัครสมาชิกใหม่
+          href={affUrl}
+          rel="nofollow sponsored"
+          style="background-image: linear-gradient(in oklab to bottom, #ffd23f, #ffb84d 45%, #f7941d);"
+          class="flex w-full items-center justify-center rounded-full border-2 border-white py-3.5 text-lg font-black text-[#4a1d00] shadow-[0_6px_18px_rgba(247,148,29,0.40)]">
+          สมัครสมาชิก
         </a>
         <a
-          href="/login/"
-          class="flex w-full items-center justify-center rounded-full border-2 border-[#a855f7]/60 bg-[#1e0c33] py-3.5 text-lg font-bold text-[#ffe9a8] transition-colors hover:bg-[#a855f7]/25">
+          href={affUrl}
+          rel="nofollow sponsored"
+          style="background-image: linear-gradient(in oklab to bottom, #19b2e0, #0077b3);"
+          class="flex w-full items-center justify-center rounded-full border-2 border-white py-3.5 text-lg font-black text-white shadow-[0_6px_18px_rgba(0,164,212,0.35)]">
           เข้าสู่ระบบ
         </a>
-      </div>
-    </div>
+      </li>
+    </ul>
   </div>
 </header>
 
 <style is:global>
   #hamburger-btn.active .line-1 {
-    transform: translateY(7px) rotate(45deg);
+    transform: translateY(7.5px) rotate(45deg);
   }
   #hamburger-btn.active .line-2 {
     opacity: 0;
   }
   #hamburger-btn.active .line-3 {
-    transform: translateY(-7px) rotate(-45deg);
+    transform: translateY(-7.5px) rotate(-45deg);
   }
 
   .fs-item {
@@ -148,28 +166,25 @@ const links = [
     transform: translateY(0);
   }
   .fs-item:nth-child(1) {
-    transition-delay: 0.1s;
+    transition-delay: 0.08s;
   }
   .fs-item:nth-child(2) {
-    transition-delay: 0.15s;
+    transition-delay: 0.12s;
   }
   .fs-item:nth-child(3) {
-    transition-delay: 0.2s;
+    transition-delay: 0.16s;
   }
   .fs-item:nth-child(4) {
-    transition-delay: 0.25s;
+    transition-delay: 0.2s;
   }
   .fs-item:nth-child(5) {
-    transition-delay: 0.3s;
+    transition-delay: 0.24s;
   }
   .fs-item:nth-child(6) {
-    transition-delay: 0.35s;
+    transition-delay: 0.28s;
   }
   .fs-item:nth-child(7) {
-    transition-delay: 0.4s;
-  }
-  .fs-item:nth-child(8) {
-    transition-delay: 0.45s;
+    transition-delay: 0.32s;
   }
 
   @media (prefers-reduced-motion: reduce) {
@@ -185,24 +200,26 @@ const links = [
   const fsMenu = document.getElementById("fullscreen-menu");
   const fsItems = document.querySelectorAll(".fs-item");
 
-  const toggleFsMenu = () => {
-    hamburgerBtn?.classList.toggle("active");
-    fsMenu?.classList.toggle("opacity-0");
-    fsMenu?.classList.toggle("pointer-events-none");
+  const isOpen = () => !(fsMenu?.classList.contains("opacity-0") ?? true);
 
-    if (!fsMenu?.classList.contains("opacity-0")) {
-      document.body.style.overflow = "hidden";
-      fsItems.forEach((item) => item.classList.add("show"));
-    } else {
-      document.body.style.overflow = "";
-      fsItems.forEach((item) => item.classList.remove("show"));
-    }
+  const setMenu = (open: boolean) => {
+    hamburgerBtn?.classList.toggle("active", open);
+    hamburgerBtn?.setAttribute("aria-expanded", String(open));
+    hamburgerBtn?.setAttribute("aria-label", open ? "ปิดเมนู" : "เปิดเมนู");
+    fsMenu?.classList.toggle("opacity-0", !open);
+    fsMenu?.classList.toggle("invisible", !open);
+    fsMenu?.classList.toggle("pointer-events-none", !open);
+    document.body.style.overflow = open ? "hidden" : "";
+    fsItems.forEach((item) => item.classList.toggle("show", open));
   };
 
-  hamburgerBtn?.addEventListener("click", toggleFsMenu);
-  fsItems.forEach((item) => {
-    item.addEventListener("click", () => {
-      if (!fsMenu?.classList.contains("opacity-0")) toggleFsMenu();
+  hamburgerBtn?.addEventListener("click", () => setMenu(!isOpen()));
+  fsMenu?.querySelectorAll("a").forEach((link) => {
+    link.addEventListener("click", () => {
+      if (isOpen()) setMenu(false);
     });
+  });
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape" && isOpen()) setMenu(false);
   });
 </script>

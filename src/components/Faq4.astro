@@ -12,13 +12,13 @@ export interface Props {
 const { title, faqs = [] } = Astro.props;
 ---
 
-<div class="mx-auto max-w-[1000px] px-4 py-10 font-sans">
+<section aria-label={title ? undefined : "คำถามที่พบบ่อย"} class="mx-auto max-w-[1000px] px-4 py-10 font-sans">
   {
     title && (
       <div
-        class="mb-8 flex items-center gap-3 border-l-4 border-[#d9a520] bg-gradient-to-r from-[#16305f] via-[#071230]/60 to-transparent px-4 py-2.5"
+        class="mb-8 flex items-center gap-3 border-l-4 border-[#f7941d] bg-gradient-to-r from-[#e8f7fd] via-[#e8f7fd]/70 to-transparent px-4 py-2.5"
         style="clip-path: polygon(0 0, 100% 0, calc(100% - 15px) 100%, 0 100%);">
-        <h2 class="text-xl leading-normal font-black tracking-widest text-[#ffe89a] uppercase md:text-2xl">{title}</h2>
+        <h2 class="text-xl leading-normal font-black tracking-wide text-[#0c3550] md:text-2xl">{title}</h2>
       </div>
     )
   }
@@ -28,32 +28,34 @@ const { title, faqs = [] } = Astro.props;
       faqs.map((faq) => (
         <details
           name="faq-terminal"
-          class="faq-item group relative overflow-hidden border border-[#f7d046]/30 bg-[#03091f]/92 backdrop-blur-sm transition-all duration-300 hover:border-[#f7d046]/60 hover:shadow-[0_15px_40px_rgba(247,208,70,0.30)]"
+          class="faq-item group relative overflow-hidden border border-[#cfe9f4] bg-white shadow-[0_10px_30px_rgba(12,53,80,0.06)] transition-all duration-300 hover:border-[#8ed3ee] hover:shadow-[0_15px_40px_rgba(0,164,212,0.18)]"
           style="clip-path: polygon(15px 0, 100% 0, 100% calc(100% - 15px), calc(100% - 15px) 100%, 0 100%, 0 15px);">
-          <div aria-hidden="true" class="absolute top-0 left-0 h-[2px] w-16 bg-gradient-to-r from-[#ffe38a] to-transparent" />
+          <div aria-hidden="true" class="absolute top-0 left-0 h-[2px] w-16 bg-gradient-to-r from-[#00a4d4] to-transparent" />
 
-          <summary class="flex w-full cursor-pointer items-center justify-between p-5 text-left transition-all">
-            <span class="flex items-center gap-2 text-base leading-normal font-bold text-[#f5e7c2] transition-colors group-hover:text-[#ffe89a] md:text-lg">
-              <span aria-hidden="true" class="font-mono text-[#d9a520]">
-                &gt;_
+          <summary class="flex w-full cursor-pointer items-center justify-between gap-4 p-5 text-left transition-all">
+            <h3 class="flex items-center gap-3 text-base leading-normal font-bold text-[#0c3550] transition-colors group-hover:text-[#006d99] md:text-lg">
+              <span
+                aria-hidden="true"
+                class="flex h-7 w-7 shrink-0 items-center justify-center rounded-full border-2 border-white bg-gradient-to-b from-[#19b2e0] to-[#0077b3] text-xs font-black text-white shadow-[0_4px_10px_rgba(0,164,212,0.35)]">
+                Q
               </span>
               {faq.q}
-            </span>
+            </h3>
 
             <span
               aria-hidden="true"
-              class="faq-icon ml-4 flex h-8 w-8 shrink-0 items-center justify-center border border-[#f7d046]/40 bg-[#071230] text-lg font-black text-[#d9a520] transition-all duration-300 group-hover:border-[#f7d046]/70 group-hover:text-[#ffe89a]"
+              class="faq-icon flex h-8 w-8 shrink-0 items-center justify-center border border-[#cfe9f4] bg-[#e8f7fd] text-lg font-black text-[#006d99] transition-all duration-300 group-hover:border-[#8ed3ee]"
               style="clip-path: polygon(25% 0, 100% 0, 100% 75%, 75% 100%, 0 100%, 0 25%);">
               +
             </span>
           </summary>
 
-          <div class="faq-answer border-t border-[#f7d046]/35 p-5 pt-4 text-left text-base leading-relaxed text-[#f5e7c2]">{faq.a}</div>
+          <div class="faq-answer border-t border-[#cfe9f4] bg-[#fff4e5]/40 p-5 pt-4 text-left text-base leading-relaxed text-[#23323f]">{faq.a}</div>
         </details>
       ))
     }
   </div>
-</div>
+</section>
 
 <style>
   .faq-item > summary {
@@ -63,13 +65,14 @@ const { title, faqs = [] } = Astro.props;
     display: none;
   }
   .faq-item[open] {
-    border-color: rgba(247,208,70, 0.7);
-    box-shadow: 0 15px 40px rgba(247,208,70, 0.3);
+    border-color: rgba(0, 164, 212, 0.6);
+    box-shadow: 0 15px 40px rgba(0, 164, 212, 0.18);
   }
   .faq-item[open] .faq-icon {
     transform: rotate(45deg);
-    border-color: #f7d046;
-    color: #ffe89a;
+    border-color: #f7941d;
+    background-color: #fff4e5;
+    color: #a35000;
   }
   .faq-item[open] .faq-answer {
     animation: faq-reveal 0.25s ease-out;

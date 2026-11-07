@@ -4,24 +4,19 @@ import { Picture } from "astro:assets";
 import slide1 from "../assets/slide1.png";
 import slide2 from "../assets/slide2.png";
 import slide3 from "../assets/slide3.png";
-import slide4 from "../assets/slide4.png";
 
 const images = [
   {
     src: slide1,
-    alt: "777RUAY สมาชิกใหม่ เริ่มต้นง่าย สมัครสะดวก ใช้งานได้ทุกอุปกรณ์ สมัครง่าย ระบบมั่นคง พร้อมดูแล ปุ่มสมัครสมาชิก พรีเซนเตอร์ชุดกี่เพ้าสีขาวฟ้าปักทองถือมือถือ",
+    alt: "โลโก้ MEEHAY569 ตัวอักษรสีฟ้าเลข 569 สีทอง ฝากครบ 500 รับเครดิตฟรี 50 โปรลุ้นสนุก ใช้ได้จริง สมัครวันนี้คุ้มกว่า สำหรับสมาชิกที่ร่วมกิจกรรม ปุ่มรับสิทธิ์เลย พรีเซนเตอร์ชุดเลื่อมสีเงิน กบเขียว มังกรข้างวงล้อ 777 และเหรียญทองบนท้องฟ้า",
   },
   {
     src: slide2,
-    alt: "777RUAY สนุกครบหลายค่าย รวมเกมยอดนิยมไว้ในที่เดียว เกมหลากหลาย ใช้งานสะดวก เลือกได้ครบ ปุ่มเริ่มสนุก พรีเซนเตอร์ชุดกี่เพ้าสีขาวฟ้าชี้ไปที่มือถือ",
+    alt: "โลโก้ MEEHAY569 ตัวอักษรสีฟ้าเลข 569 สีทอง คืนยอดเสีย 0.2% ทุกวัน เล่นต่อได้แบบสบายใจ คืนไวทุกวัน สูงสุด 5,000 บาท/วัน ปุ่มรับโปรเลย พรีเซนเตอร์ชุดเลื่อมสีเงิน ถ้วยรางวัลสีทอง มังกร ชิปสีแดงและไพ่",
   },
   {
     src: slide3,
-    alt: "777RUAY ฝากถอนออโต้ รวดเร็ว ใช้งานง่าย มั่นใจได้ อัตโนมัติ ทันสมัย สะดวก ปุ่มสมัครเลย เหรียญลูกศรวนสีฟ้าข้างพรีเซนเตอร์ถือมือถือ",
-  },
-  {
-    src: slide4,
-    alt: "777RUAY เล่นได้ทุกที่ บนมือถือ ระบบทันสมัย พร้อมดูแลทุกขั้นตอน มือถือ ตอบไว พร้อมดูแล ปุ่มเข้าร่วมเลย พรีเซนเตอร์ชุดกี่เพ้าชี้ไปที่มือถือ",
+    alt: "โลโก้ MEEHAY569 ตัวอักษรสีฟ้าเลข 569 สีทอง สมาชิกใหม่ ฝาก 100 รับ 300 สมัครง่าย รับไว โปรเริ่มต้นสุดคุ้ม ทำยอดตามเงื่อนไขก่อนถอน ปุ่มสมัครเลย พรีเซนเตอร์ชุดเลื่อมสีเงิน กบเขียวสวมมงกุฎชูนิ้วโป้งและถ้วยรางวัลสีทอง",
   },
 ];
 
@@ -33,7 +28,7 @@ const slides = Array.from({ length: COPIES }, () => images).flat();
   <input id="carousel-pause" type="checkbox" class="peer sr-only" />
   <label
     for="carousel-pause"
-    class="sr-only cursor-pointer peer-focus-visible:not-sr-only peer-focus-visible:mb-3 peer-focus-visible:inline-block peer-focus-visible:rounded-full peer-focus-visible:border peer-focus-visible:border-[#1a5fe0]/60 peer-focus-visible:bg-white peer-focus-visible:px-4 peer-focus-visible:py-2 peer-focus-visible:text-sm peer-focus-visible:font-bold peer-focus-visible:text-[#0a1f5c]">
+    class="sr-only cursor-pointer peer-focus-visible:not-sr-only peer-focus-visible:mb-3 peer-focus-visible:inline-block peer-focus-visible:rounded-full peer-focus-visible:border peer-focus-visible:border-[#00a4d4]/60 peer-focus-visible:bg-white peer-focus-visible:px-4 peer-focus-visible:py-2 peer-focus-visible:text-sm peer-focus-visible:font-bold peer-focus-visible:text-[#0c3550]">
     หยุด / เล่นสไลด์ภาพ
   </label>
 
@@ -46,7 +41,7 @@ const slides = Array.from({ length: COPIES }, () => images).flat();
             <Picture
               src={slide.src}
               alt={isDuplicate ? "" : slide.alt}
-              class="block w-full rounded-xl border border-[#d6e2f7] object-cover shadow-[0_10px_30px_rgba(10,31,92,0.12)]"
+              class="block w-full rounded-xl border border-[#cfe9f4] object-cover shadow-[0_10px_30px_rgba(12,53,80,0.12)]"
               width={slide.src.width}
               height={slide.src.height}
               loading="lazy"
@@ -69,15 +64,15 @@ const slides = Array.from({ length: COPIES }, () => images).flat();
   .marquee {
     --gap: 12px;
     --per-view: 1;
-    --shift: calc(-400% - 48px);
-    --duration: 32s;
+    --shift: calc(-300% - 36px);
+    --duration: 24s;
   }
 
   @media (min-width: 768px) {
     .marquee {
       --gap: 16px;
       --per-view: 2;
-      --shift: calc(-200% - 32px);
+      --shift: calc(-150% - 24px);
     }
   }
 
@@ -85,7 +80,7 @@ const slides = Array.from({ length: COPIES }, () => images).flat();
     .marquee {
       --gap: 20px;
       --per-view: 3;
-      --shift: calc(-133.3333% - 26.6667px);
+      --shift: calc(-100% - 20px);
     }
   }
 

@@ -3,28 +3,28 @@ import { BRAND_NAME } from "../lib/brandProfile";
 
 const reviews = [
   {
-    name: "สมาชิกที่เล่นครบทั้ง 4 หมวด",
-    role: "สล็อต คาสิโนสด ยิงปลา และหวยในทางเข้าเดียว",
+    name: "สมาชิกที่ไม่มีบัญชีธนาคาร",
+    role: "ฝากถอนผ่านทรูวอเลท",
     stars: 5,
     content:
-      "เข้าทางเข้าเดียวแล้วแยกไปหมวดที่อยากเล่นได้เลย วันไหนอยากหมุนสล็อตก็เลือกค่ายที่คุ้นแล้วไล่ดูรายชื่อเกม วันหวยออกก็เปิดหน้าแทงหวย ไม่ต้องจำลิงก์หลายอัน",
-    avatar: "🦈",
+      "ไม่มีบัญชีธนาคารก็เริ่มได้ ใช้ทรูวอเลทฝากถอนแทน เริ่มที่ 1 บาท ระบบเป็นออโต้ ทำรายการเองได้ตลอด 24 ชั่วโมงโดยไม่ต้องส่งสลิป",
+    avatar: "👛",
   },
   {
-    name: "สมาชิกที่เล่นบนมือถือเป็นหลัก",
-    role: "เปิดผ่านเบราว์เซอร์ ไม่ต้องโหลดแอป",
+    name: "มือใหม่ที่ลองโหมดทดลองก่อน",
+    role: "ทดลองเล่นก่อนสมัคร",
     stars: 5,
     content:
-      "เปิดจากเบราว์เซอร์บนมือถือได้ทันที ใช้ได้ทั้ง iOS และ Android สมัคร ฝาก เล่น และถอนจบในเครื่องเดียว พอย้ายไปเปิดบนคอมก็ล็อกอินด้วยยูสกับรหัสชุดเดิมได้เลย",
+      "เปิดโหมดทดลองเล่นได้โดยไม่ต้องฝากเงินหรือสมัครก่อน ได้ดูฟีเจอร์ของ Wild Bandito กับ Gates of Olympus จนเข้าใจ แล้วค่อยสมัครตอนพร้อมเล่นจริง",
+    avatar: "🎮",
+  },
+  {
+    name: "สมาชิกที่สลับเล่นมือถือกับคอม",
+    role: "เว็บมือถือ แอป และคอม",
+    stars: 5,
+    content:
+      "สมัครแค่ 4 ขั้นตอน กดสมัคร กรอกเบอร์โทร ใส่ OTP แล้วฝากเงิน เล่นกับเว็บโดยตรงไม่ผ่านเอเย่นต์ จะเปิดเว็บบนมือถือ โหลดแอป หรือเล่นบนคอมก็ล็อกอินด้วยยูสเดิมได้",
     avatar: "📱",
-  },
-  {
-    name: "สมาชิกที่เคยโอนแล้วเครดิตยังไม่เข้า",
-    role: "ทักแอดมินผ่านช่องทางบนหน้าเว็บ",
-    stars: 5,
-    content:
-      "ครั้งหนึ่งโอนแล้วเครดิตยังไม่ขึ้น เลยไม่โอนซ้ำ แจ้งแอดมินพร้อมเวลาที่โอนกับยอดเงิน แอดมินหารายการเจอแล้วจัดการให้ ตอนนี้เช็กชื่อเว็บบนแถบที่อยู่ก่อนกรอกรหัสทุกครั้ง",
-    avatar: "💬",
   },
 ];
 
@@ -33,45 +33,45 @@ const sectionTitle = `เสียงจากสมาชิก ${BRAND_NAME}`;
 
 <section aria-label={sectionTitle} class="relative z-10 mx-auto mb-12 w-full max-w-[1400px] px-4 font-sans">
   <div class="mb-8 flex w-full flex-col items-center justify-center gap-2 text-center">
-    <p class="bg-gradient-to-r from-white via-[#4da3ff] to-[#0b7cf4] bg-clip-text text-2xl font-black tracking-wide text-transparent drop-shadow-sm md:text-3xl">
-      เสียงตอบรับจาก <span class="text-[#4da3ff]">สมาชิก {BRAND_NAME}</span>
+    <p class="text-2xl leading-normal font-black tracking-wide text-[#0c3550] md:text-3xl">
+      เสียงจาก <span class="text-[#006d99]">สมาชิก {BRAND_NAME}</span>
     </p>
-    <div aria-hidden="true" class="mt-2 h-[4px] w-24 rounded-full bg-gradient-to-r from-transparent via-[#0b7cf4] to-transparent"></div>
+    <div aria-hidden="true" class="mt-2 h-[4px] w-24 rounded-full bg-gradient-to-r from-[#4cc9f0] via-[#00a4d4] to-[#f7941d]"></div>
   </div>
 
   <div class="grid grid-cols-1 gap-6 md:grid-cols-3 lg:gap-8">
     {
       reviews.map((review) => (
-        <article class="group relative isolate flex flex-col justify-between rounded-3xl border border-[#1a4a9c] bg-[#041a45] p-8 shadow-[0_10px_30px_rgba(0,0,0,0.45)] transition-all duration-500 hover:-translate-y-2 hover:border-[#2f7bff] hover:shadow-[0_15px_40px_rgba(11,124,244,0.28)]">
-          <div aria-hidden="true" class="pointer-events-none absolute -top-10 -left-10 -z-10 h-32 w-32 rounded-full bg-[#0b7cf4]/25 blur-[50px] transition-all duration-500 group-hover:bg-[#4da3ff]/25" />
+        <article class="group relative isolate flex flex-col justify-between overflow-hidden rounded-3xl border border-[#cfe9f4] bg-white p-8 shadow-[0_10px_30px_rgba(12,53,80,0.08)] transition-all duration-500 hover:-translate-y-1 hover:border-[#8ed3ee] hover:shadow-[0_15px_40px_rgba(0,164,212,0.18)]">
+          <div aria-hidden="true" class="pointer-events-none absolute -top-10 -left-10 -z-10 h-32 w-32 rounded-full bg-[#4cc9f0]/20 blur-[50px] transition-all duration-500 group-hover:bg-[#ffb84d]/25" />
 
-          <div class="relative z-10 flex flex-col gap-4">
-            <div class="flex items-center justify-between border-b border-[#1a4a9c] pb-4">
-              <span aria-hidden="true" class="font-serif text-4xl leading-none text-[#4da3ff]/60 drop-shadow-[0_0_5px_rgba(11,124,244,0.45)]">
+          <div class="flex flex-col gap-4">
+            <div class="flex items-center justify-between border-b border-[#cfe9f4] pb-4">
+              <span aria-hidden="true" class="font-serif text-4xl leading-none text-[#00a4d4]/60">
                 "
               </span>
               <span class="flex gap-1 text-lg">
                 <span aria-hidden="true" class="flex gap-1">
                   {Array.from({ length: 5 }).map((_, i) => (
-                    <span class={i < review.stars ? "text-[#ff5a60] drop-shadow-[0_0_5px_rgba(232,32,42,0.7)]" : "text-[#1a4a9c]"}>★</span>
+                    <span class={i < review.stars ? "text-[#f7941d]" : "text-[#cfe9f4]"}>★</span>
                   ))}
                 </span>
                 <span class="sr-only">ให้คะแนน {review.stars} จาก 5 ดาว</span>
               </span>
             </div>
 
-            <p class="min-h-[100px] text-left text-base leading-relaxed text-[#dbe9ff]">{review.content}</p>
+            <p class="min-h-[100px] text-left text-base leading-relaxed text-[#23323f]">{review.content}</p>
           </div>
 
-          <div class="relative z-10 mt-6 flex items-center gap-4 border-t border-[#1a4a9c] pt-4">
+          <div class="mt-6 flex items-center gap-4 border-t border-[#cfe9f4] pt-4">
             <span
               aria-hidden="true"
-              class="flex h-12 w-12 shrink-0 items-center justify-center rounded-full border border-[#2f7bff]/60 bg-gradient-to-br from-[#0554b8] to-[#041a45] text-2xl shadow-inner transition-transform duration-300 group-hover:scale-110">
+              class="flex h-12 w-12 shrink-0 items-center justify-center rounded-full border-2 border-white bg-gradient-to-br from-[#e8f7fd] to-[#cfe9f4] text-2xl shadow-[0_5px_15px_rgba(0,164,212,0.18)] transition-transform duration-300 group-hover:scale-110">
               {review.avatar}
             </span>
             <span class="flex flex-col">
-              <span class="text-base font-black text-white transition-colors group-hover:text-[#4da3ff]">{review.name}</span>
-              <span class="text-[11px] font-bold tracking-wider text-[#9fb8dc]">{review.role}</span>
+              <span class="text-base font-black text-[#0c3550] transition-colors group-hover:text-[#006d99]">{review.name}</span>
+              <span class="text-[11px] font-bold tracking-wider text-[#5a6b7a]">{review.role}</span>
             </span>
           </div>
         </article>

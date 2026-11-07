@@ -8,64 +8,52 @@ import imgPp from "../assets/providers/game6.avif";
 const providers = [
   {
     name: "PG Soft",
-    games: "Treasures of Aztec · Fortune Tiger",
-    players: "4,592",
+    game: "Wild Bandito",
+    mechanic: "ระบบร่วงหล่น",
     isHot: true,
     img: imgPg,
-    alt: "โลโก้ PG Pocket Games Soft กับตัวละครสาวสวมมงกุฎขนนกและเพื่อนร่วมเกม",
+    alt: "โลโก้ PG Pocket Games Soft กับตัวละครสาวสวมมงกุฎขนนกหลากสีและเพื่อนร่วมเกมบนพื้นสีทอง",
   },
   {
     name: "Pragmatic Play",
-    games: "Starlight Princess · The Dog House",
-    players: "3,845",
+    game: "Gates of Olympus",
+    mechanic: "ไม่ต้องเรียงไลน์",
     isHot: true,
     img: imgPp,
-    alt: "โลโก้ PP Slot กับเทพเจ้าเคราขาวถือสายฟ้า",
+    alt: "โลโก้ PP Slot กับเทพเจ้าเคราขาวสวมมงกุฎทองถือสายฟ้าหน้าเสาวิหาร",
   },
   {
     name: "JILI",
-    games: "Super Ace · Boxing King · Boom Legend",
-    players: "2,901",
+    game: "Fortune Gems",
+    mechanic: "วงล้อ 3×3",
     isHot: false,
     img: imgJili,
-    alt: "โลโก้ JILI กับนักรบชุดทองถือขวานพู่สี",
+    alt: "โลโก้ JILI กับนักรบชุดทองสวมหมวกขนนกถือขวานพู่สีแดงน้ำเงิน",
   },
 ];
 
-const moreProviders = ["JDB – Dragon Fishing", "Spadegaming – Zombie Party", "Dream Gaming (DG) – คาสิโนสด", "Pretty Gaming – คาสิโนสด"];
-
-const gridTitle = `ค่ายเกมที่ ${BRAND_NAME} แยกไว้ให้เลือกตามค่าย`;
+const gridTitle = `ค่ายเกมสล็อตใน ${BRAND_NAME} แยกตามค่ายพร้อมเกมเด่น`;
 ---
 
 <section aria-label={gridTitle} class="mx-auto w-full max-w-[1300px] px-4 py-8 font-sans sm:px-6 lg:px-8">
   <div class="mb-8 flex w-full flex-col items-center justify-center gap-2 text-center">
-    <span aria-hidden="true" class="text-2xl drop-shadow-[0_0_10px_rgba(11,124,244,0.8)]">🎰</span>
-    <p class="bg-gradient-to-r from-white via-[#4da3ff] to-[#0b7cf4] bg-clip-text text-2xl font-black tracking-wide text-transparent drop-shadow-sm md:text-3xl">
-      ค่ายเกมที่ <span class="text-[#4da3ff]">{BRAND_NAME}</span> แยกไว้ให้เลือกตามค่าย
+    <span aria-hidden="true" class="text-2xl">🎰</span>
+    <p class="text-2xl leading-normal font-black tracking-wide text-[#0c3550] md:text-3xl">
+      ค่ายเกมสล็อตใน <span class="text-[#006d99]">{BRAND_NAME}</span>
     </p>
-    <div aria-hidden="true" class="mt-2 h-[2px] w-24 rounded-full bg-gradient-to-r from-transparent via-[#0b7cf4] to-transparent"></div>
+    <p class="text-sm font-bold text-[#5a6b7a]">ทดลองเล่นได้โดยไม่ต้องฝากเงินหรือสมัครก่อน</p>
+    <div aria-hidden="true" class="mt-2 h-[3px] w-24 rounded-full bg-gradient-to-r from-[#4cc9f0] via-[#00a4d4] to-[#f7941d]"></div>
   </div>
 
-  <div class="mx-auto grid max-w-3xl grid-cols-3 gap-3 sm:gap-4 lg:gap-6">
+  <ul class="mx-auto grid max-w-3xl grid-cols-3 gap-3 sm:gap-4 lg:gap-6">
     {
       providers.map((p) => (
-        <div class="group relative flex flex-col overflow-hidden rounded-2xl bg-[#041a45] shadow-[0_5px_15px_rgba(0,0,0,0.55)] transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_15px_40px_rgba(11,124,244,0.28)]">
-          <div class="pointer-events-none absolute inset-0 z-20 rounded-2xl border border-[#1a4a9c] transition-all duration-500 group-hover:border-[#2f7bff] group-hover:shadow-[inset_0_0_20px_rgba(11,124,244,0.15)]" />
-
-          <div class="absolute top-0 left-0 z-10 flex items-center gap-1.5 rounded-br-xl border-r border-b border-[#1a4a9c] bg-[#010d28]/85 px-2 py-1 text-[10px] font-medium text-[#9fb8dc] backdrop-blur-md transition-colors group-hover:text-white sm:px-3 sm:py-1.5">
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-              <path fill-rule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clip-rule="evenodd" />
-            </svg>
-            {p.players}
-          </div>
-
+        <li class="group relative flex flex-col overflow-hidden rounded-2xl border border-[#cfe9f4] bg-white shadow-[0_10px_30px_rgba(12,53,80,0.08)] transition-all duration-500 hover:-translate-y-1 hover:border-[#8ed3ee] hover:shadow-[0_15px_40px_rgba(0,164,212,0.18)]">
           {p.isHot && (
-            <div class="absolute top-0 right-0 z-10 flex items-center gap-1 rounded-bl-xl border-b border-l border-white/40 bg-gradient-to-r from-[#b0121a] to-[#ff5a60] px-2 py-1 text-[10px] font-black tracking-wide text-white shadow-md sm:px-3 sm:py-1.5">
-              <span aria-hidden="true" class="animate-pulse">
-                🔥
-              </span>{" "}
+            <span class="absolute top-0 right-0 z-10 flex items-center gap-1 rounded-bl-xl border-b border-l border-white bg-gradient-to-b from-[#ffd23f] via-[#ffb84d] to-[#f7941d] px-2 py-1 text-[10px] font-black tracking-wide text-[#4a1d00] shadow-md sm:px-3 sm:py-1.5">
+              <span aria-hidden="true">🔥</span>
               HOT
-            </div>
+            </span>
           )}
 
           <Picture
@@ -75,28 +63,29 @@ const gridTitle = `ค่ายเกมที่ ${BRAND_NAME} แยกไว�
             fallbackFormat="webp"
             loading="lazy"
             fetchpriority="low"
-            widths={[120, 160, 221]}
-            sizes="(max-width: 767px) 30vw, 240px"
+            widths={[160, 221]}
+            sizes="(max-width: 639px) calc(33vw - 19px), (max-width: 815px) calc(33vw - 27px), 245px"
             quality={70}
             decoding="async"
-            class="block aspect-square w-full object-cover opacity-90 transition-transform duration-700 group-hover:scale-110 group-hover:opacity-100"
+            class="block aspect-square w-full object-cover transition-transform duration-700 group-hover:scale-105"
           />
 
-          <div class="relative z-10 border-t border-[#1a4a9c] px-2 py-2 text-center sm:px-3">
-            <p class="text-xs font-black text-white transition-colors group-hover:text-[#4da3ff] sm:text-sm">{p.name}</p>
-            <p class="mt-0.5 hidden text-[11px] leading-snug text-[#9fb8dc] sm:block">{p.games}</p>
+          <div class="relative z-10 flex flex-1 flex-col items-center gap-1 border-t border-[#cfe9f4] bg-[#e8f7fd] px-2 py-2.5 text-center sm:px-3">
+            <p class="text-xs font-black text-[#0c3550] sm:text-sm">{p.name}</p>
+            <p class="text-[11px] leading-snug font-bold text-[#006d99] sm:text-xs">{p.game}</p>
+            <span class="mt-0.5 hidden rounded-full border border-[#ffb84d]/60 bg-[#fff4e5] px-2.5 py-0.5 text-[10px] font-bold text-[#a35000] sm:inline-block">{p.mechanic}</span>
           </div>
-
-          <div
-            aria-hidden="true"
-            class="pointer-events-none absolute bottom-10 left-0 h-20 w-full bg-gradient-to-t from-[#0b7cf4]/45 to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-100"
-          />
-        </div>
+        </li>
       ))
     }
-  </div>
-
-  <ul aria-label="ค่ายเกมอื่นที่มีในเว็บ" class="mt-6 flex flex-wrap items-center justify-center gap-2">
-    {moreProviders.map((m) => <li class="rounded-full border border-[#1a4a9c] bg-[#06204f] px-3 py-1 text-xs font-bold text-[#dbe9ff]">{m}</li>)}
   </ul>
+
+  <div class="mt-6 flex justify-center">
+    <a
+      href="/ทดลองเล่น/"
+      class="inline-flex items-center gap-2 rounded-full border-2 border-white bg-gradient-to-b from-[#19b2e0] to-[#0077b3] px-6 py-2.5 text-sm font-black text-white shadow-[0_10px_30px_rgba(0,164,212,0.35)] transition-transform hover:scale-[1.03]">
+      <span aria-hidden="true">🎮</span>
+      <span>ไปที่หน้าทดลองเล่นสล็อต</span>
+    </a>
+  </div>
 </section>

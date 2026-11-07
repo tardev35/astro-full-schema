@@ -2,20 +2,20 @@
 import MainLayout from "../layouts/MainLayout.astro";
 import ContentBox from "../components/ContentBox.astro";
 import Navfoot from "../components/Navfoot.astro";
-import Announcement from "../components/Announcement3.astro";
+import Announcement from "../components/Announcement5.astro";
 
 import { Picture } from "astro:assets";
 import imgLine from "../assets/contact-line.webp";
 import { pageGraph } from "../lib/schema";
 import { BRAND_ADDRESS } from "../lib/brandProfile";
 
-const pageTitle = "ติดต่อทีมงาน 777RUAY | สอบถามผ่าน LINE Official";
+const pageTitle = "ติดต่อทีมงาน MEEHAY569 | สอบถามผ่าน LINE Official";
 
 const pageDescription =
-  "ติดต่อทีมงาน 777RUAY ผ่าน LINE Official เมื่อล็อกอินไม่ได้ ฝากแล้วเครดิตไม่ขึ้น หรือมีรายการค้าง อย่าโอนเงินซ้ำ แจ้งเวลาที่ทำรายการกับยอดเงินให้แอดมินตรวจสอบ";
+  "ติดต่อทีมงาน MEEHAY569 ผ่าน LINE Official เมื่อสมัครไม่ผ่าน ล็อกอินไม่ได้ หรือโอนทรูวอเลทแล้วเครดิตไม่ขึ้น อย่าเพิ่งโอนซ้ำ แจ้งเวลากับยอดเงินให้ทีมงานตรวจสอบ";
 
 const announcementMessage =
-  "777RUAY สล็อตออนไลน์ เล่นผ่านเบราว์เซอร์ได้ทั้ง iOS และ Android ไม่ต้องโหลดแอป • ฝากถอนออโต้ตลอด 24 ชั่วโมง ไม่ต้องแนบสลิป • สมัคร ฝาก เล่น และถอนจบบนมือถือเครื่องเดียว • มีเรื่องติดขัดติดต่อแอดมินผ่านช่องทางบนหน้าเว็บ";
+  "MEEHAY569 สล็อตเว็บตรง ไม่ผ่านเอเย่นต์ • ฝากถอนทรูวอเลทออโต้ เริ่ม 1 บาท ตลอด 24 ชั่วโมง ไม่ต้องส่งสลิป • ทดลองเล่นสล็อตได้โดยไม่ต้องฝากเงินหรือสมัครก่อน • สมัครง่าย 4 ขั้นตอน เล่นได้ทั้งเว็บมือถือ แอป และคอม";
 
 const graph = pageGraph(Astro, {
   type: "ContactPage",
@@ -31,7 +31,7 @@ const graph = pageGraph(Astro, {
         contactType: "customer service",
         availableLanguage: ["Thai"],
         path: "/line",
-        description: "ติดต่อทีมงาน 777RUAY ผ่าน LINE Official สอบถามการสมัครสมาชิก การเข้าสู่ระบบ และการฝากถอน",
+        description: "ติดต่อทีมงาน MEEHAY569 ผ่าน LINE Official สอบถามการสมัครสมาชิก การเข้าสู่ระบบ และการฝากถอนทรูวอเลท",
       },
     ],
   },
@@ -43,11 +43,11 @@ const graph = pageGraph(Astro, {
 
   <Announcement message={announcementMessage} />
 
-  <ContentBox title="ติดต่อทีมงาน 777RUAY" as="h1">
+  <ContentBox title="ติดต่อทีมงาน MEEHAY569" as="h1">
     <div>
       <Picture
         src={imgLine}
-        alt="ภาพช่องทางติดต่อทีมงาน 777RUAY ทาง LINE ไอคอนแอป LINE สีเขียวทรงสี่เหลี่ยมมุมมน มีกรอบข้อความสีครีมที่เขียนคำว่า LINE อยู่ตรงกลาง ด้านบนเป็นวงกลมลูกศรสีเขียวล้อมตัวเลข 24h และมีผู้หญิงผมดำรวบตึง สวมชุดราตรีซาตินสีเขียวเข้มเปิดไหล่ ใส่สร้อยคอสีทอง ยืนอยู่ทางขวาของภาพ"
+        alt="ภาพช่องทางติดต่อทีมงาน MEEHAY569 ทาง LINE ไอคอนแอป LINE สีเขียวทรงสี่เหลี่ยมมุมมน มีกรอบข้อความสีครีมที่เขียนคำว่า LINE อยู่ตรงกลาง ด้านบนเป็นวงกลมลูกศรสีเขียวล้อมตัวเลข 24h และมีผู้หญิงผมดำรวบตึง สวมชุดราตรีซาตินสีเขียวเข้มเปิดไหล่ ใส่สร้อยคอสีทอง ยืนอยู่ทางขวาของภาพ"
         loading="lazy"
         fetchpriority="low"
         widths={[200, 400, 600]}
@@ -60,8 +60,8 @@ const graph = pageGraph(Astro, {
       />
       {
         BRAND_ADDRESS.lines.length > 0 && (
-          <address aria-label={BRAND_ADDRESS.label} class="mt-8 mb-8 rounded-r-xl border-l-4 border-[#1a5fe0] bg-[#eef4ff] py-4 pr-4 pl-6 text-left text-base leading-relaxed text-[#4a5878] not-italic">
-            <span class="mb-1 block font-bold text-[#0a1f5c]">{BRAND_ADDRESS.label}</span>
+          <address aria-label={BRAND_ADDRESS.label} class="mt-8 mb-8 rounded-r-xl border-l-4 border-[#00a4d4] bg-[#e8f7fd] py-4 pr-4 pl-6 text-left text-base leading-relaxed text-[#5a6b7a] not-italic">
+            <span class="mb-1 block font-bold text-[#0c3550]">{BRAND_ADDRESS.label}</span>
             {BRAND_ADDRESS.lines.map((line) => (
               <span class="block">{line}</span>
             ))}
@@ -70,7 +70,7 @@ const graph = pageGraph(Astro, {
                 <span aria-hidden="true" class="mr-2">
                   ✉️
                 </span>
-                <a href={`mailto:${BRAND_ADDRESS.email}`} class="font-bold text-[#1a5fe0] underline underline-offset-4 transition-colors hover:text-[#8a6508]">
+                <a href={`mailto:${BRAND_ADDRESS.email}`} class="font-bold text-[#006d99] underline underline-offset-4 transition-colors hover:text-[#a35000]">
                   {BRAND_ADDRESS.email}
                 </a>
               </span>
@@ -82,15 +82,15 @@ const graph = pageGraph(Astro, {
       <div class="flex flex-wrap justify-center gap-4">
         <a
           href="/register/"
-          aria-label="สมัครสมาชิก 777RUAY"
-          class="flex items-center justify-center rounded-xl border-2 border-[#ffd45c] bg-gradient-to-b from-[#4d8ff5] via-[#1a5fe0] to-[#0b3a9e] px-8 py-3 font-bold text-white shadow-[0_10px_30px_rgba(26,95,224,0.35)] transition-all hover:scale-105 hover:brightness-110 hover:shadow-[0_15px_40px_rgba(26,95,224,0.45)]">
+          aria-label="สมัครสมาชิก MEEHAY569"
+          class="flex items-center justify-center rounded-xl border-2 border-white bg-gradient-to-b from-[#ffd23f] via-[#ffb84d] to-[#f7941d] px-8 py-3 font-black text-[#4a1d00] shadow-[0_10px_30px_rgba(247,148,29,0.40)] transition-all hover:scale-105 hover:brightness-110 hover:shadow-[0_15px_40px_rgba(247,148,29,0.50)]">
           สมัครสมาชิก
         </a>
 
         <a
           href="/login/"
-          aria-label="เข้าสู่ระบบ 777RUAY"
-          class="flex items-center justify-center rounded-xl border-2 border-[#b07d12]/40 bg-gradient-to-b from-[#ffd45c] via-[#e0a91b] to-[#b07d12] px-8 py-3 font-bold text-[#0a1f5c] shadow-[0_10px_30px_rgba(224,169,27,0.35)] transition-all hover:scale-105 hover:brightness-110 hover:shadow-[0_15px_40px_rgba(224,169,27,0.40)]">
+          aria-label="เข้าสู่ระบบ MEEHAY569"
+          class="flex items-center justify-center rounded-xl border-2 border-white bg-gradient-to-b from-[#19b2e0] to-[#0077b3] px-8 py-3 font-bold text-white shadow-[0_10px_30px_rgba(0,164,212,0.35)] transition-all hover:scale-105 hover:brightness-110 hover:shadow-[0_15px_40px_rgba(0,164,212,0.45)]">
           เข้าสู่ระบบ
         </a>
 
@@ -98,7 +98,7 @@ const graph = pageGraph(Astro, {
           href="/line/"
           target="_blank"
           rel="noopener noreferrer"
-          aria-label="ติดต่อทีมงาน 777RUAY ผ่าน Line Official"
+          aria-label="ติดต่อทีมงาน MEEHAY569 ผ่าน Line Official"
           class="flex items-center justify-center rounded-xl border border-[#00B900]/70 bg-[#00B900] px-8 py-3 font-bold text-white shadow-[0_8px_24px_rgba(0,185,0,0.25)] transition-transform hover:scale-105 hover:bg-[#00a300]">
           ติดต่อผ่าน Line Official
         </a>

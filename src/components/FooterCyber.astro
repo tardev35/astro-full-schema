@@ -6,82 +6,103 @@ const images = import.meta.glob<{ default: ImageMetadata }>("../assets/logo.{png
 const imagePaths = Object.keys(images);
 const mainLogo = imagePaths.length > 0 ? images[imagePaths[0]].default : null;
 
-const logoAlt =
-  "โลโก้ VODKAFUN รูปขวดแก้วทรงกลมสีฟ้านีออนมีหน้ายิ้ม ภายในมีของเหลวสีฟ้าใสและฟองอากาศลอยรอบขวด ใต้ขวดเป็นตัวอักษร vodkafun สีขาวบนพื้นโปร่ง";
+const logoAlt = "โลโก้ MEEHAY569 ตัวอักษรภาษาไทยคำว่า มีเฮ แบบนูนสามมิติ คำว่า มี สีส้ม คำว่า เฮ สีฟ้า มีป้ายเลข 569 สีทอง ลูกเต๋าและไพ่วางประกอบ";
+
+const shortcuts = [
+  { name: "หน้าแรก", path: "/" },
+  { name: "โปรโมชั่น", path: "/promotion/" },
+  { name: "ทดลองเล่น", path: "/ทดลองเล่น/" },
+  { name: "วิธีฝากถอน", path: "/วิธีฝากถอน/" },
+  { name: "ทางเข้า", path: "/ทางเข้า/" },
+  { name: "สมัครสมาชิก", path: "/register/" },
+  { name: "เข้าสู่ระบบ", path: "/login/" },
+  { name: "เกี่ยวกับเรา", path: "/about-us/" },
+  { name: "ติดต่อเรา", path: "/contact-us/" },
+];
 ---
 
 <footer
-  class="relative mt-10 w-full overflow-hidden border-t border-[#ff3dc8]/35 bg-[#0a0320] pt-16 pb-8 font-sans text-[#ece6ff]"
-  style="clip-path: polygon(0 30px, 50vw 0, 100% 30px, 100% 100%, 0 100%);">
+  class="relative isolate mt-12 w-full overflow-hidden bg-[#072235] pt-20 pb-8 font-sans text-[#dff4fc]"
+  style="clip-path: polygon(0 34px, 50vw 0, 100% 34px, 100% 100%, 0 100%);">
   <div
     aria-hidden="true"
-    class="pointer-events-none absolute inset-0 opacity-[0.12]"
-    style="background-image: linear-gradient(#2c1266 1px, transparent 1px), linear-gradient(90deg, #0aa4c4 1px, transparent 1px); background-size: 30px 30px;">
+    class="pointer-events-none absolute inset-0 -z-10 opacity-[0.10]"
+    style="background-image: linear-gradient(#4cc9f0 1px, transparent 1px), linear-gradient(90deg, #4cc9f0 1px, transparent 1px); background-size: 32px 32px;">
   </div>
+  <div aria-hidden="true" class="pointer-events-none absolute inset-x-0 top-0 -z-10 h-[34px] bg-gradient-to-r from-[#00a4d4] via-[#ffd23f] to-[#f7941d] opacity-90"></div>
+  <div aria-hidden="true" class="pointer-events-none absolute -bottom-24 left-1/2 -z-10 h-[260px] w-[90%] max-w-4xl -translate-x-1/2 rounded-full bg-[#00a4d4]/20 blur-[90px]"></div>
 
-  <div class="relative z-10 mx-auto w-full max-w-[1200px] px-6">
+  <div class="mx-auto w-full max-w-[1200px] px-6">
     <div class="mb-12 grid grid-cols-1 gap-10 md:grid-cols-12">
       <div class="flex flex-col gap-5 md:col-span-5">
-        <a href="/" class="inline-block transition-transform hover:scale-105">
+        <a href="/" class="inline-block max-w-max rounded-2xl bg-white px-5 py-3 shadow-[0_6px_20px_rgba(0,0,0,0.25)] transition-transform hover:scale-105">
           {
             mainLogo ? (
               <Picture
                 src={mainLogo}
                 alt={logoAlt}
-                widths={[160, 320, 480]}
-                sizes="160px"
+                widths={[110, 220, 281]}
+                sizes="110px"
                 loading="lazy"
-                class="h-[60px] w-auto drop-shadow-[0_4px_12px_rgba(255,61,200,0.4)]"
+                class="h-[56px] w-auto object-contain"
                 formats={["avif", "webp"]}
                 fallbackFormat="webp"
               />
             ) : (
-              <span class="text-3xl font-black tracking-widest text-[#1be5f4]">VODKAFUN</span>
+              <span class="text-3xl font-black text-[#0077b3]">MEEHAY569</span>
             )
           }
         </a>
-        <p class="border-l-2 border-[#ff3dc8] pl-4 text-sm leading-relaxed text-[#ece6ff]/80">
-          VODKAFUN สล็อตเว็บตรงเว็บใหญ่ ลิขสิทธิ์แท้จากค่ายเกมโดยตรง รวม PG SOFT, Pragmatic Play และ Joker Gaming ไว้ในกระเป๋าเดียว สมัครฟรี ไม่ต้องฝากก่อน
-          ฝากถอนด้วยระบบออโต้ ไม่มีขั้นต่ำ รองรับทั้งแอปธนาคารและ True Money Wallet เล่นได้ทั้งมือถือและคอมด้วยยูสเดียวตลอด 24 ชั่วโมง
+        <p class="border-l-4 border-[#f7941d] pl-4 text-sm leading-relaxed text-[#9cc9dc]">
+          MEEHAY569 สล็อตเว็บตรง ไม่ผ่านเอเย่นต์ ฝากถอนผ่านทรูวอเลทด้วยระบบออโต้ เริ่มได้ที่ 1 บาท ทำรายการเองได้ตลอด 24 ชั่วโมง ไม่ต้องมีบัญชีธนาคาร และลองเกมในโหมดทดลองเล่นได้ก่อนสมัคร
         </p>
-        <div class="mt-4 flex gap-3">
-          <span class="border border-[#1be5f4]/45 bg-[#1f0b4d] px-3 py-1 font-mono text-xs text-[#9bf2fb]">NO_MINIMUM</span>
-          <span class="border border-[#ff3dc8]/45 bg-[#1f0b4d] px-3 py-1 font-mono text-xs text-[#ff8fe0]">AUTO_24H</span>
-        </div>
+        <ul aria-label="จุดเด่นของ MEEHAY569" class="flex flex-wrap gap-2">
+          <li class="rounded-full border border-[#4cc9f0]/50 bg-[#00a4d4]/15 px-3 py-1 text-xs font-bold text-[#dff4fc]">ไม่ผ่านเอเย่นต์</li>
+          <li class="rounded-full border border-[#ffb84d]/50 bg-[#f7941d]/15 px-3 py-1 text-xs font-bold text-[#ffd9a3]">ทรูวอเลท เริ่ม 1 บาท</li>
+          <li class="rounded-full border border-[#4cc9f0]/50 bg-[#00a4d4]/15 px-3 py-1 text-xs font-bold text-[#dff4fc]">ออโต้ 24 ชม.</li>
+        </ul>
       </div>
 
-      <nav aria-label="ลิงก์หน้าเว็บ VODKAFUN" class="flex flex-col gap-4 md:col-span-3 lg:pl-8">
-        <p class="text-lg font-black tracking-widest text-[#9bf2fb] uppercase">/// DIRECTORY</p>
-        <ul class="flex flex-col gap-3 font-mono text-sm text-[#ece6ff]/80">
-          <li><a href="/" class="transition-colors hover:text-[#ff8fe0]">&gt; หน้าแรก</a></li>
-          <li><a href="/promotion/" class="transition-colors hover:text-[#ff8fe0]">&gt; โปรโมชั่น</a></li>
-          <li><a href="/register/" class="transition-colors hover:text-[#ff8fe0]">&gt; สมัครสมาชิก</a></li>
-          <li><a href="/login/" class="transition-colors hover:text-[#ff8fe0]">&gt; เข้าสู่ระบบ</a></li>
-          <li><a href="/ทดลองเล่น/" class="transition-colors hover:text-[#ff8fe0]">&gt; ทดลองเล่น</a></li>
-          <li><a href="/วิธีฝากถอน/" class="transition-colors hover:text-[#ff8fe0]">&gt; วิธีฝากถอน</a></li>
-          <li><a href="/ทางเข้า/" class="transition-colors hover:text-[#ff8fe0]">&gt; ทางเข้า</a></li>
-          <li><a href="/about-us/" class="transition-colors hover:text-[#ff8fe0]">&gt; เกี่ยวกับเรา</a></li>
-          <li><a href="/contact-us/" class="transition-colors hover:text-[#ff8fe0]">&gt; ติดต่อเรา</a></li>
+      <nav aria-label="ลิงก์หน้าเว็บ MEEHAY569" class="flex flex-col gap-4 md:col-span-3 lg:pl-8">
+        <p class="flex items-center gap-2 text-lg font-black text-white">
+          <span aria-hidden="true" class="h-5 w-1.5 rounded-full bg-gradient-to-b from-[#4cc9f0] to-[#f7941d]"></span>
+          เมนูลัด
+        </p>
+        <ul class="grid grid-cols-2 gap-x-4 gap-y-3 text-sm text-[#9cc9dc] md:grid-cols-1">
+          {
+            shortcuts.map((item) => (
+              <li>
+                <a href={item.path} class="flex items-center gap-2 transition-colors hover:text-[#ffd23f]">
+                  <span aria-hidden="true" class="text-[#4cc9f0]">
+                    ›
+                  </span>
+                  <span>{item.name}</span>
+                </a>
+              </li>
+            ))
+          }
         </ul>
       </nav>
 
       <div class="flex flex-col gap-5 md:col-span-4">
-        <p class="text-lg font-black tracking-widest text-[#9bf2fb] uppercase">/// SUPPORT_LINK</p>
+        <p class="flex items-center gap-2 text-lg font-black text-white">
+          <span aria-hidden="true" class="h-5 w-1.5 rounded-full bg-gradient-to-b from-[#4cc9f0] to-[#f7941d]"></span>
+          ติดต่อแอดมิน
+        </p>
 
         <a
           href="/line/"
           class="flex w-full items-center justify-center gap-2 bg-[#00B900] py-3 font-bold text-white transition-all hover:bg-[#009900]"
-          style="clip-path: polygon(10px 0, 100% 0, 100% calc(100% - 10px), calc(100% - 10px) 100%, 0 100%, 0 10px);">
-          LINE CONNECT
+          style="clip-path: polygon(12px 0, 100% 0, 100% calc(100% - 12px), calc(100% - 12px) 100%, 0 100%, 0 12px);">
+          <span aria-hidden="true">💬</span>
+          <span>ติดต่อแอดมินทาง LINE</span>
         </a>
 
         {
           BRAND_ADDRESS.lines.length > 0 && (
             <address aria-label={BRAND_ADDRESS.label} class="mt-2 rounded-xl border border-white/15 bg-black/20 p-4 text-xs leading-relaxed not-italic opacity-90">
               <p class="mb-2 flex items-center gap-2 text-[11px] font-bold tracking-wider uppercase opacity-80">
-                <span aria-hidden="true" class="text-sm">
-                  📍
-                </span>
+                <span aria-hidden="true" class="text-sm">📍</span>
                 {BRAND_ADDRESS.label}
               </p>
               {BRAND_ADDRESS.lines.map((line) => (
@@ -89,9 +110,7 @@ const logoAlt =
               ))}
               {BRAND_ADDRESS.email && (
                 <a href={`mailto:${BRAND_ADDRESS.email}`} class="mt-3 inline-flex items-center gap-2 font-bold underline decoration-current/40 underline-offset-4 opacity-90 transition-opacity hover:opacity-100">
-                  <span aria-hidden="true" class="text-sm">
-                    ✉️
-                  </span>
+                  <span aria-hidden="true" class="text-sm">✉️</span>
                   {BRAND_ADDRESS.email}
                 </a>
               )}
@@ -101,32 +120,22 @@ const logoAlt =
 
         <a
           href="#top"
-          class="flex w-full items-center justify-center gap-2 border border-[#ff3dc8]/60 bg-transparent py-3 font-bold text-[#ff8fe0] transition-all hover:bg-[#1f0b4d]/70"
-          style="clip-path: polygon(10px 0, 100% 0, 100% calc(100% - 10px), calc(100% - 10px) 100%, 0 100%, 0 10px);">
+          class="flex w-full items-center justify-center gap-2 border-2 border-[#4cc9f0]/60 py-3 font-bold text-[#dff4fc] transition-all hover:border-[#ffd23f] hover:text-[#ffd23f]"
+          style="clip-path: polygon(12px 0, 100% 0, 100% calc(100% - 12px), calc(100% - 12px) 100%, 0 100%, 0 12px);">
           <span aria-hidden="true">↑</span> กลับขึ้นบน
         </a>
 
-        <div class="mt-2 font-mono text-xs text-[#ece6ff]/60">ACCEPTED_PAYMENTS</div>
+        <p class="mt-2 text-xs font-bold text-[#9cc9dc]">ช่องทางฝากถอน</p>
         <BankStrip size={28} />
       </div>
     </div>
 
-    <div class="flex flex-col items-center justify-between border-t border-[#1be5f4]/25 pt-6 font-mono text-xs text-[#ece6ff]/60 md:flex-row">
-      <p>SYSTEM_COPYRIGHT &copy; {new Date().getFullYear()} VODKAFUN</p>
-      <div class="mt-4 flex gap-4 md:mt-0">
-        <a href="/terms/" class="hover:text-[#ff8fe0]">TERMS_OF_SERVICE</a>
-        <a href="/privacy/" class="hover:text-[#ff8fe0]">PRIVACY_POLICY</a>
+    <div class="flex flex-col items-center justify-between gap-4 border-t border-[#4cc9f0]/20 pt-6 text-xs text-[#9cc9dc] md:flex-row">
+      <p>COPYRIGHT &copy; {new Date().getFullYear()} MEEHAY569. ALL RIGHTS RESERVED.</p>
+      <div class="flex gap-4">
+        <a href="/terms/" class="transition-colors hover:text-[#ffd23f]">เงื่อนไขข้อตกลง</a>
+        <a href="/privacy/" class="transition-colors hover:text-[#ffd23f]">นโยบายความเป็นส่วนตัว</a>
       </div>
     </div>
   </div>
 </footer>
-
-<style>
-  footer a {
-    text-decoration: none;
-    font-family: var(--font-sans);
-  }
-  .font-mono {
-    font-family: monospace;
-  }
-</style>

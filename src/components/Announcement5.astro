@@ -1,6 +1,6 @@
 ---
 const {
-  message = "VODKAFUN สล็อตเวอร์ชั่นใหม่ล่าสุด รวมเกมครบครัน ทั้งสล็อต ยิงปลา กีฬา คาสิโน และหวย ในบัญชีสมาชิกเดียว • ฝากถอนระบบออโต้ รองรับทรูมันนี่วอเล็ตตามช่องทางที่เปิดให้บริการ ตรวจสอบสถานะรายการได้ทุกครั้ง • สมัครสมาชิกและเข้าสู่ระบบผ่านทางเข้า VODKAFUN ที่ตรวจสอบแล้วเท่านั้น • ตรวจชื่อเว็บไซต์และ URL ให้ตรงกับช่องทางที่แบรนด์ประกาศก่อนกรอกข้อมูลสำคัญ • เงื่อนไขโปรโมชั่นและยอดขั้นต่ำอาจเปลี่ยนตามช่วงเวลา ดูข้อมูลล่าสุดในระบบก่อนทำรายการ",
+  message = "MEEHAY569 สล็อตเว็บตรง ไม่ผ่านเอเย่นต์ • ฝากถอนทรูวอเลทออโต้ เริ่ม 1 บาท ตลอด 24 ชั่วโมง ไม่ต้องส่งสลิป • ทดลองเล่นสล็อตได้โดยไม่ต้องฝากเงินหรือสมัครก่อน • สมัครง่าย 4 ขั้นตอน เล่นได้ทั้งเว็บมือถือ แอป และคอม",
 } = Astro.props;
 
 const SCROLL_PX_PER_SEC = 50;
@@ -10,22 +10,20 @@ const scrollSeconds = Math.max(12, Math.round((message.length * PX_PER_CHAR + TR
 ---
 
 <div class="mx-auto w-full max-w-7xl px-4 py-3 font-sans">
-  <div class="relative overflow-hidden rounded-md border border-[#c8fc04]/45 bg-[#041a06] shadow-[0_0_15px_rgba(200,252,4,0.2)]">
-    <div aria-hidden="true" class="absolute top-0 -left-4 h-full w-8 -skew-x-12 bg-gradient-to-b from-[#e6ff6a] to-[#3fc20a]"></div>
-    <div aria-hidden="true" class="absolute top-0 -right-4 h-full w-8 -skew-x-12 bg-[#3fc20a]/25"></div>
-
+  <div class="relative overflow-hidden rounded-full border-2 border-white bg-white shadow-[0_6px_18px_rgba(12,53,80,0.12),0_0_0_1px_#cfe9f4]">
     <div class="flex items-center">
-      <div class="relative z-10 flex w-12 shrink-0 items-center justify-center bg-gradient-to-b from-[#e6ff6a] to-[#3fc20a] py-2.5">
-        <span aria-hidden="true" class="animate-pulse text-lg drop-shadow-[0_0_5px_rgba(243,255,233,0.85)]">🍾</span>
+      <div class="relative z-10 flex shrink-0 items-center gap-1.5 rounded-full bg-[#0077b3] py-2 pr-4 pl-3" style="background-image: linear-gradient(in oklab to bottom, #19b2e0, #0077b3);">
+        <span aria-hidden="true" class="text-base">📣</span>
+        <span class="text-xs font-black whitespace-nowrap text-white">ข่าวสาร</span>
       </div>
 
-      <div class="marquee-container relative flex-1 overflow-hidden py-2.5 pr-6">
-        <div aria-hidden="true" class="pointer-events-none absolute top-0 left-0 z-10 h-full w-8 bg-gradient-to-r from-[#041a06] to-transparent"></div>
-        <div aria-hidden="true" class="pointer-events-none absolute top-0 right-0 z-10 h-full w-12 bg-gradient-to-l from-[#041a06] to-transparent"></div>
+      <div class="marquee-container relative flex-1 overflow-hidden py-2.5 pr-4">
+        <div aria-hidden="true" class="pointer-events-none absolute top-0 left-0 z-10 h-full w-8 bg-gradient-to-r from-white to-transparent"></div>
+        <div aria-hidden="true" class="pointer-events-none absolute top-0 right-0 z-10 h-full w-12 bg-gradient-to-l from-white to-transparent"></div>
 
-        <div class="marquee-content inline-block pl-4 text-sm font-bold tracking-wide whitespace-nowrap text-[#f3ffe9]" style={`animation-duration:${scrollSeconds}s`}>
-          <span class="mr-8 inline-flex items-center gap-2"><span aria-hidden="true" class="h-1.5 w-1.5 rounded-full bg-[#c8fc04] shadow-[0_0_5px_rgba(200,252,4,0.85)]"></span>{message}</span>
-          <span aria-hidden="true" class="mr-8 inline-flex items-center gap-2"><span class="h-1.5 w-1.5 rounded-full bg-[#c8fc04] shadow-[0_0_5px_rgba(200,252,4,0.85)]"></span>{message}</span>
+        <div class="marquee-content inline-block pl-4 text-sm font-bold tracking-wide whitespace-nowrap text-[#0c3550]" style={`animation-duration:${scrollSeconds}s`}>
+          <span class="mr-8 inline-flex items-center gap-2"><span aria-hidden="true" class="h-2 w-2 rounded-full bg-[#f7941d] shadow-[0_0_6px_rgba(247,148,29,0.7)]"></span>{message}</span>
+          <span aria-hidden="true" class="mr-8 inline-flex items-center gap-2"><span class="h-2 w-2 rounded-full bg-[#f7941d] shadow-[0_0_6px_rgba(247,148,29,0.7)]"></span>{message}</span>
         </div>
       </div>
     </div>

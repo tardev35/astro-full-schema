@@ -10,23 +10,24 @@ const { title, as: HeadingTag = "h2", titleleft, titleright } = Astro.props;
 
 <section class="mx-auto mb-8 w-full max-w-7xl px-4 font-sans">
   <div
-    class="w-full rounded-[25px] border border-[#1a4a9c]/70 bg-[#041a45] p-8 shadow-[10px_10px_20px_#010d28,-10px_-10px_20px_#0a2a66] transition-all duration-300 hover:shadow-[15px_15px_30px_#010d28,-15px_-15px_30px_#1a4a9c]">
+    class="w-full rounded-[25px] border border-[#cfe9f4] bg-white p-8 shadow-[8px_8px_18px_rgba(12,53,80,0.10),-6px_-6px_16px_#ffffff] transition-shadow duration-300 hover:shadow-[12px_12px_26px_rgba(12,53,80,0.12),-8px_-8px_20px_#ffffff]">
     {
       title && (
-        <header class="mb-8 border-b border-[#1a4a9c]/70 pb-4 text-center">
-          <HeadingTag class="bg-gradient-to-r from-white via-[#4da3ff] to-[#0b7cf4] bg-clip-text text-2xl leading-normal font-black tracking-wide text-transparent">{title}</HeadingTag>
+        <header class="mb-8 border-b border-[#cfe9f4] pb-4 text-center">
+          <HeadingTag class="bg-gradient-to-r from-[#0c3550] via-[#006d99] to-[#0077b3] bg-clip-text text-2xl leading-normal font-black tracking-wide text-transparent">{title}</HeadingTag>
+          <span aria-hidden="true" class="mx-auto mt-3 block h-1 w-16 rounded-full bg-gradient-to-r from-[#00a4d4] to-[#f7941d]" />
         </header>
       )
     }
 
     <div class="grid grid-cols-1 gap-8 md:grid-cols-2">
-      <article class="flex flex-col gap-4 text-left text-base leading-relaxed text-[#dbe9ff]">
-        {titleleft && <p class="text-xl leading-normal font-black tracking-wide text-[#4da3ff] drop-shadow-[0_0_10px_rgba(11,124,244,0.35)]">{titleleft}</p>}
+      <article class="flex flex-col gap-4 text-left text-base leading-relaxed text-[#23323f]">
+        {titleleft && <p class="text-xl leading-normal font-black tracking-wide text-[#006d99]">{titleleft}</p>}
         <slot name="left" />
       </article>
 
-      <article class="flex flex-col gap-4 text-left text-base leading-relaxed text-[#dbe9ff] md:border-l md:border-[#1a4a9c]/70 md:pl-8">
-        {titleright && <p class="text-xl leading-normal font-black tracking-wide text-[#4da3ff] drop-shadow-[0_0_10px_rgba(11,124,244,0.35)]">{titleright}</p>}
+      <article class="flex flex-col gap-4 text-left text-base leading-relaxed text-[#23323f] md:border-l md:border-[#cfe9f4] md:pl-8">
+        {titleright && <p class="text-xl leading-normal font-black tracking-wide text-[#a35000]">{titleright}</p>}
         <slot name="right" />
       </article>
     </div>

@@ -6,6 +6,8 @@ const images = import.meta.glob<{ default: ImageMetadata }>("../assets/logo.{png
 const imagePaths = Object.keys(images);
 const mainLogo = imagePaths.length > 0 ? images[imagePaths[0]].default : null;
 
+const affUrl = "https://yoalink.com/dauh";
+
 const currentPath = Astro.url.pathname;
 
 const isActive = (path: string) => isActivePath(currentPath, path);
@@ -59,7 +61,8 @@ const links = [
 
     <div class="z-50 flex items-center gap-2">
       <a
-        href="/register"
+        href={affUrl}
+        rel="nofollow sponsored"
         class="group relative flex skew-x-[-15deg] items-center overflow-hidden border border-[#f6c475] bg-gradient-to-r from-[#8d2b09] to-[#ff7a18] px-3 py-2 shadow-[0_0_15px_rgba(255,122,24,0.35)] transition-all duration-300 hover:shadow-[0_0_22px_rgba(255,122,24,0.55)] xl:px-5">
         <span class="relative z-10 flex skew-x-[15deg] items-center text-sm font-extrabold tracking-wide text-[#160604]">
           <span aria-hidden="true" class="mr-1">🔥</span>
@@ -69,7 +72,8 @@ const links = [
       </a>
 
       <a
-        href="/login"
+        href={affUrl}
+        rel="nofollow sponsored"
         class="group relative hidden skew-x-[-15deg] items-center overflow-hidden border border-[#ff7a18]/55 bg-[#8d2b09]/25 px-3 py-2 transition-all duration-300 hover:bg-[#8d2b09]/45 sm:flex xl:px-5">
         <span class="relative z-10 flex skew-x-[15deg] items-center text-sm font-bold tracking-wide text-[#f6c475]">
           <span aria-hidden="true" class="mr-1">🔑</span>
@@ -109,13 +113,15 @@ const links = [
 
       <div class="mt-4 space-y-3 border-t border-[#ff7a18]/25 pt-5">
         <a
-          href="/register"
+          href={affUrl}
+          rel="nofollow sponsored"
           class="flex w-full items-center justify-center rounded-xl border border-[#f6c475] bg-gradient-to-r from-[#8d2b09] to-[#ff7a18] py-3.5 text-base font-extrabold text-[#160604] shadow-[0_0_18px_rgba(255,122,24,0.35)]">
           <span aria-hidden="true" class="mr-2 text-xl">🔥</span>
           สมัครสมาชิก
         </a>
         <a
-          href="/login"
+          href={affUrl}
+          rel="nofollow sponsored"
           class="flex w-full items-center justify-center rounded-xl border border-[#ff7a18]/55 bg-white/5 py-3.5 text-base font-bold text-[#f6c475] transition-colors hover:bg-white/10">
           <span aria-hidden="true" class="mr-2 text-xl">🔑</span>
           เข้าสู่ระบบ

@@ -1,48 +1,48 @@
 ---
-import ContentBoxTwo from "./ContentBoxTwo.astro";
+import ContentBoxTwoCyberCut from "./ContentBoxTwoCyberCut.astro";
 import { BRAND_NAME } from "../lib/brandProfile";
 
-const games = [
+const tables = [
   {
-    icon: "🤠",
-    name: "Wild Bandito",
-    provider: "PG Soft",
-    detail: "ใช้ระบบร่วงหล่น ตัวคูณเพิ่มทุกครั้งที่ชนะต่อเนื่องในสปินเดียว",
-    tag: "ร่วงหล่น",
+    icon: "🃏",
+    name: "บาคาร่า",
+    provider: "WM Casino · Dream Gaming",
+    detail: "อ่านเค้าไพ่แล้ววางฝั่งผู้เล่น เจ้ามือ หรือเสมอ",
+    tag: "ไพ่สด",
   },
   {
-    icon: "⚡",
-    name: "Gates of Olympus",
-    provider: "Pragmatic Play",
-    detail: "จ่ายแบบไม่ต้องเรียงไลน์ มีลูกแก้วตัวคูณตกลงมาทบยอดชนะ",
-    tag: "ไม่ต้องเรียงไลน์",
+    icon: "🎲",
+    name: "ไฮโล",
+    provider: "WM Casino · Dream Gaming",
+    detail: "ทายผลสูงต่ำ แต้มรวม และตองในแต่ละตา",
+    tag: "ลูกเต๋า",
   },
   {
-    icon: "💎",
-    name: "Fortune Gems",
-    provider: "JILI",
-    detail: "วงล้อ 3×3 ที่มีวงตัวคูณแยกอยู่ทางขวา",
-    tag: "วงล้อ 3×3",
+    icon: "♠️",
+    name: "แบล็คแจ็ค",
+    provider: "WM Casino · Dream Gaming",
+    detail: "ตัดสินใจขอไพ่เพิ่มหรือหยุดในแต่ละตา",
+    tag: "ไพ่สด",
   },
 ];
-const chips = ["PG Soft", "Pragmatic Play", "JILI"];
+const chips = ["WM Casino", "Dream Gaming (DG)"];
 
 const inputClass =
-  "w-full rounded-xl border border-[#cfe9f4] bg-white py-3 pr-4 pl-12 text-[#23323f] transition-all outline-none placeholder:text-[#5a6b7a] focus:border-[#00a4d4] focus:ring-2 focus:ring-[#00a4d4]/25";
+  "w-full rounded-xl border border-[#f1d9c4] bg-white py-3 pr-4 pl-12 text-[#2b2622] transition-all outline-none placeholder:text-[#6b5f56] focus:border-[#f47b20] focus:ring-2 focus:ring-[#f47b20]/25";
 ---
 
-<ContentBoxTwo as="p" title={`เข้าสู่ระบบ ${BRAND_NAME}`} label={`เข้าสู่ระบบ ${BRAND_NAME} และเกมตัวอย่างจาก PG Soft, Pragmatic Play และ JILI`}>
+<ContentBoxTwoCyberCut title={`เข้าสู่ระบบ ${BRAND_NAME}`} label={`เข้าสู่ระบบ ${BRAND_NAME} และโต๊ะคาสิโนสดจาก WM Casino และ Dream Gaming`}>
   <div slot="left" class="flex h-full flex-col gap-4">
-    <div class="relative overflow-hidden rounded-2xl border border-[#cfe9f4] bg-gradient-to-b from-[#e8f7fd] to-white p-6 shadow-[0_10px_30px_rgba(12,53,80,0.08)]">
+    <div class="relative overflow-hidden rounded-2xl border border-[#f1d9c4] bg-gradient-to-b from-[#fff3e8] to-white p-6 shadow-[0_10px_30px_rgba(31,22,17,0.08)]">
       <div class="mb-5 flex items-center gap-3">
         <span
           aria-hidden="true"
-          class="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl border-2 border-white bg-gradient-to-b from-[#ffd23f] via-[#ffb84d] to-[#f7941d] text-sm font-black text-[#4a1d00] shadow-[0_5px_15px_rgba(247,148,29,0.40)]">
-          569
+          class="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl border-2 border-[#ffe3b8] bg-gradient-to-b from-[#ffc94a] via-[#f47b20] to-[#c85a0c] text-xl shadow-[0_5px_15px_rgba(244,123,32,0.40)]">
+          🐯
         </span>
         <div class="flex flex-col">
-          <p class="text-base font-black text-[#0c3550]">ยินดีต้อนรับกลับสู่ <span class="text-[#a35000]">{BRAND_NAME}</span></p>
-          <span class="text-xs text-[#5a6b7a]">สมาชิกเดิมล็อกอินด้วยยูสเดิมได้ทุกเครื่อง ทั้งเว็บมือถือ แอป และคอม</span>
+          <p class="text-base font-black text-[#1f1611]">ยินดีต้อนรับกลับสู่ <span class="text-[#a84a06]">{BRAND_NAME}</span></p>
+          <span class="text-xs text-[#6b5f56]">ยูสเดิมล็อกอินได้ทุกเครื่องทั้ง iOS และ Android ผ่านเบราว์เซอร์ ไม่ต้องสมัครซ้ำ</span>
         </div>
       </div>
 
@@ -57,74 +57,74 @@ const inputClass =
         </div>
 
         <div class="flex items-center justify-between px-1 text-xs">
-          <label class="flex items-center gap-2 text-[#5a6b7a]">
-            <input type="checkbox" class="h-3.5 w-3.5 rounded border-[#cfe9f4] accent-[#00a4d4]" />
+          <label class="flex items-center gap-2 text-[#6b5f56]">
+            <input type="checkbox" class="h-3.5 w-3.5 rounded border-[#f1d9c4] accent-[#f47b20]" />
             จดจำฉันไว้
           </label>
-          <a href="/login/" class="text-[#5a6b7a] transition-colors hover:text-[#006d99]">ลืมรหัสผ่าน?</a>
+          <a href="/login/" class="text-[#6b5f56] transition-colors hover:text-[#1557b0]">ลืมรหัสผ่าน?</a>
         </div>
 
         <a
           href="/login/"
-          class="mt-1 block w-full rounded-xl border-2 border-white bg-gradient-to-b from-[#19b2e0] to-[#0077b3] p-3.5 text-center font-black text-white shadow-[0_10px_30px_rgba(0,164,212,0.35)] transition-all hover:scale-[1.02]">
+          class="mt-1 block w-full rounded-xl border-2 border-white/70 bg-gradient-to-b from-[#3d8bf0] to-[#1557b0] p-3.5 text-center font-bold text-white shadow-[0_8px_22px_rgba(31,111,214,0.35)] transition-transform hover:scale-[1.02] motion-reduce:hover:scale-100">
           เข้าสู่ระบบ
         </a>
 
-        <div class="flex items-center gap-3 py-1 text-xs text-[#5a6b7a]">
-          <span aria-hidden="true" class="h-px flex-1 bg-[#cfe9f4]"></span>
+        <div class="flex items-center gap-3 py-1 text-xs text-[#6b5f56]">
+          <span aria-hidden="true" class="h-px flex-1 bg-[#f1d9c4]"></span>
           หรือ
-          <span aria-hidden="true" class="h-px flex-1 bg-[#cfe9f4]"></span>
+          <span aria-hidden="true" class="h-px flex-1 bg-[#f1d9c4]"></span>
         </div>
 
         <a
           href="/register/"
-          class="flex w-full items-center justify-center gap-2 rounded-xl border-2 border-white bg-gradient-to-b from-[#ffd23f] via-[#ffb84d] to-[#f7941d] p-3.5 text-center font-black text-[#4a1d00] shadow-[0_10px_30px_rgba(247,148,29,0.40)] transition-all hover:scale-[1.02]">
-          <span aria-hidden="true">✨</span>
+          class="flex w-full items-center justify-center gap-2 rounded-xl border-2 border-[#ffe3b8] bg-gradient-to-b from-[#ffc94a] via-[#f47b20] to-[#c85a0c] p-3.5 text-center font-black text-[#2a1300] shadow-[0_8px_22px_rgba(244,123,32,0.40)] transition-transform hover:scale-[1.02] motion-reduce:hover:scale-100">
+          <span aria-hidden="true">🐯</span>
           <span>สมัครสมาชิก</span>
         </a>
 
         <a
           href="/line/"
-          class="flex w-full items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-[#00B900] to-[#009900] p-3 text-sm font-bold text-white shadow-md transition-all hover:scale-[1.02]">
+          class="flex w-full items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-[#00B900] to-[#009900] p-3 text-sm font-bold text-white shadow-md transition-transform hover:scale-[1.02] motion-reduce:hover:scale-100">
           <span aria-hidden="true">💬</span>
-          <span>แอดไลน์ทีมงาน</span>
+          <span>ติดต่อแอดมินทาง LINE</span>
         </a>
 
         <div class="mt-1 flex flex-wrap gap-2 px-1">
-          <span class="rounded-full bg-[#0c3550] px-2.5 py-1 text-[10px] font-bold text-white"><span aria-hidden="true">🔒</span> ไม่ส่งรหัสผ่านหรือ OTP ให้ใคร</span>
-          <span class="rounded-full border border-[#cfe9f4] bg-[#e8f7fd] px-2.5 py-1 text-[10px] font-bold text-[#006d99]"><span aria-hidden="true">📱</span> เว็บมือถือ · แอป · คอม</span>
+          <span class="rounded-full bg-[#1a120c] px-2.5 py-1 text-[10px] font-bold text-[#fff1e4]"><span aria-hidden="true">🔒</span> ไม่บอกรหัสผ่านหรือ OTP กับผู้อื่น</span>
+          <span class="rounded-full border border-[#1f6fd6]/30 bg-[#eaf3ff] px-2.5 py-1 text-[10px] font-bold text-[#1557b0]"><span aria-hidden="true">📱</span> iOS · Android ผ่านเบราว์เซอร์</span>
         </div>
       </div>
     </div>
   </div>
 
   <div slot="right" class="h-full">
-    <div class="flex h-full flex-col rounded-2xl border border-[#cfe9f4] bg-white p-5 shadow-[0_10px_30px_rgba(12,53,80,0.08)]">
+    <div class="flex h-full flex-col rounded-2xl border border-[#f1d9c4] bg-white p-5 shadow-[0_10px_30px_rgba(31,22,17,0.08)]">
       <div class="mb-5">
-        <span class="text-xs font-bold tracking-wide text-[#5a6b7a]">เกมตัวอย่างจาก PG Soft, Pragmatic Play และ JILI</span>
-        <p class="text-2xl leading-normal font-black text-[#0c3550] sm:text-3xl">ลองโหมดทดลองก่อน <span aria-hidden="true" class="text-[#f7941d]">•</span> แล้วค่อยเลือกเกมที่เข้ามือ</p>
+        <span class="text-xs font-bold tracking-wide text-[#6b5f56]">โต๊ะคาสิโนสดจาก WM Casino และ Dream Gaming</span>
+        <p class="text-2xl leading-normal font-black text-[#1f1611] sm:text-3xl">ดูภาพสดหน้าโต๊ะ <span aria-hidden="true" class="text-[#f47b20]">•</span> แล้วค่อยลงเดิมพัน</p>
       </div>
 
-      <div class="mb-2 flex items-center justify-between text-[11px] font-bold tracking-widest text-[#5a6b7a]">
+      <div class="mb-2 flex items-center justify-between text-[11px] font-bold tracking-widest text-[#6b5f56]">
         <span>เกม / ค่าย</span>
-        <span>กลไกหลัก</span>
+        <span>รูปแบบ</span>
       </div>
 
       <ul class="flex flex-1 flex-col gap-2.5">
         {
-          games.map((g) => (
-            <li class="rounded-xl border border-[#cfe9f4] bg-[#e8f7fd] px-3.5 py-2.5 transition-colors hover:border-[#8ed3ee] hover:bg-white">
+          tables.map((t) => (
+            <li class="rounded-xl border border-[#f1d9c4] bg-[#fff3e8] px-3.5 py-2.5 transition-colors hover:border-[#f0a868] hover:bg-white">
               <div class="flex items-center justify-between gap-2 text-sm">
-                <span class="flex min-w-0 items-center gap-2 font-bold text-[#0c3550]">
+                <span class="flex min-w-0 items-center gap-2 font-bold text-[#1f1611]">
                   <span aria-hidden="true" class="w-5 shrink-0 text-center">
-                    {g.icon}
+                    {t.icon}
                   </span>
-                  <span class="truncate">{g.name}</span>
+                  <span class="truncate">{t.name}</span>
                 </span>
-                <span class="shrink-0 rounded-full bg-gradient-to-b from-[#0077b3] to-[#006d99] px-2.5 py-0.5 text-[10px] font-bold text-white">{g.tag}</span>
+                <span class="shrink-0 rounded-full bg-gradient-to-b from-[#1f6fd6] to-[#0f4fa8] px-2.5 py-0.5 text-[10px] font-bold text-white">{t.tag}</span>
               </div>
-              <p class="mt-1.5 text-xs leading-relaxed text-[#5a6b7a]">
-                <span class="font-bold text-[#a35000]">{g.provider}</span> · {g.detail}
+              <p class="mt-1.5 text-xs leading-relaxed text-[#6b5f56]">
+                <span class="font-bold text-[#a84a06]">{t.provider}</span> · {t.detail}
               </p>
             </li>
           ))
@@ -132,14 +132,12 @@ const inputClass =
       </ul>
 
       <div class="mt-4 flex flex-wrap items-center justify-center gap-2">
-        {chips.map((c) => <span class="rounded-full border border-[#ffb84d]/60 bg-[#fff4e5] px-3 py-1 text-[10px] font-bold text-[#a35000]">{c}</span>)}
+        {chips.map((c) => <span class="rounded-full border border-[#f0a868]/60 bg-[#fff3e8] px-3 py-1 text-[10px] font-bold text-[#a84a06]">{c}</span>)}
       </div>
 
-      <p class="mt-3 text-center text-[11px] leading-relaxed tracking-wide text-[#5a6b7a]">
-        ทดลองเล่นได้โดยไม่ต้องฝากเงินหรือสมัครก่อน เครดิตทดลองถอนไม่ได้ อ่านกติกาในหน้าเกมก่อนเริ่มเล่นจริง
-      </p>
+      <p class="mt-3 text-center text-[11px] leading-relaxed tracking-wide text-[#6b5f56]">ทุกโต๊ะมีดีลเลอร์ดำเนินเกมจริงผ่านภาพสด กติกาของแต่ละโต๊ะดูได้ในหน้าเกมก่อนลงเดิมพัน</p>
 
-      <a href="/ทดลองเล่น/" class="mt-3 self-center text-xs font-bold text-[#006d99] underline underline-offset-4 transition-colors hover:text-[#a35000]">ไปที่หน้าทดลองเล่น</a>
+      <a href="/ทางเข้า/" class="mt-3 self-center text-xs font-bold text-[#1557b0] underline underline-offset-4 transition-colors hover:text-[#a84a06]">ไปที่ทางเข้า {BRAND_NAME}</a>
     </div>
   </div>
-</ContentBoxTwo>
+</ContentBoxTwoCyberCut>

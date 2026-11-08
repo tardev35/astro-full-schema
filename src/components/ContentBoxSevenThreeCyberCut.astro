@@ -1,44 +1,56 @@
 ---
 export interface Props {
+  title?: string;
   titleleft?: string;
   titleright?: string;
   as?: "h1" | "h2" | "h3" | "h4" | "h5" | "h6";
 }
-const { titleleft, titleright, as: HeadingTag = "h2" } = Astro.props;
+const { title, titleleft, titleright, as: HeadingTag = "h2" } = Astro.props;
 ---
 
 <section class="mx-auto mb-6 w-full max-w-7xl px-4 font-sans">
   <div
-    class="relative isolate w-full border border-[#d6e2f7] bg-white p-8 text-[#1f2a44] transition-colors duration-300 hover:border-[#9dbcf0]"
+    class="relative isolate w-full border border-[#f1d9c4] bg-white p-8 text-[#2b2622] transition-colors duration-300 hover:border-[#f0a868]"
     style="clip-path: polygon(30px 0, 100% 0, 100% calc(100% - 30px), calc(100% - 30px) 100%, 0 100%, 0 30px);">
-    <div aria-hidden="true" class="absolute top-0 left-0 -z-10 h-[2px] w-24 bg-gradient-to-r from-[#1a5fe0] to-transparent"></div>
-    <div aria-hidden="true" class="absolute right-0 bottom-0 -z-10 h-[2px] w-24 bg-gradient-to-l from-[#e0a91b] to-transparent"></div>
-    <div aria-hidden="true" class="absolute top-0 left-0 -z-10 h-16 w-[2px] bg-gradient-to-b from-[#1a5fe0] to-transparent"></div>
-    <div aria-hidden="true" class="absolute right-0 bottom-0 -z-10 h-16 w-[2px] bg-gradient-to-t from-[#e0a91b] to-transparent"></div>
+    <div aria-hidden="true" class="absolute top-0 left-0 -z-10 h-[3px] w-28 bg-gradient-to-r from-[#1f6fd6] to-transparent"></div>
+    <div aria-hidden="true" class="absolute top-0 left-0 -z-10 h-20 w-[3px] bg-gradient-to-b from-[#1f6fd6] to-transparent"></div>
+    <div aria-hidden="true" class="absolute right-0 bottom-0 -z-10 h-[3px] w-28 bg-gradient-to-l from-[#f47b20] to-transparent"></div>
+    <div aria-hidden="true" class="absolute right-0 bottom-0 -z-10 h-20 w-[3px] bg-gradient-to-t from-[#f47b20] to-transparent"></div>
+
+    {
+      title && (
+        <header class="mb-8 flex items-baseline gap-3 border-b border-[#f1d9c4] pb-4">
+          <span aria-hidden="true" class="text-[#f47b20]">
+            &#9670;
+          </span>
+          <HeadingTag class="text-xl leading-normal font-black text-[#1f1611] md:text-2xl">{title}</HeadingTag>
+        </header>
+      )
+    }
 
     <div class="grid grid-cols-1 gap-8 md:grid-cols-[2fr_3fr] md:items-center">
-      <article class="flex flex-col gap-4 text-left text-base leading-relaxed text-[#1f2a44]">
+      <article class="flex flex-col gap-4 text-left text-base leading-relaxed text-[#2b2622]">
         {
           titleleft && (
-            <div class="flex items-baseline gap-2 border-b border-[#d6e2f7] pb-2">
-              <span aria-hidden="true" class="text-[#1a5fe0]">
+            <div class="flex items-baseline gap-2 border-b border-[#f1d9c4] pb-2">
+              <span aria-hidden="true" class="text-[#1f6fd6]">
                 &#9670;
               </span>
-              <p class="text-xl leading-normal font-black text-[#0a1f5c]">{titleleft}</p>
+              <p class="text-xl leading-normal font-black text-[#1f1611]">{titleleft}</p>
             </div>
           )
         }
         <slot name="left" />
       </article>
 
-      <article class="flex flex-col gap-4 text-left text-base leading-relaxed text-[#1f2a44] md:border-l md:border-[#d6e2f7] md:pl-8">
+      <article class="flex flex-col gap-4 text-left text-base leading-relaxed text-[#2b2622] md:border-l md:border-[#f1d9c4] md:pl-8">
         {
           titleright && (
-            <div class="flex items-baseline gap-2 border-b border-[#d6e2f7] pb-2">
-              <span aria-hidden="true" class="text-[#e0a91b]">
+            <div class="flex items-baseline gap-2 border-b border-[#f1d9c4] pb-2">
+              <span aria-hidden="true" class="text-[#f47b20]">
                 &#9670;
               </span>
-              <HeadingTag class="text-xl leading-normal font-black text-[#0a1f5c]">{titleright}</HeadingTag>
+              <HeadingTag class="text-xl leading-normal font-black text-[#1f1611]">{titleright}</HeadingTag>
             </div>
           )
         }

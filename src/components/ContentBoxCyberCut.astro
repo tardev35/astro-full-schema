@@ -9,17 +9,18 @@ const headingSize = HeadingTag === "h1" ? "text-2xl md:text-3xl" : "text-xl md:t
 
 <section class="my-6 flex w-full justify-center px-4 font-sans">
   <div
-    class="relative isolate w-full max-w-7xl border border-[#d6e2f7] bg-white p-8 text-left text-base leading-relaxed text-[#1f2a44]"
+    class="relative isolate w-full max-w-7xl border border-[#f1d9c4] bg-white p-8 text-left text-base leading-relaxed text-[#2b2622]"
     style="clip-path: polygon(40px 0, 100% 0, 100% calc(100% - 40px), calc(100% - 40px) 100%, 0 100%, 0 40px);">
-    <div aria-hidden="true" class="absolute top-0 left-0 -z-10 h-1 w-32 bg-gradient-to-r from-[#1a5fe0] to-transparent"></div>
-    <div aria-hidden="true" class="absolute right-0 bottom-0 -z-10 h-1 w-32 bg-gradient-to-l from-[#e0a91b] to-transparent"></div>
-    <div aria-hidden="true" class="absolute top-0 left-0 -z-10 h-32 w-1 bg-gradient-to-b from-[#1a5fe0] to-transparent"></div>
-    <div aria-hidden="true" class="absolute right-0 bottom-0 -z-10 h-32 w-1 bg-gradient-to-t from-[#e0a91b] to-transparent"></div>
+    <div aria-hidden="true" class="absolute top-0 left-0 -z-10 h-1 w-32 bg-gradient-to-r from-[#f47b20] to-transparent"></div>
+    <div aria-hidden="true" class="absolute top-0 left-0 -z-10 h-32 w-1 bg-gradient-to-b from-[#f47b20] to-transparent"></div>
+    <div aria-hidden="true" class="absolute right-0 bottom-0 -z-10 h-1 w-32 bg-gradient-to-l from-[#1f6fd6] to-transparent"></div>
+    <div aria-hidden="true" class="absolute right-0 bottom-0 -z-10 h-32 w-1 bg-gradient-to-t from-[#1f6fd6] to-transparent"></div>
+    <div aria-hidden="true" class="pointer-events-none absolute -top-16 right-10 -z-10 h-32 w-56 rounded-full bg-[#fff3e8] blur-[40px]"></div>
 
     {
       title && (
-        <header class="mb-8 border-l-4 border-[#e0a91b] pl-6">
-          <HeadingTag class={`text-[#0a1f5c] ${headingSize} leading-normal font-black`}>{title}</HeadingTag>
+        <header class="mb-8 border-l-4 border-[#f47b20] pl-6">
+          <HeadingTag class={`text-[#1f1611] ${headingSize} leading-normal font-black`}>{title}</HeadingTag>
         </header>
       )
     }

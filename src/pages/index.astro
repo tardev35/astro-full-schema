@@ -1,72 +1,52 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
-import Announcement from "../components/Announcement5.astro";
+import Announcement from "../components/AnnouncementCyber.astro";
 import ContentBox from "../components/ContentBox.astro";
-import ContentBoxNeumorphism from "../components/ContentBoxNeumorphism.astro";
-import ContentBoxSpecial from "../components/ContentBoxSpecial.astro";
-import ContentBoxSevenThreeFloatingBadge from "../components/ContentBoxSevenThreeFloatingBadge.astro";
-import ContentBoxTwoNeumorphism from "../components/ContentBoxTwoNeumorphism.astro";
-import ContentBoxSevenThreeNeumorphism from "../components/ContentBoxSevenThreeNeumorphism.astro";
-import Faq4 from "../components/Faq4.astro";
+import ContentBoxPremium from "../components/ContentBoxPremium.astro";
+import ContentBoxCyberCut from "../components/ContentBoxCyberCut.astro";
+import ContentBoxSevenThreePremium from "../components/ContentBoxSevenThreePremium.astro";
+import ContentBoxTwoPremium from "../components/ContentBoxTwoPremium.astro";
+import ContentBoxSevenThreeCyberCut from "../components/ContentBoxSevenThreeCyberCut.astro";
+import ContentBoxFloatingBadge from "../components/ContentBoxFloatingBadge.astro";
 import SmoothCarousel from "../components/SmoothCarousel.astro";
-import ProviderGridPremium from "../components/ProviderGridPremium.astro";
-import LatestWinners2 from "../components/LatestWinners2.astro";
+import ProviderGrid from "../components/ProviderGrid.astro";
+import LatestWinnersCyber from "../components/LatestWinnersCyber.astro";
 import LoginRtpSection from "../components/LoginRtpSection.astro";
-import ReviewCardSumo from "../components/ReviewCardSumo.astro";
+import ReviewCardSumo2 from "../components/ReviewCardSumo2.astro";
 import Navfoot from "../components/Navfoot.astro";
 
 import { Picture } from "astro:assets";
 import { pageGraph } from "../lib/schema";
-import imgDeposit from "../assets/slide1.png";
-import imgSignup from "../assets/slide3.png";
+import imgSlots from "../assets/slide4.png";
+import imgDeposit from "../assets/slide3.png";
 
-const pageTitle = "MEEHAY569 สล็อตเว็บตรง ฝากถอนทรูวอเลท 1 บาท ทดลองเล่นก่อนสมัคร";
+const pageTitle = "TG787 | คาสิโนออนไลน์ควบคู่สล็อตเว็บตรง ฝากถอนออโต้ใน 3 นาที";
 
 const pageDescription =
-  "MEEHAY569 สล็อตเว็บตรง ไม่ผ่านเอเย่นต์ ฝากถอนทรูวอเลทออโต้เริ่ม 1 บาท ทดลองเล่นสล็อตก่อนตัดสินใจ มือใหม่หรือสายทุนน้อยก็เริ่มได้ สมัครง่าย 4 ขั้นตอน";
+  "เปิดบัญชี TG787 คาสิโนออนไลน์ถ่ายทอดสดพร้อมสล็อตเว็บตรง เว็บใหญ่จ่ายจริง ฝากถอนไม่มีขั้นต่ำผ่านระบบออโต้เสร็จใน 3 นาที เล่นบนมือถือสะดวกทุกเวลา สมัครวันนี้";
 
-const h1Title = "MEEHAY569 สล็อตเว็บตรง ฝากถอนทรูวอเลท 1 บาท ทดลองเล่นก่อนสมัคร";
+const h1Title = "TG787 คาสิโนออนไลน์ควบคู่สล็อตเว็บตรง ฝากถอนออโต้ใน 3 นาที";
 
 const announcementMessage =
-  "MEEHAY569 สล็อตเว็บตรง ไม่ผ่านเอเย่นต์ • ฝากถอนทรูวอเลทออโต้ เริ่ม 1 บาท ตลอด 24 ชั่วโมง ไม่ต้องส่งสลิป • ทดลองเล่นสล็อตได้โดยไม่ต้องฝากเงินหรือสมัครก่อน • สมัครง่าย 4 ขั้นตอน เล่นได้ทั้งเว็บมือถือ แอป และคอม";
+  "TG787 คาสิโนออนไลน์ถ่ายทอดสดควบคู่สล็อตเว็บตรง • ฝากถอนไม่มีขั้นต่ำ ระบบออโต้ทำรายการเสร็จใน 3 นาที ตลอด 24 ชั่วโมง • ล็อกอินยูสเดิมได้ทุกเครื่องทั้ง iOS และ Android ผ่านเบราว์เซอร์ • ติดปัญหาการใช้งานติดต่อแอดมินผ่านช่องทางบนหน้าเว็บได้ทันที";
+
+const slotsAlt =
+  "โลโก้หัวเสือ TG787 สล็อตออนไลน์ ครบหลายค่าย รวมเกมยอดนิยมไว้ในที่เดียว ป้ายเกมหลากหลาย ใช้งานสะดวก เลือกได้ครบ และปุ่มเริ่มสนุก พรีเซนเตอร์ชุดสูทสีครีมลายทองชูมือถือ ท่ามกลางเสาหินสีขาวและเหรียญทองบนท้องฟ้าสดใส";
 
 const depositAlt =
-  "โลโก้ MEEHAY569 ตัวอักษรสีฟ้าเลข 569 สีทอง ฝากครบ 500 รับเครดิตฟรี 50 โปรลุ้นสนุก ใช้ได้จริง สมัครวันนี้คุ้มกว่า สำหรับสมาชิกที่ร่วมกิจกรรม ปุ่มรับสิทธิ์เลย พรีเซนเตอร์ชุดเลื่อมสีเงิน กบเขียว มังกรข้างวงล้อ 777 และเหรียญทองบนท้องฟ้า";
-
-const signupAlt =
-  "โลโก้ MEEHAY569 ตัวอักษรสีฟ้าเลข 569 สีทอง สมาชิกใหม่ ฝาก 100 รับ 300 สมัครง่าย รับไว โปรเริ่มต้นสุดคุ้ม ทำยอดตามเงื่อนไขก่อนถอน ปุ่มสมัครเลย พรีเซนเตอร์ชุดเลื่อมสีเงิน กบเขียวสวมมงกุฎชูนิ้วโป้งและถ้วยรางวัลสีทอง";
-
-const faqTitle = "FAQ สิ่งที่คนถามก่อนเล่นสล็อตเว็บตรงกับเรา";
-
-const faqs = [
-  {
-    q: "เล่นสล็อตเวลาไหนแตกดี?",
-    a: "ไม่มีเวลาตายตัว แต่ละสปินเป็นผลสุ่ม กลางวันหรือกลางคืนจึงลุ้นเหมือนกัน เลือกเวลาที่คุณเล่นได้สบายจะดีกว่าครับ",
-  },
-  {
-    q: "มือใหม่หัดเล่นสล็อตเริ่มยังไงดี?",
-    a: "เริ่มจากโหมดทดลองเล่นก่อน เลือกเกมที่กติกาเข้าใจง่าย ดูว่าฟีเจอร์ทำงานแบบไหน แล้วค่อยเริ่มเล่นจริงจากยอดเล็กครับ",
-  },
-  {
-    q: "สมัคร MEEHAY569 ต้องใช้อะไรบ้าง?",
-    a: "ใช้เบอร์โทรศัพท์ที่รับ OTP ได้ แล้วทำตามขั้นตอนบนเว็บจนฝากเงินเข้าระบบ รหัส OTP ห้ามบอกใครครับ",
-  },
-  {
-    q: "ไม่มีบัญชีธนาคาร เล่นได้จริงไหม?",
-    a: "ได้ ใช้ทรูวอเลทฝากถอนแทนบัญชีธนาคารได้ เริ่มที่ 1 บาท และทำรายการเองได้ตลอด 24 ชั่วโมงครับ",
-  },
-];
+  "โลโก้หัวเสือ TG787 ฝากถอนไม่มีขั้นต่ำ ระบบออโต้ ใช้งานง่าย รวดเร็ว ป้ายอัตโนมัติ ทันสมัย สะดวก และปุ่มสมัครเลย เฟืองสีทองขนาดใหญ่มีไอคอนลูกศรหมุนวน พรีเซนเตอร์ชุดผ้าไหมสีเงินลายเสือถือมือถือ";
 
 const graph = pageGraph(Astro, {
   name: h1Title,
   description: pageDescription,
-  faqs,
 });
 
-const body = "text-left text-base leading-relaxed text-[#23323f]";
-const brandMark = "font-bold text-[#a35000]";
-const inlineLink = "font-bold text-[#006d99] underline underline-offset-4 transition-colors hover:text-[#a35000]";
-const slideFrame = "mx-auto h-auto w-full max-w-md rounded-2xl border border-[#cfe9f4] shadow-[0_10px_30px_rgba(0,164,212,0.18)]";
+const body = "text-left text-base leading-relaxed text-[#2b2622]";
+const brandMark = "font-bold text-[#a84a06]";
+const inlineLink = "font-bold text-[#1557b0] underline underline-offset-4 transition-colors hover:text-[#a84a06]";
+const slideFrame = "mx-auto h-auto w-full max-w-md rounded-2xl border border-[#f1d9c4] shadow-[0_10px_30px_rgba(244,123,32,0.18)]";
+const listItem = "rounded-xl border border-[#f1d9c4] bg-[#fff3e8] p-4 text-left text-base leading-relaxed text-[#2b2622]";
+const listLabel = "font-bold text-[#1f1611]";
 ---
 
 <MainLayout title={pageTitle} description={pageDescription}>
@@ -74,27 +54,52 @@ const slideFrame = "mx-auto h-auto w-full max-w-md rounded-2xl border border-[#c
 
   <Announcement message={announcementMessage} />
 
-  <ContentBoxNeumorphism as="h1" title={h1Title}>
-    <p class={body}>
-      <strong class={brandMark}>MEEHAY569</strong> (มีเฮ) สล็อตเว็บตรง สร้างมาให้คนที่ไม่มีบัญชีธนาคาร มีทุนไม่มาก หรืออยากลองเกมก่อนจ่ายจริง เราให้บริการแบบไม่ผ่านเอเย่นต์ ฝากถอนทรูวอเลทด้วยระบบออโต้ เริ่มได้ที่ 1 บาท ตลอด 24 ชั่วโมง
-    </p>
-    <p class={`mt-4 ${body}`}>
-      คุณ<a href="/ทดลองเล่น/" class={inlineLink}>ทดลองเล่นสล็อต</a>ได้โดยไม่ต้องฝากเงินหรือสมัครก่อน มีเกมจาก PG Soft, Pragmatic Play และ JILI ให้เลือก ส่วนใครอยากพักจากวงล้อก็มีบาคาร่า ไฮโล รูเล็ต และเสือมังกรรออยู่
-    </p>
-  </ContentBoxNeumorphism>
+  <ContentBoxPremium as="h1" title={h1Title}>
+    <p class={body}>ผู้เล่นที่กังวลเรื่องความชัดเจนของหน้าโต๊ะเดิมพันมักมองหาพื้นที่ที่แสดงผลตรงไปตรงมา <strong class={brandMark}>TG787</strong> คาสิโนออนไลน์ของเราจึงเปิดโต๊ะถ่ายทอดสดเคียงคู่กับหมวดสล็อตในรูปแบบเว็บตรงที่เป็นเว็บใหญ่จ่ายจริง</p>
+    <p class={`mt-4 ${body}`}>คุณเข้าดูหน้าโต๊ะถ่ายทอดสดหรือเปลี่ยนไปหมุนวงล้อได้จากหน้าเว็บเดียวกัน พร้อมจัดการยอดเงินแบบ<a href="/วิธีฝากถอน/" class={inlineLink}>ฝากถอนไม่มีขั้นต่ำ</a>และใช้ฝากถอนออโต้ซึ่งเสร็จสิ้นใน 3 นาทีผ่านเบราว์เซอร์บนมือถือได้ทันที</p>
+  </ContentBoxPremium>
 
   <SmoothCarousel />
 
-  <ContentBoxSpecial as="h2" title="MEEHAY569 สล็อตเว็บตรง ไม่ผ่านเอเย่นต์ คุยกับเราได้โดยตรง" iconleft="🤝" iconright="📱">
-    <p slot="left" class={body}>
-      คนกลางยิ่งน้อย เรื่องยิ่งง่าย! เคยเล่นผ่านตัวแทนแล้วพอมีปัญหาก็ไม่รู้ว่าต้องไปถามใคร ที่นี่คุณสมัครและเล่นกับเราโดยตรง ไม่ต้องผ่านเอเย่นต์ เวลาจะฝาก ถอน หรือสอบถามอะไรจึงมีปลายทางเดียว
-    </p>
-    <p slot="right" class={body}>
-      การเข้าเล่นก็เลือกได้ตามถนัด เปิดผ่านหน้าเว็บบนมือถือได้ทุกระบบ หรือจะดาวน์โหลดแอปไว้ในเครื่องก็ได้ ถ้าอยู่หน้าคอมก็เล่นบนจอใหญ่ได้เหมือนกัน ส่วนสมาชิกเดิมกลับมาที่<a href="/ทางเข้า/" class={inlineLink}>ทางเข้า</a> <strong class={brandMark}>MEEHAY569</strong> แล้วล็อกอินด้วยยูสเดิมได้ทุกเครื่อง
-    </p>
-  </ContentBoxSpecial>
+  <ContentBoxCyberCut as="h2" title="TG787 คาสิโนออนไลน์ถ่ายทอดสดจากค่ายดังพร้อมโต๊ะเดิมพันที่อ่านผลง่าย">
+    <p class={body}>คนที่ชอบเห็นจังหวะเปิดไพ่ด้วยตาตัวเองย่อมรู้ดีว่าภาพสดสำคัญแค่ไหน ห้องคาสิโนออนไลน์ของเราจึงเปิดโต๊ะสดจากค่าย WM Casino และ Dream Gaming (DG) ให้คุณดูดีลเลอร์แจกไพ่จริงผ่านภาพสด</p>
+    <p class={`mt-4 ${body}`}>ไม่ว่าจะเลือกอ่านเค้าไพ่บาคาร่าเพื่อวางฝั่งผู้เล่น เจ้ามือ หรือเสมอ สลับไปทายผลสูงต่ำ แต้มรวม และตองในโต๊ะไฮโล หรือตัดสินใจขอไพ่เพิ่มหรือหยุดในเกมแบล็คแจ็ค เหมาะกับคนที่ชอบดูจังหวะหน้าโต๊ะด้วยตาตัวเองก่อนลงเดิมพัน</p>
+  </ContentBoxCyberCut>
 
-  <ContentBoxSevenThreeFloatingBadge as="h2" title="ฝากถอนทรูวอเลทกับ MEEHAY569 ออโต้ ไม่มีบัญชีธนาคารก็เริ่มเล่นได้">
+  <ContentBoxSevenThreePremium as="h2" title="TG787 สล็อต รวมเกมระบบร่วงหล่นและตัวคูณจากหลายค่าย">
+    <Picture
+      slot="left"
+      src={imgSlots}
+      alt={slotsAlt}
+      loading="lazy"
+      fetchpriority="low"
+      widths={[280, 380, 480, 600]}
+      sizes="(max-width: 543px) calc(100vw - 96px), (max-width: 767px) 448px, (max-width: 1271px) calc(40vw - 61px), 448px"
+      decoding="async"
+      formats={["avif", "webp"]}
+      fallbackFormat="webp"
+      quality={70}
+      class={slideFrame}
+    />
+
+    <div slot="right" class="flex flex-col gap-4">
+      <p class={body}>ใครที่เล่นสล็อตมานานอาจเบื่อรูปแบบการจ่ายรางวัลแบบเดิม หมวดสล็อตของเราจึงรวมเกมที่มีกลไกต่างกันให้คุณเลือกตามจังหวะที่ถนัด โดยแต่ละเกมมีจุดเด่นเฉพาะตัวดังนี้</p>
+      <ul class="flex flex-col gap-3">
+        <li class={listItem}><strong class={listLabel}>PG Soft (Wild Bandito):</strong> เกมธีมโจรเม็กซิกันที่ใช้ระบบร่วงหล่น เมื่อชนะรางวัลสัญลักษณ์กรอบทองจะกลายเป็นไวลด์ และตัวคูณเพิ่มทุกครั้งที่ชนะต่อเนื่องในสปินเดียว</li>
+        <li class={listItem}><strong class={listLabel}>Pragmatic Play (The Dog House):</strong> โดดเด่นด้วยสัญลักษณ์ไวลด์ตัวคูณ และเมื่อเข้าสู่รอบฟรีสปินไวลด์ค้างอยู่จนจบรอบช่วยให้ลุ้นรางวัลได้ชัดเจนขึ้น</li>
+        <li class={listItem}><strong class={listLabel}>JILI (Golden Empire):</strong> มาในธีมอาณาจักรทองที่ผสานระบบร่วงหล่นกับตัวคูณเข้าด้วยกัน ทำให้การลุ้นสัญลักษณ์ต่อเนื่องในแต่ละรอบเข้าใจง่าย</li>
+      </ul>
+    </div>
+  </ContentBoxSevenThreePremium>
+
+  <ProviderGrid />
+
+  <ContentBoxTwoPremium as="h2" title="เว็บตรงของเรา ล็อกอินยูสเดิมได้ทุกเครื่องผ่านเบราว์เซอร์">
+    <p slot="left" class={body}>ผู้เล่นหลายคนสลับเครื่องเล่นระหว่างวัน แล้วกังวลว่าต้องสมัครใหม่ทุกครั้งที่เปลี่ยนเครื่อง ที่เว็บตรงของเรา เมื่อคุณมียูสเซอร์อยู่แล้วสามารถนำรหัสเดิมไปล็อกอินผ่าน<a href="/ทางเข้า/" class={inlineLink}>ทางเข้า</a> <strong class={brandMark}>TG787</strong> ได้ทุกเครื่องทั้ง iOS และ Android โดยไม่ต้องสมัครซ้ำ</p>
+    <p slot="right" class={body}>เรื่อง<a href="/register/" class={inlineLink}>การสมัคร</a> ฝาก เล่น และถอนทำจนจบบนมือถือเครื่องเดียวผ่านเบราว์เซอร์ได้โดยไม่ต้องโหลดแอป แนะนำให้ตรวจชื่อเว็บบนแถบที่อยู่ก่อนกรอกรหัสเสมอ</p>
+  </ContentBoxTwoPremium>
+
+  <ContentBoxSevenThreeCyberCut as="h2" title="จัดการงบเดิมพันได้อิสระด้วยระบบฝากถอนไม่มีขั้นต่ำที่ทำรายการไว">
     <Picture
       slot="left"
       src={imgDeposit}
@@ -102,7 +107,7 @@ const slideFrame = "mx-auto h-auto w-full max-w-md rounded-2xl border border-[#c
       loading="lazy"
       fetchpriority="low"
       widths={[280, 380, 480, 600]}
-      sizes="(max-width: 543px) calc(100vw - 96px), (max-width: 767px) 448px, (max-width: 1311px) calc(30vw - 41px), 353px"
+      sizes="(max-width: 543px) calc(100vw - 96px), (max-width: 767px) 448px, (max-width: 1247px) calc(40vw - 51px), 448px"
       decoding="async"
       formats={["avif", "webp"]}
       fallbackFormat="webp"
@@ -111,70 +116,26 @@ const slideFrame = "mx-auto h-auto w-full max-w-md rounded-2xl border border-[#c
     />
 
     <div slot="right" class="flex flex-col gap-4">
-      <p class={body}>
-        ไม่มีบัญชีก็ไม่ใช่ปัญหา คุณใช้ทรูวอเลท (TrueMoney Wallet) ฝากถอนกับเราได้เลย โดยไม่ต้องมีบัญชีธนาคาร ระบบเป็นออโต้ คุณทำรายการเองได้ตลอด 24 ชั่วโมง ระบบปรับเครดิตให้เอง ไม่ต้องส่งสลิป
-      </p>
-      <p class={body}>
-        ยอดเริ่มต้นอยู่ที่ 1 บาท คุณจึงเริ่มจากเงินก้อนเล็กเพื่อลองระบบก่อนได้ ถ้าโอนแล้วเครดิตยังไม่ขึ้น อย่าเพิ่งโอนซ้ำ ให้แจ้งเวลากับยอดผ่าน<a href="/contact-us/" class={inlineLink}>ช่องทางบนหน้าเว็บ</a> เราจะได้ตามจากรายการนั้นให้ตรงจุด
-      </p>
+      <p class={body}>คนที่มีแผนแบ่งงบเล่นเป็นรอบสั้นมักอึดอัดเมื่อเจอกฎบังคับยอดโอนเข้าออกที่สูงเกินความจำเป็น เพราะเราเปิดให้คุณใช้งานฝากถอนไม่มีขั้นต่ำควบคู่ไปกับบริการ<a href="/วิธีฝากถอน/" class={inlineLink}>ฝากถอนออโต้</a>ซึ่งใช้เวลาทำรายการเสร็จใน 3 นาที</p>
+      <p class={body}>เมื่อกดโอนแล้วตัวระบบจะปรับเครดิตให้เองโดยไม่ต้องแนบสลิปแจ้งแอดมินให้เสียเวลา คุณจึงเข้ามาเติมเครดิตหรือสั่งถอนยอดได้ตลอด 24 ชั่วโมงตามจังหวะที่สะดวก เหมาะกับคนที่ต้องการควบคุมยอดเงินเข้าออกด้วยตัวเองแบบไม่ยุ่งยาก</p>
     </div>
-  </ContentBoxSevenThreeFloatingBadge>
+  </ContentBoxSevenThreeCyberCut>
 
-  <LatestWinners2 />
+  <LatestWinnersCyber />
 
-  <ContentBoxTwoNeumorphism as="h2" title="ทดลองเล่นสล็อตก่อน แล้วค่อยเลือกสล็อตออนไลน์ที่เข้ามือคุณ">
-    <div slot="left" class="flex flex-col gap-4">
-      <p class={body}>
-        ลองก่อนดีกว่าเดา ชื่อเกมบอกได้แค่ธีม แต่จังหวะข้างในต้องลองเอง <a href="/ทดลองเล่น/" class={inlineLink}>โหมดทดลองเล่นสล็อต</a>ของเราเปิดให้ลองได้โดยไม่ต้องฝากเงินหรือสมัครก่อน คุณจึงดูฟีเจอร์ของเกมได้ตามสบาย
-      </p>
-      <p class={body}>
-        จะเริ่มจาก Wild Bandito ของ PG Soft ที่ใช้ระบบร่วงหล่น ตัวคูณเพิ่มทุกครั้งที่ชนะต่อเนื่องในสปินเดียว ก็ได้ หรือไปที่ Gates of Olympus ของ Pragmatic Play ที่จ่ายแบบไม่ต้องเรียงไลน์ มีลูกแก้วตัวคูณตกลงมาทบยอดชนะ ถ้าชอบเกมกระดานเล็ก Fortune Gems ของ JILI เป็นวงล้อ 3×3 ที่มีวงตัวคูณแยกอยู่ทางขวา
-      </p>
-    </div>
-    <p slot="right" class={body}>
-      วันไหนอยากเปลี่ยนจากการกดสปินมาลุ้นทีละตา เรามีบาคาร่า ไฮโล รูเล็ต และเสือมังกรอยู่ในเว็บเดียวกัน คุณจึงไม่ต้องไปหาที่อื่นเพิ่ม
-    </p>
-  </ContentBoxTwoNeumorphism>
-
-  <ProviderGridPremium />
-
-  <ContentBoxSevenThreeNeumorphism as="h2" title="มือใหม่หรือสายทุนน้อย เริ่มกับ MEEHAY569 ได้ใน 4 ขั้นตอน">
-    <Picture
-      slot="left"
-      src={imgSignup}
-      alt={signupAlt}
-      loading="lazy"
-      fetchpriority="low"
-      widths={[280, 380, 480, 600]}
-      sizes="(max-width: 543px) calc(100vw - 96px), (max-width: 767px) 448px, (max-width: 1431px) calc(30vw - 38px), 391px"
-      decoding="async"
-      formats={["avif", "webp"]}
-      fallbackFormat="webp"
-      quality={70}
-      class={slideFrame}
-    />
-
-    <div slot="right" class="flex flex-col gap-4">
-      <p class={body}>
-        ลองเกมก่อนได้ พร้อมเมื่อไหร่ค่อยสมัคร ถ้าคุณเพิ่งเริ่มเล่นสล็อตออนไลน์ โหมดทดลองช่วยให้เห็นหน้าตาเกมก่อนใช้เงินจริง ถ้าทุนไม่มาก ยอดเริ่มต้น 1 บาทก็ทำให้คุณไม่ต้องฝากเกินแผน
-      </p>
-      <p class={body}>
-        พอพร้อมก็ไปต่อได้เลย <a href="/line/" class={inlineLink}>แอดไลน์</a>หรือ<a href="/register/" class={inlineLink}>กดปุ่มสมัคร</a>บนเว็บ กรอกเบอร์โทรศัพท์ ใส่ OTP ที่ได้รับ แล้วฝากเงินเข้าระบบ ส่วนเงื่อนไขสิทธิพิเศษดูได้ที่<a href="/promotion/" class={inlineLink}>หน้าโปรโมชั่น</a> ก่อนเริ่มลองตั้งงบที่เสียได้ไว้ก่อน เพราะสล็อตคือความบันเทิง ไม่ใช่ทางหารายได้
-      </p>
-    </div>
-  </ContentBoxSevenThreeNeumorphism>
-
-  <Faq4 title={faqTitle} faqs={faqs} />
+  <ContentBoxFloatingBadge as="h2" title="สมัคร TG787 ผ่านมือถือและติดต่อแอดมินเมื่อพบปัญหาใช้งาน">
+    <p class={body}>ถ้าเกิดรายการค้างหรือเข้าระบบไม่ได้ หลายคนกังวลว่าจะไม่รู้ว่าต้องแจ้งใคร เริ่มจาก<a href="/register/" class={inlineLink}>กดสมัคร</a> <strong class={brandMark}>TG787</strong> และกรอกข้อมูลบนหน้าจอมือถือให้เรียบร้อย จากนั้นหากระหว่างใช้งานพบปัญหาล็อกอินไม่ได้ เครดิตไม่ขึ้น หรือมีรายการค้างอยู่ สามารถติดต่อแอดมินผ่าน<a href="/contact-us/" class={inlineLink}>ช่องทางบนหน้าเว็บ</a>ได้ทันที</p>
+    <p class={`mt-4 ${body}`}>ข้อสำคัญคือถ้าฝากแล้วยอดเครดิตไม่ขึ้นอย่าโอนซ้ำ ให้แจ้งเวลากับยอดที่ทำรายการเพื่อให้เจ้าหน้าที่ตรวจสอบ พร้อมเก็บรักษารหัสผ่านและไม่บอก OTP กับผู้อื่นเสมอ</p>
+  </ContentBoxFloatingBadge>
 
   <ContentBox>
-    <p class={body}>
-      <strong class={brandMark}>MEEHAY569</strong> รวมสล็อตเว็บตรงไว้สำหรับคนที่ไม่อยากเริ่มด้วยขั้นตอนยุ่งยาก คุยกับเว็บโดยตรง <a href="/วิธีฝากถอน/" class={inlineLink}>เติมและถอนผ่านทรูวอเลท</a> ลองเกมก่อนเล่นจริง มือใหม่หรือคนทุนน้อยก็เริ่มได้โดยไม่ต้องรีบ ลองเกมที่สนใจก่อน แล้วค่อย<a href="/register/" class={inlineLink}>สมัคร</a>เมื่อพร้อมเล่นจริง
-    </p>
+    <p class={body}>การเริ่มต้นกับ <strong class={brandMark}>TG787</strong> ช่วยให้คุณเข้าถึงทั้งห้องถ่ายทอดสดจากค่ายชั้นนำและเกมวงล้อหลากหลายกลไกภายใต้มาตรฐานเว็บตรงที่เป็นเว็บใหญ่จ่ายจริง ฝากถอนไม่มีขั้นต่ำและใช้ฝากถอนออโต้ซึ่งเสร็จสิ้นภายใน 3 นาทีตลอด 24 ชั่วโมง</p>
+    <p class={`mt-4 ${body}`}>รองรับการเล่นผ่านเบราว์เซอร์บนมือถือได้ครบทุกขั้นตอน สำหรับผู้ที่ต้องการพื้นที่เดิมพันที่จัดการง่ายและมีทีมงานดูแลเมื่อติดขัด สามารถ<a href="/register/" class={inlineLink}>เปิดบัญชี</a>ผ่านหน้าเว็บแล้วเลือกหมวดเกมที่ต้องการเล่นได้เลย</p>
   </ContentBox>
 
   <LoginRtpSection />
 
-  <ReviewCardSumo />
+  <ReviewCardSumo2 />
 
   <Navfoot />
 </MainLayout>

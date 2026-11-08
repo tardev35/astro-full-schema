@@ -75,7 +75,7 @@ export default defineConfig({
     "/line": "https://tinyurl.com/suhng",
   },
 
-  site: "https://meehay569.site",
+  site: "https://tg787.online",
   integrations: [
     sitemap({
       // /login, /register and /line are forwarding pages that all ship

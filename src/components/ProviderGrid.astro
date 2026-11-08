@@ -2,39 +2,60 @@
 import { BRAND_NAME } from "../lib/brandProfile";
 
 const providers = [
-  { name: "PG Soft", game: "Fortune Tiger", desc: "เหมาะกับคนที่ชอบเกมแบบไม่มีฟรีสปิน", tag: "วงล้อ 3×3", icon: "🐯" },
-  { name: "Pragmatic Play", game: "Sugar Rush", desc: "เหมาะกับคนที่ชอบลุ้นสัญลักษณ์ร่วงหล่นเป็นกลุ่ม", tag: "ร่วงหล่น", icon: "🍭" },
-  { name: "JILI", game: "Money Coming", desc: "เหมาะกับคนที่ชอบลุ้นวงพิเศษวงที่สี่", tag: "วงพิเศษ", icon: "💰" },
-  { name: "Habanero", game: "Koi Gate", desc: "เหมาะกับคนที่ชอบไวลด์ขยายเต็มแถว", tag: "ไวลด์ขยาย", icon: "🎏" },
+  {
+    name: "PG Soft",
+    game: "Wild Bandito",
+    desc: "ธีมโจรเม็กซิกันระบบร่วงหล่น สัญลักษณ์กรอบทองกลายเป็นไวลด์เมื่อชนะรางวัล และตัวคูณเพิ่มขึ้นทุกครั้งที่ชนะต่อเนื่องในสปินเดียว",
+    tag: "ร่วงหล่น · ตัวคูณ",
+    icon: "🤠",
+  },
+  {
+    name: "Pragmatic Play",
+    game: "The Dog House",
+    desc: "จุดเด่นอยู่ที่สัญลักษณ์ไวลด์ตัวคูณ และในรอบฟรีสปินไวลด์จะค้างอยู่บนวงล้อจนจบรอบ ทำให้ติดตามรางวัลได้ชัดเจน",
+    tag: "ไวลด์ค้าง",
+    icon: "🐶",
+  },
+  {
+    name: "JILI",
+    game: "Golden Empire",
+    desc: "ธีมอาณาจักรทองที่รวมระบบร่วงหล่นกับตัวคูณไว้ด้วยกัน การลุ้นสัญลักษณ์ต่อเนื่องในแต่ละรอบจึงเข้าใจง่าย",
+    tag: "ร่วงหล่น · ตัวคูณ",
+    icon: "👑",
+  },
 ];
 
-const gridTitle = `ค่ายสล็อตที่ ${BRAND_NAME} รวมไว้ในเว็บเดียว`;
+const gridTitle = `เกมสล็อตเด่นจากค่ายที่ ${BRAND_NAME} รวมไว้`;
 ---
 
-<section aria-label={gridTitle} class="relative z-10 mx-auto mb-10 w-full max-w-[1400px] px-4 font-sans">
+<section aria-label={gridTitle} class="relative z-10 mx-auto mb-10 w-full max-w-7xl px-4 font-sans">
   <div class="mb-6 flex w-full flex-col items-center justify-center gap-2 text-center">
-    <p class="text-2xl leading-normal font-black tracking-wide text-[#0a1f5c] md:text-3xl">{gridTitle}</p>
-    <div aria-hidden="true" class="mt-2 h-[4px] w-24 rounded-full bg-gradient-to-r from-[#1a5fe0] via-[#e0a91b] to-[#1a5fe0]"></div>
+    <p class="text-2xl leading-normal font-black tracking-wide text-[#1f1611] md:text-3xl">{gridTitle}</p>
+    <div aria-hidden="true" class="mt-2 h-1.5 w-28 rounded-full bg-[repeating-linear-gradient(135deg,#1f1611_0_10px,#f47b20_10px_22px)]"></div>
   </div>
 
-  <div class="grid grid-cols-2 gap-4 lg:grid-cols-4 lg:gap-5">
+  <div class="grid grid-cols-1 gap-4 md:grid-cols-3 lg:gap-6">
     {
       providers.map((provider) => (
         <a
           href="/register/"
-          class="group relative isolate flex flex-col items-center justify-center overflow-hidden rounded-2xl border border-[#d6e2f7] bg-white p-5 shadow-[0_10px_30px_rgba(10,31,92,0.08)] transition-all duration-300 hover:-translate-y-2 hover:border-[#9dbcf0] hover:bg-[#eef4ff] hover:shadow-[0_15px_40px_rgba(26,95,224,0.16)]">
-          <span class="absolute top-2 right-2 z-10 rounded-full bg-gradient-to-b from-[#ffd45c] via-[#e0a91b] to-[#b07d12] px-2 py-0.5 text-[10px] font-black tracking-wide text-[#0a1f5c] shadow-sm transition-transform duration-300 group-hover:scale-110">
-            {provider.tag}
+          class="group relative isolate flex flex-col overflow-hidden rounded-2xl border border-[#f1d9c4] bg-white p-6 text-left shadow-[0_10px_30px_rgba(31,22,17,0.08)] transition-[transform,border-color,box-shadow] duration-300 hover:-translate-y-1.5 hover:border-[#f0a868] hover:shadow-[0_15px_40px_rgba(244,123,32,0.18)] motion-reduce:transition-none motion-reduce:hover:translate-y-0">
+          <span aria-hidden="true" class="pointer-events-none absolute -top-16 -right-16 -z-10 h-36 w-36 rounded-full bg-[#fff3e8] transition-colors duration-300 group-hover:bg-[#ffe3c8]" />
+
+          <span class="flex items-start justify-between gap-3">
+            <span
+              aria-hidden="true"
+              class="flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl border-2 border-[#ffe3b8] bg-gradient-to-b from-[#ffc94a] via-[#f47b20] to-[#c85a0c] text-3xl shadow-[0_6px_16px_rgba(244,123,32,0.35)]">
+              {provider.icon}
+            </span>
+            <span class="rounded-full border border-[#1f6fd6]/30 bg-[#eaf3ff] px-2.5 py-1 text-[11px] font-bold text-[#1557b0]">{provider.tag}</span>
           </span>
 
-          <span aria-hidden="true" class="mt-5 mb-3 text-4xl transition-transform duration-300 group-hover:scale-125 group-hover:rotate-3">
-            {provider.icon}
-          </span>
-          <span class="text-center text-base font-black text-[#0a1f5c] transition-colors group-hover:text-[#1a5fe0]">{provider.name}</span>
-          <span class="mt-0.5 text-center text-sm font-bold text-[#8a6508]">{provider.game}</span>
-          <span class="mt-2 text-center text-xs leading-relaxed text-[#4a5878]">{provider.desc}</span>
+          <span class="mt-4 text-sm font-bold tracking-wide text-[#6b5f56]">{provider.name}</span>
+          <span class="text-xl leading-normal font-black text-[#1f1611] transition-colors group-hover:text-[#a84a06]">{provider.game}</span>
+          <span class="mt-2 text-sm leading-relaxed text-[#2b2622]">{provider.desc}</span>
 
-          <span class="relative z-10 mt-4 block w-full rounded-full border border-[#d6e2f7] bg-[#eef4ff] py-1.5 text-center text-xs font-bold text-[#1a5fe0] transition-colors duration-300 group-hover:border-[#ffd45c] group-hover:bg-gradient-to-b group-hover:from-[#4d8ff5] group-hover:via-[#1a5fe0] group-hover:to-[#0b3a9e] group-hover:text-white">
+          <span class="mt-5 block w-full rounded-full border border-[#f1d9c4] bg-[#fff3e8] py-2 text-center text-sm font-bold text-[#a84a06] transition-colors duration-300 group-hover:border-[#ffe3b8] group-hover:bg-gradient-to-b group-hover:from-[#ffc94a] group-hover:to-[#f47b20] group-hover:text-[#2a1300]">
             สมัครเข้าเล่น
           </span>
         </a>

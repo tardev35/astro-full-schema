@@ -5,20 +5,20 @@ export interface Props {
 }
 const { title, as: HeadingTag = "h1" } = Astro.props;
 const headingSize = HeadingTag === "h1" ? "text-2xl md:text-3xl" : "text-xl md:text-2xl";
-const headingTone = HeadingTag === "h1" ? "bg-gradient-to-r from-[#0a1f5c] via-[#1a5fe0] to-[#0b3a9e]" : "bg-gradient-to-r from-[#0a1f5c] via-[#0b3a9e] to-[#1a5fe0]";
 ---
 
 <section class="relative z-10 my-8 flex w-full justify-center px-4 font-sans">
   <div
-    class="group relative isolate w-full max-w-[1400px] overflow-hidden rounded-3xl border border-[#d6e2f7] bg-white p-8 text-left text-base leading-relaxed text-[#1f2a44] shadow-[0_10px_30px_rgba(10,31,92,0.08)] transition-all duration-500 hover:border-[#9dbcf0] hover:shadow-[0_15px_40px_rgba(26,95,224,0.16)] md:p-10">
-    <div aria-hidden="true" class="pointer-events-none absolute -top-20 -left-20 -z-10 h-40 w-40 rounded-full bg-[#4d8ff5]/15 blur-[55px] transition-all duration-500 group-hover:bg-[#4d8ff5]/25"></div>
-    <div aria-hidden="true" class="pointer-events-none absolute -right-20 -bottom-20 -z-10 h-40 w-40 rounded-full bg-[#e0a91b]/15 blur-[55px] transition-all duration-500 group-hover:bg-[#e0a91b]/25"></div>
+    class="group relative isolate w-full max-w-[1400px] overflow-hidden rounded-3xl border border-[#f1d9c4] bg-white p-8 pt-10 text-left text-base leading-relaxed text-[#2b2622] shadow-[0_10px_30px_rgba(31,22,17,0.08)] transition-[border-color,box-shadow] duration-500 hover:border-[#f0a868] hover:shadow-[0_15px_40px_rgba(244,123,32,0.18)] md:p-10 md:pt-12">
+    <div aria-hidden="true" class="pointer-events-none absolute inset-x-0 top-0 -z-10 h-1.5 bg-[repeating-linear-gradient(135deg,#1f1611_0_10px,#f47b20_10px_22px)]"></div>
+    <div aria-hidden="true" class="pointer-events-none absolute -top-20 -left-20 -z-10 h-40 w-40 rounded-full bg-[#ffa94d]/20 blur-[55px]"></div>
+    <div aria-hidden="true" class="pointer-events-none absolute -right-20 -bottom-20 -z-10 h-40 w-40 rounded-full bg-[#5aa9ff]/15 blur-[55px]"></div>
 
     {
       title && (
-        <header class="mb-8 flex items-center gap-4 border-b border-[#d6e2f7] pb-4">
-          <div aria-hidden="true" class="h-8 w-1.5 shrink-0 rounded-full bg-gradient-to-b from-[#ffd45c] via-[#e0a91b] to-[#1a5fe0] shadow-[0_0_10px_rgba(224,169,27,0.35)]" />
-          <HeadingTag class={`${headingTone} bg-clip-text ${headingSize} leading-normal font-black tracking-wide text-transparent`}>{title}</HeadingTag>
+        <header class="mb-8 flex items-center gap-4 border-b border-[#f1d9c4] pb-4">
+          <span aria-hidden="true" class="h-9 w-1.5 shrink-0 rounded-full bg-gradient-to-b from-[#ffc94a] via-[#f47b20] to-[#c85a0c] shadow-[0_0_10px_rgba(244,123,32,0.35)]" />
+          <HeadingTag class={`${headingSize} leading-normal font-black tracking-wide text-[#1f1611]`}>{title}</HeadingTag>
         </header>
       )
     }

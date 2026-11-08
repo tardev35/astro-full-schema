@@ -1,25 +1,26 @@
 ---
 import { Picture } from "astro:assets";
 import BankStrip from "./BankStrip.astro";
-import { BRAND_ADDRESS } from "../lib/brandProfile";
+import { BRAND_ADDRESS, BRAND_NAME } from "../lib/brandProfile";
 const images = import.meta.glob<{ default: ImageMetadata }>("../assets/logo.{png,webp,jpg}", { eager: true });
 const imagePaths = Object.keys(images);
 const mainLogo = imagePaths.length > 0 ? images[imagePaths[0]].default : null;
 ---
 
-<footer class="relative mt-16 w-full overflow-hidden rounded-t-[3rem] border-t border-[#f5c542]/60 bg-[#1a0303] pt-16 pb-8 font-sans text-[#f7e4d4] shadow-[0_-15px_40px_rgba(245,197,66,0.22)]">
-  <div aria-hidden="true" class="pointer-events-none absolute inset-x-0 -top-20 mx-auto h-[250px] w-full max-w-4xl rounded-full bg-[#f5c542]/18 blur-[100px]"></div>
-  <div aria-hidden="true" class="pointer-events-none absolute inset-x-0 -bottom-24 mx-auto h-[220px] w-full max-w-2xl rounded-full bg-[#d92121]/30 blur-[100px]"></div>
+<footer class="relative mt-16 w-full overflow-hidden rounded-t-[3rem] isolate border-t-2 border-[#f47b20]/70 bg-[#1a120c] pt-16 pb-8 font-sans text-[#fff1e4] shadow-[0_-15px_40px_rgba(31,22,17,0.25)]">
+  <div aria-hidden="true" class="pointer-events-none absolute inset-x-0 top-0 -z-10 h-[6px] bg-[repeating-linear-gradient(135deg,#1f1611_0_10px,#f47b20_10px_22px)]"></div>
+  <div aria-hidden="true" class="pointer-events-none absolute inset-x-0 -top-20 -z-10 mx-auto h-[250px] w-full max-w-4xl rounded-full bg-[#f47b20]/15 blur-[100px]"></div>
+  <div aria-hidden="true" class="pointer-events-none absolute inset-x-0 -bottom-24 -z-10 mx-auto h-[220px] w-full max-w-2xl rounded-full bg-[#1f6fd6]/20 blur-[100px]"></div>
 
   <div class="relative z-10 mx-auto w-full max-w-[1200px] px-6">
     <div class="mb-12 grid grid-cols-1 gap-12 md:grid-cols-12">
       <div class="flex flex-col gap-5 md:col-span-5">
-        <a href="/" class="inline-block max-w-max rounded-xl border border-[#f5c542]/30 bg-[#2a0505] px-4 py-2 transition-transform duration-300 hover:scale-105">
+        <a href="/" class="inline-block max-w-max rounded-xl border border-[#f47b20]/35 bg-[#2a1d14] px-4 py-2 transition-transform duration-300 hover:scale-105">
           {
             mainLogo ? (
               <Picture
                 src={mainLogo}
-                alt="โลโก้ PIGAUTO หัวหมูการ์ตูนสีชมพูยิ้มอยู่กลางเฟืองจักรโลหะสีเทาเงิน มีปีกโลหะกางออกสองข้าง ด้านล่างเป็นตัวอักษรสีขาวขอบเข้มว่า PIGAUTO"
+                alt="โลโก้หัวเสือ TG787 เสือคำรามสีส้มขาวในกรอบสามเหลี่ยมสีส้ม ตัวอักษรสีขาวขอบดำ และเลข 787 สีส้มตัวใหญ่"
                 widths={[160, 320, 480]}
                 sizes="160px"
                 loading="lazy"
@@ -29,40 +30,41 @@ const mainLogo = imagePaths.length > 0 ? images[imagePaths[0]].default : null;
                 fallbackFormat="webp"
               />
             ) : (
-              <span class="text-3xl font-black tracking-widest text-[#f7e4d4]">
-                PIG<span class="text-[#f5c542]">AUTO</span>
+              <span class="text-3xl font-black tracking-widest text-[#fff1e4]">
+                TG<span class="text-[#ffa94d]">787</span>
               </span>
             )
           }
         </a>
-        <p class="border-l-2 border-[#f5c542]/50 pl-4 text-sm leading-relaxed text-[#d7b9a4]">
-          PIGAUTO สล็อตหมูเว็บตรง เชื่อมต่อเกมลิขสิทธิ์ผ่าน API แท้จากค่ายผู้พัฒนาโดยตรง รวมสล็อตและยิงปลาไว้ในบัญชีเดียว ฝากถอนออโต้ภายใน 3 วินาที ไม่ต้องส่งสลิป
-          รองรับทั้งบัญชีธนาคารและทรูมันนี่วอเลท ไม่มีขั้นต่ำ พร้อมทีมงานดูแลตลอด 24 ชั่วโมง
+        <p class="border-l-2 border-[#f47b20]/60 pl-4 text-sm leading-relaxed text-[#d9bfa8]">
+          {BRAND_NAME} คาสิโนออนไลน์ถ่ายทอดสดจาก WM Casino และ Dream Gaming ควบคู่สล็อตเว็บตรง เว็บใหญ่จ่ายจริง ฝากถอนไม่มีขั้นต่ำผ่านระบบออโต้ เสร็จใน 3 นาที
+          ล็อกอินยูสเดิมได้ทุกเครื่องผ่านเบราว์เซอร์ และมีทีมงานดูแลเมื่อติดขัดตลอด 24 ชั่วโมง
         </p>
         <div class="mt-4 flex flex-wrap gap-3">
-          <span class="rounded-full border border-[#f5c542]/30 bg-[#2a0505] px-4 py-1 text-xs font-medium text-[#f5c542]">สล็อตหมูเว็บตรง API แท้</span>
-          <span class="rounded-full border border-[#d92121]/45 bg-[#3a0808] px-4 py-1 text-xs font-medium text-[#f9a8c0]">ออโต้ 3 วิ ไม่มีขั้นต่ำ</span>
+          <span class="rounded-full border border-[#f47b20]/40 bg-[#2a1d14] px-4 py-1 text-xs font-medium text-[#ffa94d]">คาสิโนสด + สล็อตเว็บตรง</span>
+          <span class="rounded-full border border-[#5aa9ff]/40 bg-[#14223a] px-4 py-1 text-xs font-medium text-[#cfe3ff]">ฝากถอนออโต้ 3 นาที ไม่มีขั้นต่ำ</span>
         </div>
       </div>
 
-      <nav class="flex flex-col gap-4 md:col-span-3 lg:pl-8">
-        <p class="text-lg font-black tracking-widest text-[#f7e4d4] uppercase drop-shadow-sm">ทางลัด</p>
-        <div aria-hidden="true" class="h-[1px] w-12 bg-[#f5c542]"></div>
-        <ul class="flex flex-col gap-3 text-sm font-medium text-[#d7b9a4]">
-          <li><a href="/" class="transition-colors hover:text-[#f5c542]">หน้าหลัก</a></li>
-          <li><a href="/promotion/" class="transition-colors hover:text-[#f5c542]">โปรโมชั่น</a></li>
-          <li><a href="/register/" class="transition-colors hover:text-[#f5c542]">สมัครสมาชิก</a></li>
-          <li><a href="/login/" class="transition-colors hover:text-[#f5c542]">เข้าสู่ระบบ</a></li>
-          <li><a href="/ทดลองเล่น/" class="transition-colors hover:text-[#f5c542]">ทดลองเล่น</a></li>
-          <li><a href="/ทางเข้า/" class="transition-colors hover:text-[#f5c542]">ทางเข้า</a></li>
-          <li><a href="/about-us/" class="transition-colors hover:text-[#f5c542]">เกี่ยวกับเรา</a></li>
-          <li><a href="/contact-us/" class="transition-colors hover:text-[#f5c542]">ติดต่อเรา</a></li>
+      <nav aria-label="ทางลัด" class="flex flex-col gap-4 md:col-span-3 lg:pl-8">
+        <p class="text-lg font-black tracking-widest text-[#fff1e4] uppercase drop-shadow-sm">ทางลัด</p>
+        <div aria-hidden="true" class="h-[2px] w-12 bg-gradient-to-r from-[#f47b20] to-[#ffc94a]"></div>
+        <ul class="flex flex-col gap-3 text-sm font-medium text-[#d9bfa8]">
+          <li><a href="/" class="transition-colors hover:text-[#ffa94d]">หน้าหลัก</a></li>
+          <li><a href="/promotion/" class="transition-colors hover:text-[#ffa94d]">โปรโมชั่น</a></li>
+          <li><a href="/register/" class="transition-colors hover:text-[#ffa94d]">สมัครสมาชิก</a></li>
+          <li><a href="/login/" class="transition-colors hover:text-[#ffa94d]">เข้าสู่ระบบ</a></li>
+          <li><a href="/ทดลองเล่น/" class="transition-colors hover:text-[#ffa94d]">ทดลองเล่น</a></li>
+          <li><a href="/วิธีฝากถอน/" class="transition-colors hover:text-[#ffa94d]">วิธีฝากถอน</a></li>
+          <li><a href="/ทางเข้า/" class="transition-colors hover:text-[#ffa94d]">ทางเข้า</a></li>
+          <li><a href="/about-us/" class="transition-colors hover:text-[#ffa94d]">เกี่ยวกับเรา</a></li>
+          <li><a href="/contact-us/" class="transition-colors hover:text-[#ffa94d]">ติดต่อเรา</a></li>
         </ul>
       </nav>
 
       <div class="flex flex-col gap-5 md:col-span-4">
-        <p class="text-lg font-black tracking-widest text-[#f7e4d4] uppercase drop-shadow-sm">บริการลูกค้า 24 ชม.</p>
-        <div aria-hidden="true" class="h-[1px] w-12 bg-[#f5c542]"></div>
+        <p class="text-lg font-black tracking-widest text-[#fff1e4] uppercase drop-shadow-sm">บริการลูกค้า 24 ชม.</p>
+        <div aria-hidden="true" class="h-[2px] w-12 bg-gradient-to-r from-[#f47b20] to-[#ffc94a]"></div>
 
         <a
           href="/line/"
@@ -94,16 +96,16 @@ const mainLogo = imagePaths.length > 0 ? images[imagePaths[0]].default : null;
           )
         }
 
-        <div class="mt-4 text-xs font-medium tracking-widest text-[#d7b9a4] uppercase">Supported Payments</div>
+        <p class="mt-4 text-xs font-medium tracking-widest text-[#d9bfa8] uppercase">Supported Payments</p>
         <BankStrip size={30} />
       </div>
     </div>
 
-    <div class="flex flex-col items-center justify-between border-t border-[#b07d12]/60 pt-8 text-xs font-medium tracking-wide text-[#d7b9a4] md:flex-row">
-      <p>COPYRIGHT &copy; {new Date().getFullYear()} PIGAUTO-MAIN.NET. ALL RIGHTS RESERVED.</p>
+    <div class="flex flex-col items-center justify-between border-t border-[#f47b20]/30 pt-8 text-xs font-medium tracking-wide text-[#d9bfa8] md:flex-row">
+      <p>COPYRIGHT &copy; {new Date().getFullYear()} {BRAND_NAME}. ALL RIGHTS RESERVED.</p>
       <div class="mt-4 flex gap-4 md:mt-0">
-        <a href="/terms/" class="transition-colors hover:text-[#f5c542]">เงื่อนไขข้อตกลง</a>
-        <a href="/privacy/" class="transition-colors hover:text-[#f5c542]">นโยบายความเป็นส่วนตัว</a>
+        <a href="/terms/" class="transition-colors hover:text-[#ffa94d]">เงื่อนไขข้อตกลง</a>
+        <a href="/privacy/" class="transition-colors hover:text-[#ffa94d]">นโยบายความเป็นส่วนตัว</a>
       </div>
     </div>
   </div>

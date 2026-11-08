@@ -4,7 +4,7 @@ import scbLogo from "../assets/banks/scb.png";
 import krungsriLogo from "../assets/banks/krungsri.png";
 import ktbLogo from "../assets/banks/ktb.png";
 import ttbLogo from "../assets/banks/ttb.png";
-import { brandFlag, brandPick } from "../lib/brandProfile";
+import { BRAND_NAME, brandFlag, brandPick } from "../lib/brandProfile";
 
 const bankPool = [
   { name: "KBank", color: "bg-[#1155cc]", icon: kbankLogo.src },
@@ -23,19 +23,31 @@ const initialRows = Array.from({ length: 5 }, (_, i) => ({
   amount: (15000 + brandPick(Astro.site, `winner-amount-${i}`, 80001)).toLocaleString("en-US"),
   pending: brandFlag(Astro.site, `winner-pending-${i}`),
 }));
+
+const feedLabel = `รายการฝากถอนออโต้ล่าสุดของสมาชิก ${BRAND_NAME}`;
+const pendingText = "กำลังทำรายการ";
+const doneText = "ทำรายการสำเร็จ";
+const pendingClass = "border-[#f47b20]/70 bg-[#f47b20]/10 text-[#ffc94a]";
+const doneClass = "border-[#4ade80]/50 bg-[#4ade80]/10 text-[#4ade80]";
 ---
 
-<div class="mx-auto w-full max-w-[1300px] p-4">
+<div class="mx-auto w-full max-w-7xl px-4 py-4 font-sans">
   <section
-    aria-label="รายการเติมถอนออโต้ล่าสุดของสมาชิก GGHENG"
-    class="relative border-r-4 border-l-4 border-[#e11d1d] bg-[#140202] px-4 py-8 shadow-[0_10px_30px_rgba(225,29,29,0.18)] md:p-10"
+    aria-label={feedLabel}
+    class="relative isolate overflow-hidden border-x-4 border-[#f47b20] bg-[#1a120c] px-4 py-8 text-[#fff1e4] shadow-[0_12px_30px_rgba(31,22,17,0.25)] md:p-10"
     style="clip-path: polygon(20px 0, calc(100% - 20px) 0, 100% 20px, 100% calc(100% - 20px), calc(100% - 20px) 100%, 20px 100%, 0 calc(100% - 20px), 0 20px);">
-    <div aria-hidden="true" class="absolute top-0 left-0 h-[1px] w-full bg-gradient-to-r from-transparent via-[#e11d1d] to-transparent"></div>
-    <div aria-hidden="true" class="absolute bottom-0 left-0 h-[1px] w-full bg-gradient-to-r from-transparent via-[#f5c542] to-transparent"></div>
+    <div aria-hidden="true" class="absolute inset-x-0 top-0 -z-10 h-1.5 bg-[repeating-linear-gradient(135deg,#1f1611_0_10px,#f47b20_10px_22px)]"></div>
+    <div aria-hidden="true" class="absolute bottom-0 left-0 -z-10 h-px w-full bg-gradient-to-r from-transparent via-[#5aa9ff] to-transparent"></div>
+    <div aria-hidden="true" class="pointer-events-none absolute -top-20 -right-16 -z-10 h-48 w-48 rounded-full bg-[#f47b20]/15 blur-[60px]"></div>
 
-    <div class="relative z-10 mb-8 flex items-center justify-between border-b border-[#5a0a0a] pb-4">
-      <p class="text-xl font-black tracking-[0.2em] text-[#f5c542]">/// GGHENG_AUTO_WALLET</p>
-      <span class="animate-pulse border border-[#ff8a70]/60 px-2 py-1 text-xs font-bold tracking-widest text-[#ff8a70]">24 ชม.</span>
+    <div class="mb-8 flex items-center justify-between gap-3 border-b border-[#3a2a1e] pb-4">
+      <p class="text-lg leading-normal font-black tracking-wide md:text-xl">
+        <span class="text-[#ffa94d]">{BRAND_NAME}</span> ฝากถอนออโต้ล่าสุด
+      </p>
+      <span class="inline-flex shrink-0 items-center gap-2 rounded-full border border-[#ffc94a]/50 px-3 py-1 text-xs font-bold tracking-wide text-[#ffc94a]">
+        <span aria-hidden="true" class="h-2 w-2 rounded-full bg-[#4ade80] motion-safe:animate-pulse"></span>
+        24 ชม.
+      </span>
     </div>
 
     <div
@@ -47,43 +59,44 @@ const initialRows = Array.from({ length: 5 }, (_, i) => ({
       data-pending-chance="0.4"
       data-user-style="letters"
       data-user-digits="4"
-      class="relative z-10 flex flex-col gap-3">
+      class="flex flex-col gap-3">
       {
         initialRows.map((row) => (
-          <div data-winner-row class="winner-row origin-left transform transition-all duration-500 ease-out">
-            <div class="flex items-center justify-between border-l-2 border-[#e11d1d] bg-gradient-to-r from-[#1f0405] to-transparent p-3 transition-colors hover:bg-[#3a0a0d]">
-              <div class="flex items-center gap-4">
-                <div data-winner-bank class={`flex h-8 w-8 items-center justify-center border border-[#5a0a0a] ${row.bank.color}`}>
+          <div data-winner-row class="origin-left transition-all duration-500 ease-out motion-reduce:transition-none [&.is-entering]:scale-x-95 [&.is-entering]:opacity-0">
+            <div class="flex items-center justify-between gap-3 rounded-r-lg border-l-2 border-[#f47b20] bg-gradient-to-r from-[#2a1d14] to-transparent p-3 transition-colors hover:bg-[#2a1d14]">
+              <div class="flex min-w-0 items-center gap-3">
+                <div data-winner-bank class={`flex h-9 w-9 shrink-0 items-center justify-center rounded-lg ${row.bank.color}`}>
                   <img data-winner-icon src={row.bank.icon} alt="" width="20" height="20" loading="lazy" decoding="async" class="h-5 w-5 object-contain" />
                 </div>
-                <div class="font-mono text-sm text-[#f7e6d0]">
-                  USR_ID:{" "}
-                  <span data-winner-user class="font-bold text-[#f5c542]">
-                    {row.user}
+                <div class="flex min-w-0 flex-col gap-1">
+                  <span class="truncate font-mono text-sm text-[#d9bfa8]">
+                    สมาชิก{" "}
+                    <span data-winner-user class="font-bold text-[#fff1e4]">
+                      {row.user}
+                    </span>
+                  </span>
+                  <span
+                    data-winner-status
+                    data-pending-text={pendingText}
+                    data-done-text={doneText}
+                    data-pending-class={pendingClass}
+                    data-done-class={doneClass}
+                    class={`w-fit rounded-full border px-2 py-0.5 text-[10px] font-bold tracking-wide ${row.pending ? pendingClass : doneClass}`}>
+                    {row.pending ? pendingText : doneText}
                   </span>
                 </div>
               </div>
-              <div class="flex items-center gap-6">
-                <div
-                  data-winner-status
-                  data-pending-text="[กำลังทำรายการ]"
-                  data-done-text="[ทำรายการสำเร็จ]"
-                  class={`winner-status font-mono text-[10px] tracking-widest ${row.pending ? "is-pending" : "is-verified"}`}>
-                  {row.pending ? "[กำลังทำรายการ]" : "[ทำรายการสำเร็จ]"}
-                </div>
-                <div class="font-mono text-xl font-black text-[#f5c542]">
-                  <span data-winner-amount>{row.amount}</span> <span class="text-xs text-[#d4b59a]">THB</span>
-                </div>
-              </div>
+              <p class="shrink-0 font-mono text-lg font-black text-[#ffc94a] md:text-xl">
+                <span data-winner-amount>{row.amount}</span> <span class="text-xs font-bold text-[#d9bfa8]">THB</span>
+              </p>
             </div>
           </div>
         ))
       }
     </div>
 
-    <p class="relative z-10 mt-6 text-left text-[11px] leading-relaxed tracking-wide text-[#d4b59a]">
-      รายการที่แสดงเป็นตัวอย่างการเติม ฝาก ถอนออโต้ของสมาชิก GGHENG ทั้งผ่านทรูมันนี่วอลเล็ทและบัญชีธนาคาร ซึ่งส่งรายการเองได้จากหน้าเมมเบอร์ตลอด 24 ชั่วโมง
-      ความเร็วของแต่ละรายการขึ้นอยู่กับช่องทางและสถานะระบบในขณะนั้น สถานะจริงให้ยึดตามหน้าเมมเบอร์ของตัวเอง
+    <p class="mt-6 text-left text-xs leading-relaxed text-[#d9bfa8]">
+      รายการที่แสดงเป็นตัวอย่างการฝากถอนออโต้ของสมาชิก {BRAND_NAME} ระบบปรับเครดิตให้เองโดยไม่ต้องแนบสลิป และทำรายการได้ตลอด 24 ชั่วโมง สถานะจริงของแต่ละรายการให้ยึดตามหน้าเมมเบอร์ของคุณ
     </p>
 
     <script type="application/json" data-winners-banks set:html={JSON.stringify(bankPool)} />
@@ -95,29 +108,3 @@ const initialRows = Array.from({ length: 5 }, (_, i) => ({
 
   startWinnersFeed();
 </script>
-
-<style>
-  .font-mono {
-    font-family: monospace;
-  }
-
-  .winner-status.is-pending {
-    color: #f5c542;
-    border-color: #e11d1d;
-  }
-  .winner-status.is-verified {
-    color: #4ade80;
-    border-color: color-mix(in oklab, #4ade80 50%, transparent);
-  }
-
-  .winner-row.is-entering {
-    transform: scaleX(0.95);
-    opacity: 0;
-  }
-
-  @media (prefers-reduced-motion: reduce) {
-    .winner-row {
-      transition: none;
-    }
-  }
-</style>

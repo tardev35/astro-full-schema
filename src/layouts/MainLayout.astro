@@ -4,8 +4,8 @@ import bgConfig from "../assets/bg.json";
 import "../styles/global.css";
 import { BRAND_NAME, BRAND_TEXT, brandProfile, fontStack, iconVersion } from "../lib/brandProfile";
 import { canonicalFor } from "../lib/schema";
-import Navbar from "../components/NavbarStyle2.astro";
-import Footer from "../components/FooterPremiumSumo.astro";
+import Navbar from "../components/NavbarStyle8.astro";
+import Footer from "../components/FooterStyle3.astro";
 
 // Only banner1 is ever rendered, so only banner1 is imported.
 //
@@ -54,8 +54,8 @@ const mobileBannerImg = mobileBanner
   : null;
 
 const {
-  title = "TG787 | คาสิโนออนไลน์ควบคู่สล็อตเว็บตรง ฝากถอนออโต้ใน 3 นาที",
-  description = "เปิดบัญชี TG787 คาสิโนออนไลน์ถ่ายทอดสดพร้อมสล็อตเว็บตรง เว็บใหญ่จ่ายจริง ฝากถอนไม่มีขั้นต่ำผ่านระบบออโต้เสร็จใน 3 นาที เล่นบนมือถือสะดวกทุกเวลา สมัครวันนี้",
+  title = "OHO555 | สล็อต คาสิโนออนไลน์ ไม่ผ่านเอเย่นต์ ฝากถอนขั้นต่ำ 1 บาท",
+  description = "OHO555 เว็บตรงไม่ผ่านเอเย่นต์ สล็อตกระเป๋าเดียวทุกค่าย คาสิโนออนไลน์ยูสเดียวกับสล็อต ฝากถอนขั้นต่ำ 1 บาท โบนัสสมาชิกใหม่ 50% ให้บริการ 24 ชม. สมัครเลย",
   robots = "index, follow",
 } = Astro.props;
 
@@ -207,7 +207,7 @@ const profile = brandProfile(Astro.site);
         background-attachment: fixed;
         background-repeat: no-repeat;
         margin: 0;
-        background-color: #f2f2f2;
+        background-color: #0a2400;
         font-weight: 400;
         font-family: var(--font-sans) !important;
       }
@@ -260,7 +260,7 @@ const profile = brandProfile(Astro.site);
         }
         <Image
           src={mainBanner}
-          alt="แบนเนอร์ TG787 คาสิโนออนไลน์ เว็บตรง เว็บใหญ่จ่ายจริง ฝากถอนไม่มีขั้นต่ำ แถบข้อความ สมัครง่าย ระบบมั่นคง เกมครบหลายค่าย ป้ายสีน้ำเงิน เว็บตรง ฝากถอนไม่มีขั้นต่ำ พร้อมดูแล ปุ่มสมัครสมาชิกสีส้ม โลโก้หัวเสือ TG787 พรีเซนเตอร์หญิงชุดผ้าไหมสีเงินลายเสือสีส้ม มือถือแสดงเกมสล็อต 777 ไพ่ วงล้อและลูกเต๋า เสาวิหารสีขาว ธงลายเสือ เหรียญทอง ชิปและไพ่เอซบนท้องฟ้าที่มีเมฆ"
+          alt="แบนเนอร์ OHO555 เว็บเกมออนไลน์ครบวงจร สมัครง่าย ฝากถอนสะดวก ครบจบในยูสเดียว สมาชิกใหม่รับโบนัสสุดคุ้ม แถบ ระบบเสถียร รองรับมือถือ โปรโมชั่นคุ้ม ดูแล 24 ชม. ปุ่มสมัครสมาชิกสีแดงและปุ่มเข้าสู่ระบบสีทอง โลโก้ OHO555 สีทองเขียวใต้มงกุฎและช่อใบไม้สีทอง พรีเซนเตอร์หญิงผมบลอนด์ชุดเขียวถือไพ่เอซ วงล้อรูเล็ต ป้าย JACKPOT ชิปสีเขียว และปึกธนบัตรบนพื้นสีเขียวเข้ม"
           loading="eager"
           fetchpriority="high"
           widths={[412, 640, 828, 1024, 1280, 1600, 1900]}

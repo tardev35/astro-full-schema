@@ -2,25 +2,21 @@
 import MainLayout from "../layouts/MainLayout.astro";
 import ContentBox from "../components/ContentBox.astro";
 import Navfoot from "../components/Navfoot.astro";
-import Announcement from "../components/AnnouncementCyber.astro";
+import Announcement from "../components/AnnouncementPremium.astro";
 
 import { Picture } from "astro:assets";
 
 import pro1 from "../assets/slide1.png";
 import pro2 from "../assets/slide2.png";
 import pro3 from "../assets/slide3.png";
-import pro4 from "../assets/slide4.png";
 import { pageGraph } from "../lib/schema";
 
-const pageTitle = "โปรโมชั่น TG787 สมาชิกใหม่เริ่มต้นง่าย ฝากถอนไม่มีขั้นต่ำ ออโต้ใน 3 นาที";
+const pageTitle = "โปรโมชั่น OHO555 โบนัสสมาชิกใหม่ 50% คืนยอดเสีย 5% คืนค่าคอมบาคาร่า 0.6%";
 
-const pageHeading = "โปรโมชั่น TG787 สมาชิกใหม่เริ่มต้นง่าย พร้อมฝากถอนไม่มีขั้นต่ำ";
+const pageHeading = "โปรโมชั่น OHO555 โบนัสสมาชิกใหม่ 50% พร้อมคืนยอดเสียทุกวัน";
 
 const pageDescription =
-  "โปรโมชั่น TG787 สมาชิกใหม่เริ่มต้นง่าย สมัครบนมือถือผ่านเบราว์เซอร์ ฝากถอนไม่มีขั้นต่ำด้วยระบบออโต้เสร็จใน 3 นาที ตลอด 24 ชั่วโมง พร้อมสล็อตเว็บตรงจากหลายค่าย";
-
-const announcementMessage =
-  "TG787 คาสิโนออนไลน์ถ่ายทอดสดควบคู่สล็อตเว็บตรง • ฝากถอนไม่มีขั้นต่ำ ระบบออโต้ทำรายการเสร็จใน 3 นาที ตลอด 24 ชั่วโมง • ล็อกอินยูสเดิมได้ทุกเครื่องทั้ง iOS และ Android ผ่านเบราว์เซอร์ • ติดปัญหาการใช้งานติดต่อแอดมินผ่านช่องทางบนหน้าเว็บได้ทันที";
+  "โปรโมชั่น OHO555 สมาชิกใหม่รับโบนัส 50% ฝาก 100 รับ 50 คืนยอดเสีย 5% สูงสุด 2,000 บาท คืนค่าคอมบาคาร่า 0.6% เลือกโปรที่ใช่หรือไม่รับก็ได้ ฝากถอนขั้นต่ำ 1 บาท";
 
 const graph = pageGraph(Astro, {
   name: pageTitle,
@@ -35,56 +31,56 @@ const graph = pageGraph(Astro, {
 const promos = [
   {
     src: pro1,
-    alt: "โลโก้หัวเสือ TG787 มั่นใจทุกการเล่น เว็บตรง ระบบมั่นคง พร้อมดูแล ปุ่มเข้าร่วมเลย พรีเซนเตอร์ในชุดผ้าไหมสีเงินลายเสือสีส้มยื่นมือถือ หน้าเสาวิหารสีขาวกับธงลายเสือ",
+    alt: "OHO555 สายบาคาร่า ทุกการเดิมพัน ได้หรือเสีย คืนค่าคอม 0.6% คืนไม่อั้น รับได้ตลอด คุ้มทุกไม้ เล่นต่อได้ รับสิทธิ์เลย",
   },
   {
     src: pro2,
-    alt: "โลโก้หัวเสือ TG787 สมาชิกใหม่ เริ่มต้นง่าย สมัครสะดวก พร้อมสนุกได้ทันที สมัครง่าย ระบบมั่นคง พร้อมดูแล ปุ่มสมัครสมาชิก พรีเซนเตอร์ผายมือไปที่มือถือบนแท่นทอง",
+    alt: "OHO555 คืนยอดเสีย 5% สูงสุด 2,000 บาท รับคืนทุกวัน เล่นได้แบบสบายใจ คืนไวทุกวัน รับโปรเลย",
   },
   {
     src: pro3,
-    alt: "โลโก้หัวเสือ TG787 ฝากถอนไม่มีขั้นต่ำ ระบบออโต้ ใช้งานง่าย รวดเร็ว เฟืองทองกับลูกศรหมุนเวียน อัตโนมัติ ทันสมัย สะดวก ปุ่มสมัครเลย",
-  },
-  {
-    src: pro4,
-    alt: "โลโก้หัวเสือ TG787 สล็อตออนไลน์ ครบหลายค่าย รวมเกมยอดนิยมไว้ในที่เดียว เกมหลากหลาย ใช้งานสะดวก เลือกได้ครบ ปุ่มเริ่มสนุก พรีเซนเตอร์ชุดสูทสีครีมชูมือถือ",
+    alt: "OHO555 ต้อนรับสมาชิกใหม่ รับโบนัส 50% ฝาก 100 รับ 50 ทำเทิร์น 3 เท่า เฉพาะสล็อตเท่านั้น JACKPOT สมัครเลย",
   },
 ];
 
 const promoClass =
-  "mx-auto h-auto w-full rounded-xl border border-[#f1d9c4] object-contain shadow-[0_10px_30px_rgba(31,22,17,0.08)] transition-all duration-300 hover:-translate-y-1 hover:border-[#f0a868] hover:shadow-[0_15px_40px_rgba(244,123,32,0.18)]";
+  "mx-auto h-auto w-full rounded-xl border border-[#2a6b2c] object-contain shadow-[0_10px_30px_rgba(1,10,3,0.45)] transition-all duration-300 hover:border-[#fcaa04]/60 hover:shadow-[0_15px_40px_rgba(252,170,4,0.18)] motion-safe:hover:-translate-y-1";
+
+const brandClass = "font-bold text-[#ffc93c]";
 ---
 
 <MainLayout title={pageTitle} description={pageDescription}>
   <script type="application/ld+json" set:html={graph} />
 
-  <Announcement message={announcementMessage} />
+  <Announcement />
 
   <ContentBox title={pageHeading} as="h1">
-    <p class="mb-4 text-left text-base leading-relaxed text-[#2b2622]">
-      หากคุณกำลังมองหาเว็บตรงที่เริ่มต้นง่ายและจัดการงบได้เอง <strong class="font-bold text-[#a84a06]">TG787</strong> พร้อมดูแลตั้งแต่วันแรกที่สมัคร ทั้งฝากถอนไม่มีขั้นต่ำด้วยระบบออโต้และสล็อตจากหลายค่าย เพื่อให้คุณเริ่มสนุกในแบบที่ถนัด
+    <p class="mb-4 text-left text-base leading-relaxed">
+      หากคุณกำลังมองหาความคุ้มค่าตั้งแต่ยอดฝากแรก <strong class={brandClass}>OHO555</strong> พร้อมมอบโบนัสสมาชิกใหม่ 50% สิทธิ์คืนยอดเสียรายวัน และค่าคอมบาคาร่าที่คืนให้ทุกการเดิมพัน รวมไว้ให้เลือกในหน้าเดียว
     </p>
 
-    <p class="mb-8 text-left text-base leading-relaxed text-[#2b2622]">
-      แต่ละภาพด้านล่างสรุปสิ่งที่คุณได้รับเมื่อเป็นสมาชิก หากอยากรู้รายละเอียดหรือเงื่อนไขเพิ่มเติม <a href="/contact-us/" class="font-bold text-[#1557b0] underline underline-offset-4 transition-colors hover:text-[#a84a06]">ทักแอดมิน</a>ผ่านช่องทางบนหน้าเว็บได้ทันทีก่อนเริ่มเล่น
+    <p class="mb-8 text-left text-base leading-relaxed">
+      แต่ละโปรมียอดรับและเงื่อนไขเทิร์นต่างกันตามที่ระบุไว้บนภาพ เลือกโปรที่เข้ากับสไตล์การเล่นของคุณ หรือจะไม่รับโปรแล้วเล่นด้วยยอดฝากล้วนก็ได้ เพื่อการเล่นที่คุ้มค่าและคุมงบได้ตามใจ
     </p>
 
-    <div class="grid w-full grid-cols-1 gap-6 sm:grid-cols-2">
+    <div class="grid w-full grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
       {
         promos.map((promo) => (
-          <Picture
-            src={promo.src}
-            alt={promo.alt}
-            loading="lazy"
-            fetchpriority="low"
-            widths={[400, 600]}
-            sizes="(min-width: 1400px) 632px, (min-width: 640px) 46vw, 92vw"
-            class={promoClass}
-            decoding="async"
-            formats={["avif", "webp"]}
-            fallbackFormat="webp"
-            quality={70}
-          />
+          <div class="sm:max-lg:last:odd:col-span-2 sm:max-lg:last:odd:mx-auto sm:max-lg:last:odd:w-1/2">
+            <Picture
+              src={promo.src}
+              alt={promo.alt}
+              loading="lazy"
+              fetchpriority="low"
+              widths={[400, 600]}
+              sizes="(min-width: 1432px) 424px, (min-width: 1024px) 29vw, (min-width: 640px) 46vw, calc(100vw - 96px)"
+              class={promoClass}
+              decoding="async"
+              formats={["avif", "webp"]}
+              fallbackFormat="webp"
+              quality={70}
+            />
+          </div>
         ))
       }
     </div>
@@ -92,8 +88,9 @@ const promoClass =
     <div class="mt-12 flex justify-center pb-4">
       <a
         href="/register/"
-        class="flex items-center justify-center rounded-xl border-2 border-[#ffe3b8] bg-gradient-to-b from-[#ffc94a] via-[#f47b20] to-[#c85a0c] px-10 py-3.5 text-lg font-black text-[#2a1300] shadow-[0_8px_22px_rgba(244,123,32,0.40)] transition-all hover:scale-105 hover:brightness-105 hover:shadow-[0_15px_40px_rgba(244,123,32,0.40)]">
-        สมัครสมาชิก TG787
+        style="background-image: linear-gradient(in oklab to bottom, #ff4b4b, #d81e1e 55%, #9e0c12);"
+        class="flex items-center justify-center rounded-xl border-2 border-[#ffd24d] px-10 py-3.5 text-lg font-black text-white shadow-[0_8px_22px_rgba(216,30,30,0.40)] transition-all hover:scale-105 hover:brightness-110 hover:shadow-[0_15px_40px_rgba(252,170,4,0.30)]">
+        สมัครสมาชิก OHO555
       </a>
     </div>
   </ContentBox>

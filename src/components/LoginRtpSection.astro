@@ -1,48 +1,51 @@
 ---
-import ContentBoxTwoCyberCut from "./ContentBoxTwoCyberCut.astro";
+import ContentBoxTwo from "./ContentBoxTwo.astro";
 import { BRAND_NAME } from "../lib/brandProfile";
 
 const tables = [
   {
     icon: "🃏",
     name: "บาคาร่า",
-    provider: "WM Casino · Dream Gaming",
-    detail: "อ่านเค้าไพ่แล้ววางฝั่งผู้เล่น เจ้ามือ หรือเสมอ",
+    provider: "SA Gaming · Sexy Baccarat",
+    detail: "ลุ้นระหว่างฝั่งผู้เล่นกับเจ้ามือ หรือจะวางที่เสมอก็ได้",
     tag: "ไพ่สด",
   },
   {
-    icon: "🎲",
-    name: "ไฮโล",
-    provider: "WM Casino · Dream Gaming",
-    detail: "ทายผลสูงต่ำ แต้มรวม และตองในแต่ละตา",
-    tag: "ลูกเต๋า",
+    icon: "🐉",
+    name: "เสือมังกร",
+    provider: "SA Gaming · Sexy Baccarat",
+    detail: "เลือกแค่ฝั่งเสือหรือมังกร",
+    tag: "ไพ่สด",
   },
   {
-    icon: "♠️",
-    name: "แบล็คแจ็ค",
-    provider: "WM Casino · Dream Gaming",
-    detail: "ตัดสินใจขอไพ่เพิ่มหรือหยุดในแต่ละตา",
-    tag: "ไพ่สด",
+    icon: "🎡",
+    name: "รูเล็ต",
+    provider: "SA Gaming · Sexy Baccarat",
+    detail: "ลงเลขเดี่ยว หรือแทงแดงดำ คู่คี่ สูงต่ำ",
+    tag: "วงล้อ",
   },
 ];
-const chips = ["WM Casino", "Dream Gaming (DG)"];
+const chips = ["SA Gaming", "Sexy Baccarat"];
 
 const inputClass =
-  "w-full rounded-xl border border-[#f1d9c4] bg-white py-3 pr-4 pl-12 text-[#2b2622] transition-all outline-none placeholder:text-[#6b5f56] focus:border-[#f47b20] focus:ring-2 focus:ring-[#f47b20]/25";
+  "w-full rounded-xl border border-[#2a6b2c] bg-[#072010] py-3 pr-4 pl-12 text-[#e3eedf] transition-all outline-none placeholder:text-[#9db897] focus:border-[#fcaa04] focus:ring-2 focus:ring-[#fcaa04]/25";
+
+const registerStyle = "background-image: linear-gradient(in oklab to bottom, #ff4b4b, #d81e1e 55%, #9e0c12);";
+const loginStyle = "background-image: linear-gradient(in oklab to bottom, #ffe08a, #fcaa04 55%, #c77d00);";
 ---
 
-<ContentBoxTwoCyberCut title={`เข้าสู่ระบบ ${BRAND_NAME}`} label={`เข้าสู่ระบบ ${BRAND_NAME} และโต๊ะคาสิโนสดจาก WM Casino และ Dream Gaming`}>
+<ContentBoxTwo as="p" title={`เข้าสู่ระบบ ${BRAND_NAME}`} label={`เข้าสู่ระบบ ${BRAND_NAME} และโต๊ะคาสิโนสดจาก SA Gaming และ Sexy Baccarat`}>
   <div slot="left" class="flex h-full flex-col gap-4">
-    <div class="relative overflow-hidden rounded-2xl border border-[#f1d9c4] bg-gradient-to-b from-[#fff3e8] to-white p-6 shadow-[0_10px_30px_rgba(31,22,17,0.08)]">
+    <div class="relative overflow-hidden rounded-2xl border border-[#2a6b2c] bg-gradient-to-b from-[#123a1a] to-[#0c2a12] p-6 shadow-[0_10px_30px_rgba(1,10,3,0.45)]">
       <div class="mb-5 flex items-center gap-3">
         <span
           aria-hidden="true"
-          class="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl border-2 border-[#ffe3b8] bg-gradient-to-b from-[#ffc94a] via-[#f47b20] to-[#c85a0c] text-xl shadow-[0_5px_15px_rgba(244,123,32,0.40)]">
-          🐯
+          class="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl border-2 border-[#ffe9a8] bg-gradient-to-b from-[#ffe08a] via-[#fcaa04] to-[#c77d00] text-xl shadow-[0_5px_15px_rgba(252,170,4,0.4)]">
+          👑
         </span>
         <div class="flex flex-col">
-          <p class="text-base font-black text-[#1f1611]">ยินดีต้อนรับกลับสู่ <span class="text-[#a84a06]">{BRAND_NAME}</span></p>
-          <span class="text-xs text-[#6b5f56]">ยูสเดิมล็อกอินได้ทุกเครื่องทั้ง iOS และ Android ผ่านเบราว์เซอร์ ไม่ต้องสมัครซ้ำ</span>
+          <p class="text-base font-black text-white">ยินดีต้อนรับกลับสู่ <span class="text-[#ffd24d]">{BRAND_NAME}</span></p>
+          <span class="text-xs text-[#b5cbb0]">ใช้ยูสเดิมล็อกอินได้ทุกเครื่อง เข้าผ่านเบราว์เซอร์ทั้ง iOS และ Android ไม่ต้องโหลดแอป</span>
         </div>
       </div>
 
@@ -57,29 +60,31 @@ const inputClass =
         </div>
 
         <div class="flex items-center justify-between px-1 text-xs">
-          <label class="flex items-center gap-2 text-[#6b5f56]">
-            <input type="checkbox" class="h-3.5 w-3.5 rounded border-[#f1d9c4] accent-[#f47b20]" />
+          <label class="flex items-center gap-2 text-[#b5cbb0]">
+            <input type="checkbox" class="h-3.5 w-3.5 rounded border-[#2a6b2c] accent-[#fcaa04]" />
             จดจำฉันไว้
           </label>
-          <a href="/login/" class="text-[#6b5f56] transition-colors hover:text-[#1557b0]">ลืมรหัสผ่าน?</a>
+          <a href="/login/" class="text-[#b5cbb0] transition-colors hover:text-[#ffd24d]">ลืมรหัสผ่าน?</a>
         </div>
 
         <a
           href="/login/"
-          class="mt-1 block w-full rounded-xl border-2 border-white/70 bg-gradient-to-b from-[#3d8bf0] to-[#1557b0] p-3.5 text-center font-bold text-white shadow-[0_8px_22px_rgba(31,111,214,0.35)] transition-transform hover:scale-[1.02] motion-reduce:hover:scale-100">
+          style={loginStyle}
+          class="mt-1 block w-full rounded-xl border-2 border-[#ffe9a8] p-3.5 text-center font-black text-[#1a1000] shadow-[0_8px_22px_rgba(252,170,4,0.35)] transition-transform hover:scale-[1.02] motion-reduce:hover:scale-100">
           เข้าสู่ระบบ
         </a>
 
-        <div class="flex items-center gap-3 py-1 text-xs text-[#6b5f56]">
-          <span aria-hidden="true" class="h-px flex-1 bg-[#f1d9c4]"></span>
+        <div class="flex items-center gap-3 py-1 text-xs text-[#b5cbb0]">
+          <span aria-hidden="true" class="h-px flex-1 bg-[#2a6b2c]"></span>
           หรือ
-          <span aria-hidden="true" class="h-px flex-1 bg-[#f1d9c4]"></span>
+          <span aria-hidden="true" class="h-px flex-1 bg-[#2a6b2c]"></span>
         </div>
 
         <a
           href="/register/"
-          class="flex w-full items-center justify-center gap-2 rounded-xl border-2 border-[#ffe3b8] bg-gradient-to-b from-[#ffc94a] via-[#f47b20] to-[#c85a0c] p-3.5 text-center font-black text-[#2a1300] shadow-[0_8px_22px_rgba(244,123,32,0.40)] transition-transform hover:scale-[1.02] motion-reduce:hover:scale-100">
-          <span aria-hidden="true">🐯</span>
+          style={registerStyle}
+          class="flex w-full items-center justify-center gap-2 rounded-xl border-2 border-[#ffd24d] p-3.5 text-center font-black text-white shadow-[0_8px_22px_rgba(216,30,30,0.4)] transition-transform hover:scale-[1.02] motion-reduce:hover:scale-100">
+          <span aria-hidden="true">📝</span>
           <span>สมัครสมาชิก</span>
         </a>
 
@@ -91,21 +96,21 @@ const inputClass =
         </a>
 
         <div class="mt-1 flex flex-wrap gap-2 px-1">
-          <span class="rounded-full bg-[#1a120c] px-2.5 py-1 text-[10px] font-bold text-[#fff1e4]"><span aria-hidden="true">🔒</span> ไม่บอกรหัสผ่านหรือ OTP กับผู้อื่น</span>
-          <span class="rounded-full border border-[#1f6fd6]/30 bg-[#eaf3ff] px-2.5 py-1 text-[10px] font-bold text-[#1557b0]"><span aria-hidden="true">📱</span> iOS · Android ผ่านเบราว์เซอร์</span>
+          <span class="rounded-full border border-[#2a6b2c] bg-[#04160a] px-2.5 py-1 text-[10px] font-bold text-[#e3eedf]"><span aria-hidden="true">🔒</span> รหัสผ่านกับ OTP ไม่ต้องส่งให้ใคร</span>
+          <span class="rounded-full border border-[#5ccf3f]/40 bg-[#0f3316] px-2.5 py-1 text-[10px] font-bold text-[#a6f08a]"><span aria-hidden="true">📱</span> iOS · Android ผ่านเบราว์เซอร์</span>
         </div>
       </div>
     </div>
   </div>
 
   <div slot="right" class="h-full">
-    <div class="flex h-full flex-col rounded-2xl border border-[#f1d9c4] bg-white p-5 shadow-[0_10px_30px_rgba(31,22,17,0.08)]">
+    <div class="flex h-full flex-col rounded-2xl border border-[#2a6b2c] bg-[#072010] p-5 shadow-[0_10px_30px_rgba(1,10,3,0.45)]">
       <div class="mb-5">
-        <span class="text-xs font-bold tracking-wide text-[#6b5f56]">โต๊ะคาสิโนสดจาก WM Casino และ Dream Gaming</span>
-        <p class="text-2xl leading-normal font-black text-[#1f1611] sm:text-3xl">ดูภาพสดหน้าโต๊ะ <span aria-hidden="true" class="text-[#f47b20]">•</span> แล้วค่อยลงเดิมพัน</p>
+        <span class="text-xs font-bold tracking-wide text-[#b5cbb0]">โต๊ะคาสิโนสดจาก SA Gaming และ Sexy Baccarat</span>
+        <p class="text-2xl leading-normal font-black text-white sm:text-3xl">ยูสเดียวกับสล็อต <span aria-hidden="true" class="text-[#fcaa04]">•</span> ไพ่แจกจริงบนภาพสด</p>
       </div>
 
-      <div class="mb-2 flex items-center justify-between text-[11px] font-bold tracking-widest text-[#6b5f56]">
+      <div class="mb-2 flex items-center justify-between text-[11px] font-bold tracking-widest text-[#b5cbb0]">
         <span>เกม / ค่าย</span>
         <span>รูปแบบ</span>
       </div>
@@ -113,18 +118,18 @@ const inputClass =
       <ul class="flex flex-1 flex-col gap-2.5">
         {
           tables.map((t) => (
-            <li class="rounded-xl border border-[#f1d9c4] bg-[#fff3e8] px-3.5 py-2.5 transition-colors hover:border-[#f0a868] hover:bg-white">
+            <li class="rounded-xl border border-[#2a6b2c] bg-[#123a1a] px-3.5 py-2.5 transition-colors hover:border-[#fcaa04]/50 hover:bg-[#164520]">
               <div class="flex items-center justify-between gap-2 text-sm">
-                <span class="flex min-w-0 items-center gap-2 font-bold text-[#1f1611]">
+                <span class="flex min-w-0 items-center gap-2 font-bold text-white">
                   <span aria-hidden="true" class="w-5 shrink-0 text-center">
                     {t.icon}
                   </span>
                   <span class="truncate">{t.name}</span>
                 </span>
-                <span class="shrink-0 rounded-full bg-gradient-to-b from-[#1f6fd6] to-[#0f4fa8] px-2.5 py-0.5 text-[10px] font-bold text-white">{t.tag}</span>
+                <span class="shrink-0 rounded-full bg-gradient-to-b from-[#237f12] to-[#1d6b00] px-2.5 py-0.5 text-[10px] font-bold text-white">{t.tag}</span>
               </div>
-              <p class="mt-1.5 text-xs leading-relaxed text-[#6b5f56]">
-                <span class="font-bold text-[#a84a06]">{t.provider}</span> · {t.detail}
+              <p class="mt-1.5 text-xs leading-relaxed text-[#b5cbb0]">
+                <span class="font-bold text-[#ffd24d]">{t.provider}</span> · {t.detail}
               </p>
             </li>
           ))
@@ -132,12 +137,12 @@ const inputClass =
       </ul>
 
       <div class="mt-4 flex flex-wrap items-center justify-center gap-2">
-        {chips.map((c) => <span class="rounded-full border border-[#f0a868]/60 bg-[#fff3e8] px-3 py-1 text-[10px] font-bold text-[#a84a06]">{c}</span>)}
+        {chips.map((c) => <span class="rounded-full border border-[#fcaa04]/50 bg-[#0f3316] px-3 py-1 text-[10px] font-bold text-[#ffd24d]">{c}</span>)}
       </div>
 
-      <p class="mt-3 text-center text-[11px] leading-relaxed tracking-wide text-[#6b5f56]">ทุกโต๊ะมีดีลเลอร์ดำเนินเกมจริงผ่านภาพสด กติกาของแต่ละโต๊ะดูได้ในหน้าเกมก่อนลงเดิมพัน</p>
+      <p class="mt-3 text-center text-[11px] leading-relaxed tracking-wide text-[#b5cbb0]">เปิดโต๊ะสดผ่านเบราว์เซอร์ได้ทั้งมือถือ คอมพิวเตอร์ และแท็บเล็ต ไม่ต้องโหลดแอป</p>
 
-      <a href="/ทางเข้า/" class="mt-3 self-center text-xs font-bold text-[#1557b0] underline underline-offset-4 transition-colors hover:text-[#a84a06]">ไปที่ทางเข้า {BRAND_NAME}</a>
+      <a href="/ทางเข้า/" class="mt-3 self-center text-xs font-bold text-[#ffd24d] underline decoration-[#ffd24d]/50 underline-offset-4 transition-colors hover:text-[#ffe9a8]">ไปที่ทางเข้า {BRAND_NAME}</a>
     </div>
   </div>
-</ContentBoxTwoCyberCut>
+</ContentBoxTwo>

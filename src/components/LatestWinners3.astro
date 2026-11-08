@@ -1,10 +1,14 @@
 ---
+import { getImage } from "astro:assets";
 import kbankLogo from "../assets/banks/kbank.png";
 import scbLogo from "../assets/banks/scb.png";
 import krungsriLogo from "../assets/banks/krungsri.png";
 import ktbLogo from "../assets/banks/ktb.png";
 import ttbLogo from "../assets/banks/ttb.png";
+import trueWalletLogo from "../assets/bank-footer/TRUEWALLET.png";
 import { BRAND_NAME, brandFlag, brandPick } from "../lib/brandProfile";
+
+const trueWalletIcon = await getImage({ src: trueWalletLogo, width: 48, height: 48, format: "webp", quality: 80 });
 
 const bankPool = [
   { name: "KBank", color: "bg-[#1155cc]", icon: kbankLogo.src },
@@ -12,10 +16,11 @@ const bankPool = [
   { name: "Krungsri", color: "bg-[#fcd34d]", icon: krungsriLogo.src },
   { name: "KTB", color: "bg-[#0ea5e9]", icon: ktbLogo.src },
   { name: "TTB", color: "bg-[#1279be]", icon: ttbLogo.src },
+  { name: "TrueMoney Wallet", color: "bg-[#ffffff]", icon: trueWalletIcon.src },
 ];
 
-const AMOUNT_MIN = 15000;
-const AMOUNT_MAX = 95000;
+const AMOUNT_MIN = 500;
+const AMOUNT_MAX = 48000;
 
 const LETTERS = "abcdefghijklmnopqrstuvwxyz";
 const pickFrom = (chars: string, salt: string) => chars.charAt(brandPick(Astro.site, salt, chars.length));
@@ -27,20 +32,25 @@ const initialRows = Array.from({ length: 5 }, (_, i) => ({
   pending: brandFlag(Astro.site, `winner-pending-${i}`),
 }));
 
-const feedTitle = `ประวัติการถอนเงินของสมาชิก ${BRAND_NAME} แบบเรียลไทม์`;
+const feedTitle = `รายการถอนล่าสุดของสมาชิก ${BRAND_NAME}`;
+const pendingText = "กำลังตรวจสอบรายการ";
+const doneText = "โอนสำเร็จแล้ว";
+const pendingClass = "border-[#fcaa04]/50 bg-[#123a1a] text-[#ffd24d]";
+const doneClass = "border-[#4ade80]/45 bg-[#072010] text-[#4ade80]";
 ---
 
 <div class="mx-auto w-full max-w-[900px] p-4 font-sans">
   <section
     aria-label={feedTitle}
-    class="relative overflow-hidden rounded-[30px] border border-[#1a4a9c] bg-[#041a45] px-4 py-8 shadow-[0_10px_30px_rgba(11,124,244,0.12)] md:p-10">
-    <div aria-hidden="true" class="pointer-events-none absolute -top-16 -right-10 h-40 w-40 rounded-full bg-[#0b7cf4]/15 blur-[60px]"></div>
-    <div aria-hidden="true" class="pointer-events-none absolute -bottom-16 -left-10 h-40 w-40 rounded-full bg-[#e8202a]/12 blur-[60px]"></div>
+    class="relative isolate overflow-hidden rounded-[30px] border border-[#2a6b2c] bg-[#072010] px-4 py-8 shadow-[0_10px_30px_rgba(1,10,3,0.5)] md:p-10">
+    <div aria-hidden="true" class="pointer-events-none absolute inset-x-0 top-0 -z-10 h-1 bg-gradient-to-r from-[#c77d00] via-[#fcaa04] to-[#2f9e1f]"></div>
+    <div aria-hidden="true" class="pointer-events-none absolute -top-16 -right-10 -z-10 h-40 w-40 rounded-full bg-[#fcaa04]/12 blur-[60px]"></div>
+    <div aria-hidden="true" class="pointer-events-none absolute -bottom-16 -left-10 -z-10 h-40 w-40 rounded-full bg-[#2f9e1f]/18 blur-[60px]"></div>
 
-    <div class="relative z-10 mb-8 text-center">
-      <p class="bg-gradient-to-r from-white via-[#4da3ff] to-[#0b7cf4] bg-clip-text text-xl font-black text-transparent md:text-3xl">{feedTitle}</p>
-      <p class="mt-2 text-base leading-relaxed text-[#dbe9ff]">
-        รายการถอนของสมาชิก {BRAND_NAME} ที่ทำจบในมือถือเครื่องเดียว ตัวเลขด้านล่างเป็นข้อมูลตัวอย่างสำหรับแสดงรูปแบบรายการเท่านั้น
+    <div class="mb-8 text-center">
+      <p class="bg-gradient-to-r from-white via-[#ffe9a8] to-[#fcaa04] bg-clip-text text-xl font-black text-transparent md:text-3xl">{feedTitle}</p>
+      <p class="mt-2 text-left text-base leading-relaxed text-[#e3eedf] md:text-center">
+        ถอนกดเองจากหน้าเว็บด้วยระบบออโต้ เข้าทรูวอเลทหรือบัญชีทุกธนาคาร ขั้นต่ำ 1 บาท ตัวเลขด้านล่างเป็นข้อมูลตัวอย่างสำหรับแสดงรูปแบบรายการเท่านั้น
       </p>
     </div>
 
@@ -50,37 +60,40 @@ const feedTitle = `ประวัติการถอนเงินของ�
       data-max-rows="5"
       data-amount-min={AMOUNT_MIN}
       data-amount-max={AMOUNT_MAX}
+      data-pending-chance="0.4"
       data-user-style="letters"
       data-user-digits="4"
-      class="relative z-10 ml-4 border-l-2 border-[#1a4a9c] pl-6 md:ml-8 md:pl-8">
+      class="ml-4 border-l-2 border-[#2a6b2c] pl-6 md:ml-8 md:pl-8">
       {
         initialRows.map((row) => (
-          <div data-winner-row class="winner-row relative mb-6 transition-all duration-500 ease-out">
-            <div class="absolute top-2 -left-[35px] h-4 w-4 rounded-full border-2 border-[#041a45] bg-[#4da3ff] shadow-[0_0_10px_rgba(11,124,244,0.6)] md:-left-[43px]" />
+          <div data-winner-row class="relative mb-6 transition-all duration-500 ease-out motion-reduce:transition-none [&.is-entering]:-translate-x-4 [&.is-entering]:opacity-0">
+            <div aria-hidden="true" class="absolute top-2 -left-[35px] h-4 w-4 rounded-full border-2 border-[#072010] bg-[#fcaa04] shadow-[0_0_10px_rgba(252,170,4,0.6)] md:-left-[43px]" />
 
-            <div class="flex items-center gap-4 rounded-[20px] border border-[#1a4a9c] bg-gradient-to-r from-[#0a2a66] to-[#041a45] p-4 transition-colors hover:from-[#0a2a66] hover:to-[#0a2a66]">
+            <div class="flex items-center gap-4 rounded-[20px] border border-[#2a6b2c] bg-gradient-to-r from-[#123a1a] to-[#072010] p-4 transition-colors hover:border-[#fcaa04]/50">
               <div data-winner-bank class={`flex h-10 w-10 shrink-0 items-center justify-center rounded-full ${row.bank.color}`}>
                 <img data-winner-icon src={row.bank.icon} alt="" width="24" height="24" loading="lazy" decoding="async" class="h-6 w-6 object-contain" />
               </div>
 
               <div class="min-w-0 flex-1">
-                <div class="text-sm text-[#9fb8dc]">
+                <div class="text-sm text-[#b5cbb0]">
                   ยูสเซอร์:{" "}
                   <span data-winner-user class="font-bold text-white">
                     {row.user}
                   </span>
                 </div>
-                <div class="text-xl font-black text-[#4da3ff]">
+                <div class="text-xl font-black text-[#ffd24d]">
                   <span data-winner-amount>{row.amount}</span> THB
                 </div>
               </div>
 
               <div
                 data-winner-status
-                data-pending-text="กำลังตรวจสอบรายการ"
-                data-done-text="โอนสำเร็จแล้ว"
-                class={`winner-status hidden shrink-0 rounded-full border px-3 py-1 text-[10px] tracking-widest md:block ${row.pending ? "is-pending" : "is-verified"}`}>
-                {row.pending ? "กำลังตรวจสอบรายการ" : "โอนสำเร็จแล้ว"}
+                data-pending-text={pendingText}
+                data-done-text={doneText}
+                data-pending-class={pendingClass}
+                data-done-class={doneClass}
+                class={`hidden shrink-0 rounded-full border px-3 py-1 text-[10px] tracking-widest md:block ${row.pending ? pendingClass : doneClass}`}>
+                {row.pending ? pendingText : doneText}
               </div>
             </div>
           </div>
@@ -97,27 +110,3 @@ const feedTitle = `ประวัติการถอนเงินของ�
 
   startWinnersFeed();
 </script>
-
-<style>
-  .winner-status.is-pending {
-    color: #4da3ff;
-    border-color: rgba(11, 124, 244, 0.45);
-    background-color: #0a2a66;
-  }
-  .winner-status.is-verified {
-    color: #4ade80;
-    border-color: rgba(74, 222, 128, 0.45);
-    background-color: #041a45;
-  }
-
-  .winner-row.is-entering {
-    transform: translateX(-1rem);
-    opacity: 0;
-  }
-
-  @media (prefers-reduced-motion: reduce) {
-    .winner-row {
-      transition: none;
-    }
-  }
-</style>

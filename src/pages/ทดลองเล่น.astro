@@ -2,31 +2,24 @@
 import MainLayout from "../layouts/MainLayout.astro";
 import ContentBox from "../components/ContentBox.astro";
 import Navfoot from "../components/Navfoot.astro";
-import Announcement from "../components/AnnouncementCyber.astro";
+import Announcement from "../components/AnnouncementPremium.astro";
 
 import { Picture } from "astro:assets";
 import { itemList, pageGraph, schemaCtx } from "../lib/schema";
 import pgCover from "../assets/gamedemo11.webp";
-import jiliCover from "../assets/gamedemo14.webp";
 import popularCover from "../assets/gamedemo8.webp";
 import newCover from "../assets/gamedemo16.webp";
 
 const demoGames = [
   {
     name: "PG Soft",
-    games: "Wild Bandito",
+    games: "Treasures of Aztec (สาวถ้ำ)",
     src: pgCover,
     alt: "แบนเนอร์ค่าย PG Pocket Games Soft โลโก้ตัวอักษรพิกเซลบนพื้นดำ คู่กับตัวละครหญิงสวมมงกุฎขนนกสีชมพูและเครื่องประดับทองสไตล์แอซเท็ก บนฉากแสงสีทอง",
   },
   {
-    name: "JILI",
-    games: "Golden Empire",
-    src: jiliCover,
-    alt: "แบนเนอร์ค่ายเกม JILI ตัวอักษรทองบนพื้นดำ คู่กับนางเงือกผมแดงสวมเกราะเปลือกหอยสีทอง ยกหอยสังข์แนบหู ท่ามกลางปลาการ์ตูนใต้น้ำ",
-  },
-  {
     name: "เกมยอดนิยม",
-    games: "เกมฮิตจาก PG Soft, Pragmatic Play และ JILI",
+    games: "Sugar Rush และ Vikings Go Berzerk",
     src: popularCover,
     alt: "แบนเนอร์ Popular Game ตัวอักษรทองนูนหน้าวงแหวนชิปสีทอง ขนาบด้วยกระต่ายใส่หูฟังยืนข้างหีบสมบัติกับแมวใส่แว่นกันแดด ท่ามกลางกองเหรียญทองและชิปที่ลอยฟุ้ง",
   },
@@ -40,21 +33,22 @@ const demoGames = [
 
 const gameList = demoGames.map((game) => ({ name: game.name, imagePath: game.src.src }));
 
-const pageTitle = "ทดลองเล่นสล็อต TG787 ลอง PG Soft Pragmatic Play JILI ก่อนเล่นจริง";
+const pageTitle = "ทดลองเล่นสล็อต OHO555 ลอง PG Soft Pragmatic Play Yggdrasil ก่อนเล่นจริง";
 
-const pageHeading = "ทดลองเล่นสล็อต TG787 ลองให้พอใจก่อนเริ่มเล่นจริง";
+const pageHeading = "ทดลองเล่นสล็อต OHO555 ลองให้พอใจก่อนเริ่มเล่นจริง";
 
 const pageDescription =
-  "ทดลองเล่นสล็อต TG787 ลอง Wild Bandito, The Dog House และ Golden Empire ดูระบบร่วงหล่นกับตัวคูณก่อนเล่นจริง สมัครบนมือถือ ฝากถอนไม่มีขั้นต่ำ ออโต้ใน 3 นาที";
+  "ทดลองเล่นสล็อต OHO555 ลอง Treasures of Aztec, Sugar Rush และ Vikings Go Berzerk ให้พอใจก่อนเล่นจริง สล็อตกระเป๋าเดียวทุกค่าย ฝากถอนขั้นต่ำ 1 บาท สมัครเลย";
 
-const announcementMessage =
-  "TG787 คาสิโนออนไลน์ถ่ายทอดสดควบคู่สล็อตเว็บตรง • ฝากถอนไม่มีขั้นต่ำ ระบบออโต้ทำรายการเสร็จใน 3 นาที ตลอด 24 ชั่วโมง • ล็อกอินยูสเดิมได้ทุกเครื่องทั้ง iOS และ Android ผ่านเบราว์เซอร์ • ติดปัญหาการใช้งานติดต่อแอดมินผ่านช่องทางบนหน้าเว็บได้ทันที";
+const linkClass = "font-bold text-[#ffd24d] underline decoration-[#ffd24d]/50 underline-offset-4 transition-colors hover:text-[#ffe9a8]";
 
-const linkClass = "font-bold text-[#1557b0] underline underline-offset-4 transition-colors hover:text-[#a84a06]";
+const brandClass = "font-bold text-[#ffc93c]";
 
-const brandClass = "font-bold text-[#a84a06]";
+const bodyClass = "text-left text-base leading-relaxed";
 
-const bodyClass = "text-left text-base leading-relaxed text-[#2b2622]";
+const registerStyle = "background-image: linear-gradient(in oklab to bottom, #ff4b4b, #d81e1e 55%, #9e0c12);";
+
+const loginStyle = "background-image: linear-gradient(in oklab to bottom, #ffe08a, #fcaa04 55%, #c77d00);";
 
 const ctx = schemaCtx(Astro);
 const graph = pageGraph(Astro, {
@@ -67,8 +61,8 @@ const graph = pageGraph(Astro, {
   ],
   extra: [
     itemList(ctx, {
-      name: "ทดลองเล่นเกมสล็อตของ TG787",
-      alternateName: "TG787 ทดลองเล่นสล็อต PG Soft, Pragmatic Play และ JILI ก่อนเล่นจริง",
+      name: "ทดลองเล่นเกมสล็อตของ OHO555",
+      alternateName: "OHO555 ทดลองเล่นสล็อต PG Soft, Pragmatic Play และ Yggdrasil ก่อนเล่นจริง",
       itemType: "Game",
       items: gameList,
     }),
@@ -79,64 +73,68 @@ const graph = pageGraph(Astro, {
 <MainLayout title={pageTitle} description={pageDescription}>
   <script type="application/ld+json" set:html={graph} />
 
-  <Announcement message={announcementMessage} />
+  <Announcement />
 
   <ContentBox as="h1" title={pageHeading}>
     <div class="flex flex-col gap-4">
       <p class={bodyClass}>
-        หากคุณกำลังมองหาที่ลองสล็อตก่อนใช้เครดิตจริง <strong class={brandClass}>TG787</strong> พร้อมเปิดโหมดทดลองเล่นให้คุณหมุนดูจังหวะของเกมได้ตามสบาย เพื่อให้รู้ว่าเกมไหนเข้ามือก่อนเริ่มเล่นจริง
+        หากคุณกำลังมองหาที่ลองสล็อตก่อนใช้เครดิตจริง <strong class={brandClass}>OHO555</strong> พร้อมเปิดโหมดทดลองเล่นให้หมุนดูจังหวะของเกมได้ตามสบาย เพื่อให้รู้ก่อนว่าเกมไหนเข้ามือ แล้วค่อยเริ่มเล่นจริงในวันที่คุณพร้อม
       </p>
       <p class={bodyClass}>
-        เลือกลองได้ทั้งเกมของ PG Soft, Pragmatic Play และ JILI ซึ่งเป็นค่ายเดียวกับที่เปิดให้เล่นจริงบนเว็บตรงของเรา ลองจนเจอเกมที่ใช่ แล้วค่อยเริ่มเล่นจริงในวันที่คุณพร้อม
+        ลองได้ทั้งเกมของ PG Soft, Pragmatic Play และ Yggdrasil ซึ่งเป็นค่ายเดียวกับที่เปิดให้เล่นจริงบนเว็บตรงไม่ผ่านเอเย่นต์ ทุกค่ายใช้กระเป๋าเดียว เจอเกมที่ใช่เมื่อไหร่ก็เปลี่ยนเกมได้โดยไม่ต้องย้ายเครดิต
       </p>
       <p class={bodyClass}>
-        ลองได้บนเบราว์เซอร์มือถือทั้ง iOS และ Android โดยไม่ต้องโหลดแอปเพิ่มในเครื่อง และยูสเดียวกันล็อกอินต่อได้ทุกเครื่องโดยไม่ต้องสมัครซ้ำ สะดวกเครื่องไหนก็ลองเครื่องนั้น
+        ยูสเดียวกันล็อกอินได้ทุกเครื่อง ทั้งมือถือ iOS, Android หรือคอมพิวเตอร์ผ่านเบราว์เซอร์ ไม่ต้องโหลดแอปเพิ่มในเครื่อง สะดวกเครื่องไหนก็ลองเครื่องนั้น
       </p>
     </div>
   </ContentBox>
 
-  <ContentBox as="h2" title="ลอง Wild Bandito, The Dog House และ Golden Empire ก่อนเล่นจริงกับ TG787">
+  <ContentBox as="h2" title="ลอง Treasures of Aztec, Sugar Rush และ Vikings Go Berzerk ก่อนเล่นจริงกับ OHO555">
     <div class="flex flex-col gap-4">
       <p class={bodyClass}>
-        Wild Bandito ของ PG Soft เป็นธีมโจรเม็กซิกันที่ใช้ระบบร่วงหล่น สัญลักษณ์กรอบทองกลายเป็นไวลด์เมื่อชนะ และตัวคูณขยับขึ้นทุกครั้งที่ชนะต่อเนื่องในสปินเดียว ลองหมุนดูแล้วจะเห็นจังหวะต่อคอมโบเอง
+        Treasures of Aztec หรือสาวถ้ำของ PG Soft ใช้ระบบร่วงหล่น ถ้ามีตัวกรอบทองอยู่ในชุดที่ชนะ ร่วงรอบหน้าตัวนั้นจะกลายเป็นไวลด์ และชนะติดกันเมื่อไหร่ตัวคูณก็ไต่ตาม ลองหมุนดูแล้วจะเห็นจังหวะต่อคอมโบเอง
       </p>
       <p class={bodyClass}>
-        สายที่ชอบลุ้นไวลด์ ลอง The Dog House ของ Pragmatic Play ที่มีสัญลักษณ์ไวลด์ตัวคูณ และเมื่อเข้ารอบฟรีสปิน ไวลด์จะค้างอยู่จนจบรอบ ลองดูเองว่ารอบนั้นลุ้นสนุกแค่ไหน
+        สายชอบลุ้นตัวคูณ ลอง Sugar Rush ของ Pragmatic Play ที่จ่ายเมื่อสัญลักษณ์หน้าเดียวกันเกาะเป็นก้อน ช่องที่เพิ่งชนะกลายเป็นช่องตัวคูณ ชนะซ้ำที่เดิมค่าก็ขยับขึ้น ลองดูเองว่ารอบไหนลุ้นสนุกที่สุด
       </p>
       <p class={bodyClass}>
-        ชอบเกมที่อ่านง่าย Golden Empire ของ JILI มาในธีมอาณาจักรทองที่ผสานระบบร่วงหล่นกับตัวคูณเข้าด้วยกัน หมุนไม่กี่รอบก็เข้าใจว่าสัญลักษณ์ที่ต่อเนื่องทำงานอย่างไร
+        ถ้าชอบธีมดุดัน Vikings Go Berzerk ของ Yggdrasil มาในฟีลนักรบไวกิ้งเต็มจอ ลองหมุนสักพักแล้วตัดสินใจเองว่าเกมไหนเข้ากับสไตล์ของคุณ
       </p>
       <p class={bodyClass}>
-        ภาพแต่ละใบด้านล่างพาไปหน้า<a href="/register/" class={linkClass}>สมัครสมาชิก</a> สมัครยูสเดียวบนมือถือ แล้วเข้าไปลองโหมดทดลองของค่ายที่สนใจได้เลย เจอเกมที่ใช่เมื่อไหร่ก็เล่นจริงต่อด้วยยูสเดิม
+        ภาพแต่ละใบด้านล่างพาไปหน้า<a href="/register/" class={linkClass}>สมัครสมาชิก</a> สมัครยูสเดียวผ่านเบราว์เซอร์ แล้วเข้าไปลองโหมดทดลองของค่ายที่สนใจได้เลย เจอเกมที่ใช่เมื่อไหร่ก็เล่นจริงต่อด้วยยูสเดิม
       </p>
-      <div class="mt-4 mb-5 grid grid-cols-2 gap-5 md:grid-cols-4">
+      <div class="mt-4 mb-5 grid grid-cols-1 gap-5 sm:grid-cols-3">
         {
           demoGames.map((game) => (
-            <div class="group/game relative mx-auto w-full max-w-[400px] overflow-hidden rounded-xl border border-[#f1d9c4] bg-white shadow-[0_10px_30px_rgba(31,22,17,0.08)] transition-colors duration-300 hover:border-[#f0a868]">
+            <div class="group/game relative mx-auto w-full max-w-[400px] overflow-hidden rounded-xl border border-[#2a6b2c] bg-[#0c2a12] shadow-[0_10px_30px_rgba(1,10,3,0.45)] transition-colors duration-300 hover:border-[#fcaa04]/60">
               <Picture
                 src={game.src}
                 alt={game.alt}
                 loading="lazy"
                 fetchpriority="low"
                 widths={[200, 400, 600]}
-                sizes="(min-width: 1400px) 305px, (min-width: 768px) 22vw, 45vw"
+                sizes="(min-width: 1432px) 400px, (min-width: 640px) 28vw, (min-width: 496px) 400px, calc(100vw - 96px)"
                 class="block h-auto w-full object-cover transition-transform duration-300 group-hover/game:scale-105"
                 decoding="async"
                 formats={["avif", "webp"]}
                 fallbackFormat="webp"
                 quality={60}
               />
-              <div class="bg-[#fff3e8] px-3 py-2 text-center">
-                <p class="text-sm font-bold text-[#1f1611]">{game.name}</p>
-                <p class="text-xs text-[#6b5f56]">{game.games}</p>
+              <div class="bg-[#123a1a] px-3 py-2 text-center">
+                <p class="text-sm font-bold text-white">{game.name}</p>
+                <p class="text-xs text-[#b5cbb0]">{game.games}</p>
               </div>
               <a
                 href="/register/"
                 target="_blank"
                 rel="noopener noreferrer"
-                aria-label={`สมัครสมาชิก TG787 เพื่อเล่น ${game.name}`}
-                class="absolute inset-0 flex items-center justify-center bg-[#1a120c]/80 opacity-0 transition-opacity duration-300 group-hover/game:opacity-100 focus-visible:opacity-100">
-                <span class="rounded-xl border-2 border-[#ffe3b8] bg-gradient-to-b from-[#ffc94a] via-[#f47b20] to-[#c85a0c] px-6 py-2 font-black text-[#2a1300] shadow-[0_8px_22px_rgba(244,123,32,0.40)] transition-transform hover:scale-110 hover:brightness-105">สมัครสมาชิก</span>
+                aria-label={`สมัครสมาชิก OHO555 เพื่อเล่น ${game.name}`}
+                class="absolute inset-0 flex items-center justify-center bg-[#04160a]/80 opacity-0 transition-opacity duration-300 group-hover/game:opacity-100 focus-visible:opacity-100">
+                <span
+                  style={registerStyle}
+                  class="rounded-xl border-2 border-[#ffd24d] px-6 py-2 font-black text-white shadow-[0_8px_22px_rgba(216,30,30,0.40)] transition-transform hover:scale-110 hover:brightness-110">
+                  สมัครสมาชิก
+                </span>
               </a>
             </div>
           ))
@@ -148,41 +146,46 @@ const graph = pageGraph(Astro, {
   <ContentBox as="h2" title="ทดลองเล่นสล็อตฟรี หมุนลองให้พอใจก่อนใช้เครดิตจริง">
     <div class="flex flex-col gap-4">
       <p class={bodyClass}>
-        ลองให้พอใจก่อนใช้เครดิตจริง ดูว่าเบทต่ำสุดต่อรอบเท่าไร ฟีเจอร์ตัวคูณทำงานตอนไหน แล้วเก็บเกมที่เข้ากับงบของคุณไว้สองสามเกม ตั้งแต่ยังไม่ได้เติมเครดิตสักบาท
+        หมุนดูก่อนว่าเบทต่ำสุดต่อรอบเท่าไร ฟีเจอร์ตัวคูณทำงานตอนไหน แล้วเก็บเกมที่เข้ากับงบของคุณไว้สองสามเกม ตั้งแต่ยังไม่ได้เติมเครดิตสักบาท
       </p>
       <p class={bodyClass}>
-        วันไหนอยากพักจากวงล้อ <strong class={brandClass}>TG787</strong> ก็มีโต๊ะบาคาร่า ไฮโล และแบล็คแจ็คถ่ายทอดสดอยู่ในเว็บเดียวกัน ให้คุณดูดีลเลอร์แจกไพ่จริงผ่านภาพสด แล้วสลับไปลุ้นทีละตาได้โดยไม่ต้องไปหาที่อื่น
+        วันไหนอยากพักจากวงล้อ <strong class={brandClass}>OHO555</strong> ก็มีโต๊ะสดจาก SA Gaming และ Sexy Baccarat ทั้งบาคาร่า เสือมังกร และรูเล็ต ใช้ยูสเดียวกับสล็อต ไพ่ทุกใบดีลเลอร์แจกจริงบนภาพสด สลับไปลุ้นทีละตาได้โดยไม่ต้องไปหาที่อื่น
       </p>
       <p class={bodyClass}>
         เรื่องที่ขอบอกให้ชัดตั้งแต่ต้น เครดิตในโหมดทดลองถอนออกมาไม่ได้ และไม่นับเป็นยอดเทิร์นของโปรโมชั่นใด มีไว้ให้รู้จักเกมก่อนเล่นจริงเท่านั้น
       </p>
       <p class={bodyClass}>
-        อีกข้อคือไม่ใช่ทุกเกมที่มีโหมดทดลอง ขึ้นอยู่กับค่ายผู้พัฒนาแต่ละราย ถ้าเกมที่หมายตาไว้ยังลองไม่ได้ <a href="/contact-us/" class={linkClass}>ทักแอดมิน</a>ให้ช่วยแนะนำเกมแนวใกล้เคียงได้เลย
+        อีกข้อคือไม่ใช่ทุกเกมที่มีโหมดทดลอง ขึ้นอยู่กับค่ายผู้พัฒนาแต่ละราย ถ้าเกมที่หมายตาไว้ยังลองไม่ได้ <a href="/contact-us/" class={linkClass}>ทักแอดมิน</a>ให้ช่วยแนะนำเกมแนวใกล้เคียงได้ตลอด 24 ชั่วโมง
       </p>
     </div>
   </ContentBox>
 
-  <ContentBox as="h2" title="พร้อมเมื่อไหร่ สมัครสมาชิก TG787 แล้วเริ่มเล่นจริงได้ทันที">
+  <ContentBox as="h2" title="พร้อมเมื่อไหร่ สมัครสมาชิก OHO555 แล้วเริ่มเล่นจริงได้ทันที">
     <div class="flex flex-col gap-4">
       <p class={bodyClass}>
-        หากคุณกำลังมองหาเว็บตรงที่จัดการงบได้เอง <strong class={brandClass}>TG787</strong> พร้อมระบบฝากถอนไม่มีขั้นต่ำแบบออโต้ที่ทำรายการเสร็จใน 3 นาที ตลอด 24 ชั่วโมง เพื่อเล่นจริงกับเกมที่ลองจนคุ้นมือในงบที่คุณวางไว้
+        หากคุณกำลังมองหาเว็บตรงที่เริ่มได้ด้วยยอดเล็ก <strong class={brandClass}>OHO555</strong> พร้อมระบบฝากถอนขั้นต่ำ 1 บาท ผ่านทรูวอเลทหรือบัญชีทุกธนาคาร เพื่อเล่นจริงกับเกมที่ลองจนคุ้นมือในงบที่คุณวางไว้
       </p>
       <p class={bodyClass}>
-        กดโอนแล้วระบบปรับเครดิตให้เอง ไม่ต้องแนบสลิปแจ้งแอดมิน ขั้นตอนเต็มอยู่ที่หน้า<a href="/วิธีฝากถอน/" class={linkClass}>วิธีฝากถอน</a> ถ้าฝากแล้วเครดิตยังไม่ขึ้น อย่าโอนซ้ำ ให้แจ้งเวลากับยอดผ่านช่องทางบนหน้าเว็บ
+        สมาชิกใหม่รับโบนัส 50% สูงสุด 500 ทำเทิร์น 3 เท่า ดูเงื่อนไขครบได้ที่หน้า<a href="/promotion/" class={linkClass}>โปรโมชั่น</a> หรือจะไม่รับโปรแล้วเล่นด้วยยอดฝากล้วนก็ได้
       </p>
       <p class={bodyClass}>
-        เก็บรหัสผ่านไว้กับตัวและไม่บอก OTP กับใครทั้งสิ้น ก่อนเริ่มทุกครั้งลองตั้งงบที่เสียได้ไว้ก่อน สล็อตคือความบันเทิง เล่นในจังหวะที่คุณพร้อมแล้วจะสนุกกว่า
+        โอนเสร็จระบบออโต้ปรับเครดิตให้เอง ไม่ต้องส่งสลิป ส่วนถอนก็กดเองจากหน้าเว็บ ขั้นตอนเต็มอยู่ที่หน้า<a href="/วิธีฝากถอน/" class={linkClass}>วิธีฝากถอน</a> ถ้าฝากแล้วยอดยังไม่ขึ้น อย่าโอนซ้ำ ส่งเวลาโอนกับจำนวนเงินให้แอดมินดูได้เลย
+      </p>
+      <p class={bodyClass}>
+        เก็บรหัสผ่านไว้กับตัวและไม่ส่ง OTP ให้ใครทั้งสิ้น ก่อนเริ่มทุกครั้งลองตั้งงบที่เสียได้ไว้ก่อน สล็อตคือความบันเทิง เล่นในจังหวะที่คุณพร้อมแล้วจะสนุกกว่า
       </p>
       <div class="flex flex-col items-center justify-center gap-4 pt-2 sm:flex-row">
         <a
           href="/register/"
-          class="inline-flex w-full max-w-[320px] items-center justify-center gap-2 rounded-xl border-2 border-[#ffe3b8] bg-gradient-to-b from-[#ffc94a] via-[#f47b20] to-[#c85a0c] px-8 py-3.5 text-lg font-black tracking-wide text-[#2a1300] shadow-[0_8px_22px_rgba(244,123,32,0.40)] transition duration-300 hover:scale-105 hover:brightness-105">
-          <span aria-hidden="true">🎰</span> สมัครสมาชิก TG787
+          style={registerStyle}
+          class="inline-flex w-full max-w-[320px] items-center justify-center gap-2 rounded-xl border-2 border-[#ffd24d] px-8 py-3.5 text-lg font-black tracking-wide text-white shadow-[0_8px_22px_rgba(216,30,30,0.40)] transition duration-300 hover:scale-105 hover:brightness-110">
+          <span aria-hidden="true">🎰</span> สมัครสมาชิก OHO555
         </a>
 
         <a
           href="/login/"
-          class="inline-flex w-full max-w-[320px] items-center justify-center gap-2 rounded-xl border-2 border-white/70 bg-gradient-to-b from-[#3d8bf0] to-[#1557b0] px-8 py-3.5 text-lg font-bold tracking-wide text-white shadow-[0_8px_22px_rgba(31,111,214,0.35)] transition duration-300 hover:scale-105 hover:brightness-110">
+          style={loginStyle}
+          class="inline-flex w-full max-w-[320px] items-center justify-center gap-2 rounded-xl border-2 border-[#ffe9a8] px-8 py-3.5 text-lg font-black tracking-wide text-[#1a1000] shadow-[0_8px_22px_rgba(252,170,4,0.35)] transition duration-300 hover:scale-105 hover:brightness-105">
           เข้าสู่ระบบ
         </a>
       </div>

@@ -2,17 +2,14 @@
 import MainLayout from "../layouts/MainLayout.astro";
 import ContentBox from "../components/ContentBox.astro";
 import Navfoot from "../components/Navfoot.astro";
-import Announcement from "../components/AnnouncementCyber.astro";
+import Announcement from "../components/AnnouncementPremium.astro";
 import CtaRedirect from "../components/CtaRedirect.astro";
 import { pageGraph } from "../lib/schema";
 
-const pageTitle = "สมัครสมาชิก TG787 | สมัครง่ายบนมือถือ ฝากถอนไม่มีขั้นต่ำ ออโต้ใน 3 นาที";
+const pageTitle = "สมัครสมาชิก OHO555 | รับโบนัสสมาชิกใหม่ 50% ฝากถอนขั้นต่ำ 1 บาท";
 
 const pageDescription =
-  "หากคุณกำลังมองหาเว็บตรงที่สมัครง่ายบนมือถือ TG787 พร้อมเปิดยูสใหม่ผ่านเบราว์เซอร์โดยไม่ต้องโหลดแอป เพื่อเล่นคาสิโนสดและสล็อต ฝากถอนไม่มีขั้นต่ำ ออโต้ใน 3 นาที";
-
-const announcementMessage =
-  "TG787 คาสิโนออนไลน์ถ่ายทอดสดควบคู่สล็อตเว็บตรง • ฝากถอนไม่มีขั้นต่ำ ระบบออโต้ทำรายการเสร็จใน 3 นาที ตลอด 24 ชั่วโมง • ล็อกอินยูสเดิมได้ทุกเครื่องทั้ง iOS และ Android ผ่านเบราว์เซอร์ • ติดปัญหาการใช้งานติดต่อแอดมินผ่านช่องทางบนหน้าเว็บได้ทันที";
+  "หากคุณกำลังมองหาเว็บตรงไม่ผ่านเอเย่นต์ OHO555 พร้อมเปิดยูสใหม่ผ่านเบราว์เซอร์ สมาชิกใหม่รับโบนัส 50% สูงสุด 500 ฝากถอนขั้นต่ำ 1 บาท เพื่อเล่นสล็อตและคาสิโนสด";
 
 const graph = pageGraph(Astro, {
   name: pageTitle,
@@ -29,17 +26,18 @@ const targetUrl = "https://yoalink.com/22hs";
 <MainLayout title={pageTitle} description={pageDescription}>
   <script type="application/ld+json" set:html={graph} />
 
-  <Announcement message={announcementMessage} />
+  <Announcement />
 
-  <ContentBox title="สมัครสมาชิก TG787" as="h1">
+  <ContentBox title="สมัครสมาชิก OHO555" as="h1">
     <div class="flex justify-center py-8">
       <a
         href={targetUrl}
         rel="nofollow sponsored"
         data-cta-redirect
-        aria-label="สมัครสมาชิก TG787"
-        class="group relative mx-auto flex w-full max-w-[320px] items-center justify-center gap-3 overflow-hidden rounded-full border-2 border-[#ffe3b8] bg-gradient-to-b from-[#ffc94a] via-[#f47b20] to-[#c85a0c] px-6 py-4 text-xl font-black tracking-wide text-[#2a1300] shadow-[0_8px_22px_rgba(244,123,32,0.40)] transition-all duration-300 hover:scale-105 hover:brightness-105 hover:shadow-[0_15px_40px_rgba(244,123,32,0.40)]">
-        สมัครสมาชิก TG787
+        aria-label="สมัครสมาชิก OHO555"
+        style="background-image: linear-gradient(in oklab to bottom, #ff4b4b, #d81e1e 55%, #9e0c12);"
+        class="group relative mx-auto flex w-full max-w-[320px] items-center justify-center gap-3 overflow-hidden rounded-full border-2 border-[#ffd24d] px-6 py-4 text-xl font-black tracking-wide text-white shadow-[0_8px_22px_rgba(216,30,30,0.45)] transition-all duration-300 hover:scale-105 hover:brightness-110 hover:shadow-[0_15px_40px_rgba(252,170,4,0.35)]">
+        สมัครสมาชิก OHO555
       </a>
     </div>
   </ContentBox>

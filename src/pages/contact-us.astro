@@ -2,20 +2,17 @@
 import MainLayout from "../layouts/MainLayout.astro";
 import ContentBox from "../components/ContentBox.astro";
 import Navfoot from "../components/Navfoot.astro";
-import Announcement from "../components/AnnouncementCyber.astro";
+import Announcement from "../components/AnnouncementPremium.astro";
 
 import { Picture } from "astro:assets";
 import imgLine from "../assets/contact-line.webp";
 import { pageGraph } from "../lib/schema";
 import { BRAND_ADDRESS } from "../lib/brandProfile";
 
-const pageTitle = "ติดต่อทีมงาน TG787 | แจ้งปัญหาการใช้งานผ่าน LINE Official";
+const pageTitle = "ติดต่อทีมงาน OHO555 | แจ้งปัญหาการใช้งานผ่าน LINE Official";
 
 const pageDescription =
-  "ติดต่อทีมงาน TG787 ผ่าน LINE Official เมื่อล็อกอินไม่ได้ เครดิตไม่ขึ้น หรือมีรายการฝากถอนค้าง ฝากแล้วเครดิตไม่ขึ้นอย่าโอนซ้ำ แจ้งเวลากับยอดให้แอดมินตรวจสอบ";
-
-const announcementMessage =
-  "TG787 คาสิโนออนไลน์ถ่ายทอดสดควบคู่สล็อตเว็บตรง • ฝากถอนไม่มีขั้นต่ำ ระบบออโต้ทำรายการเสร็จใน 3 นาที ตลอด 24 ชั่วโมง • ล็อกอินยูสเดิมได้ทุกเครื่องทั้ง iOS และ Android ผ่านเบราว์เซอร์ • ติดปัญหาการใช้งานติดต่อแอดมินผ่านช่องทางบนหน้าเว็บได้ทันที";
+  "ติดต่อทีมงาน OHO555 ผ่าน LINE Official ตลอด 24 ชั่วโมง เมื่อล็อกอินไม่เข้า เครดิตไม่ขึ้น หรือรายการฝากถอนค้าง ยอดไม่เข้าอย่าโอนซ้ำ ส่งเวลาโอนกับยอดให้แอดมิน";
 
 const graph = pageGraph(Astro, {
   type: "ContactPage",
@@ -31,7 +28,7 @@ const graph = pageGraph(Astro, {
         contactType: "customer service",
         availableLanguage: ["Thai"],
         path: "/line",
-        description: "ติดต่อทีมงาน TG787 ผ่าน LINE Official เรื่องการสมัครสมาชิก การเข้าสู่ระบบ และรายการฝากถอนที่ค้าง",
+        description: "ติดต่อทีมงาน OHO555 ผ่าน LINE Official ตลอด 24 ชั่วโมง เรื่องการสมัครสมาชิก การเข้าสู่ระบบ และรายการฝากถอนที่ค้าง",
       },
     ],
   },
@@ -41,13 +38,13 @@ const graph = pageGraph(Astro, {
 <MainLayout title={pageTitle} description={pageDescription}>
   <script type="application/ld+json" set:html={graph} />
 
-  <Announcement message={announcementMessage} />
+  <Announcement />
 
-  <ContentBox title="ติดต่อทีมงาน TG787" as="h1">
+  <ContentBox title="ติดต่อทีมงาน OHO555" as="h1">
     <div>
       <Picture
         src={imgLine}
-        alt="ภาพช่องทางติดต่อทีมงาน TG787 ทาง LINE ไอคอน LINE สีเขียวทรงสี่เหลี่ยมมุมมน มีกรอบข้อความสีครีมที่เขียนคำว่า LINE อยู่ตรงกลาง ด้านบนเป็นวงกลมลูกศรสีเขียวล้อมตัวเลข 24h และมีผู้หญิงผมดำรวบตึง สวมชุดราตรีซาตินสีเขียวเข้มเปิดไหล่ ใส่สร้อยคอสีทอง ยืนอยู่ทางขวาของภาพ"
+        alt="ภาพช่องทางติดต่อทีมงาน OHO555 ทาง LINE ไอคอน LINE สีเขียวทรงสี่เหลี่ยมมุมมน มีกรอบข้อความสีครีมที่เขียนคำว่า LINE อยู่ตรงกลาง ด้านบนเป็นวงกลมลูกศรสีเขียวล้อมตัวเลข 24h และมีผู้หญิงผมดำรวบตึง สวมชุดราตรีซาตินสีเขียวเข้มเปิดไหล่ ใส่สร้อยคอสีทอง ยืนอยู่ทางขวาของภาพ"
         loading="lazy"
         fetchpriority="low"
         widths={[200, 400, 600]}
@@ -60,8 +57,8 @@ const graph = pageGraph(Astro, {
       />
       {
         BRAND_ADDRESS.lines.length > 0 && (
-          <address aria-label={BRAND_ADDRESS.label} class="mt-8 mb-8 rounded-r-xl border-l-4 border-[#f47b20] bg-[#fff3e8] py-4 pr-4 pl-6 text-left text-base leading-relaxed text-[#6b5f56] not-italic">
-            <span class="mb-1 block font-bold text-[#1f1611]">{BRAND_ADDRESS.label}</span>
+          <address aria-label={BRAND_ADDRESS.label} class="mt-8 mb-8 rounded-r-xl border-l-4 border-[#fcaa04] bg-[#123a1a] py-4 pr-4 pl-6 text-left text-base leading-relaxed text-[#b5cbb0] not-italic">
+            <span class="mb-1 block font-bold text-white">{BRAND_ADDRESS.label}</span>
             {BRAND_ADDRESS.lines.map((line) => (
               <span class="block">{line}</span>
             ))}
@@ -70,7 +67,7 @@ const graph = pageGraph(Astro, {
                 <span aria-hidden="true" class="mr-2">
                   ✉️
                 </span>
-                <a href={`mailto:${BRAND_ADDRESS.email}`} class="font-bold text-[#1557b0] underline underline-offset-4 transition-colors hover:text-[#a84a06]">
+                <a href={`mailto:${BRAND_ADDRESS.email}`} class="font-bold text-[#ffd24d] underline decoration-[#ffd24d]/50 underline-offset-4 transition-colors hover:text-[#ffe9a8]">
                   {BRAND_ADDRESS.email}
                 </a>
               </span>
@@ -82,15 +79,17 @@ const graph = pageGraph(Astro, {
       <div class="flex flex-wrap justify-center gap-4">
         <a
           href="/register/"
-          aria-label="สมัครสมาชิก TG787"
-          class="flex items-center justify-center rounded-xl border-2 border-[#ffe3b8] bg-gradient-to-b from-[#ffc94a] via-[#f47b20] to-[#c85a0c] px-8 py-3 font-black text-[#2a1300] shadow-[0_8px_22px_rgba(244,123,32,0.40)] transition-all hover:scale-105 hover:brightness-110 hover:shadow-[0_15px_40px_rgba(244,123,32,0.50)]">
+          aria-label="สมัครสมาชิก OHO555"
+          style="background-image: linear-gradient(in oklab to bottom, #ff4b4b, #d81e1e 55%, #9e0c12);"
+          class="flex items-center justify-center rounded-xl border-2 border-[#ffd24d] bg-[#d81e1e] px-8 py-3 font-black text-white shadow-[0_8px_22px_rgba(216,30,30,0.40)] transition-all hover:scale-105 hover:brightness-110 hover:shadow-[0_15px_40px_rgba(216,30,30,0.50)]">
           สมัครสมาชิก
         </a>
 
         <a
           href="/login/"
-          aria-label="เข้าสู่ระบบ TG787"
-          class="flex items-center justify-center rounded-xl border-2 border-white/70 bg-gradient-to-b from-[#3d8bf0] to-[#1557b0] px-8 py-3 font-bold text-white shadow-[0_8px_22px_rgba(31,111,214,0.35)] transition-all hover:scale-105 hover:brightness-110 hover:shadow-[0_15px_40px_rgba(31,111,214,0.45)]">
+          aria-label="เข้าสู่ระบบ OHO555"
+          style="background-image: linear-gradient(in oklab to bottom, #ffe08a, #fcaa04 55%, #c77d00);"
+          class="flex items-center justify-center rounded-xl border-2 border-[#ffe9a8] bg-[#fcaa04] px-8 py-3 font-black text-[#1a1000] shadow-[0_8px_22px_rgba(252,170,4,0.35)] transition-all hover:scale-105 hover:brightness-110 hover:shadow-[0_15px_40px_rgba(252,170,4,0.45)]">
           เข้าสู่ระบบ
         </a>
 
@@ -98,7 +97,7 @@ const graph = pageGraph(Astro, {
           href="/line/"
           target="_blank"
           rel="noopener noreferrer"
-          aria-label="ติดต่อทีมงาน TG787 ผ่าน Line Official"
+          aria-label="ติดต่อทีมงาน OHO555 ผ่าน Line Official"
           class="flex items-center justify-center rounded-xl border border-[#00B900]/70 bg-[#00B900] px-8 py-3 font-bold text-white shadow-[0_8px_24px_rgba(0,185,0,0.25)] transition-transform hover:scale-105 hover:bg-[#00a300]">
           ติดต่อผ่าน Line Official
         </a>

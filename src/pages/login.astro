@@ -2,17 +2,14 @@
 import MainLayout from "../layouts/MainLayout.astro";
 import ContentBox from "../components/ContentBox.astro";
 import Navfoot from "../components/Navfoot.astro";
-import Announcement from "../components/AnnouncementCyber.astro";
+import Announcement from "../components/AnnouncementPremium.astro";
 import CtaRedirect from "../components/CtaRedirect.astro";
 import { pageGraph } from "../lib/schema";
 
-const pageTitle = "เข้าสู่ระบบ TG787 | ล็อกอินยูสเดิมได้ทุกเครื่องผ่านเบราว์เซอร์";
+const pageTitle = "เข้าสู่ระบบ OHO555 | ล็อกอินยูสเดิมได้ทุกเครื่องผ่านเบราว์เซอร์";
 
 const pageDescription =
-  "หากคุณสลับเครื่องเล่นระหว่างวัน TG787 พร้อมให้ล็อกอินยูสเดิมได้ทุกเครื่อง iOS และ Android ผ่านเบราว์เซอร์ ไม่ต้องสมัครซ้ำ เพื่อเล่นคาสิโนสดและสล็อตต่อได้ทันที";
-
-const announcementMessage =
-  "TG787 คาสิโนออนไลน์ถ่ายทอดสดควบคู่สล็อตเว็บตรง • ฝากถอนไม่มีขั้นต่ำ ระบบออโต้ทำรายการเสร็จใน 3 นาที ตลอด 24 ชั่วโมง • ล็อกอินยูสเดิมได้ทุกเครื่องทั้ง iOS และ Android ผ่านเบราว์เซอร์ • ติดปัญหาการใช้งานติดต่อแอดมินผ่านช่องทางบนหน้าเว็บได้ทันที";
+  "หากคุณสลับเครื่องเล่นระหว่างวัน OHO555 พร้อมให้ล็อกอินยูสเดิมได้ทุกเครื่อง iOS และ Android ผ่านเบราว์เซอร์ ไม่ต้องโหลดแอป เพื่อเล่นสล็อตและคาสิโนสดต่อได้ทันที";
 
 const graph = pageGraph(Astro, {
   name: pageTitle,
@@ -29,17 +26,18 @@ const targetUrl = "https://yoalink.com/22hs";
 <MainLayout title={pageTitle} description={pageDescription}>
   <script type="application/ld+json" set:html={graph} />
 
-  <Announcement message={announcementMessage} />
+  <Announcement />
 
-  <ContentBox title="เข้าสู่ระบบ TG787" as="h1">
+  <ContentBox title="เข้าสู่ระบบ OHO555" as="h1">
     <div class="flex justify-center py-8">
       <a
         href={targetUrl}
         rel="nofollow sponsored"
         data-cta-redirect
-        aria-label="เข้าสู่ระบบ TG787"
-        class="group relative mx-auto flex w-full max-w-[320px] items-center justify-center gap-3 overflow-hidden rounded-full border-2 border-white/70 bg-gradient-to-b from-[#3d8bf0] to-[#1557b0] px-6 py-4 text-xl font-bold tracking-wide text-white shadow-[0_8px_22px_rgba(31,111,214,0.35)] transition-all duration-300 hover:scale-105 hover:brightness-110 hover:shadow-[0_15px_40px_rgba(31,111,214,0.35)]">
-        เข้าสู่ระบบ TG787
+        aria-label="เข้าสู่ระบบ OHO555"
+        style="background-image: linear-gradient(in oklab to bottom, #ffe08a, #fcaa04 55%, #c77d00);"
+        class="group relative mx-auto flex w-full max-w-[320px] items-center justify-center gap-3 overflow-hidden rounded-full border-2 border-[#ffe9a8] px-6 py-4 text-xl font-black tracking-wide text-[#1a1000] shadow-[0_8px_22px_rgba(252,170,4,0.35)] transition-all duration-300 hover:scale-105 hover:brightness-105 hover:shadow-[0_15px_40px_rgba(252,170,4,0.40)]">
+        เข้าสู่ระบบ OHO555
       </a>
     </div>
   </ContentBox>

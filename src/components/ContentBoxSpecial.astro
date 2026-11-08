@@ -10,37 +10,37 @@ const { title, as: HeadingTag = "h2", iconleft = "🔍", iconright = "🛡️" }
 
 <section class="relative z-10 mx-auto mb-10 w-full max-w-[1400px] px-4 font-sans">
   <div
-    class="group relative isolate w-full overflow-hidden rounded-3xl border border-[#cfe9f4] bg-white p-6 text-[#23323f] shadow-[0_10px_30px_rgba(12,53,80,0.08)] transition-all duration-500 hover:border-[#8ed3ee] hover:shadow-[0_15px_40px_rgba(0,164,212,0.18)] md:p-10">
+    class="group relative isolate w-full overflow-hidden rounded-3xl border border-[#2a6b2c] bg-[#0c2a12]/95 p-6 text-[#e3eedf] shadow-[0_10px_30px_rgba(1,10,3,0.45)] transition-all duration-500 hover:border-[#fcaa04]/60 hover:shadow-[0_15px_40px_rgba(252,170,4,0.16)] md:p-10">
     <div
       aria-hidden="true"
-      class="pointer-events-none absolute top-0 left-1/2 -z-10 h-[3px] w-1/2 -translate-x-1/2 bg-gradient-to-r from-transparent via-[#4cc9f0] to-transparent opacity-80 transition-opacity duration-500 group-hover:opacity-100">
+      class="pointer-events-none absolute top-0 left-1/2 -z-10 h-[3px] w-1/2 -translate-x-1/2 bg-gradient-to-r from-transparent via-[#fcaa04] to-transparent opacity-80 transition-opacity duration-500 group-hover:opacity-100">
     </div>
 
     {
       title && (
-        <header class="mb-8 flex items-center gap-4 border-b border-[#cfe9f4] pb-4">
-          <span aria-hidden="true" class="h-8 w-1.5 shrink-0 rounded-full bg-gradient-to-b from-[#4cc9f0] to-[#0077b3]" />
-          <HeadingTag class="text-2xl leading-normal font-black tracking-wide text-[#0c3550]">{title}</HeadingTag>
+        <header class="mb-8 flex items-center gap-4 border-b border-[#2a6b2c] pb-4">
+          <span aria-hidden="true" class="h-8 w-1.5 shrink-0 rounded-full bg-gradient-to-b from-[#ffd24d] to-[#c77d00]" />
+          <HeadingTag class="text-2xl leading-normal font-black tracking-wide text-white">{title}</HeadingTag>
         </header>
       )
     }
 
     <div class="grid grid-cols-1 gap-6 lg:grid-cols-2 lg:gap-10">
       <article
-        class="relative flex flex-col gap-4 rounded-2xl border border-[#cfe9f4] bg-[#e8f7fd] p-5 text-left text-base leading-relaxed text-[#23323f] transition-all duration-300 hover:-translate-y-1 hover:border-[#8ed3ee] hover:bg-white hover:shadow-[0_15px_40px_rgba(0,164,212,0.18)] sm:flex-row sm:p-6">
+        class="relative flex flex-col gap-4 rounded-2xl border border-[#2a6b2c] bg-[#123a1a] p-5 text-left text-base leading-relaxed text-[#e3eedf] transition-all duration-300 hover:-translate-y-1 hover:border-[#5ccf3f]/60 hover:shadow-[0_15px_40px_rgba(47,158,31,0.22)] sm:flex-row sm:p-6">
         <div
           aria-hidden="true"
-          class="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl border-2 border-white bg-gradient-to-b from-[#19b2e0] to-[#0077b3] text-2xl shadow-[0_5px_15px_rgba(0,164,212,0.35)]">
+          class="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl border-2 border-[#a6f08a]/40 bg-gradient-to-b from-[#2f9e1f] to-[#1d6b00] text-2xl shadow-[0_5px_15px_rgba(47,158,31,0.4)]">
           {iconleft}
         </div>
         <slot name="left" />
       </article>
 
       <article
-        class="relative flex flex-col gap-4 rounded-2xl border border-[#cfe9f4] bg-[#fff4e5] p-5 text-left text-base leading-relaxed text-[#23323f] transition-all duration-300 hover:-translate-y-1 hover:border-[#ffb84d] hover:bg-white hover:shadow-[0_15px_40px_rgba(247,148,29,0.25)] sm:flex-row sm:p-6">
+        class="relative flex flex-col gap-4 rounded-2xl border border-[#2a6b2c] bg-[#0f3316] p-5 text-left text-base leading-relaxed text-[#e3eedf] transition-all duration-300 hover:-translate-y-1 hover:border-[#fcaa04]/60 hover:shadow-[0_15px_40px_rgba(252,170,4,0.2)] sm:flex-row sm:p-6">
         <div
           aria-hidden="true"
-          class="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl border-2 border-white bg-gradient-to-b from-[#ffd23f] via-[#ffb84d] to-[#f7941d] text-2xl shadow-[0_5px_15px_rgba(247,148,29,0.40)]">
+          class="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl border-2 border-[#ffe9a8]/60 bg-gradient-to-b from-[#ffe08a] via-[#fcaa04] to-[#c77d00] text-2xl shadow-[0_5px_15px_rgba(252,170,4,0.4)]">
           {iconright}
         </div>
         <slot name="right" />

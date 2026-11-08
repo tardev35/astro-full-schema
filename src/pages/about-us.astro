@@ -2,18 +2,15 @@
 import MainLayout from "../layouts/MainLayout.astro";
 import ContentBox from "../components/ContentBox.astro";
 import Navfoot from "../components/Navfoot.astro";
-import Announcement from "../components/AnnouncementCyber.astro";
+import Announcement from "../components/AnnouncementPremium.astro";
 import { pageGraph } from "../lib/schema";
 
-const pageTitle = "เกี่ยวกับ TG787 | คาสิโนสดและสล็อตเว็บตรง ฝากถอนไม่มีขั้นต่ำ";
+const pageTitle = "เกี่ยวกับ OHO555 | เว็บตรงสล็อตและคาสิโนสด ฝากถอนขั้นต่ำ 1 บาท";
 
-const pageHeading = "เกี่ยวกับ TG787 คาสิโนออนไลน์ถ่ายทอดสดควบคู่สล็อตเว็บตรง";
+const pageHeading = "เกี่ยวกับ OHO555 เว็บตรงสล็อตและคาสิโนออนไลน์ในยูสเดียว";
 
 const pageDescription =
-  "รู้จัก TG787 เว็บตรงที่เปิดคาสิโนออนไลน์ถ่ายทอดสดจาก WM Casino และ Dream Gaming คู่กับสล็อต ฝากถอนไม่มีขั้นต่ำ ระบบออโต้เสร็จใน 3 นาที เล่นผ่านเบราว์เซอร์";
-
-const announcementMessage =
-  "TG787 คาสิโนออนไลน์ถ่ายทอดสดควบคู่สล็อตเว็บตรง • ฝากถอนไม่มีขั้นต่ำ ระบบออโต้ทำรายการเสร็จใน 3 นาที ตลอด 24 ชั่วโมง • ล็อกอินยูสเดิมได้ทุกเครื่องทั้ง iOS และ Android ผ่านเบราว์เซอร์ • ติดปัญหาการใช้งานติดต่อแอดมินผ่านช่องทางบนหน้าเว็บได้ทันที";
+  "รู้จัก OHO555 เว็บตรงไม่ผ่านเอเย่นต์ สล็อต PG Soft, Pragmatic Play และ Yggdrasil กระเป๋าเดียว คาสิโนสด SA Gaming ยูสเดียวกัน ฝากถอนขั้นต่ำ 1 บาท แอดมิน 24 ชม.";
 
 const graph = pageGraph(Astro, {
   name: pageTitle,
@@ -24,87 +21,95 @@ const graph = pageGraph(Astro, {
   ],
 });
 
-const bodyClass = "mb-4 text-left text-base leading-relaxed text-[#2b2622]";
-const closerClass = "text-left text-base leading-relaxed text-[#2b2622]";
-const brandClass = "font-bold text-[#a84a06]";
-const linkClass = "font-bold text-[#1557b0] underline underline-offset-4 transition-colors hover:text-[#a84a06]";
+const bodyClass = "mb-4 text-left text-base leading-relaxed";
+const closerClass = "text-left text-base leading-relaxed";
+const brandClass = "font-bold text-[#ffc93c]";
+const linkClass = "font-bold text-[#ffd24d] underline decoration-[#ffd24d]/50 underline-offset-4 transition-colors hover:text-[#ffe9a8]";
 ---
 
 <MainLayout title={pageTitle} description={pageDescription}>
   <script type="application/ld+json" set:html={graph} />
 
-  <Announcement message={announcementMessage} />
+  <Announcement />
 
   <ContentBox as="h1" title={pageHeading}>
     <p class={bodyClass}>
-      <strong class={brandClass}>TG787</strong> เป็นเว็บตรงที่เปิดคาสิโนออนไลน์ถ่ายทอดสดไว้คู่กับหมวดสล็อต คุณเข้าดูโต๊ะไพ่สดหรือเปลี่ยนไปหมุนวงล้อได้จากหน้าเว็บเดียวกัน ผ่านเบราว์เซอร์บนมือถือที่ใช้อยู่แล้ว
+      <strong class={brandClass}>OHO555</strong> เป็นเว็บพนันออนไลน์ที่รวมสล็อตกับคาสิโนสดไว้ในยูสเดียว สมัคร ฝาก ถอน และเล่นกับเว็บโดยตรง ทุกอย่างทำผ่านเบราว์เซอร์บนมือถือหรือคอมพิวเตอร์ที่ใช้อยู่แล้ว
     </p>
 
     <p class={bodyClass}>
-      ระบบฝากถอนของเราไม่มีขั้นต่ำและทำรายการแบบออโต้ เสร็จใน 3 นาทีตลอด 24 ชั่วโมง ส่วนเรื่องที่ติดขัดระหว่างใช้งาน มีแอดมินรับเรื่องผ่านช่องทางบนหน้าเว็บ
+      ที่นี่ฝากถอนขั้นต่ำ 1 บาท ผ่านทรูวอเลทหรือบัญชีทุกธนาคาร ระบบออโต้ปรับเครดิตให้เองโดยไม่ต้องส่งสลิป และมีแอดมินรับเรื่องตลอด 24 ชั่วโมงเมื่อมีอะไรติดขัด
     </p>
 
-    <p class={closerClass}>หน้าเว็บเดียว แต่เลือกจังหวะเล่นได้สองแบบ</p>
+    <p class={closerClass}>ยูสเดียว กระเป๋าเดียว ที่เหลือคือเลือกว่าวันนี้จะเริ่มที่สล็อตหรือโต๊ะไพ่</p>
   </ContentBox>
 
-  <ContentBox as="h2" title="คาสิโนสดจาก WM Casino และ Dream Gaming ที่เห็นการแจกไพ่จริง">
+  <ContentBox as="h2" title="เว็บตรงไม่ผ่านเอเย่นต์ ทุกขั้นตอนจบที่ OHO555">
     <p class={bodyClass}>
-      ห้องคาสิโนออนไลน์ของ <strong class={brandClass}>TG787</strong> เปิดโต๊ะสดจากค่าย WM Casino และ Dream Gaming (DG) สิ่งที่คุณเห็นบนจอคือดีลเลอร์แจกไพ่จริงผ่านภาพสด ตั้งแต่ไพ่ใบแรกจนจบตา
+      เว็บตรงไม่ผ่านเอเย่นต์หมายถึงไม่มีตัวแทนมาเปิดยูสหรือรับยอดแทน ตั้งแต่กด<a href="/register/" class={linkClass}>สมัคร</a>จนถึงกดถอน ทุกขั้นทำกับ <strong class={brandClass}>OHO555</strong> โดยตรง เงินที่โอนจึงไม่ต้องผ่านมือใครระหว่างทาง
     </p>
 
-    <p class={bodyClass}>
-      บาคาร่าให้คุณอ่านเค้าไพ่ก่อนวางฝั่งผู้เล่น เจ้ามือ หรือเสมอ ไฮโลให้ทายสูงต่ำ แต้มรวม หรือตอง ส่วนแบล็คแจ็คให้คุณตัดสินใจเองว่าจะขอไพ่เพิ่มหรือหยุด
+    <p class={closerClass}>
+      เมื่อเครดิตติดหรือมีคำถาม คนที่รับเรื่องคือแอดมินของเว็บเอง ไม่มีคนกลางที่ต้องรอให้ส่งต่ออีกทอด ปลายทางของเงินกับปลายทางของปัญหาจึงอยู่ที่เดียวกัน
     </p>
-
-    <p class={closerClass}>จังหวะหน้าโต๊ะดูได้ด้วยตาตัวเอง ก่อนวางเดิมพันทุกครั้ง</p>
   </ContentBox>
 
-  <ContentBox as="h2" title="สล็อตระบบร่วงหล่นและตัวคูณจาก PG Soft, Pragmatic Play และ JILI">
+  <ContentBox as="h2" title="สล็อตจาก PG Soft, Pragmatic Play และ Yggdrasil ในกระเป๋าเดียว">
     <p class={bodyClass}>
-      หมวดสล็อตของ <strong class={brandClass}>TG787</strong> รวมเกมที่จ่ายรางวัลด้วยกลไกต่างกัน Wild Bandito ของ PG Soft มาในธีมโจรเม็กซิกัน ใช้ระบบร่วงหล่น และตัวคูณเพิ่มทุกครั้งที่ชนะต่อเนื่องในสปินเดียว
+      หมวดสล็อตของ <strong class={brandClass}>OHO555</strong> ใช้กระเป๋าเครดิตเดียวทุกค่าย เปลี่ยนจากเกมหนึ่งไปอีกค่ายได้ด้วยยอดเดิม ไม่ต้องย้ายเครดิตหรือเปิดยูสแยกตามค่าย
     </p>
 
     <p class={bodyClass}>
-      The Dog House ของ Pragmatic Play เด่นที่สัญลักษณ์ไวลด์ตัวคูณ และในรอบฟรีสปินไวลด์จะค้างอยู่จนจบรอบ ส่วน Golden Empire ของ JILI ผสานระบบร่วงหล่นกับตัวคูณไว้ในธีมอาณาจักรทอง
+      PG Soft มี Treasures of Aztec หรือสาวถ้ำที่ใช้ระบบร่วงหล่น Pragmatic Play มี Sugar Rush ที่จ่ายเมื่อสัญลักษณ์หน้าเดียวกันเกาะเป็นก้อน ส่วน Yggdrasil มี Vikings Go Berzerk ในธีมนักรบไวกิ้ง
     </p>
 
-    <p class={closerClass}>ธีมต่างกันได้มาก แต่สิ่งที่แยกเกมออกจากกันจริงคือกลไก</p>
+    <p class={closerClass}>ธีมต่างกันได้มาก แต่ทุกเกมหักและเติมจากยอดเดียวกัน</p>
   </ContentBox>
 
-  <ContentBox as="h2" title="เว็บตรง TG787 เล่นผ่านเบราว์เซอร์ ล็อกอินยูสเดิมได้ทุกเครื่อง">
+  <ContentBox as="h2" title="คาสิโนสดจาก SA Gaming และ Sexy Baccarat เปิดผ่านเบราว์เซอร์">
     <p class={bodyClass}>
-      ที่ <strong class={brandClass}>TG787</strong> การ<a href="/register/" class={linkClass}>สมัคร</a> ฝาก เล่น และถอนทำจนจบได้บนมือถือเครื่องเดียวผ่านเบราว์เซอร์ โดยไม่ต้องโหลดแอป จึงไม่ต้องเผื่อพื้นที่ในเครื่องหรือรอติดตั้งอะไรเพิ่ม
+      ห้องคาสิโนออนไลน์ของ <strong class={brandClass}>OHO555</strong> เปิดโต๊ะสดจาก SA Gaming และ Sexy Baccarat ดีลเลอร์แจกไพ่จริงบนภาพสด และใช้ยูสเดียวกับที่เล่นสล็อตอยู่ ไม่ต้องสมัครเพิ่ม
     </p>
 
     <p class={bodyClass}>
-      เมื่อมียูสเซอร์แล้ว คุณนำรหัสเดิมไปล็อกอินผ่าน<a href="/ทางเข้า/" class={linkClass}>ทางเข้า TG787</a>ได้ทุกเครื่องทั้ง iOS และ Android โดยไม่ต้องสมัครซ้ำ และก่อนกรอกรหัสทุกครั้ง ตรวจชื่อเว็บบนแถบที่อยู่ให้ตรงก่อน
+      บาคาร่าวางได้ทั้งฝั่งผู้เล่น เจ้ามือ หรือเสมอ เสือมังกรเลือกฝั่งใดฝั่งหนึ่ง ส่วนรูเล็ตลงได้ทั้งเลขเดี่ยว แดงดำ คู่คี่ และสูงต่ำ ทุกโต๊ะเปิดผ่านเบราว์เซอร์บน iOS และ Android โดยไม่ต้องโหลดแอป
     </p>
 
-    <p class={closerClass}>เปลี่ยนเครื่องได้ทุกเมื่อ ยูสเซอร์ยังเป็นชุดเดิม</p>
+    <p class={closerClass}>จอมือถือเล็กไปก็ย้ายไปเปิดบนคอมพิวเตอร์หรือแท็บเล็ตด้วยยูสเดิมได้</p>
   </ContentBox>
 
-  <ContentBox as="h2" title="ฝากถอนไม่มีขั้นต่ำ ระบบออโต้ทำรายการเสร็จใน 3 นาที">
+  <ContentBox as="h2" title="ฝากถอนขั้นต่ำ 1 บาท ผ่านทรูวอเลทหรือบัญชีทุกธนาคาร">
     <p class={bodyClass}>
-      การเงินของ <strong class={brandClass}>TG787</strong> ใช้ระบบฝากถอนไม่มีขั้นต่ำ คุณแบ่งงบเป็นก้อนเล็กตามรอบที่เล่นได้ และระบบออโต้ทำรายการเสร็จใน 3 นาที เปิดรับตลอด 24 ชั่วโมง
+      การเงินของ <strong class={brandClass}>OHO555</strong> ตั้งขั้นต่ำฝากถอนไว้ที่ 1 บาท โอนได้จากทรูวอเลท (TrueMoney Wallet) หรือบัญชีธนาคารไหนก็ได้ แล้วระบบออโต้จะปรับเครดิตให้เองโดยไม่ต้องส่งสลิป
     </p>
 
     <p class={bodyClass}>
-      เมื่อโอนแล้ว ระบบปรับเครดิตให้เองโดยไม่ต้องแนบสลิปแจ้งแอดมิน ขั้นตอนของแต่ละขาและสิ่งที่ต้องทำเมื่อเครดิตไม่ขึ้นอยู่ที่หน้า<a href="/วิธีฝากถอน/" class={linkClass}>วิธีฝากถอน</a>
+      ขาถอนกดเองจากหน้าเว็บด้วยระบบเดียวกัน ขั้นตอนของแต่ละขาและสิ่งที่ต้องทำเมื่อยอดไม่ขึ้นอยู่ที่หน้า<a href="/วิธีฝากถอน/" class={linkClass}>วิธีฝากถอน</a> ซึ่งอธิบายไว้ทีละขั้น
     </p>
 
-    <p class={closerClass}>ยอดเข้าออกแต่ละครั้ง คุณเป็นคนกำหนดเอง</p>
+    <p class={closerClass}>ลองระบบด้วยยอดเล็กก่อน แล้วค่อยเติมตามงบที่วางไว้</p>
   </ContentBox>
 
-  <ContentBox as="h2" title="ติดต่อแอดมิน TG787 เมื่อติดขัด และเรื่องที่ต้องเก็บไว้กับตัว">
+  <ContentBox as="h2" title="โบนัสสมาชิกใหม่ 50% เพดาน 500 และสิทธิ์ที่จะไม่รับโปร">
     <p class={bodyClass}>
-      ถ้าล็อกอินไม่ได้ เครดิตไม่ขึ้น หรือมีรายการค้าง ติดต่อแอดมินผ่านช่องทางบนหน้าเว็บหรือหน้า<a href="/contact-us/" class={linkClass}>ติดต่อเรา</a>ได้ทันที ทีมงานของเราดูแลเรื่องที่ติดขัดระหว่างใช้งาน
+      สมาชิกใหม่ของ <strong class={brandClass}>OHO555</strong> รับโบนัส 50% ของยอดฝากได้สูงสุด 500 และต้องทำเทิร์น 3 เท่าก่อนถอน เงื่อนไขของแต่ละโปรเขียนไว้ครบที่<a href="/promotion/" class={linkClass}>หน้าโปรโมชั่น</a>
+    </p>
+
+    <p class={closerClass}>
+      ใครอยากถอนได้อิสระตั้งแต่ยอดแรก เลือกไม่รับโปรแล้วเล่นด้วยยอดฝากล้วนก็ได้ การรับหรือไม่รับเป็นสิทธิ์ของผู้เล่นเอง ไม่มีใครบังคับ
+    </p>
+  </ContentBox>
+
+  <ContentBox as="h2" title="แอดมิน OHO555 ดูแล 24 ชั่วโมง และเรื่องที่ต้องเก็บไว้กับตัว">
+    <p class={bodyClass}>
+      ล็อกอินไม่เข้า เครดิตไม่ขึ้น หรือรายการค้าง ติดต่อแอดมินได้ตลอด 24 ชั่วโมงผ่านช่องทางบนเว็บหรือ<a href="/contact-us/" class={linkClass}>หน้าติดต่อทีมงาน</a> สมาชิกเดิมเข้าเล่นต่อได้ที่<a href="/ทางเข้า/" class={linkClass}>ทางเข้า OHO555</a>
     </p>
 
     <p class={bodyClass}>
-      ถ้าฝากแล้วเครดิตไม่ขึ้น อย่าโอนซ้ำ ให้แจ้งเวลากับยอดที่ทำรายการเพื่อให้เจ้าหน้าที่ตรวจสอบ ส่วนรหัสผ่านกับ OTP เป็นของคุณคนเดียว ห้ามบอกผู้อื่นแม้จะอ้างว่าเป็นทีมงาน
+      ถ้าโอนแล้วยอดไม่ขึ้น อย่าโอนซ้ำ ส่งเวลาโอนกับจำนวนเงินให้แอดมินตรวจสอบ ส่วนรหัสผ่านกับ OTP ไม่ต้องส่งให้ใคร แม้คนที่ทักมาจะอ้างว่าเป็นทีมงานก็ตาม
     </p>
 
-    <p class={closerClass}>เวลากับยอดคือข้อมูลสองอย่างที่ใช้ตามรายการให้เจอ</p>
+    <p class={closerClass}>เวลากับยอดเงินคือสองอย่างที่ใช้ตามรายการ ไม่ต้องใช้รหัสของคุณ</p>
   </ContentBox>
 
   <Navfoot />

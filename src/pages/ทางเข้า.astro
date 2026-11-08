@@ -2,18 +2,15 @@
 import MainLayout from "../layouts/MainLayout.astro";
 import ContentBox from "../components/ContentBox.astro";
 import Navfoot from "../components/Navfoot.astro";
-import Announcement from "../components/AnnouncementCyber.astro";
+import Announcement from "../components/AnnouncementPremium.astro";
 import { pageGraph } from "../lib/schema";
 
-const pageTitle = "ทางเข้า TG787 เว็บหลัก | เข้าสู่ระบบและสมัครสมาชิก";
+const pageTitle = "ทางเข้า OHO555 เว็บหลัก | เข้าสู่ระบบและสมัครสมาชิก";
 
-const pageHeading = "ทางเข้า TG787 เว็บหลัก";
+const pageHeading = "ทางเข้า OHO555 เว็บหลัก";
 
 const pageDescription =
-  "ทางเข้า TG787 เว็บหลัก สมาชิกเดิมล็อกอินยูสเดิมได้ทุกเครื่องทั้ง iOS และ Android ผ่านเบราว์เซอร์โดยไม่ต้องสมัครซ้ำ ผู้เล่นใหม่กดสมัครสมาชิกได้จากหน้านี้";
-
-const announcementMessage =
-  "TG787 คาสิโนออนไลน์ถ่ายทอดสดควบคู่สล็อตเว็บตรง • ฝากถอนไม่มีขั้นต่ำ ระบบออโต้ทำรายการเสร็จใน 3 นาที ตลอด 24 ชั่วโมง • ล็อกอินยูสเดิมได้ทุกเครื่องทั้ง iOS และ Android ผ่านเบราว์เซอร์ • ติดปัญหาการใช้งานติดต่อแอดมินผ่านช่องทางบนหน้าเว็บได้ทันที";
+  "ทางเข้า OHO555 เว็บหลัก สมาชิกเดิมล็อกอินยูสเดิมได้ทุกเครื่องทั้ง iOS และ Android ผ่านเบราว์เซอร์ ไม่ต้องสมัครซ้ำ ผู้เล่นใหม่กดสมัครสมาชิกได้จากหน้านี้";
 
 const graph = pageGraph(Astro, {
   name: pageTitle,
@@ -28,20 +25,21 @@ const graph = pageGraph(Astro, {
 <MainLayout title={pageTitle} description={pageDescription}>
   <script type="application/ld+json" set:html={graph} />
 
-  <Announcement message={announcementMessage} />
+  <Announcement />
 
   <ContentBox title={pageHeading} as="h1">
     <div class="mb-5 grid grid-cols-1 gap-8 md:grid-cols-2">
       <div class="flex flex-col items-center justify-center gap-4">
         <a
           href="/login/"
-          aria-label="เข้าสู่ระบบ TG787"
-          class="group relative mx-auto flex w-full max-w-[320px] items-center justify-center gap-3 overflow-hidden rounded-xl border-2 border-white/70 bg-gradient-to-b from-[#3d8bf0] to-[#1557b0] px-6 py-4 shadow-[0_8px_22px_rgba(31,111,214,0.35)] transition-all duration-300 hover:scale-105 hover:brightness-110 hover:shadow-[0_15px_40px_rgba(31,111,214,0.45)]">
+          aria-label="เข้าสู่ระบบ OHO555"
+          style="background-image: linear-gradient(in oklab to bottom, #ffe08a, #fcaa04 55%, #c77d00);"
+          class="group relative mx-auto flex w-full max-w-[320px] items-center justify-center gap-3 overflow-hidden rounded-xl border-2 border-[#ffe9a8] bg-[#fcaa04] px-6 py-4 shadow-[0_8px_22px_rgba(252,170,4,0.35)] transition-all duration-300 hover:scale-105 hover:brightness-110 hover:shadow-[0_15px_40px_rgba(252,170,4,0.45)]">
           <div aria-hidden="true" class="absolute inset-x-0 top-0 h-1/2 bg-gradient-to-b from-white/25 to-transparent"></div>
 
           <span aria-hidden="true" class="relative z-10 flex h-9 w-9 items-center justify-center">
             <svg
-              class="h-9 w-9 text-white"
+              class="h-9 w-9 text-[#1a1000]"
               aria-hidden="true"
               focusable="false"
               fill="none"
@@ -53,20 +51,21 @@ const graph = pageGraph(Astro, {
             </svg>
           </span>
 
-          <span class="relative z-10 text-3xl font-bold tracking-wide text-white">เข้าสู่ระบบ</span>
+          <span class="relative z-10 text-3xl font-black tracking-wide text-[#1a1000]">เข้าสู่ระบบ</span>
         </a>
       </div>
 
       <div class="flex flex-col items-center justify-center gap-4">
         <a
           href="/register/"
-          aria-label="สมัครสมาชิก TG787"
-          class="group relative mx-auto flex w-full max-w-[320px] items-center justify-center gap-3 overflow-hidden rounded-xl border-2 border-[#ffe3b8] bg-gradient-to-b from-[#ffc94a] via-[#f47b20] to-[#c85a0c] px-6 py-4 shadow-[0_8px_22px_rgba(244,123,32,0.40)] transition-all duration-300 hover:scale-105 hover:brightness-110 hover:shadow-[0_15px_40px_rgba(244,123,32,0.50)]">
-          <div aria-hidden="true" class="absolute inset-x-0 top-0 h-1/2 bg-gradient-to-b from-white/30 to-transparent"></div>
+          aria-label="สมัครสมาชิก OHO555"
+          style="background-image: linear-gradient(in oklab to bottom, #ff4b4b, #d81e1e 55%, #9e0c12);"
+          class="group relative mx-auto flex w-full max-w-[320px] items-center justify-center gap-3 overflow-hidden rounded-xl border-2 border-[#ffd24d] bg-[#d81e1e] px-6 py-4 shadow-[0_8px_22px_rgba(216,30,30,0.40)] transition-all duration-300 hover:scale-105 hover:brightness-110 hover:shadow-[0_15px_40px_rgba(216,30,30,0.50)]">
+          <div aria-hidden="true" class="absolute inset-x-0 top-0 h-1/2 bg-gradient-to-b from-white/20 to-transparent"></div>
 
           <span aria-hidden="true" class="relative z-10 flex h-9 w-9 items-center justify-center">
             <svg
-              class="h-9 w-9 text-[#2a1300]"
+              class="h-9 w-9 text-white"
               aria-hidden="true"
               focusable="false"
               fill="none"
@@ -78,7 +77,7 @@ const graph = pageGraph(Astro, {
             </svg>
           </span>
 
-          <span class="relative z-10 text-3xl font-black tracking-wide text-[#2a1300]">สมัครสมาชิก</span>
+          <span class="relative z-10 text-3xl font-black tracking-wide text-white">สมัครสมาชิก</span>
         </a>
       </div>
     </div>

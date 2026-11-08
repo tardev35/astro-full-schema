@@ -13,24 +13,26 @@ const sectionLabel = label ?? title ?? titleleft ?? titleright ?? "ข้อม�
 
 <section aria-label={sectionLabel} class="relative z-10 mx-auto mb-10 w-full max-w-[1400px] px-4 font-sans">
   <div
-    class="group relative isolate w-full overflow-hidden rounded-3xl border border-[#cfe9f4] bg-white p-6 text-[#23323f] shadow-[0_10px_30px_rgba(12,53,80,0.08)] transition-all duration-500 hover:border-[#8ed3ee] md:p-10">
+    class="group relative isolate w-full overflow-hidden rounded-3xl border border-[#2a6b2c] bg-[#0c2a12]/95 p-6 text-[#e3eedf] shadow-[0_10px_30px_rgba(1,10,3,0.45)] transition-all duration-500 hover:border-[#fcaa04]/60 md:p-10">
+    <div aria-hidden="true" class="pointer-events-none absolute inset-x-0 top-0 -z-10 h-1 bg-gradient-to-r from-[#c77d00] via-[#fcaa04] to-[#2f9e1f]"></div>
+
     {
       title && (
-        <header class="mb-6 flex items-center gap-4 border-b border-[#cfe9f4] pb-4">
-          <span aria-hidden="true" class="h-8 w-1.5 shrink-0 rounded-full bg-gradient-to-b from-[#ffd23f] to-[#f7941d]" />
-          <HeadingTag class="text-2xl leading-normal font-black tracking-wide text-[#0c3550]">{title}</HeadingTag>
+        <header class="mb-6 flex items-center gap-4 border-b border-[#2a6b2c] pb-4">
+          <span aria-hidden="true" class="h-8 w-1.5 shrink-0 rounded-full bg-gradient-to-b from-[#ffd24d] to-[#c77d00]" />
+          <HeadingTag class="text-2xl leading-normal font-black tracking-wide text-white">{title}</HeadingTag>
         </header>
       )
     }
 
     <div class="grid grid-cols-1 gap-6 md:grid-cols-2 lg:gap-8">
-      <article class="flex flex-col gap-4 text-left text-base leading-relaxed text-[#23323f]">
+      <article class="flex flex-col gap-4 text-left text-base leading-relaxed text-[#e3eedf]">
         {
           titleleft && (
-            <p class="flex items-center gap-3 border-b border-[#cfe9f4] pb-3 text-xl leading-normal font-black tracking-wide text-[#0c3550]">
+            <p class="flex items-center gap-3 border-b border-[#2a6b2c] pb-3 text-xl leading-normal font-black tracking-wide text-white">
               <span
                 aria-hidden="true"
-                class="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg border-2 border-white bg-gradient-to-b from-[#19b2e0] to-[#0077b3] text-sm text-white shadow-[0_5px_15px_rgba(0,164,212,0.35)]">
+                class="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg border-2 border-[#a6f08a]/40 bg-gradient-to-b from-[#2f9e1f] to-[#1d6b00] text-sm text-white shadow-[0_5px_15px_rgba(47,158,31,0.4)]">
                 🔐
               </span>
               {titleleft}
@@ -40,13 +42,13 @@ const sectionLabel = label ?? title ?? titleleft ?? titleright ?? "ข้อม�
         <slot name="left" />
       </article>
 
-      <article class="flex flex-col gap-4 text-left text-base leading-relaxed text-[#23323f]">
+      <article class="flex flex-col gap-4 text-left text-base leading-relaxed text-[#e3eedf]">
         {
           titleright && (
-            <p class="flex items-center gap-3 border-b border-[#cfe9f4] pb-3 text-xl leading-normal font-black tracking-wide text-[#0c3550]">
+            <p class="flex items-center gap-3 border-b border-[#2a6b2c] pb-3 text-xl leading-normal font-black tracking-wide text-white">
               <span
                 aria-hidden="true"
-                class="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg border-2 border-white bg-gradient-to-b from-[#ffd23f] via-[#ffb84d] to-[#f7941d] text-sm text-[#4a1d00] shadow-[0_5px_15px_rgba(247,148,29,0.40)]">
+                class="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg border-2 border-[#ffe9a8]/60 bg-gradient-to-b from-[#ffe08a] via-[#fcaa04] to-[#c77d00] text-sm text-[#1a1000] shadow-[0_5px_15px_rgba(252,170,4,0.4)]">
                 🎰
               </span>
               {titleright}

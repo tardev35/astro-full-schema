@@ -75,7 +75,7 @@ export default defineConfig({
     "/line": "https://tinyurl.com/suhng",
   },
 
-  site: "https://tg787.online",
+  site: "https://oho555.wiki",
   integrations: [
     sitemap({
       // /login, /register and /line are forwarding pages that all ship

@@ -11,28 +11,28 @@ const { title, titleleft, titleright, as: HeadingTag = "h2" } = Astro.props;
 <section class="my-12 flex w-full justify-center px-4 font-sans">
   <div
     class:list={[
-      "relative isolate w-full max-w-7xl rounded-2xl border-2 border-[#cfe9f4] bg-white p-8 text-[#23323f] shadow-[0_10px_30px_rgba(12,53,80,0.08)]",
-      title ? "pt-32" : "",
+      "relative isolate w-full max-w-7xl rounded-2xl border-2 border-[#2a6b2c] bg-[#0c2a12] p-8 text-[#e3eedf] shadow-[0_10px_30px_rgba(1,10,3,0.45)]",
+      title ? "pt-32 sm:pt-28 md:pt-24" : "",
     ]}>
-    <div aria-hidden="true" class="pointer-events-none absolute -right-10 -bottom-16 -z-10 h-40 w-40 rounded-full bg-[#4cc9f0]/25 blur-[60px]"></div>
-    <div aria-hidden="true" class="pointer-events-none absolute -top-16 -left-10 -z-10 h-40 w-40 rounded-full bg-[#ffb84d]/25 blur-[60px]"></div>
+    <div aria-hidden="true" class="pointer-events-none absolute -right-10 -bottom-16 -z-10 h-40 w-40 rounded-full bg-[#2f9e1f]/25 blur-[60px]"></div>
+    <div aria-hidden="true" class="pointer-events-none absolute -top-16 -left-10 -z-10 h-40 w-40 rounded-full bg-[#fcaa04]/18 blur-[60px]"></div>
 
     {
       title && (
-        <div class="absolute -top-6 left-1/2 w-[92%] max-w-2xl -translate-x-1/2 rounded-lg border-2 border-white bg-gradient-to-r from-[#0077b3] via-[#006d99] to-[#0077b3] px-4 py-2.5 text-center shadow-[0_10px_30px_rgba(0,164,212,0.35)] sm:px-8">
+        <div class="absolute -top-6 left-1/2 w-[92%] max-w-2xl -translate-x-1/2 rounded-lg border-2 border-[#ffd24d] bg-gradient-to-r from-[#1d6b00] via-[#237f12] to-[#1d6b00] px-4 py-2.5 text-center shadow-[0_10px_30px_rgba(47,158,31,0.4)] sm:px-8">
           <HeadingTag class="text-lg leading-normal font-black tracking-tight text-white sm:text-xl md:text-2xl">{title}</HeadingTag>
         </div>
       )
     }
 
     <div class="grid grid-cols-1 gap-10 md:grid-cols-[3fr_7fr] md:items-center">
-      <article class="flex flex-col gap-4 text-left text-base leading-relaxed text-[#23323f]">
-        {titleleft && <p class="text-2xl leading-normal font-bold text-[#006d99]">{titleleft}</p>}
+      <article class="flex flex-col gap-4 text-left text-base leading-relaxed text-[#e3eedf]">
+        {titleleft && <p class="text-2xl leading-normal font-bold text-[#a6f08a]">{titleleft}</p>}
         <slot name="left" />
       </article>
 
-      <article class="flex flex-col gap-4 text-left text-base leading-relaxed text-[#23323f] md:border-l md:border-[#cfe9f4] md:pl-10">
-        {titleright && <p class="text-2xl leading-normal font-bold text-[#a35000]">{titleright}</p>}
+      <article class="flex flex-col gap-4 text-left text-base leading-relaxed text-[#e3eedf] md:border-l md:border-[#2a6b2c] md:pl-10">
+        {titleright && <p class="text-2xl leading-normal font-bold text-[#ffd24d]">{titleright}</p>}
         <slot name="right" />
       </article>
     </div>

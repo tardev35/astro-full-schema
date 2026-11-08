@@ -2,18 +2,15 @@
 import MainLayout from "../layouts/MainLayout.astro";
 import ContentBox from "../components/ContentBox.astro";
 import Navfoot from "../components/Navfoot.astro";
-import Announcement from "../components/AnnouncementCyber.astro";
+import Announcement from "../components/AnnouncementPremium.astro";
 import { pageGraph } from "../lib/schema";
 
-const pageTitle = "วิธีฝากถอน TG787 ไม่มีขั้นต่ำ ระบบออโต้เสร็จใน 3 นาที ไม่ต้องแนบสลิป";
+const pageTitle = "วิธีฝากถอน OHO555 ขั้นต่ำ 1 บาท ทรูวอเลทหรือทุกธนาคาร ไม่ต้องส่งสลิป";
 
-const pageHeading = "วิธีฝากถอน TG787 ไม่มีขั้นต่ำ ระบบออโต้ทำรายการตลอด 24 ชั่วโมง";
+const pageHeading = "วิธีฝากถอน OHO555 ขั้นต่ำ 1 บาท ผ่านทรูวอเลทหรือบัญชีทุกธนาคาร";
 
 const pageDescription =
-  "วิธีฝากถอน TG787 ไม่มีขั้นต่ำ ระบบออโต้ทำรายการเสร็จใน 3 นาทีตลอด 24 ชั่วโมง ปรับเครดิตให้เองไม่ต้องแนบสลิป พร้อมวิธีแจ้งแอดมินเมื่อฝากแล้วเครดิตไม่ขึ้น";
-
-const announcementMessage =
-  "TG787 คาสิโนออนไลน์ถ่ายทอดสดควบคู่สล็อตเว็บตรง • ฝากถอนไม่มีขั้นต่ำ ระบบออโต้ทำรายการเสร็จใน 3 นาที ตลอด 24 ชั่วโมง • ล็อกอินยูสเดิมได้ทุกเครื่องทั้ง iOS และ Android ผ่านเบราว์เซอร์ • ติดปัญหาการใช้งานติดต่อแอดมินผ่านช่องทางบนหน้าเว็บได้ทันที";
+  "วิธีฝากถอน OHO555 ขั้นต่ำ 1 บาท โอนผ่านทรูวอเลทหรือบัญชีทุกธนาคาร ระบบออโต้ปรับเครดิตให้เองไม่ต้องส่งสลิป ถอนกดเองจากหน้าเว็บ และวิธีแจ้งแอดมินเมื่อยอดไม่ขึ้น";
 
 const graph = pageGraph(Astro, {
   name: pageTitle,
@@ -24,84 +21,86 @@ const graph = pageGraph(Astro, {
   ],
 });
 
-const bodyClass = "mb-4 text-left text-base leading-relaxed text-[#2b2622]";
-const closerClass = "text-left text-base leading-relaxed text-[#2b2622]";
-const brandClass = "font-bold text-[#a84a06]";
-const linkClass = "font-bold text-[#1557b0] underline underline-offset-4 transition-colors hover:text-[#a84a06]";
+const bodyClass = "mb-4 text-left text-base leading-relaxed";
+const closerClass = "text-left text-base leading-relaxed";
+const brandClass = "font-bold text-[#ffc93c]";
+const linkClass = "font-bold text-[#ffd24d] underline decoration-[#ffd24d]/50 underline-offset-4 transition-colors hover:text-[#ffe9a8]";
 ---
 
 <MainLayout title={pageTitle} description={pageDescription}>
   <script type="application/ld+json" set:html={graph} />
 
-  <Announcement message={announcementMessage} />
+  <Announcement />
 
   <ContentBox as="h1" title={pageHeading}>
     <p class={bodyClass}>
-      ที่ <strong class={brandClass}>TG787</strong> การฝากและถอนไม่มีขั้นต่ำ ทุกรายการผ่านระบบออโต้ที่ทำรายการเสร็จใน 3 นาทีและเปิดรับตลอด 24 ชั่วโมง คุณจึงจัดการยอดเข้าออกได้เองตามจังหวะที่สะดวก
+      ที่ <strong class={brandClass}>OHO555</strong> ฝากและถอนขั้นต่ำ 1 บาท โอนได้จากทรูวอเลท (TrueMoney Wallet) หรือบัญชีทุกธนาคาร ระบบออโต้ปรับเครดิตให้เอง ไม่ต้องส่งสลิปให้แอดมินตรวจ
     </p>
 
     <p class={closerClass}>
-      ระบบปรับเครดิตให้เองโดยไม่ต้องแนบสลิปแจ้งแอดมิน และทุกขั้นตอนทำผ่านเบราว์เซอร์บนมือถือได้โดยไม่ต้องโหลดแอป จะเติมยอดก้อนเล็กเพื่อแบ่งรอบเล่นก็ทำได้
+      ทุกขั้นตอนทำผ่านเบราว์เซอร์บนมือถือได้จนจบโดยไม่ต้องโหลดแอป จะลองระบบด้วยยอดเล็กก่อนแล้วค่อยเติมตามงบที่วางไว้ก็ทำได้
     </p>
   </ContentBox>
 
-  <ContentBox as="h2" title="สมัครสมาชิก TG787 ผ่านมือถือก่อนฝากครั้งแรก">
+  <ContentBox as="h2" title="สมัครสมาชิก OHO555 ก่อนฝากครั้งแรก">
     <p class={bodyClass}>
-      การฝากครั้งแรกเริ่มจากบัญชีสมาชิก กดปุ่ม<a href="/register/" class={linkClass}>สมัครสมาชิก</a>แล้วกรอกข้อมูลบนหน้าจอมือถือให้เรียบร้อย ทุกขั้นตอนทำผ่านเบราว์เซอร์ได้จนจบ โดยไม่ต้องโหลดแอปมาติดตั้งในเครื่อง
+      การฝากครั้งแรกเริ่มจากยูสเซอร์ของตัวเอง กด<a href="/register/" class={linkClass}>สมัครสมาชิก</a>แล้วกรอกข้อมูลบนหน้าจอให้ครบ ทุกขั้นทำกับเว็บโดยตรง ไม่มีตัวแทนมาเปิดยูสให้
     </p>
 
     <p class={closerClass}>
-      สมาชิกเดิมไม่ต้องสมัครซ้ำ เข้าที่<a href="/ทางเข้า/" class={linkClass}>ทางเข้า TG787</a> แล้วล็อกอินด้วยยูสเดิมได้ทุกเครื่องทั้ง iOS และ Android ก่อนกรอกรหัส ตรวจชื่อเว็บบนแถบที่อยู่ให้ตรงทุกครั้ง
+      สมาชิกเดิมไม่ต้องสมัครซ้ำ เข้าที่<a href="/ทางเข้า/" class={linkClass}>ทางเข้า OHO555</a>แล้วล็อกอินด้วยยูสเดิมได้ทุกเครื่อง ก่อนกรอกรหัส ตรวจชื่อเว็บบนแถบที่อยู่ให้ตรงทุกครั้ง
     </p>
   </ContentBox>
 
-  <ContentBox as="h2" title="ฝากเงินไม่มีขั้นต่ำ ระบบปรับเครดิตให้เองโดยไม่ต้องแนบสลิป">
+  <ContentBox as="h2" title="ฝากเงินขั้นต่ำ 1 บาท ระบบออโต้ปรับเครดิตให้เองไม่ต้องส่งสลิป">
     <p class={bodyClass}>
-      <a href="/login/" class={linkClass}>เข้าสู่ระบบ</a>แล้วทำรายการฝากตามขั้นตอนที่หน้าเว็บแสดง รายการฝากผ่านระบบออโต้เสร็จใน 3 นาที และระบบจะปรับยอดเครดิตในยูสให้เอง คุณไม่ต้องแนบสลิปแจ้งแอดมินให้เสียเวลา
+      <a href="/login/" class={linkClass}>เข้าสู่ระบบ</a>แล้วทำรายการฝากตามขั้นตอนที่หน้าเว็บแสดง โอนจากทรูวอเลทหรือบัญชีธนาคารที่ใช้อยู่ได้ทั้งหมด โอนเสร็จแล้วระบบออโต้จะปรับยอดเครดิตในยูสให้เอง
     </p>
 
     <p class={bodyClass}>
-      ระบบไม่กำหนดยอดฝากขั้นต่ำ คุณเติมเครดิตก้อนเล็กตามรอบที่ตั้งใจเล่นได้ และทำรายการเองได้ตลอด 24 ชั่วโมง จะเป็นช่วงดึกหรือเช้าตรู่ก็ไม่ต้องรอเวลาทำการ
+      ยอดขั้นต่ำอยู่ที่ 1 บาท ครั้งแรกจึงโอนยอดเล็กเพื่อดูว่าเครดิตขึ้นจริงก่อนได้ ไม่ต้องส่งสลิปให้ใครตรวจ แล้วค่อยเติมเพิ่มตามงบที่วางไว้
     </p>
 
-    <p class={closerClass}>ยอดฝากแต่ละครั้งเป็นไปตามแผนของคุณ ไม่ใช่ตามเกณฑ์ของระบบ</p>
+    <p class={closerClass}>ยอดฝากแต่ละครั้งเป็นไปตามแผนของคุณเอง ไม่ใช่ตามเกณฑ์ของระบบ</p>
   </ContentBox>
 
-  <ContentBox as="h2" title="ถอนเงินไม่มีขั้นต่ำ ทำรายการเองได้ตลอด 24 ชั่วโมง">
+  <ContentBox as="h2" title="ถอนเงินกดเองจากหน้าเว็บ ด้วยระบบออโต้ชุดเดียวกับขาฝาก">
     <p class={bodyClass}>
-      ขาถอนใช้ระบบออโต้ชุดเดียวกับขาฝาก คุณสั่งถอนผ่านหน้าเว็บด้วยยูสของตัวเอง ไม่มีขั้นต่ำมากำหนดยอด และรายการเสร็จใน 3 นาทีเช่นเดียวกับตอนฝาก
+      ขาถอนใช้ระบบออโต้ชุดเดียวกับขาฝาก คุณสั่งถอนจากหน้าเว็บด้วยยูสของตัวเอง ขั้นต่ำ 1 บาทเท่ากัน ไม่ต้องทักแอดมินให้ทำรายการแทน
     </p>
 
     <p class={bodyClass}>
-      ระบบเปิดรับรายการตลอด 24 ชั่วโมง จะถอนหลังเที่ยงคืนหรือช่วงเช้ามืดก็ทำได้จากเครื่องที่ใช้เล่นอยู่ผ่านเบราว์เซอร์ ไม่ต้องรอให้ถึงช่วงเวลาใดเป็นพิเศษ
+      ถ้ารับโบนัสสมาชิกใหม่ 50% ไว้ ยอดนั้นต้องทำเทิร์น 3 เท่าก่อนถอน ใครอยากถอนได้อิสระตั้งแต่แรก เลือกไม่รับโปรแล้วเล่นด้วยยอดฝากล้วนก็ได้
     </p>
 
     <p class={closerClass}>เงินเข้าด้วยระบบไหน ก็ออกด้วยระบบเดียวกัน</p>
   </ContentBox>
 
-  <ContentBox as="h2" title="ฝากแล้วเครดิตไม่ขึ้น อย่าโอนซ้ำ แจ้งเวลากับยอดให้แอดมิน">
+  <ContentBox as="h2" title="ฝากแล้วเครดิตไม่ขึ้น อย่าโอนซ้ำ ส่งเวลาโอนกับจำนวนเงินให้แอดมิน">
     <div class="flex flex-col gap-4">
       <p class={closerClass}>
-        ถ้าโอนแล้วเครดิตยังไม่ขึ้น อย่าโอนซ้ำ จดเวลาที่ทำรายการกับยอดเงินไว้ แล้วแจ้งแอดมินผ่านช่องทางบนหน้าเว็บหรือหน้า<a href="/contact-us/" class={linkClass}>ติดต่อเรา</a> เพื่อให้เจ้าหน้าที่ตรวจสอบจากรายการนั้น
+        ถ้าโอนแล้วยอดยังไม่ขึ้นในยูส อย่ารีบโอนก้อนใหม่ตาม จดเวลาที่โอนกับจำนวนเงินไว้ แล้วแจ้งแอดมินผ่านช่องทางบนเว็บหรือ<a href="/contact-us/" class={linkClass}>หน้าติดต่อทีมงาน</a> ซึ่งรับเรื่องตลอด 24 ชั่วโมง
       </p>
 
       <p class={closerClass}>
-        ระหว่างรอ เก็บรหัสผ่านไว้กับตัวและไม่บอก OTP กับผู้อื่น แม้คนที่ทักมาจะอ้างว่าเป็นทีมงานก็ตาม เวลากับยอดคือข้อมูลที่เจ้าหน้าที่ใช้ตามรายการ ไม่ต้องใช้รหัสของคุณ
+        แอดมินใช้แค่เวลากับยอดเงินเพื่อตามรายการ ไม่ต้องใช้รหัสของคุณ รหัสผ่านกับ OTP จึงไม่ต้องส่งให้ใคร แม้คนที่ทักมาจะอ้างว่าเป็นทีมงานก็ตาม
       </p>
 
       <div class="flex flex-col items-center justify-center gap-4 pt-4 sm:flex-row">
         <a
           href="/login/"
-          aria-label="เข้าสู่ระบบ TG787 เพื่อฝากถอน"
-          class="inline-flex w-full max-w-[320px] items-center justify-center gap-2 rounded-xl border-2 border-white/70 bg-gradient-to-b from-[#3d8bf0] to-[#1557b0] px-8 py-3.5 text-lg font-bold tracking-wide text-white shadow-[0_8px_22px_rgba(31,111,214,0.35)] transition duration-300 hover:scale-105 hover:brightness-110">
+          aria-label="เข้าสู่ระบบ OHO555 เพื่อฝากถอน"
+          style="background-image: linear-gradient(in oklab to bottom, #ffe08a, #fcaa04 55%, #c77d00);"
+          class="inline-flex w-full max-w-[320px] items-center justify-center gap-2 rounded-xl border-2 border-[#ffe9a8] bg-[#fcaa04] px-8 py-3.5 text-lg font-black tracking-wide text-[#1a1000] shadow-[0_8px_22px_rgba(252,170,4,0.35)] transition duration-300 hover:scale-105 hover:brightness-110">
           <span aria-hidden="true">💳</span> เข้าสู่ระบบเพื่อฝากถอน
         </a>
 
         <a
           href="/register/"
-          aria-label="สมัครสมาชิก TG787"
-          class="inline-flex w-full max-w-[320px] items-center justify-center gap-2 rounded-xl border-2 border-[#ffe3b8] bg-gradient-to-b from-[#ffc94a] via-[#f47b20] to-[#c85a0c] px-8 py-3.5 text-lg font-black tracking-wide text-[#2a1300] shadow-[0_8px_22px_rgba(244,123,32,0.40)] transition duration-300 hover:scale-105 hover:brightness-110">
-          <span aria-hidden="true">📝</span> สมัครสมาชิก TG787
+          aria-label="สมัครสมาชิก OHO555"
+          style="background-image: linear-gradient(in oklab to bottom, #ff4b4b, #d81e1e 55%, #9e0c12);"
+          class="inline-flex w-full max-w-[320px] items-center justify-center gap-2 rounded-xl border-2 border-[#ffd24d] bg-[#d81e1e] px-8 py-3.5 text-lg font-black tracking-wide text-white shadow-[0_8px_22px_rgba(216,30,30,0.40)] transition duration-300 hover:scale-105 hover:brightness-110">
+          <span aria-hidden="true">📝</span> สมัครสมาชิก OHO555
         </a>
       </div>
     </div>

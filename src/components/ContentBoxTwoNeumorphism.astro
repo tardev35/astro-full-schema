@@ -10,24 +10,24 @@ const { title, as: HeadingTag = "h2", titleleft, titleright } = Astro.props;
 
 <section class="mx-auto mb-8 w-full max-w-7xl px-4 font-sans">
   <div
-    class="w-full rounded-[25px] border border-[#cfe9f4] bg-white p-8 shadow-[8px_8px_18px_rgba(12,53,80,0.10),-6px_-6px_16px_#ffffff] transition-shadow duration-300 hover:shadow-[12px_12px_26px_rgba(12,53,80,0.12),-8px_-8px_20px_#ffffff]">
+    class="w-full rounded-[25px] border border-[#2a6b2c] bg-[#0c2a12] p-8 shadow-[8px_8px_20px_rgba(1,10,3,0.6),-6px_-6px_16px_rgba(92,207,63,0.07)] transition-shadow duration-300 hover:shadow-[12px_12px_26px_rgba(1,10,3,0.65),-8px_-8px_20px_rgba(92,207,63,0.1)]">
     {
       title && (
-        <header class="mb-8 border-b border-[#cfe9f4] pb-4 text-center">
-          <HeadingTag class="bg-gradient-to-r from-[#0c3550] via-[#006d99] to-[#0077b3] bg-clip-text text-2xl leading-normal font-black tracking-wide text-transparent">{title}</HeadingTag>
-          <span aria-hidden="true" class="mx-auto mt-3 block h-1 w-16 rounded-full bg-gradient-to-r from-[#00a4d4] to-[#f7941d]" />
+        <header class="mb-8 border-b border-[#2a6b2c] pb-4 text-center">
+          <HeadingTag class="bg-gradient-to-r from-white via-[#ffe9a8] to-[#ffd24d] bg-clip-text text-2xl leading-normal font-black tracking-wide text-transparent">{title}</HeadingTag>
+          <span aria-hidden="true" class="mx-auto mt-3 block h-1 w-16 rounded-full bg-gradient-to-r from-[#fcaa04] to-[#2f9e1f]" />
         </header>
       )
     }
 
     <div class="grid grid-cols-1 gap-8 md:grid-cols-2">
-      <article class="flex flex-col gap-4 text-left text-base leading-relaxed text-[#23323f]">
-        {titleleft && <p class="text-xl leading-normal font-black tracking-wide text-[#006d99]">{titleleft}</p>}
+      <article class="flex flex-col gap-4 text-left text-base leading-relaxed text-[#e3eedf]">
+        {titleleft && <p class="text-xl leading-normal font-black tracking-wide text-[#a6f08a]">{titleleft}</p>}
         <slot name="left" />
       </article>
 
-      <article class="flex flex-col gap-4 text-left text-base leading-relaxed text-[#23323f] md:border-l md:border-[#cfe9f4] md:pl-8">
-        {titleright && <p class="text-xl leading-normal font-black tracking-wide text-[#a35000]">{titleright}</p>}
+      <article class="flex flex-col gap-4 text-left text-base leading-relaxed text-[#e3eedf] md:border-l md:border-[#2a6b2c] md:pl-8">
+        {titleright && <p class="text-xl leading-normal font-black tracking-wide text-[#ffd24d]">{titleright}</p>}
         <slot name="right" />
       </article>
     </div>
